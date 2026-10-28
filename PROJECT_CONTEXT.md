@@ -81,5 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-10-28 | - | Coimbatore copy created from news360-autopost |
+| 2026-10-28 | `926e1f9` | README: real Instagram handle |
+| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
+| 2026-10-28 | `a315412` | Initial commit |
 <!-- recent-changes:end -->
