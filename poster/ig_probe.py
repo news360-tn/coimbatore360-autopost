@@ -37,6 +37,22 @@ for page in ("coimbatore",):
             r["account_reach"] = "ERR " + str(e)[:160]
     except Exception as e:
         r["error"] = str(e)[:300]
+def _redact(o):
+    """the result is committed to a PUBLIC repo: never write the token or bridge key (an error message can carry the request URL)"""
+    import re
+    if isinstance(o, dict):
+        return {k: _redact(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [_redact(v) for v in o]
+    if isinstance(o, str):
+        o = re.sub(r"(access_token|key|token)=[^&\s'\"]+", r"\1=***", o)
+        for secret in (os.environ.get("BRIDGE_KEY"), os.environ.get("BRIDGE_URL")):
+            if secret:
+                o = o.replace(secret, "***")
+    return o
+
+
+out = _redact(out)
 os.makedirs(os.path.join(os.path.dirname(__file__), "probe"), exist_ok=True)
 json.dump(out, open(os.path.join(os.path.dirname(__file__), "probe", "ig_probe.json"), "w"), ensure_ascii=False, indent=1)
 print(json.dumps(out, ensure_ascii=False)[:1500])
