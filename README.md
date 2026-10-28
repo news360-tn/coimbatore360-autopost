@@ -1,6 +1,6 @@
 # Coimbatore 360 – கோயம்புத்தூர் 360 auto-posting
 
-Automatic Coimbatore-district news reels for the Instagram page **கோயம்புத்தூர் 360** (`@coimbatore360.official`, hashtag `#Coimbatore360`).
+Automatic Coimbatore-district news reels for the Instagram page **கோயம்புத்தூர் 360** (`@coimbatore360_official`, hashtag `#Coimbatore360`).
 This is a separate copy of the Namakkal project (`news360-autopost`): its own GitHub repository, its own Google account,
 Sheet and Apps Script, its own Instagram token, Cloudinary account and free API keys. Nothing here touches Namakkal 360.
 Everything runs on GitHub Actions; the Google Sheet (through the Apps Script bridge) is the working store.
@@ -62,7 +62,7 @@ Repair tools (Actions, run by hand): **repost** (post a removed reel again), **r
 
 ## Owner setup checklist (in this order)
 
-1. **Instagram**: create the page (professional / creator account, handle e.g. `coimbatore360.official`), connect it to a Meta developer
+1. **Instagram**: create the page (professional / creator account, handle e.g. `coimbatore360_official`), connect it to a Meta developer
    app with Instagram API, and make a long-lived token for it.
 2. **New Google account** for Coimbatore 360 (not the Namakkal Gmail). In it:
    - new Google Sheet "Coimbatore 360 Log" with tab `News` and the same 31 columns as Namakkal, where column Y (25) is

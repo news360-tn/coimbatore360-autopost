@@ -1,6 +1,6 @@
 # coimbatore360-autopost - project context
 
-Automatic Coimbatore-district news reels for the Instagram page **கோயம்புத்தூர் 360** (`@coimbatore360.official`, placeholder; hashtag `#Coimbatore360`;
+Automatic Coimbatore-district news reels for the Instagram page **கோயம்புத்தூர் 360** (`@coimbatore360_official`, placeholder; hashtag `#Coimbatore360`;
 `post_to` value in the Sheet: `Coimbatore 360`). A separate, fully independent copy of the Namakkal project `news360-autopost`:
 own GitHub repository, own Google account / Sheet / Apps Script, own Instagram token, own Cloudinary account and own free API keys.
 Namakkal 360 / Rasipuram 360 are never touched. Same file structure and function names as Namakkal, so Namakkal fixes can be
@@ -84,6 +84,6 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
 | 2026-10-28 | `eb811b9` | Bridge: Coimbatore 360 Log Sheet, Coimbatore 360 Drive folder, owner Gmail (same Gmail as Namakkal, own Sheet/folder/script and COIMBATORE360 mail tag) |
 | 2026-10-28 | `926e1f9` | README: real Instagram handle |
-| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
+| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360_official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
 | 2026-10-28 | `a315412` | Initial commit |
 <!-- recent-changes:end -->
