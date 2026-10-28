@@ -1,0 +1,190 @@
+name: Post stories (carousel + reel)
+# Coimbatore 360 (கோயம்புத்தூர் 360): one page, reel only, Valluvar voice only, website off. Scheduled posting runs only while the LIVE file exists.
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes: look for stories whose images you have sent
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Test only (build + upload, do not post to Instagram)"
+        type: boolean
+        default: true
+      prebuild:
+        description: "Prebuild only: make every waiting carousel + reel now and keep them ready; nothing is posted (set dry_run to false). The next posting run publishes them at once."
+        type: boolean
+        default: false
+
+concurrency:
+  group: news360-post
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  actions: write      # the watchdog restarts an overdue news collection / story writer
+
+env:
+  BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
+  BRIDGE_KEY: ${{ secrets.BRIDGE_KEY }}
+  CLOUDINARY_CLOUD: ${{ secrets.CLOUDINARY_CLOUD }}
+  CLOUDINARY_PRESET: ${{ secrets.CLOUDINARY_PRESET }}
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  FAL_KEY: ${{ secrets.FAL_KEY }}
+  NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+  GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # picture check: does the AI image show the news?
+  DAILY_CAP: "25"     # Coimbatore 360: start with at most 25 reels a day (owner decision)
+  DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
+  PREBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.prebuild && '1' || '' }}
+  PAUSED: ${{ vars.PAUSED }}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12      # also makes the automatic pictures (max 7 min per run)
+    outputs:
+      ready: ${{ steps.chk.outputs.ready }}
+      matrix: ${{ steps.chk.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Is a story ready?
+        id: chk
+        run: |
+          if [ -z "$BRIDGE_URL" ]; then   # posting is never paused: e-mailed and queued reels always post
+            echo "ready=0" >> "$GITHUB_OUTPUT"
+            echo "Setup not finished. BRIDGE_URL_set=[${BRIDGE_URL:+yes}]" | tee .last_check
+          else
+            pip install -q requests==2.32.5 pillow==11.3.0
+            python poster/post.py check 2>&1 | tee .last_check
+          fi
+          git config user.name "news360-bot"; git config user.email "news360-bot@users.noreply.github.com"
+          if grep -q "ready to post: [1-9]" .last_check || [ "$(date -u +%M)" -lt 5 ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then git add -f .last_check && git commit -qm "check log" && { git pull -q --rebase -X theirs && git push -q || git rebase --abort 2>/dev/null; } || true; fi
+      - name: Watchdog - restart an overdue collection or writer (GitHub sometimes skips scheduled runs)
+        if: github.event_name == 'schedule' && env.BRIDGE_URL != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          [ -f research_free/ENABLED ] || { echo "collecting is paused (no research_free/ENABLED)"; exit 0; }
+          python3 - <<'PY' > /tmp/wd.txt
+          import json, datetime as d
+          now = d.datetime.now(d.timezone.utc)
+          try: last = json.load(open("research_free/archive/last_run.json"))
+          except Exception: last = {}
+          def age(k):
+              try: return (now - d.datetime.fromisoformat(last[k])).total_seconds() / 60
+              except Exception: return 1e9
+          try: q = len(json.load(open("research_free/archive/queue.json")))
+          except Exception: q = 0
+          print("collect" if age("collect") > 255 else "", "write" if q and age("write") > 30 else "")
+          print(f"last collect {age('collect'):.0f} min ago, last write {age('write'):.0f} min ago, queue {q}")
+          PY
+          cat /tmp/wd.txt
+          todo=$(head -1 /tmp/wd.txt)
+          case "$todo" in *collect*) gh workflow run research_free.yml -f dry=false && echo "news collection was overdue: started now";; esac
+          case "$todo" in *write*) gh workflow run write_stories.yml && echo "queued news waiting: story writer started now";; esac
+          true
+      - name: Keep the schedule alive (daily heartbeat)
+        if: github.event_name == 'schedule' && env.BRIDGE_URL != ''
+        run: |
+          if [ "$(date -u +%H)" = "18" ] && [ "$(date -u +%M)" -lt 20 ]; then
+            date -u +"%Y-%m-%d %H:%M UTC" > .heartbeat
+            git config user.name "news360-bot"
+            git config user.email "news360-bot@users.noreply.github.com"
+            git add .heartbeat && git commit -m "Heartbeat" && git push || true
+          fi
+
+  post:
+    needs: check
+    if: needs.check.outputs.ready == '1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.check.outputs.matrix) }}
+    env:
+      TA_MODEL: ${{ github.workspace }}/reel/models/ta
+      SLOT_MIN: ${{ matrix.slot }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+      GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+      CLAUDE_MAX_CALLS: "0"      # Coimbatore: Claude backup OFF (free models only; no ANTHROPIC_API_KEY passed)
+      PREBUILD: ${{ matrix.prebuild || (github.event_name == 'workflow_dispatch' && inputs.prebuild && '1' || '') }}
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: reel/requirements.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Tamil voice model (cached)
+        id: model
+        uses: actions/cache@v4
+        with:
+          path: reel/models/ta
+          key: indic-tts-ta-v1
+      - name: Download voice model
+        if: steps.model.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p reel/models
+          curl -sL -o /tmp/ta.zip https://github.com/AI4Bharat/Indic-TTS/releases/download/v1-checkpoints-release/ta.zip
+          unzip -q /tmp/ta.zip -d reel/models && rm /tmp/ta.zip
+          ls reel/models/ta
+      - name: Browser (cached)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: pw-chromium-${{ hashFiles('reel/requirements.txt') }}
+      - name: Install
+        timeout-minutes: 25      # normally 2 min; a stuck download (26 Oct: 20+ min) must not block posting for 90 min
+        run: |
+          # ffmpeg: fast copy from GitHub (fingerprint checked), Ubuntu only as the backup - 26 Oct: Ubuntu mirrors hung apt for 30 min
+          ffmpeg_github() {
+            U=https://github.com/BtbN/FFmpeg-Builds/releases/download/latest
+            line=$(curl -sfL --max-time 30 $U/checksums.sha256 | grep -E '  ffmpeg-n[0-9.]+-latest-linux64-gpl-[0-9.]+\.tar\.xz$' | sort -k2 -V | tail -1) &&
+            [ -n "$line" ] && f=${line##* } && cd /tmp &&
+            curl -sfL --max-time 180 --retry 2 -o "$f" "$U/$f" && echo "$line" | sha256sum -c --quiet - &&
+            tar xf "$f" && sudo cp /tmp/ffmpeg-*/bin/ffmpeg /tmp/ffmpeg-*/bin/ffprobe /usr/local/bin/ && cd - >/dev/null &&
+            ffmpeg -hide_banner -version | head -1
+          }
+          ffmpeg_ubuntu() {
+            sudo dpkg --configure -a 2>/dev/null || true
+            sudo apt-get $APT update -qq && sudo apt-get $APT install -y -qq ffmpeg
+          }
+          browser_ok() { python -c "from playwright.sync_api import sync_playwright as s; p=s().start(); p.chromium.launch().close(); p.stop()"; }
+          inst() {
+            APT="-o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 -o Acquire::Retries=3"
+            { command -v ffmpeg >/dev/null || ffmpeg_github || { echo "GitHub ffmpeg failed - using Ubuntu"; ffmpeg_ubuntu; }; } &&
+            pip install --timeout 60 torch==2.8.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cpu &&
+            pip install --timeout 60 -r reel/requirements.txt &&
+            python -m playwright install chromium &&
+            { browser_ok || { echo "browser needs system parts - using Ubuntu"; sudo "$(command -v python)" -m playwright install-deps chromium; }; } &&
+            (cd kit && npm install --no-audit --no-fund)
+          }
+          for i in 1 2; do
+            timeout 600 bash -c "$(declare -f inst ffmpeg_github ffmpeg_ubuntu browser_ok); inst" && exit 0
+            echo "install attempt $i stuck or failed - trying again"
+          done
+          exit 1
+      - name: Build and post the carousel and the reel
+        run: python poster/post.py run ${{ matrix.story }}
+      - name: Keep the finished files (so a retry or the next run does not rebuild)
+        if: always()
+        run: |
+          git config user.name "news360-bot"; git config user.email "news360-bot@users.noreply.github.com"
+          if [ -n "$(ls poster/prebuilt 2>/dev/null)" ]; then
+            git add -f poster/prebuilt && git commit -qm "prebuilt ${{ matrix.story }}" || exit 0
+            for i in 1 2 3 4 5; do git pull -q --rebase -X theirs && git push -q && break; git rebase --abort 2>/dev/null; sleep 5; done
+          fi

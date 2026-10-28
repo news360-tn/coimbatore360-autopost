@@ -1,0 +1,83 @@
+name: research-free
+# Coimbatore 360: collects Coimbatore-district news only.
+# every 4 hours at :07 (IST 05:37, 09:37, 13:37, 17:37, 21:37, 01:37; GitHub often starts it a little late). Runs ONLY while research_free/ENABLED exists (Actions -> collect-switch -> start/pause). Every round collects, writes the new stories
+# (quality-checked) and sends ONE images-needed e-mail - only when there is news. Stories still waiting for images from an earlier round are listed again in it.
+on:
+  schedule:
+    - cron: "7 */4 * * *"    # every 4 hours: COLLECT only (all news, queued by priority); write-stories.yml writes them and posting follows at once
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: "dry run (do not write to Sheet / send email)"
+        default: "false"
+      manual_url:
+        description: "optional: one article link to write and post now (today's news only)"
+        default: ""
+permissions:
+  contents: write
+  actions: write      # starts the posting job as soon as a story is saved
+concurrency: research-free
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - name: Check switch
+        id: sw
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] && [ ! -f research_free/ENABLED ]; then echo "go=no" >> $GITHUB_OUTPUT; else echo "go=yes" >> $GITHUB_OUTPUT; fi
+      - uses: actions/setup-python@v5
+        if: steps.sw.outputs.go == 'yes'
+        with: {python-version: "3.11"}
+      - run: pip install requests googlenewsdecoder==0.2.2 pillow
+        if: steps.sw.outputs.go == 'yes'
+      - name: Collect, write, validate, send
+        if: steps.sw.outputs.go == 'yes'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          FAL_KEY: ${{ secrets.FAL_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          GH_MODELS_TOKEN: ${{ secrets.GH_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          CLAUDE_MAX_CALLS: "0"      # Coimbatore: Claude backup OFF (free models only; no ANTHROPIC_API_KEY passed)
+          MANUAL_URL: ${{ github.event.inputs.manual_url }}
+          BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
+          BRIDGE_KEY: ${{ secrets.BRIDGE_KEY }}
+          CLOUDINARY_CLOUD: ${{ secrets.CLOUDINARY_CLOUD }}
+          CLOUDINARY_PRESET: ${{ secrets.CLOUDINARY_PRESET }}
+          BUDGET_MIN: "55"
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          AUTO_IMAGES: "1"          # ONE image per story, free first: Cloudflare FLUX schnell -> NVIDIA FLUX -> only then paid FAL (flux/schnell, flux/dev); stories without an image go to the e-mail as before
+          WRITE_STORIES: '1'
+          COLLECT_MODE: ${{ github.event.inputs.manual_url != '' && 'both' || 'collect' }}      # a link given by hand is written at once
+          WRITE_WORKERS: "3"        # stories written at the same time
+          FRESH_DAYS: "2"           # news published today or yesterday (not posted yet)
+          DAILY_CAP: "25"           # Coimbatore 360: after 25 stories a day only main / important news is written
+        run: |
+          mkdir -p research_free/results
+          FLAG=""; [ "${{ github.event.inputs.dry }}" = "true" ] && FLAG="--dry"
+          for TRY in 1 2; do
+            python -u research_free/collect.py $FLAG > research_free/results/collect.log 2>&1 && break
+            echo "exit $? (try $TRY)" >> research_free/results/collect.log
+            cp research_free/results/collect.log research_free/results/collect_failed.log
+            sleep 60
+          done
+          tail -15 research_free/results/collect.log
+      - name: Save log
+        if: always() && steps.sw.outputs.go == 'yes'
+        run: |
+          git config user.name "news360-bot"; git config user.email "bot@users.noreply.github.com"
+          git add -f research_free/results research_free/archive
+          git commit -m "free collector log" || echo none
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs --autostash origin main && git push && break; git rebase --abort 2>/dev/null; sleep $((i*4)); done || true
+      - name: Fail loudly if the collector crashed (GitHub then emails the repo owner)
+        if: steps.sw.outputs.go == 'yes'
+        run: |
+          if grep -q "Traceback" research_free/results/collect.log; then echo "collector crashed twice"; exit 1; fi
