@@ -274,7 +274,9 @@ class SinglePage(unittest.TestCase):
         self.assertIn("coimbatore_link: 26", gs)
         self.assertNotIn("namakkal_link", gs)
         self.assertIn("IG_TOKEN_", gs)
-        self.assertNotIn("nammarasipuram", gs)      # never the Namakkal Gmail
+        for namakkal_id in ("10lKyQo4rPkSyGP6kj3zvVBpm17r5fXzTa6vwdnu3y00", "1Nm6KqDoS_mz4T9UKxnvVN69EAibWz55p"):      # the Namakkal Sheet / Drive folder (same Gmail, owner 28 Oct)
+            self.assertNotIn(namakkal_id, gs)
+        self.assertIn("COIMBATORE360", gs)      # its own e-mail tag: the Namakkal bridge never reads Coimbatore mails
 
     def test_never_live_by_itself(self):
         self.assertFalse((ROOT / "LIVE").exists())
