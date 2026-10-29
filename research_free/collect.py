@@ -177,7 +177,17 @@ def fresh(published):
     return (datetime.datetime.now(IST).date() - d).days < FRESH_DAYS
 
 
-FRESH_HOURS = float(os.environ.get("FRESH_HOURS", "3") or 3)      # late-night news crosses midnight: still fresh for 3 h
+FRESH_HOURS = float(os.environ.get("FRESH_HOURS", "0") or 0)      # owner 29 Oct 18:29 (Coimbatore): TODAY's news only, no late-night carry-over
+
+
+def published_today(published):
+    """owner 29 Oct 18:29 (Coimbatore): the article itself must show a publish date, and that date must be today (IST)"""
+    try:
+        t = datetime.datetime.fromisoformat(str(published))
+    except Exception:
+        return False
+    d = t.astimezone(IST).date() if t.tzinfo is not None else t.date()
+    return d == datetime.datetime.now(IST).date()      # late-night news crosses midnight: still fresh for 3 h
 FRESH_DAYS = int(os.environ.get("FRESH_DAYS", "1") or 1)      # owner 29 Oct (Coimbatore): 1 = news published TODAY only; 2 = today + yesterday
 
 
@@ -349,7 +359,7 @@ def verify_candidates(items, state, log):
             if not tamil_source(art) and not n.get("manual"):      # owner 29 Oct: Tamil sources only
                 n["status"], stt["s"] = "not a Tamil-language article", "notext"; kept["notext"] += 1
                 continue
-            if not fresh(art["published"]) and not n.get("manual"):
+            if not published_today(art["published"]) and not n.get("manual"):      # owner 29 Oct: published TODAY only
                 n["status"], stt["s"] = "old", "old"; kept["old"] += 1
                 continue
             # owner 26 Oct: ONLY Coimbatore-district news - a district place in the headline or in the opening lines (not just a sidebar or a
@@ -868,7 +878,7 @@ def main():
             return {"skip": "article has no text beyond its headline", "s": "notext", "log": f"skip ({area}) only a headline, {bw} words of text: {art['title'][:50]} [{url[:60]}]"}
         if not tamil_source(art) and not n.get("manual"):      # owner 29 Oct: Tamil sources only (a link given by hand is still written)
             return {"skip": "not a Tamil-language article", "s": "notext", "log": f"skip ({area}) not a Tamil article: {art['title'][:50]} [{url[:60]}]"}
-        if not fresh(art["published"]) and not n.get("manual"):      # a link the owner gives by hand is written whatever its date
+        if not published_today(art["published"]) and not n.get("manual"):      # owner 29 Oct: published TODAY only (a hand-given link: any date)
             return {"skip": "old", "s": "old", "log": f"skip ({area}) too old ({art['published'] or 'no date'}): {art['title'][:50]}"}
         if ((not (allnews.has_place(n["title"]) or allnews.has_place(art["title"]) or allnews.has_place(art["text"][:300])
                   or allnews.url_district(art["url"]) in allnews.DISTRICT_SLUGS) and n.get("via", "") != "dinamalar-list")

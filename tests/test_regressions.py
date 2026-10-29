@@ -802,3 +802,27 @@ class ResearchedOutletsOnly(unittest.TestCase):
             self.assertTrue(allnews.tamil_outlet({"via": "bing", "url": keep}), keep)
         for drop in ("https://tamil.oneindia.com/news/coimbatore/x", "https://www.vikatan.com/x", "https://tamil.abplive.com/x"):
             self.assertFalse(allnews.tamil_outlet({"via": "bing", "url": drop}), drop)
+
+
+class TodayOnlyCoimbatore(unittest.TestCase):
+    """owner 29 Oct 18:29: Coimbatore writes and posts only news whose article is published TODAY (IST)"""
+    def test_published_today(self):
+        now = collect.datetime.datetime.now(collect.IST)
+        self.assertTrue(collect.published_today(now.isoformat()))
+        self.assertFalse(collect.published_today((now - collect.datetime.timedelta(days=1)).isoformat()))
+        self.assertFalse(collect.published_today(""))          # no date on the article = not taken
+
+    def test_posting_gate_today_only(self):
+        import os
+        os.environ["POST_MAX_AGE_DAYS"] = "0"
+        try:
+            y = (post.datetime.now(post.IST) - post.timedelta(days=1)).isoformat()
+            row = {"story_id": "RN-x", "headline_ta": "கோவையில் செய்தி", "headline_en": "x", "published": y,
+                   "researched": post.datetime.now(post.IST).strftime("%d %b %Y, %H:%M"), "slides_spec": "{}"}
+            self.assertIn("not today", post.skip_reason(row))
+        finally:
+            os.environ.pop("POST_MAX_AGE_DAYS", None)
+
+    def test_utc_time_read_in_ist(self):
+        import freshness, datetime
+        self.assertEqual(freshness.pub_date("2026-10-28T22:17:23.761Z"), datetime.date(2026, 10, 29))

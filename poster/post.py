@@ -197,8 +197,11 @@ def skip_reason(row):
     same_day = bool(f and f.date() == datetime.now(IST).date())      # filed today: it goes out today, whatever the clock says
     nd = freshness.news_date(row.get("published"), row.get("source"), f)
     manual = "manual" in " ".join(str(row.get(k) or "") for k in ("notes", "batch", "review", "source")).lower()
-    if nd and not manual and (datetime.now(IST).date() - nd).days > 1:      # owner: only today's or yesterday's news is posted
-        return f"stale: published {nd:%d %b}, older than yesterday"      # (27 Oct: a 25 Oct story went out two days late)
+    max_age = int(os.environ.get("POST_MAX_AGE_DAYS", "1") or 1)      # owner 29 Oct 18:29: Coimbatore 0 = only news published TODAY
+    if not manual and max_age == 0 and not nd:
+        return "stale: no publish date known - today's news only"
+    if nd and not manual and (datetime.now(IST).date() - nd).days > max_age:      # owner: only today's (or yesterday's) news is posted
+        return f"stale: published {nd:%d %b}, " + ("not today" if max_age == 0 else "older than yesterday")      # (27 Oct: a 25 Oct story went out two days late)
     why = freshness.power_cut_over(row.get("headline_ta") or "", row.get("headline_en") or "", row.get("published") or (nd.isoformat() if nd else ""))
     if why:
         return "stale: " + why

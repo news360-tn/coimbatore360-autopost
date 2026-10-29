@@ -35,6 +35,7 @@ env:
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # picture check: does the AI image show the news?
   DAILY_CAP: "50"     # owner 29 Oct: do not miss city news - up to Instagram's own limit of 50 posts a day
   CITY_ONLY: "1"      # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
+  POST_MAX_AGE_DAYS: "0"      # owner 29 Oct 18:29: only news PUBLISHED TODAY is posted
   DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
   PREBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.prebuild && '1' || '' }}
   PAUSED: ${{ vars.PAUSED }}
