@@ -1,21 +1,13 @@
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-14:26:11 automatic images queued: RN-17 1
-14:26:14 SKIP RN-2 not Coimbatore city news (Valparai)
-14:26:14 11 stories in the queue, ready to post: 10
-14:26:14   keys: ['batch', 'caption', 'category', 'coimbatore_link', 'doc', 'email_sent', 'gmail_id', 'headline_en', 'headline_ta', 'images', 'importance', 'location', 'notes', 'notion', 'other_sources', 'post_status', 'post_to', 'posted_at', 'prompts', 'published', 'reel', 'reel_link', 'reel_script', 'researched', 'review', 'review_page', 'row', 'slides_spec', 'source', 'spare_link', 'story_id', 'verification']
-14:26:14    RN-2 review= 'Auto' images= 103 spec= 785 pages= ['coimbatore'] links= '' '' age_h= 1.1 ready= False set_started= True
-14:26:14    RN-4 review= 'Auto' images= 103 spec= 769 pages= ['coimbatore'] links= '' '' age_h= 0.9 ready= True set_started= True
-14:26:14    RN-7 review= 'Auto' images= 103 spec= 856 pages= ['coimbatore'] links= '' '' age_h= 0.7 ready= True set_started= True
-14:26:14    RN-10 review= 'Auto' images= 103 spec= 918 pages= ['coimbatore'] links= '' '' age_h= 0.4 ready= True set_started= True
-14:26:14    RN-11 review= 'Auto' images= 103 spec= 778 pages= ['coimbatore'] links= '' '' age_h= 0.4 ready= True set_started= True
-14:26:14    RN-12 review= 'Auto' images= 103 spec= 476 pages= ['coimbatore'] links= '' '' age_h= 0.3 ready= True set_started= True
-14:26:14    RN-13 review= 'Auto' images= 103 spec= 713 pages= ['coimbatore'] links= '' '' age_h= 0.3 ready= True set_started= True
-14:26:14    RN-14 review= 'Auto' images= 103 spec= 684 pages= ['coimbatore'] links= '' '' age_h= 0.3 ready= True set_started= True
-14:26:14    RN-15 review= 'Auto' images= 103 spec= 698 pages= ['coimbatore'] links= '' '' age_h= 0.2 ready= True set_started= True
-14:26:14    RN-16 review= 'Auto' images= 103 spec= 729 pages= ['coimbatore'] links= '' '' age_h= 0.2 ready= True set_started= True
-14:26:14    RN-17 review= 'Auto' images= 103 spec= 706 pages= ['coimbatore'] links= '' '' age_h= 0.2 ready= True set_started= True
-14:26:15 publishing quota coimbatore: 11/50
+15:45:48 SKIP RN-2 not Coimbatore city news (Valparai)
+15:45:48 SKIP RN-11 duplicate of RN-17
+15:45:48 8 stories in the queue, ready to post: 6
+15:45:48   keys: ['batch', 'caption', 'category', 'coimbatore_link', 'doc', 'email_sent', 'gmail_id', 'headline_en', 'headline_ta', 'images', 'importance', 'location', 'notes', 'notion', 'other_sources', 'post_status', 'post_to', 'posted_at', 'prompts', 'published', 'reel', 'reel_link', 'reel_script', 'researched', 'review', 'review_page', 'row', 'slides_spec', 'source', 'spare_link', 'story_id', 'verification']
+15:45:48    RN-2 review= 'Auto' images= 103 spec= 785 pages= ['coimbatore'] links= '' '' age_h= 2.5 ready= False set_started= True
+15:45:48    RN-11 review= 'Auto' images= 103 spec= 778 pages= ['coimbatore'] links= '' '' age_h= 1.7 ready= False set_started= True
+15:45:48    RN-18 review= 'Auto' images= 103 spec= 656 pages= ['coimbatore'] links= '' '' age_h= 1.3 ready= True set_started= True
+15:45:48    RN-19 review= 'Auto' images= 103 spec= 912 pages= ['coimbatore'] links= '' '' age_h= 1.3 ready= True set_started= True
+15:45:48    RN-20 review= 'Auto' images= 103 spec= 688 pages= ['coimbatore'] links= '' '' age_h= 1.2 ready= True set_started= True
+15:45:48    RN-21 review= 'Auto' images= 103 spec= 963 pages= ['coimbatore'] links= '' '' age_h= 1.1 ready= True set_started= True
+15:45:48    RN-22 review= 'Auto' images= 103 spec= 869 pages= ['coimbatore'] links= '' '' age_h= 1.1 ready= True set_started= True
+15:45:48    RN-23 review= 'Auto' images= 103 spec= 960 pages= ['coimbatore'] links= '' '' age_h= 1.0 ready= True set_started= True
+15:45:49 publishing quota coimbatore: 23/50
