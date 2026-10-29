@@ -32,49 +32,87 @@ TEMPLATE = ("ONE single continuous photograph from one camera angle (not a colla
             "Keep the top-right corner and the lower third of the image visually simple (sky, road, wall, field) because Tamil text will be placed there.")
 
 
-BRIEF_SYSTEM = """You are the photo editor of a Tamil local-news page for Coimbatore district, Tamil Nadu, India. You plan the ONE photograph that illustrates ONE news story.
+BRIEF_SYSTEM = """You are the photo editor of a Tamil local-news page for COIMBATORE CITY, Tamil Nadu, India. You plan the ONE photograph that illustrates ONE news story,
+so that a reader who sees only the picture already knows WHICH news it is.
 You get the English headline, place, category and the article text. Work in two steps and return both.
 
 STEP 1 - "facts": read the article and list ONLY what a camera could see, copied in meaning from the article:
- what happened (the event itself), the exact place and its type (city road, flyover, highway, bus stand, government school, hospital, collectorate,
- police station, temple, hill road, dam or river, farm field, coconut grove, market, textile mill, foundry or pump factory, house), the people by role and
- their number, vehicles, objects, animals (elephants near the forest edge), crops, buildings, weather, time of day. Write "unknown" for anything the article
- does not say. Never invent.
+ what happened (the event itself), the exact place and its type, the people by role and their number, vehicles (exact type and colour if given),
+ objects (seized goods, damaged things, tools), animals, buildings, weather, time of day. Write "unknown" for anything the article does not say. Never invent.
 
-STEP 2 - "scenes": exactly ONE photograph (70-120 words of plain English): the MAIN SCENE of THIS news - the real place type with Coimbatore /
- Tamil Nadu character and the main action exactly as the article describes it (what the people do, what the objects show), so a viewer recognises
- this news from the picture alone. Name the place type, the action, the people (by role, number, clothes), the light and weather, the camera angle and lens.
-REGIONAL REALISM (always): Coimbatore city or a Kongu-region town or village - concrete buildings, busy city roads and flyovers, TNSTC and private
- town buses, two-wheelers, autorickshaws; coconut groves around Pollachi, the Western Ghats hills in the background, tea estates and hairpin bends
- at Valparai, the Bhavani river at Mettupalayam, Aliyar dam; men in shirts with veshti or trousers, women in sarees or salwar;
- Tamil Nadu police in khaki uniform; TNEB linemen.
-CATEGORY GUIDE: accident = the vehicles after the crash on that road, police and onlookers at a distance, no injured people; death or crime =
- the place only (house exterior, police vehicle, police station gate), never a body or weapon; power cut = substation / transformer / linemen /
- a dark street; rain or flood = water on that road or field, people wading; prices or market = the goods and the market stalls; protest = a crowd
- with flags or placards seen from behind; government scheme or meeting = officials at a table in a government hall, people queuing;
- jobs or recruitment = job seekers queuing at a government hall or college campus, seen from behind; school or exam = students in Tamil Nadu
- school uniform from behind; temple festival = the temple gopuram, chariot, devotees; wild elephant = elephants at a forest edge or farm at a distance.
+STEP 2 - "scenes": exactly ONE photograph, 100-150 words of plain English, written in THIS order:
+ 1. SUBJECT + ACTION: the main thing of THIS news happening, in the first sentence (e.g. "A TNEB lineman on a ladder repairs a transformer ...").
+ 2. PLACE: the real place type in Coimbatore city with its look (see CITY LOOK), named area if the article gives it.
+ 3. PEOPLE: by role, number, clothes, what each group is doing; seen from behind or far away.
+ 4. VEHICLES / OBJECTS: exact types from the article (two-wheeler, autorickshaw, town bus, lorry, car; seized ganja packets, liquor bottles,
+    gold jewellery laid on a table; garbage heap; pothole; overflowing drain; water pots).
+ 5. TIME + LIGHT + WEATHER: from the article, else daylight.
+ 6. CAMERA: eye level or slightly high, 35 mm, wide enough to show the place.
+ It MUST contain at least THREE concrete facts from STEP 1 (place type, action, objects, numbers) - never a generic scene.
+CITY LOOK (Coimbatore city): Gandhipuram / Ukkadam / Singanallur bus stands with town buses, Avinashi Road and Trichy Road with flyovers and
+ heavy traffic, Town Hall and R.S. Puram streets with shops, the Coimbatore Corporation office, Ukkadam and Valankulam lakes, the railway junction,
+ Peelamedu and Saravanampatti IT and college campuses, textile mills and pump/foundry units, TNEB substations and transformers on concrete poles,
+ Marudhamalai hill and the Western Ghats in the far background; two-wheelers, autorickshaws, private and TNSTC buses; men in shirts with veshti or
+ trousers, women in sarees or salwar; Tamil Nadu police in khaki; corporation workers; TNEB linemen.
+CATEGORY GUIDE: power cut = TNEB lineman on a pole or a substation, shops and a street without lights; crime = the place only (house exterior,
+ police jeep, police station gate) or the seized goods on a table with police in khaki behind, never a body or a weapon at a person;
+ accident = the damaged vehicles of the article on that road, police and onlookers at a distance, no injured people; civic = the problem itself
+ (garbage heap on the roadside, pothole filled with rain water, overflowing drain, broken street light, people waiting with water pots,
+ corporation workers fixing it); rain or flood = water on that road, vehicles wading; protest = a crowd with flags or placards seen from behind;
+ government meeting or scheme = officials at a table in a government hall, people queuing; jobs = job seekers queuing at a hall or campus from
+ behind; school = students in Tamil Nadu school uniform from behind; temple = the gopuram and devotees; wild elephant = elephants at the forest edge.
 NEVER: readable text, letters, numbers, signboards, logos, watermarks, a recognisable face of any real person or politician, blood, injuries,
  dead bodies, weapons pointed at people, collages or split frames. People only from behind, far away or slightly blurred.
 Return ONLY JSON: {"facts": "...", "scenes": ["the one scene"]}"""
 
-IMG_TEMPLATE = ("Photorealistic press photograph from Coimbatore district, Tamil Nadu, India. One single continuous frame (no collage, no panels), "
-                "tall vertical 9:16 composition, the main subject in the centre, shot on a full-frame camera, sharp focus across the frame, natural light, "
-                "true-to-life colours, documentary photojournalism. {scene} No text, no letters, no numbers, no signboards, no logos, no watermarks, "
+# owner 29 Oct: the news scene comes FIRST (some image models read only the start of a long prompt), the photo style after it
+IMG_TEMPLATE = ("{scene} "
+                "Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), "
+                "tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, "
+                "true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, "
                 "no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).")
+
+_STOP = {"the", "a", "an", "of", "in", "on", "at", "to", "for", "and", "with", "near", "by", "from", "as", "is", "are", "was", "were", "after",
+         "over", "into", "coimbatore", "city", "kovai", "tamil", "nadu", "district", "news", "says", "said", "held", "two", "three", "four"}
+
+
+def _key_words(t):
+    return {w for w in re.findall(r"[a-z]{4,}", (t or "").lower()) if w not in _STOP}
+
+
+def scene_ok(scene, headline):
+    """the scene shows THIS news: long enough and it names at least two main words of the headline (or all when the headline is short)"""
+    if len((scene or "").split()) < 60:
+        return False
+    need = _key_words(headline)
+    if not need:
+        return True
+    have = _key_words(scene) | {w.rstrip("s") for w in _key_words(scene)}
+    hit = sum(1 for w in need if w in have or w.rstrip("s") in have)
+    return hit >= min(2, len(need))
 
 
 def image_scenes(art, d):
-    """ONE detailed image prompt (the main scene of this news) built from the article itself (not a generic scene); returns a 1-item list"""
+    """ONE detailed image prompt (the main scene of this news) built from the article itself (not a generic scene); returns a 1-item list.
+    owner 29 Oct: a scene that is too short or does not name the main things of the headline is sent back once."""
     user = f"HEADLINE: {d.get('english_headline', '')}\nPLACE: {d.get('location', '')}\nCATEGORY: {d.get('category', '')}\nARTICLE:\n{(art.get('text') or '')[:3000]}"
-    try:
-        data, _ = llm.ask_json(BRIEF_SYSTEM, user)
-    except Exception:
-        if not llm.claude_available():
-            raise
-        data, _ = llm.ask_claude(BRIEF_SYSTEM, user, max_tokens=1500)
-    sc = [s.strip() for s in (data.get("scenes") or []) if isinstance(s, str) and len(s.strip()) > 40]
-    return sc[:1]      # Coimbatore: exactly one image per story
+    best = []
+    for attempt in range(2):
+        try:
+            data, _ = llm.ask_json(BRIEF_SYSTEM, user)
+        except Exception:
+            if not llm.claude_available():
+                if best:
+                    break
+                raise
+            data, _ = llm.ask_claude(BRIEF_SYSTEM, user, max_tokens=1500)
+        sc = [s.strip() for s in (data.get("scenes") or []) if isinstance(s, str) and len(s.strip()) > 40][:1]
+        if sc and scene_ok(sc[0], d.get("english_headline", "")):
+            return sc
+        best = best or sc
+        user += ("\n\nYOUR SCENE WAS TOO GENERIC OR TOO SHORT. Start with the main event of THIS headline, name its place type, people, "
+                 "vehicles or objects, and write 100-150 words.")
+    return best      # Coimbatore: exactly one image per story
 
 
 def bridge(action, **kw):

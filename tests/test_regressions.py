@@ -329,6 +329,26 @@ class CityOnly(unittest.TestCase):
         self.assertEqual("", post.not_coimbatore(row))
 
 
+class ImagePrompt(unittest.TestCase):
+    """owner 29 Oct: a detailed, news-related picture - the scene of THIS news first, generic scenes sent back"""
+    GOOD = ("A TNEB lineman on a tall concrete pole repairs a transformer at a substation on Trichy Road in Singanallur while two other linemen in "
+            "khaki shirts hold a ladder below; the shops along the road have their shutters half down and no lights, two-wheelers pass slowly, an "
+            "autorickshaw waits at the corner, a few residents watch from a distance, late morning daylight with light clouds, Western Ghats faintly "
+            "in the background, eye-level 35 mm wide shot showing the street and the substation fence.")
+
+    def test_scene_first_in_prompt(self):
+        p = collect.IMG_TEMPLATE.format(scene=self.GOOD)
+        self.assertTrue(p.startswith("A TNEB lineman"))
+        self.assertIn("No text", p)
+        self.assertLess(len(p), 1800)
+
+    def test_generic_scene_sent_back(self):
+        head = "Power shutdown in Singanallur tomorrow for substation maintenance"
+        self.assertTrue(collect.scene_ok(self.GOOD, head))
+        self.assertFalse(collect.scene_ok("A busy city street in daylight with buildings and people. " * 3, head))
+        self.assertFalse(collect.scene_ok("A TNEB lineman repairs a transformer in Singanallur.", head))      # too short
+
+
 class SinglePage(unittest.TestCase):
     """Coimbatore 360 is one page: no Rasipuram page, no collaborator, own Sheet column"""
 
