@@ -213,6 +213,9 @@ def not_coimbatore(row):
     cap = (row.get("caption") or "")[:600]
     if allnews.other_district(head):
         return "not Coimbatore district news (the headline names another district)"
+    town = allnews.outside_city(head, row.get("location") or "")
+    if town:      # owner 29 Oct: Coimbatore city only for now (CITY_ONLY=0 for the whole district)
+        return f"not Coimbatore city news ({town})"
     if allnews.has_place(head):
         return ""
     d = (allnews.url_district(src) or "").lower()

@@ -34,6 +34,7 @@ env:
   FAL_KEY: ${{ secrets.FAL_KEY }}      # paid pictures ONLY when no free source made one
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # picture check: does the AI image show the news?
   DAILY_CAP: "25"     # Coimbatore 360: start with at most 25 reels a day (owner decision)
+  CITY_ONLY: "1"      # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
   DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
   PREBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.prebuild && '1' || '' }}
   PAUSED: ${{ vars.PAUSED }}

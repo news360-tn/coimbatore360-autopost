@@ -312,6 +312,10 @@ def verify_candidates(items, state, log):
                     or allnews.outside_district(art["title"])):      # 27 Oct: a story on the paper's own Coimbatore page is Coimbatore news even when it names no town
                 n["status"], stt["s"] = "not Coimbatore district news (article names no Coimbatore place)", "notdistrict"; kept["notdistrict"] += 1
                 continue
+            town = allnews.outside_city(art["title"], art["text"][:300])
+            if town and not n.get("manual"):      # owner 29 Oct: Coimbatore city only for now
+                n["status"], stt["s"] = f"not Coimbatore city news ({town})", "notcity"; kept["notdistrict"] += 1
+                continue
             n.update(url=art["url"], title=art["title"], published=art["published"], verified=True)
             n["area"] = allnews.area_of_story(art["title"], art["text"])
             n["score"] = local_score(n, art["text"])
@@ -780,6 +784,9 @@ def main():
                   or allnews.url_district(art["url"]) in allnews.DISTRICT_SLUGS) and n.get("via", "") != "dinamalar-list")
                 or not allnews.local_ok(art["url"], art["title"])) and not n.get("manual"):
             return {"skip": "not Coimbatore district news (article names no Coimbatore place)", "s": "notdistrict", "log": f"skip ({area}) no Coimbatore place in article: {art['title'][:50]}"}
+        town = allnews.outside_city(art["title"], art["text"][:300])
+        if town and not n.get("manual"):      # owner 29 Oct: Coimbatore city only for now
+            return {"skip": f"not Coimbatore city news ({town})", "s": "notcity", "log": f"skip ({area}) outside the city ({town}): {art['title'][:50]}"}
         if not n.get("manual") and any(_fr().similar(r.get("headline_ta", ""), art["title"], 0.55, r.get("researched"))
                                        or same_news(r.get("headline_ta", ""), art["title"], r.get("researched")) for r in recent):      # already posted / written
             return {"skip": "already filed", "s": "dup", "log": f"skip ({area}) similar to a filed story: {art['title'][:50]}"}

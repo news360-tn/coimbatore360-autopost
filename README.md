@@ -1,5 +1,8 @@
 # Coimbatore 360 – கோயம்புத்தூர் 360 auto-posting
 
+
+> **Now: Coimbatore CITY only** (owner 29 Oct). Stories about towns outside the city (Pollachi, Mettupalayam, Sulur, Annur, Valparai ...) are skipped. To cover the whole district later, set `CITY_ONLY: "0"` in `.github/workflows/research_free.yml`, `write_stories.yml` and `post.yml`.
+
 Automatic Coimbatore-district news reels for the Instagram page **கோயம்புத்தூர் 360** (`@coimbatore360_official`, hashtag `#Coimbatore360`).
 This is a separate copy of the Namakkal project (`news360-autopost`): its own GitHub repository, its own Google account,
 Sheet and Apps Script, its own Instagram token, Cloudinary account and free API keys. Nothing here touches Namakkal 360.

@@ -120,8 +120,8 @@ class PostingGate(unittest.TestCase):
         post.ALL_ROWS = []
 
     def row(self, **k):
-        r = {"story_id": "RN-T1", "headline_ta": "சூலூரில் தடை செய்யப்பட்ட புகையிலை விற்ற 2 பேர் கைது", "headline_en": "Two held for selling banned tobacco in Sulur",
-             "category": "குற்றம்", "location": "சூலூர், கோவை", "caption": "சூலூரில் புகையிலை விற்ற இருவர் கைது",
+        r = {"story_id": "RN-T1", "headline_ta": "சிங்காநல்லூரில் தடை செய்யப்பட்ட புகையிலை விற்ற 2 பேர் கைது", "headline_en": "Two held for selling banned tobacco in Singanallur",
+             "category": "குற்றம்", "location": "சிங்காநல்லூர், கோவை", "caption": "சிங்காநல்லூரில் புகையிலை விற்ற இருவர் கைது",
              "published": f"{TODAY}", "source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/1",
              "researched": f"{TODAY:%d %b %Y}, 06:25", "post_status": "", "notes": "", "batch": "", "review": "Auto"}
         r.update(k)
@@ -281,6 +281,27 @@ class Images(unittest.TestCase):
         d["scenes"] = [d["scenes"][0]] * 3
         self.assertTrue(validate.validate(d, ""), "three image prompts must be refused")
         self.assertNotEqual("1", os.environ.get("REUSE_IMAGES"), "older pictures are never reused")
+
+
+class CityOnly(unittest.TestCase):
+    """owner 29 Oct: start with Coimbatore CITY only (whole district later with CITY_ONLY=0)"""
+
+    def test_towns_outside_the_city_skipped(self):
+        for t in ("பொள்ளாச்சியில் விபத்து", "மேட்டுப்பாளையத்தில் யானை", "சூலூரில் கைது", "Pollachi farmers protest"):
+            self.assertTrue(allnews.outside_city(t), t)
+        self.assertTrue(allnews.outside_city("நகை பறிப்பு", "பொள்ளாச்சி, கோவை"))      # the location the writer found
+
+    def test_city_news_kept(self):
+        for t in ("கோவையில் ஆன்லைன் மோசடி", "Coimbatore power cut", "மேட்டுப்பாளையம் சாலையில் விபத்து",
+                  "காந்திபுரத்தில் பஸ் விபத்து; பொள்ளாச்சி பயணிகள்", "கோவை பேரூராட்சியில் கூட்டம்"):
+            self.assertEqual("", allnews.outside_city(t), t)
+
+    def test_posting_gate_city_only(self):
+        row = {"source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/1",
+               "headline_ta": "பொள்ளாச்சியில் தென்னை விவசாயிகள் போராட்டம்", "caption": "", "location": "பொள்ளாச்சி"}
+        self.assertIn("city", post.not_coimbatore(row))
+        row.update(headline_ta="சிங்காநல்லூரில் சாலை மறியல்", location="சிங்காநல்லூர், கோவை")
+        self.assertEqual("", post.not_coimbatore(row))
 
 
 class SinglePage(unittest.TestCase):

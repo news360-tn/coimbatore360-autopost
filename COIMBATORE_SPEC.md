@@ -27,6 +27,7 @@ for one Instagram page about **Coimbatore district** news. The Namakkal / Rasipu
 
 ## District
 - Only Coimbatore-district news, published today or yesterday (same freshness rules as Namakkal).
+- **Owner 29 Oct: start with Coimbatore CITY only** (`CITY_ONLY: "1"` in the workflows; `allnews.outside_city`). Towns outside the city (Pollachi, Mettupalayam, Sulur, Annur, Valparai ...) are skipped unless a city area is named; "கோவை" alone stays. Whole district later: set `CITY_ONLY: "0"`.
 - Coimbatore places (Tamil): கோவை, கோயம்புத்தூர், பொள்ளாச்சி, மேட்டுப்பாளையம், சூலூர், அன்னூர், கிணத்துக்கடவு, மதுக்கரை, பேரூர், தொண்டாமுத்தூர்,
   ஆனைமலை, வால்பாறை, காரமடை, கருமத்தம்பட்டி, சிறுமுகை, பெரியநாயக்கன்பாளையம், துடியலூர், காந்திபுரம், ஆர்.எஸ்.புரம், உக்கடம், சிங்காநல்லூர்,
   பீளமேடு, சரவணம்பட்டி, போத்தனூர், குனியமுத்தூர், வடவள்ளி, கவுண்டம்பாளையம், சாய்பாபா காலனி, டவுன்ஹால், ஒண்டிப்புதூர், இருகூர், நீலாம்பூர்,

@@ -2,7 +2,7 @@
 listing pages in sources.json), tag each one with the page area ('N' = the one Coimbatore 360 page; there is no second page),
 merge duplicates reported by several outlets, and give the owner a full list to analyse. Nothing here writes posts; collect.py
 ranks and writes the best ones. Every request is wrapped so one broken outlet never stops the others."""
-import datetime, difflib, email.utils, html, json, re, time, urllib.parse
+import datetime, difflib, email.utils, html, json, os, re, time, urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
 import requests
@@ -170,6 +170,47 @@ PLACE_STEMS = list(dict.fromkeys(f for w in COIMBATORE_WORDS if not w.isascii() 
 # words that contain a place stem but are not the place: பேரூராட்சி = town panchayat (every district), கோவைக்காய் = a vegetable,
 # கோபிசெட்டிபாளையம் = Gobi in Erode district (contains செட்டிபாளையம்)
 NOT_PLACE = ["பேரூராட்சி", "பேரூர் கழக", "பேரூர் செயலாளர்", "கோவைக்காய்", "கோபிசெட்டிபாளைய", "கோபிச்செட்டிபாளைய"]
+
+
+# owner 29 Oct: START WITH COIMBATORE CITY ONLY (the whole district later: env CITY_ONLY=0 in the workflows).
+# A story about a town outside the city is skipped unless it also names a city area; "கோவை" alone stays (the papers write it for city news).
+CITY_ONLY = os.environ.get("CITY_ONLY", "1") == "1"
+TOWNS = ["பொள்ளாச்சி", "மேட்டுப்பாளையம்", "சூலூர்", "அன்னூர்", "வால்பாறை", "கிணத்துக்கடவு", "மதுக்கரை", "பேரூர்", "தொண்டாமுத்தூர்", "ஆனைமலை",
+         "ஆழியாறு", "காரமடை", "சிறுமுகை", "கருமத்தம்பட்டி", "பெரியநாயக்கன்பாளையம்", "நெகமம்", "சோமனூர்", "தடாகம்", "ஆலாந்துறை", "டாப்சிலிப்",
+         "வெள்ளியங்கிரி", "எட்டிமடை", "Pollachi", "Mettupalayam", "Sulur", "Annur", "Valparai", "Kinathukadavu", "Madukkarai", "Perur",
+         "Thondamuthur", "Anaimalai", "Aliyar", "Karamadai", "Sirumugai", "Karumathampatti", "Periyanaickenpalayam", "Topslip", "Negamam", "Somanur"]
+# city roads named after a town are inside the city
+TOWN_ROADS = ["மேட்டுப்பாளையம் சாலை", "மேட்டுப்பாளையம் ரோடு", "பொள்ளாச்சி சாலை", "பொள்ளாச்சி ரோடு", "Mettupalayam Road", "Pollachi Road"]
+CITY_AREAS = ["காந்திபுர", "ஆர்.எஸ்.புர", "உக்கட", "சிங்காநல்லூ", "பீளமேடு", "பீளமேட்", "சரவணம்பட்டி", "போத்தனூ", "குனியமுத்தூ", "வடவள்ளி",
+              "கவுண்டம்பாளைய", "சாய்பாபா", "டவுன்ஹால்", "ஒண்டிப்புதூ", "கணபதி", "செல்வபுர", "மருதமலை", "நஞ்சுண்டாபுர", "ரேஸ்கோர்ஸ்", "துடியலூ",
+              "காளப்பட்டி", "வெள்ளலூ", "இருகூ", "நீலாம்பூ", "மாநகராட்சி", "மாநகர", "Gandhipuram", "R.S. Puram", "RS Puram", "Ukkadam",
+              "Singanallur", "Peelamedu", "Saravanampatti", "Podanur", "Kuniyamuthur", "Vadavalli", "Race Course", "Town Hall", "Ganapathy",
+              "Thudiyalur", "Corporation"]
+
+
+def outside_city(*texts):
+    """CITY_ONLY: '' when the story can be Coimbatore city news, else the town outside the city it is about"""
+    if not CITY_ONLY:
+        return ""
+    t = " ".join(x or "" for x in texts)
+    for w in TOWN_ROADS + NOT_PLACE:
+        t = t.replace(w, " ")
+    low = t.lower()
+    if any(w.lower() in low for w in CITY_AREAS):
+        return ""
+    for w in TOWNS:
+        if w.isascii():
+            if re.search(r"\b" + re.escape(w.lower()) + r"\b", low):
+                return w
+        elif any(f in t for f in _forms(w)):
+            return w
+    return ""
+
+
+# city only: the searches for the towns outside the city are not run (the paper's district pages are still read)
+if CITY_ONLY:
+    QUERIES = [q for q in QUERIES if not outside_city(q)]
+    SITE_QUERIES = [q for q in SITE_QUERIES if not outside_city(q)]
 
 
 def has_place(text):
