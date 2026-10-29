@@ -453,7 +453,7 @@ def make_images(group, log=None):
             continue
         try:
             pr = (STYLE + prompts[0])[:1800]
-            data = imagegen.generate(pr, seed=random.randint(1, 10**6))      # free only: Cloudflare -> Gemini -> NVIDIA (no FAL; none -> plain background)
+            data = imagegen.generate(pr, seed=random.randint(1, 10**6))      # free first: Cloudflare -> NVIDIA; only then FAL schnell -> FAL dev
             if not imagegen.matches(data, st.get("english_headline", "")):
                 try:      # a picture that does not show this news is made once more (free sources only), then the better one is used
                     again = imagegen.generate(pr, seed=random.randint(1, 10**6), free_only=True)

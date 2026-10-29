@@ -1231,14 +1231,14 @@ def missing_setup():
 
 
 def auto_images():
-    """stories without a picture: exactly ONE new AI picture per story (FREE sources only - Cloudflare, Gemini, NVIDIA - inside
+    """stories without a picture: exactly ONE new AI picture per story (free first - Cloudflare, NVIDIA - then FAL, inside
     imagegen.generate; earlier pictures are never reused); if no model works, the reel is made without pictures (setImages with NOIMAGE).
     Credit guard: at most 40 images per run."""
     pend = bridge_get("autoPending").get("rows", [])
     if not pend:
         return
     budget = time.time() + int(os.environ.get("AUTO_IMG_SECONDS", "420"))      # the check job must finish; the rest waits for the next run
-    giveup_h = float(os.environ.get("AUTO_IMG_GIVEUP_H", "0.5"))      # owner 29 Oct: free pictures only; after 30 min of tries the plain background (urgent news never waits 3 h)
+    giveup_h = float(os.environ.get("AUTO_IMG_GIVEUP_H", "0.5"))      # owner 29 Oct: free first, then FAL; if even FAL fails for 30 min, the plain background (urgent news never waits 3 h)
     sys.path.insert(0, str(ROOT / "research_free"))
     import imagegen
     cap = int(os.environ.get("IMG_MAX_PER_RUN", "40"))

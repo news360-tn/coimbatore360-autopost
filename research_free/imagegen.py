@@ -178,8 +178,8 @@ def generate(prompt, seed=0, key=None, cheap=False, free_only=False):
 
 def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
     """FREE first: Cloudflare Workers AI FLUX schnell -> Gemini image (free tier) -> NVIDIA FLUX (free credits);
-    no paid source: when every free one fails this raises, and the reel is made on the plain branded background (owner 29 Oct).
-    Cloudinary only stores the picture."""
+    only when every free source fails: FAL flux/schnell (~Rs 0.26) -> FAL flux/dev; if FAL fails too, the reel uses the plain branded
+    background (owner 29 Oct). Cloudinary only stores the picture."""
     if "No text" not in prompt:
         prompt = prompt.rstrip(". ") + "." + CLEAN
     tok, acct = os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID")
@@ -199,7 +199,7 @@ def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
                 if any(c in m for c in (" 401", " 403", " 404", " 400", " 422", "no image", "daily free allocation")) or "Timeout" in type(e).__name__:
                     DEAD.add(model)      # 29 Oct: the shared account's 10,000 free neurons were used up - no retry for every picture
     gkey = os.environ.get("GEMINI_API_KEY")
-    if gkey and os.environ.get("GEMINI_IMAGE", "1") != "0":
+    if gkey and os.environ.get("GEMINI_IMAGE", "0") == "1":      # 29 Oct: free tier answered 429 (quota 0) for every image model
         try:
             return _gemini_image(prompt, gkey)
         except Exception as e:
@@ -211,7 +211,7 @@ def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
         except Exception as e:
             last = e
     fkey = os.environ.get("FAL_KEY")
-    if not free_only and os.environ.get("FAL_ENABLE") == "1":      # owner 29 Oct: Coimbatore never uses paid FAL - no free picture = plain background
+    if not free_only and os.environ.get("FAL_ENABLE", "1") == "1":      # owner 29 Oct (final): FAL only when NO free source made a picture
         for fm in dict.fromkeys([FAL_SCENE_MODEL, FAL_MODEL]):
             if not fkey or fm in DEAD:
                 continue

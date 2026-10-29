@@ -247,12 +247,10 @@ class Images(unittest.TestCase):
 
     def test_free_first(self):      # owner 28 Oct: free sources first, paid FAL only when they fail
         self.assertEqual(["cloudflare"], self.order(set()))
-        self.assertEqual("gemini", self.order({"cloudflare"})[-1])
-        self.assertEqual("nvidia", self.order({"cloudflare", "gemini"})[-1])
-        calls = self.order({"cloudflare", "gemini", "nvidia"})
-        self.assertEqual(["cloudflare", "gemini", "nvidia"], calls, "free sources only - never paid FAL (owner 29 Oct)")
-        for wf in (ROOT / ".github" / "workflows").glob("*.yml"):
-            self.assertNotIn("FAL_KEY", wf.read_text(), wf.name)
+        self.assertEqual("nvidia", self.order({"cloudflare"})[-1])
+        calls = self.order({"cloudflare", "nvidia"})
+        self.assertEqual(["cloudflare", "nvidia"], calls[:2], "every free source first")
+        self.assertEqual("fal-ai/flux/schnell", calls[2], "FAL only when no free source worked, cheapest first (owner 29 Oct)")
 
     def test_no_picture_means_plain_branded_background(self):
         with tempfile.TemporaryDirectory() as tmp:
