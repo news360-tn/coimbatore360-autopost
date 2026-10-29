@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `7150e45` | Coimbatore image prompt (owner): detailed city scene of THIS news first (subject+action, place, people, vehicles/objects, light, camera; 3+ article facts, 100-150 words), Coimbatore city look and category guide; a generic or short scene is sent back once |
 | 2026-10-29 | `b4c10d3` | Coimbatore (owner): collect every 2 hours, post at once, do not miss city news - cap 50 (Instagram's limit), news from the last 3 h still taken after midnight, watchdog restarts a collect late by 2 h 15 min |
 | 2026-10-29 | `437918c` | Coimbatore: no fixed posting times - every reel posts the moment it is made (prime time off) |
 | 2026-10-29 | `5d9697a` | Coimbatore priority (owner): power cut > crime > accident > civic > the rest; collect only news published TODAY |
