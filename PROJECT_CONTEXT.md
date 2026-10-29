@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `5f4b464` | Font check optional: the writer and test runner have no fontTools, so letter repair still runs and tests pass on GitHub (Python 3.11) |
 | 2026-10-29 | `dbb6967` | Coimbatore: news collected only from Tamil-language websites of Tamil Nadu newspapers and channels (English and foreign outlets removed and filtered out) |
 | 2026-10-29 | `baea4a0` | Coimbatore workflows: newest Haiku (claude-haiku-5-5) |
 | 2026-10-29 | `84aab54` | Newest Haiku (claude-haiku-5-5) for Claude calls, older Haiku only if the name is ever refused; news only from Tamil-language articles |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `05feb55` | Bridge: Coimbatore Cloudinary cloud (own account, unsigned preset coimbatore360) |
 | 2026-10-28 | `7bbcf3a` | Instagram handle is coimbatore360_official (underscore, as Instagram reports it) |
 | 2026-10-28 | `7d5006f` | ig probe output |
-| 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
 <!-- recent-changes:end -->
