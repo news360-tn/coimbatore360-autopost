@@ -393,6 +393,12 @@ class NoMetaScript(unittest.TestCase):
                             "முட்டை விலை விவரம் தெரியவந்ததும் பகிரப்படும். " + validate.LAST)
         self.assertTrue([x for x in validate.validate(d, "") if "talks about the article" in x])
 
+    def test_foreign_script_refused(self):      # RN-20 headline 'ச監獄탈옥 ... பயிற்சি'
+        import validate
+        d = dict(json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8"))[0]["output"])
+        d["tamil_headline"] = "ச監獄탈옥: குறைந்த பணியாளர், பயிற்சি பற்றாக்குறை"
+        self.assertTrue([x for x in validate.validate(d, "") if "another script" in x])
+
     def test_normal_script_passes_meta_check(self):
         import validate
         d = dict(json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8"))[0]["output"])

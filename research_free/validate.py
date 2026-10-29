@@ -121,6 +121,10 @@ def validate(d, article, today_digits=("2026",)):
         return p
     # 29 Oct (Namakkal RN-189, owner deleted it): the paper's page had no news, and the model wrote ABOUT the article ("the price is not
     # given in this article ... will be shared when known") and mixed in another story. A news reel never talks about "the article".
+    for k in ("reel_script", "caption", "tamil_headline"):      # 29 Oct RN-20: 'ச監獄탈옥 ... பயிற்சি' - Chinese / Korean / Bengali letters in Tamil text
+        bad = re.findall(r"[\u0980-\u0AFF\u0C00-\u0DFF\u3000-\u9FFF\uAC00-\uD7AF\u0400-\u04FF\u0600-\u06FF]", str(d.get(k) or ""))
+        if bad:
+            p.append(f"{k} has letters of another script ({''.join(bad[:4])}) - write only Tamil (and English names)")
     for k in ("reel_script", "caption", "tamil_headline"):
         t = re.sub(r"கட்டுரைப்?\s*போட்டி", " ", str(d.get(k) or ""))      # an essay competition is real school news
         hit = [w for w in META if w.lower() in t.lower()]
