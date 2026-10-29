@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `42ba0ef` | research-free-test: same free writing chain as the writer (GitHub Models, Cloudflare) |
 | 2026-10-29 | `e2d6460` | Coimbatore pictures (owner, final): free first (Cloudflare, NVIDIA), FAL schnell/dev only when no free source made one, plain branded background only if FAL fails too; Gemini image off (free tier quota 0) |
 | 2026-10-29 | `426b4c2` | free-model test output |
 | 2026-10-29 | `0f2cb04` | image test output |
