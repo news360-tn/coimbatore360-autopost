@@ -349,6 +349,40 @@ class ImagePrompt(unittest.TestCase):
         self.assertFalse(collect.scene_ok("A TNEB lineman repairs a transformer in Singanallur.", head))      # too short
 
 
+class FreeFirstThenClaude(unittest.TestCase):
+    """owner 29 Oct (Coimbatore): try ALL free models first; paid Claude only when every free one failed or is out of quota"""
+
+    def test_every_free_model_before_claude(self):
+        import llm
+        tried = []
+        def failing(name):
+            def f(model, system, user, key):
+                tried.append(name)
+                raise RuntimeError(f"{name} 429: daily limit reached (per day)")
+            return f
+        old = (llm.chain, dict(llm.DEAD), llm.FREE_FAILS[0], os.environ.get("ANTHROPIC_API_KEY"))
+        llm.chain = lambda: [(p, "m", failing(p), "k") for p in ("gemini", "ghmodels", "groq", "cloudflare")]
+        llm.DEAD.clear(); llm.FREE_FAILS[0] = 0
+        os.environ["ANTHROPIC_API_KEY"] = "test"
+        try:
+            for _ in range(2):      # also on the next call of the same round
+                with self.assertRaises(RuntimeError):
+                    llm.ask_json("s", "u")
+        finally:
+            llm.chain = old[0]; llm.DEAD.clear(); llm.DEAD.update(old[1]); llm.FREE_FAILS[0] = old[2]
+            os.environ.pop("ANTHROPIC_API_KEY", None) if old[3] is None else os.environ.__setitem__("ANTHROPIC_API_KEY", old[3])
+        self.assertEqual(["gemini", "ghmodels", "groq", "cloudflare"], tried[:4], "all free models first")
+
+    def test_claude_model_and_key_passed(self):
+        import llm
+        self.assertIn('"claude-haiku-4-5"', (ROOT / "research_free" / "llm.py").read_text())
+        self.assertTrue(llm.GHM_MODELS)
+        for f in ("research_free.yml", "write_stories.yml", "post.yml"):
+            t = (ROOT / ".github" / "workflows" / f).read_text()
+            self.assertIn("ANTHROPIC_MODEL: claude-haiku-4-5", t, f)
+            self.assertNotIn('CLAUDE_MAX_CALLS: "0"', t, f)
+
+
 class SinglePage(unittest.TestCase):
     """Coimbatore 360 is one page: no Rasipuram page, no collaborator, own Sheet column"""
 

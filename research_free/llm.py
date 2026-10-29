@@ -158,7 +158,7 @@ def _mistral(model, system, user, key):
     return r.json()["choices"][0]["message"]["content"]
 
 
-GHM_MODELS = []   # removed: every model returned a non-JSON reply on every run (owner request 24 Oct)
+GHM_MODELS = ["openai/gpt-4.1-mini", "openai/gpt-4o-mini"]   # owner 29 Oct (Coimbatore): every free source before paid Claude; _json_from reads fenced / chatty JSON
 
 
 def _ghmodels(model, system, user, key):
@@ -214,7 +214,7 @@ def chain():
 
 CLAUDE_FIRST = os.environ.get("CLAUDE_FIRST", "0") == "1"      # 0 (default) = free models first; Claude only when free models fail, are slow, or hit the limit. 1 = Claude for everything
 FREE_FAILS = [0]                                              # failures of free models in a row (slow, poor or refused answers)
-FREE_FAIL_LIMIT = int(os.environ.get("LLM_FREE_FAIL_LIMIT", "3"))
+FREE_FAIL_LIMIT = int(os.environ.get("LLM_FREE_FAIL_LIMIT", "1000000000"))      # owner 29 Oct (Coimbatore): EVERY free model is tried on every call; Claude only when all of them failed / are out of quota
 
 
 def ask_json(system, user, tries_per_model=1):
@@ -278,7 +278,7 @@ def ask_json(system, user, tries_per_model=1):
     raise RuntimeError(f"no free model answered: {last}")
 
 
-# ---- Claude (paid, optional): used only to FACT-CHECK drafts and, if the free models cannot produce a clean draft, to rewrite it. Needs ANTHROPIC_API_KEY.
+# ---- Claude (paid backup, owner 29 Oct for Coimbatore): ONLY when every free model failed or hit its limit. Needs ANTHROPIC_API_KEY.
 CLAUDE_CALLS = [0]
 CLAUDE_MAX = int(os.environ.get("CLAUDE_MAX_CALLS", "100000"))   # owner decision 24 Oct: no per-run limit; cost checked after one month       # cost guard per run
 
@@ -291,7 +291,7 @@ def ask_claude(system, user, max_tokens=4000):
     """returns (data, model_name); raises when the key is missing, the budget guard is hit or the API fails (the caller then falls back to the free chain)"""
     if not claude_available():
         raise RuntimeError("claude not available")
-    model = os.environ.get("ANTHROPIC_MODEL", "claude-haiku-5-5")
+    model = os.environ.get("ANTHROPIC_MODEL", "claude-haiku-4-5")      # 29 Oct: "claude-haiku-5-5" does not exist (every backup call failed)
     CLAUDE_CALLS[0] += 1
     sysb, usr = system, user
     cut = user.find("\n\nTODAY (IST):")
