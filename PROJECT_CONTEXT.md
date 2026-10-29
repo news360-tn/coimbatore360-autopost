@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `849f93c` | Coimbatore quality check (owner): card lines never cut mid-phrase (RN-34), English words in the voice script sent back - the voice drops them (RN-34), state-wide stories not written or posted (RN-8 TNEB, RN-20 prisons) |
 | 2026-10-29 | `7201ad8` | Fix: every post job crashed with NameError (verify not imported in clean_caption) since 13:00 UTC 29 Oct |
 | 2026-10-29 | `51b8910` | Topic / tag / author / page-N listing pages are never written or posted as a news story (RN-194: abplive topic page gave a Cuddalore story) |
 | 2026-10-29 | `1643d19` | Writer started by the collector waits for the queue instead of skipping; same event from another outlet is not written again |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `e2d6460` | Coimbatore pictures (owner, final): free first (Cloudflare, NVIDIA), FAL schnell/dev only when no free source made one, plain branded background only if FAL fails too; Gemini image off (free tier quota 0) |
 | 2026-10-29 | `426b4c2` | free-model test output |
 | 2026-10-29 | `0f2cb04` | image test output |
-| 2026-10-29 | `d2f4ec8` | free-model test output |
 <!-- recent-changes:end -->
