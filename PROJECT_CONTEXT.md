@@ -81,6 +81,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `dbb6967` | Coimbatore: news collected only from Tamil-language websites of Tamil Nadu newspapers and channels (English and foreign outlets removed and filtered out) |
+| 2026-10-29 | `baea4a0` | Coimbatore workflows: newest Haiku (claude-haiku-5-5) |
+| 2026-10-29 | `84aab54` | Newest Haiku (claude-haiku-5-5) for Claude calls, older Haiku only if the name is ever refused; news only from Tamil-language articles |
+| 2026-10-29 | `1a53394` | Letters of another script inside Tamil words are repaired (voice and cards), flagged for rewrite, and cleaned in captions (Coimbatore RN-5, 7, 20, 22) |
+| 2026-10-29 | `cc7d734` | No made-up or empty stories (from Namakkal d24107f + b4f47be): skip headline-only pages, never file a draft mostly not grounded in its Tamil article, never file/post a story that only says the article has no details (RN-12 K.N. Nehru raid) |
 | 2026-10-29 | `ab700c1` | Coimbatore: refuse Tamil text with letters of another script (RN-20 headline had Chinese/Korean/Bengali letters) |
 | 2026-10-29 | `d788969` | Coimbatore: city rule checked again right after writing with the writer's location (RN-2 Valparai was written, then blocked at posting); proofread never turns a verb into another word (RN-1 நிர்வாகிக்க -> நிர்வாகம்) |
 | 2026-10-29 | `28c447a` | Coimbatore: a script that talks about 'the article' / 'no information' instead of the news is refused (Namakkal RN-189 case, deleted by the owner) |
@@ -106,8 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-28 | `7bbcf3a` | Instagram handle is coimbatore360_official (underscore, as Instagram reports it) |
 | 2026-10-28 | `7d5006f` | ig probe output |
 | 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
-| 2026-10-28 | `eb811b9` | Bridge: Coimbatore 360 Log Sheet, Coimbatore 360 Drive folder, owner Gmail (same Gmail as Namakkal, own Sheet/folder/script and COIMBATORE360 mail tag) |
-| 2026-10-28 | `926e1f9` | README: real Instagram handle |
-| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
-| 2026-10-28 | `a315412` | Initial commit |
 <!-- recent-changes:end -->
