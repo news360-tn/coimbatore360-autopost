@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `05feb55` | Bridge: Coimbatore Cloudinary cloud (own account, unsigned preset coimbatore360) |
 | 2026-10-28 | `7bbcf3a` | Instagram handle is coimbatore360_official (underscore, as Instagram reports it) |
 | 2026-10-28 | `7d5006f` | ig probe output |
 | 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
