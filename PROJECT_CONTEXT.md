@@ -17,7 +17,7 @@ every 4 h    research_free.yml  collect news (newspaper sites incl. Dinamalar Co
 every 20 min write_stories.yml  write each queued news by priority (free LLM chain only) -> ONE AI image of the main scene
                                  (Cloudflare FLUX schnell -> NVIDIA FLUX -> paid FAL only if both fail) -> story saved in the Sheet
                                  -> starts posting at once
-every 5 min  post.yml           checks (Coimbatore only, not stale, no duplicate, prime time, daily cap 25) -> reel (reel/reel4.py,
+every 5 min  post.yml           checks (Coimbatore only, not stale, no duplicate, daily cap 25; posts at once) -> reel (reel/reel4.py,
                                  Valluvar voice) -> Instagram (one page, no collab)
 daily        insights.yml       Instagram insights -> learned topic weights (writer priority)
 ```
@@ -31,7 +31,7 @@ daily        insights.yml       Instagram insights -> learned topic weights (wri
 | Priority | power cut (TNEB) > crime > accident > civic > the rest |
 | Never miss news | Everything eligible is queued and written; duplicates and other-district news are skipped; nothing eligible is dropped |
 | Daily cap | Start with 25 reels a day (`DAILY_CAP` in post.yml, also in the collector / writer); urgent news first |
-| Posting time | Urgent news (power cut, accident, rain warning, Collector/Govt notice, jobs, exams, today/tomorrow) posts at once. Other reels are made ahead and posted 09:00-12:00 / 18:00-21:30 IST; no reel waits more than 12 h (`poster/config.json` `prime_time`) |
+| Posting time | No fixed times (owner 29 Oct): every reel posts the moment it is made (`poster/config.json` `prime_time.enabled: false`) |
 | Format | Reel only (no carousel) |
 | Voice | **Valluvar only** (free edge-tts `ta-IN-ValluvarNeural`). Google voices are never used, even if a Google key exists |
 | Follow line | Spoken: மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள். Caption: கோயம்புத்தூர் செய்திகளைத் தவறவிடாமல் இருக்க Save செய்து Follow செய்யுங்கள் 📌 |

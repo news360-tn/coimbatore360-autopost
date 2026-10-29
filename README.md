@@ -35,8 +35,7 @@ research_free.yml (every 4 h) -> queue.json -> write_stories.yml (every 20 min) 
 3. **Post** (`.github/workflows/post.yml`, every 5 minutes, `poster/post.py`).
    - `check`: reads the Sheet queue and skips stories that are on hold, stale (older than yesterday, finished power cut,
      passed date - `poster/freshness.py`), not Coimbatore-district news, or a duplicate of an already posted story.
-     Urgent news goes out at once; other reels are made ahead and posted in prime time (`poster/config.json` `prime_time`,
-     never more than 12 h wait). At most 25 reels a day to start with (`DAILY_CAP` in `post.yml`).
+     No fixed posting times (owner 29 Oct): every reel posts the moment it is made (`poster/config.json` `prime_time.enabled: false`). At most 25 reels a day to start with (`DAILY_CAP` in `post.yml`).
      A watchdog restarts the collector or writer if GitHub skipped their schedule.
    - `run`: builds the **reel only** (no carousel) from the one image (different camera moves / crops per scene, headline
      cards, subtitles, logo), voice **Valluvar** (free edge-tts `ta-IN-ValluvarNeural`, never Google), runs the checks

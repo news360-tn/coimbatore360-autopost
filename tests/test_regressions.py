@@ -358,10 +358,10 @@ class PrimeTime(unittest.TestCase):
                       "நாமக்கல் மாவட்டத்தில் கனமழை எச்சரிக்கை", "ஆட்சியர் அறிவிப்பு: சிறப்பு முகாம்"):
             self.assertEqual("", post.prime_wait(self.row(title), self.at(14)), title)
 
-    def test_other_news_waits_outside_prime_time(self):
-        self.assertIn("prime time", post.prime_wait(self.row("கோவில் கும்பாபிஷேக விழா"), self.at(14)))
-        self.assertIn("18:00", post.prime_wait(self.row("கோவில் கும்பாபிஷேக விழா"), self.at(14)))
-        self.assertIn("09:00", post.prime_wait(self.row("கோவில் கும்பாபிஷேக விழா"), self.at(23)))
+    def test_coimbatore_posts_at_once(self):      # owner 29 Oct (Coimbatore): no fixed times, every reel posts the moment it is made
+        self.assertFalse(json.loads((ROOT / "poster" / "config.json").read_text())["prime_time"]["enabled"])
+        for h in (3, 14, 23):
+            self.assertEqual("", post.prime_wait(self.row("கோவில் கும்பாபிஷேக விழா"), self.at(h)), h)
 
     def test_posts_inside_prime_time(self):
         self.assertEqual("", post.prime_wait(self.row("கோவில் கும்பாபிஷேக விழா"), self.at(10)))
