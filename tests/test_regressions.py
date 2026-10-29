@@ -733,3 +733,21 @@ class TamilSourcesOnly(unittest.TestCase):
         a = {"title": "கோவையில் விளக்கேற்றும்போது சேலை தீப்பிடித்து மூதாட்டி உயிரிழப்பு",
              "text": "சாய்பாபா காலனி, கே.கே.புதூர் 7ஆம் வீதியில் வசிக்கும் லட்சுமி பூஜை அறையில் விளக்கேற்றியபோது சேலையில் தீ பற்றியது. Coimbatore."}
         self.assertTrue(collect.tamil_source(a))
+
+
+class TamilOutletsOnly(unittest.TestCase):
+    """owner 29 Oct: Coimbatore news only from Tamil-language websites of Tamil Nadu papers and channels"""
+    def test_english_and_foreign_outlets_dropped(self):
+        for it in ({"via": "bing", "url": "https://www.newindianexpress.com/cities/coimbatore/x"},
+                   {"via": "google", "url": "https://news.google.com/rss/articles/a", "site": "https://www.dtnext.in"},
+                   {"via": "bing", "url": "https://timesofindia.indiatimes.com/city/coimbatore/x"},
+                   {"via": "bing", "url": "https://www.tamilmurasu.com.sg/x"}):
+            self.assertFalse(allnews.tamil_outlet(it), it)
+
+    def test_tamil_outlets_kept(self):
+        for it in ({"via": "bing", "url": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/1"},
+                   {"via": "google", "url": "https://news.google.com/rss/articles/a", "site": "https://www.dailythanthi.com"},
+                   {"via": "bing", "url": "https://tamil.news18.com/tamil-nadu/coimbatore/x"},
+                   {"via": "listing", "url": "https://www.dinamani.com/x"}):
+            self.assertTrue(allnews.tamil_outlet(it), it)
+        self.assertNotIn("thehindu.com", allnews.SITES.values())

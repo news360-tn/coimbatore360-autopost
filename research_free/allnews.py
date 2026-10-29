@@ -29,13 +29,16 @@ QUERIES = ["கோவை", "கோயம்புத்தூர்", "பொள
            "போத்தனூர்", "வடவள்ளி", "குனியமுத்தூர்", "நெகமம்", "சோமனூர்", "மருதமலை",
            "Coimbatore", "Kovai", "Pollachi", "Mettupalayam", "Valparai", "Sulur", "Singanallur"]
 # every outlet is also searched on its own (so a channel like News7 Tamil or NDTV Tamil is never missed)
-SITES = {"நியூஸ்7 தமிழ்": "news7tamil.live", "என்டிடிவி தமிழ்": "ndtv.com/tamil", "மாலைமலர்": "maalaimalar.com", "தினத்தந்தி": "dailythanthi.com",
-         "தினமணி": "dinamani.com", "இந்து தமிழ்": "hindutamil.in", "தினகரன்": "dinakaran.com", "புதிய தலைமுறை": "puthiyathalaimurai.com",
-         "நியூஸ்18 தமிழ்": "news18.com", "விகடன்": "vikatan.com", "பாலிமர்": "polimernews.com", "சமயம் தமிழ்": "tamil.samayam.com",
-         "தினமலர்": "dinamalar.com", "DT Next": "dtnext.in", "ஜீ தமிழ்": "zeenews.india.com", "ABP நாடு": "tamil.abplive.com",
-         "Oneindia தமிழ்": "tamil.oneindia.com", "நக்கீரன்": "nakkheeran.in", "தினபூமி": "dinaboomi.com", "தமிழ் முரசு": "tamilmurasu.com.sg",
-         "The Hindu": "thehindu.com", "New Indian Express": "newindianexpress.com", "Times of India": "timesofindia.indiatimes.com"}
-SITE_QUERIES = ["கோவை", "கோயம்புத்தூர்", "பொள்ளாச்சி", "Coimbatore"]      # English for the English papers
+# owner 29 Oct: Coimbatore news ONLY from Tamil-language websites of Tamil Nadu newspapers and news channels
+# (English papers - The Hindu, New Indian Express, Times of India, DT Next, Covai Mail - and the Singapore Tamil Murasu removed)
+SITES = {"தினமலர்": "dinamalar.com", "தினமணி": "dinamani.com", "தினத்தந்தி": "dailythanthi.com", "மாலைமலர்": "maalaimalar.com",
+         "தினகரன்": "dinakaran.com", "இந்து தமிழ்": "hindutamil.in", "மாலை முரசு": "malaimurasu.com", "தினபூமி": "dinaboomi.com",
+         "புதிய தலைமுறை": "puthiyathalaimurai.com", "தந்தி டிவி": "thanthitv.com", "நியூஸ்7 தமிழ்": "news7tamil.live",
+         "பாலிமர்": "polimernews.com", "சத்தியம் டிவி": "sathiyam.tv", "கலைஞர் செய்திகள்": "kalaignarseithigal.com",
+         "நியூஸ்18 தமிழ்": "tamil.news18.com", "விகடன்": "vikatan.com", "நக்கீரன்": "nakkheeran.in", "சமயம் தமிழ்": "tamil.samayam.com",
+         "ABP நாடு": "tamil.abplive.com", "Oneindia தமிழ்": "tamil.oneindia.com", "ஜீ தமிழ்": "zeenews.india.com/tamil",
+         "என்டிடிவி தமிழ்": "ndtv.com/tamil", "இந்தியன் எக்ஸ்பிரஸ் தமிழ்": "tamil.indianexpress.com", "ஏசியாநெட் தமிழ்": "tamil.asianetnews.com"}
+SITE_QUERIES = ["கோவை", "கோயம்புத்தூர்", "பொள்ளாச்சி"]      # English for the English papers
 OUTLET_WORDS = ["தினமலர்", "தினத்தந்தி", "தினமணி", "மாலைமலர்", "தினகரன்", "இந்து தமிழ்", "தி இந்து", "புதிய தலைமுறை", "நியூஸ்18", "நியூஸ் 18",
                 "விகடன்", "ஏபிபி", "சமயம்", "polimer", "பாலிமர்", "தந்தி டிவி", "ஜீ தமிழ்", "நக்கீரன்", "டைம்ஸ்"]
 
@@ -270,6 +273,7 @@ def from_google(q):
         title = it.findtext("title") or ""
         src = it.find("source")
         out.append({"key": it.findtext("guid") or it.findtext("link"), "url": it.findtext("link"), "title": _clean_title(title),
+                    "site": (src.get("url") if src is not None else "") or "",
                     "source": (src.text if src is not None and src.text else _outlet(title, "Google News")), "published": _parse_pub(it.findtext("pubDate") or ""),
                     "via": "google", "query": q, "snippet": re.sub(r"<[^>]+>", " ", html.unescape(it.findtext("description") or ""))[:300]})
     return out
@@ -310,6 +314,30 @@ def from_listing(cfg):
     return out[: cfg.get("limit", 30)]
 
 
+def _listing_hosts():
+    try:
+        return [urllib.parse.urlparse(c["url"]).netloc.replace("www.", "") for c in json.loads((HERE / "sources.json").read_text(encoding="utf-8"))]
+    except Exception:
+        return []
+
+
+def tamil_outlet(it):
+    """True when the item comes from one of the Tamil-language Tamil Nadu outlets in SITES (or a sources.json listing page).
+    Google items carry the outlet's own site; Bing and listing items carry the article link itself."""
+    if it.get("via") in ("dinamalar-list", "listing"):
+        return True
+    allowed = list(SITES.values()) + _listing_hosts()
+    for u in (it.get("site") or "", it.get("url") or ""):
+        pu = urllib.parse.urlparse(u)
+        hp = (pu.netloc.replace("www.", "") + pu.path).lower()
+        if "news.google.com" in hp or not pu.netloc:
+            continue
+        if any(a.lower() in hp or (it.get("via") == "google" and a.split("/")[0].lower() == pu.netloc.replace("www.", "").lower()) for a in allowed):
+            return True
+        return False
+    return False
+
+
 def collect(log):
     """every item from every source, merged. Returns a list of dicts (see keys above + area, mentions, outlets)."""
     items = []
@@ -334,6 +362,9 @@ def collect(log):
             add(from_listing, cfg, label=cfg["name"])
     except FileNotFoundError:
         pass
+    before = len(items)
+    items = [it for it in items if tamil_outlet(it)]      # owner 29 Oct: Tamil Nadu Tamil-language outlets only
+    log.append(f"Tamil outlets only: kept {len(items)} of {before} items")
     # merge: same URL or very similar headline = one story reported by several outlets
     merged = []
     for it in items:
