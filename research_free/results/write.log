@@ -1,20 +1,17 @@
-writing [N]: "கோவையில் ஆன்லைன் மோசடியில் ரூ.7.79 லட்சம் அபேஸ்!" - போக்குவ
+writing [N]: விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உயிரிழப்பு
+writing [N]: வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகராட்சி ஆணையா
 writing [N]: கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விசாரணை தொடக்
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-writing [N]: வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகராட்சி ஆணையா
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
+fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.8-flash
 fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
   "error": {
     "code": 429,
@@ -25,11 +22,16 @@ fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.7-flash
-fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
+fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.8-flash for 10 min
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.7-flash
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -37,6 +39,10 @@ fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
 dead for this round: gemini/gemini-3.6-flash
 fail ghmodels/openai/gpt-4.1-mini: Expecting value: line 1 column 1 (char 0)
 poor answer - skipped for 30 min: ghmodels/openai/gpt-4.1-mini
+fail ghmodels/openai/gpt-4.1-mini: Expecting value: line 1 column 1 (char 0)
+poor answer - skipped for 30 min: ghmodels/openai/gpt-4.1-mini
+fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
+poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
 fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
 poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
@@ -44,233 +50,193 @@ dead for this round: groq/openai/gpt-oss-120b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 fail cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast: cloudflare @cf/meta/llama-3.3-70b-instruct-fp8-fast 429: {"errors":[{"message":"AiError: AiError: you have used up your 
 dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
 fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiError: you have used up y
 dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
 free models unavailable: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiE
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9pb7nLEWs431AG15N7"}
-writing [N]: விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உயிரிழப்பு
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAKraGZKfVMTfaCMW6E"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAKrnRE8tk319qhHFdv"}
+writing [N]: தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுரம், மதுரை,
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9pdjZ3wGsY7J8Ab7ve"}
-writing [N]: தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுரம், மதுரை,
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9ph9vowNRpGy3RiL7H"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAKuRvLW8qHn19brVuv"}
 writing [N]: கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிநாட்டு சுற்
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9pkijvQgxmeAeHzUzy"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAKxPGGS2wWamwzGRcX"}
 writing [N]: மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Dinakaran - 
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9ptczLmByXEqDhmMVe"}
-writing [N]: ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோடி நிலுவை! 
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9q3jvKjxY8bSUXqY72"}
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAL3QePHzL6oPN2NXdF"}
 writing [N]: ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பேருக்கு தலா
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9q69HWpYhLKLuDu7aU"}
-writing [N]: விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்வு பேரணி..
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAL648xUVkvizgKLko3"}
+writing [N]: ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோடி நிலுவை! 
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qEvdhg581DvpqNjMK"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALAp8VhoGSBtZp2MaX"}
+writing [N]: விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்வு பேரணி..
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 writing [N]: KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. அதிரும் சி
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qJLWmFMP78qGrNca2"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALDb4dDBvM9Zw7QepX"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: கோவையில் 2-வது நாளாகப் பனிமூட்டம்! மக்கள் அவதி!
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALEfK1KmbUYj1Bq77P"}
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qLsow7HwiHgQiMrAU"}
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 writing [N]: Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் இறங்கிய பஸ
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qPoRsG7RhebFRm7wh"}
-ok gemini/gemini-3.6-flash (15s)
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALGNWTZDANxDrzc34Z"}
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 writing [N]: Coimbatore Central Prison beefs up security after Theni jail
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qTRD8LyDEZudcWKHU"}
-factcheck unavailable: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qTnnMavD4y7tb3Lvu"}
-attempt 1 gemini/gemini-3.6-flash: 1 problems
-  fact-check: could not be run
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALM52J1ZHWaDxnBhEm"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALMe13YRhxmkvVYU71"}
 writing [N]: Auto drivers in Coimbatore welcome TN govt's revision of far
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qWSGsPjW2dHMeVSc5"}
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qWorj5SfyTcQ7qUsx"}
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 writing [N]: Coimbatore court sentences six to 10 years in prison in 2015
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qZQNQSUPoUcQ4rsUV"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALQ8Kt72Ri3qvKQKKj"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALQKjsBrfTrMRDPGZZ"}
 writing [N]: அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 லட்சம் இழப
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qcDYffZc5Eh25VJEX"}
-writing [N]: Indian Pilot honoured with the UAE’s Prestigious Award! - Th
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qhnuFL1TN6RyjaXoq"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALTeAGFYjviM7jPMeY"}
 writing [N]: Understaffing, poor training key factors behind prison break
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+writing [N]: Indian Pilot honoured with the UAE’s Prestigious Award! - Th
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qknUsbb8Q927gmoyv"}
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALYkzC6W7hQUHumoEq"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: Bharathiar University delays semester exams for ODL students
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALZMTS9G3GSZvhrvzZ"}
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qoK2vKPXWLiJjP3P4"}
 writing [N]: State team gamifies CPR training with a manikin
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qqtoqLxmd6ccS1KAV"}
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALbDKouRxe22cPDtXS"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக்க வேண்டும
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALbwykrTUhcPGEXhzL"}
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+writing [N]: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/qwen/qwen3.8-27b (4s)
-proofread by groq/qwen/qwen3.8-27b: 1 problems
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9qtLQRaUKX7FyspSdb"}
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-writing [N]: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALe6xnNaXKu7LDwpG7"}
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9s3nDTYutHwvpXJxoi"}
-ok groq/qwen/qwen3.8-27b (0s)
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.8-flash
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-image brief failed, using the writer's image prompt: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_01
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-image brief failed, using the writer's image prompt: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_01
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWALfya3hkaJYa4WAY3d"}
+fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.8-flash
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgW9tN2MNpdNmdwj4LQ5E"}
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-image match check unavailable: gemini-3.5-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout
-image made for 'Coimbatore district cyber crime police r'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261029-1318","first":"RN-2"}
-posting job started at once
-write_stories.yml started
+claude rewrite failed: anthropic 401 {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"},"request_id":"req_011CgWAQBYu4baFVqgeYnwVM"}
 earlier stories still waiting for images: []
 instagram check: 1 recent posts read from the page
-write round: 23 news waiting in the queue (written in priority order)
-candidate filter: collected=23
-to write: 23 Coimbatore district candidates (max 200 stories)
-candidates waiting: 23 Coimbatore; time left 29 min
+write round: 22 news waiting in the queue (written in priority order)
+candidate filter: collected=22
+to write: 22 Coimbatore district candidates (max 200 stories)
+candidates waiting: 22 Coimbatore; time left 29 min
 try (N) manual=False: கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விசாரணை தொடக்
-try (N) manual=False: "கோவையில் ஆன்லைன் மோசடியில் ரூ.7.79 லட்சம் அபேஸ்!" - போக்குவ
 try (N) manual=False: வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகராட்சி ஆணையா
-NOT filed (N) கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விச: all free models failed: no usable answer from the models
 try (N) manual=False: விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உயிரிழப்பு
 NOT filed (N) விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உய: all free models failed: no usable answer from the models
 try (N) manual=False: தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுரம், மதுரை,
-NOT filed (N) தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுர: all free models failed: no usable answer from the models
+NOT filed (N) வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகரா: all free models failed: no usable answer from the models
 try (N) manual=False: கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிநாட்டு சுற்
-NOT filed (N) கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிந: all free models failed: no usable answer from the models
+NOT filed (N) தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுர: all free models failed: no usable answer from the models
 try (N) manual=False: மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Dinakaran - 
-NOT filed (N) மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Di: all free models failed: no usable answer from the models
+NOT filed (N) கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிந: all free models failed: no usable answer from the models
 try (N) manual=False: ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோடி நிலுவை! 
-NOT filed (N) ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோட: all free models failed: no usable answer from the models
+NOT filed (N) மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Di: all free models failed: no usable answer from the models
 try (N) manual=False: ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பேருக்கு தலா
 NOT filed (N) ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பே: all free models failed: no usable answer from the models
 try (N) manual=False: விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்வு பேரணி..
-NOT filed (N) விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்: all free models failed: no usable answer from the models
+NOT filed (N) ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோட: all free models failed: no usable answer from the models
 try (N) manual=False: KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. அதிரும் சி
-NOT filed (N) KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. : all free models failed: no usable answer from the models
+NOT filed (N) விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்: all free models failed: no usable answer from the models
 try (N) manual=False: கோவையில் 2-வது நாளாகப் பனிமூட்டம்! மக்கள் அவதி!
-NOT filed (N) கோவையில் 2-வது நாளாகப் பனிமூட்டம்! மக்கள் அவதி!: all free models failed: no usable answer from the models
+NOT filed (N) KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. : all free models failed: no usable answer from the models
 try (N) manual=False: Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் இறங்கிய பஸ
-NOT filed (N) Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் : all free models failed: no usable answer from the models
+NOT filed (N) கோவையில் 2-வது நாளாகப் பனிமூட்டம்! மக்கள் அவதி!: all free models failed: no usable answer from the models
 try (N) manual=False: Coimbatore Central Prison beefs up security after Theni jail
 NOT filed (N) Coimbatore Central Prison beefs up security after : all free models failed: no usable answer from the models
 try (N) manual=False: Auto drivers in Coimbatore welcome TN govt's revision of far
-NOT filed (N) Auto drivers in Coimbatore welcome TN govt's revis: all free models failed: no usable answer from the models
+NOT filed (N) Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் : all free models failed: no usable answer from the models
 try (N) manual=False: Coimbatore court sentences six to 10 years in prison in 2015
-NOT filed (N) Coimbatore court sentences six to 10 years in pris: all free models failed: no usable answer from the models
+NOT filed (N) Auto drivers in Coimbatore welcome TN govt's revis: all free models failed: no usable answer from the models
 try (N) manual=False: அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 லட்சம் இழப
-NOT filed (N) அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 : all free models failed: no usable answer from the models
+NOT filed (N) Coimbatore court sentences six to 10 years in pris: all free models failed: no usable answer from the models
 try (N) manual=False: Indian Pilot honoured with the UAE’s Prestigious Award! - Th
-NOT filed (N) Indian Pilot honoured with the UAE’s Prestigious A: all free models failed: no usable answer from the models
+NOT filed (N) அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 : all free models failed: no usable answer from the models
 try (N) manual=False: Understaffing, poor training key factors behind prison break
 NOT filed (N) Understaffing, poor training key factors behind pr: all free models failed: no usable answer from the models
 try (N) manual=False: Bharathiar University delays semester exams for ODL students
-NOT filed (N) Bharathiar University delays semester exams for OD: all free models failed: no usable answer from the models
+NOT filed (N) Indian Pilot honoured with the UAE’s Prestigious A: all free models failed: no usable answer from the models
 try (N) manual=False: State team gamifies CPR training with a manikin
-NOT filed (N) State team gamifies CPR training with a manikin: all free models failed: no usable answer from the models
+NOT filed (N) Bharathiar University delays semester exams for OD: all free models failed: no usable answer from the models
 try (N) manual=False: ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக்க வேண்டும
-NOT filed (N) ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக: all free models failed: no usable answer from the models
+NOT filed (N) State team gamifies CPR training with a manikin: all free models failed: no usable answer from the models
 try (N) manual=False: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
+NOT filed (N) ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக: all free models failed: no usable answer from the models
 NOT filed (N) பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பி: all free models failed: no usable answer from the models
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 1})
-posting job started at once
-NOT filed (N) வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகரா: all free models failed: no usable answer from the models
-candidate loop ended: left 0, tried={'N': 23}, done={'N': 1}, time left 23 min
-filed: 1 Coimbatore district stories (target 200), reels only
+NOT filed (N) கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விச: all free models failed: no usable answer from the models
+candidate loop ended: left 0, tried={'N': 22}, done={'N': 0}, time left 28 min
+filed: 0 Coimbatore district stories (target 200), reels only
 queue: 22 news waiting to be written
-write_stories.yml started
-All News sheet: {"ok":true,"added":0,"updated":23} 
-stories: 1
+All News sheet: {"ok":true,"added":0,"updated":22} 
+stories: 0
