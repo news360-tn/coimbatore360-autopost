@@ -29,15 +29,13 @@ QUERIES = ["கோவை", "கோயம்புத்தூர்", "பொள
            "போத்தனூர்", "வடவள்ளி", "குனியமுத்தூர்", "நெகமம்", "சோமனூர்", "மருதமலை",
            "Coimbatore", "Kovai", "Pollachi", "Mettupalayam", "Valparai", "Sulur", "Singanallur"]
 # every outlet is also searched on its own (so a channel like News7 Tamil or NDTV Tamil is never missed)
-# owner 29 Oct: Coimbatore news ONLY from Tamil-language websites of Tamil Nadu newspapers and news channels
-# (English papers - The Hindu, New Indian Express, Times of India, DT Next, Covai Mail - and the Singapore Tamil Murasu removed)
-SITES = {"தினமலர்": "dinamalar.com", "தினமணி": "dinamani.com", "தினத்தந்தி": "dailythanthi.com", "மாலைமலர்": "maalaimalar.com",
-         "தினகரன்": "dinakaran.com", "இந்து தமிழ்": "hindutamil.in", "மாலை முரசு": "malaimurasu.com", "தினபூமி": "dinaboomi.com",
-         "புதிய தலைமுறை": "puthiyathalaimurai.com", "தந்தி டிவி": "thanthitv.com", "நியூஸ்7 தமிழ்": "news7tamil.live",
-         "பாலிமர்": "polimernews.com", "சத்தியம் டிவி": "sathiyam.tv", "கலைஞர் செய்திகள்": "kalaignarseithigal.com",
-         "நியூஸ்18 தமிழ்": "tamil.news18.com", "விகடன்": "vikatan.com", "நக்கீரன்": "nakkheeran.in", "சமயம் தமிழ்": "tamil.samayam.com",
-         "ABP நாடு": "tamil.abplive.com", "Oneindia தமிழ்": "tamil.oneindia.com", "ஜீ தமிழ்": "zeenews.india.com/tamil",
-         "என்டிடிவி தமிழ்": "ndtv.com/tamil", "இந்தியன் எக்ஸ்பிரஸ் தமிழ்": "tamil.indianexpress.com", "ஏசியாநெட் தமிழ்": "tamil.asianetnews.com"}
+# owner 29 Oct (17:59): Coimbatore news ONLY from these researched outlets - no other source is searched or kept.
+# (approx. Coimbatore-city news per day: Dinamalar 10-20, Dinamani 8-12, Covai Mail 4-6, Arasiyal Today 3-5, Dinakaran 2-4,
+#  Daily Thanthi / Maalaimalar / Thanthi TV 1-3 each, Hindu Tamil / Polimer 1-2 each, Malai Murasu / News18 Tamil 0-2, Indian Express Tamil 0-1)
+SITES = {"தினமலர்": "dinamalar.com", "தினமணி": "dinamani.com", "கோவை மெயில்": "covaimail.com", "அரசியல் டுடே": "arasiyaltoday.com",
+         "தினகரன்": "dinakaran.com", "தினத்தந்தி": "dailythanthi.com", "மாலைமலர்": "maalaimalar.com", "தந்தி டிவி": "thanthitv.com",
+         "இந்து தமிழ்": "hindutamil.in", "பாலிமர்": "polimernews.com", "மாலை முரசு": "malaimurasu.com", "நியூஸ்18 தமிழ்": "tamil.news18.com",
+         "இந்தியன் எக்ஸ்பிரஸ் தமிழ்": "tamil.indianexpress.com"}
 SITE_QUERIES = ["கோவை", "கோயம்புத்தூர்", "பொள்ளாச்சி"]      # English for the English papers
 OUTLET_WORDS = ["தினமலர்", "தினத்தந்தி", "தினமணி", "மாலைமலர்", "தினகரன்", "இந்து தமிழ்", "தி இந்து", "புதிய தலைமுறை", "நியூஸ்18", "நியூஸ் 18",
                 "விகடன்", "ஏபிபி", "சமயம்", "polimer", "பாலிமர்", "தந்தி டிவி", "ஜீ தமிழ்", "நக்கீரன்", "டைம்ஸ்"]

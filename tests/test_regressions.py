@@ -792,3 +792,13 @@ class OldEventAndSameEvent(unittest.TestCase):
         df = freshness.event_df([a, b] + other)
         self.assertTrue(freshness.same_event(a, b, df))
         self.assertFalse(freshness.same_event(a, other[0] * 3, df))
+
+
+class ResearchedOutletsOnly(unittest.TestCase):
+    """owner 29 Oct 17:59: Coimbatore news only from the researched outlets (13); nothing else is kept"""
+    def test_list(self):
+        self.assertEqual(len(allnews.SITES), 13)
+        for keep in ("https://covaimail.com/x/", "https://arasiyaltoday.com/x/", "https://www.dinamani.com/all-editions/edition-coimbatore/x"):
+            self.assertTrue(allnews.tamil_outlet({"via": "bing", "url": keep}), keep)
+        for drop in ("https://tamil.oneindia.com/news/coimbatore/x", "https://www.vikatan.com/x", "https://tamil.abplive.com/x"):
+            self.assertFalse(allnews.tamil_outlet({"via": "bing", "url": drop}), drop)
