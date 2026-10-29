@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `437918c` | Coimbatore: no fixed posting times - every reel posts the moment it is made (prime time off) |
 | 2026-10-29 | `5d9697a` | Coimbatore priority (owner): power cut > crime > accident > civic > the rest; collect only news published TODAY |
 | 2026-10-29 | `9eef430` | Coimbatore CITY only for now (owner): towns outside the city skipped at collecting, writing and posting unless a city area is named; town searches not run; CITY_ONLY=0 covers the whole district later |
 | 2026-10-29 | `2a0cc5b` | free-model test output |
