@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `7e526c7` | Coimbatore: only news PUBLISHED TODAY (IST) is written and posted - the article must show today's date, no late-night carry-over, posting gate today only; publish times read in IST |
 | 2026-10-29 | `204b989` | Collection is never cancelled by the story writer: each has its own queue; the collector waits while a writer runs, the writer skips its round while a collection runs (Coimbatore lost 2 collections on 29 Oct) |
 | 2026-10-29 | `609e1c8` | Coimbatore: collect only from the 13 researched outlets (Dinamalar, Dinamani, Covai Mail, Arasiyal Today, Dinakaran, Daily Thanthi, Maalaimalar, Thanthi TV, Hindu Tamil, Polimer, Malai Murasu, News18 Tamil, Indian Express Tamil) |
 | 2026-10-29 | `06baa10` | No old events and no same-event repeats: an old event re-told in a new article is not filed or posted (Coimbatore RN-29); the same event from another outlet in other words is not posted twice (RN-13/24, RN-86/115) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `eac502a` | Coimbatore: free pictures only (Cloudflare, Gemini, NVIDIA) - never FAL; no free picture after 30 min -> plain background with the page logo; FAL key no longer passed to any workflow |
 | 2026-10-29 | `358c0e1` | image test output |
 | 2026-10-29 | `c067fed` | Images free first: Cloudflare -> Gemini image (free tier) -> NVIDIA schnell/dev -> only then FAL schnell/dev; every prompt asks for no text/logos; Cloudflare daily-limit not retried per picture; NVIDIA models that answer 404 removed |
-| 2026-10-29 | `b979441` | image test output |
 <!-- recent-changes:end -->
