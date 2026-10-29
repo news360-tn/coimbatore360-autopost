@@ -492,7 +492,8 @@ def final_caption(row):
     en = re.sub(r"\s+", " ", str(row.get("headline_en") or "")).strip()
     if (CONFIG.get("reach") or {}).get("english_search_line") and en and not any(
             len(re.findall(r"[A-Za-z]{3,}", l)) >= 2 and not re.search(r"\b(Follow|Share)\b", l) for l in body.split("\n")):
-        line = en[:110] + " | " + (CONFIG.get("reach") or {}).get("search_suffix", "news")      # owner 29 Oct: people search in English too
+        en = en if len(en) <= 90 else en[:90].rsplit(" ", 1)[0].rstrip(" ,;:-")      # never cut a word in the middle
+        line = en + " | " + (CONFIG.get("reach") or {}).get("search_suffix", "news")      # owner 29 Oct: people search in English too
         bl = body.split("\n")
         k = next((i for i, l in enumerate(bl) if l.strip().startswith("📍")), len(bl))
         bl[k:k] = [line]
