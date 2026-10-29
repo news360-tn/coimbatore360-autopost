@@ -1,123 +1,15 @@
 {
  "log": [
   "earlier stories still waiting for images: []",
-  "instagram check: 17 recent posts read from the page",
-  "write round: 2 news waiting in the queue (written in priority order)",
-  "candidate filter: collected=2",
-  "to write: 2 Coimbatore district candidates (max 200 stories)",
-  "candidates waiting: 2 Coimbatore; time left 29 min",
-  "try (N) manual=False: Samantha Ruth Prabhu and Raj Nidimoruâs love story: From t",
-  "try (N) manual=False: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட",
-  "NOT filed (N) பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பி: all free models failed: not Coimbatore city news (Mettupalayam)",
-  "auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 1})",
-  "posting job started at once",
-  "candidate loop ended: left 0, tried={'N': 2}, done={'N': 1}, time left 20 min",
-  "filed: 1 Coimbatore district stories (target 200), reels only",
-  "queue: 1 news waiting to be written",
-  "write_stories.yml started",
-  "All News sheet: {\"ok\":true,\"added\":0,\"updated\":2}"
+  "instagram check: 18 recent posts read from the page",
+  "write round: 1 news waiting in the queue (written in priority order)",
+  "candidate filter: checked earlier=1",
+  "to write: 0 Coimbatore district candidates (max 200 stories)",
+  "candidates waiting: 0 Coimbatore; time left 29 min",
+  "candidate loop ended: left 0, tried={'N': 0}, done={'N': 0}, time left 29 min",
+  "filed: 0 Coimbatore district stories (target 200), reels only",
+  "queue: 0 news waiting to be written"
  ],
- "llm": [
-  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
-  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
-  "dead for this round: gemini/gemini-3.8-flash",
-  "fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
-  "dead for this round: gemini/gemini-3.7-flash",
-  "fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high d",
-  "fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
-  "dead for this round: gemini/gemini-3.6-flash",
-  "fail ghmodels/openai/gpt-4.1-mini: Expecting value: line 1 column 1 (char 0)",
-  "poor answer - skipped for 30 min: ghmodels/openai/gpt-4.1-mini",
-  "fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)",
-  "poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini",
-  "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
-  "dead for this round: groq/openai/gpt-oss-120b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
-  "fail cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast: cloudflare @cf/meta/llama-3.3-70b-instruct-fp8-fast 429: {\"errors\":[{\"message\":\"AiError: AiError: you have used up your ",
-  "dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
-  "fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {\"errors\":[{\"message\":\"AiError: AiError: you have used up y",
-  "dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
-  "fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)",
-  "poor answer - skipped for 30 min: gemini/gemini-3.8-flash",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
-  "ok anthropic/claude-haiku-4-5",
-  "ok anthropic/claude-haiku-4-5",
-  "ok anthropic/claude-haiku-4-5",
-  "ok anthropic/claude-haiku-4-5",
-  "ok anthropic/claude-haiku-4-5",
-  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "ok groq/qwen/qwen3.8-27b (4s)",
-  "ok anthropic/claude-haiku-4-5",
-  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
-  "switching away from groq/qwen/qwen3.8-27b for 10 min",
-  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "ok anthropic/claude-haiku-4-5",
-  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash"
- ],
- "stories": [
-  {
-   "tamil_headline": "சமந்தா, ராஜ் நிதிமொரு கோயம்புத்தூரில் திருமணம்: சினிமா செட்டில் சந்தித்து திருமணம் செய்தனர்",
-   "english_headline": "Samantha Ruth Prabhu and Raj Nidimoru married at Coimbatore temple: from The Family Man 2 sets to wedding",
-   "category": "Entertainment & Celebrities",
-   "location": "Linga Bhairavi Devi temple, Isha Yoga Center, Coimbatore",
-   "importance": "Medium",
-   "scope": "district",
-   "post_to": "Coimbatore 360",
-   "slides_spec": {
-    "v": 3,
-    "cat": "விளையாட்டு செய்திகள்",
-    "loc": "கோயம்புத்தூர்",
-    "hl1": "சமந்தா-ராஜ் கோயம்புத்தூரில் திருமணம்",
-    "hl2": "The Family Man 2 செட்டில்",
-    "slides": [
-     {
-      "title": "சினிமாவில்",
-      "lines": [
-       "2021-ல் The Family Man 2 தொடரில் சமந்தா, ராஜ் முதல் முறை",
-       "பின்னர் Citadel: Honey Bunny என்ற உளவு சிலிர்ப்பு தொடரிலும்",
-       "ராஜ் இயக்குநர், சமந்தா நடிகை"
-      ]
-     },
-     {
-      "title": "உறவு தொடங்கியது",
-      "lines": [
-       "2024-ல் சமந்தா, ராஜ் உறவு பற்றிய வதந்திகள் வெளியாயின",
-       "சமந்தா சமூக ஊடகத்தில் ராஜ் உடன் ஆன புகைப்படங்கள் பகிர்ந்தார்",
-       "டிசம்பர் 2025-ல் உறவை அறிவித்தனர்"
-      ]
-     },
-     {
-      "title": "திருமணம் மற்றும்",
-      "lines": [
-       "1 டிசம்பர் 2025-ல் கோயம்புத்தூரில் இஷ ஆசனையுரை நிலையத்தில்",
-       "சமந்தா, ராஜ் முதல் குழந்தைக்கு கருவுற்றிருக்கின்றனர்",
-       "பின்னர் Rakt Brahmand: The Bloody Kingdom தொடரில் வேலை"
-      ]
-     }
-    ],
-    "carousel": false
-   },
-   "reel_script": "சினிமா நடிகை சமந்தா, இயக்குநர் ராஜ் நிதிமொரு கோயம்புத்தூரில் திருமணம் செய்துகொண்டனர். 2021-ல் The Family Man 2 எனும் உளவு சிலிர்ப்பு தொடரில் சமந்தா, ராஜ் முதல் முறை சேர்ந்து வேலை செய்தனர். பின்னர் Citadel: Honey Bunny தொடரிலும் ராஜ் இயக்குநர் எனவும், சமந்தா நடிகை எனவும் சேர்ந்து வேலை செய்தனர். 2024-ல் சமந்தா, ராஜ் உறவு பற்றிய வதந்திகள் வெளியாயின. சமந்தா சமூக ஊடகத்தில் ராஜ் உடன் புகைப்படங்கள் பகிர்ந்தார். 1 டிசம்பர் 2025 அன்று இஷ ஆசனையுரை நிலையத்திலுள்ள லிங்க பைரவி தேவி கோயிலில் சமந்தா, ராஜ் திருமணம் செய்துகொண்டனர். திருமணம் ஈஷா அஸ்திவாரம் சம்பந்தப்பட்ட ஆன்மீக வழிபாடு ஆகும். சமந்தா சிவப்பு, பொன்னிற சாடியை அணிந்திருந்தார். ராஜ் வெள்ளை குர்தா, முடியை அணிந்திருந்தார். சமந்தா, ராஜ் திருமணத்திற்குப் பிறகு Maa Iti Bangaaram எனும் பெண் தலைமை செயல் சிலிர்ப்பு திரைப்படத்தில் சேர்ந்து வேலை செய்தனர். அந் திரைப்படம் ரூ.100 கோடி தாண்டி பெரும் வெற்றி பெற்றது. சமந்தா, ராஜ் முதல் குழந்தைக்குக் கருவுற்றிருக்கின்றனர் என தெரிவிக்கப்பட்டுள்ளது. பின்னர் Rakt Brahmand: The Bloody Kingdom தொடரில் வேலை செய்யவிருக்கின்றனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
-   "caption": "🎬 நடிகை சமந்தா, இயக்குநர் ராஜ் நிதிமொரு கோயம்புத்தூரில் திருமணம்\n\n📰 முழு விவரம்:\nசினிமா நடிகை சமந்தா, இயக்குநர் ராஜ் நிதிமொரு 1 டிசம்பர் 2025 அன்று கோயம்புத்தூரிலுள்ள இஷ ஆசனையுரை நிலையத்திலுள்ள லிங்க பைரவி தேவி கோயிலில் திருமணம் செய்துகொண்டனர். சம்பந்தப் வழிபாடு ஈஷா அஸ்திவாரம் சம்பந்தப்பட்ட ஆன்மீக வழிபாடு ஆகும். சமந்தா சிவப்பு, பொன்னிற சாடி, தங்க நகைகள் அணிந்திருந்தார். ராஜ் வெள்ளை குர்தா, முடியை அணிந்திருந்தார்.\n🎥 சமந்தா, ராஜ் 2021-ல் The Family Man 2 தொடரில் முதல் முறை சேர்ந்து வேலை செய்தனர், பின்னர் Citadel: Honey Bunny தொடரிலும் ஒன்றாக வேலை செய்தனர்.\n💫 2024-ல் சமந்தா, ராஜ் உறவு பற்றிய வதந்திகள் வெளியாயின. சமந்தா சமூக ஊடகத்தில் ராஜ் உடன் புகைப்படங்கள் பகிர்ந்தார்.\n🎞️ திருமணத்திற்குப் பிறகு Maa Iti Bangaaram திரைப்படத்தில் சேர்ந்து வேலை செய்தனர், அது ரூ.100 கோடி தாண்டி வெற்றி பெற்றது.\n👶 சமந்தா, ராஜ் முதல் குழந்தைக்குக் கருவுற்றிருக்கின்றனர்.\n\n📍 லிங்க பைரவி தேவி கோயில், இஷ ஆசனையுரை நிலையம், கோயம்புத்தூர் | 1 டிசம்பர் 2025\n\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #கோவை #விளையாட்டு #CoimbatoreNews",
-   "prompts": "A bride in a red and gold heritage saree with traditional gold jewellery and a groom in white kurta pyjama with cream bandhgala stand at the entrance or sanctum of Linga Bhairavi Devi temple within the Isha Yoga Center in Coimbatore during their morning wedding ceremony. The temple structure with its distinctive architecture is visible in the background, set within the peaceful spiritual campus grounds. A small gathering of close family members and friends stand at a respectful distance, watching the Bhuta Shuddhi Vivaha ritual unfold. The morning light filters through, illuminating the bride's saree and jewellery. The scene captures an intimate spiritual wedding moment, with the temple's serene surroundings reflecting the simple, private nature of this December morning ceremony. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
-   "source": "https://timesofindia.indiatimes.com/entertainment/telugu/movies/news/samantha-ruth-prabhu-and-raj-nidimorus-love-story-from-the-sets-of-the-family-man-2-to-their-coimbatore-wedding-deets-inside/articleshow/135295153.cms",
-   "published": "2026-10-29T12:53:00+05:30",
-   "verification": "FREE-MODEL DRAFT (anthropic/claude-haiku-4-5) - not checked by Claude yet; validator problems: reel_script must have no English letters (write English words and abbreviations in Tamil script); not grounded: only 0% of the words come from the article (e.g. சினிமா, நடிகை, சமந்தா, இயக்குநர், ராஜ்); use the article's own words and facts",
-   "note": "free-model draft anthropic/claude-haiku-4-5, 12 attempt(s), 2 validator problem(s)",
-   "post_time": "right after your reply, same day",
-   "_area": "N",
-   "_score": 3.0,
-   "images": [
-    "https://res.cloudinary.com/vkghshc8/image/upload/v1793271211/coimbatore360/gomfcagw3bdvhqk4n1np.jpg"
-   ]
-  }
- ]
+ "llm": [],
+ "stories": []
 }
