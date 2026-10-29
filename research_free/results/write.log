@@ -1,6 +1,6 @@
 writing [N]: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
   "error": {
     "code": 429,
@@ -22,36 +22,38 @@ fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
 poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 fail cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast: cloudflare @cf/meta/llama-3.3-70b-instruct-fp8-fast 429: {"errors":[{"message":"AiError: AiError: you have used up your 
 dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
 fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiError: you have used up y
 dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
 free models unavailable: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiE
 ok anthropic/claude-haiku-4-5
-claude rewrite 1 anthropic/claude-haiku-4-5: 6 problems
-  reel_script has numbers without their meaning (1); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-  stray Tamil sign 'ி' after 'ড' in «ு. குডிநீர»
-  stray Tamil sign 'ா' after 'ா' in «ும் மாா்ச்»
-  stray Tamil sign '்' after 'ா' in «ம் மாா்ச் »
-  stray Tamil sign 'ா' after 'ா' in «ும் மாா்ச்»
-  stray Tamil sign '்' after 'ா' in «ம் மாா்ச் »
-ok anthropic/claude-haiku-4-5
-claude rewrite 2 anthropic/claude-haiku-4-5: 1 problems
-  reel_script has numbers without their meaning (1); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-ok anthropic/claude-haiku-4-5
-claude rewrite 3 anthropic/claude-haiku-4-5: 2 problems
+claude rewrite 1 anthropic/claude-haiku-4-5: 1 problems
   reel_script has numbers without their meaning (1, 2); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-  stray Tamil sign 'ீ' after 'ন' in «லும் নீர் »
+ok anthropic/claude-haiku-4-5
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok groq/qwen/qwen3.8-27b (0s)
+factcheck by groq/qwen/qwen3.8-27b: 2 problems
+  Slide 3 adds the specific date 'அக். 29' (Oct 29) to the 'Wednesday' reference, which is not mentioned in the article.
+  Caption adds the specific date 'அக். 29' (Oct 29) to the 'Wednesday' reference, which is not mentioned in the article.
+claude rewrite 2 anthropic/claude-haiku-4-5: 2 problems
+  fact-check: Slide 3 adds the specific date 'அக். 29' (Oct 29) to the 'Wednesday' reference, which is not mentioned in the article.
+  fact-check: Caption adds the specific date 'அக். 29' (Oct 29) to the 'Wednesday' reference, which is not mentioned in the article.
+ok anthropic/claude-haiku-4-5
+claude rewrite 3 anthropic/claude-haiku-4-5: 1 problems
+  reel_script has numbers without their meaning (1); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 ok groq/qwen/qwen3.8-27b (4s)
-proofread rejected (2 problems)
+proofread rejected (3 problems)
+  slide 2 title longer than 18 characters
   slide 3 title longer than 18 characters
   reel_script has numbers without their meaning (1); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
 not Coimbatore city news after writing (Mettupalayam): பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
 earlier stories still waiting for images: []
-instagram check: 7 recent posts read from the page
+instagram check: 9 recent posts read from the page
 write round: 1 news waiting in the queue (written in priority order)
 candidate filter: collected=1
 to write: 1 Coimbatore district candidates (max 200 stories)
