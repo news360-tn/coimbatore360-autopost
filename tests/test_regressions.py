@@ -250,8 +250,16 @@ class Images(unittest.TestCase):
         self.assertEqual("gemini", self.order({"cloudflare"})[-1])
         self.assertEqual("nvidia", self.order({"cloudflare", "gemini"})[-1])
         calls = self.order({"cloudflare", "gemini", "nvidia"})
-        self.assertEqual(["cloudflare", "gemini", "nvidia"], calls[:3], "every free source before paid FAL")
-        self.assertEqual("fal-ai/flux/schnell", [c for c in calls if c.startswith("fal")][0], calls)      # cheapest paid first
+        self.assertEqual(["cloudflare", "gemini", "nvidia"], calls, "free sources only - never paid FAL (owner 29 Oct)")
+        for wf in (ROOT / ".github" / "workflows").glob("*.yml"):
+            self.assertNotIn("FAL_KEY", wf.read_text(), wf.name)
+
+    def test_no_picture_means_plain_branded_background(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            files = post.plain_background(Path(tmp), 1)
+            self.assertEqual(1, len(files))
+            self.assertTrue(files[0].exists())
+        self.assertLessEqual(float(os.environ.get("AUTO_IMG_GIVEUP_H", "0.5")), 0.5)
 
     def test_prompt_asks_for_no_text(self):      # 29 Oct test picture had 'POLICE' written on the jeep
         import imagegen

@@ -1231,14 +1231,14 @@ def missing_setup():
 
 
 def auto_images():
-    """stories without a picture: exactly ONE new AI picture per story (the free-first order - Cloudflare, NVIDIA, then FAL - is inside
+    """stories without a picture: exactly ONE new AI picture per story (FREE sources only - Cloudflare, Gemini, NVIDIA - inside
     imagegen.generate; earlier pictures are never reused); if no model works, the reel is made without pictures (setImages with NOIMAGE).
     Credit guard: at most 40 images per run."""
     pend = bridge_get("autoPending").get("rows", [])
     if not pend:
         return
     budget = time.time() + int(os.environ.get("AUTO_IMG_SECONDS", "420"))      # the check job must finish; the rest waits for the next run
-    giveup_h = float(os.environ.get("AUTO_IMG_GIVEUP_H", "3"))
+    giveup_h = float(os.environ.get("AUTO_IMG_GIVEUP_H", "0.5"))      # owner 29 Oct: free pictures only; after 30 min of tries the plain background (urgent news never waits 3 h)
     sys.path.insert(0, str(ROOT / "research_free"))
     import imagegen
     cap = int(os.environ.get("IMG_MAX_PER_RUN", "40"))
@@ -1297,6 +1297,12 @@ def plain_background(work, n):
     for y in range(1920):           # soft vertical gradient
         t = y / 1920
         d.line([(0, y), (1080, y)], fill=(int(14 + 20 * t), int(22 + 30 * t), int(36 + 40 * t)))
+    try:      # owner 29 Oct: no free picture -> the page logo, large and soft, so the reel still looks like ours
+        lg = _I.open(LOGO).convert("RGBA").resize((760, 760))
+        lg.putalpha(lg.getchannel("A").point(lambda v: int(v * 0.35)))
+        im.paste(lg, (160, 560), lg)
+    except Exception:
+        pass
     dst = work / "plain_bg.jpg"
     im.save(dst, "JPEG", quality=95)
     return [dst] * n

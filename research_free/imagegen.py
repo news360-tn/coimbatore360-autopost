@@ -178,7 +178,8 @@ def generate(prompt, seed=0, key=None, cheap=False, free_only=False):
 
 def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
     """FREE first: Cloudflare Workers AI FLUX schnell -> Gemini image (free tier) -> NVIDIA FLUX (free credits);
-    only when every free source fails: FAL flux/schnell (~Rs 0.26) -> FAL flux/dev (paid). Cloudinary only stores the picture."""
+    no paid source: when every free one fails this raises, and the reel is made on the plain branded background (owner 29 Oct).
+    Cloudinary only stores the picture."""
     if "No text" not in prompt:
         prompt = prompt.rstrip(". ") + "." + CLEAN
     tok, acct = os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID")
@@ -210,7 +211,7 @@ def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
         except Exception as e:
             last = e
     fkey = os.environ.get("FAL_KEY")
-    if not free_only:
+    if not free_only and os.environ.get("FAL_ENABLE") == "1":      # owner 29 Oct: Coimbatore never uses paid FAL - no free picture = plain background
         for fm in dict.fromkeys([FAL_SCENE_MODEL, FAL_MODEL]):
             if not fkey or fm in DEAD:
                 continue
