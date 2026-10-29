@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `ab700c1` | Coimbatore: refuse Tamil text with letters of another script (RN-20 headline had Chinese/Korean/Bengali letters) |
 | 2026-10-29 | `d788969` | Coimbatore: city rule checked again right after writing with the writer's location (RN-2 Valparai was written, then blocked at posting); proofread never turns a verb into another word (RN-1 நிர்வாகிக்க -> நிர்வாகம்) |
 | 2026-10-29 | `28c447a` | Coimbatore: a script that talks about 'the article' / 'no information' instead of the news is refused (Namakkal RN-189 case, deleted by the owner) |
 | 2026-10-29 | `96505b2` | Coimbatore writing (owner): ALL free models first on every call (Gemini, GitHub Models, Groq, Cloudflare); paid Claude Haiku 4.5 only when every free one failed or is out of quota; fixed Claude model id (claude-haiku-5-5 does not exist) |
