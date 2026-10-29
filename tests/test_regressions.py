@@ -866,3 +866,10 @@ class ListingPagesAreNotArticles(unittest.TestCase):
         for u in ("https://www.dinamani.com/all-editions/edition-dharmapuri/namakkal/2026/Oct/29/x",
                   "https://www.dinamalar.com/news/tamil-nadu-district-news-namakkal/pallipalayam-farmers-worr/1"):
             self.assertFalse(allnews.is_listing(u), u)
+
+
+class CaptionCleanRuns(unittest.TestCase):
+    """29 Oct: clean_caption used verify without importing it - every post job crashed with NameError for ~2.5 hours"""
+    def test_clean_caption_runs(self):
+        out = post.clean_caption({"caption": "செய்தி வரி ஒன்று\n\n#News", "headline_ta": "செய்தி", "story_id": "RN-1"})
+        self.assertIn(out, (True, False, None) if not isinstance(out, str) else (out,))      # it must simply run
