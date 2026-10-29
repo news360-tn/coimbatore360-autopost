@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `3f6b7de` | English search line never cut in the middle of a word |
 | 2026-10-29 | `c546c12` | Coimbatore reach plan (owner): reels at most 60 s (70-105 words, key facts once; every detail stays in the caption's full-details block, checked at writing), English search line added at posting, 5 focused hashtags (page + district + area + topic + broad, junk tags dropped), no brand names/logos in pictures, location tags on; all behind poster/config.json reach switches |
 | 2026-10-29 | `da1b5f9` | Known issues never repeat (owner): one list (research_free/known_issues.py) checked when a story is written AND right before posting - script about the article, letters of another script (repaired first), English words the voice skips, card cut mid-phrase, words said twice; every entry has a real bad and good example run by the tests |
 | 2026-10-29 | `849f93c` | Coimbatore quality check (owner): card lines never cut mid-phrase (RN-34), English words in the voice script sent back - the voice drops them (RN-34), state-wide stories not written or posted (RN-8 TNEB, RN-20 prisons) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `9eef430` | Coimbatore CITY only for now (owner): towns outside the city skipped at collecting, writing and posting unless a city area is named; town searches not run; CITY_ONLY=0 covers the whole district later |
 | 2026-10-29 | `2a0cc5b` | free-model test output |
 | 2026-10-29 | `42ba0ef` | research-free-test: same free writing chain as the writer (GitHub Models, Cloudflare) |
-| 2026-10-29 | `e2d6460` | Coimbatore pictures (owner, final): free first (Cloudflare, NVIDIA), FAL schnell/dev only when no free source made one, plain branded background only if FAL fails too; Gemini image off (free tier quota 0) |
 <!-- recent-changes:end -->
