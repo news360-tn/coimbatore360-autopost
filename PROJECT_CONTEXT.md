@@ -81,6 +81,10 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `e2d6460` | Coimbatore pictures (owner, final): free first (Cloudflare, NVIDIA), FAL schnell/dev only when no free source made one, plain branded background only if FAL fails too; Gemini image off (free tier quota 0) |
+| 2026-10-29 | `426b4c2` | free-model test output |
+| 2026-10-29 | `0f2cb04` | image test output |
+| 2026-10-29 | `d2f4ec8` | free-model test output |
 | 2026-10-29 | `eac502a` | Coimbatore: free pictures only (Cloudflare, Gemini, NVIDIA) - never FAL; no free picture after 30 min -> plain background with the page logo; FAL key no longer passed to any workflow |
 | 2026-10-29 | `358c0e1` | image test output |
 | 2026-10-29 | `c067fed` | Images free first: Cloudflare -> Gemini image (free tier) -> NVIDIA schnell/dev -> only then FAL schnell/dev; every prompt asks for no text/logos; Cloudflare daily-limit not retried per picture; NVIDIA models that answer 404 removed |
