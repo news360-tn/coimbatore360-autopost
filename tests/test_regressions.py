@@ -558,20 +558,20 @@ class FullDetail(unittest.TestCase):
 
     def test_short_reel_of_long_article_is_rewritten(self):
         self.assertTrue(self.length_problems(70, 300))
-        self.assertFalse(self.length_problems(150, 300))
+        self.assertFalse(self.length_problems(95, 300))      # owner 29 Oct: at most 60 s / 105 words; the caption keeps the rest
 
     def test_short_article_keeps_a_short_reel(self):
         self.assertFalse(self.length_problems(70, 80))
 
-    def test_never_more_words_than_90_seconds(self):
-        self.assertTrue(self.length_problems(200, 400))
+    def test_never_more_words_than_60_seconds(self):
+        self.assertTrue(self.length_problems(130, 400))
 
     def test_examples_are_full_detail(self):
         for e in json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8")):
             self.assertGreaterEqual(len(e["output"]["reel_script"].split()), 80)
 
     def test_reel_max_seconds(self):
-        self.assertEqual(json.loads((ROOT / "poster" / "config.json").read_text())["reel_max_seconds"], 90)
+        self.assertEqual(json.loads((ROOT / "poster" / "config.json").read_text())["reel_max_seconds"], 60)      # owner 29 Oct
         self.assertIn("fit_max(work, len(texts), lead, gap)", (ROOT / "reel" / "reel4.py").read_text(encoding="utf-8"))
 
 class Proofread(unittest.TestCase):
@@ -923,4 +923,37 @@ class KnownIssuesNeverRepeat(unittest.TestCase):
             fixed = dict(row, **{k: verify.clean_text(row.get(k) or "") for k in ("headline_ta", "reel_script", "caption")})
             repaired = iid not in [x for x, _ in known_issues.problems(fixed)]      # e.g. stray letters of another script are repaired
             self.assertTrue(repaired or f"known issue {iid}" in post.skip_reason(row), f"{iid} would be posted again")
+
+
+class ReachPlan29Oct(unittest.TestCase):
+    """owner 29 Oct views plan: 60 s reels, full details in the caption, English search line, 5 focused hashtags, no brand names in pictures"""
+    ROW = {"headline_ta": "காந்திபுரத்தில் பஸ் மோதி விபத்து", "headline_en": "Bus accident at Gandhipuram", "location": "காந்திபுரம், கோவை",
+           "caption": "🚌 காந்திபுரத்தில் பஸ் மோதி விபத்து\n\n📰 முழு விவரம்:\nகாந்திபுரம் பஸ் நிலையம் அருகே இன்று காலை விபத்து நடந்தது.\n\n"
+                      "📍 காந்திபுரம், கோவை | 29 அக்டோபர் 2026\n\n#Coimbatore360 #Coimbatore #தீபுறம்போக்கு #விபத்து #CoimbatoreNews"}
+
+    def test_five_focused_hashtags(self):
+        tags = post.final_caption(dict(self.ROW)).strip().split("\n")[-1].split()
+        self.assertEqual(5, len(tags))
+        for t in ("#Coimbatore360", "#Coimbatore", "#Gandhipuram", "#Accident", "#CoimbatoreNews"):
+            self.assertIn(t, tags)
+        self.assertNotIn("#தீபுறம்போக்கு", tags)      # junk tag from the writer is dropped
+
+    def test_english_search_line_added(self):
+        out = post.final_caption(dict(self.ROW))
+        self.assertIn("Bus accident at Gandhipuram | Coimbatore news", out)
+        self.assertLess(out.index("Bus accident at Gandhipuram"), out.index("📍"))
+
+    def test_caption_must_carry_full_details(self):
+        import validate
+        on = {"caption_full_details": True}
+        self.assertTrue(validate.caption_problems("🚌 விபத்து\n\n#Coimbatore360", on))
+        self.assertFalse(validate.caption_problems(
+            "🚌 விபத்து\n\n📰 முழு விவரம்:\nகாந்திபுரம் பஸ் நிலையம் அருகே இன்று விபத்து நடந்தது.\nஇரண்டு பேர் காயமடைந்து மருத்துவமனையில் சேர்க்கப்பட்டனர்.\n"
+            "போலீசார் வழக்குப் பதிவு செய்து விசாரணை நடத்தி வருகின்றனர்.", on))
+
+    def test_switches_and_picture_rule(self):
+        c = json.loads((ROOT / "poster" / "config.json").read_text(encoding="utf-8"))
+        self.assertEqual(60, c["reel_max_seconds"])
+        self.assertEqual(105, c["reach"]["script_max_words"])
+        self.assertIn("no brand names", collect.IMG_TEMPLATE)
 

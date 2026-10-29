@@ -61,7 +61,7 @@ CATEGORY GUIDE: power cut = TNEB lineman on a pole or a substation, shops and a 
  corporation workers fixing it); rain or flood = water on that road, vehicles wading; protest = a crowd with flags or placards seen from behind;
  government meeting or scheme = officials at a table in a government hall, people queuing; jobs = job seekers queuing at a hall or campus from
  behind; school = students in Tamil Nadu school uniform from behind; temple = the gopuram and devotees; wild elephant = elephants at the forest edge.
-NEVER: readable text, letters, numbers, signboards, logos, watermarks, a recognisable face of any real person or politician, blood, injuries,
+NEVER: readable text, letters, numbers, signboards, logos, brand or company names, product labels, watermarks, a recognisable face of any real person or politician, blood, injuries,
  dead bodies, weapons pointed at people, collages or split frames. People only from behind, far away or slightly blurred.
 Return ONLY JSON: {"facts": "...", "scenes": ["the one scene"]}"""
 
@@ -70,7 +70,7 @@ IMG_TEMPLATE = ("{scene} "
                 "Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), "
                 "tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, "
                 "true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, "
-                "no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).")
+                "no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).")
 
 _STOP = {"the", "a", "an", "of", "in", "on", "at", "to", "for", "and", "with", "near", "by", "from", "as", "is", "are", "was", "were", "after",
          "over", "into", "coimbatore", "city", "kovai", "tamil", "nadu", "district", "news", "says", "said", "held", "two", "three", "four"}
