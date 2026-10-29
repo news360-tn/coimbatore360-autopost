@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `28c447a` | Coimbatore: a script that talks about 'the article' / 'no information' instead of the news is refused (Namakkal RN-189 case, deleted by the owner) |
 | 2026-10-29 | `96505b2` | Coimbatore writing (owner): ALL free models first on every call (Gemini, GitHub Models, Groq, Cloudflare); paid Claude Haiku 4.5 only when every free one failed or is out of quota; fixed Claude model id (claude-haiku-5-5 does not exist) |
 | 2026-10-29 | `e4228e5` | Coimbatore 360 LIVE (owner): LIVE + collect switch on, news from today 00:00 IST, dry-run queue/state cleared |
 | 2026-10-29 | `7150e45` | Coimbatore image prompt (owner): detailed city scene of THIS news first (subject+action, place, people, vehicles/objects, light, camera; 3+ article facts, 100-150 words), Coimbatore city look and category guide; a generic or short scene is sent back once |
