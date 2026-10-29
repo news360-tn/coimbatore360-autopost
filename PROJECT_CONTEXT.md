@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `b4c10d3` | Coimbatore (owner): collect every 2 hours, post at once, do not miss city news - cap 50 (Instagram's limit), news from the last 3 h still taken after midnight, watchdog restarts a collect late by 2 h 15 min |
 | 2026-10-29 | `437918c` | Coimbatore: no fixed posting times - every reel posts the moment it is made (prime time off) |
 | 2026-10-29 | `5d9697a` | Coimbatore priority (owner): power cut > crime > accident > civic > the rest; collect only news published TODAY |
 | 2026-10-29 | `9eef430` | Coimbatore CITY only for now (owner): towns outside the city skipped at collecting, writing and posting unless a city area is named; town searches not run; CITY_ONLY=0 covers the whole district later |
@@ -101,6 +102,6 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
 | 2026-10-28 | `eb811b9` | Bridge: Coimbatore 360 Log Sheet, Coimbatore 360 Drive folder, owner Gmail (same Gmail as Namakkal, own Sheet/folder/script and COIMBATORE360 mail tag) |
 | 2026-10-28 | `926e1f9` | README: real Instagram handle |
-| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 50, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
+| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
 | 2026-10-28 | `a315412` | Initial commit |
 <!-- recent-changes:end -->
