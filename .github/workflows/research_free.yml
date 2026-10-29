@@ -58,7 +58,7 @@ jobs:
           WRITE_STORIES: '1'
           COLLECT_MODE: ${{ github.event.inputs.manual_url != '' && 'both' || 'collect' }}      # a link given by hand is written at once
           WRITE_WORKERS: "3"        # stories written at the same time
-          FRESH_DAYS: "2"           # news published today or yesterday (not posted yet)
+          FRESH_DAYS: "1"           # owner 29 Oct: news published TODAY only (Coimbatore)
           CITY_ONLY: "1"            # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
           DAILY_CAP: "25"           # Coimbatore 360: after 25 stories a day only main / important news is written
         run: |

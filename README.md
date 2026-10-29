@@ -24,7 +24,7 @@ research_free.yml (every 4 h) -> queue.json -> write_stories.yml (every 20 min) 
    Searches newspaper sites (Dinamalar Coimbatore district page and others) and Google/Bing News, opens and checks each
    article, keeps only **Coimbatore-district** news of today or yesterday (Tiruppur, Nilgiris, Erode, Palakkad and every
    other district are rejected), removes duplicates and queues the rest by priority in `research_free/archive/queue.json`.
-   Priority: **power cut (TNEB) > jobs > accident > crime > weather > the rest.**
+   Priority: **power cut (TNEB) > crime > accident > civic > the rest.**
    Manual run with `manual_url` = one article link written and posted at once.
 2. **Write** (`.github/workflows/write_stories.yml`, every 20 minutes, same `collect.py` in write mode).
    Takes the queue by priority (3 at a time), writes the Tamil headline, caption and reel script with the **free** LLM chain

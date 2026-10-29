@@ -17,7 +17,7 @@ FRESHNESS RULE: only file (1) news released TODAY, (2) upcoming / future-dated i
 ALREADY HANDLED NEWS: every row in Sheet "News!A:AE" whose Post status is "Awaiting images", "Queued", "Auto images", "Partly posted" or "Posted". Never file it again.
 
 STEP 2 - RESEARCH: THE WHOLE DISTRICT, EVERY RUN, IN PRIORITY ORDER
-PRIORITY: power cut (TNEB) > jobs > accident > crime > weather > the rest.
+PRIORITY: power cut (TNEB) > crime > accident > civic > the rest.
 COVERAGE AREA - all of Coimbatore district:
 - Coimbatore city: Gandhipuram, RS Puram, Ukkadam, Town Hall, Singanallur, Peelamedu, Saravanampatti, Podanur, Kuniyamuthur, Vadavalli, Kavundampalayam, Saibaba Colony, Ondipudur, Irugur, Neelambur, Thudiyalur, Kalapatti, Vellalur, Chettipalayam, Marudhamalai.
 - Taluks / towns: Pollachi, Mettupalayam, Sulur, Annur, Valparai, Kinathukadavu, Madukkarai, Perur, Thondamuthur, Anaimalai, Karamadai, Sirumugai, Karumathampatti, Periyanaickenpalayam, Negamam, Kovilpalayam, Somanur, Ettimadai, Thadagam, Alandurai, Kanuvai, Vedapatti, Jothipuram, Aliyar, Topslip, Velliangiri.

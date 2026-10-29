@@ -41,7 +41,7 @@ Full stop (posting too): remove the `LIVE` file, or repository **Settings → Se
 
 - Every 4 hours the collector reads all **Coimbatore-district** news. It keeps only news that names a Coimbatore-district place and is today's or yesterday's.
   Tiruppur, Avinashi town, Palladam, Udumalai, Nilgiris (Ooty, Coonoor), Erode, Palakkad and every other district are skipped, even when close.
-- Priority: **power cut (TNEB) > jobs > accident > crime > weather > the rest.**
+- Priority: **power cut (TNEB) > crime > accident > civic > the rest.**
 - Free AI models write the story. A model that is slow, gives unreadable answers or is over quota is skipped for a while automatically. Claude is never used here.
 - One image per story: Cloudflare FLUX schnell (free) → NVIDIA FLUX (free credits) → only if both fail, FAL (paid, cheapest first). The picture is checked against the news (free Gemini); a wrong picture is made again.
 - Voice: **Valluvar** (free) for every reel.

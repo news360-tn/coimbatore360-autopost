@@ -83,9 +83,26 @@ class LearnedPriority(unittest.TestCase):
         learned.load = lambda: {"topic_weight": {"civic": -0.5, "education": -0.5}}      # not measured yet: the starting weight is used
         try:
             self.assertGreater(learned.boost("நாளை 9 பகுதிகளில் மின் தடை"), 0)
-            self.assertGreater(learned.boost("தனியார் வேலைவாய்ப்பு முகாம்"), 0)
         finally:
             learned.load = real
+
+
+class CoimbatorePriority(unittest.TestCase):
+    """owner 29 Oct (Coimbatore): power cut > crime > accident > civic > the rest; news published TODAY only"""
+
+    def test_order(self):
+        score = lambda t: collect.interest({"title": t, "text": ""})
+        cut, crime, acc, civic = (score("சிங்காநல்லூரில் நாளை மின் தடை"), score("காந்திபுரத்தில் நகை திருடியவர் கைது"),
+                                  score("உக்கடத்தில் பஸ் மோதி விபத்து"), score("வடவள்ளியில் குடிநீர் தட்டுப்பாடு"))
+        rest = (score("கோவையில் தனியார் வேலைவாய்ப்பு முகாம்"), score("கோவையில் கனமழை"), score("கோவை கோயில் திருவிழா"))
+        self.assertTrue(cut > crime > acc > civic > max(rest), (cut, crime, acc, civic, rest))
+
+    def test_today_only(self):
+        self.assertEqual(1, collect.FRESH_DAYS)
+        self.assertTrue(collect.fresh(datetime.datetime.now(IST).isoformat()))
+        self.assertFalse(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(days=1)).isoformat()))
+        for wf in ("research_free.yml", "write_stories.yml"):
+            self.assertIn('FRESH_DAYS: "1"', (ROOT / ".github" / "workflows" / wf).read_text())
 
 
 class PowerCutTiming(unittest.TestCase):

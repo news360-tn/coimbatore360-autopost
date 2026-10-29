@@ -28,7 +28,7 @@ daily        insights.yml       Instagram insights -> learned topic weights (wri
 |---|---|
 | News scope | Only Coimbatore-district news, published today or yesterday (Coimbatore city, Pollachi, Mettupalayam, Sulur, Annur, Valparai, Kinathukadavu, Madukkarai, Perur, Thondamuthur, Anaimalai, Karamadai ...). Tiruppur, Nilgiris, Erode, Palakkad and every other district are not ours, even when close. "Avinashi Road" is a Coimbatore city road: a headline that also names a Coimbatore place is ours |
 | One page | Only கோயம்புத்தூர் 360. No second page, no collaborator, no Rasipuram routing |
-| Priority | power cut (TNEB) > jobs > accident > crime > weather > the rest |
+| Priority | power cut (TNEB) > crime > accident > civic > the rest |
 | Never miss news | Everything eligible is queued and written; duplicates and other-district news are skipped; nothing eligible is dropped |
 | Daily cap | Start with 25 reels a day (`DAILY_CAP` in post.yml, also in the collector / writer); urgent news first |
 | Posting time | Urgent news (power cut, accident, rain warning, Collector/Govt notice, jobs, exams, today/tomorrow) posts at once. Other reels are made ahead and posted 09:00-12:00 / 18:00-21:30 IST; no reel waits more than 12 h (`poster/config.json` `prime_time`) |
@@ -99,6 +99,6 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
 | 2026-10-28 | `eb811b9` | Bridge: Coimbatore 360 Log Sheet, Coimbatore 360 Drive folder, owner Gmail (same Gmail as Namakkal, own Sheet/folder/script and COIMBATORE360 mail tag) |
 | 2026-10-28 | `926e1f9` | README: real Instagram handle |
-| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
+| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > crime > accident > civic; nothing runs until LIVE / ENABLED are added |
 | 2026-10-28 | `a315412` | Initial commit |
 <!-- recent-changes:end -->

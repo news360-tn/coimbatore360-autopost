@@ -46,7 +46,7 @@ for one Instagram page about **Coimbatore district** news. The Namakkal / Rasipu
 - Namakkal-only content (egg price centre rule, Kolli Hills, Rasipuram area routing, Rasipuram page) is removed or neutral.
 
 ## Priority (from Namakkal insights)
-power cut (TNEB) > jobs > accident > crime > weather > the rest. `research_free/learned.py` already has power_cut/jobs with PRIOR +1.0; keep it.
+power cut (TNEB) > crime > accident > civic > the rest. `research_free/learned.py` already has power_cut/jobs with PRIOR +1.0; keep it.
 Start with a daily cap of 25 reels (`DAILY_CAP` env in post.yml).
 
 ## Voice – FREE ONLY
