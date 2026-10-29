@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `06baa10` | No old events and no same-event repeats: an old event re-told in a new article is not filed or posted (Coimbatore RN-29); the same event from another outlet in other words is not posted twice (RN-13/24, RN-86/115) |
+| 2026-10-28 | `779647f` | Reel longer than 90 s: shorten the script automatically and render again instead of holding the story (RN-153) |
 | 2026-10-29 | `5f4b464` | Font check optional: the writer and test runner have no fontTools, so letter repair still runs and tests pass on GitHub (Python 3.11) |
 | 2026-10-29 | `dbb6967` | Coimbatore: news collected only from Tamil-language websites of Tamil Nadu newspapers and channels (English and foreign outlets removed and filtered out) |
 | 2026-10-29 | `baea4a0` | Coimbatore workflows: newest Haiku (claude-haiku-5-5) |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `b979441` | image test output |
 | 2026-10-29 | `4a75089` | free-model test output |
 | 2026-10-29 | `05feb55` | Bridge: Coimbatore Cloudinary cloud (own account, unsigned preset coimbatore360) |
-| 2026-10-28 | `7bbcf3a` | Instagram handle is coimbatore360_official (underscore, as Instagram reports it) |
-| 2026-10-28 | `7d5006f` | ig probe output |
 <!-- recent-changes:end -->
