@@ -15,12 +15,12 @@ until the owner finishes the setup checklist below.
 ## How a story gets from news to Instagram
 
 ```
-research_free.yml (every 4 h) -> queue.json -> write_stories.yml (every 20 min) -> Google Sheet -> post.yml (every 5 min) -> Instagram
+research_free.yml (every 2 h) -> queue.json -> write_stories.yml (every 20 min) -> Google Sheet -> post.yml (every 5 min) -> Instagram
                                                                                                         ^
                                                                     insights.yml (daily) -> topic weights for the writer
 ```
 
-1. **Collect** (`.github/workflows/research_free.yml`, every 4 hours at :07, `research_free/collect.py`).
+1. **Collect** (`.github/workflows/research_free.yml`, every 2 hours at :07, `research_free/collect.py`).
    Searches newspaper sites (Dinamalar Coimbatore district page and others) and Google/Bing News, opens and checks each
    article, keeps only **Coimbatore-district** news of today or yesterday (Tiruppur, Nilgiris, Erode, Palakkad and every
    other district are rejected), removes duplicates and queues the rest by priority in `research_free/archive/queue.json`.
@@ -35,7 +35,7 @@ research_free.yml (every 4 h) -> queue.json -> write_stories.yml (every 20 min) 
 3. **Post** (`.github/workflows/post.yml`, every 5 minutes, `poster/post.py`).
    - `check`: reads the Sheet queue and skips stories that are on hold, stale (older than yesterday, finished power cut,
      passed date - `poster/freshness.py`), not Coimbatore-district news, or a duplicate of an already posted story.
-     No fixed posting times (owner 29 Oct): every reel posts the moment it is made (`poster/config.json` `prime_time.enabled: false`). At most 25 reels a day to start with (`DAILY_CAP` in `post.yml`).
+     No fixed posting times (owner 29 Oct): every reel posts the moment it is made (`poster/config.json` `prime_time.enabled: false`). At most 50 reels a day (Instagram's limit) (`DAILY_CAP` in `post.yml`).
      A watchdog restarts the collector or writer if GitHub skipped their schedule.
    - `run`: builds the **reel only** (no carousel) from the one image (different camera moves / crops per scene, headline
      cards, subtitles, logo), voice **Valluvar** (free edge-tts `ta-IN-ValluvarNeural`, never Google), runs the checks

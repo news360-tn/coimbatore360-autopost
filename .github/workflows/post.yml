@@ -33,7 +33,7 @@ env:
   NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
   FAL_KEY: ${{ secrets.FAL_KEY }}      # paid pictures ONLY when no free source made one
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # picture check: does the AI image show the news?
-  DAILY_CAP: "25"     # Coimbatore 360: start with at most 25 reels a day (owner decision)
+  DAILY_CAP: "50"     # owner 29 Oct: do not miss city news - up to Instagram's own limit of 50 posts a day
   CITY_ONLY: "1"      # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
   DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
   PREBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.prebuild && '1' || '' }}
@@ -80,7 +80,7 @@ jobs:
               except Exception: return 1e9
           try: q = len(json.load(open("research_free/archive/queue.json")))
           except Exception: q = 0
-          print("collect" if age("collect") > 255 else "", "write" if q and age("write") > 30 else "")
+          print("collect" if age("collect") > 135 else "", "write" if q and age("write") > 30 else "")
           print(f"last collect {age('collect'):.0f} min ago, last write {age('write'):.0f} min ago, queue {q}")
           PY
           cat /tmp/wd.txt

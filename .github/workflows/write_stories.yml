@@ -55,7 +55,7 @@ jobs:
           WRITE_WORKERS: "3"
           FRESH_DAYS: "1"           # owner 29 Oct: news published TODAY only (Coimbatore)
           CITY_ONLY: "1"            # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
-          DAILY_CAP: "25"           # Coimbatore 360: after 25 stories a day only main / important news is written
+          DAILY_CAP: "50"           # owner 29 Oct: up to Instagram's limit of 50 a day (city news is never capped below it)
         run: |
           mkdir -p research_free/results
           python -u research_free/collect.py > research_free/results/write.log 2>&1 || echo "exit $?" >> research_free/results/write.log

@@ -47,7 +47,7 @@ for one Instagram page about **Coimbatore district** news. The Namakkal / Rasipu
 
 ## Priority (from Namakkal insights)
 power cut (TNEB) > crime > accident > civic > the rest. `research_free/learned.py` already has power_cut/jobs with PRIOR +1.0; keep it.
-Start with a daily cap of 25 reels (`DAILY_CAP` env in post.yml).
+Daily cap 50 reels (Instagram's limit; owner 29 Oct: do not miss city news) - `DAILY_CAP` in the workflows.
 
 ## Voice – FREE ONLY
 Valluvar (edge-tts `ta-IN-ValluvarNeural`) for every reel. Google Charon is never used: remove `reel_voice_alt` from config and make

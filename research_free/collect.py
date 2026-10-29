@@ -132,10 +132,14 @@ def fresh(published):
     st = _start_at()
     if st is not None and t.tzinfo is not None and t < st:
         return False      # published before the automation was started: already covered by the posted/e-mailed news
-    # owner 26 Oct: news published TODAY or YESTERDAY (IST) that is not posted yet; late-evening news is no longer lost after midnight
+    # owner 29 Oct (Coimbatore): news published TODAY - plus anything published in the last FRESH_HOURS, so a story published at 11:30 pm
+    # is still taken by the 1 am round ("do not miss any news")
+    if t.tzinfo is not None and datetime.datetime.now(IST) - t <= datetime.timedelta(hours=FRESH_HOURS):
+        return True
     return (datetime.datetime.now(IST).date() - d).days < FRESH_DAYS
 
 
+FRESH_HOURS = float(os.environ.get("FRESH_HOURS", "3") or 3)      # late-night news crosses midnight: still fresh for 3 h
 FRESH_DAYS = int(os.environ.get("FRESH_DAYS", "1") or 1)      # owner 29 Oct (Coimbatore): 1 = news published TODAY only; 2 = today + yesterday
 
 

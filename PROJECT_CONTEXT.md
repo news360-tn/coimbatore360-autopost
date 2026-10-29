@@ -11,13 +11,13 @@ ported by diff. Everything runs on GitHub Actions; the Google Sheet (through the
 ## How it works (end to end)
 
 ```
-every 4 h    research_free.yml  collect news (newspaper sites incl. Dinamalar Coimbatore page, Google/Bing News, Coimbatore searches)
+every 2 h    research_free.yml  collect news (newspaper sites incl. Dinamalar Coimbatore page, Google/Bing News, Coimbatore searches)
                                  -> open + check each article -> only Coimbatore-district news of today/yesterday
                                  -> queue by priority (research_free/archive/queue.json)
 every 20 min write_stories.yml  write each queued news by priority (free LLM chain only) -> ONE AI image of the main scene
                                  (Cloudflare FLUX schnell -> NVIDIA FLUX -> paid FAL only if both fail) -> story saved in the Sheet
                                  -> starts posting at once
-every 5 min  post.yml           checks (Coimbatore only, not stale, no duplicate, daily cap 25; posts at once) -> reel (reel/reel4.py,
+every 5 min  post.yml           checks (Coimbatore only, not stale, no duplicate, daily cap 50; posts at once) -> reel (reel/reel4.py,
                                  Valluvar voice) -> Instagram (one page, no collab)
 daily        insights.yml       Instagram insights -> learned topic weights (writer priority)
 ```
@@ -30,7 +30,7 @@ daily        insights.yml       Instagram insights -> learned topic weights (wri
 | One page | Only கோயம்புத்தூர் 360. No second page, no collaborator, no Rasipuram routing |
 | Priority | power cut (TNEB) > crime > accident > civic > the rest |
 | Never miss news | Everything eligible is queued and written; duplicates and other-district news are skipped; nothing eligible is dropped |
-| Daily cap | Start with 25 reels a day (`DAILY_CAP` in post.yml, also in the collector / writer); urgent news first |
+| Daily cap | 50 reels a day (Instagram's limit) (`DAILY_CAP` in post.yml, also in the collector / writer); urgent news first |
 | Posting time | No fixed times (owner 29 Oct): every reel posts the moment it is made (`poster/config.json` `prime_time.enabled: false`) |
 | Format | Reel only (no carousel) |
 | Voice | **Valluvar only** (free edge-tts `ta-IN-ValluvarNeural`). Google voices are never used, even if a Google key exists |
@@ -101,6 +101,6 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-28 | `e12dfef` | ig-probe: never write the Instagram token or bridge key into the public repo (error messages can carry the request URL) |
 | 2026-10-28 | `eb811b9` | Bridge: Coimbatore 360 Log Sheet, Coimbatore 360 Drive folder, owner Gmail (same Gmail as Namakkal, own Sheet/folder/script and COIMBATORE360 mail tag) |
 | 2026-10-28 | `926e1f9` | README: real Instagram handle |
-| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 25, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
+| 2026-10-28 | `8b341b4` | Coimbatore 360: separate copy of news360-autopost for கோயம்புத்தூர் 360 (@coimbatore360.official) - Coimbatore-district news only, Valluvar voice only, one free image per reel (paid FAL only as fallback), reel only, free writing models only, daily cap 50, priority power cut > jobs > accident > crime > weather; nothing runs until LIVE / ENABLED are added |
 | 2026-10-28 | `a315412` | Initial commit |
 <!-- recent-changes:end -->

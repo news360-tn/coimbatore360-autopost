@@ -101,6 +101,14 @@ class CoimbatorePriority(unittest.TestCase):
         self.assertEqual(1, collect.FRESH_DAYS)
         self.assertTrue(collect.fresh(datetime.datetime.now(IST).isoformat()))
         self.assertFalse(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(days=1)).isoformat()))
+        self.assertTrue(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(hours=2)).isoformat()))      # 11:30 pm news at the 1 am round
+
+    def test_every_two_hours_cap_50(self):      # owner 29 Oct: collect every 2 h, post at once, do not miss city news
+        wf = ROOT / ".github" / "workflows"
+        self.assertIn('cron: "7 */2 * * *"', (wf / "research_free.yml").read_text())
+        self.assertIn('age("collect") > 135', (wf / "post.yml").read_text())
+        for f in ("post.yml", "research_free.yml", "write_stories.yml"):
+            self.assertIn('DAILY_CAP: "50"', (wf / f).read_text(), f)
         for wf in ("research_free.yml", "write_stories.yml"):
             self.assertIn('FRESH_DAYS: "1"', (ROOT / ".github" / "workflows" / wf).read_text())
 

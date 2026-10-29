@@ -12,7 +12,7 @@ All e-mail subjects use the tag **COIMBATORE360** (Namakkal uses NEWS360). Never
 
 | Way | Who makes it | What you send by e-mail | Speed |
 |---|---|---|---|
-| **A. Automatic collecting** (every 4 hours, written every 20 minutes) | The system: free AI models only (Claude is off) | Nothing. The one image is made automatically (free first). Only if no image can be made you get `[COIMBATORE360 IMAGES NEEDED]` | Posted automatically |
+| **A. Automatic collecting** (every 2 hours, written every 20 minutes) | The system: free AI models only (Claude is off) | Nothing. The one image is made automatically (free first). Only if no image can be made you get `[COIMBATORE360 IMAGES NEEDED]` | Posted automatically |
 | **B. Your own story** (you or a friend, when you want) | You (or an AI with web search) → you make ONE image → you e-mail | E-mail `COIMBATORE360 STORY`: JSON + 1 image | Posted within ~30 min of your e-mail |
 | **C. Ready reel** (you already made the video and caption) | You | E-mail `COIMBATORE360 REEL`: zip with one `.md` (caption) + one video `.mp4` | Posted as it is, within ~30 min |
 
@@ -29,7 +29,7 @@ Pausing only stops the automatic collecting and writing (way A). Posting of stor
 2. Left side: **collect-switch**.
 3. Button **Run workflow** → choose:
    - `pause` → automatic collecting stops.
-   - `start` → automatic collecting starts again (every 4 hours).
+   - `start` → automatic collecting starts again (every 2 hours).
 4. The summary of the run says: "Automatic collecting: ON" or "PAUSED".
 5. Phone: same page in the GitHub app or mobile browser.
 
@@ -47,7 +47,7 @@ Full stop (posting too): remove the `LIVE` file, or repository **Settings → Se
 - Voice: **Valluvar** (free) for every reel.
 - A story is never posted if: its date has passed (power cut of yesterday, job fair over), the same news is already posted, or the source check fails.
 
-Daily cap: **25 reels a day** to start with (`DAILY_CAP` in `post.yml`). Important news first; a story waiting for the cap is posted later, not lost.
+Daily cap: **50 reels a day** (Instagram's limit) (`DAILY_CAP` in `post.yml`). Important news first; a story waiting for the cap is posted later, not lost.
 
 ---
 
@@ -193,7 +193,7 @@ Max 5 hashtags. No "comment below" lines.
 | `NOT ADDED … image` | no image found | send the image again |
 | `DUPLICATE of RN-xx` | same news already in the Sheet | nothing; it will not be posted twice |
 | `Checks failed` in Sheet notes | a text or fact check failed | the story is not posted; fix or drop it |
-| `LIMIT` / daily cap in the log | 25 reels today reached | story waits; posted automatically later |
+| `LIMIT` / daily cap in the log | 50 reels today reached | story waits; posted automatically later |
 | `Instagram token refresh failed` e-mail | the 60-day token could not be refreshed | make a new token and save it as `IG_TOKEN_COIMBATORE` |
 | Nothing posts at all | not live yet | the `LIVE` file must exist (README setup checklist) |
 
