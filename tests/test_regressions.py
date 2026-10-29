@@ -647,3 +647,60 @@ class Ages(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NotNews(unittest.TestCase):
+    """owner 29 Oct (RN-189 egg price): a story that only says the article has no details is never filed or posted;
+    a real story with one such sentence keeps its facts and loses only that sentence (RN-112)"""
+    EMPTY = ("முட்டை விலை நிலவரம் குறித்த விவரம் இந்தக் கட்டுரையில் வெளியிடப்படவில்லை. கட்டுரையில் முட்டை விலை எவ்வளவு என்ற எண்ணோ தகவலோ இல்லை. "
+             "வேறு ஒரு செய்தி உள்ளது. அந்தச் செய்தி முட்டை விலையுடன் தொடர்புடையது அல்ல. முட்டை விலை விவரம் தெரியவந்ததும் பகிரப்படும். "
+             "மேலும் செய்திகளுக்கு நாமக்கல் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.")
+    REAL = ("நாமக்கல்லில் ஓய்வு பெற்றோர் நலச்சங்கக் கூட்டம் நடைபெற்றது. அகவிலைப்படியுடன் ஓய்வூதியம் வழங்க வேண்டும் என கோரிக்கை விடுக்கப்பட்டது. "
+            "மாவட்டத் தலைவர் தலைமை வகித்தார். 2003க்குப் பின் பணியில் சேர்ந்தோர் இக்கோரிக்கையின் கீழ் வருகின்றனர். "
+            "மொத்தப் பண பலன்கள் குறித்த முழு விவரம் இன்னும் தெரியவரவில்லை. மேலும் செய்திகளுக்கு நாமக்கல் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.")
+
+    def setUp(self):
+        import freshness
+        self.f = freshness
+
+    def test_empty_story_rejected(self):
+        self.assertTrue(self.f.no_news("முட்டை விலை நிலவரம்", self.EMPTY, "").startswith("not news"))
+
+    def test_headline_saying_no_detail_rejected(self):
+        self.assertTrue(self.f.no_news("முட்டை விலை - விவரம் இன்னும் தெரியவில்லை", "", ""))
+
+    def test_real_story_kept_and_cleaned(self):
+        self.assertEqual(self.f.no_news("ஓய்வு பெற்றோர் நலச்சங்கக் கூட்டம்", self.REAL, ""), "")
+        out = self.f.strip_no_news(self.REAL)
+        self.assertNotIn("தெரியவரவில்லை", out)
+        self.assertIn("அகவிலைப்படியுடன்", out)
+        self.assertTrue(out.endswith("பின்தொடருங்கள்."))
+
+    def test_posting_gate_blocks_it(self):
+        row = {"story_id": "RN-189", "headline_ta": "முட்டை விலை நிலவரம்", "headline_en": "Egg price update", "category": "Business & Prices",
+               "published": post.datetime.now(post.IST).isoformat(), "researched": post.datetime.now(post.IST).strftime("%d %b %Y, %H:%M"),
+               "reel_script": self.EMPTY, "caption": "", "slides_spec": "{}"}
+        self.assertTrue(post.skip_reason(row).startswith("not news"))
+
+
+class HeadlineOnlyAndMadeUp(unittest.TestCase):
+    """owner 29 Oct (RN-12 Coimbatore, K.N. Nehru raid): a page that is only a headline is not written (the writer invented
+    the rest), and a draft whose words mostly do not come from a Tamil article is not filed. Short real briefs still pass."""
+    def test_headline_only_page_has_no_body(self):
+        a = {"title": "KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. அதிரும் சிங்காநல்லூர்",
+             "text": "KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. அதிரும் சிங்காநல்லூர் எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்"}
+        self.assertLess(len(collect.body_words(a)), collect.HEADLINE_ONLY_MIN)
+
+    def test_short_real_brief_passes(self):
+        a = {"title": "சூதாட்டம் ஆடிய 6 பேருக்கு காப்பு",
+             "text": "சூதாட்டம் ஆடிய 6 பேருக்கு காப்பு. பரமத்தி வேலூர் போலீசார் ரோந்து சென்றபோது பணம் வைத்து சூதாடிய ஆறு பேரை கைது செய்து ரூ.11,600 பறிமுதல் செய்தனர். அனைவரும் ஜாமீனில் விடுவிக்கப்பட்டனர்."}
+        self.assertGreaterEqual(len(collect.body_words(a)), collect.HEADLINE_ONLY_MIN)
+
+    def test_made_up_draft_rejected(self):
+        art = {"url": "https://example.com/a", "title": "t", "published": collect.datetime.datetime.now(collect.IST).isoformat(),
+               "text": " ".join(["நாமக்கல்லில்", "போலீசார்", "விசாரணை", "நடத்தினர்", "பொதுமக்கள்", "கோரிக்கை"] * 15)}
+        d = {"tamil_headline": "நாமக்கல் செய்தி", "english_headline": "x", "category": "c", "location": "l", "scenes": ["s"],
+             "reel_script": "", "caption": "", "slides_spec": {}}
+        story, why = collect.file_story(art, (d, "test", ["not grounded: only 37% of the words come from the article"], 1), [], [])
+        self.assertIsNone(story)
+        self.assertIn("likely made up", why)
