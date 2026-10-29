@@ -46,7 +46,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # owner 29 Oct: paid Claude ONLY when every free model failed / is out of quota
-          ANTHROPIC_MODEL: claude-haiku-4-5
+          ANTHROPIC_MODEL: claude-haiku-5-5      # owner 29 Oct: newest Haiku (older one only as automatic fallback)
           MANUAL_URL: ${{ github.event.inputs.manual_url }}
           BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
           BRIDGE_KEY: ${{ secrets.BRIDGE_KEY }}

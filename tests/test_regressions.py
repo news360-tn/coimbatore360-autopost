@@ -379,7 +379,7 @@ class FreeFirstThenClaude(unittest.TestCase):
         self.assertTrue(llm.GHM_MODELS)
         for f in ("research_free.yml", "write_stories.yml", "post.yml"):
             t = (ROOT / ".github" / "workflows" / f).read_text()
-            self.assertIn("ANTHROPIC_MODEL: claude-haiku-4-5", t, f)
+            self.assertIn("ANTHROPIC_MODEL: claude-haiku-5-5", t, f)      # owner 29 Oct: newest Haiku
             self.assertNotIn('CLAUDE_MAX_CALLS: "0"', t, f)
 
 

@@ -25,7 +25,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}      # owner 29 Oct: paid Claude ONLY when every free model failed / is out of quota
-          ANTHROPIC_MODEL: claude-haiku-4-5
+          ANTHROPIC_MODEL: claude-haiku-5-5      # owner 29 Oct: newest Haiku (older one only as automatic fallback)
         run: |
           mkdir -p research_free/results
           python -u research_free/run.py ${{ github.event.inputs.urls }} > research_free/results/run.log 2>&1 || echo "exit $?" >> research_free/results/run.log
