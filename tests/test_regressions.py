@@ -770,3 +770,25 @@ class ReelTooLong(unittest.TestCase):
     def test_short_script_unchanged(self):
         s = "ஒன்று. இரண்டு. மேலும் செய்திகளுக்கு பின்தொடருங்கள்."
         self.assertEqual(post.shorten_script(s, 0.5), s)
+
+
+class OldEventAndSameEvent(unittest.TestCase):
+    """owner 29 Oct: an old event re-told in a new article (Coimbatore RN-29, a Dec 2025 wedding) is not posted; the same event
+    from another outlet in other words (Coimbatore RN-13 / RN-24 bus fight) is not posted twice"""
+    def test_old_event(self):
+        import freshness, datetime
+        t = "நடிகை சமந்தா, இயக்குநர் ராஜ் திருமணம் செய்துகொண்டனர். 1 டிசம்பர் 2025 அன்று லிங்க பைரவி கோயிலில் திருமணம் நடந்தது."
+        self.assertTrue(freshness.old_event(t, datetime.date(2026, 10, 29)))
+        self.assertEqual(freshness.old_event("2015 ஜூலை 28 குழந்தை விற்பனை வழக்கில் புதன்கிழமை தீர்ப்பு: 6 பேருக்கு சிறை", datetime.date(2026, 10, 29)), "")
+        self.assertEqual(freshness.old_event("பள்ளிப்பாளையத்தில் தெருநாய் தொல்லை அதிகரிப்பு, மக்கள் கோரிக்கை", datetime.date(2026, 10, 29)), "")
+
+    def test_same_event_other_words(self):
+        import freshness
+        a = ("கோவையில் பேருந்து ஓட்டுநர்கள் நடுரோட்டில் தாக்கிக்கொண்ட சம்பவம் வைரல். இரண்டு தனியார் பேருந்துகளின் ஓட்டுநர்கள் மற்றும் நடத்துநர்கள் "
+             "பயணிகளை ஏற்றுவதில் ஏற்பட்ட போட்டியால் நடுரோட்டில் அடிதடியில் ஈடுபட்டனர். வீடியோ இணையத்தில் பரவியது. பீளமேடு போக்குவரத்து பாதிப்பு.")
+        b = ("பீளமேடுவில் இரண்டு பேருந்து ஊழியர்கள் நடுரோட்டில் அடிதடி. தனியார் பேருந்துகளின் ஓட்டுனர்கள் நடத்துனர்கள் பயணிகளை ஏற்றுவதில் "
+             "போட்டியால் மோதல். நடுரோட்டில் சரமாரியாக தாக்கினர். காட்சிகள் இணையத்தில் பரவியது. பீளமேடு போக்குவரத்து பாதிப்பு.")
+        other = ["எருமப்பட்டியில் குப்பை எரித்தபோது தீ விபத்து", "நாமக்கல்லில் முட்டை விலை ரூ.5.70", "மோகனூரில் மணல் திருட்டு"] * 10
+        df = freshness.event_df([a, b] + other)
+        self.assertTrue(freshness.same_event(a, b, df))
+        self.assertFalse(freshness.same_event(a, other[0] * 3, df))
