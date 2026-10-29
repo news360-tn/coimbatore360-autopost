@@ -200,11 +200,17 @@ CITY_AREAS = ["காந்திபுர", "ஆர்.எஸ்.புர", "�
               "Thudiyalur", "Corporation"]
 
 
+POWER_CUT = re.compile(r"மின்\s*தடை|மின்தடை|மின்\s*நிறுத்த|மின்வெட்டு|மின்\s*வெட்டு|மின்\s*விநியோக(ம்)?\s*(நிறுத்த|தடை|இருக்காது)|"
+                       r"power\s*(cut|shut|outage|supply\s*will)", re.I)
+
+
 def outside_city(*texts):
     """CITY_ONLY: '' when the story can be Coimbatore city news, else the town outside the city it is about"""
     if not CITY_ONLY:
         return ""
     t = " ".join(x or "" for x in texts)
+    if POWER_CUT.search(t):      # owner 29 Oct: power-cut news is taken from the WHOLE Coimbatore district (all other news: city only)
+        return ""
     for w in TOWN_ROADS + NOT_PLACE:
         t = t.replace(w, " ")
     low = t.lower()
@@ -221,8 +227,13 @@ def outside_city(*texts):
 
 # city only: the searches for the towns outside the city are not run (the paper's district pages are still read)
 if CITY_ONLY:
-    QUERIES = [q for q in QUERIES if not outside_city(q)]
+    QUERIES = [q for q in QUERIES if not outside_city(q)]      # power-cut searches always stay (outside_city never blocks a power cut)
     SITE_QUERIES = [q for q in SITE_QUERIES if not outside_city(q)]
+# owner 29 Oct: never miss a power cut anywhere in the district - every town is searched for its shutdown notice
+QUERIES += [q for q in [f"{t} மின்தடை" for t in ("பொள்ளாச்சி", "மேட்டுப்பாளையம்", "சூலூர்", "அன்னூர்", "கிணத்துக்கடவு", "மதுக்கரை",
+            "வால்பாறை", "காரமடை", "தொண்டாமுத்தூர்", "பேரூர்", "ஆனைமலை", "கருமத்தம்பட்டி", "பெரியநாயக்கன்பாளையம்")]
+            + ["கோவை மின்தடை நாளை", "கோவை மின்தடை பகுதிகள்", "Coimbatore power cut tomorrow", "Pollachi power cut", "Mettupalayam power cut"]
+            if q not in QUERIES]
 
 
 def has_place(text):

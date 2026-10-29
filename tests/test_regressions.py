@@ -316,6 +316,16 @@ class CityOnly(unittest.TestCase):
             self.assertTrue(allnews.outside_city(t), t)
         self.assertTrue(allnews.outside_city("நகை பறிப்பு", "பொள்ளாச்சி, கோவை"))      # the location the writer found
 
+    def test_power_cuts_from_the_whole_district(self):      # owner 29 Oct: never miss a power cut - whole district; other news city only
+        for t in ("பொள்ளாச்சியில் நாளை மின்தடை", "மேட்டுப்பாளையம் பகுதிகளில் நாளை மின் விநியோகம் நிறுத்தம்", "Pollachi power cut tomorrow"):
+            self.assertEqual("", allnews.outside_city(t), t)
+        row = {"source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/1",
+               "headline_ta": "பொள்ளாச்சியில் நாளை மின்தடை", "caption": "", "location": "பொள்ளாச்சி"}
+        self.assertNotIn("city", post.not_coimbatore(row))
+        self.assertTrue(any("பொள்ளாச்சி மின்தடை" == q for q in allnews.QUERIES))
+        self.assertGreater(collect.interest({"title": "பொள்ளாச்சியில் நாளை மின்தடை", "text": ""}),
+                           collect.interest({"title": "காந்திபுரத்தில் நகை திருடியவர் கைது", "text": ""}))      # power cut first
+
     def test_city_news_kept(self):
         for t in ("கோவையில் ஆன்லைன் மோசடி", "Coimbatore power cut", "மேட்டுப்பாளையம் சாலையில் விபத்து",
                   "காந்திபுரத்தில் பஸ் விபத்து; பொள்ளாச்சி பயணிகள்", "கோவை பேரூராட்சியில் கூட்டம்"):
