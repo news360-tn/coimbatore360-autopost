@@ -1,18 +1,21 @@
 writing [N]: "கோவையில் ஆன்லைன் மோசடியில் ரூ.7.79 லட்சம் அபேஸ்!" - போக்குவ
+writing [N]: வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகராட்சி ஆணையா
 writing [N]: கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விசாரணை தொடக்
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-writing [N]: சரவணம்பட்டி கரட்டுமேடு கோயிலில் மோசடி: நடவடிக்கை எடுக்க வலிய
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.8-flash
-fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.8-flash
-fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.8-flash
+fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+switching away from gemini/gemini-3.8-flash for 10 min
 fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 503: {
   "error": {
     "code": 503,
@@ -21,63 +24,50 @@ fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 503: {
   "error": {
     "code": 503,
     "message": "This model is currently experiencing high d
-fail gemini/gemini-3.7-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.7-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.7-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.7-flash
-fail gemini/gemini-3.7-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3.7-flash
-ok gemini/gemini-3.6-flash (14s)
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-ok gemini/gemini-3.6-flash (16s)
-attempt 1 gemini/gemini-3.6-flash: 1 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3.6-flash (18s)
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
+switching away from gemini/gemini-3.7-flash for 10 min
+fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.8-flash
+fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.8-flash
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
   "error": {
     "code": 503,
     "message": "This model is currently experiencing high d
 ok gemini/gemini-3.6-flash (22s)
+attempt 1 gemini/gemini-3.6-flash: 1 problems
+  reel_script has 184 words; need 130-170 (full detail in at most 90 seconds: every fact of the article, each said once)
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+ok gemini/gemini-3.6-flash (16s)
+attempt 1 gemini/gemini-3.6-flash: 1 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+ok gemini/gemini-3.6-flash (20s)
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.6-flash for 10 min
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.6-flash for 10 min
+dead for this round: gemini/gemini-3.6-flash
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-ok groq/qwen/qwen3.8-27b (1s)
-factcheck by groq/qwen/qwen3.8-27b: 3 problems
-  Slide 2, line 2 is truncated and missing the unit 'லட்சம்' for the amount ரூ.1.75, making it incomplete.
-  Slide 2, line 3 is truncated and missing the unit 'லட்சம்' for the amount ரூ.1.24, making it incomplete.
-  Caption footer contains English hashtags ('Coimbatore online cyber fraud cases...') which are not in the article and violate the Tamil-only context implied by the rest of the draft, though the prompt excludes standard footer elements, these specific English tags are not part of the standard 'Follow' or location line and are not in the source article.
-attempt 1 gemini/gemini-3.6-flash: 3 problems
-  fact-check: Slide 2, line 2 is truncated and missing the unit 'லட்சம்' for the amount ரூ.1.75, making it incomplete.
-  fact-check: Slide 2, line 3 is truncated and missing the unit 'லட்சம்' for the amount ரூ.1.24, making it incomplete.
-  fact-check: Caption footer contains English hashtags ('Coimbatore online cyber fraud cases...') which are not in the article and violate the Tamil-only context implied by the rest of the draft, though the prompt excludes standard footer elements, these specific English tags are not part of the standard 'Follow' or location line and are not in the source article.
+ok groq/qwen/qwen3.8-27b (0s)
+factcheck by groq/qwen/qwen3.8-27b: 2 problems
+  Specific date 'October 28' (அக்டோபர் 28ஆம் தேதி) is not mentioned in the article, which only states 'Wednesday' (புதன்கிழமை).
+  Slides spec slide 2 misspells the Commissioner's name as 'காட்டா ரவிதேஜா' instead of 'கட்டா ரவிதேஜா'.
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  fact-check: Specific date 'October 28' (அக்டோபர் 28ஆம் தேதி) is not mentioned in the article, which only states 'Wednesday' (புதன்கிழமை).
+  fact-check: Slides spec slide 2 misspells the Commissioner's name as 'காட்டா ரவிதேஜா' instead of 'கட்டா ரவிதேஜா'.
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
@@ -86,11 +76,6 @@ dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
 fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiError: you have used up y
 dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
 free models unavailable: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiE
-writing [N]: வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகராட்சி ஆணையா
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உயிரிழப்பு
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
@@ -98,39 +83,44 @@ fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Requ
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுரம், மதுரை,
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok groq/openai/gpt-oss-120b (4s)
-factcheck by groq/openai/gpt-oss-120b: 3 problems
-  Draft adds month “அக்டோபர்” (e.g., “அக்டோபர் 21”) which is not mentioned in the article – the article only says “21‑ம் தேதி”.
-  Draft incorrectly calls SP Deivi a “காவல் கண்காணிப்பாளர்” (police inspector) in the reel script and slides, whereas the article identifies her as “எஸ்.பி.” (Superintendent of Police).
-  Slide 3 omits the “மேற்கு” qualifier, referring to “கோவை மண்டல எஸ்.பி. தேவி” instead of the article’s “கோவை மேற்கு மண்டல எஸ்.பி. தேவி”.
-attempt 1 gemini/gemini-3.6-flash: 3 problems
-  fact-check: Draft adds month “அக்டோபர்” (e.g., “அக்டோபர் 21”) which is not mentioned in the article – the article only says “21‑ம் தேதி”.
-  fact-check: Draft incorrectly calls SP Deivi a “காவல் கண்காணிப்பாளர்” (police inspector) in the reel script and slides, whereas the article identifies her as “எஸ்.பி.” (Superintendent of Police).
-  fact-check: Slide 3 omits the “மேற்கு” qualifier, referring to “கோவை மண்டல எஸ்.பி. தேவி” instead of the article’s “கோவை மேற்கு மண்டல எஸ்.பி. தேவி”.
+ok gemini/gemini-3.6-flash (14s)
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 writing [N]: கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிநாட்டு சுற்
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-writing [N]: மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Dinakaran - 
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+switching away from gemini/gemini-3.6-flash for 10 min
+ok groq/qwen/qwen3.8-27b (0s)
+factcheck by groq/qwen/qwen3.8-27b: 3 problems
+  Draft specifies the date as 'October 21' (அக்டோபர் 21), but the article only states '21st date' (21-ம் தேதி) without mentioning the month.
+  Draft incorrectly identifies the location as 'Coimbatore' (கோயம்புத்தூர்) in the reel_script and caption, whereas the article explicitly states the incident and investigation took place in 'Coimbatore' (கோவை/Kovai).
+  Draft caption hashtags and footer incorrectly label the news as 'Coimbatore news' and 'Coimbatore student suicide case', contradicting the article's location of Kovai.
+attempt 2 gemini/gemini-3.6-flash: 3 problems
+  fact-check: Draft specifies the date as 'October 21' (அக்டோபர் 21), but the article only states '21st date' (21-ம் தேதி) without mentioning the month.
+  fact-check: Draft incorrectly identifies the location as 'Coimbatore' (கோயம்புத்தூர்) in the reel_script and caption, whereas the article explicitly states the incident and investigation took place in 'Coimbatore' (கோவை/Kovai).
+  fact-check: Draft caption hashtags and footer incorrectly label the news as 'Coimbatore news' and 'Coimbatore student suicide case', contradicting the article's location of Kovai.
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+writing [N]: மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Dinakaran - 
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 writing [N]: ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பேருக்கு தலா
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-writing [N]: விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்வு பேரணி..
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
@@ -141,37 +131,37 @@ fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Requ
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: கோவையில் 2-வது நாளாகப் பனிமூட்டம்! மக்கள் அவதி!
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் இறங்கிய பஸ
+writing [N]: விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்வு பேரணி..
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-writing [N]: Coimbatore Central Prison beefs up security after Theni jail
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: Auto drivers in Coimbatore welcome TN govt's revision of far
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+writing [N]: Coimbatore Central Prison beefs up security after Theni jail
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 writing [N]: Coimbatore court sentences six to 10 years in prison in 2015
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+writing [N]: அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 லட்சம் இழப
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-writing [N]: அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 லட்சம் இழப
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-writing [N]: Indian Pilot honoured with the UAE’s Prestigious Award! - Th
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: State team gamifies CPR training with a manikin
@@ -181,85 +171,53 @@ fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Requ
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: Understaffing, poor training key factors behind prison break
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: Bharathiar University delays semester exams for ODL students
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+writing [N]: Indian Pilot honoured with the UAE’s Prestigious Award! - Th
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக்க வேண்டும
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 writing [N]: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok gemini/gemini-3.6-flash (6s)
-factcheck by gemini/gemini-3.6-flash: 0 problems
-attempt 2 gemini/gemini-3.6-flash: 0 problems
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/qwen/qwen3.8-27b (3s)
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-factcheck unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 741, Requested 507. Please try again in 14.879999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-proofread rejected (1 problems)
-  fact-check: could not be run
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-image brief failed, using the writer's image prompt: no free model answered: None
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-image brief failed, using the writer's image prompt: no free model answered: None
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-writing [N]: ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோடி நிலுவை! 
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free models unavailable: no free model answered: None
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-image match check unavailable: gemini-3.5-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout
-image made for 'Demand for government action and direct '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261029-1244","first":"RN-1"}
-posting job started at once
-write_stories.yml started
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 earlier stories still waiting for images: []
 instagram check: 0 recent posts read from the page
-write round: 24 news waiting in the queue (written in priority order)
-candidate filter: collected=24
-to write: 24 Coimbatore district candidates (max 200 stories)
-candidates waiting: 24 Coimbatore; time left 29 min
+write round: 23 news waiting in the queue (written in priority order)
+candidate filter: collected=23
+to write: 23 Coimbatore district candidates (max 200 stories)
+candidates waiting: 23 Coimbatore; time left 29 min
 try (N) manual=False: கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விசாரணை தொடக்
 try (N) manual=False: "கோவையில் ஆன்லைன் மோசடியில் ரூ.7.79 லட்சம் அபேஸ்!" - போக்குவ
-try (N) manual=False: சரவணம்பட்டி கரட்டுமேடு கோயிலில் மோசடி: நடவடிக்கை எடுக்க வலிய
-NOT filed (N) "கோவையில் ஆன்லைன் மோசடியில் ரூ.7.79 லட்சம் அபேஸ்!": all free models failed: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 
 try (N) manual=False: வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகராட்சி ஆணையா
-NOT filed (N) வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகரா: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) வடவள்ளி - மருதமலை சாலையில் சீரமைப்புப் பணி: மாநகரா: all free models failed: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 
 try (N) manual=False: விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உயிரிழப்பு
 NOT filed (N) விளக்கேற்றியபோது சேலையில் தீப்பிடித்து மூதாட்டி உய: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுரம், மதுரை,
 NOT filed (N) தீபாவளி சிறப்பு ரயில்கள் முழு லிஸ்ட்: திருவனந்தபுர: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிநாட்டு சுற்
-NOT filed (N) கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விச: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
-try (N) manual=False: மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Dinakaran - 
 NOT filed (N) கிறிஸ்துமஸ் கேக் தயாரிக்கும் பணி தொடங்கியது- வெளிந: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+try (N) manual=False: மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Dinakaran - 
+NOT filed (N) "கோவையில் ஆன்லைன் மோசடியில் ரூ.7.79 லட்சம் அபேஸ்!": all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோடி நிலுவை! 
-NOT filed (N) மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Di: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) கோவை மாணவர் தற்கொலை வழக்கில் சிபிசிஐடி எஸ்.பி. விச: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பேருக்கு தலா
-NOT filed (N) ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பே: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - Di: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்வு பேரணி..
-NOT filed (N) விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) ஒரு வயதுப் பெண் குழந்தை விற்பனை: தந்தை உள்பட  6 பே: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. அதிரும் சி
 NOT filed (N) KN Nehru Raid| எதிர்பாரா ட்விஸ்ட்டாக கோவையிலும்.. : all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: கோவையில் 2-வது நாளாகப் பனிமூட்டம்! மக்கள் அவதி!
@@ -267,15 +225,15 @@ NOT filed (N) கோவையில் 2-வது நாளாகப் பன�
 try (N) manual=False: Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் இறங்கிய பஸ
 NOT filed (N) Kovai Bus Drivers Attack | நடுரோட்டில் அடிதடியில் : all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: Coimbatore Central Prison beefs up security after Theni jail
-NOT filed (N) Coimbatore Central Prison beefs up security after : all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) விஜிஎம் மருத்துவமனை சார்பில் மூட்டுவாத விழிப்புணர்: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: Auto drivers in Coimbatore welcome TN govt's revision of far
 NOT filed (N) Auto drivers in Coimbatore welcome TN govt's revis: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: Coimbatore court sentences six to 10 years in prison in 2015
-NOT filed (N) Coimbatore court sentences six to 10 years in pris: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) Coimbatore Central Prison beefs up security after : all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 லட்சம் இழப
-NOT filed (N) அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 : all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) Coimbatore court sentences six to 10 years in pris: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: Indian Pilot honoured with the UAE’s Prestigious Award! - Th
-NOT filed (N) Indian Pilot honoured with the UAE’s Prestigious A: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) அடிக்கடி பழுதான காா்: பெண் மருத்துவருக்கு ரூ.1.10 : all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: State team gamifies CPR training with a manikin
 NOT filed (N) State team gamifies CPR training with a manikin: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: Understaffing, poor training key factors behind prison break
@@ -283,15 +241,13 @@ NOT filed (N) Understaffing, poor training key factors behind pr: all free model
 try (N) manual=False: Bharathiar University delays semester exams for ODL students
 NOT filed (N) Bharathiar University delays semester exams for OD: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக்க வேண்டும
-NOT filed (N) ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
+NOT filed (N) Indian Pilot honoured with the UAE’s Prestigious A: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 try (N) manual=False: பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பில்லூா் குட
+NOT filed (N) ஆட்டோ மீட்டா் கட்டணத்தை மாவட்ட வாரியாக மாற்றி அமைக: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
 NOT filed (N) பலமுறை சுத்திகரித்தாலும் கலங்கிய நிலையில் வரும் பி: all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 1})
-posting job started at once
-NOT filed (N) ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோட: all free models failed: no free model answered: None
-candidate loop ended: left 0, tried={'N': 24}, done={'N': 1}, time left 19 min
-filed: 1 Coimbatore district stories (target 200), reels only
+skip (N) could not open: ​மின் இணைப்பு சரண்டர் செய்தவர்களுக்கு ரூ. 12.5 கோட [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
+candidate loop ended: left 0, tried={'N': 23}, done={'N': 0}, time left 27 min
+filed: 0 Coimbatore district stories (target 200), reels only
 queue: 23 news waiting to be written
-write_stories.yml started
-All News sheet: {"ok":true,"added":0,"updated":24} 
-stories: 1
+All News sheet: {"ok":true,"added":0,"updated":23} 
+stories: 0
