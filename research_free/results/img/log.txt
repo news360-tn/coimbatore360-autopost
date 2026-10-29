@@ -13,6 +13,17 @@ imagegen: gemini gemini-2.5-flash-image 429: {
     "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.goog
 imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
 imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-exit 124
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+Traceback (most recent call last):
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/research_free/imagegen.py", line 266, in <module>
+    data = generate(sys.argv[2] if len(sys.argv) > 2 else "Photorealistic news photo, tall vertical, a city road in Coimbatore, Tamil Nadu at dawn, police jeep parked, mist, sharp detail")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/research_free/imagegen.py", line 176, in generate
+    return to_story_size(_generate(prompt, seed, key, cheap, free_only))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/research_free/imagegen.py", line 231, in _generate
+    raise RuntimeError(f"all image models failed: {last or 'no image service configured'}")
+RuntimeError: all image models failed: all image models failed: black-forest-labs/flux.1-dev 500: Internal Server Error
+exit 1
 FAIL black-forest-labs/flux-1-schnell cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid pla
 research_free/results/img/t1.jpg (1152, 2048)
