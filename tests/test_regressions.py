@@ -227,9 +227,9 @@ class Images(unittest.TestCase):
                     raise RuntimeError(name + " 429: down")
                 return b"img"
             return f
-        saved = {k: getattr(imagegen, k) for k in ("_cf", "generate_nvidia", "_fal", "to_story_size")}
-        env = {k: os.environ.get(k) for k in ("FAL_KEY", "NVIDIA_API_KEY", "CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID")}
-        imagegen._cf, imagegen.generate_nvidia, imagegen.to_story_size = src("cloudflare"), src("nvidia"), (lambda b: b)
+        saved = {k: getattr(imagegen, k) for k in ("_cf", "_gemini_image", "generate_nvidia", "_fal", "to_story_size")}
+        env = {k: os.environ.get(k) for k in ("FAL_KEY", "NVIDIA_API_KEY", "CLOUDFLARE_API_TOKEN", "CLOUDFLARE_ACCOUNT_ID", "GEMINI_API_KEY")}
+        imagegen._cf, imagegen._gemini_image, imagegen.generate_nvidia, imagegen.to_story_size = src("cloudflare"), src("gemini"), src("nvidia"), (lambda b: b)
         imagegen._fal = lambda p, s, k, model=None: src(model)()
         os.environ.update({k: "test" for k in env})
         imagegen.DEAD.clear()
@@ -247,9 +247,26 @@ class Images(unittest.TestCase):
 
     def test_free_first(self):      # owner 28 Oct: free sources first, paid FAL only when they fail
         self.assertEqual(["cloudflare"], self.order(set()))
-        self.assertEqual("nvidia", self.order({"cloudflare"})[-1])
-        calls = self.order({"cloudflare", "nvidia"})
+        self.assertEqual("gemini", self.order({"cloudflare"})[-1])
+        self.assertEqual("nvidia", self.order({"cloudflare", "gemini"})[-1])
+        calls = self.order({"cloudflare", "gemini", "nvidia"})
+        self.assertEqual(["cloudflare", "gemini", "nvidia"], calls[:3], "every free source before paid FAL")
         self.assertEqual("fal-ai/flux/schnell", [c for c in calls if c.startswith("fal")][0], calls)      # cheapest paid first
+
+    def test_prompt_asks_for_no_text(self):      # 29 Oct test picture had 'POLICE' written on the jeep
+        import imagegen
+        seen = []
+        old = (imagegen._cf, imagegen.to_story_size, os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID"))
+        imagegen._cf, imagegen.to_story_size = (lambda m, body, t, a: seen.append(body["prompt"]) or b"img"), (lambda b: b)
+        os.environ["CLOUDFLARE_API_TOKEN"] = os.environ["CLOUDFLARE_ACCOUNT_ID"] = "test"
+        imagegen.DEAD.clear()
+        try:
+            imagegen.generate("A police jeep on a Coimbatore road at dawn", 1)
+        finally:
+            imagegen._cf, imagegen.to_story_size = old[0], old[1]
+            for k, v in (("CLOUDFLARE_API_TOKEN", old[2]), ("CLOUDFLARE_ACCOUNT_ID", old[3])):
+                os.environ.pop(k, None) if v is None else os.environ.__setitem__(k, v)
+        self.assertIn("No text", seen[0])
 
     def test_one_image_per_story(self):
         import validate

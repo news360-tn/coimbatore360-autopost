@@ -6,18 +6,16 @@ import base64, json, os, sys, time, requests
 
 GEN = "https://ai.api.nvidia.com/v1/genai/"
 # (model path, request body builder). FLUX only accepts sizes that are multiples of 64 inside 768..1344 -> 768x1344 is 9:16.
-MODELS = [
-    ("black-forest-labs/flux.1-dev", lambda p, s: {"prompt": p, "mode": "base", "cfg_scale": 3.5, "width": 768, "height": 1344, "seed": s, "steps": 40}),
+MODELS = [      # Coimbatore 29 Oct: schnell first (dev timed out at 100 s); SDXL-lightning / SD3-medium answered 404 and were removed
     ("black-forest-labs/flux.1-schnell", lambda p, s: {"prompt": p, "width": 768, "height": 1344, "seed": s, "steps": 4}),
-    ("bytedance/stable-diffusion-xl-lightning", lambda p, s: {"prompt": p, "width": 768, "height": 1344, "seed": s, "steps": 4}),
-    ("stabilityai/stable-diffusion-3-medium", lambda p, s: {"prompt": p, "aspect_ratio": "9:16", "seed": s, "steps": 40, "cfg_scale": 5, "negative_prompt": "text, letters, watermark, logo, collage, blurry"}),
+    ("black-forest-labs/flux.1-dev", lambda p, s: {"prompt": p, "mode": "base", "cfg_scale": 3.5, "width": 768, "height": 1344, "seed": s, "steps": 28}),
 ]
 DEAD = set()
 USED = {}
 
 
 def _one(model, body, key):
-    r = requests.post(GEN + model, json=body, timeout=100,
+    r = requests.post(GEN + model, json=body, timeout=150,
                       headers={"Authorization": "Bearer " + key, "Accept": "application/json"})
     if r.status_code != 200:
         raise RuntimeError(f"{model} {r.status_code}: {r.text[:300]}")
@@ -141,6 +139,37 @@ def to_story_size(data):
     return out.getvalue()
 
 
+GEMINI_IMAGE_MODELS = [m for m in os.environ.get("GEMINI_IMAGE_MODELS", "gemini-3.1-flash-lite-image,gemini-3.1-flash-image,gemini-2.5-flash-image").split(",") if m]
+CLEAN = " Realistic news photograph. No text, no letters, no signboards with writing, no logos, no watermark."
+
+
+def _gemini_image(prompt, key):
+    """owner 29 Oct: every free image source before paid FAL. Gemini image models on the Coimbatore project's FREE tier
+    (keep that Google project without billing: then a model outside the free tier answers 429 and costs nothing)."""
+    last = None
+    for model in GEMINI_IMAGE_MODELS:
+        if model in DEAD:
+            continue
+        body = {"contents": [{"parts": [{"text": prompt}]}],
+                "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "9:16"}}}
+        try:
+            r = requests.post(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
+                              headers={"x-goog-api-key": key, "Content-Type": "application/json"}, json=body, timeout=90)
+            if r.status_code != 200:
+                raise RuntimeError(f"gemini {model} {r.status_code}: {r.text[:200]}")
+            for part in r.json()["candidates"][0]["content"]["parts"]:
+                data = (part.get("inlineData") or part.get("inline_data") or {}).get("data")
+                if data:
+                    USED[model] = USED.get(model, 0) + 1
+                    return base64.b64decode(data)
+            raise RuntimeError(f"gemini {model} no image")
+        except Exception as e:
+            last = e
+            print("imagegen:", str(e)[:220], file=sys.stderr)
+            DEAD.add(model)      # quota 0 / busy / not served: the next source for the rest of this run
+    raise RuntimeError(f"gemini image: {last}")
+
+
 def generate(prompt, seed=0, key=None, cheap=False, free_only=False):
     """ONE picture for the story. free_only=True (the second try after a failed picture check): Cloudflare / NVIDIA only, never FAL.
     `cheap` is kept for callers of the Namakkal code; the order is the same for every picture (free first)."""
@@ -148,7 +177,10 @@ def generate(prompt, seed=0, key=None, cheap=False, free_only=False):
 
 
 def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
-    """Cloudflare Workers AI FLUX schnell (free) -> NVIDIA FLUX (free credits) -> FAL flux/schnell -> FAL flux/dev (paid, only when both free ones fail)."""
+    """FREE first: Cloudflare Workers AI FLUX schnell -> Gemini image (free tier) -> NVIDIA FLUX (free credits);
+    only when every free source fails: FAL flux/schnell (~Rs 0.26) -> FAL flux/dev (paid). Cloudinary only stores the picture."""
+    if "No text" not in prompt:
+        prompt = prompt.rstrip(". ") + "." + CLEAN
     tok, acct = os.environ.get("CLOUDFLARE_API_TOKEN"), os.environ.get("CLOUDFLARE_ACCOUNT_ID")
     last = None
     if tok and acct:
@@ -163,8 +195,14 @@ def _generate(prompt, seed=0, key=None, cheap=False, free_only=False):
                 last = e
                 m = str(e)
                 print("imagegen:", m[:220], file=sys.stderr)
-                if any(c in m for c in (" 401", " 403", " 404", " 400", " 422", "no image")) or "Timeout" in type(e).__name__:
-                    DEAD.add(model)
+                if any(c in m for c in (" 401", " 403", " 404", " 400", " 422", "no image", "daily free allocation")) or "Timeout" in type(e).__name__:
+                    DEAD.add(model)      # 29 Oct: the shared account's 10,000 free neurons were used up - no retry for every picture
+    gkey = os.environ.get("GEMINI_API_KEY")
+    if gkey and os.environ.get("GEMINI_IMAGE", "1") != "0":
+        try:
+            return _gemini_image(prompt, gkey)
+        except Exception as e:
+            last = e
     nkey = key or os.environ.get("NVIDIA_API_KEY")
     if nkey:
         try:
