@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `7201ad8` | Fix: every post job crashed with NameError (verify not imported in clean_caption) since 13:00 UTC 29 Oct |
 | 2026-10-29 | `51b8910` | Topic / tag / author / page-N listing pages are never written or posted as a news story (RN-194: abplive topic page gave a Cuddalore story) |
 | 2026-10-29 | `1643d19` | Writer started by the collector waits for the queue instead of skipping; same event from another outlet is not written again |
 | 2026-10-29 | `7e526c7` | Coimbatore: only news PUBLISHED TODAY (IST) is written and posted - the article must show today's date, no late-night carry-over, posting gate today only; publish times read in IST |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `426b4c2` | free-model test output |
 | 2026-10-29 | `0f2cb04` | image test output |
 | 2026-10-29 | `d2f4ec8` | free-model test output |
-| 2026-10-29 | `eac502a` | Coimbatore: free pictures only (Cloudflare, Gemini, NVIDIA) - never FAL; no free picture after 30 min -> plain background with the page logo; FAL key no longer passed to any workflow |
 <!-- recent-changes:end -->
