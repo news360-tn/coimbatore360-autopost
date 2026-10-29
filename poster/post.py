@@ -265,7 +265,11 @@ def not_coimbatore(row):
     cap = (row.get("caption") or "")[:600]
     if allnews.other_district(head):
         return "not Coimbatore district news (the headline names another district)"
-    town = allnews.outside_city(head, row.get("location") or "")
+    loc = row.get("location") or ""
+    paper_page = (allnews.url_district(src) or "").lower() in DISTRICTS
+    if loc and not allnews.has_place(loc) and re.search(r"தமிழ்நாடு|தமிழகம்|மாநில|Tamil Nadu", loc) and (not paper_page or "உள்ளிட்ட" in head):
+        return f"not Coimbatore city news (state-wide: {loc[:40]})"      # 29 Oct RN-8 TNEB promotions, RN-20 prison staffing
+    town = allnews.outside_city(head, loc)
     if town:      # owner 29 Oct: Coimbatore city only for now (CITY_ONLY=0 for the whole district)
         return f"not Coimbatore city news ({town})"
     if allnews.has_place(head):
@@ -569,7 +573,7 @@ def reel_spec(row, spec, images):
         st = _stems(sent)
         for j, ln in enumerate(pool):
             sc = len(st & _stems(ln))
-            if j not in used and sc > bs and len(ln) <= (60 if CONFIG.get("reel_design") == "v4" else 48):
+            if j not in used and sc > bs and len(ln) <= (60 if CONFIG.get("reel_design") == "v4" else 48) and not re.search(r"(க்|ச்|த்|ப்)$", ln.strip(" .,;:")):
                 best, bs, bj = ln, sc, j
         if best and i >= 1:
             used.add(bj)

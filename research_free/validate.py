@@ -69,13 +69,19 @@ def grounding_problems(d, article):
     return out
 
 
+DANGLING = re.compile(r"(க்|ச்|த்|ப்)$")      # a Tamil word ending in a doubling consonant always runs into the next word
+
+
 def _cut(text, n):
     """shorten to at most n characters at a word boundary (keeps the words that fit; the facts stay whole)"""
     t = (text or "").strip()
     if len(t) <= n:
         return t
     c = t[:n]
-    return (c[:c.rfind(" ")] if " " in c else c).rstrip(" ,;:-")
+    c = (c[:c.rfind(" ")] if " " in c else c).rstrip(" ,;:-")
+    while " " in c and DANGLING.search(c):      # 29 Oct RN-34 'சிறந்த 3 இறுதிப்': never end on a word that joins the next one
+        c = c[:c.rfind(" ")].rstrip(" ,;:-")
+    return c
 
 
 def autofix(d):
@@ -130,6 +136,9 @@ def validate(d, article, today_digits=("2026",)):
         hit = [w for w in META if w.lower() in t.lower()]
         if hit:
             p.append(f"{k} talks about the article instead of the news ({hit[0]}) - if the article has no real news, return an empty reel_script")
+    eng = sorted(set(re.findall(r"[A-Za-z]{2,}", str(d.get("reel_script") or ""))))
+    if eng:      # 29 Oct RN-34: the voice drops every English letter ('FBN Global Summit' was not read at all)
+        p.append(f"reel_script has English words ({', '.join(eng[:4])}) - the voice cannot read them; write them in Tamil letters")
     sp = d["slides_spec"]
     if sp.get("v") != 3:
         p.append("slides_spec.v must be 3")
@@ -149,6 +158,8 @@ def validate(d, article, today_digits=("2026",)):
         for j, l in enumerate(ln, 1):
             if len(_tags(l)) > 60:
                 p.append(f"slide {i} line {j} longer than 60 characters")
+            if DANGLING.search(_tags(l).strip(" .,;:")):
+                p.append(f"slide {i} line {j} is cut off mid-phrase ('{_tags(l)[-20:]}') - write a complete short phrase")
     # scenes: exactly ONE image prompt (the main scene of this news); the reel moves the camera over that one picture
     sc = d.get("scenes")
     if not isinstance(sc, list) or len(sc) != 1 or not isinstance(sc[0], str) or len(sc[0].strip()) < 40:

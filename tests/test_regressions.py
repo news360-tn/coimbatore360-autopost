@@ -405,6 +405,35 @@ class NoMetaScript(unittest.TestCase):
         self.assertFalse([x for x in validate.validate(d, "") if "talks about the article" in x])
 
 
+class QualityCheck29Oct(unittest.TestCase):
+    """owner's quality check 29 Oct (Coimbatore reels RN-8, RN-20, RN-34)"""
+
+    def ex(self):
+        return dict(json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8"))[0]["output"])
+
+    def test_card_never_cut_mid_phrase(self):      # RN-34 card 'குடும்பத் தொழில்முனைவு பிரிவில் உலகளவில் சிறந்த 3 இறுதிப்'
+        import validate
+        long = "குடும்பத் தொழில்முனைவு பிரிவில் உலகளவில் சிறந்த 3 இறுதிப் போட்டியாளர்களில் ஒன்றாக"
+        self.assertFalse(validate.DANGLING.search(validate._cut(long, 60)))
+        d = self.ex(); sp = d["slides_spec"]
+        sp["slides"][0]["lines"][0] = "உலகளவில் சிறந்த 3 இறுதிப்"
+        self.assertTrue([x for x in validate.validate(d, "") if "cut off mid-phrase" in x])
+
+    def test_english_in_voice_text_sent_back(self):      # RN-34 'FBN Global Summit' was silently dropped by the voice
+        import validate
+        d = self.ex(); d["reel_script"] = "ஜெர்மனியில் FBN Global Summit மாநாடு நடந்தது. " + validate.LAST
+        self.assertTrue([x for x in validate.validate(d, "") if "English words" in x])
+
+    def test_state_wide_story_not_posted(self):      # RN-8 TNEB promotions, RN-20 prison staffing
+        row = {"source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/1",
+               "headline_ta": "மின்வாரியத்தில் 108 ஊழியர்களுக்கு பதவி உயர்வு - கோவை உள்ளிட்ட மண்டலங்கள்", "caption": "", "location": "தமிழ்நாடு மின்வாரியம்"}
+        self.assertIn("state-wide", post.not_coimbatore(row))
+        self.assertIn("state-wide", post.not_coimbatore({"source": "https://www.hindutamil.in/news/tamilnadu/x", "caption": "",
+                                                          "headline_ta": "சிறைதப்பலுக்கு குறைந்த பணியாளர் காரணம்", "location": "தமிழ்நாடு"}))
+        row["location"] = "கோயம்புத்தூர் மைய சிறை"
+        self.assertNotIn("state-wide", post.not_coimbatore(row))
+
+
 class SinglePage(unittest.TestCase):
     """Coimbatore 360 is one page: no Rasipuram page, no collaborator, own Sheet column"""
 

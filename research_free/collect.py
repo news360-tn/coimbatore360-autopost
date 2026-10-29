@@ -934,6 +934,11 @@ def main():
         if not isinstance(res, Exception) and not n.get("manual"):
             d0 = res[0] if isinstance(res, tuple) else {}
             town = allnews.outside_city(d0.get("tamil_headline", ""), d0.get("location", ""), d0.get("english_headline", ""))
+            loc0 = d0.get("location", "") or ""
+            paper_page = (allnews.url_district(art.get("url", "")) or "").lower() in allnews.DISTRICT_SLUGS
+            if (not town and loc0 and not allnews.has_place(loc0) and re.search(r"தமிழ்நாடு|தமிழகம்|மாநில|Tamil Nadu", loc0)
+                    and (not paper_page or "உள்ளிட்ட" in d0.get("tamil_headline", ""))):
+                town = "state-wide: " + loc0[:40]      # 29 Oct RN-8 / RN-20: written for the whole state, not the city
             if town:      # 29 Oct RN-2 (Valparai): written, then blocked at posting - now dropped before the picture is made
                 print(f"not Coimbatore city news after writing ({town}): {art['title'][:60]}", flush=True)
                 res = RuntimeError(f"not Coimbatore city news ({town})")
