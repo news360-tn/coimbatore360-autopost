@@ -81,6 +81,9 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-29 | `c067fed` | Images free first: Cloudflare -> Gemini image (free tier) -> NVIDIA schnell/dev -> only then FAL schnell/dev; every prompt asks for no text/logos; Cloudflare daily-limit not retried per picture; NVIDIA models that answer 404 removed |
+| 2026-10-29 | `b979441` | image test output |
+| 2026-10-29 | `4a75089` | free-model test output |
 | 2026-10-29 | `05feb55` | Bridge: Coimbatore Cloudinary cloud (own account, unsigned preset coimbatore360) |
 | 2026-10-28 | `7bbcf3a` | Instagram handle is coimbatore360_official (underscore, as Instagram reports it) |
 | 2026-10-28 | `7d5006f` | ig probe output |
