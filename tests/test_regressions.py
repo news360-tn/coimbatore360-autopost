@@ -383,6 +383,22 @@ class FreeFirstThenClaude(unittest.TestCase):
             self.assertNotIn('CLAUDE_MAX_CALLS: "0"', t, f)
 
 
+class NoMetaScript(unittest.TestCase):
+    """29 Oct Namakkal RN-189 (deleted by the owner): 'முட்டை விலை ... இந்தக் கட்டுரையில் வெளியிடப்படவில்லை ... தெரியவந்ததும் பகிரப்படும்'"""
+
+    def test_script_about_the_article_refused(self):
+        import validate
+        d = dict(json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8"))[0]["output"])
+        d["reel_script"] = ("முட்டை விலை நிலவரம் குறித்த விவரம் இந்தக் கட்டுரையில் வெளியிடப்படவில்லை. "
+                            "முட்டை விலை விவரம் தெரியவந்ததும் பகிரப்படும். " + validate.LAST)
+        self.assertTrue([x for x in validate.validate(d, "") if "talks about the article" in x])
+
+    def test_normal_script_passes_meta_check(self):
+        import validate
+        d = dict(json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8"))[0]["output"])
+        self.assertFalse([x for x in validate.validate(d, "") if "talks about the article" in x])
+
+
 class SinglePage(unittest.TestCase):
     """Coimbatore 360 is one page: no Rasipuram page, no collaborator, own Sheet column"""
 
