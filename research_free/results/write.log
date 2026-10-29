@@ -1,88 +1,12 @@
-writing [N]: EKKI Pumps | கோவை எக்கி பம்ப் குழுமத்திற்குச் சர்வதேசச் சிறப
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.8-flash
-fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.7-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-fail ghmodels/openai/gpt-4.1-mini: Expecting value: line 1 column 1 (char 0)
-poor answer - skipped for 30 min: ghmodels/openai/gpt-4.1-mini
-fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
-poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `or
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-fail cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast: cloudflare @cf/meta/llama-3.3-70b-instruct-fp8-fast 429: {"errors":[{"message":"AiError: AiError: you have used up your 
-dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
-fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiError: you have used up y
-dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
-free models unavailable: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiE
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-  caption must contain the exact follow line
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1661. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/openai/gpt-oss-120b (2s)
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-image match: False The image is an AI-generated render showing generic individuals and synthetic plaques, rather than a genuine news photog
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-second picture not made for 'Coimbatore's EKKI Pumps wins internation' (the first one is used): all image models failed: all image models failed: black-forest-labs/flux.1-dev 500: Internal Server Error
-image made for 'Coimbatore's EKKI Pumps wins internation'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261029-2041","first":"RN-34"}
-posting job started at once
 earlier stories still waiting for images: []
-instagram check: 20 recent posts read from the page
-write round: 3 news waiting in the queue (written in priority order)
-candidate filter: collected=2, already filed=1
-to write: 2 Coimbatore district candidates (max 200 stories)
-candidates waiting: 2 Coimbatore; time left 29 min
-try (N) manual=False: EKKI Pumps | கோவை எக்கி பம்ப் குழுமத்திற்குச் சர்வதேசச் சிறப
+instagram check: 25 recent posts read from the page
+write round: 2 news waiting in the queue (written in priority order)
+candidate filter: already filed=1, collected=1
+to write: 1 Coimbatore district candidates (max 200 stories)
+candidates waiting: 1 Coimbatore; time left 29 min
 try (N) manual=False: மனைவிக்குத் தெரியாமல் பெண் குழந்தையை விற்ற கணவர்..
 skip (N) similar to a filed story: மனைவிக்குத் தெரியாமல் பெண் குழந்தையை விற்ற கணவர்..
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 1})
-posting job started at once
-candidate loop ended: left 0, tried={'N': 2}, done={'N': 1}, time left 20 min
-filed: 1 Coimbatore district stories (target 200), reels only
-queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":0,"updated":1} 
-stories: 1
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 29 min
+filed: 0 Coimbatore district stories (target 200), reels only
+queue: 0 news waiting to be written 
+stories: 0
