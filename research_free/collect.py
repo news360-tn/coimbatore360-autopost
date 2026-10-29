@@ -842,6 +842,12 @@ def main():
         except Exception as e:
             res = e
         scenes = None
+        if not isinstance(res, Exception) and not n.get("manual"):
+            d0 = res[0] if isinstance(res, tuple) else {}
+            town = allnews.outside_city(d0.get("tamil_headline", ""), d0.get("location", ""), d0.get("english_headline", ""))
+            if town:      # 29 Oct RN-2 (Valparai): written, then blocked at posting - now dropped before the picture is made
+                print(f"not Coimbatore city news after writing ({town}): {art['title'][:60]}", flush=True)
+                res = RuntimeError(f"not Coimbatore city news ({town})")
         if not isinstance(res, Exception):
             try:
                 scenes = image_scenes(art, res[0])
