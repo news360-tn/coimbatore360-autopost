@@ -27,7 +27,7 @@ var C = {
   batch: 29, prompts: 30, images: 31
 };
 var NCOLS = 31;
-var CLOUD_NAME = 'CLOUDINARY_CLOUD_HERE';       // OWNER SETS: the new Cloudinary account's cloud name (same as GitHub secret CLOUDINARY_CLOUD)
+var CLOUD_NAME = 'vkghshc8';       // OWNER SETS: the new Cloudinary account's cloud name (same as GitHub secret CLOUDINARY_CLOUD)
 var UPLOAD_PRESET = 'coimbatore360';                 // OWNER SETS: unsigned upload preset in that account (same as GitHub secret CLOUDINARY_PRESET)
 var MIN_IMAGES = 1;     // Coimbatore: ONE image per reel
 var EXPIRE_HOURS = 2;   // owner request 24 Oct: after 3 hours without the owner's images, automatic images are made and the story is posted
