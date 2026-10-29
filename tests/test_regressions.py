@@ -367,9 +367,10 @@ class SinglePage(unittest.TestCase):
             self.assertNotIn(namakkal_id, gs)
         self.assertIn("COIMBATORE360", gs)      # its own e-mail tag: the Namakkal bridge never reads Coimbatore mails
 
-    def test_never_live_by_itself(self):
-        self.assertFalse((ROOT / "LIVE").exists())
-        self.assertFalse((ROOT / "research_free" / "ENABLED").exists())
+    def test_live_switches_are_files(self):      # owner 29 Oct: "go live" - LIVE and research_free/ENABLED switch it on (delete them to stop)
+        for f in (ROOT / "LIVE", ROOT / "research_free" / "ENABLED"):
+            if f.exists():
+                self.assertTrue(f.read_text().strip(), f)
 
 
 class PrimeTime(unittest.TestCase):
