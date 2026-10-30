@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-30 | `9943e0e` | Code bugs never repeat (owner): tests fail on any undefined name in poster/research_free/reel (pyflakes on GitHub - would have stopped the 29 Oct 'verify' posting crash) and run the caption + posting-check steps end to end on a sample story |
 | 2026-10-30 | `b2a800d` | Known issues are repaired, not lost (owner): a card cut mid-phrase, a sentence or word said twice, a sentence about 'the article' are fixed before posting; only what cannot be fixed is held (RN-199, RN-203 held for a cut card); repeated-sentence check no longer splits at 'ரூ.2.50' / 'ஹெச்.பி.' (RN-200 false alarm) |
 | 2026-10-29 | `74ab3ce` | Heartbeat |
 | 2026-10-29 | `0807636` | Coimbatore (owner): power-cut news from the WHOLE district (every town searched for its shutdown notice, never blocked by the city filter); all other news stays city only; power cut stays first priority |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `e4228e5` | Coimbatore 360 LIVE (owner): LIVE + collect switch on, news from today 00:00 IST, dry-run queue/state cleared |
 | 2026-10-29 | `7150e45` | Coimbatore image prompt (owner): detailed city scene of THIS news first (subject+action, place, people, vehicles/objects, light, camera; 3+ article facts, 100-150 words), Coimbatore city look and category guide; a generic or short scene is sent back once |
 | 2026-10-29 | `b4c10d3` | Coimbatore (owner): collect every 2 hours, post at once, do not miss city news - cap 50 (Instagram's limit), news from the last 3 h still taken after midnight, watchdog restarts a collect late by 2 h 15 min |
-| 2026-10-29 | `437918c` | Coimbatore: no fixed posting times - every reel posts the moment it is made (prime time off) |
 <!-- recent-changes:end -->
