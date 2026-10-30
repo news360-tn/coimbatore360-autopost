@@ -1,324 +1,46 @@
 writing [N]: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-writing [N]: கோவைக்கு மார்ச் வரை குடிநீர் விநியோகத்தில் சிக்கல் இல்லை! - 
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.5-flash
-writing [N]: கட்டுமான பொருட்கள் விலை நிலவரம்
+ok gemini/gemini-3-flash-preview (15s)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (9s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3-flash-preview (10s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-ok gemini/gemini-3-flash-preview (11s)
-attempt 1 gemini/gemini-3-flash-preview: 3 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  numbers not found in the article: 2027
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): வடவள்ளி ('கோவை மாநகராட்சிப் பகுதிகளுக்கு குடிநீர் வழங்கும் சிறுவாணி, ப'); கவுண்டம்பாளையம் ('கோவை மாநகராட்சிப் பகுதிகளுக்கு குடிநீர் வழங்கும் சிறுவாணி, ப'); 1200 ('கோவையில் வாசவி விருக்ஷம் க்ளப் சார்பில் மாரத்தான்: 1200க்கும')
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (6s)
+ok gemini/gemini-3-flash-preview (4s)
 factcheck by gemini/gemini-3-flash-preview: 0 problems
 attempt 1 gemini/gemini-3-flash-preview: 0 problems
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3-flash-preview (8s)
-factcheck by gemini/gemini-3-flash-preview: 2 problems
-  The location 'Coimbatore' is not mentioned in the article.
-  The date 'October 30' is not mentioned in the article.
-attempt 1 gemini/gemini-3-flash-preview: 2 problems
-  fact-check: The location 'Coimbatore' is not mentioned in the article.
-  fact-check: The date 'October 30' is not mentioned in the article.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3-flash-preview (13s)
-proofread rejected (2 problems)
-  reel_script has 77 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (5s)
+proofread rejected (4 problems)
+  reel_script has 70 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  caption must contain the exact follow line
+  caption has no "📰 முழு விவரம்:" block - put the whole story (every fact) in the caption
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1000 ('திருச்சியில் இதுவரை 1000-க்கும் மேற்பட்ட பாம்புகளைப் பத்திரம')
 not Coimbatore city news after writing (Thondamuthur): “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
-writing [N]: Coimbatore | Collector Office | கலெக்டர் ஆபீஸில் பவர்கட்.. இ
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-switching away from gemini/gemini-3-flash-preview for 10 min
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `or
-ok groq/qwen/qwen3.8-27b (4s)
-attempt 1 groq/qwen/qwen3.8-27b: 1 problems
-  reel_script has 59 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok gemini/gemini-3-flash-preview (43s)
-attempt 2 gemini/gemini-3-flash-preview: 5 problems
-  caption talks about the article instead of the news (விவரம் இல்லை) - if the article has no real news, return an empty reel_script
-  not grounded: location 'விவரம்' is not in the article
-  not grounded: location 'இல்லை' is not in the article
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1 ('முதல் தர தேக்கு மரம்(1 கன அடி)––––––––––––6,000–11,000 ரூபாய')
-  known issue meta_article: caption talks about the article instead of the news ('விவரம் இல்லை') - rewrite so it does not happen again
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-free models unavailable: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-
-ok groq/openai/gpt-oss-120b (4s)
-attempt 3 groq/openai/gpt-oss-120b: 1 problems
-  missing key: reel_script
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free models unavailable: no free model answered: None
-fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
-free models unavailable: no free model answered: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read t
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 0 problems
-claude rewrite 1 anthropic/claude-haiku-5-5: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 1 problems
-  The draft places the price report in Coimbatore district ("கோவை மாவட்டம்" in slides_spec, "கோவையில்" in caption, and "Coimbatore" in the English caption line), but the article never mentions Coimbatore or any location.
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  fact-check: The draft places the price report in Coimbatore district ("கோவை மாவட்டம்" in slides_spec, "கோவையில்" in caption, and "Coimbatore" in the English caption line), but the article never mentions Coimbatore or any location.
-ok anthropic/claude-haiku-5-5
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has 80 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1200 ('கோவையில் வாசவி விருக்ஷம் க்ளப் சார்பில் மாரத்தான்: 1200க்கும')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1 ('முதல் தர தேக்கு மரம்(1 கன அடி)––––––––––––6,000–11,000 ரூபாய')
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1200 ('கோவையில் வாசவி விருக்ஷம் க்ளப் சார்பில் மாரத்தான்: 1200க்கும')
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok anthropic/claude-haiku-5-5
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
-  reel_script has 111 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  reel_script has numbers without their meaning (1, 2); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1200 ('கோவையில் வாசவி விருக்ஷம் க்ளப் சார்பில் மாரத்தான்: 1200க்கும')
-image match check unavailable: gemini-3.5-flash: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-images made: 2 for 'Sudden power cut at Coimbatore Collector'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1626","first":"RN-59"}
-posting job started at once
-ok anthropic/claude-haiku-5-5
-writing [N]: கோவையில் விஸ்வநாதன் என்பவரின் மாட்டைப் போராடி மீட்ட தீயணைப்ப
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free models unavailable: no free model answered: None
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
-  reel_script has 82 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 10 ('“10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க')
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Construction material prices: aggregates'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1627","first":"RN-60"}
-writing [N]: VGM Hospital organises ‘halt arthritis 2026’ awareness walka
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free models unavailable: no free model answered: None
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 10 ('“10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க')
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
-  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  slides must have 3 or 4 items
-  reel_script has 34 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  not grounded: only 41% of the words come from the article (e.g. தொடங்கப்பட்டுள்ளது, இத்திட்டத்தின், பெயர், ஆகும், குறித்த); use the article's own words and facts
-  known issue meta_article: caption talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
-  reel_script talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  slides must have 3 or 4 items
-  reel_script has 43 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  known issue meta_article: script talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 10 ('“10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
-  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  reel_script has 37 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  not grounded: only 34% of the words come from the article (e.g. தொடங்கியுள்ளது, இந்த, நகரில், நடைபெறுகிறது, நிகழ்ச்சி); use the article's own words and facts
-  known issue meta_article: caption talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-images made: 2 for 'No drinking water supply problem for Coi'
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1627","first":"RN-61"}
-writing [N]: கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத்வானியை கு
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free models unavailable: no free model answered: None
-ok anthropic/claude-haiku-5-5
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 7 problems
-  Tiruppur farmers' grievance meeting: the article says the Tiruppur collector Muthukumaran spoke at the meeting, but the draft's reel_script and caption are consistent with this; however the draft's slides_spec line 'மாவட்ட கலெக்டர் முத்துகுமரன் பேசினார' is an ungrammatical truncation (missing the final ம் vowel sign), so the text lacks clear meaning as written
-  Slide line 'திருப்பூர் கலெக்டர் அலுவலகத்தில் விவசாயிகள் குறைதீர்' is cut off mid-phrase and does not form a complete sentence with clear meaning
-  Slide line 'முத்துராமலிங்கத் தேவர் ஜெயந்தி விழாவை முன்னிட்டு' is an incomplete fragment that mixes the Devar Jayanti event into the Coimbatore farmers' meeting slide, combining two different facts into one slide
-  Reel script states the Devar Jayanti tribute was in Coimbatore Kurichi, but the slides_spec omits the location and the 'Devar Jayanti' item is presented under the Coimbatore farmers' meeting slide, mixing two facts
-  Reel script says the Tirupur and Coimbatore collector offices held farmers' meetings, but the article gives no clear fact that the Coimbatore farmers' meeting and the Tiruppur one are the same kind of event beyond what is stated, and the headline 'கோவை, திருப்பூரில் நடந்தது' places the Devar Jayanti tribute inconsistently with the farmers' meeting theme
-  Reel script omits the Tirupur Mangalam Road Devar Jayanti / AIADMK Anna trade union event, which is an important article fact
-  Reel script omits the Udumalai and Coimbatore related important items such as the Ooty anti-corruption run flagged by the article, though this may be minor
-claude rewrite 1 anthropic/claude-haiku-5-5: 7 problems
-  fact-check: Tiruppur farmers' grievance meeting: the article says the Tiruppur collector Muthukumaran spoke at the meeting, but the draft's reel_script and caption are consistent with this; however the draft's slides_spec line 'மாவட்ட கலெக்டர் முத்துகுமரன் பேசினார' is an ungrammatical truncation (missing the final ம் vowel sign), so the text lacks clear meaning as written
-  fact-check: Slide line 'திருப்பூர் கலெக்டர் அலுவலகத்தில் விவசாயிகள் குறைதீர்' is cut off mid-phrase and does not form a complete sentence with clear meaning
-  fact-check: Slide line 'முத்துராமலிங்கத் தேவர் ஜெயந்தி விழாவை முன்னிட்டு' is an incomplete fragment that mixes the Devar Jayanti event into the Coimbatore farmers' meeting slide, combining two different facts into one slide
-  fact-check: Reel script states the Devar Jayanti tribute was in Coimbatore Kurichi, but the slides_spec omits the location and the 'Devar Jayanti' item is presented under the Coimbatore farmers' meeting slide, mixing two facts
-  fact-check: Reel script says the Tirupur and Coimbatore collector offices held farmers' meetings, but the article gives no clear fact that the Coimbatore farmers' meeting and the Tiruppur one are the same kind of event beyond what is stated, and the headline 'கோவை, திருப்பூரில் நடந்தது' places the Devar Jayanti tribute inconsistently with the farmers' meeting theme
-  fact-check: Reel script omits the Tirupur Mangalam Road Devar Jayanti / AIADMK Anna trade union event, which is an important article fact
-  fact-check: Reel script omits the Udumalai and Coimbatore related important items such as the Ooty anti-corruption run flagged by the article, though this may be minor
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  The reel_script and caption say the Coimbatore Kurichi statue garland event was held by the public, but the article says it was held 'பொதுமக்கள் சார்பில்' — this is consistent, so no issue there; however, the reel_script states Muthuramalinga Thevar statue is in Coimbatore Kurichi, which matches the article.
-  The article's main story is about the Coimbatore bomb blast convict parole and CM Vijay's concession to Advani targeters, but neither the reel_script nor slides_spec mentions this; this important headline fact is missing.
-  The Ooty anti-corruption week race (flagged by the district judge Muralidharan starting it) appears in the caption but is absent from the reel_script, which is incomplete relative to the article.
-  The draft's reel_script and slides_spec attribute the Tiruppur farmers' meeting to 'திருப்பூர் கலெக்டர் அலுவலகத்தில்' and the caption correctly says so, but the article's Tiruppur-district collector Muthukumaran is named 'மாவட்ட கலெக்டர் முத்துகுமரன்' — spelled 'முத்துகுமரன்' in article and draft consistently, so no issue; the actual problem is the reel_script's 'மூன்று' not present — no further issue found.
-  The tamil_headline claims the Tiruppur farmers' meeting was 'கலெக்டர் முன்னிலையில்' (in the presence of the collector), which the article does not state; the article only says the collector spoke at the meeting.
-claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: The reel_script and caption say the Coimbatore Kurichi statue garland event was held by the public, but the article says it was held 'பொதுமக்கள் சார்பில்' — this is consistent, so no issue there; however, the reel_script states Muthuramalinga Thevar statue is in Coimbatore Kurichi, which matches the article.
-  fact-check: The article's main story is about the Coimbatore bomb blast convict parole and CM Vijay's concession to Advani targeters, but neither the reel_script nor slides_spec mentions this; this important headline fact is missing.
-  fact-check: The Ooty anti-corruption week race (flagged by the district judge Muralidharan starting it) appears in the caption but is absent from the reel_script, which is incomplete relative to the article.
-  fact-check: The draft's reel_script and slides_spec attribute the Tiruppur farmers' meeting to 'திருப்பூர் கலெக்டர் அலுவலகத்தில்' and the caption correctly says so, but the article's Tiruppur-district collector Muthukumaran is named 'மாவட்ட கலெக்டர் முத்துகுமரன்' — spelled 'முத்துகுமரன்' in article and draft consistently, so no issue; the actual problem is the reel_script's 'மூன்று' not present — no further issue found.
-  fact-check: The tamil_headline claims the Tiruppur farmers' meeting was 'கலெக்டர் முன்னிலையில்' (in the presence of the collector), which the article does not state; the article only says the collector spoke at the meeting.
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Cow trapped 3 days in underground draina'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1627","first":"RN-62"}
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  The reel_script and slides say the parole was given 'on the orders' or as a concession by Chief Minister Vijay (முதல்வர் விஜய் சலுகை), but the article only asks why Chief Minister Vijay gave the concession as a question; it does not state that Vijay granted the parole.
-  The reel_script says the parole for the Coimbatore blast convicts is a concession given to those who targeted Advani ('அத்வானியை குறிவைத்தவர்களுக்கும் இந்தச் சலுகை வழங்கப்பட்டுள்ளதாக'), mixing two groups; the article does not clearly establish that the 5 paroled convicts are the same people who targeted Advani.
-  The reel_script states 'விமர்சனங்கள் எழுந்துள்ளன' (criticism has arisen), which is not stated in the article beyond the question 'why'.
-  The reel_script and slides say Muthuramalinga Thevar's statue was garlanded in Coimbatore Kurichi 'by the public', and the reel says a Coimbatore district collector's farmers' camp was held, but the article's Coimbatore farmer item lacks the detail; the reel_script attributes the Tiruppur collector speech to the Tiruppur event, which is supported, but the slide 'கோவை மரியாதை' is consistent. Main issue: the reel_script omits the article's key fact of the Tiruppur-related Devar Jayanti event at Mangalam Road and the Tiruppur collector's name is attributed only in part.
-  The caption states the Coimbatore blast convict parole was granted and that the question of why Chief Minister Vijay gave the concession 'arose' as a conclusion, and it wrongly frames the concession as given to Advani's targeters without the article supporting that link.
-claude rewrite 3 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: The reel_script and slides say the parole was given 'on the orders' or as a concession by Chief Minister Vijay (முதல்வர் விஜய் சலுகை), but the article only asks why Chief Minister Vijay gave the concession as a question; it does not state that Vijay granted the parole.
-  fact-check: The reel_script says the parole for the Coimbatore blast convicts is a concession given to those who targeted Advani ('அத்வானியை குறிவைத்தவர்களுக்கும் இந்தச் சலுகை வழங்கப்பட்டுள்ளதாக'), mixing two groups; the article does not clearly establish that the 5 paroled convicts are the same people who targeted Advani.
-  fact-check: The reel_script states 'விமர்சனங்கள் எழுந்துள்ளன' (criticism has arisen), which is not stated in the article beyond the question 'why'.
-  fact-check: The reel_script and slides say Muthuramalinga Thevar's statue was garlanded in Coimbatore Kurichi 'by the public', and the reel says a Coimbatore district collector's farmers' camp was held, but the article's Coimbatore farmer item lacks the detail; the reel_script attributes the Tiruppur collector speech to the Tiruppur event, which is supported, but the slide 'கோவை மரியாதை' is consistent. Main issue: the reel_script omits the article's key fact of the Tiruppur-related Devar Jayanti event at Mangalam Road and the Tiruppur collector's name is attributed only in part.
-  fact-check: The caption states the Coimbatore blast convict parole was granted and that the question of why Chief Minister Vijay gave the concession 'arose' as a conclusion, and it wrongly frames the concession as given to Advani's targeters without the article supporting that link.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Maha Rudra Abhishekam festival begins in'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1628","first":"RN-63"}
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Five Coimbatore blast convicts get parol'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1628","first":"RN-64"}
-write_stories.yml started
 earlier stories still waiting for images: []
 instagram check: 44 recent posts read from the page
-write round: 8 news waiting in the queue (written in priority order)
-candidate filter: collected=7, already filed=1
-to write: 7 Coimbatore district candidates (max 200 stories)
-candidates waiting: 7 Coimbatore; time left 29 min
+write round: 1 news waiting in the queue (written in priority order)
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 200 stories)
+candidates waiting: 1 Coimbatore; time left 29 min
 try (N) manual=False: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
-try (N) manual=False: கோவைக்கு மார்ச் வரை குடிநீர் விநியோகத்தில் சிக்கல் இல்லை! - 
-try (N) manual=False: கட்டுமான பொருட்கள் விலை நிலவரம்
 NOT filed (N) “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண: all free models failed: not Coimbatore city news (Thondamuthur)
-try (N) manual=False: Coimbatore | Collector Office | கலெக்டர் ஆபீஸில் பவர்கட்.. இ
-auto images: 1 of 1 stories ({'pollinations': 2})
-posting job started at once
-try (N) manual=False: கோவையில் விஸ்வநாதன் என்பவரின் மாட்டைப் போராடி மீட்ட தீயணைப்ப
-auto images: 1 of 1 stories ({'pollinations': 4})
-try (N) manual=False: VGM Hospital organises ‘halt arthritis 2026’ awareness walka
-auto images: 1 of 1 stories ({'pollinations': 6})
-try (N) manual=False: கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத்வானியை கு
-auto images: 1 of 1 stories ({'pollinations': 8})
-auto images: 1 of 1 stories ({'pollinations': 10})
-auto images: 1 of 1 stories ({'pollinations': 12})
-candidate loop ended: left 0, tried={'N': 7}, done={'N': 6}, time left 25 min
-filed: 6 Coimbatore district stories (target 200), reels only
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 29 min
+filed: 0 Coimbatore district stories (target 200), reels only
 queue: 1 news waiting to be written
-write_stories.yml started
-All News sheet: {"ok":true,"added":0,"updated":7} 
-stories: 6
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 0
