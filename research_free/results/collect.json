@@ -7,7 +7,7 @@
   "to write: 1 Coimbatore district candidates (max 200 stories)",
   "candidates waiting: 1 Coimbatore; time left 29 min",
   "try (N) manual=False: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்",
-  "NOT filed (N) கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள: all free models failed: not Coimbatore city news (பெரியநாயக்கன்பாளையம்)",
+  "NOT filed (N) கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள: all free models failed: not Coimbatore city news (Periyanaickenpalayam)",
   "candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 29 min",
   "filed: 0 Coimbatore district stories (target 200), reels only",
   "queue: 1 news waiting to be written",
@@ -15,7 +15,7 @@
  ],
  "llm": [
   "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
   "fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
   "dead for this round: gemini/gemini-3.8-flash",
   "fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
@@ -35,10 +35,13 @@
   "dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
   "ok anthropic/claude-haiku-5-5",
   "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "ok groq/qwen/qwen3.8-27b (0s)",
   "ok anthropic/claude-haiku-5-5",
   "gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5"
+  "ok groq/qwen/qwen3.8-27b (3s)"
  ],
  "stories": []
 }
