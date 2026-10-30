@@ -1358,3 +1358,48 @@ class NoRepost(unittest.TestCase):
                 self.assertEqual("காளப்பட்டியில் மின் தடை.", collect._filed_script({"story_id": "RN-999"}))      # the writer's same-event check
             finally:
                 post.CACHE, post._SCRIPTS = old_cache, old_scripts
+
+
+class RefusedNotWrittenAgain(unittest.TestCase):
+    """30 Oct: drafts refused as 'not Coimbatore city news (Thondamuthur / Periyanaickenpalayam)' were written again 4-5 times - the
+    refusal looked like a model failure, so the story went back to the queue every round (a free-model call each time); and the
+    'notcity' verdict of the collection check did not stop the next check either"""
+    CITY = "all free models failed: not Coimbatore city news (Thondamuthur)"
+
+    def blocked(self, st):
+        src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
+        verdicts = re.search(r'st\.get\("s"\) in \(([^)]*)\)', src).group(1)      # the 'checked earlier' rule at the start of every round
+        return st.get("s") is not None and f'"{st["s"]}"' in verdicts
+
+    def test_outside_city_gets_one_more_try_then_stops(self):
+        st = {"n": 1}
+        self.assertEqual("", collect.refusal_verdict(self.CITY, st))
+        st["s"] = collect.refusal_verdict(self.CITY, st)
+        self.assertEqual("notcity", st["s"])
+        self.assertTrue(self.blocked(st))
+
+    def test_collection_notcity_verdict_now_stops_the_next_check(self):
+        self.assertTrue(self.blocked({"s": "notcity"}))
+
+    def test_date_old_event_and_duplicate_stop_at_once(self):
+        for why, v in (("stale: announced date 28 Oct has passed", "old"), ("old event: the story is about 12 Mar 2024", "old"),
+                       ("duplicate after write", "dup")):
+            self.assertEqual(v, collect.refusal_verdict(why, {}), why)
+            self.assertTrue(self.blocked({"s": v}))
+
+    def test_real_model_failures_are_always_tried_again(self):
+        st = {}
+        for _ in range(5):
+            self.assertEqual("", collect.refusal_verdict("all free models failed: no usable answer from the models", st))
+            self.assertEqual("", collect.refusal_verdict("all free models failed: groq 429: rate limit", st))
+            self.assertEqual("", collect.refusal_verdict("bad draft: 'scenes'", st))
+
+    def test_power_cut_is_never_refused_as_outside_the_city(self):
+        self.assertEqual("", allnews.outside_city("பெரியநாயக்கன்பாளையத்தில் நாளை மின் தடை"))
+
+    def test_every_refusal_of_file_story_is_known(self):
+        src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
+        body = src[src.index("def file_story("):src.index("\ndef ", src.index("def file_story(") + 10)]
+        known = [k for k, _ in collect.REFUSED_FINAL + collect.REFUSED_ONCE_MORE] + ["all free models failed", "bad draft"]
+        for r in re.findall(r'return None, f?"([^"{:]+)', body):
+            self.assertTrue(any(r.startswith(k.rstrip(":")) or k.startswith(r) for k in known), r)

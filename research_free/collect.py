@@ -738,7 +738,28 @@ def tamil_source(art):
     return ta >= max(40, en)          # mostly Tamil letters
 
 
-HEADLINE_ONLY_MIN = 12      # fewer new words than this after the headline = nothing to report (a 2-line police brief has ~20)
+# owner 30 Oct: a story refused for a reason in the ARTICLE is not written again and again - 'not Coimbatore city news' drafts
+# (Thondamuthur, Periyanaickenpalayam) were written and refused 4-5 times on 30 Oct (a free-model call each time, until the 10-try
+# limit). Final at once: a stale date, an old event, a duplicate cannot change. One more try: the place / 'not news' verdicts depend on
+# the model's wording. A real model failure ('all free models failed: ...', 'bad draft') is always tried again.
+REFUSED_FINAL = (("stale:", "old"), ("old event", "old"), ("duplicate", "dup"))
+REFUSED_ONCE_MORE = (("all free models failed: not Coimbatore city news", "notcity"), ("not news:", "notext"))
+
+
+def refusal_verdict(why, st):
+    """the state verdict that stops another write of a refused story ('' = it may be written again); st counts the refusals"""
+    w = str(why or "")
+    for k, v in REFUSED_FINAL:
+        if w.startswith(k):
+            return v
+    for k, v in REFUSED_ONCE_MORE:
+        if w.startswith(k):
+            st["refused"] = st.get("refused", 0) + 1
+            return v if st["refused"] >= 2 else ""
+    return ""
+
+
+HEADLINE_ONLY_MIN = 12     # fewer new words than this after the headline = nothing to report (a 2-line police brief has ~20)
 
 
 def file_story(art, res, errors_log, recent, scenes=None):
@@ -872,7 +893,7 @@ def main():
                 n["status"] = "already filed"
     for n in news:
         st = state.get(n["key"], {})
-        if not recheck_once(st, n.get("url", "")) and (st.get("s") in ("filed", "dup", "notext", "old", "notdistrict") or st.get("n", 0) >= 10):
+        if not recheck_once(st, n.get("url", "")) and (st.get("s") in ("filed", "dup", "notext", "old", "notdistrict", "notcity") or st.get("n", 0) >= 10):      # 30 Oct: notcity was missing (checked again every round)
             n["status"] = n["status"] if n["status"] != "collected" else "checked earlier: " + st.get("s", "failed")
     manual_links = [u.strip() for u in re.split(r"[\s,]+", os.environ.get("MANUAL_URL", "")) if u.strip().startswith("http")]
     for mu in manual_links:     # owner 26 Oct: links given by hand are written whatever their date; still skipped if already filed or no article text
@@ -1046,6 +1067,9 @@ def main():
             story, why = file_story(art, r["res"], log, recent, r["scenes"])
             if not story:
                 n["status"] = "not filed: " + why
+                v = refusal_verdict(why, stt)
+                if v:      # owner 30 Oct: not written again and again (checked earlier from now on)
+                    stt["s"] = v
                 log.append(f"NOT filed ({area}) {art['title'][:50]}: {why}")
                 continue
             if (PRIORITY_ONLY[0] and str(story.get("importance", "")).strip() != "High"
