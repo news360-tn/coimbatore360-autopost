@@ -1,0 +1,11 @@
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+Traceback (most recent call last):
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/research_free/imagegen.py", line 345, in <module>
+    data = generate(sys.argv[2] if len(sys.argv) > 2 else "Photorealistic news photo, tall vertical, a city road in Coimbatore, Tamil Nadu at dawn, police jeep parked, mist, sharp detail")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/research_free/imagegen.py", line 176, in generate
+    return to_story_size(_generate(prompt, seed, key, cheap, free_only))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/research_free/imagegen.py", line 310, in _generate
+    raise RuntimeError(f"all image models failed: {last or 'no image service configured'}")
+RuntimeError: all image models failed: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (69773e50-7c76-41b2-b08e-98aa4ec514bf)","code":4006}],"success":false,"result":{},"messages":[]}
