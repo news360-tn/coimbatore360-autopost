@@ -500,17 +500,28 @@ window.fitAll=function(){{
 </script></body></html>"""
 
 
-def max_seconds():
+def max_seconds(spec=None):
+    """60 s for a reel; owner 30 Oct: a power-cut notice (every area read out) may run to config "power_cut" max_seconds (88 s,
+    under verify.py's 90 s check)"""
     try:
-        return float(json.loads((Path(__file__).resolve().parent.parent / "poster" / "config.json").read_text()).get("reel_max_seconds", 90))
+        cfg = json.loads((Path(__file__).resolve().parent.parent / "poster" / "config.json").read_text())
     except Exception:
         return 90.0
+    limit = float(cfg.get("reel_max_seconds", 90))
+    if spec:
+        poster = str(Path(__file__).resolve().parent.parent / "poster")
+        if poster not in sys.path:
+            sys.path.append(poster)
+        import freshness
+        if freshness.is_power_cut(spec.get("cat"), spec.get("mini"), *(spec.get("hook") or [])):
+            limit = float((cfg.get("power_cut") or {}).get("max_seconds") or limit)
+    return limit
 
 
-def fit_max(work, n, lead, gap):
+def fit_max(work, n, lead, gap, limit=None):
     """owner 28 Oct: a reel is at most 90 s. Never cut a fact - when the full news runs longer, the news lines (not the
     English outro) are read a little faster, at most 1.2x"""
-    limit = max_seconds()
+    limit = limit or max_seconds()
     durs = [V3.wav_dur(work / f"line{i}.wav") for i in range(n)]
     pauses = lead + sum(V3.PAUSE if i == n - 2 else (0.55 if i == 0 else gap) for i in range(n - 1))
     total = sum(durs) + pauses + 2.4
@@ -571,7 +582,7 @@ def main(spec_path, out_mp4, page_key="coimbatore"):
             (work / "lines.json").write_text(json.dumps(texts, ensure_ascii=False))
             subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "tts.py"), str(work / "lines.json"), str(work), spec.get("voice", "female")], check=True)
         english_outro(work, len(texts) - 1, vs.get("outro_voice", "en-IN-PrabhatNeural") if used else "en-IN-NeerjaNeural")
-    fit_max(work, len(texts), lead, gap)
+    fit_max(work, len(texts), lead, gap, max_seconds(spec))
     starts, ends, t = [], [], lead
     for i in range(len(texts)):
         d = V3.wav_dur(work / f"line{i}.wav")

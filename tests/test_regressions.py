@@ -582,7 +582,7 @@ class FullDetail(unittest.TestCase):
 
     def test_reel_max_seconds(self):
         self.assertEqual(json.loads((ROOT / "poster" / "config.json").read_text())["reel_max_seconds"], 60)      # owner 29 Oct
-        self.assertIn("fit_max(work, len(texts), lead, gap)", (ROOT / "reel" / "reel4.py").read_text(encoding="utf-8"))
+        self.assertIn("fit_max(work, len(texts), lead, gap, max_seconds(spec))", (ROOT / "reel" / "reel4.py").read_text(encoding="utf-8"))
 
 class Proofread(unittest.TestCase):
     """28 Oct: the last Tamil proofread damaged posted reels (RN-158 'செல்லாமல் சென்றனர் செல்லாமல்', RN-155 நம்மக்கல்,
@@ -1229,3 +1229,132 @@ class SameEventShortScripts(unittest.TestCase):
         recent = [{"story_id": "a story filed this round", "researched": today, "reel_script": self.A}] + \
                  [{"story_id": f"RN-{i}", "researched": today, "reel_script": t} for i, t in enumerate(self.OTHER * 3)]
         self.assertTrue(collect.same_event_filed({"title": "குடோனில் தீ", "text": self.B, "published": TODAY.isoformat()}, recent))
+
+
+class PowerCutRules(unittest.TestCase):
+    """owner 30 Oct (Coimbatore): power-cut news of the whole district is never skipped - judged by the day of the CUT, never held back
+    by a daily cap, and its reel may run to 88 s (every area read out) while every other reel stays at 60 s / 105 words"""
+    YESTERDAY = (datetime.datetime.now(IST) - datetime.timedelta(days=1)).isoformat()
+
+    def test_power_cut_is_found(self):
+        for h in ("பொள்ளாச்சியில் நாளை மின் தடை", "சூலூரில் நாளை மின்தடை", "மேட்டுப்பாளையத்தில் மின் நிறுத்தம்", "Kovai power shutdown tomorrow"):
+            self.assertTrue(fr.is_power_cut(h), h)
+        self.assertFalse(fr.is_power_cut("கோவையில் 47 ஆயிரம் தெரு நாய்களுக்கு கருத்தடை"))
+        self.assertFalse(fr.is_power_cut("டாஸ்மாக் கடைகள் மூடல்", "TASMAC shops shutdown tomorrow"))      # a shop shutdown is not a power cut
+
+    def test_tomorrow_notice_of_yesterday_is_todays_cut(self):
+        self.assertTrue(fr.power_cut_ahead("பொள்ளாச்சியில் நாளை மின் தடை", self.YESTERDAY))
+        two_days = (datetime.datetime.now(IST) - datetime.timedelta(days=2)).isoformat()
+        self.assertFalse(fr.power_cut_ahead("பொள்ளாச்சியில் நாளை மின் தடை", two_days))      # that cut was yesterday
+        self.assertFalse(fr.power_cut_ahead("கோவையில் நாளை கனமழை", self.YESTERDAY))         # not a power cut: the today-only rule stays
+
+    def test_cut_date_in_headline_decides(self):
+        mon = ["ஜனவரி", "பிப்ரவரி", "மார்ச்", "ஏப்ரல்", "மே", "ஜூன்", "ஜூலை", "ஆகஸ்ட்", "செப்டம்பர்", "அக்டோபர்", "நவம்பர்", "டிசம்பர்"]
+        d = lambda k: TODAY + datetime.timedelta(days=k)
+        self.assertTrue(fr.power_cut_ahead(f"சூலூரில் {d(0).day} {mon[d(0).month - 1]} மின் தடை", self.YESTERDAY))
+        self.assertFalse(fr.power_cut_ahead(f"சூலூரில் {d(-1).day} {mon[d(-1).month - 1]} மின் தடை", self.YESTERDAY))
+        two_days = (datetime.datetime.now(IST) - datetime.timedelta(days=2)).isoformat()
+        self.assertTrue(fr.power_cut_ahead(f"{d(0):%d.%m.%y} கோவையில் இங்கெல்லாம் மின்தடை", two_days))      # 'நாளை 29.10.26' style (Covai Mail, 28 Oct)
+        self.assertTrue(fr.power_cut_ahead(f"முக்கிய இடங்களில் ({d(1):%d.%m.%Y}) மின்தடை அறிவிப்பு", two_days))
+        self.assertFalse(fr.power_cut_ahead(f"நாளை {d(-1):%d.%m.%y} கோவையில் மின்தடை", two_days))      # that cut was yesterday
+        self.assertFalse(fr.power_cut_ahead("மின் தடை: ரூ.2.50 லட்சம் இழப்பு", two_days))      # an amount is not a date
+
+    def test_posting_keeps_yesterdays_notice_for_today(self):
+        old = os.environ.get("POST_MAX_AGE_DAYS")
+        os.environ["POST_MAX_AGE_DAYS"] = "0"
+        try:
+            row = {"headline_ta": "பொள்ளாச்சியில் நாளை மின் தடை", "headline_en": "Pollachi power cut tomorrow", "published": self.YESTERDAY}
+            self.assertFalse(post.skip_reason(row).startswith("stale: published"))
+            row = {"headline_ta": "கோவையில் தெரு நாய்களுக்கு கருத்தடை", "headline_en": "Stray dogs", "published": self.YESTERDAY}
+            self.assertTrue(post.skip_reason(row).startswith("stale: published"))      # every other story: published today only
+        finally:
+            os.environ.pop("POST_MAX_AGE_DAYS") if old is None else os.environ.__setitem__("POST_MAX_AGE_DAYS", old)
+
+    def test_power_cut_found_by_headline_is_urgent(self):
+        self.assertTrue(post.is_urgent({"headline_ta": "சூலூரில் நாளை மின்தடை", "category": "Civic Issues", "importance": "Medium"}))
+        self.assertFalse(post.is_urgent({"headline_ta": "கோவையில் விழிப்புணர்வு பேரணி", "category": "Health", "importance": "Medium"}))
+
+    def test_power_cut_reel_limits(self):
+        c = json.loads((ROOT / "poster" / "config.json").read_text(encoding="utf-8"))
+        self.assertEqual(88, c["power_cut"]["max_seconds"])      # under verify.py's 90 s check
+        self.assertEqual(160, c["power_cut"]["script_max_words"])
+        ns = from_file(ROOT / "reel" / "reel4.py", {"max_seconds"})
+        self.assertEqual(88, ns["max_seconds"]({"cat": "மின் தடை", "mini": "பொள்ளாச்சியில் நாளை மின் தடை", "hook": ["", ""]}))
+        self.assertEqual(88, ns["max_seconds"]({"cat": "Civic Issues", "mini": "சூலூரில் நாளை மின்தடை", "hook": ["", ""]}))
+        self.assertEqual(60, ns["max_seconds"]({"cat": "Crime & Safety", "mini": "கோவையில் திருட்டு: 2 பேர் கைது", "hook": ["", ""]}))
+        self.assertEqual(60, ns["max_seconds"]())
+
+    def test_power_cut_script_may_be_longer(self):
+        import validate
+        ex = json.loads((ROOT / "research_free" / "examples.json").read_text(encoding="utf-8"))
+        pc = dict(next(e["output"] for e in ex if fr.is_power_cut(e["output"]["tamil_headline"])))
+        other = dict(ex[1]["output"])
+        art = " ".join(f"சொல்{i}" for i in range(300))
+        for d in (pc, other):
+            d["reel_script"] = " ".join(["தகவல்"] * 140) + " " + validate.LAST
+        words = lambda d: [x for x in validate.validate(d, art) if x.startswith("reel_script has")]
+        self.assertFalse(words(pc))      # 140 words + every area: allowed for a power cut
+        self.assertTrue(words(other))    # 140 words: too long for any other reel (105)
+        pc["reel_script"] = " ".join(["தகவல்"] * 90) + " " + validate.LAST
+        self.assertFalse(words(pc))      # a short notice is not forced longer: the minimum stays the normal one
+
+
+class NoRepost(unittest.TestCase):
+    """owner 30 Oct (Coimbatore): already posted news is never posted again. The same power cut comes from several outlets in other
+    words ('நாளை காளப்பட்டியில் மின் தடை' posted 29 Oct night; 'காளப்பட்டி பகுதியில் இன்று மின் தடை' next morning) and the headline
+    check missed it; the posted-script lookup lost 21 of 46 scripts (RN-x.json hid RN-x_coimbatore_text.json)"""
+    NOW = datetime.datetime.now(IST)
+    POSTED = "கோவை காளப்பட்டியில் நாளை மின் தடை: காலை 9 – மாலை 5 மணி வரை"
+    FILED_YESTERDAY = (NOW - datetime.timedelta(days=1)).strftime("%d %b %Y, 20:00")
+
+    def test_same_power_cut_in_other_words(self):
+        today = self.NOW.isoformat()
+        for h in ("நாளைய மின்தடை: காளப்பட்டி துணை மின் நிலையம்", "காளப்பட்டி பகுதியில் இன்று மின் தடை",
+                  "காளப்பட்டி, வீரியம்பாளையம், நேரு நகர் பகுதிகளில் இன்று மின்தடை"):
+            self.assertTrue(fr.same_power_cut(self.POSTED, self.FILED_YESTERDAY, h, today), h)
+
+    def test_other_power_cut_is_never_a_false_duplicate(self):
+        today = self.NOW.isoformat()
+        for h in ("சூலூரில் இன்று மின் தடை", "நாளைய மின்தடை: கோயம்புத்தூர்", "காந்தி நகர் பகுதியில் இன்று மின் தடை"):
+            self.assertFalse(fr.same_power_cut(self.POSTED, self.FILED_YESTERDAY, h, today), h)
+        next_week = (self.NOW + datetime.timedelta(days=7)).strftime("%d.%m.%Y")
+        self.assertFalse(fr.same_power_cut(self.POSTED, self.FILED_YESTERDAY, f"காளப்பட்டியில் {next_week} மின் தடை", today))
+
+    def test_posting_skips_the_same_power_cut(self):
+        old = post.ALL_ROWS
+        post.ALL_ROWS = [{"story_id": "RN-61", "headline_ta": self.POSTED, "researched": self.FILED_YESTERDAY, "post_status": "Posted"}]
+        try:
+            row = {"story_id": "RN-70", "headline_ta": "கோவை காளப்பட்டி பகுதியில் இன்று மின் தடை", "published": self.NOW.isoformat()}
+            self.assertEqual("duplicate of RN-61", post.skip_reason(row))
+            row = {"story_id": "RN-71", "headline_ta": "கோவை சூலூரில் இன்று மின் தடை", "published": self.NOW.isoformat()}
+            self.assertFalse(post.skip_reason(row).startswith("duplicate"))
+        finally:
+            post.ALL_ROWS = old
+
+    def test_instagram_feed_check_finds_the_same_power_cut(self):
+        old = dict(post.IG_RECENT)
+        post.IG_RECENT["coimbatore"] = [((self.NOW - datetime.timedelta(hours=10)).isoformat(), "⚡ " + self.POSTED + "\n\nமுழு விவரம்")]
+        try:
+            self.assertTrue(post.ig_duplicate({"headline_ta": "காளப்பட்டி பகுதியில் இன்று மின் தடை", "published": self.NOW.isoformat()}, "coimbatore"))
+            self.assertFalse(post.ig_duplicate({"headline_ta": "சூலூரில் இன்று மின் தடை", "published": self.NOW.isoformat()}, "coimbatore"))
+        finally:
+            post.IG_RECENT.clear(); post.IG_RECENT.update(old)
+
+    def test_writer_skips_the_same_power_cut(self):
+        recent = [{"story_id": "RN-61", "headline_ta": self.POSTED, "researched": self.FILED_YESTERDAY, "source": "https://a"}]
+        art = {"url": "https://b", "title": "காளப்பட்டி பகுதியில் இன்று மின் தடை", "published": self.NOW.isoformat()}
+        self.assertTrue(collect.is_dup(art, {"tamil_headline": art["title"]}, recent))
+        art = {"url": "https://c", "title": "சூலூரில் இன்று மின் தடை", "published": self.NOW.isoformat()}
+        self.assertFalse(collect.is_dup(art, {"tamil_headline": art["title"]}, recent))
+
+    def test_posted_script_is_not_hidden_by_the_media_file(self):
+        old_cache, old_scripts = post.CACHE, post._SCRIPTS
+        with tempfile.TemporaryDirectory() as d:
+            (Path(d) / "RN-999.json").write_text(json.dumps({"reel": "x"}), encoding="utf-8")
+            (Path(d) / "RN-999_coimbatore_text.json").write_text(json.dumps({"reel_script": "காளப்பட்டியில் மின் தடை."}), encoding="utf-8")
+            post.CACHE, post._SCRIPTS = Path(d), None
+            try:
+                self.assertEqual("காளப்பட்டியில் மின் தடை.", post.script_of({"story_id": "RN-999"}))
+                self.assertEqual("காளப்பட்டியில் மின் தடை.", collect._filed_script({"story_id": "RN-999"}))      # the writer's same-event check
+            finally:
+                post.CACHE, post._SCRIPTS = old_cache, old_scripts

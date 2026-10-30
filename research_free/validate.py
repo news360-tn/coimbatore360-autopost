@@ -125,6 +125,15 @@ def _reach():
         return {}
 
 
+def _power_cut():
+    """owner 30 Oct: poster/config.json "power_cut" limits ({} = a power cut has the normal limits)"""
+    try:
+        from pathlib import Path
+        return json.loads((Path(__file__).resolve().parent.parent / "poster" / "config.json").read_text(encoding="utf-8")).get("power_cut") or {}
+    except Exception:
+        return {}
+
+
 def caption_problems(cap, reach=None):
     """the caption carries the FULL story (viewers ask for 'full details') and one English search line"""
     reach = _reach() if reach is None else reach
@@ -235,6 +244,9 @@ def validate(d, article, today_digits=("2026",)):
     maxw = int(_reach().get("script_max_words") or 170)      # owner 29 Oct: reels at most 60 s (105 words); the caption keeps every detail
     need = min(130, int(len(_tamil_words(article)) * 0.55)) if article else 60      # owner 28 Oct: full detail - a longer article needs a longer reel
     need = min(need, maxw - 20)
+    import freshness
+    if freshness.is_power_cut(d.get("tamil_headline"), d.get("english_headline"), d.get("category")):      # owner 30 Oct: a power cut reads EVERY area (up to 90 s)
+        maxw = int(_power_cut().get("script_max_words") or maxw)      # only the upper limit grows; the minimum stays the normal one
     if not max(60, need) <= wc <= maxw + 5:
         p.append(f"reel_script has {wc} words; need {max(60, need)}-{maxw} (the key facts once each, in at most {60 if maxw <= 110 else 90} seconds; "
                  "every other detail goes in the caption's 📰 முழு விவரம் block)")

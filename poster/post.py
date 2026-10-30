@@ -138,7 +138,9 @@ def age_hours(row):
 
 
 def is_shutdown(row):
-    return "மின் தடை" in (row.get("category") or "") or "shutdown" in (row.get("category") or "").lower()
+    import freshness      # owner 30 Oct: a power cut is found by its headline too, not only by the category the writer chose
+    return ("மின் தடை" in (row.get("category") or "") or "shutdown" in (row.get("category") or "").lower()
+            or freshness.is_power_cut(row.get("headline_ta"), row.get("headline_en")))
 
 
 LABEL = {"coimbatore": "கோயம்புத்தூர் 360"}      # must match PAGE_LABEL in apps_script/Code.gs (reel_link lines are "<label>: <link>")
@@ -183,7 +185,9 @@ def script_of(o):
         for f in CACHE.glob("RN-*.json"):
             try:
                 sid = f.stem.split("_")[0]
-                _SCRIPTS.setdefault(sid, json.loads(f.read_text(encoding="utf-8")).get("reel_script") or "")
+                s = json.loads(f.read_text(encoding="utf-8")).get("reel_script") or ""
+                if s:      # 30 Oct: RN-x.json has no script - it must not hide the one in RN-x_coimbatore_text.json (21 of 46 stories were missed)
+                    _SCRIPTS.setdefault(sid, s)
             except Exception:
                 pass
     return _SCRIPTS.get(o.get("story_id") or "", "")
@@ -207,7 +211,8 @@ def skip_reason(row):
     max_age = int(os.environ.get("POST_MAX_AGE_DAYS", "1") or 1)      # owner 29 Oct 18:29: Coimbatore 0 = only news published TODAY
     if not manual and max_age == 0 and not nd:
         return "stale: no publish date known - today's news only"
-    if nd and not manual and (datetime.now(IST).date() - nd).days > max_age:      # owner: only today's (or yesterday's) news is posted
+    if (nd and not manual and (datetime.now(IST).date() - nd).days > max_age      # owner: only today's (or yesterday's) news is posted
+            and not freshness.power_cut_ahead(f"{row.get('headline_ta') or ''} {row.get('headline_en') or ''}", nd.isoformat())):      # owner 30 Oct: a power cut by its CUT day
         return f"stale: published {nd:%d %b}, " + ("not today" if max_age == 0 else "older than yesterday")      # (27 Oct: a 25 Oct story went out two days late)
     why = freshness.power_cut_over(row.get("headline_ta") or "", row.get("headline_en") or "", row.get("published") or (nd.isoformat() if nd else ""))
     if why:
@@ -249,7 +254,9 @@ def skip_reason(row):
         if o.get("story_id") == row.get("story_id") or not went_out:
             continue
         if (freshness.similar(o.get("headline_ta") or "", row.get("headline_ta") or "", 0.62, o.get("researched"))
-                or freshness.similar((o.get("headline_en") or "").lower(), (row.get("headline_en") or "").lower(), 0.65, o.get("researched"))):
+                or freshness.similar((o.get("headline_en") or "").lower(), (row.get("headline_en") or "").lower(), 0.65, o.get("researched"))
+                or freshness.same_power_cut(o.get("headline_ta"), o.get("published") or o.get("researched"),      # owner 30 Oct: same cut day + same place
+                                            row.get("headline_ta"), row.get("published") or row.get("researched"))):
             if freshness.follow_up(o, row):
                 continue
             return f"duplicate of {o.get('story_id')}"
@@ -988,6 +995,8 @@ def ig_duplicate(row, page):
         if ta and freshness.similar(head[:len(ta) + 8], ta, 0.62, ts):
             return ts
         if en and freshness.similar(cap.strip()[:len(en) + 8].lower(), en, 0.65, ts):
+            return ts
+        if ta and freshness.same_power_cut(head, ts, ta, row.get("published") or row.get("researched")):      # owner 30 Oct: same cut day + same place
             return ts
         # the whole caption of this story against the page's recent captions (stems of the first 40 words): same news worded differently
         mine = (row.get("caption") or "").strip()

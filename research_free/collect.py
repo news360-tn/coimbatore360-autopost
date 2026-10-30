@@ -223,6 +223,8 @@ def is_dup(art, d, recent):
             return True
         if _fr().similar(r.get("headline_ta", ""), (d or {}).get("tamil_headline", art["title"]), 0.72, r.get("researched")):
             return True
+        if _fr().same_power_cut(r.get("headline_ta"), r.get("researched"), (d or {}).get("tamil_headline", art["title"]), art.get("published")):
+            return True      # owner 30 Oct: the same power cut (same day, same place) already filed
     return False
 
 
@@ -302,12 +304,25 @@ def same_news(a, b, filed=None, days=3):
 _EVENT_DF = {}
 
 
+def _filed_script(r):
+    """the reel script of a filed story. 30 Oct: the Sheet's 'recent' rows carry no script, so this check never ran - the script is
+    read from the saved prebuilt file, as post.py does"""
+    if r.get("reel_script"):
+        return r["reel_script"]
+    try:
+        sys.path.insert(0, str(HERE.parent / "poster"))
+        import post
+        return post.script_of(r)
+    except Exception:
+        return ""
+
+
 def same_event_filed(art, recent, days=1):
     """story id of a story filed in the last `days` day(s) that reports the same event as this article (shared rare word stems of
     the article text and that story's reel script), else ''. 29 Oct: Namakkal RN-193 was written again after RN-168
     (posted 28 Oct) because the headlines differ by one number."""
     fr = _fr()
-    scripts = [r.get("reel_script") or "" for r in recent if r.get("reel_script")]
+    scripts = [s for s in (_filed_script(r) for r in recent) if s]
     if not scripts:
         return ""
     key = len(scripts)
@@ -318,7 +333,7 @@ def same_event_filed(art, recent, days=1):
     mine = fr.pub_date(art.get("published")) or datetime.datetime.now(fr.IST).date()
     text = (art.get("title") or "") + " " + (art.get("text") or "")[:2500]
     for r in recent:
-        s = r.get("reel_script") or ""
+        s = _filed_script(r)
         if not s:
             continue
         od = fr.pub_date(r.get("researched")) or fr.pub_date(r.get("published"))
@@ -409,7 +424,7 @@ def verify_candidates(items, state, log):
             if not tamil_source(art) and not n.get("manual"):      # owner 29 Oct: Tamil sources only
                 n["status"], stt["s"] = "not a Tamil-language article", "notext"; kept["notext"] += 1
                 continue
-            if not published_today(art["published"]) and not n.get("manual"):      # owner 29 Oct: published TODAY only
+            if not published_today(art["published"]) and not n.get("manual") and not _fr().power_cut_ahead(art["title"], art["published"]):      # owner 29 Oct: published TODAY only (30 Oct: a power cut by its CUT day)
                 n["status"], stt["s"] = "old", "old"; kept["old"] += 1
                 continue
             # owner 26 Oct: ONLY Coimbatore-district news - a district place in the headline or in the opening lines (not just a sidebar or a
@@ -871,7 +886,7 @@ def main():
         if n["status"] == "collected" and (allnews.other_district(n["title"]) or allnews.outside_district(n["title"], n.get("via", ""))):
             n["status"] = "not Coimbatore district news (state-wide / other district)"
             continue
-        if n["status"] == "collected" and fresh(n["published"]):
+        if n["status"] == "collected" and (fresh(n["published"]) or _fr().power_cut_ahead(n["title"], n["published"])):
             queues[AREA].append(n)
         elif n["status"] == "collected" and any(w in (n.get("source") or "") for w in ("தினமணி", "தினமலர்")) and rechecks < 60:
             # the feed date of a Dinamani / Dinamalar item can be older than the story: open the article and use ITS date (checked when opened)
@@ -893,7 +908,9 @@ def main():
         PRIO = ("பலி", "உயிரிழ", "விபத்து", "வெடி", "கொலை", "தீப்பிடி", "தீ விபத்து", "மின்தடை", "மின் தடை", "வெள்ளம்", "தற்கொலை", "கைது")
         target = {AREA: 2}
         for a_ in queues:
-            queues[a_] = [q for q in queues[a_] if q["mentions"] >= 3 or any(w in q["title"] for w in PRIO)][:4]
+            pc = [q for q in queues[a_] if _fr().is_power_cut(q["title"])]      # owner 30 Oct: every power cut is written, cap or no cap - first
+            queues[a_] = pc + [q for q in queues[a_] if q not in pc and (q["mentions"] >= 3 or any(w in q["title"] for w in PRIO))][:max(0, 4 - len(pc))]
+            target = {AREA: max(2, len(pc))}
         PRIORITY_ONLY[0] = True
         log.append("archive round: priority scan only (urgent local news, if any)")
     if MODE == "collect":
@@ -937,7 +954,7 @@ def main():
             return {"skip": "article has no text beyond its headline", "s": "notext", "log": f"skip ({area}) only a headline, {bw} words of text: {art['title'][:50]} [{url[:60]}]"}
         if not tamil_source(art) and not n.get("manual"):      # owner 29 Oct: Tamil sources only (a link given by hand is still written)
             return {"skip": "not a Tamil-language article", "s": "notext", "log": f"skip ({area}) not a Tamil article: {art['title'][:50]} [{url[:60]}]"}
-        if not published_today(art["published"]) and not n.get("manual"):      # owner 29 Oct: published TODAY only (a hand-given link: any date)
+        if not published_today(art["published"]) and not n.get("manual") and not _fr().power_cut_ahead(art["title"], art["published"]):      # owner 29 Oct: published TODAY only (a hand-given link: any date; 30 Oct: a power cut by its CUT day)
             return {"skip": "old", "s": "old", "log": f"skip ({area}) too old ({art['published'] or 'no date'}): {art['title'][:50]}"}
         if ((not (allnews.has_place(n["title"]) or allnews.has_place(art["title"]) or allnews.has_place(art["text"][:300])
                   or allnews.url_district(art["url"]) in allnews.DISTRICT_SLUGS) and n.get("via", "") != "dinamalar-list")
@@ -947,7 +964,8 @@ def main():
         if town and not n.get("manual"):      # owner 29 Oct: Coimbatore city only for now
             return {"skip": f"not Coimbatore city news ({town})", "s": "notcity", "log": f"skip ({area}) outside the city ({town}): {art['title'][:50]}"}
         if not n.get("manual") and any(_fr().similar(r.get("headline_ta", ""), art["title"], 0.55, r.get("researched"))
-                                       or same_news(r.get("headline_ta", ""), art["title"], r.get("researched")) for r in recent):      # already posted / written
+                                       or same_news(r.get("headline_ta", ""), art["title"], r.get("researched"))
+                                       or _fr().same_power_cut(r.get("headline_ta"), r.get("researched"), art["title"], art["published"]) for r in recent):      # already posted / written
             return {"skip": "already filed", "s": "dup", "log": f"skip ({area}) similar to a filed story: {art['title'][:50]}"}
         dup = "" if n.get("manual") else same_event_filed(art, recent)
         if dup:      # 29 Oct (Namakkal RN-193 = RN-168): the same event from another outlet under another headline is not written again
@@ -1030,7 +1048,8 @@ def main():
                 n["status"] = "not filed: " + why
                 log.append(f"NOT filed ({area}) {art['title'][:50]}: {why}")
                 continue
-            if PRIORITY_ONLY[0] and str(story.get("importance", "")).strip() != "High":
+            if (PRIORITY_ONLY[0] and str(story.get("importance", "")).strip() != "High"
+                    and not _fr().is_power_cut(art["title"], story.get("tamil_headline"), story.get("category"))):      # owner 30 Oct: a power cut is never left out
                 n["status"] = "checked: not urgent, left for the next normal round"
                 log.append(f"not urgent ({area}) {art['title'][:50]}")
                 continue

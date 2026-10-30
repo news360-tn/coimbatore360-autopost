@@ -38,6 +38,11 @@
   },
   "reel_punch": false,
   "reel_max_seconds": 60,
+  "power_cut": {
+    "note": "owner 30 Oct: a power-cut reel reads EVERY area, so it may run to max_seconds (88 = 2 s under verify.py's 90 s check) with up to script_max_words; all other reels keep reel_max_seconds / reach.script_max_words. {} = normal limits",
+    "max_seconds": 88,
+    "script_max_words": 160
+  },
   "reel_punch_note": "owner 27 Oct (change 1): every reel opens with a spoken punch line (yellow number + headline) while the big headline is on screen",
   "reach": {
     "note": "owner 29 Oct (views plan): each switch can be turned off here without code changes",
