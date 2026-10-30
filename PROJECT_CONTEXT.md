@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-30 | `9578ca7` | Refused stories are not written again and again (owner 30 Oct) |
 | 2026-10-30 | `3a52ae7` | Power cuts never missed, never reposted (owner 30 Oct) |
 | 2026-10-30 | `fb188b1` | Same event from two outlets in one writer round is caught (stories filed this round join the check), and short reports of one event count as the same (RN-214 = RN-209) |
 | 2026-10-30 | `b17f80e` | Writer/collector: the Sheet bridge is tried 3 times when Apps Script does not answer (writer crashed once at 09:00 UTC 30 Oct on a 120 s timeout) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `609e1c8` | Coimbatore: collect only from the 13 researched outlets (Dinamalar, Dinamani, Covai Mail, Arasiyal Today, Dinakaran, Daily Thanthi, Maalaimalar, Thanthi TV, Hindu Tamil, Polimer, Malai Murasu, News18 Tamil, Indian Express Tamil) |
 | 2026-10-29 | `06baa10` | No old events and no same-event repeats: an old event re-told in a new article is not filed or posted (Coimbatore RN-29); the same event from another outlet in other words is not posted twice (RN-13/24, RN-86/115) |
 | 2026-10-28 | `779647f` | Reel longer than 90 s: shorten the script automatically and render again instead of holding the story (RN-153) |
-| 2026-10-29 | `5f4b464` | Font check optional: the writer and test runner have no fontTools, so letter repair still runs and tests pass on GitHub (Python 3.11) |
 <!-- recent-changes:end -->
