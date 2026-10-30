@@ -11,64 +11,26 @@ fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-dead for this round: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
 ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 79 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  slides_spec line 'பாம்புகள் வீட்டுக்குள் புகுந்தால் தன்னார்வ மீட்பு வீரர்களை' is cut off and incomplete, with no clear meaning
-  reel_script says the snake was released 'in the same area' without the article's specification that it was returned to the same area in the forest-adjacent location; the article says 'அதே பகுதியில்', which is fine, but the slide line 'பாம்பு அதே பகுதியில்' is also incomplete and ungrammatical
-  slides_spec 'பாம்பு விடுவிப்பு' slide mixes the release fact with the activist demand and the volunteer contact advice in ways that are not clearly separated
-  reel_script omits the article's key fact that the Trichy fire department and forest department experience of rescuer Prakash and his 1000+ snake rescues are background, while the reel_script's claim that Prakash was called in 'after forest contacts failed' is not explicitly stated in the article as the reason for calling him (article says he was summoned there)
-  caption contains 'வனத்துறையின் இணையதளத்தில் உள்ள அவசர எண்களை' which mislabels the source as the forest department's website rather than the online listing given by the article, a minor misattribution
-claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: slides_spec line 'பாம்புகள் வீட்டுக்குள் புகுந்தால் தன்னார்வ மீட்பு வீரர்களை' is cut off and incomplete, with no clear meaning
-  fact-check: reel_script says the snake was released 'in the same area' without the article's specification that it was returned to the same area in the forest-adjacent location; the article says 'அதே பகுதியில்', which is fine, but the slide line 'பாம்பு அதே பகுதியில்' is also incomplete and ungrammatical
-  fact-check: slides_spec 'பாம்பு விடுவிப்பு' slide mixes the release fact with the activist demand and the volunteer contact advice in ways that are not clearly separated
-  fact-check: reel_script omits the article's key fact that the Trichy fire department and forest department experience of rescuer Prakash and his 1000+ snake rescues are background, while the reel_script's claim that Prakash was called in 'after forest contacts failed' is not explicitly stated in the article as the reason for calling him (article says he was summoned there)
-  fact-check: caption contains 'வனத்துறையின் இணையதளத்தில் உள்ள அவசர எண்களை' which mislabels the source as the forest department's website rather than the online listing given by the article, a minor misattribution
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 80 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 79 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 3 problems
-  Reel script omits that the rescuer Prakash was brought in because forest department numbers were unreachable, but says 'இதையடுத்து' implying sequence is fine; however the reel_script omits that the snake was returned to the same area after failing to reach officials—this is mentioned. Main problem: the reel_script says 'பாம்பு பிடி வீரர் பிரகாஷ் அங்கு வரவழைக்கப்பட்டார்' without stating the reason (forest numbers not reachable), and omits that the snake was rescued after the attempts to contact officials failed.
-  Reel script and slides say the snake was 'காயமடைந்த' rescued 'பத்திரமாக', and 'அதிகாரிகளைத் தொடர்புகொள்ள முடியாததால்' is fine, but the caption and slides state 'அனைத்து எண்களும் Not Reachable' while the article says 'தொடர்புகொள்ள முடியாத நிலையிலேயே' — the slide's English term 'Not Reachable' is an addition not present in the Tamil article wording (minor)
-  Slide 'அடுத்து என்ன?' contains an incomplete sentence: 'அவசர எண்களை உடனடியாகப் புதுப்பிக்க வேண்டும் என சமூக' is truncated and has no clear meaning, and 'வீடுகளில் பாம்பு புகுந்தால் தன்னார்வ மீட்பு' is also cut off and unclear.
-claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  fact-check: Reel script omits that the rescuer Prakash was brought in because forest department numbers were unreachable, but says 'இதையடுத்து' implying sequence is fine; however the reel_script omits that the snake was returned to the same area after failing to reach officials—this is mentioned. Main problem: the reel_script says 'பாம்பு பிடி வீரர் பிரகாஷ் அங்கு வரவழைக்கப்பட்டார்' without stating the reason (forest numbers not reachable), and omits that the snake was rescued after the attempts to contact officials failed.
-  fact-check: Reel script and slides say the snake was 'காயமடைந்த' rescued 'பத்திரமாக', and 'அதிகாரிகளைத் தொடர்புகொள்ள முடியாததால்' is fine, but the caption and slides state 'அனைத்து எண்களும் Not Reachable' while the article says 'தொடர்புகொள்ள முடியாத நிலையிலேயே' — the slide's English term 'Not Reachable' is an addition not present in the Tamil article wording (minor)
-  fact-check: Slide 'அடுத்து என்ன?' contains an incomplete sentence: 'அவசர எண்களை உடனடியாகப் புதுப்பிக்க வேண்டும் என சமூக' is truncated and has no clear meaning, and 'வீடுகளில் பாம்பு புகுந்தால் தன்னார்வ மீட்பு' is also cut off and unclear.
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  Reel_script and caption say the python was rescued from the Onampalayam residential area in Thondamuthur, but the article says the complex is 'Western Valley Green Homes' in Thondamuthur area; the draft's location phrasing 'இடம்: ஓணம்பாளையம், தொண்டாமுத்தூர் அருகே' is acceptable, but slides_spec loc field is consistent; no issue there.
-  Reel_script says the Trichy-based handler was 'வரவழைக்கப்பட்டார்' and 'அனுபவம் கொண்ட' which is accurate, but the caption says the python was rescued by the handler 'பிரகாஷ்' who is a Trichy experienced handler now running a Cane Corso dog centre in Coimbatore; the draft omits that he now runs a dog breeding centre in Coimbatore, which is a minor detail rather than an error.
-  Reel_script states the snake was 'உடலில் சில இடங்களில் காயத்துடன்' while the article says it was injured; fine. However caption says the python was released 'அதே பகுதியில்' which matches the article.
-  Caption states the handler was called by 'திருச்சி தீயணைப்புத் துறை, வனத்துறையுடன் பணியாற்றிய' which conflates two sources; the article says he worked with the Trichy fire department and forest department, so the phrasing is acceptable but the caption's line 'இதனால் திருச்சி தீயணைப்புத் துறை, வனத்துறையுடன் பணியாற்றிய அனுபவமுள்ள பாம்பு பிடி வீரர் பிரகாஷ் அங்கு வரவழைக்கப்பட்டார்' reads as if the fire department summoned him, which the article does not state.
-claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: Reel_script and caption say the python was rescued from the Onampalayam residential area in Thondamuthur, but the article says the complex is 'Western Valley Green Homes' in Thondamuthur area; the draft's location phrasing 'இடம்: ஓணம்பாளையம், தொண்டாமுத்தூர் அருகே' is acceptable, but slides_spec loc field is consistent; no issue there.
-  fact-check: Reel_script says the Trichy-based handler was 'வரவழைக்கப்பட்டார்' and 'அனுபவம் கொண்ட' which is accurate, but the caption says the python was rescued by the handler 'பிரகாஷ்' who is a Trichy experienced handler now running a Cane Corso dog centre in Coimbatore; the draft omits that he now runs a dog breeding centre in Coimbatore, which is a minor detail rather than an error.
-  fact-check: Reel_script states the snake was 'உடலில் சில இடங்களில் காயத்துடன்' while the article says it was injured; fine. However caption says the python was released 'அதே பகுதியில்' which matches the article.
-  fact-check: Caption states the handler was called by 'திருச்சி தீயணைப்புத் துறை, வனத்துறையுடன் பணியாற்றிய' which conflates two sources; the article says he worked with the Trichy fire department and forest department, so the phrasing is acceptable but the caption's line 'இதனால் திருச்சி தீயணைப்புத் துறை, வனத்துறையுடன் பணியாற்றிய அனுபவமுள்ள பாம்பு பிடி வீரர் பிரகாஷ் அங்கு வரவழைக்கப்பட்டார்' reads as if the fire department summoned him, which the article does not state.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+proofread skipped: no free model answered: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.","type":"invalid_request_error","code":"json_validate_failed","failed_generation":""}}
+
 not Coimbatore city news after writing (Thondamuthur): “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
@@ -78,7 +40,7 @@ to write: 1 Coimbatore district candidates (max 200 stories)
 candidates waiting: 1 Coimbatore; time left 29 min
 try (N) manual=False: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 NOT filed (N) “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண: all free models failed: not Coimbatore city news (Thondamuthur)
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 29 min
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 28 min
 filed: 0 Coimbatore district stories (target 200), reels only
 queue: 1 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
