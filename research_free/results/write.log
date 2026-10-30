@@ -1,6 +1,6 @@
 writing [N]: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
   "error": {
     "code": 429,
@@ -11,10 +11,6 @@ fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.7-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -26,52 +22,35 @@ fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
 poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 fail cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast: cloudflare @cf/meta/llama-3.3-70b-instruct-fp8-fast 429: {"errors":[{"message":"AiError: AiError: you have used up your 
 dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
 fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiError: you have used up y
 dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
 free models unavailable: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiE
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
   caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.')
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  The reel_script says 'உள்ளாட்சிகள் தினத்தையொட்டி' and the article says the meeting is on 1st (வரும், 1ம் தேதி); the draft's 'நவ. 1' is consistent with the article's later reference to நவ., 1ம் தேதி, so no conflict there, but the caption's wording 'நவம்பர் 1' is also supported.
-  The reel_script states that the complaints from 'ஆகஸ்ட் 15, அக்டோபர் 2' meetings will be asked about, but the article says the Aug 15 and Oct 2 meetings were held after the TVK government formed; the draft's 'ஆக. 15, அக். 2 கூட்டங்களின் புகார்களுக்கு நடவடிக்கை இல்லை' in slide 3 asserts there was no action taken on those complaints, which the article does not state (it only says people will ask about actions taken).
-  The reel_script claims the Oct 2 and Aug 15 complaints have 'no action', which is an overstatement: the article says people are preparing to ask what action was taken, not that no action was taken for those specific meetings.
-  The reel_script says complaints of the 11 panchayats lack drinking water, road and streetlight facilities; the article says these basic facilities are not fully implemented in the panchayats (mainly the older ones), so 'முழுமையாக இல்லை' overstates it relative to the article's 'முழுமையாக நிறைவேற்றப்படாமல்' for the older panchayats only.
-  The reel_script omits the detail that the meeting is organized by the panchayats for 'உள்ளாட்சிகள் தினம்' is included, but it omits the key point that complaints have been raised at every gram sabha without action (an important fact of the article).
-claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: The reel_script says 'உள்ளாட்சிகள் தினத்தையொட்டி' and the article says the meeting is on 1st (வரும், 1ம் தேதி); the draft's 'நவ. 1' is consistent with the article's later reference to நவ., 1ம் தேதி, so no conflict there, but the caption's wording 'நவம்பர் 1' is also supported.
-  fact-check: The reel_script states that the complaints from 'ஆகஸ்ட் 15, அக்டோபர் 2' meetings will be asked about, but the article says the Aug 15 and Oct 2 meetings were held after the TVK government formed; the draft's 'ஆக. 15, அக். 2 கூட்டங்களின் புகார்களுக்கு நடவடிக்கை இல்லை' in slide 3 asserts there was no action taken on those complaints, which the article does not state (it only says people will ask about actions taken).
-  fact-check: The reel_script claims the Oct 2 and Aug 15 complaints have 'no action', which is an overstatement: the article says people are preparing to ask what action was taken, not that no action was taken for those specific meetings.
-  fact-check: The reel_script says complaints of the 11 panchayats lack drinking water, road and streetlight facilities; the article says these basic facilities are not fully implemented in the panchayats (mainly the older ones), so 'முழுமையாக இல்லை' overstates it relative to the article's 'முழுமையாக நிறைவேற்றப்படாமல்' for the older panchayats only.
-  fact-check: The reel_script omits the detail that the meeting is organized by the panchayats for 'உள்ளாட்சிகள் தினம்' is included, but it omits the key point that complaints have been raised at every gram sabha without action (an important fact of the article).
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.')
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 2048. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
+ok groq/qwen/qwen3.8-27b (4s)
+proofread by groq/qwen/qwen3.8-27b: 1 problems
 not Coimbatore city news after writing (Periyanaickenpalayam): கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
 earlier stories still waiting for images: []
-instagram check: 35 recent posts read from the page
+instagram check: 37 recent posts read from the page
 write round: 1 news waiting in the queue (written in priority order)
 candidate filter: collected=1
 to write: 1 Coimbatore district candidates (max 200 stories)
 candidates waiting: 1 Coimbatore; time left 29 min
 try (N) manual=False: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
 NOT filed (N) கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள: all free models failed: not Coimbatore city news (Periyanaickenpalayam)
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 28 min
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 29 min
 filed: 0 Coimbatore district stories (target 200), reels only
 queue: 1 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
