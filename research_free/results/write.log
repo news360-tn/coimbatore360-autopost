@@ -1,15 +1,20 @@
 writing [N]: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (17s)
+attempt 1 gemini/gemini-3.6-flash: 1 problems
+  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
   "error": {
     "code": 503,
     "message": "This model is currently experiencing high d
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
   "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
+    "code": 503,
+    "message": "This model is currently experiencing high d
+switching away from gemini/gemini-3.6-flash for 10 min
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
   "error": {
     "code": 503,
@@ -19,74 +24,52 @@ fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing 
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-dead for this round: gemini/gemini-3-flash-preview
+ok gemini/gemini-3-flash-preview (20s)
+attempt 2 gemini/gemini-3-flash-preview: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1000 ('திருச்சியில் இதுவரை 1000-க்கும் மேற்பட்ட பாம்புகளைப் பத்திரம')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (23s)
+attempt 3 gemini/gemini-3-flash-preview: 1 problems
+  reel_script has 83 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 4 groq/qwen/qwen3.8-27b: 1 problems
+  reel_script has 68 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1000 ('திருச்சியில் இதுவரை 1000-க்கும் மேற்பட்ட பாம்புகளைப் பத்திரம')
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  reel_script has English words (Not, Reachable) - the voice cannot read them; write them in Tamil letters
+  reel_script must have no English letters (write English words and abbreviations in Tamil script)
+  known issue english_in_voice: voice script has English words the voice skips (Not, Reachable) - rewrite so it does not happen again
 ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 79 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 82 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  Reel_script and slides say the python was rescued in Onampalayam but do not mention that it was injured in the article; 'சில இடங்களில் காயம்' is present, so this is fine, but the reel_script omits that the rescuer was called because forest officials could not be reached and that the snake was released at the same spot — these are present.
-  Reel_script says the snake was 'பாதுகாப்பாக மீட்டார்' and then 'அதே பகுதியில் பத்திரமாக விடுவிக்கப்பட்டது' — consistent with article.
-  Reel_script says Prakash was called 'வனத்துறையுடன் இணைந்து பணியாற்றிய' from Trichy but the article says he worked with Trichy fire service and forest department; the reel_script omits 'தீயணைப்புத் துறை', which is a minor omission.
-  Caption states the forest department's helpline numbers are 'இணையதளத்தில் கொடுக்கப்பட்டுள்ள' — consistent with article.
-  Caption says Prakash 'தற்போது கோவையில் Cane Corso நாய் வளர்ப்பு மையம் நடத்தி வரும்' — present in article, fine.
-  Slide 'வீடுகளில் பாம்பு புகுந்தால் அச்சமின்றி தொடர்பு கொள்ளலாம்' omits who to contact (volunteer snake rescuers) in that line, but the next line covers it; not a factual error.
-claude rewrite 2 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: Reel_script and slides say the python was rescued in Onampalayam but do not mention that it was injured in the article; 'சில இடங்களில் காயம்' is present, so this is fine, but the reel_script omits that the rescuer was called because forest officials could not be reached and that the snake was released at the same spot — these are present.
-  fact-check: Reel_script says the snake was 'பாதுகாப்பாக மீட்டார்' and then 'அதே பகுதியில் பத்திரமாக விடுவிக்கப்பட்டது' — consistent with article.
-  fact-check: Reel_script says Prakash was called 'வனத்துறையுடன் இணைந்து பணியாற்றிய' from Trichy but the article says he worked with Trichy fire service and forest department; the reel_script omits 'தீயணைப்புத் துறை', which is a minor omission.
-  fact-check: Caption states the forest department's helpline numbers are 'இணையதளத்தில் கொடுக்கப்பட்டுள்ள' — consistent with article.
-  fact-check: Caption says Prakash 'தற்போது கோவையில் Cane Corso நாய் வளர்ப்பு மையம் நடத்தி வரும்' — present in article, fine.
-  fact-check: Slide 'வீடுகளில் பாம்பு புகுந்தால் அச்சமின்றி தொடர்பு கொள்ளலாம்' omits who to contact (volunteer snake rescuers) in that line, but the next line covers it; not a factual error.
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  reel_script says the snake was caught by Prakash and then 'பாம்பு அதே பகுதியில் பத்திரமாக விடுவிக்கப்பட்டது' — the article says it was released in the same area; this is consistent, but reel_script omits that the rescue was done by Prakash after the forest officials could not be reached, which is an important fact of who did what (partially present)
-  reel_script states the snake was caught by Prakash 'காயம் அடைந்த பாம்பை பாதுகாப்பாக மீட்டார்' while the article says the snake was 'காயம் அடைந்த' — acceptable; however reel_script says the rescue was done 'வனத்துறையின் அவசர எண்களைத் தொடர்புகொள்ள பலமுறை முயன்றனர்' and omits that the numbers were from the online listing — minor
-  caption says Prakash 'திருச்சியில் தீயணைப்புத் துறை மற்றும் வனத்துறையுடன் இணைந்து பணியாற்றிய' and 'திருச்சியில் 1000-க்கும் மேற்பட்ட பாம்புகளை பத்திரமாக மீட்டு வனப்பகுதியில் விட்டுள்ளார்' — matches article, no issue
-  caption states 'பாம்பு மீட்பு வீரர்களைத் தயக்கமின்றித் தொடர்புகொள்ளலாம் என அவர்கள் தெரிவித்துள்ளனர்' — article says 'அச்சமின்றி' (without fear), wording is close and acceptable
-  slides_spec 'இணையதளத்தில் உள்ள எண்கள் புதுப்பிக்கப்படவில்லை' — article says the online numbers need updating; stating they were not updated is a slight overstatement of the cause, but it is a reasonable reading
-  slides_spec 'வீட்டில் பாம்பு புகுந்தால் தன்னார்வ மீட்பு' is ungrammatical/unclear in Tamil: it does not clearly state that volunteer rescuers can be contacted
-claude rewrite 3 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: reel_script says the snake was caught by Prakash and then 'பாம்பு அதே பகுதியில் பத்திரமாக விடுவிக்கப்பட்டது' — the article says it was released in the same area; this is consistent, but reel_script omits that the rescue was done by Prakash after the forest officials could not be reached, which is an important fact of who did what (partially present)
-  fact-check: reel_script states the snake was caught by Prakash 'காயம் அடைந்த பாம்பை பாதுகாப்பாக மீட்டார்' while the article says the snake was 'காயம் அடைந்த' — acceptable; however reel_script says the rescue was done 'வனத்துறையின் அவசர எண்களைத் தொடர்புகொள்ள பலமுறை முயன்றனர்' and omits that the numbers were from the online listing — minor
-  fact-check: caption says Prakash 'திருச்சியில் தீயணைப்புத் துறை மற்றும் வனத்துறையுடன் இணைந்து பணியாற்றிய' and 'திருச்சியில் 1000-க்கும் மேற்பட்ட பாம்புகளை பத்திரமாக மீட்டு வனப்பகுதியில் விட்டுள்ளார்' — matches article, no issue
-  fact-check: caption states 'பாம்பு மீட்பு வீரர்களைத் தயக்கமின்றித் தொடர்புகொள்ளலாம் என அவர்கள் தெரிவித்துள்ளனர்' — article says 'அச்சமின்றி' (without fear), wording is close and acceptable
-  fact-check: slides_spec 'இணையதளத்தில் உள்ள எண்கள் புதுப்பிக்கப்படவில்லை' — article says the online numbers need updating; stating they were not updated is a slight overstatement of the cause, but it is a reasonable reading
-  fact-check: slides_spec 'வீட்டில் பாம்பு புகுந்தால் தன்னார்வ மீட்பு' is ungrammatical/unclear in Tamil: it does not clearly state that volunteer rescuers can be contacted
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 proofread skipped: no free model answered: None
 not Coimbatore city news after writing (Thondamuthur): “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 earlier stories still waiting for images: []
-instagram check: 45 recent posts read from the page
+instagram check: 50 recent posts read from the page
 write round: 1 news waiting in the queue (written in priority order)
 candidate filter: collected=1
 to write: 1 Coimbatore district candidates (max 200 stories)
 candidates waiting: 1 Coimbatore; time left 29 min
 try (N) manual=False: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 NOT filed (N) “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண: all free models failed: not Coimbatore city news (Thondamuthur)
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 28 min
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 26 min
 filed: 0 Coimbatore district stories (target 200), reels only
 queue: 1 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
