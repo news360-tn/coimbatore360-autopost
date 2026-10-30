@@ -108,7 +108,7 @@ def autofix(d):
     if isinstance(sc, str) and sc.strip():
         d["scenes"] = [sc.strip()]
     elif isinstance(sc, list):
-        d["scenes"] = [x for x in sc if isinstance(x, str) and x.strip()][:1]      # Coimbatore: exactly ONE image prompt per story
+        d["scenes"] = [x for x in sc if isinstance(x, str) and x.strip()][:2]      # Coimbatore: exactly ONE image prompt per story
     return d
 
 
@@ -224,8 +224,8 @@ def validate(d, article, today_digits=("2026",)):
                 p.append(f"slide {i} line {j} is cut off mid-phrase ('{_tags(l)[-20:]}') - write a complete short phrase")
     # scenes: exactly ONE image prompt (the main scene of this news); the reel moves the camera over that one picture
     sc = d.get("scenes")
-    if not isinstance(sc, list) or len(sc) != 1 or not isinstance(sc[0], str) or len(sc[0].strip()) < 40:
-        p.append("scenes must be a list with exactly ONE clear English image prompt (the main scene of this news, at least 40 characters)")
+    if not isinstance(sc, list) or not 1 <= len(sc) <= 2 or not all(isinstance(x, str) and len(x.strip()) >= 40 for x in sc):
+        p.append("scenes must be a list of TWO clear English image prompts (1: the main scene of this news, 2: a detail of it; each at least 40 characters)")
     rs = d["reel_script"].strip()
     if re.search(r"[A-Za-z]", rs):
         p.append("reel_script must have no English letters (write English words and abbreviations in Tamil script)")

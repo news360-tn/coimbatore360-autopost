@@ -40,7 +40,10 @@ STEP 1 - "facts": read the article and list ONLY what a camera could see, copied
  what happened (the event itself), the exact place and its type, the people by role and their number, vehicles (exact type and colour if given),
  objects (seized goods, damaged things, tools), animals, buildings, weather, time of day. Write "unknown" for anything the article does not say. Never invent.
 
-STEP 2 - "scenes": exactly ONE photograph, 100-150 words of plain English, written in THIS order:
+STEP 2 - "scenes": exactly TWO photographs of THIS news (owner 30 Oct: 2 pictures per reel): scene 1 = the COVER - the main event itself;
+ scene 2 = a DETAIL close-up of the one object or sign that tells the story (seized goods, the damaged vehicle, the transformer, the garbage
+ heap, water on the road, the documents) or, if there is no such object, a WIDE shot of the place with the event in it. Each scene
+ 100-150 words of plain English, written in THIS order:
  1. SUBJECT + ACTION: the main thing of THIS news happening, in the first sentence (e.g. "A TNEB lineman on a ladder repairs a transformer ...").
  2. PLACE: the real place type in Coimbatore city with its look (see CITY LOOK), named area if the article gives it.
  3. PEOPLE: by role, number, clothes, what each group is doing; seen from behind or far away.
@@ -63,7 +66,7 @@ CATEGORY GUIDE: power cut = TNEB lineman on a pole or a substation, shops and a 
  behind; school = students in Tamil Nadu school uniform from behind; temple = the gopuram and devotees; wild elephant = elephants at the forest edge.
 NEVER: readable text, letters, numbers, signboards, logos, brand or company names, product labels, watermarks, a recognisable face of any real person or politician, blood, injuries,
  dead bodies, weapons pointed at people, collages or split frames. People only from behind, far away or slightly blurred.
-Return ONLY JSON: {"facts": "...", "scenes": ["the one scene"]}"""
+Return ONLY JSON: {"facts": "...", "scenes": ["cover scene", "detail scene"]}"""
 
 # owner 29 Oct: the news scene comes FIRST (some image models read only the start of a long prompt), the photo style after it
 IMG_TEMPLATE = ("{scene} "
@@ -92,6 +95,14 @@ def scene_ok(scene, headline):
     return hit >= min(2, len(need))
 
 
+def pictures_per_reel():
+    """poster/config.json free_images.pictures_per_reel (owner 30 Oct: 2 on every page)"""
+    try:
+        return max(1, int(json.loads((HERE.parent / "poster" / "config.json").read_text(encoding="utf-8")).get("free_images", {}).get("pictures_per_reel", 1)))
+    except Exception:
+        return 1
+
+
 def image_scenes(art, d):
     """ONE detailed image prompt (the main scene of this news) built from the article itself (not a generic scene); returns a 1-item list.
     owner 29 Oct: a scene that is too short or does not name the main things of the headline is sent back once."""
@@ -106,13 +117,13 @@ def image_scenes(art, d):
                     break
                 raise
             data, _ = llm.ask_claude(BRIEF_SYSTEM, user, max_tokens=1500)
-        sc = [s.strip() for s in (data.get("scenes") or []) if isinstance(s, str) and len(s.strip()) > 40][:1]
+        sc = [s.strip() for s in (data.get("scenes") or []) if isinstance(s, str) and len(s.strip()) > 40][:pictures_per_reel()]
         if sc and scene_ok(sc[0], d.get("english_headline", "")):
             return sc
         best = best or sc
         user += ("\n\nYOUR SCENE WAS TOO GENERIC OR TOO SHORT. Start with the main event of THIS headline, name its place type, people, "
                  "vehicles or objects, and write 100-150 words.")
-    return best      # Coimbatore: exactly one image per story
+    return best
 
 
 def bridge(action, **kw):
@@ -523,19 +534,19 @@ def make_images(group, log=None):
             msg = "image budget used up: the remaining stories get their images in the posting job"
             print(msg); log is not None and log.append(msg)
             break
-        prompts = [p.strip() for p in str(st.get("prompts", "")).split("\n---\n") if p.strip()][:1]      # Coimbatore: ONE image per story
+        prompts = [p.strip() for p in str(st.get("prompts", "")).split("\n---\n") if p.strip()][:pictures_per_reel()]      # owner 30 Oct: 2 per reel
         if not prompts:
             continue
         if IMG_DOWN[0]:
             st["auto_images"] = True
             continue
         sid = st.get("english_headline", "")[:40]
-        if IMG_MAX and sum(imagegen.USED.values()) + 1 > IMG_MAX:
+        if IMG_MAX and sum(imagegen.USED.values()) + len(prompts) > IMG_MAX:
             st["auto_images"] = True
             msg = f"image cap {IMG_MAX} per run reached (credit guard): the remaining stories get their images in the posting job"
             print(msg); log is not None and log.append(msg)
             break
-        reused = reuse_images(st, 1)
+        reused = reuse_images(st, len(prompts))
         if reused:
             st["images"] = reused
             print(f"earlier pictures reused for '{sid}'")
@@ -543,22 +554,31 @@ def make_images(group, log=None):
                 log.append(f"earlier picture reused for '{sid}' (matching news)")
             continue
         try:
-            pr = (STYLE + prompts[0])[:1800]
-            data = imagegen.generate(pr, seed=random.randint(1, 10**6))      # free first: Cloudflare -> NVIDIA; only then FAL schnell -> FAL dev
-            if not imagegen.matches(data, st.get("english_headline", "")):
-                try:      # a picture that does not show this news is made once more (free sources only), then the better one is used
-                    again = imagegen.generate(pr, seed=random.randint(1, 10**6), free_only=True)
-                    data = again if imagegen.matches(again, st.get("english_headline", "")) else data
+            urls = []
+            for n_, pr0 in enumerate(prompts):
+                pr = (STYLE + pr0)[:1800]
+                try:
+                    data = imagegen.generate(pr, seed=random.randint(1, 10**6))      # free first (Cloudflare, SiliconFlow, Together, Pollinations, NVIDIA); only then FAL
                 except Exception as e:
-                    print(f"second picture not made for '{sid}' (the first one is used): {str(e)[:120]}")
-            st["images"] = [_upload_image(data)]
-            print(f"image made for '{sid}'")
+                    if not urls:
+                        raise      # no cover: the story is handled as before (posting job retries)
+                    print(f"picture {n_ + 1} not made for '{sid}' (the reel uses the pictures made): {str(e)[:120]}")
+                    break
+                if not imagegen.matches(data, st.get("english_headline", "")):
+                    try:      # a picture that does not show this news is made once more (free sources only), then the better one is used
+                        again = imagegen.generate(pr, seed=random.randint(1, 10**6), free_only=True)
+                        data = again if imagegen.matches(again, st.get("english_headline", "")) else data
+                    except Exception as e:
+                        print(f"second try not made for '{sid}' (the first one is used): {str(e)[:120]}")
+                urls.append(_upload_image(data))
+            st["images"] = urls
+            print(f"images made: {len(urls)} for '{sid}'")
         except Exception as e:
             print(f"image NOT made for '{sid}': {str(e)[:200]}")
             st["auto_images"] = True      # the bridge queues it as "Auto images": the posting job tries the image models again within minutes
             if log is not None:
                 log.append(f"auto image failed for '{sid}': {str(e)[:120]} -> posting job retries")
-            again = reuse_images(st, 1)
+            again = reuse_images(st, len(prompts))
             if again:
                 st["images"] = again
                 if log is not None:
@@ -751,7 +771,7 @@ def file_story(art, res, errors_log, recent, scenes=None):
     if not scenes:
         scenes = [s for s in (d["scenes"] if isinstance(d["scenes"], list) else [d["scenes"]]) if isinstance(s, str) and s.strip()]
         scenes = scenes or [f"The main scene of this news: {d.get('english_headline', '')}, {d.get('location', '')}."]
-    prompts = IMG_TEMPLATE.format(scene=scenes[0].strip())      # Coimbatore: exactly ONE image prompt per story
+    prompts = "\n---\n".join(IMG_TEMPLATE.format(scene=x.strip()) for x in scenes[:pictures_per_reel()])      # owner 30 Oct: 2 pictures per reel
     ver = f"FREE-MODEL DRAFT ({model}) - not checked by Claude yet" + (f"; validator problems: {'; '.join(errors)}" if errors else "")
     return {"tamil_headline": d["tamil_headline"], "english_headline": d["english_headline"], "category": d["category"], "location": d["location"],
             "importance": d["importance"], "scope": d.get("scope", ""), "post_to": PAGE_NAME, "slides_spec": d["slides_spec"], "reel_script": d["reel_script"],
