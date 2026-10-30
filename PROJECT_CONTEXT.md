@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-30 | `799fd5e` | Remove Cerebras writer: it now needs a card (paid after $5 trial) |
 | 2026-10-30 | `fc91049` | Free writers: Gemini 3.6/3.5 first, Sarvam + Cerebras (skipped until keys), Gemma ready (off), Groq short retry on 413; remove GitHub Models, Mistral, OpenRouter, NVIDIA text; writer-compare test workflow |
 | 2026-10-30 | `acfe77d` | SiliconFlow removed (owner): not free for this account ('balance insufficient'); picture order Cloudflare -> Pollinations -> NVIDIA -> FAL |
 | 2026-10-30 | `c28740a` | image test output |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `1a53394` | Letters of another script inside Tamil words are repaired (voice and cards), flagged for rewrite, and cleaned in captions (Coimbatore RN-5, 7, 20, 22) |
 | 2026-10-29 | `cc7d734` | No made-up or empty stories (from Namakkal d24107f + b4f47be): skip headline-only pages, never file a draft mostly not grounded in its Tamil article, never file/post a story that only says the article has no details (RN-12 K.N. Nehru raid) |
 | 2026-10-29 | `ab700c1` | Coimbatore: refuse Tamil text with letters of another script (RN-20 headline had Chinese/Korean/Bengali letters) |
-| 2026-10-29 | `d788969` | Coimbatore: city rule checked again right after writing with the writer's location (RN-2 Valparai was written, then blocked at posting); proofread never turns a verb into another word (RN-1 நிர்வாகிக்க -> நிர்வாகம்) |
 <!-- recent-changes:end -->
