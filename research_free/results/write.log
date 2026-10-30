@@ -1,214 +1,99 @@
-writing [N]: சென்னை, கோவை உள்பட 5 இடங்களில் நவீன மையங்கள்: அவசர பத்திரப்ப
+writing [N]: இனி தமிழ்நாட்டுக்கு நிறைய விமானங்கள் வந்து போகும்
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-writing [N]: குடிநீருக்கு 20 மடங்கு கூடுதல் கட்டணம்: சூயஸ் நிறுவனத்தால் அ
-writing [N]: கற்பகம் ஜங்ஷனில் வாகன ஓட்டிகளுக்கு எப்போதும் சிக்கல்: 3 ஆண்ட
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (18s)
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 3 ('.2014-ம் ஆண்டு வரை, விமானங்களின் எண்ணிக்கையிலும், அதிக பயணிக'); 6 ('அடுத்து 6-வது இடத்தில் இருக்கும் கொல்கத்தா, சென்னை விமான நில'); 18 ('.நமது அண்டை மாநிலங்களான கர்நாடகாவில் 18 சதவீதமும், ஆந்திராவி')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
+ok gemini/gemini-3.5-flash (22s)
+attempt 2 gemini/gemini-3.5-flash: 1 problems
+  reel_script has 84 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (9s)
+attempt 3 gemini/gemini-3-flash-preview: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 3 ('.2014-ம் ஆண்டு வரை, விமானங்களின் எண்ணிக்கையிலும், அதிக பயணிக'); 6 ('அடுத்து 6-வது இடத்தில் இருக்கும் கொல்கத்தா, சென்னை விமான நில'); 18 ('.நமது அண்டை மாநிலங்களான கர்நாடகாவில் 18 சதவீதமும், ஆந்திராவி')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-dead for this round: groq/qwen/qwen3.8-27b
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-ok gemini/gemini-3-flash-preview (12s)
-attempt 1 gemini/gemini-3-flash-preview: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 4 ('அதன்படி ஓராண்டு ஆய்வு, 4 ஆண்டு கட்டுமானம், 21 ஆண்டு பராமரிக்'); 21 ('அதன்படி ஓராண்டு ஆய்வு, 4 ஆண்டு கட்டுமானம், 21 ஆண்டு பராமரிக்'); 100 ('மாநகராட்சி பகுதிகளில் 2013 முதல் வீடுகளுக்கு குறைந்தபட்சம் ர'); 15,000 ('மாநகராட்சி பகுதிகளில் 2013 முதல் வீடுகளுக்கு குறைந்தபட்சம் ர'); 628 ('பீளமேட்டை சேர்ந்த கோபால் என்பவருக்கு 628 கிலோ லிட்டருக்கு ரூ'); 204 ('புகாரளித்தவுடன் சரி மாநகராட்சியில் இருந்து ஊழியர் அழைத்து, ர')
+ok groq/openai/gpt-oss-120b (6s)
+attempt 4 groq/openai/gpt-oss-120b: 1 problems
+  missing key: scenes
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free models unavailable: no free model answered: None
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `or
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 ok anthropic/claude-haiku-5-5
 claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): மதுக்கரை ('நீலாம்பூர் – மதுக்கரை வரையிலான புறவழிச்சாலையில் இருபுறமும் வ'); நீலாம்பூர் ('நீலாம்பூர் – மதுக்கரை வரையிலான புறவழிச்சாலையில் இருபுறமும் வ'); 75 ('புறவழிச்சாலையை விஸ்தரிக்கும் வரை, ஜங்சனில் 75க்கு 50 மீட்டர்'); 50 ('புறவழிச்சாலையை விஸ்தரிக்கும் வரை, ஜங்சனில் 75க்கு 50 மீட்டர்'); 14 ('புறவழிச்சாலையை விஸ்தரிக்கும் வரை, ஜங்சனில் 75க்கு 50 மீட்டர்')
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-free models unavailable: no free model answered: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your c
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has numbers without their meaning (,000, ,000); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 10 ('சென்னை, கோவை உள்பட 5 இடங்களில் நவீன மையங்கள்: அவசர பத்திரப்ப')
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  reel_script says the 60-ward 24-hour supply contract was signed in 2018 and the work is still unfinished after 8 years, which matches the article, but the reel_script omits the detail that the deadline (August) was announced by the commissioner Ravi Teja — this is present, so no issue there; however, the reel_script says 'ரூ.200 செலுத்த வேண்டிய இடத்தில்' while the article says ரூ.200 வர வேண்டிய இடத்தில், a minor wording difference that is acceptable
-  caption says 'மாநகராட்சி ஊழியர் ரூ.204 செலுத்தினால் போதும் என்றதாகவும்' — the article says the employee called and said paying ரூ.204 is enough, which matches
-  caption says 'உங்கள் குடிநீர் ரசீதை சரிபார்த்து, பிழை இருந்தால் மாநகராட்சியில் புகார் அளியுங்கள்' — this advice is not in the article (invented call to action)
-  caption adds 'Coimbatore water bill 20 times higher Suez 24-hour supply | Coimbatore news' English line, which is not an article claim but is extra text beyond the allowed footer
-  reel_script omits the complainant's point that the family has only 3 members and the meter reading is wrong, and the commissioner's ரவி தேஜா statement is included but the councillor's claim that commercial receipts are given to homes is missing from reel_script
-  slides_spec hl2 'சூயஸ் நிறுவனம் மீது புகார்' and the caption's 'குடிநீர் ரசீது' wording are fine, but slides_spec line 'அதிகாரிகள்: யு.டி.ஐ.எஸ் சர்வர் கோளாறு சரிசெய்யப்படுகிறது' is accurate; the caption states 'கட்டணம் விதிப்பதில் தவறு இல்லை' which matches the article
-claude rewrite 1 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: reel_script says the 60-ward 24-hour supply contract was signed in 2018 and the work is still unfinished after 8 years, which matches the article, but the reel_script omits the detail that the deadline (August) was announced by the commissioner Ravi Teja — this is present, so no issue there; however, the reel_script says 'ரூ.200 செலுத்த வேண்டிய இடத்தில்' while the article says ரூ.200 வர வேண்டிய இடத்தில், a minor wording difference that is acceptable
-  fact-check: caption says 'மாநகராட்சி ஊழியர் ரூ.204 செலுத்தினால் போதும் என்றதாகவும்' — the article says the employee called and said paying ரூ.204 is enough, which matches
-  fact-check: caption says 'உங்கள் குடிநீர் ரசீதை சரிபார்த்து, பிழை இருந்தால் மாநகராட்சியில் புகார் அளியுங்கள்' — this advice is not in the article (invented call to action)
-  fact-check: caption adds 'Coimbatore water bill 20 times higher Suez 24-hour supply | Coimbatore news' English line, which is not an article claim but is extra text beyond the allowed footer
-  fact-check: reel_script omits the complainant's point that the family has only 3 members and the meter reading is wrong, and the commissioner's ரவி தேஜா statement is included but the councillor's claim that commercial receipts are given to homes is missing from reel_script
-  fact-check: slides_spec hl2 'சூயஸ் நிறுவனம் மீது புகார்' and the caption's 'குடிநீர் ரசீது' wording are fine, but slides_spec line 'அதிகாரிகள்: யு.டி.ஐ.எஸ் சர்வர் கோளாறு சரிசெய்யப்படுகிறது' is accurate; the caption states 'கட்டணம் விதிப்பதில் தவறு இல்லை' which matches the article
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 8 problems
-  reel_script says 'இந்த விபத்துகளில் 5 பேர் உயிரிழந்துள்ளனர்' — article says 5 deaths over 3 years, fine; but reel_script claims 'ரெட் சிக்னலை மீறி பஸ்கள், ஆட்டோக்கள், கனரக வாகனங்கள் செல்கின்றன' attributed without the article's 'தனியார்' qualifier (minor), and reel_script says 'நீலாம்பூர், மதுக்கரை பக்கம் வரும் வாகனங்கள்' whereas article describes the Neelambur–Madukkarai bypass, acceptable.
-  reel_script states 'அதிகபட்சமாக 2024ல் 15 விபத்துகள்' correctly, but the reel_script omits the important fact that the district collector Pavankumar refused permission for the roundabout/median plan, and omits the pedestrian problem and the 100–150 families living along the road.
-  caption says 'சில நேரங்களில் 2 முறை சிக்னலில் காத்திருக்க வேண்டியுள்ளது' — article says this, fine; but caption says 'சாலை வழியாக வருவோருக்கு 3 வினாடி மட்டுமே கிடைக்கிறது' which misstates the article: 3 seconds remain for road-side vehicles after the 27 seconds used by the flyover traffic, which is consistent, though the caption also says 'பாலத்தில் இருந்து வரும் வாகனங்களுக்கு 27 வினாடி போய்விடுவதால்' — acceptable.
-  caption says 'ரவுண்டானா' 75 by 50 metres and '14 மீட்டர் இடைவெளி' attributed to advice; article says these were advised before the Collector's refusal, consistent.
-  caption's last line 'கடங்கள்' is a misspelling of 'கடக்கவும்' and is ungrammatical Tamil ('பாதுகாப்பாக கடங்கள்' has no clear meaning as an imperative).
-  caption's 'Karpagam Junction Eachanari 23 accidents 5 deaths' English line is an extra addition not requested, but this falls under hashtags/footer area only loosely; reel_script's claim 'சாலை வழியாக வருவோருக்கு 3 வினாடி மட்டுமே கிடைக்கிறது' is stated as current fact while the article says it is the available remaining time, which matches.
-  slides_spec slide 3 'சிக்னலில் 30 வினாடி மட்டுமே அவகாசம்' and slide 4 'அதிகாரிகள் முடிவு' says '6 வழிச்சாலை விரிவாக்கத்தில் ஜங்சனில் மேம்பாலம்' — article says the decision was made by the National Highways Authority, not the traffic officials; the slide title 'அதிகாரிகள் முடிவு' attributes it to officials loosely, acceptable but imprecise.
-  reel_script says 'ஆறு வழிச்சாலை விரிவாக்கத்தின்போது ஜங்சனில் மேம்பாலம் கட்ட முடிவு செய்யப்பட்டுள்ளது' — correct per article, but reel_script omits the fact that the decision was made by the National Highways Authority.
-claude rewrite 2 anthropic/claude-haiku-5-5: 8 problems
-  fact-check: reel_script says 'இந்த விபத்துகளில் 5 பேர் உயிரிழந்துள்ளனர்' — article says 5 deaths over 3 years, fine; but reel_script claims 'ரெட் சிக்னலை மீறி பஸ்கள், ஆட்டோக்கள், கனரக வாகனங்கள் செல்கின்றன' attributed without the article's 'தனியார்' qualifier (minor), and reel_script says 'நீலாம்பூர், மதுக்கரை பக்கம் வரும் வாகனங்கள்' whereas article describes the Neelambur–Madukkarai bypass, acceptable.
-  fact-check: reel_script states 'அதிகபட்சமாக 2024ல் 15 விபத்துகள்' correctly, but the reel_script omits the important fact that the district collector Pavankumar refused permission for the roundabout/median plan, and omits the pedestrian problem and the 100–150 families living along the road.
-  fact-check: caption says 'சில நேரங்களில் 2 முறை சிக்னலில் காத்திருக்க வேண்டியுள்ளது' — article says this, fine; but caption says 'சாலை வழியாக வருவோருக்கு 3 வினாடி மட்டுமே கிடைக்கிறது' which misstates the article: 3 seconds remain for road-side vehicles after the 27 seconds used by the flyover traffic, which is consistent, though the caption also says 'பாலத்தில் இருந்து வரும் வாகனங்களுக்கு 27 வினாடி போய்விடுவதால்' — acceptable.
-  fact-check: caption says 'ரவுண்டானா' 75 by 50 metres and '14 மீட்டர் இடைவெளி' attributed to advice; article says these were advised before the Collector's refusal, consistent.
-  fact-check: caption's last line 'கடங்கள்' is a misspelling of 'கடக்கவும்' and is ungrammatical Tamil ('பாதுகாப்பாக கடங்கள்' has no clear meaning as an imperative).
-  fact-check: caption's 'Karpagam Junction Eachanari 23 accidents 5 deaths' English line is an extra addition not requested, but this falls under hashtags/footer area only loosely; reel_script's claim 'சாலை வழியாக வருவோருக்கு 3 வினாடி மட்டுமே கிடைக்கிறது' is stated as current fact while the article says it is the available remaining time, which matches.
-  fact-check: slides_spec slide 3 'சிக்னலில் 30 வினாடி மட்டுமே அவகாசம்' and slide 4 'அதிகாரிகள் முடிவு' says '6 வழிச்சாலை விரிவாக்கத்தில் ஜங்சனில் மேம்பாலம்' — article says the decision was made by the National Highways Authority, not the traffic officials; the slide title 'அதிகாரிகள் முடிவு' attributes it to officials loosely, acceptable but imprecise.
-  fact-check: reel_script says 'ஆறு வழிச்சாலை விரிவாக்கத்தின்போது ஜங்சனில் மேம்பாலம் கட்ட முடிவு செய்யப்பட்டுள்ளது' — correct per article, but reel_script omits the fact that the decision was made by the National Highways Authority.
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('அடுத்து 6-வது இடத்தில் இருக்கும் கொல்கத்தா, சென்னை விமான நில')
 ok anthropic/claude-haiku-5-5
 claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 10 ('சென்னை, கோவை உள்பட 5 இடங்களில் நவீன மையங்கள்: அவசர பத்திரப்ப')
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): கோவை ('தமிழ்நாட்டில் சென்னை, திருச்சி, கோவை, மதுரை, தூத்துக்குடி, ச'); 3 ('.2014-ம் ஆண்டு வரை, விமானங்களின் எண்ணிக்கையிலும், அதிக பயணிக'); 5 ('சென்னை 5-வது இடத்துக்கு தள்ளப்பட்டுவிட்டது.'); 6 ('அடுத்து 6-வது இடத்தில் இருக்கும் கொல்கத்தா, சென்னை விமான நில')
 ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 4 ('அதன்படி ஓராண்டு ஆய்வு, 4 ஆண்டு கட்டுமானம், 21 ஆண்டு பராமரிக்'); 21 ('அதன்படி ஓராண்டு ஆய்வு, 4 ஆண்டு கட்டுமானம், 21 ஆண்டு பராமரிக்'); 100 ('மாநகராட்சி பகுதிகளில் 2013 முதல் வீடுகளுக்கு குறைந்தபட்சம் ர'); 15,000 ('மாநகராட்சி பகுதிகளில் 2013 முதல் வீடுகளுக்கு குறைந்தபட்சம் ர')
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('தேசிய நெடுஞ்சாலை ஆணையத்தால், 6 வழிச்சாலையாக விஸ்தரிக்கும்போத'); 14 ('புறவழிச்சாலையை விஸ்தரிக்கும் வரை, ஜங்சனில் 75க்கு 50 மீட்டர்')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
+ok groq/openai/gpt-oss-120b (6s)
+factcheck by groq/openai/gpt-oss-120b: 2 problems
+  Reel script missing the important fact that First Minister Vijay announced the VAT reduction
+  Slide 4 line "புதிய விமான நிலைய திட்டம் நீண்ட நாட்களாக இழுபறி" is grammatically incorrect (should be "இழுபறியில்")
 claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has numbers without their meaning (,000, ,000, ,000); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 10 ('சென்னை, கோவை உள்பட 5 இடங்களில் நவீன மையங்கள்: அவசர பத்திரப்ப'); கோவை ('சென்னை, கோவை உள்பட 5 இடங்களில் நவீன மையங்கள்: அவசர பத்திரப்ப')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
+  fact-check: Reel script missing the important fact that First Minister Vijay announced the VAT reduction
+  fact-check: Slide 4 line "புதிய விமான நிலைய திட்டம் நீண்ட நாட்களாக இழுபறி" is grammatically incorrect (should be "இழுபறியில்")
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok groq/openai/gpt-oss-120b (6s)
+proofread rejected (3 problems)
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+switching away from groq/openai/gpt-oss-120b for 10 min
+ok groq/qwen/qwen3.8-27b (1s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 ok anthropic/claude-haiku-5-5
 imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  reel_script writes ages as newspaper shorthand (கட்டணம், 15,); say it as a news reader: '12 வயது மகன் ராஜா', 'கவுசிக் (14 வயது)' -> '14 வயதான கவுசிக்'
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 204 ('புகாரளித்தவுடன் சரி மாநகராட்சியில் இருந்து ஊழியர் அழைத்து, ர')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-ok anthropic/claude-haiku-5-5
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for '23 accidents and 5 deaths in 3 years at '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-2228","first":"RN-80"}
+images made: 2 for 'More flights to Tamil Nadu ahead: aviati'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0220","first":"RN-84"}
 posting job started at once
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Drinking water bills up to 20 times high'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-2228","first":"RN-81"}
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'New registration centres in Chennai, Coi'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-2229","first":"RN-82"}
-writing [N]: ஆர்டர் செய்தால் வீடு தேடி வரும் பலகாரங்கள்! ஸ்ரீ கிருஷ்ணா ஸ்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free models unavailable: no free model answered: None
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
-  reel_script has English words (buykrishnasweets, com, krishnasweets) - the voice cannot read them; write them in Tamil letters
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-  reel_script has 112 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, com, krishnasweets) - rewrite so it does not happen again
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  reel_script has English words (buykrishnasweets, krishnasweets) - the voice cannot read them; write them in Tamil letters
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-  known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, krishnasweets) - rewrite so it does not happen again
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 5 problems
-  reel_script has English words (buykrishnasweets, krishnasweets) - the voice cannot read them; write them in Tamil letters
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-  reel_script has 113 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, krishnasweets) - rewrite so it does not happen again
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok anthropic/claude-haiku-5-5
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Sweets delivered to your doorstep: Sri K'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-2230","first":"RN-83"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
-write round: 6 news waiting in the queue (written in priority order)
-candidate filter: collected=5, already filed=1
-to write: 5 Coimbatore district candidates (max 200 stories)
-candidates waiting: 5 Coimbatore; time left 29 min
-try (N) manual=False: கற்பகம் ஜங்ஷனில் வாகன ஓட்டிகளுக்கு எப்போதும் சிக்கல்: 3 ஆண்ட
-try (N) manual=False: குடிநீருக்கு 20 மடங்கு கூடுதல் கட்டணம்: சூயஸ் நிறுவனத்தால் அ
-try (N) manual=False: சென்னை, கோவை உள்பட 5 இடங்களில் நவீன மையங்கள்: அவசர பத்திரப்ப
+write round: 1 news waiting in the queue (written in priority order)
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 200 stories)
+candidates waiting: 1 Coimbatore; time left 29 min
+try (N) manual=False: இனி தமிழ்நாட்டுக்கு நிறைய விமானங்கள் வந்து போகும்
 auto images: 1 of 1 stories ({'pollinations': 2})
 posting job started at once
-try (N) manual=False: சர்வதேச கராத்தே, சிலம்பப் போட்டி; 19 பதக்கங்களை அள்ளிய கோவை 
-auto images: 1 of 1 stories ({'pollinations': 4})
-auto images: 1 of 1 stories ({'pollinations': 6})
-try (N) manual=False: ஆர்டர் செய்தால் வீடு தேடி வரும் பலகாரங்கள்! ஸ்ரீ கிருஷ்ணா ஸ்
-skip (N) similar to a filed story: சர்வதேச கராத்தே, சிலம்பப் போட்டி; 19 பதக்கங்களை அள
-auto images: 1 of 1 stories ({'pollinations': 8})
-candidate loop ended: left 0, tried={'N': 5}, done={'N': 4}, time left 26 min
-filed: 4 Coimbatore district stories (target 200), reels only
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 26 min
+filed: 1 Coimbatore district stories (target 200), reels only
 queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":0,"updated":4} 
-stories: 4
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 1
