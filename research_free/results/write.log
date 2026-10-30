@@ -1,6 +1,6 @@
 writing [N]: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.8-flash: gemini gemini-3.8-flash 429: {
   "error": {
     "code": 429,
@@ -11,6 +11,10 @@ fail gemini/gemini-3.7-flash: gemini gemini-3.7-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.7-flash
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -22,25 +26,28 @@ fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
 poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 fail cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast: cloudflare @cf/meta/llama-3.3-70b-instruct-fp8-fast 429: {"errors":[{"message":"AiError: AiError: you have used up your 
 dead for this round: cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast
 fail cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiError: you have used up y
 dead for this round: cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct
 free models unavailable: no free model answered: cloudflare @cf/mistralai/mistral-small-3.1-24b-instruct 429: {"errors":[{"message":"AiError: AiE
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 15, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 2 ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 15, ('த.வெ.க., ஆட்சி அமைத்த பின், ஆக., 15, அக்., 2 ஆகிய இரண்டு நாட'); 2 ('த.வெ.க., ஆட்சி அமைத்த பின், ஆக., 15, அக்., 2 ஆகிய இரண்டு நாட')
 ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.')
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  reel_script has 70 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); தடாகம் ('பெரியநாயக்கன்பாளையம் ஒன்றியத்தில், பிளிச்சி, நாயக்கன்பாளையம்'); கணுவாய் ('பெரியநாயக்கன்பாளையம் ஒன்றியத்தில், பிளிச்சி, நாயக்கன்பாளையம்'); கணுவாய் ('இதில், கணுவாய் மற்றும் ஒன்னிபாளையம் ஊராட்சிகள் தற்போது புதித')
 gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/qwen/qwen3.8-27b (4s)
-proofread by groq/qwen/qwen3.8-27b: 1 problems
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1090. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
 not Coimbatore city news after writing (Periyanaickenpalayam): கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
 earlier stories still waiting for images: []
 instagram check: 37 recent posts read from the page
@@ -50,7 +57,7 @@ to write: 1 Coimbatore district candidates (max 200 stories)
 candidates waiting: 1 Coimbatore; time left 29 min
 try (N) manual=False: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
 NOT filed (N) கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள: all free models failed: not Coimbatore city news (Periyanaickenpalayam)
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 29 min
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 28 min
 filed: 0 Coimbatore district stories (target 200), reels only
 queue: 1 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
