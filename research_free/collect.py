@@ -558,7 +558,7 @@ def make_images(group, log=None):
             for n_, pr0 in enumerate(prompts):
                 pr = (STYLE + pr0)[:1800]
                 try:
-                    data = imagegen.generate(pr, seed=random.randint(1, 10**6))      # free first (Cloudflare, SiliconFlow, Together, Pollinations, NVIDIA); only then FAL
+                    data = imagegen.generate(pr, seed=random.randint(1, 10**6))      # free first (Cloudflare, Pollinations, NVIDIA); only then FAL
                 except Exception as e:
                     if not urls:
                         raise      # no cover: the story is handled as before (posting job retries)
