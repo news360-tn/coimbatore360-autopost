@@ -1,14 +1,27 @@
 writing [N]: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+writing [N]: ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்திய மாணவர்க
+writing [N]: ஜவுளித்துறையை ஊக்குவிக்கிறது மத்திய அரசு; சொல்கிறது ஐடிஎப்
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-writing [N]: மினி சாட்டிலைட்டை விண்ணில் ஏவிய கோவை அரசுப் பள்ளி மாணவர்கள்!
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
@@ -24,210 +37,154 @@ fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-dead for this round: gemini/gemini-3-flash-preview
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok groq/qwen/qwen3.8-27b (4s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-writing [N]: எஸ்.என்.எஸ். ராஜலட்சுமி கல்லூரியில் கருத்தரங்கம்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
 ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  source/outlet name or link appears: தினமலர்
+  numbers not found in the article: 8, 9
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): தொண்டாமுத்தூர் ('அரையிறுதி தகுதி சுற்றுக்கான போட்டி, நேற்று வேடப்பட்டி, தொண்ட')
+ok gemini/gemini-3-flash-preview (12s)
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1000 ('திருச்சியில் இதுவரை 1000-க்கும் மேற்பட்ட பாம்புகளைப் பத்திரம')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  Reel script says the python was rescued 'by a snake rescuer' and omits that the rescuer is Prakash, which is fine, but the caption adds 'ஓணம்பாளையம் ... புகுந்த' consistent; however the caption says 'பாம்பு பிடி வீரர் பிரகாஷ் வரவழைக்கப்பட்டார்' – acceptable. Main issue: the caption states 'மீட்டார்' for the snake being rescued before the officials' numbers were tried, fine; but the reel_script says the python 'was rescued' and 'released in the same area' – the article supports this.
-  Slide 'வனத்துறை எண்கள் தொடர்பில்' and 'பாம்பு விடுவிப்பு' slide says 'வீடுகளில் பாம்பு புகுந்தால் தன்னார்வ மீட்பு' – this slide line is an incomplete, ungrammatical Tamil sentence with no clear meaning.
-  Slide 'பாம்பு விடுவிப்பு' line 'அதிகாரிகள் தொடர்பு கிடைக்காததால் பாம்பு அதே பகுதியில்' is an incomplete sentence (missing verb 'விடுவிக்கப்பட்டது'), so it has no clear meaning.
-  Reel script omits the detail that the python was injured in some parts and the rescuer's experience (1000+ snakes in Trichy), which is minor; more importantly the reel script omits that the rescuer is a Trichy fire department/forest department experienced person – not a required fact.
-  Caption says 'பாம்பு பிடி வீரர் பிரகாஷ் வரவழைக்கப்பட்டார்' but the article says the rescuer was Prakash who now runs a Cane Corso dog breeding centre in Coimbatore; caption's 'திருச்சியில் 1000-க்கும் மேற்பட்ட பாம்புகளை மீட்ட அனுபவம்' is supported by the article.
-  Caption line 'ℹ️ மக்கள் கவனத்திற்கு: வீடுகளில் பாம்பு புகுந்தால் தன்னார்வ பாம்பு மீட்பு வீரர்களைத் தொடர்புகொள்ளலாம்' is supported by the article's statement about volunteer rescuers.
-claude rewrite 1 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: Reel script says the python was rescued 'by a snake rescuer' and omits that the rescuer is Prakash, which is fine, but the caption adds 'ஓணம்பாளையம் ... புகுந்த' consistent; however the caption says 'பாம்பு பிடி வீரர் பிரகாஷ் வரவழைக்கப்பட்டார்' – acceptable. Main issue: the caption states 'மீட்டார்' for the snake being rescued before the officials' numbers were tried, fine; but the reel_script says the python 'was rescued' and 'released in the same area' – the article supports this.
-  fact-check: Slide 'வனத்துறை எண்கள் தொடர்பில்' and 'பாம்பு விடுவிப்பு' slide says 'வீடுகளில் பாம்பு புகுந்தால் தன்னார்வ மீட்பு' – this slide line is an incomplete, ungrammatical Tamil sentence with no clear meaning.
-  fact-check: Slide 'பாம்பு விடுவிப்பு' line 'அதிகாரிகள் தொடர்பு கிடைக்காததால் பாம்பு அதே பகுதியில்' is an incomplete sentence (missing verb 'விடுவிக்கப்பட்டது'), so it has no clear meaning.
-  fact-check: Reel script omits the detail that the python was injured in some parts and the rescuer's experience (1000+ snakes in Trichy), which is minor; more importantly the reel script omits that the rescuer is a Trichy fire department/forest department experienced person – not a required fact.
-  fact-check: Caption says 'பாம்பு பிடி வீரர் பிரகாஷ் வரவழைக்கப்பட்டார்' but the article says the rescuer was Prakash who now runs a Cane Corso dog breeding centre in Coimbatore; caption's 'திருச்சியில் 1000-க்கும் மேற்பட்ட பாம்புகளை மீட்ட அனுபவம்' is supported by the article.
-  fact-check: Caption line 'ℹ️ மக்கள் கவனத்திற்கு: வீடுகளில் பாம்பு புகுந்தால் தன்னார்வ பாம்பு மீட்பு வீரர்களைத் தொடர்புகொள்ளலாம்' is supported by the article's statement about volunteer rescuers.
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
-  reel_script talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  tamil_headline talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  known issue meta_article: headline talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  The reel_script and caption say the 55 students took part in the launch, but the article only says the 55 government school students contributed to the initiative; the article says the device was made by students of the Govt middle school, which is fine, but the caption and script say the 'mini satellite' was launched by students 'in Coimbatore' generally while the article specifies Thudiyalur Corporation Middle School; minor, see next item.
-  The reel_script states the 55 students 'took part', which is supported by 'contribution', so no issue there; however the reel_script omits the key fact that the instrument was made by Coimbatore government school students collectively from the article's lead, while the draft attributes making it only to Thudiyalur Corporation middle school students, which is not stated in the article (the article says students of a government middle school in Coimbatore and launched from Thudiyalur Corporation middle school).
-  The slides_spec loc field 'துடியலூர், கோவை' and the reel_script 'துடியலூர் மாநகராட்சி நடுநிலைப் பள்ளி மாணவர்கள் இதனை உருவாக்கினர்' attribute both building and launching to the Thudiyalur school, a combination of two facts the article presents separately (the students are from a government middle school; the launch was from Thudiyalur Corporation middle school).
-  The caption states 'இந்த அறிவியல் திறமையைப் பார்த்து' and the reel_script omits the article's concluding claim that the students' dream may reach new heights in India's space research; this is editorial framing rather than a factual claim, so not flagged.
-attempt 1 groq/qwen/qwen3.8-27b: 4 problems
-  fact-check: The reel_script and caption say the 55 students took part in the launch, but the article only says the 55 government school students contributed to the initiative; the article says the device was made by students of the Govt middle school, which is fine, but the caption and script say the 'mini satellite' was launched by students 'in Coimbatore' generally while the article specifies Thudiyalur Corporation Middle School; minor, see next item.
-  fact-check: The reel_script states the 55 students 'took part', which is supported by 'contribution', so no issue there; however the reel_script omits the key fact that the instrument was made by Coimbatore government school students collectively from the article's lead, while the draft attributes making it only to Thudiyalur Corporation middle school students, which is not stated in the article (the article says students of a government middle school in Coimbatore and launched from Thudiyalur Corporation middle school).
-  fact-check: The slides_spec loc field 'துடியலூர், கோவை' and the reel_script 'துடியலூர் மாநகராட்சி நடுநிலைப் பள்ளி மாணவர்கள் இதனை உருவாக்கினர்' attribute both building and launching to the Thudiyalur school, a combination of two facts the article presents separately (the students are from a government middle school; the launch was from Thudiyalur Corporation middle school).
-  fact-check: The caption states 'இந்த அறிவியல் திறமையைப் பார்த்து' and the reel_script omits the article's concluding claim that the students' dream may reach new heights in India's space research; this is editorial framing rather than a factual claim, so not flagged.
+free models unavailable: no free model answered: None
+ok gemini/gemini-3.5-flash (19s)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free models unavailable: no free model answered: None
+free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
-  reel_script talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  tamil_headline talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  known issue meta_article: headline talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
-  reel_script talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  tamil_headline talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  known issue meta_article: headline talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+factcheck by anthropic/claude-haiku-5-5: 0 problems
+attempt 1 gemini/gemini-3.5-flash: 0 problems
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  caption has letters of another script (്) - write only Tamil (and English names)
+  letters of another script inside Tamil words: ് - write every word only in Tamil letters
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The draft says the python was 'காயம் இருந்தது' in some places, which matches the article, so no issue there; however, the reel_script says the python was released 'அதே பகுதியில்', which matches the article's 'அதே பகுதியில்' — no problem found in that sentence.
+  The reel_script and slides omit that the python was 'காயம் அடைந்த' rescued as an injured snake; the phrase 'பாம்பை பத்திரமாக மீட்டு' is used but the injury-related rescue context is only partially conveyed.
+  The caption says Prakash 'திருச்சி தீயணைப்புத் துறை, வனத்துறையுடன் இணைந்து பணியாற்றியவர்' — the article says he worked with the Trichy fire department and forest department, so this matches; no issue.
+  The reel_script states the python 'குடியிருப்புக்குள் புகுந்தது' and the article's statement that the python entered the residential area is accurate; no issue.
+  The reel_script says the python was 'மழைக்காலம் என்பதால் வனப்பகுதியில் இருந்து வெளியேறிய' — the article says this, so no issue.
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The draft says the python was 'காயம் இருந்தது' in some places, which matches the article, so no issue there; however, the reel_script says the python was released 'அதே பகுதியில்', which matches the article's 'அதே பகுதியில்' — no problem found in that sentence.
+  fact-check: The reel_script and slides omit that the python was 'காயம் அடைந்த' rescued as an injured snake; the phrase 'பாம்பை பத்திரமாக மீட்டு' is used but the injury-related rescue context is only partially conveyed.
+  fact-check: The caption says Prakash 'திருச்சி தீயணைப்புத் துறை, வனத்துறையுடன் இணைந்து பணியாற்றியவர்' — the article says he worked with the Trichy fire department and forest department, so this matches; no issue.
+  fact-check: The reel_script states the python 'குடியிருப்புக்குள் புகுந்தது' and the article's statement that the python entered the residential area is accurate; no issue.
+  fact-check: The reel_script says the python was 'மழைக்காலம் என்பதால் வனப்பகுதியில் இருந்து வெளியேறிய' — the article says this, so no issue.
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
 imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  The article says the python was rescued by a snake-rescue expert and then released in the same area; the draft's slides_spec and caption say the forest department numbers were unreachable, consistent with article. However, the draft reel_script says the snake was 'காயம்' injured in some places — matches article. Main issue: the article says the rescuer Prakash was currently running a Cane Corso dog-breeding centre in Coimbatore, which is omitted, but that is not a required fact.
-  The reel_script states the python 'entered' and was rescued and released, but omits that the rescuer was Prakash's background from Trichy fire department and forest department — the reel_script mentions Prakash only as 'பாம்பு பிடி வீரர்' and Trichy experience, which is acceptable.
-  The reel_script says the forest department numbers were 'இணையதளத்தில் உள்ள' — caption and slides say the numbers listed on the website were not updated ('புதுப்பிக்கப்படவில்லை' in slide 2), which is a slight inference beyond the article's statement that the numbers were not reachable.
-  The caption says 'Trichy fire department and forest department' collaborated — the article says Prakash worked with Trichy fire department and forest department; the draft wording mixes this with the rescue event, which is acceptable.
-  The slide line 'அதிகாரிகளைத் தொடர்பு கொள்ள முடியாததால் பாம்பு அதே பகுதியில்' is truncated and does not form a clear complete Tamil sentence.
-claude rewrite 3 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: The article says the python was rescued by a snake-rescue expert and then released in the same area; the draft's slides_spec and caption say the forest department numbers were unreachable, consistent with article. However, the draft reel_script says the snake was 'காயம்' injured in some places — matches article. Main issue: the article says the rescuer Prakash was currently running a Cane Corso dog-breeding centre in Coimbatore, which is omitted, but that is not a required fact.
-  fact-check: The reel_script states the python 'entered' and was rescued and released, but omits that the rescuer was Prakash's background from Trichy fire department and forest department — the reel_script mentions Prakash only as 'பாம்பு பிடி வீரர்' and Trichy experience, which is acceptable.
-  fact-check: The reel_script says the forest department numbers were 'இணையதளத்தில் உள்ள' — caption and slides say the numbers listed on the website were not updated ('புதுப்பிக்கப்படவில்லை' in slide 2), which is a slight inference beyond the article's statement that the numbers were not reachable.
-  fact-check: The caption says 'Trichy fire department and forest department' collaborated — the article says Prakash worked with Trichy fire department and forest department; the draft wording mixes this with the rescue event, which is acceptable.
-  fact-check: The slide line 'அதிகாரிகளைத் தொடர்பு கொள்ள முடியாததால் பாம்பு அதே பகுதியில்' is truncated and does not form a clear complete Tamil sentence.
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  source/outlet name or link appears: தினமலர்
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 150 ('கோவை, திருப்பூர், நீலகிரி மாவட்டத்தை சேர்ந்த 150 க்கும் மேற்')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+not Coimbatore city news after writing (Thondamuthur): ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்திய மாணவர்க
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  reel_script has 82 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1000 ('திருச்சியில் இதுவரை 1000-க்கும் மேற்பட்ட பாம்புகளைப் பத்திரம')
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 proofread skipped: no free model answered: None
 not Coimbatore city news after writing (Thondamuthur): “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 3 problems
-  reel_script says the probe was launched by 'கோவை மாணவர்கள்' and 'இந்தக் கருவி' without problems, but the slides_spec line 'ஹீலியம் பலூன் மூலம் விண்ணில் ஏவப்பட்டது' follows 'ஏவப்பட்டது' already in the first line, creating redundant wording; not a factual error
-  reel_script omits the article's fact that the probe was a 'வளிமண்டல ஆய்வுக் கருவி' (atmospheric research device) and treats it loosely as 'விண்வெளி ஆய்வுக் கருவி' (space research device), which differs from the article's description
-  reel_script states 'கருவியைத் தேடல் குழுவினர்' rescue details are fine, but the slides_spec line 'கோவை அரசுப் பள்ளி மாணவர்கள் உருவாக்கிய கருவி ஏவப்பட்டது' and the headline call it a 'மினி சாட்டிலைட்' (mini satellite), while the article describes it as a 'மினி சாட்டிலைட் போன்ற' (satellite-like) atmospheric device, so the draft overstates it as an actual satellite
-claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  fact-check: reel_script says the probe was launched by 'கோவை மாணவர்கள்' and 'இந்தக் கருவி' without problems, but the slides_spec line 'ஹீலியம் பலூன் மூலம் விண்ணில் ஏவப்பட்டது' follows 'ஏவப்பட்டது' already in the first line, creating redundant wording; not a factual error
-  fact-check: reel_script omits the article's fact that the probe was a 'வளிமண்டல ஆய்வுக் கருவி' (atmospheric research device) and treats it loosely as 'விண்வெளி ஆய்வுக் கருவி' (space research device), which differs from the article's description
-  fact-check: reel_script states 'கருவியைத் தேடல் குழுவினர்' rescue details are fine, but the slides_spec line 'கோவை அரசுப் பள்ளி மாணவர்கள் உருவாக்கிய கருவி ஏவப்பட்டது' and the headline call it a 'மினி சாட்டிலைட்' (mini satellite), while the article describes it as a 'மினி சாட்டிலைட் போன்ற' (satellite-like) atmospheric device, so the draft overstates it as an actual satellite
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  Reel script says the rocket/instrument was launched 'from Tudiyalur municipal middle school' — article says launched from Tudiyalur Corporation middle school; acceptable, but the slides claim 'அக்டோபர் 30' location 'துடியலூர்' is fine; no mismatch found in this item
-  Slide 'கருவி மீட்பு' and reel script say the instrument was retrieved by the search team — article supports this, but the reel script omits the arrest/result-type facts only if any exist; none in article
-  Reel script says 'மேலும் செய்திகளுக்கு...' fixed closing — not a problem
-  Reel script states the instrument 'ஏவினர்' by students directly; article says it was launched (ஏவப்பட்டது) from the school without stating students physically launched it — minor overstatement
-  Slide 'என்ன ஆய்வு?' claims the sensors 'கணக்கிடப்பட்டன' and particles 'சேகரிக்கப்பட்டன' as completed results — article only says the instrument was equipped with these, an invented outcome
-  Slide 'கருவி மீட்பு' line 'சுமார் 80 கிலோமீட்டர் தொலைவில் கருவி தரையிறங்கியது' is supported, but reel script says 'மைனஸ் 60 டிகிரி செல்சியஸ் குளிரையும் கருவி தாங்கியது' as a result, which the article presents as a capability ('தாங்கி'), acceptable
-claude rewrite 3 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: Reel script says the rocket/instrument was launched 'from Tudiyalur municipal middle school' — article says launched from Tudiyalur Corporation middle school; acceptable, but the slides claim 'அக்டோபர் 30' location 'துடியலூர்' is fine; no mismatch found in this item
-  fact-check: Slide 'கருவி மீட்பு' and reel script say the instrument was retrieved by the search team — article supports this, but the reel script omits the arrest/result-type facts only if any exist; none in article
-  fact-check: Reel script says 'மேலும் செய்திகளுக்கு...' fixed closing — not a problem
-  fact-check: Reel script states the instrument 'ஏவினர்' by students directly; article says it was launched (ஏவப்பட்டது) from the school without stating students physically launched it — minor overstatement
-  fact-check: Slide 'என்ன ஆய்வு?' claims the sensors 'கணக்கிடப்பட்டன' and particles 'சேகரிக்கப்பட்டன' as completed results — article only says the instrument was equipped with these, an invented outcome
-  fact-check: Slide 'கருவி மீட்பு' line 'சுமார் 80 கிலோமீட்டர் தொலைவில் கருவி தரையிறங்கியது' is supported, but reel script says 'மைனஸ் 60 டிகிரி செல்சியஸ் குளிரையும் கருவி தாங்கியது' as a result, which the article presents as a capability ('தாங்கி'), acceptable
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'International seminar held at SNS Rajala'
-ok anthropic/claude-haiku-5-5
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1833","first":"RN-65"}
+images made: 2 for 'Govt lowers textile PLI turnover thresho'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1835","first":"RN-67"}
 posting job started at once
-writing [N]: ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்திய மாணவர்க
+writing [N]: கோவை அணிக்கு சாம்பியன் பட்டம் | Coimbatore | Athletes Win 19
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 free models unavailable: no free model answered: None
+writing [N]: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free models unavailable: no free model answered: None
 ok anthropic/claude-haiku-5-5
 claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  source/outlet name or link appears: தினமலர்
-  numbers not found in the article: 8, 9
-image match: True The photo shows school students in uniform watching a silver helium balloon carrying a payload box (mini satellite instr
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+  reel_script has 45 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  not grounded: only 18% of the words come from the article (e.g. வென்றுள்ளது, சர்வதேச, கராத்தே, மற்றும், சிலம்ப); use the article's own words and facts
 ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): தொண்டாமுத்தூர் ('அரையிறுதி தகுதி சுற்றுக்கான போட்டி, நேற்று வேடப்பட்டி, தொண்ட')
-images made: 2 for 'Coimbatore government school students' m'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1834","first":"RN-66"}
+claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
+  slides must have 3 or 4 items
+  reel_script has 43 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  not grounded: only 21% of the words come from the article (e.g. வென்றுள்ளது, சர்வதேச, கராத்தே, மற்றும், சிலம்ப); use the article's own words and facts
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.')
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  source/outlet name or link appears: தினமலர்
-  numbers not found in the article: 8, 9
+  reel_script has 55 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  not grounded: only 19% of the words come from the article (e.g. சர்வதேச, கராத்தே, மற்றும், சிலம்பப், போட்டிகளில்); use the article's own words and facts
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 proofread skipped: no free model answered: None
-not Coimbatore city news after writing (Thondamuthur): ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்திய மாணவர்க
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  reel_script has 83 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.'); 22, ('தமிழகத்தில், ஜன., 26, மார்ச், 22, மே 1, ஆக., 15, அக்., 2 நவ.')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+not Coimbatore city news after writing (பெரியநாயக்கன்பாளையம்): கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Coimbatore team wins championship title '
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1836","first":"RN-68"}
 write_stories.yml started
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
-write round: 9 news waiting in the queue (written in priority order)
-candidate filter: collected=8, already filed=1
-to write: 8 Coimbatore district candidates (max 200 stories)
-candidates waiting: 8 Coimbatore; time left 29 min
+write round: 5 news waiting in the queue (written in priority order)
+candidate filter: collected=5
+to write: 5 Coimbatore district candidates (max 200 stories)
+candidates waiting: 5 Coimbatore; time left 29 min
 try (N) manual=False: “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண்கள் இயங்க
-try (N) manual=False: 47,000 நாய்களுக்கு கருத்தடை அறுவைச் சிகிச்சை
-try (N) manual=False: எஸ்.என்.எஸ். ராஜலட்சுமி கல்லூரியில் கருத்தரங்கம்
-skip (N) same event as RN-27: 47,000 நாய்களுக்கு கருத்தடை அறுவைச் சிகிச்சை
-try (N) manual=False: மினி சாட்டிலைட்டை விண்ணில் ஏவிய கோவை அரசுப் பள்ளி மாணவர்கள்!
+try (N) manual=False: ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்திய மாணவர்க
+try (N) manual=False: ஜவுளித்துறையை ஊக்குவிக்கிறது மத்திய அரசு; சொல்கிறது ஐடிஎப்
 auto images: 1 of 1 stories ({'pollinations': 2})
 posting job started at once
-try (N) manual=False: ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்திய மாணவர்க
-NOT filed (N) “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண: all free models failed: not Coimbatore city news (Thondamuthur)
-auto images: 1 of 1 stories ({'pollinations': 4})
-try (N) manual=False: ஜவுளித்துறையை ஊக்குவிக்கிறது மத்திய அரசு; சொல்கிறது ஐடிஎப்
 try (N) manual=False: கோவை அணிக்கு சாம்பியன் பட்டம் | Coimbatore | Athletes Win 19
-skip (N) could not open: ஜவுளித்துறையை ஊக்குவிக்கிறது மத்திய அரசு; சொல்கிறத [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] 502 Server Error: Bad Gateway for url: https://www.dinamalar.com/news/tamil-nadu
-try (N) manual=False: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
-skip (N) could not open: கோவை அணிக்கு சாம்பியன் பட்டம் | Coimbatore | Athle [https://www.dinamalar.com/videos/district-news-videos/coimba] 502 Server Error: Bad Gateway for url: https://www.dinamalar.com/videos/district
-skip (N) could not open: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள [https://l-www.dinamalar.com/news/tamil-nadu-district-news-co] 502 Server Error: Bad Gateway for url: https://l-www.dinamalar.com/news/tamil-na
+NOT filed (N) “10 அடி மலைப்பாம்பு மீட்பு” – கோவையில் வனத்துறை எண: all free models failed: not Coimbatore city news (Thondamuthur)
 NOT filed (N) ‘பட்டம்’ படித்தால் கட்டாயம் பரிசு போட்டியில் அசத்த: all free models failed: not Coimbatore city news (Thondamuthur)
-candidate loop ended: left 0, tried={'N': 8}, done={'N': 2}, time left 28 min
+try (N) manual=False: கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள்
+auto images: 1 of 1 stories ({'pollinations': 4})
+NOT filed (N) கிராமசபை கூட்டத்தில் தயார்! கேள்விகள் எழுப்ப மக்கள: all free models failed: not Coimbatore city news (பெரியநாயக்கன்பாளையம்)
+candidate loop ended: left 0, tried={'N': 5}, done={'N': 2}, time left 28 min
 filed: 2 Coimbatore district stories (target 200), reels only
-queue: 5 news waiting to be written
+queue: 3 news waiting to be written
 write_stories.yml started
-All News sheet: {"ok":true,"added":0,"updated":7} 
+All News sheet: {"ok":true,"added":0,"updated":5} 
 stories: 2
