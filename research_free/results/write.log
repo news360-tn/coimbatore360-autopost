@@ -1,10 +1,121 @@
+writing [N]: “1-வயது குழந்தையை விற்ற கணவன்” – கோவையில் 11 ஆண்டுகளுக்குப் 
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+writing [N]: ஐப்பசி பஞ்சமி: ஜலகண்டேஸ்வரர் சித்தர் பீடத்தில் வாராஹி அம்மனு
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.8-flash
+fail gemini/gemini-3.8-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.8-flash
+fail gemini/gemini-3.7-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.7-flash
+fail gemini/gemini-3.7-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.7-flash
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+ok gemini/gemini-3.6-flash (17s)
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (2s)
+factcheck by gemini/gemini-3.6-flash: 0 problems
+attempt 1 gemini/gemini-3.6-flash: 0 problems
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+switching away from gemini/gemini-3.6-flash for 10 min
+fail ghmodels/openai/gpt-4.1-mini: Expecting value: line 1 column 1 (char 0)
+poor answer - skipped for 30 min: ghmodels/openai/gpt-4.1-mini
+fail ghmodels/openai/gpt-4o-mini: Expecting value: line 1 column 1 (char 0)
+poor answer - skipped for 30 min: ghmodels/openai/gpt-4o-mini
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+dead for this round: groq/qwen/qwen3.8-27b
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  reel_script must have no English letters (write English words and abbreviations in Tamil script)
+  reel_script has 113 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 225
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('"1-வயது குழந்தையை விற்ற கணவன்" - கோவையில் 11 ஆண்டுகளுக்குப் '); 11 ('“1-வயது குழந்தையை விற்ற கணவன்” – கோவையில் 11 ஆண்டுகளுக்குப் '); 07 ('கடந்த 28.07.2015 அன்று, வழக்கின் புகார்தாரரான மீனா என்பவரை, '); 11 ('​11 ஆண்டுகளுக்குப் பிறகு கிடைத்த இந்த அதிரடித் தீர்ப்பு, குழ'); 11 ('சாலை ஓரம் மயங்கி கிடந்தவர் மருத்துவமனையில் சேர்த்த நிலையில் ')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 225
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 07 ('கடந்த 28.07.2015 அன்று, வழக்கின் புகார்தாரரான மீனா என்பவரை, ')
+ok gemini/gemini-3.6-flash (15s)
+proofread rejected (1 problems)
+  sentence 1 (one-line story) has 25 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
+  reel_script must have no English letters (write English words and abbreviations in Tamil script)
+  reel_script has 120 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  numbers not found in the article: 225
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('"1-வயது குழந்தையை விற்ற கணவன்" - கோவையில் 11 ஆண்டுகளுக்குப் '); 11 ('“1-வயது குழந்தையை விற்ற கணவன்” – கோவையில் 11 ஆண்டுகளுக்குப் '); 25 ('​ சொந்த மகளையே கன்னியாகுமரிக்கு சுற்றுலா அழைத்துச் செல்வதாகக'); 07 ('கடந்த 28.07.2015 அன்று, வழக்கின் புகார்தாரரான மீனா என்பவரை, '); 11 ('​11 ஆண்டுகளுக்குப் பிறகு கிடைத்த இந்த அதிரடித் தீர்ப்பு, குழ'); 11 ('சாலை ஓரம் மயங்கி கிடந்தவர் மருத்துவமனையில் சேர்த்த நிலையில் ')
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash
+image match: False The photo shows a regular prayer (aarti) before a goddess idol, not Varahi Amman (who is boar-faced), and there is no sp
+imagegen: siliconflow 402: {"code":30001,"message":"Sorry, your account balance is insufficient","data":null}
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+second try not made for 'Aippasi Panchami: Special abhishekam and' (the first one is used): all image models failed: all image models failed: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+image match: False The photo shows a general ritual plate with a mound of grains and diyas, rather than the specific Chandana Kaappu (sanda
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+second try not made for 'Aippasi Panchami: Special abhishekam and' (the first one is used): all image models failed: all image models failed: black-forest-labs/flux.1-dev 500: Internal Server Error
+images made: 2 for 'Aippasi Panchami: Special abhishekam and'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1243","first":"RN-53"}
+posting job started at once
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+image match: True The photo depicts an Indian courtroom scene with accused individuals standing before the court alongside police officers
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+image match: False The image is a generic stock or AI-generated illustration of legal files and police officers, not an actual photo from t
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
+second try not made for 'Husband and 5 accomplices sentenced to 1' (the first one is used): all image models failed: all image models failed: black-forest-labs/flux.1-dev 500: Internal Server Error
+images made: 2 for 'Husband and 5 accomplices sentenced to 1'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261030-1251","first":"RN-54"}
 earlier stories still waiting for images: []
 instagram check: 37 recent posts read from the page
-write round: 1 news waiting in the queue (written in priority order)
-candidate filter: checked earlier=1
-to write: 0 Coimbatore district candidates (max 200 stories)
-candidates waiting: 0 Coimbatore; time left 29 min
-candidate loop ended: left 0, tried={'N': 0}, done={'N': 0}, time left 29 min
-filed: 0 Coimbatore district stories (target 200), reels only
-queue: 0 news waiting to be written 
-stories: 0
+write round: 3 news waiting in the queue (written in priority order)
+candidate filter: collected=2, already filed=1
+to write: 2 Coimbatore district candidates (max 200 stories)
+candidates waiting: 2 Coimbatore; time left 29 min
+try (N) manual=False: “1-வயது குழந்தையை விற்ற கணவன்” – கோவையில் 11 ஆண்டுகளுக்குப் 
+try (N) manual=False: ஐப்பசி பஞ்சமி: ஜலகண்டேஸ்வரர் சித்தர் பீடத்தில் வாராஹி அம்மனு
+auto images: 1 of 1 stories ({'siliconflow': 1, 'fal-ai/flux/schnell': 1})
+posting job started at once
+auto images: 1 of 1 stories ({'siliconflow': 1, 'fal-ai/flux/schnell': 3})
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 2}, time left 8 min
+filed: 2 Coimbatore district stories (target 200), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":0,"updated":2} 
+stories: 2
