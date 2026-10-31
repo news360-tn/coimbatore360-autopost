@@ -1,110 +1,13 @@
-writing [N]: காய்ச்சலுக்கு சிறுமி பலி
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.6-flash (28s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.5-flash
-ok gemini/gemini-3-flash-preview (42s)
-factcheck by gemini/gemini-3-flash-preview: 2 problems
-  The headline and the first sentence of the reel script incorrectly state that the girl died in Vathambacheri, Coimbatore, whereas the article states she died in Dharapuram.
-  The name of the girl (Jayashree) mentioned in the article is missing from the reel script.
-attempt 1 gemini/gemini-3.6-flash: 2 problems
-  fact-check: The headline and the first sentence of the reel script incorrectly state that the girl died in Vathambacheri, Coimbatore, whereas the article states she died in Dharapuram.
-  fact-check: The name of the girl (Jayashree) mentioned in the article is missing from the reel script.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
-ok groq/qwen/qwen3.8-27b (4s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-ok groq/openai/gpt-oss-120b (4s)
-factcheck by groq/openai/gpt-oss-120b: 2 problems
-  Caption includes a specific date (Oct 30) that is not mentioned in the article
-  Reel script uses masculine verb forms for the female child (e.g., “அழைத்துச் செல்லப்பட்டார்”, “அனுமதிக்கப்பட்டார்”), which is grammatically incorrect
-attempt 2 groq/qwen/qwen3.8-27b: 2 problems
-  fact-check: Caption includes a specific date (Oct 30) that is not mentioned in the article
-  fact-check: Reel script uses masculine verb forms for the female child (e.g., “அழைத்துச் செல்லப்பட்டார்”, “அனுமதிக்கப்பட்டார்”), which is grammatically incorrect
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-free models unavailable: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 3 problems
-  Caption adds an invented hospital line: 'மருத்துவமனை: தாராபுரம் அரசு மருத்துவமனை' names the hospital as the place of death/treatment as a standalone fact, though the article only says she was admitted to Tharapuram govt hospital and died there while under intensive care; the caption also states 'தீவிர சிகிச்சை அளிக்கப்பட்டு வந்த நிலையில்' without the article's 'நேற்று' date reference (not an error by itself).
-  Caption adds an unsupported public advisory: 'மக்கள் கவனத்திற்கு: காய்ச்சல் அறிகுறி இருந்தால் உடனடியாக மருத்துவரை அணுகுங்கள்' is not in the article.
-  Caption's full-story paragraph says 'தாராபுரத்தில் காய்ச்சலுக்கு 6 வயது சிறுமி ஜெயஸ்ரீ உயிரிழந்தார்' while the article places Jayashree's residence in Vadhampacheri (Coimbatore district), and the caption wording 'கோவை மாவட்டம் வதம்பச்சேரியைச் சேர்ந்த' is consistent; however the English line 'Tarapuram girl dies of fever, six admitted | Coimbatore news' is an added English translation not in the article (minor).
-claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
-  fact-check: Caption adds an invented hospital line: 'மருத்துவமனை: தாராபுரம் அரசு மருத்துவமனை' names the hospital as the place of death/treatment as a standalone fact, though the article only says she was admitted to Tharapuram govt hospital and died there while under intensive care; the caption also states 'தீவிர சிகிச்சை அளிக்கப்பட்டு வந்த நிலையில்' without the article's 'நேற்று' date reference (not an error by itself).
-  fact-check: Caption adds an unsupported public advisory: 'மக்கள் கவனத்திற்கு: காய்ச்சல் அறிகுறி இருந்தால் உடனடியாக மருத்துவரை அணுகுங்கள்' is not in the article.
-  fact-check: Caption's full-story paragraph says 'தாராபுரத்தில் காய்ச்சலுக்கு 6 வயது சிறுமி ஜெயஸ்ரீ உயிரிழந்தார்' while the article places Jayashree's residence in Vadhampacheri (Coimbatore district), and the caption wording 'கோவை மாவட்டம் வதம்பச்சேரியைச் சேர்ந்த' is consistent; however the English line 'Tarapuram girl dies of fever, six admitted | Coimbatore news' is an added English translation not in the article (minor).
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  slides_spec slide 1 says the girl was 'தாராபுரம் அரசு மருத்துவமனையில் தீவிர சிகிச்சையில் இருந்தார்' (in intensive care at Tharapuram govt hospital) — the article only says she was given intensive treatment there, which is consistent, but slide 1 also says 'சிறுமி ஜெயஸ்ரீ, வதம்பச்சேரியைச் சேர்ந்தவர்' which is correct; no error here, so this item is withdrawn.
-  slides_spec hl2 and slide 3 say the other 6 people are in the ICU/intensive care unit ('ஐசியூவில்', 'தீவிர சிகிச்சைப் பிரிவில்'), which matches the article's 'தீவிர சிகிச்சைப் பிரிவில் அனுமதிக்கப்பட்டுள்ளனர்'.
-  slides_spec slide 4 says 'விவரங்களுக்கு அரசு மருத்துவமனையை அணுகுங்கள்' (contact the government hospital for details), an invented instruction not in the article.
-  reel_script says the child was in 'தாராபுரம் அரசு மருத்துவமனையில்' and the death occurred there, but the article only states the girl died; the place of death is not specified, so 'சிகிச்சை பலனின்றி' and the implied location are slightly beyond the article.
-claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: slides_spec slide 1 says the girl was 'தாராபுரம் அரசு மருத்துவமனையில் தீவிர சிகிச்சையில் இருந்தார்' (in intensive care at Tharapuram govt hospital) — the article only says she was given intensive treatment there, which is consistent, but slide 1 also says 'சிறுமி ஜெயஸ்ரீ, வதம்பச்சேரியைச் சேர்ந்தவர்' which is correct; no error here, so this item is withdrawn.
-  fact-check: slides_spec hl2 and slide 3 say the other 6 people are in the ICU/intensive care unit ('ஐசியூவில்', 'தீவிர சிகிச்சைப் பிரிவில்'), which matches the article's 'தீவிர சிகிச்சைப் பிரிவில் அனுமதிக்கப்பட்டுள்ளனர்'.
-  fact-check: slides_spec slide 4 says 'விவரங்களுக்கு அரசு மருத்துவமனையை அணுகுங்கள்' (contact the government hospital for details), an invented instruction not in the article.
-  fact-check: reel_script says the child was in 'தாராபுரம் அரசு மருத்துவமனையில்' and the death occurred there, but the article only states the girl died; the place of death is not specified, so 'சிகிச்சை பலனின்றி' and the implied location are slightly beyond the article.
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 0 problems
-claude rewrite 3 anthropic/claude-haiku-5-5: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for '6-year-old girl dies of fever in Tharapu'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-2036","first":"RN-104"}
-posting job started at once
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 source dinamalar list: 15 items
 source google 'கோவை': 100 items
 source bing 'கோவை': 12 items
-source google 'கோயம்புத்தூர்': 37 items
+source google 'கோயம்புத்தூர்': 36 items
 source bing 'கோயம்புத்தூர்': 12 items
-source google 'பொள்ளாச்சி': 12 items
-source bing 'பொள்ளாச்சி': 11 items
-source google 'மேட்டுப்பாளையம்': 9 items
+source google 'பொள்ளாச்சி': 7 items
+source bing 'பொள்ளாச்சி': 12 items
+source google 'மேட்டுப்பாளையம்': 11 items
 source bing 'மேட்டுப்பாளையம்': 12 items
 source google 'சூலூர்': 0 items
 source bing 'சூலூர்': 12 items
@@ -126,16 +29,16 @@ source google 'காரமடை': 3 items
 source bing 'காரமடை': 12 items
 source google 'கருமத்தம்பட்டி': 0 items
 source bing 'கருமத்தம்பட்டி': 3 items
-source google 'கோவை மாவட்டம்': 22 items
+source google 'கோவை மாவட்டம்': 45 items
 source bing 'கோவை மாவட்டம்': 11 items
-source google 'கோயம்புத்தூர் மாவட்டம்': 27 items
+source google 'கோயம்புத்தூர் மாவட்டம்': 31 items
 source bing 'கோயம்புத்தூர் மாவட்டம்': 12 items
-source google 'கோவை மின்தடை': 9 items
+source google 'கோவை மின்தடை': 14 items
 source bing 'கோவை மின்தடை': 12 items
 source google 'பொள்ளாச்சி மின்தடை': 0 items
 source bing 'பொள்ளாச்சி மின்தடை': 3 items
 source google 'மேட்டுப்பாளையம் மின்தடை': 3 items
-source bing 'மேட்டுப்பாளையம் மின்தடை': 0 items
+source bing 'மேட்டுப்பாளையம் மின்தடை': 12 items
 source google 'சூலூர் மின்தடை': 0 items
 source bing 'சூலூர் மின்தடை': 2 items
 source google 'கோயம்புத்தூர் மின்தடை': 11 items
@@ -146,13 +49,13 @@ source google 'கோவை மாவட்ட நிர்வாகம்': 5 i
 source bing 'கோவை மாவட்ட நிர்வாகம்': 12 items
 source google 'கோவை வேலைவாய்ப்பு முகாம்': 0 items
 source bing 'கோவை வேலைவாய்ப்பு முகாம்': 2 items
-source google 'கோவை ஆட்சேர்ப்பு': 20 items
+source google 'கோவை ஆட்சேர்ப்பு': 21 items
 source bing 'கோவை ஆட்சேர்ப்பு': 1 items
 source google 'கோவை சிறப்பு முகாம்': 2 items
 source bing 'கோவை சிறப்பு முகாம்': 12 items
 source google 'கோவை குறைதீர் கூட்டம்': 1 items
 source bing 'கோவை குறைதீர் கூட்டம்': 2 items
-source google 'Coimbatore power shutdown': 6 items
+source google 'Coimbatore power shutdown': 5 items
 source bing 'Coimbatore power shutdown': 10 items
 source google 'Coimbatore collector': 4 items
 source bing 'Coimbatore collector': 12 items
@@ -164,10 +67,10 @@ source google 'சரவணம்பட்டி': 2 items
 source bing 'சரவணம்பட்டி': 12 items
 source google 'உக்கடம்': 1 items
 source bing 'உக்கடம்': 12 items
-source google 'காந்திபுரம்': 1 items
+source google 'காந்திபுரம்': 2 items
 source bing 'காந்திபுரம்': 12 items
 source google 'துடியலூர்': 2 items
-source bing 'துடியலூர்': 8 items
+source bing 'துடியலூர்': 7 items
 source google 'பெரியநாயக்கன்பாளையம்': 0 items
 source bing 'பெரியநாயக்கன்பாளையம்': 10 items
 source google 'சிறுமுகை': 0 items
@@ -186,15 +89,15 @@ source google 'மருதமலை': 0 items
 source bing 'மருதமலை': 12 items
 source google 'Coimbatore': 100 items
 source bing 'Coimbatore': 12 items
-source google 'Kovai': 100 items
+source google 'Kovai': 96 items
 source bing 'Kovai': 12 items
-source google 'Pollachi': 7 items
-source bing 'Pollachi': 12 items
+source google 'Pollachi': 6 items
+source bing 'Pollachi': 11 items
 source google 'Mettupalayam': 9 items
 source bing 'Mettupalayam': 12 items
 source google 'Valparai': 0 items
 source bing 'Valparai': 12 items
-source google 'Sulur': 19 items
+source google 'Sulur': 15 items
 source bing 'Sulur': 12 items
 source google 'Singanallur': 0 items
 source bing 'Singanallur': 12 items
@@ -207,7 +110,7 @@ source bing 'மதுக்கரை மின்தடை': 1 items
 source google 'வால்பாறை மின்தடை': 0 items
 source bing 'வால்பாறை மின்தடை': 3 items
 source google 'காரமடை மின்தடை': 0 items
-source bing 'காரமடை மின்தடை': 1 items
+source bing 'காரமடை மின்தடை': 0 items
 source google 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source bing 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source google 'பேரூர் மின்தடை': 0 items
@@ -220,8 +123,8 @@ source google 'பெரியநாயக்கன்பாளையம் ம�
 source bing 'பெரியநாயக்கன்பாளையம் மின்தடை': 0 items
 source google 'கோவை மின்தடை நாளை': 7 items
 source bing 'கோவை மின்தடை நாளை': 10 items
-source google 'கோவை மின்தடை பகுதிகள்': 9 items
-source bing 'கோவை மின்தடை பகுதிகள்': 11 items
+source google 'கோவை மின்தடை பகுதிகள்': 13 items
+source bing 'கோவை மின்தடை பகுதிகள்': 12 items
 source google 'Coimbatore power cut tomorrow': 3 items
 source bing 'Coimbatore power cut tomorrow': 10 items
 source google 'Pollachi power cut': 0 items
@@ -232,23 +135,23 @@ source google தினமலர் 'கோவை': 100 items
 source bing தினமலர் 'கோவை': 12 items
 source google தினமலர் 'கோயம்புத்தூர்': 100 items
 source bing தினமலர் 'கோயம்புத்தூர்': 12 items
-source google தினமலர் 'பொள்ளாச்சி': 31 items
+source google தினமலர் 'பொள்ளாச்சி': 23 items
 source bing தினமலர் 'பொள்ளாச்சி': 12 items
 source google தினமணி 'கோவை': 100 items
 source bing தினமணி 'கோவை': 12 items
-source google தினமணி 'கோயம்புத்தூர்': 88 items
+source google தினமணி 'கோயம்புத்தூர்': 86 items
 source bing தினமணி 'கோயம்புத்தூர்': 12 items
 source google தினமணி 'பொள்ளாச்சி': 4 items
 source bing தினமணி 'பொள்ளாச்சி': 8 items
-source google கோவை மெயில் 'கோவை': 18 items
+source google கோவை மெயில் 'கோவை': 19 items
 source bing கோவை மெயில் 'கோவை': 12 items
-source google கோவை மெயில் 'கோயம்புத்தூர்': 18 items
+source google கோவை மெயில் 'கோயம்புத்தூர்': 19 items
 source bing கோவை மெயில் 'கோயம்புத்தூர்': 0 items
 source google கோவை மெயில் 'பொள்ளாச்சி': 11 items
 source bing கோவை மெயில் 'பொள்ளாச்சி': 0 items
-source google அரசியல் டுடே 'கோவை': 55 items
+source google அரசியல் டுடே 'கோவை': 53 items
 source bing அரசியல் டுடே 'கோவை': 0 items
-source google அரசியல் டுடே 'கோயம்புத்தூர்': 55 items
+source google அரசியல் டுடே 'கோயம்புத்தூர்': 53 items
 source bing அரசியல் டுடே 'கோயம்புத்தூர்': 0 items
 source google அரசியல் டுடே 'பொள்ளாச்சி': 0 items
 source bing அரசியல் டுடே 'பொள்ளாச்சி': 0 items
@@ -258,33 +161,33 @@ source google தினகரன் 'கோயம்புத்தூர்': 1
 source bing தினகரன் 'கோயம்புத்தூர்': 12 items
 source google தினகரன் 'பொள்ளாச்சி': 2 items
 source bing தினகரன் 'பொள்ளாச்சி': 0 items
-source google தினத்தந்தி 'கோவை': 48 items
+source google தினத்தந்தி 'கோவை': 43 items
 source bing தினத்தந்தி 'கோவை': 12 items
 source google தினத்தந்தி 'கோயம்புத்தூர்': 23 items
 source bing தினத்தந்தி 'கோயம்புத்தூர்': 12 items
 source google தினத்தந்தி 'பொள்ளாச்சி': 5 items
-source bing தினத்தந்தி 'பொள்ளாச்சி': 2 items
-source google மாலைமலர் 'கோவை': 24 items
+source bing தினத்தந்தி 'பொள்ளாச்சி': 3 items
+source google மாலைமலர் 'கோவை': 23 items
 source bing மாலைமலர் 'கோவை': 12 items
-source google மாலைமலர் 'கோயம்புத்தூர்': 16 items
+source google மாலைமலர் 'கோயம்புத்தூர்': 15 items
 source bing மாலைமலர் 'கோயம்புத்தூர்': 12 items
-source google மாலைமலர் 'பொள்ளாச்சி': 1 items
+source google மாலைமலர் 'பொள்ளாச்சி': 2 items
 source bing மாலைமலர் 'பொள்ளாச்சி': 5 items
-source google தந்தி டிவி 'கோவை': 50 items
+source google தந்தி டிவி 'கோவை': 55 items
 source bing தந்தி டிவி 'கோவை': 12 items
-source google தந்தி டிவி 'கோயம்புத்தூர்': 29 items
+source google தந்தி டிவி 'கோயம்புத்தூர்': 30 items
 source bing தந்தி டிவி 'கோயம்புத்தூர்': 1 items
 source google தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source bing தந்தி டிவி 'பொள்ளாச்சி': 2 items
-source google இந்து தமிழ் 'கோவை': 40 items
+source bing தந்தி டிவி 'பொள்ளாச்சி': 1 items
+source google இந்து தமிழ் 'கோவை': 38 items
 source bing இந்து தமிழ் 'கோவை': 12 items
 source google இந்து தமிழ் 'கோயம்புத்தூர்': 4 items
 source bing இந்து தமிழ் 'கோயம்புத்தூர்': 2 items
 source google இந்து தமிழ் 'பொள்ளாச்சி': 1 items
 source bing இந்து தமிழ் 'பொள்ளாச்சி': 2 items
-source google பாலிமர் 'கோவை': 2 items
+source google பாலிமர் 'கோவை': 3 items
 source bing பாலிமர் 'கோவை': 1 items
-source google பாலிமர் 'கோயம்புத்தூர்': 2 items
+source google பாலிமர் 'கோயம்புத்தூர்': 3 items
 source bing பாலிமர் 'கோயம்புத்தூர்': 4 items
 source google பாலிமர் 'பொள்ளாச்சி': 0 items
 source bing பாலிமர் 'பொள்ளாச்சி': 0 items
@@ -298,54 +201,63 @@ source google நியூஸ்18 தமிழ் 'கோவை': 100 items
 source bing நியூஸ்18 தமிழ் 'கோவை': 12 items
 source google நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 100 items
 source bing நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 12 items
-source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 0 items
+source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 2 items
 source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 4 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 15 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 16 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 8 items
-source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 12 items
+source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 11 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 1 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
 source தினமணி கோவை: 5 items
 source தினகரன் கோவை: 10 items
 source பாலிமர் கோவை: 2 items
 source இந்து தமிழ் கோவை: 9 items
-Tamil outlets only: kept 2193 of 2639 items
-all sources: 2193 items -> 1044 different news
-candidate filter: not written=404, not Coimbatore district news (state-wide=247, checked earlier=115, checked earlier=96, already filed=63, old=59, not written=13, collected=10, checked earlier=10, checked earlier=9, checked earlier=8, checked earlier=8, not written=1, not written=1
-to write: 10 Coimbatore district candidates (max 3 stories)
-round: top 3 of 10 candidates
-candidates waiting: 10 Coimbatore; time left 51 min
+Tamil outlets only: kept 2218 of 2664 items
+all sources: 2218 items -> 1031 different news
+candidate filter: not written=401, not Coimbatore district news (state-wide=235, checked earlier=108, checked earlier=101, already filed=63, old=60, not written=16, collected=15, checked earlier=9, checked earlier=8, checked earlier=7, checked earlier=6, not written=1, not written=1
+to write: 15 Coimbatore district candidates (max 3 stories)
+round: top 3 of 15 candidates
+candidates waiting: 15 Coimbatore; time left 52 min
 try (N) manual=False: பல மாதங்களுக்கு பின் சிக்கிய கைதி.. கோவை மத்திய சிறை வளாகத்த
-try (N) manual=False: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும் புதிய ca
-try (N) manual=False: காய்ச்சலுக்கு சிறுமி பலி
+try (N) manual=False: வீட்டின் கதவை உடைத்து நகை, பணம் திருடியவர் கைது
+try (N) manual=False: 150 நாட்களில் பணம் இரட்டிப்பாகும் எனக் கூறி ரூ.400 கோடி மோசட
 skip (N) could not open: பல மாதங்களுக்கு பின் சிக்கிய கைதி.. கோவை மத்திய சி [https://tamil.news18.com/tamil-nadu/prisoner-escapes-from-co] 403 Client Error: Forbidden for url: https://tamil.news18.com/tamil-nadu/prisone
-try (N) manual=False: தப்பிய வழக்கில் கைதான கைதி மீண்டும் ‘எஸ்கேப்’: எஸ்.ஐ., உட்பட
-skip (N) same event as RN-99: தப்பிய வழக்கில் கைதான கைதி மீண்டும் ‘எஸ்கேப்’: எஸ்
-try (N) manual=False: ஞானேஷ் குமாரை தப்பிக்க விடமாட்டோம்: ராகுல் காந்தி உறுதி!
-skip (N) no Coimbatore place in article: ஞானேஷ் குமாரை தப்பிக்க விடமாட்டோம்: ராகுல் காந்தி 
+try (N) manual=False: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும் புதிய ca
+skip (N) no Coimbatore place in article: வீட்டின் கதவை உடைத்து நகை, பணம் திருடியவர் கைது
+try (N) manual=False: வடகிழக்குப் பருவமழையால் கிடைத்த இயற்கையின் கு(கொ)டை. இடம்: க
+skip (N) no Coimbatore place in article: தேனி சிறையில் 17 கைதிகள் ஓட்டம்:  13 பேர் மீண்டும்
 try (N) manual=False: கோவை சிறையிலிருந்து யாரும் தப்பிக்கவில்லை: ஏடிஜிபி பேட்டி!
 skip (N) could not open: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும [https://news.google.com/rss/articles/CBMisgFBVV95cUxPTzRvOHF] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/techn
-try (N) manual=False: வேலூரில் சிறைத்துறை உணவகம், பெட்ரோல் பங்க் திடீர் மூடல்!
+try (N) manual=False: Special Report | தப்பிய ஜெகஜால கைதி.. ஆட்டம் கண்டகோவை சிறை..
 skip (N) similar to a filed story: கோவை சிறையிலிருந்து யாரும் தப்பிக்கவில்லை: ஏடிஜிபி
+try (N) manual=False: தவெக ஆட்சியில் சிறைக் கைதிகள் தப்பியோடுவது சர்வசாதாரணமாகி ..
+skip (N) no Coimbatore place in article: 150 நாட்களில் பணம் இரட்டிப்பாகும் எனக் கூறி ரூ.400
+try (N) manual=False: “தவெக ஆட்சியில் சிறையில் உள்ள குற்றவாளிகள் சுதந்திரமாக வாழ்க
+skip (N) no Coimbatore place in article: தவெக ஆட்சியில் சிறைக் கைதிகள் தப்பியோடுவது சர்வசாத
+try (N) manual=False: கோவை மத்திய சிறையில் இன்று கைதி தப்பி ஓட்டம்: தவெக ஆட்சியில்
+skip (N) could not open: “தவெக ஆட்சியில் சிறையில் உள்ள குற்றவாளிகள் சுதந்தி [https://news.google.com/rss/articles/CBMirwFBVV95cUxNckRfOWV] 403 Client Error: Forbidden for url: https://tamil.news18.com/tamil-nadu/nainar-
+try (N) manual=False: Kovai Prison Escape| மீண்டும் ஒரு கைதி தப்பியோட்டம்.. எஸ்பி 
+skip (N) similar to a filed story: Special Report | தப்பிய ஜெகஜால கைதி.. ஆட்டம் கண்டக
 try (N) manual=False: Coimbatore BIG BREAKING | மீண்டும் மீண்டும் கைதி தப்பியோட்டம
+skip (N) similar to a filed story: கோவை மத்திய சிறையில் இன்று கைதி தப்பி ஓட்டம்: தவெக
+try (N) manual=False: மீண்டும் ஓர் அதிர்ச்சி சம்பவம்... கோவை சிறையில் இருந்து கைதி
 skip (N) could not open: Coimbatore BIG BREAKING | மீண்டும் மீண்டும் கைதி த [https://news.google.com/rss/articles/CBMimgFBVV95cUxOZ2U1Zzh] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
 try (N) manual=False: JUST NOW | கோவையில் தப்பிய கைதி! - 6 தனிப்படை அமைப்பு | Pris
-skip (N) no Coimbatore place in article: வேலூரில் சிறைத்துறை உணவகம், பெட்ரோல் பங்க் திடீர் 
-try (N) manual=False: மீண்டும் ஓர் அதிர்ச்சி சம்பவம்... கோவை சிறையில் இருந்து கைதி
-skip (N) could not open: JUST NOW | கோவையில் தப்பிய கைதி! - 6 தனிப்படை அமைப [https://news.google.com/rss/articles/CBMimwFBVV95cUxNcEp4aFl] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+skip (N) only a headline, 10 words of text: Kovai Prison Escape| மீண்டும் ஒரு கைதி தப்பியோட்டம [https://www.thanthitv.com/news/breaking/another-prisoner-esc]
+try (N) manual=False: ஞானேஷ் குமாரை தப்பிக்க விடமாட்டோம்: ராகுல் காந்தி உறுதி!
+skip (N) no Coimbatore place in article: ஞானேஷ் குமாரை தப்பிக்க விடமாட்டோம்: ராகுல் காந்தி 
 skip (N) could not open: மீண்டும் ஓர் அதிர்ச்சி சம்பவம்... கோவை சிறையில் இர [https://news.google.com/rss/articles/CBMixwFBVV95cUxNQTFfa3g] 403 Client Error: Forbidden for url: https://tamil.news18.com/tamil-nadu/after-t
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
-posting job started at once
-candidate loop ended: left 0, tried={'N': 10}, done={'N': 1}, time left 46 min
-filed: 1 Coimbatore district stories (target 3), reels only
-queue: 5 news waiting to be written
+skip (N) could not open: JUST NOW | கோவையில் தப்பிய கைதி! - 6 தனிப்படை அமைப [https://news.google.com/rss/articles/CBMimwFBVV95cUxNcEp4aFl] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+candidate loop ended: left 0, tried={'N': 15}, done={'N': 0}, time left 51 min
+filed: 0 Coimbatore district stories (target 3), reels only
+queue: 6 news waiting to be written
 All News sheet: {"ok":true,"added":9,"updated":51}
 All News sheet: {"ok":true,"added":2,"updated":58}
-All News sheet: {"ok":true,"added":9,"updated":51}
-All News sheet: {"ok":true,"added":21,"updated":39}
+All News sheet: {"ok":true,"added":7,"updated":53}
+All News sheet: {"ok":true,"added":15,"updated":45}
 All News sheet: {"ok":true,"added":5,"updated":55}
+All News sheet: {"ok":true,"added":6,"updated":54}
 All News sheet: {"ok":true,"added":4,"updated":56}
-All News sheet: {"ok":true,"added":3,"updated":57}
-All News sheet: {"ok":true,"added":0,"updated":5} 
-stories: 1
+All News sheet: {"ok":true,"added":0,"updated":6} 
+stories: 0
