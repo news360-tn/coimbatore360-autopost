@@ -1,12 +1,14 @@
-writing [N]: குழந்தைகளை தாக்கும் நியூமோகாக்கல் நோய்
-writing [N]: ஆந்திரா ஸ்டைல் காரசாரமான மட்டன் கறி
-writing [N]: தூக்கத்தில் பக்கவாதம் ஏற்படும் ஆபத்து யாருக்கு அதிகம்?
+writing [N]: ரூ.11.15 கோடி போலி ஜிஎஸ்டி ரசீது மோசடி: கோவை தொழிலதிபருக்கு 
+writing [N]: CM Vijay | Actress Ambika | "எல்லா பிரச்சினைக்கும் CMஏ வரணும
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -17,334 +19,122 @@ fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-ok gemini/gemini-3-flash-preview (10s)
-attempt 1 gemini/gemini-3-flash-preview: 1 problems
-  numbers not found in the article: 6
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
+dead for this round: gemini/gemini-3.5-flash
 fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
-ok gemini/gemini-3-flash-preview (13s)
-attempt 2 gemini/gemini-3-flash-preview: 1 problems
-  numbers not found in the article: 6
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-ok groq/openai/gpt-oss-120b (7s)
-attempt 1 groq/openai/gpt-oss-120b: 3 problems
+dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 1 groq/qwen/qwen3.8-27b: 3 problems
   missing key: reel_script
   missing key: caption
   missing key: scenes
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-ok groq/qwen/qwen3.8-27b (3s)
-attempt 1 groq/qwen/qwen3.8-27b: 1 problems
-  reel_script has 68 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-switching away from groq/openai/gpt-oss-120b for 10 min
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-switching away from groq/openai/gpt-oss-120b for 10 min
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 73 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+dead for this round: groq/qwen/qwen3.8-27b
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your p
 ok anthropic/claude-haiku-5-5
 claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has 71 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 7 ('தூக்கத்தில் பக்கவாதம் ஏற்படுவதற்கான காரணங்கள், காலையில் எழுந')
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  not grounded: location 'வீட்டு' is not in the article
-  not grounded: location 'சமையல்' is not in the article
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 84 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  slides must have 3 or 4 items
+  reel_script has 37 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
-  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
-  not grounded: location 'பொது' is not in the article
-  not grounded: location 'அறிவுரை' is not in the article
-  known issue meta_article: caption talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  reel_script has 53 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
 ok anthropic/claude-haiku-5-5
 factcheck by anthropic/claude-haiku-5-5: 5 problems
-  tamil_headline mentions "தயிர், மிளகாய்த்தூள், மசாலா" which is fine, but slides_spec hl2 is a broken/truncated fragment "<b>மிளகாய்த்தூள் 1.5" with an unclosed tag and no clear meaning as a headline
-  slides_spec 'ஊறவைக்கும் முறை' slide lists ingredients as 'தயிர், இஞ்சி-பூண்டு, மஞ்சள், மிளகாய்த்தூள், உப்பு' without the verb or clear instruction, and the first slide line 'மட்டன், தயிர், இஞ்சி-பூண்டு பேஸ்ட் சேர்க்கவும்' wrongly tells the viewer to add mutton, yogurt and paste under the ingredients list, mixing ingredient list with instructions
-  caption states 'தனி மிளகாய்த்தூள் 1.5 ஸ்பூன் சேர்த்தால் காரம் அதிகமாக இருக்கும்' which is an added claim not clearly supported, and the caption omits the 1.5 spoon note context from the article
-  reel_script omits the article's final result statement that the dish is ready to serve; more importantly it states the mutton is marinated with 'மஞ்சள், மிளகாய்த்தூள், உப்புடன்' without the article's mention of ginger-garlic paste being part of the marinade in the same sentence structure, mixing marinade and cooking steps
-  reel_script says 'சோம்பு, சீரகம், மிளகு, தேங்காயை மையாக அரைத்து தனியாக வைக்கவும்' which is correct, but 'வெங்காயத்தை பொன்னிறமாக வதக்கவும்' omits that onions should be chopped, and the reel never mentions the 1 spoon ginger-garlic paste addition as a separate step with its quantity
-claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: tamil_headline mentions "தயிர், மிளகாய்த்தூள், மசாலா" which is fine, but slides_spec hl2 is a broken/truncated fragment "<b>மிளகாய்த்தூள் 1.5" with an unclosed tag and no clear meaning as a headline
-  fact-check: slides_spec 'ஊறவைக்கும் முறை' slide lists ingredients as 'தயிர், இஞ்சி-பூண்டு, மஞ்சள், மிளகாய்த்தூள், உப்பு' without the verb or clear instruction, and the first slide line 'மட்டன், தயிர், இஞ்சி-பூண்டு பேஸ்ட் சேர்க்கவும்' wrongly tells the viewer to add mutton, yogurt and paste under the ingredients list, mixing ingredient list with instructions
-  fact-check: caption states 'தனி மிளகாய்த்தூள் 1.5 ஸ்பூன் சேர்த்தால் காரம் அதிகமாக இருக்கும்' which is an added claim not clearly supported, and the caption omits the 1.5 spoon note context from the article
-  fact-check: reel_script omits the article's final result statement that the dish is ready to serve; more importantly it states the mutton is marinated with 'மஞ்சள், மிளகாய்த்தூள், உப்புடன்' without the article's mention of ginger-garlic paste being part of the marinade in the same sentence structure, mixing marinade and cooking steps
-  fact-check: reel_script says 'சோம்பு, சீரகம், மிளகு, தேங்காயை மையாக அரைத்து தனியாக வைக்கவும்' which is correct, but 'வெங்காயத்தை பொன்னிறமாக வதக்கவும்' omits that onions should be chopped, and the reel never mentions the 1 spoon ginger-garlic paste addition as a separate step with its quantity
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+  reel_script says the 2017–2018 fraud period and the 7 companies were tied to the 'Aaliya group' correctly, but the reel_script and slides omit that the three firms (Aaliya Enterprises, Star International, Vinayak Trading) were identified as issuing fake receipts, which is an important fact of the article (who did what) missing from the reel_script
+  reel_script states the fraud was 'in the family's name' and that the fake companies were created, but omits that the court sentence was 'மெய்க்காவல் சிறை' (rigorous imprisonment), a detail present in the article
+  reel_script says 'பழனிசாமி தியாகராஜன் என்பவர் குற்றவாளி' and 'தொழிலதிபர்' is used; the article names him as the businessman, so this is consistent, but the slide describes the court as 'தலைமை குற்றவியல் நீதிமன்றம்' while the reel says 'கோவை தலைமை குற்றவியல் நீதிமன்றம்' — consistent; no issue here
+  reel_script's sentence 'குடும்பத்தினர் பெயரிலும் போலி நிறுவனங்களை உருவாக்கி மோசடி செய்தது விசாரணையில் உறுதி செய்யப்பட்டது' merges the investigation finding with the family-company detail in a way that is acceptable, but the sentence 'கோவை ஜிஎஸ்டி ஆணையரகத்தின் தலைமையக தடுப்புப் பிரிவு அதிகாரிகள் இந்த ஆய்வை நடத்தினர்' is placed after the verdict, mixing the investigation and the sentencing into one unclear flow
+  slides_spec 'விசாரணை' slide says 'குற்றச்சாட்டுகள் நிரூபிக்கப்பட்டன' under investigation, which conflates the court's verdict with the investigation stage
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: reel_script says the 2017–2018 fraud period and the 7 companies were tied to the 'Aaliya group' correctly, but the reel_script and slides omit that the three firms (Aaliya Enterprises, Star International, Vinayak Trading) were identified as issuing fake receipts, which is an important fact of the article (who did what) missing from the reel_script
+  fact-check: reel_script states the fraud was 'in the family's name' and that the fake companies were created, but omits that the court sentence was 'மெய்க்காவல் சிறை' (rigorous imprisonment), a detail present in the article
+  fact-check: reel_script says 'பழனிசாமி தியாகராஜன் என்பவர் குற்றவாளி' and 'தொழிலதிபர்' is used; the article names him as the businessman, so this is consistent, but the slide describes the court as 'தலைமை குற்றவியல் நீதிமன்றம்' while the reel says 'கோவை தலைமை குற்றவியல் நீதிமன்றம்' — consistent; no issue here
+  fact-check: reel_script's sentence 'குடும்பத்தினர் பெயரிலும் போலி நிறுவனங்களை உருவாக்கி மோசடி செய்தது விசாரணையில் உறுதி செய்யப்பட்டது' merges the investigation finding with the family-company detail in a way that is acceptable, but the sentence 'கோவை ஜிஎஸ்டி ஆணையரகத்தின் தலைமையக தடுப்புப் பிரிவு அதிகாரிகள் இந்த ஆய்வை நடத்தினர்' is placed after the verdict, mixing the investigation and the sentencing into one unclear flow
+  fact-check: slides_spec 'விசாரணை' slide says 'குற்றச்சாட்டுகள் நிரூபிக்கப்பட்டன' under investigation, which conflates the court's verdict with the investigation stage
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has 73 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 7 ('தூக்கத்தில் பக்கவாதம் ஏற்படுவதற்கான காரணங்கள், காலையில் எழுந')
+  slides must have 3 or 4 items
+  reel_script has 46 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1812. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 8 problems
-  reel_script says the 1.2 lakh child deaths are attributed to 'pneumonia caused by the Pneumococcus bacteria' in a way that is close to the article, but the caption's '1.2 லட்சம் குழந்தைகளின் மரணத்துக்குக் காரணமாகிறது' is fine; however, the reel_script states that 'ஆண்டுதோறும் 1.2 லட்சம் குழந்தைகள் உயிரிழக்கின்றனர்' omitting that the article says 'இந்தியாவில் குழந்தைகளுக்கு ஏற்படும் பாக்டீரியா சார்ந்த நிமோனியா' - minor, not a clear error
-  slides_spec and caption describe the 1.2 lakh deaths and 16 lakh serious cases, and the slide says '16 லட்சம் தீவிரமான பாதிப்புகள்' which is accurate to the article, but the reel_script omits the 16 lakh figure (an important fact of the article, not an error)
-  reel_script says 'காய்ச்சல், இருமல், மூச்சுவிடுவதில் சிரமம், தலைவலி, கழுத்து இறுக்கம் போன்ற அறிகுறிகள்' - accurate, but the caption states 'நெஞ்சு வலி... வாந்தி, பசியின்மை' which are article symptoms (accurate)
-  caption says 'ஐந்து வயதுக்குட்பட்ட அனைத்து குழந்தைகளுக்கும், குறிப்பிட்ட மருத்துவ நிலைகள் அல்லது ஆபத்து காரணிகள் உள்ள பெரிய குழந்தைகளுக்கும் நியூமோகாக்கல் தடுப்பூசி பாதுகாப்பு அளிக்கும்' - article says the CDC recommends the vaccine for these groups; the draft frames it as the only vaccine protection statement, which is close to accurate
-  slides_spec slide 4 says 'நியூமோகாக்கல் கான்ஜுகேட் தடுப்பூசி தேசிய தடுப்பூசி' which is ungrammatical/meaningless Tamil (missing 'அட்டவணையில் சேர்க்கப்பட்டுள்ளது'), mixing two facts into one unclear sentence
-  slides_spec slide 4 line 'அறிகுறி தெரிந்தால் மருத்துவரை அணுகுங்கள்' is not in the article as a claim (an invented advice not present in the article)
-  slides_spec slide 3 line 'தொற்று பகுதியைப் பொறுத்து அறிகுறிகள் மாறும்' is consistent with the article
-  reel_script says 'இதுபோன்ற தீவிர தொற்றுகளிலிருந்து தடுப்பூசி மூலம் குழந்தைகளைப் பாதுகாக்க முடியும்' - accurate to the article's 'நல்ல செய்தி' statement
-claude rewrite 3 anthropic/claude-haiku-5-5: 8 problems
-  fact-check: reel_script says the 1.2 lakh child deaths are attributed to 'pneumonia caused by the Pneumococcus bacteria' in a way that is close to the article, but the caption's '1.2 லட்சம் குழந்தைகளின் மரணத்துக்குக் காரணமாகிறது' is fine; however, the reel_script states that 'ஆண்டுதோறும் 1.2 லட்சம் குழந்தைகள் உயிரிழக்கின்றனர்' omitting that the article says 'இந்தியாவில் குழந்தைகளுக்கு ஏற்படும் பாக்டீரியா சார்ந்த நிமோனியா' - minor, not a clear error
-  fact-check: slides_spec and caption describe the 1.2 lakh deaths and 16 lakh serious cases, and the slide says '16 லட்சம் தீவிரமான பாதிப்புகள்' which is accurate to the article, but the reel_script omits the 16 lakh figure (an important fact of the article, not an error)
-  fact-check: reel_script says 'காய்ச்சல், இருமல், மூச்சுவிடுவதில் சிரமம், தலைவலி, கழுத்து இறுக்கம் போன்ற அறிகுறிகள்' - accurate, but the caption states 'நெஞ்சு வலி... வாந்தி, பசியின்மை' which are article symptoms (accurate)
-  fact-check: caption says 'ஐந்து வயதுக்குட்பட்ட அனைத்து குழந்தைகளுக்கும், குறிப்பிட்ட மருத்துவ நிலைகள் அல்லது ஆபத்து காரணிகள் உள்ள பெரிய குழந்தைகளுக்கும் நியூமோகாக்கல் தடுப்பூசி பாதுகாப்பு அளிக்கும்' - article says the CDC recommends the vaccine for these groups; the draft frames it as the only vaccine protection statement, which is close to accurate
-  fact-check: slides_spec slide 4 says 'நியூமோகாக்கல் கான்ஜுகேட் தடுப்பூசி தேசிய தடுப்பூசி' which is ungrammatical/meaningless Tamil (missing 'அட்டவணையில் சேர்க்கப்பட்டுள்ளது'), mixing two facts into one unclear sentence
-  fact-check: slides_spec slide 4 line 'அறிகுறி தெரிந்தால் மருத்துவரை அணுகுங்கள்' is not in the article as a claim (an invented advice not present in the article)
-  fact-check: slides_spec slide 3 line 'தொற்று பகுதியைப் பொறுத்து அறிகுறிகள் மாறும்' is consistent with the article
-  fact-check: reel_script says 'இதுபோன்ற தீவிர தொற்றுகளிலிருந்து தடுப்பூசி மூலம் குழந்தைகளைப் பாதுகாக்க முடியும்' - accurate to the article's 'நல்ல செய்தி' statement
+claude rewrite 2 anthropic/claude-haiku-5-5: 8 problems
+  reel_script has 117 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  stray Tamil sign '்' after 'ா' in «ய மெசா்ஸ் »
+  stray Tamil sign '்' after 'ா' in « என்டா்பிர»
+  stray Tamil sign '்' after 'ா' in «் மெசா்ஸ் »
+  stray Tamil sign 'ா' after 'ா' in «் ஸ்டாா் இ»
+  stray Tamil sign '்' after 'ா' in « ஸ்டாா் இன»
+  stray Tamil sign '்' after 'ா' in « இன்டா்நேஷ»
+  stray Tamil sign '்' after 'ா' in «் மெசா்ஸ் »
+ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1812. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 2 ('ஆவி அடங்கியதும் குக்கரைத் திறந்து, மீண்டும் அடுப்பில் வைத்து')
+  reel_script has 82 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1467. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-ok anthropic/claude-haiku-5-5
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-ok anthropic/claude-haiku-5-5
+image match check unavailable: gemini-3.5-flash: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Wake-up Stroke: 7 warning signs to watch'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0633","first":"RN-86"}
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+images made: 2 for 'Actress Ambika visits Coimbatore student'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0826","first":"RN-92"}
 posting job started at once
-writing [N]: அடிக்கடி வயிறு உப்புசம் ஏற்பட 6 காரணங்கள்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
-  reel_script has 81 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  not grounded: location 'பொது' is not in the article
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1 ('1.சாப்பிடும் முறை - மிக வேகமாக சாப்பிடுவது அதிகப்படியான காற்'); 3 ('வாயு உண்டாக்கும் உணவுகள் - பீன்ஸ், பருப்பு வகைகள், முட்டைக்க'); 4 ('உப்பு மற்றும் பதப்படுத்தப்பட்ட உணவுகள் - அதிக சோடியம் உணவுகள'); 5 ('மீறி சாப்பிட்டால் செரிமானம் ஆவதில் சிக்கல் ஏற்படும்5.')
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Pneumococcal disease hits children harde'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0634","first":"RN-87"}
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 74 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Andhra-style spicy mutton curry: needs 1'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0634","first":"RN-88"}
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 83 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1467. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-writing [N]: அனைத்து சுவைகளும் அளிக்கும் அன்னாசிப்பழ கொத்சு
-writing [N]: சுவையான ஆப்பிள் ரப்டி தயாரிப்பது எப்படி?
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-ok groq/qwen/qwen3.8-27b (3s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok anthropic/claude-haiku-5-5
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  Caption states 'Pineapple gotsu recipe' tagline and Coimbatore 360 references are fine, but the slide says 'திருமணம், தசரா போன்ற பண்டிகை நாட்களில்' — article supports this, so no issue there; however the caption and reel_script say the dish is made 'with few ingredients' and the reel says 'எளிதாகத் தயாரிக்கலாம்' which is an added claim not in the article
-  The reel_script describes the Kachampuli/tamarind step as 'புளி நீர் சேர்த்து அரைத்து, குறைந்த தீயில் சமைக்கவும்' — the article says water is added and cooked on low heat for 2-3 minutes, which matches, but the reel omits that tamarind water is added during grinding, which is acceptable; the main issue is the reel_script's sentence 'அரைத்த விழுதையும் வேகவைத்த அன்னாசிப்பழத்தையும் சேர்க்கவும்' omits that the pineapple is mixed into the masala, which is an omission of the step 'பின்னர் வேகவைத்த அன்னாசிப்பழ விழுதை' (pineapple turned into paste before adding), making the description inaccurate
-  The slides_spec lines state 'அன்னாசிப்பழத்தை ஒன்றரை கிளாஸ் தண்ணீரில் 15 நிமிடம்' and the 'இறுதி கட்டம்' slide says 'வேகவைத்த அன்னாசிப்பழத்தை சேர்த்து கிளறவும்' — the article says the boiled pineapple should be made into a paste (விழுது) before being added, so the instruction is missing a step
-  The caption says 'கார்வாலி' and reel says 'கார்வாலி' — consistent with article; no issue. The caption's 'முழு விவரம்' section claims the dish is a 'பிரபல உணவு' (popular dish), which is a mild embellishment not stated in the article
-claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: Caption states 'Pineapple gotsu recipe' tagline and Coimbatore 360 references are fine, but the slide says 'திருமணம், தசரா போன்ற பண்டிகை நாட்களில்' — article supports this, so no issue there; however the caption and reel_script say the dish is made 'with few ingredients' and the reel says 'எளிதாகத் தயாரிக்கலாம்' which is an added claim not in the article
-  fact-check: The reel_script describes the Kachampuli/tamarind step as 'புளி நீர் சேர்த்து அரைத்து, குறைந்த தீயில் சமைக்கவும்' — the article says water is added and cooked on low heat for 2-3 minutes, which matches, but the reel omits that tamarind water is added during grinding, which is acceptable; the main issue is the reel_script's sentence 'அரைத்த விழுதையும் வேகவைத்த அன்னாசிப்பழத்தையும் சேர்க்கவும்' omits that the pineapple is mixed into the masala, which is an omission of the step 'பின்னர் வேகவைத்த அன்னாசிப்பழ விழுதை' (pineapple turned into paste before adding), making the description inaccurate
-  fact-check: The slides_spec lines state 'அன்னாசிப்பழத்தை ஒன்றரை கிளாஸ் தண்ணீரில் 15 நிமிடம்' and the 'இறுதி கட்டம்' slide says 'வேகவைத்த அன்னாசிப்பழத்தை சேர்த்து கிளறவும்' — the article says the boiled pineapple should be made into a paste (விழுது) before being added, so the instruction is missing a step
-  fact-check: The caption says 'கார்வாலி' and reel says 'கார்வாலி' — consistent with article; no issue. The caption's 'முழு விவரம்' section claims the dish is a 'பிரபல உணவு' (popular dish), which is a mild embellishment not stated in the article
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 3 problems
-  Reel script says the milk should boil until 'பாதியாக சுடும்' (heats until half), but the article says it should boil down (சுண்டும்) to half; 'சுடும்' is a wrong word choice that changes the cooking step meaning.
-  Caption repeats the same wrong 'பாதியாக சுடும்' phrasing for the milk reduction step, differing from the article's 'சுண்டும்'.
-  The caption's opening sentence adds 'சாதாரண நாட்களிலும்' and the draft's slides mention 'சூடாகவோ குளிர்ச்சியாகவோ பரிமாறவும' — these are consistent with the article, so no issue there; however the reel_script and caption both drop the article's note that the dessert can be eaten before dinner in a clear way, which is only partially reflected (caption includes it, reel does not) — minor omission of a serving-context detail.
-attempt 1 groq/qwen/qwen3.8-27b: 3 problems
-  fact-check: Reel script says the milk should boil until 'பாதியாக சுடும்' (heats until half), but the article says it should boil down (சுண்டும்) to half; 'சுடும்' is a wrong word choice that changes the cooking step meaning.
-  fact-check: Caption repeats the same wrong 'பாதியாக சுடும்' phrasing for the milk reduction step, differing from the article's 'சுண்டும்'.
-  fact-check: The caption's opening sentence adds 'சாதாரண நாட்களிலும்' and the draft's slides mention 'சூடாகவோ குளிர்ச்சியாகவோ பரிமாறவும' — these are consistent with the article, so no issue there; however the reel_script and caption both drop the article's note that the dessert can be eaten before dinner in a clear way, which is only partially reflected (caption includes it, reel does not) — minor omission of a serving-context detail.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for '6 common reasons for frequent bloating, '
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0634","first":"RN-89"}
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  Reel script says 'திருமணம் மற்றும் பண்டிகை நாட்களில்' (weddings and festival days) - article says 'திருமணம் மற்றும் பண்டிகை காலங்களில்', close enough; no problem.
-  Reel script says the pineapple is boiled, then later says 'வேகவைத்த அன்னாசிப்பழத்தை விழுதாக அரைத்து' - the article says the boiled pineapple is added as 'விழுது' (paste) without stating it is ground; the grinding step is an invented detail not in the article.
-  Reel script step 'அரைத்த விழுதை சேர்க்கவும்' and the 'இறுதி கட்டம்' slide says 'அரைத்த விழுதை சேர்த்து கிளறி 2-3 நிமிடம் சமைக்கவும்' - article says 'அரைத்து வைத்த விழுதை வாணலியில் சேர்த்துக் கிளறவும்' then 'சிறிதளவு தண்ணீர் சேர்த்து 2-3 நிமிடம்', so cooking time attribution is roughly right.
-  Caption says 'குறைந்த தீயில் 2-3 நிமிடம் சமைக்கவும்' right after grinding, consistent with article.
-  Reel script omits the step of adding tamarind water (புளி நீர்) being mixed with the ground ingredients as a separate fact? It is included ('புளி நீர் சேர்த்து'), so no omission.
-  Reel script states the paste is ground together with the dal and chilli in one sentence ('உலர் மற்றும் புதிய தேங்காய், புளி நீர் சேர்த்து அரைத்து') which merges the grinding step with the coconut and tamarind addition, which is consistent with article but the slides say 'சிறிது தண்ணீர் சேர்த்து' without the article specifying ground paste; minor.
-claude rewrite 2 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: Reel script says 'திருமணம் மற்றும் பண்டிகை நாட்களில்' (weddings and festival days) - article says 'திருமணம் மற்றும் பண்டிகை காலங்களில்', close enough; no problem.
-  fact-check: Reel script says the pineapple is boiled, then later says 'வேகவைத்த அன்னாசிப்பழத்தை விழுதாக அரைத்து' - the article says the boiled pineapple is added as 'விழுது' (paste) without stating it is ground; the grinding step is an invented detail not in the article.
-  fact-check: Reel script step 'அரைத்த விழுதை சேர்க்கவும்' and the 'இறுதி கட்டம்' slide says 'அரைத்த விழுதை சேர்த்து கிளறி 2-3 நிமிடம் சமைக்கவும்' - article says 'அரைத்து வைத்த விழுதை வாணலியில் சேர்த்துக் கிளறவும்' then 'சிறிதளவு தண்ணீர் சேர்த்து 2-3 நிமிடம்', so cooking time attribution is roughly right.
-  fact-check: Caption says 'குறைந்த தீயில் 2-3 நிமிடம் சமைக்கவும்' right after grinding, consistent with article.
-  fact-check: Reel script omits the step of adding tamarind water (புளி நீர்) being mixed with the ground ingredients as a separate fact? It is included ('புளி நீர் சேர்த்து'), so no omission.
-  fact-check: Reel script states the paste is ground together with the dal and chilli in one sentence ('உலர் மற்றும் புதிய தேங்காய், புளி நீர் சேர்த்து அரைத்து') which merges the grinding step with the coconut and tamarind addition, which is consistent with article but the slides say 'சிறிது தண்ணீர் சேர்த்து' without the article specifying ground paste; minor.
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has 83 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/qwen/qwen3.8-27b (4s)
-proofread rejected (3 problems)
-  slide 2 line 1 longer than 60 characters
-  reel_script has 84 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 0 problems
-claude rewrite 1 anthropic/claude-haiku-5-5: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1467. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-ok anthropic/claude-haiku-5-5
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 ok anthropic/claude-haiku-5-5
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Pineapple kotsu: sweet, sour and bitter '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0635","first":"RN-90"}
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'How to make a tasty apple rabdi at home'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0635","first":"RN-91"}
+images made: 2 for 'Coimbatore businessman jailed 5 years fo'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-0826","first":"RN-93"}
+write_stories.yml started
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
-write round: 6 news waiting in the queue (written in priority order)
-candidate filter: collected=6
-to write: 6 Coimbatore district candidates (max 200 stories)
-candidates waiting: 6 Coimbatore; time left 29 min
+write round: 3 news waiting in the queue (written in priority order)
+candidate filter: collected=3
+to write: 3 Coimbatore district candidates (max 200 stories)
+candidates waiting: 3 Coimbatore; time left 29 min
+try (N) manual=False: ரூ.11.15 கோடி போலி ஜிஎஸ்டி ரசீது மோசடி: கோவை தொழிலதிபருக்கு 
+try (N) manual=False: CM Vijay | Actress Ambika | "எல்லா பிரச்சினைக்கும் CMஏ வரணும
 try (N) manual=False: தூக்கத்தில் பக்கவாதம் ஏற்படும் ஆபத்து யாருக்கு அதிகம்?
-try (N) manual=False: குழந்தைகளை தாக்கும் நியூமோகாக்கல் நோய்
-try (N) manual=False: ஆந்திரா ஸ்டைல் காரசாரமான மட்டன் கறி
-auto images: 1 of 1 stories ({'pollinations': 2})
+skip (N) could not open: தூக்கத்தில் பக்கவாதம் ஏற்படும் ஆபத்து யாருக்கு அதி [https://l-www.dinamalar.com/news/tamil-nadu-district-news-co] 502 Server Error: Bad Gateway for url: https://l-www.dinamalar.com/news/tamil-na
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
 posting job started at once
-try (N) manual=False: அடிக்கடி வயிறு உப்புசம் ஏற்பட 6 காரணங்கள்
-auto images: 1 of 1 stories ({'pollinations': 4})
-auto images: 1 of 1 stories ({'pollinations': 6})
-try (N) manual=False: அனைத்து சுவைகளும் அளிக்கும் அன்னாசிப்பழ கொத்சு
-try (N) manual=False: சுவையான ஆப்பிள் ரப்டி தயாரிப்பது எப்படி?
-auto images: 1 of 1 stories ({'pollinations': 8})
-auto images: 1 of 1 stories ({'pollinations': 10})
-auto images: 1 of 1 stories ({'pollinations': 12})
-candidate loop ended: left 0, tried={'N': 6}, done={'N': 6}, time left 26 min
-filed: 6 Coimbatore district stories (target 200), reels only
-queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":0,"updated":6} 
-stories: 6
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})
+candidate loop ended: left 0, tried={'N': 3}, done={'N': 2}, time left 28 min
+filed: 2 Coimbatore district stories (target 200), reels only
+queue: 1 news waiting to be written
+write_stories.yml started
+All News sheet: {"ok":true,"added":0,"updated":3} 
+stories: 2
