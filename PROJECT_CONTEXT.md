@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `cf77638` | rasipalan: test runs keep the slides and log on a preview branch |
 | 2026-10-31 | `9034b5d` | Daily rasipalan carousel for Coimbatore 360 (7:31 AM, Tamil daily-calendar design, festival themes) |
 | 2026-10-31 | `299d7eb` | Heartbeat |
 | 2026-10-31 | `bfe422a` | Real photos: one Gemini 'too many requests' (429) stops the photo check for 30 min - the free quota stays for the writer (owner 31 Oct) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-30 | `3729cb8` | Free pictures first (owner 30 Oct): Cloudflare kept for pictures (not writing, 4 steps = ~230 free pictures/day) -> SiliconFlow free FLUX -> Together free FLUX -> Pollinations -> NVIDIA -> FAL only when all fail (each new service skipped until its key is set); 2 news-specific pictures per reel on every page (cover = main event, 2nd = detail); the cover is kept if the 2nd picture fails; switches in config.json free_images |
 | 2026-10-30 | `9943e0e` | Code bugs never repeat (owner): tests fail on any undefined name in poster/research_free/reel (pyflakes on GitHub - would have stopped the 29 Oct 'verify' posting crash) and run the caption + posting-check steps end to end on a sample story |
 | 2026-10-30 | `b2a800d` | Known issues are repaired, not lost (owner): a card cut mid-phrase, a sentence or word said twice, a sentence about 'the article' are fixed before posting; only what cannot be fixed is held (RN-199, RN-203 held for a cut card); repeated-sentence check no longer splits at 'ரூ.2.50' / 'ஹெச்.பி.' (RN-200 false alarm) |
-| 2026-10-29 | `74ab3ce` | Heartbeat |
 <!-- recent-changes:end -->
