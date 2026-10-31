@@ -1,12 +1,261 @@
-write_stories.yml started
+writing [N]: சிறை கதவருகே போலீசாரை ஏமாற்றி தப்பிய கைதி: நகர் முழுவதும் போ
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+writing [N]: கைதி தப்பியோட்டம்!
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3.6-flash (48s)
+attempt 1 gemini/gemini-3.6-flash: 1 problems
+  reel_script has 84 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3-flash-preview (11s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (6s)
+factcheck by groq/openai/gpt-oss-120b: 3 problems
+  Reel script claims the prisoner deceived the police at the gate, which is not mentioned in the article
+  Slide 1 states Annur police brought the prisoner before his escape, but the article says Karnataka police brought him
+  Slide 3 repeats the claim that the prisoner deceived police at the gate, which is not in the article
+attempt 1 gemini/gemini-3-flash-preview: 3 problems
+  fact-check: Reel script claims the prisoner deceived the police at the gate, which is not mentioned in the article
+  fact-check: Slide 1 states Annur police brought the prisoner before his escape, but the article says Karnataka police brought him
+  fact-check: Slide 3 repeats the claim that the prisoner deceived police at the gate, which is not in the article
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok gemini/gemini-3-flash-preview (13s)
+attempt 2 gemini/gemini-3-flash-preview: 1 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok groq/qwen/qwen3.8-27b (3s)
+attempt 2 groq/qwen/qwen3.8-27b: 1 problems
+  hl2 longer than 28 characters
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+writing [N]: ஊட்டி-மேட்டுப்பாளையம் மலை ரெயில் பாதை சீரமைப்பு பணிகள் தீவிர
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  Reel script says the police station was 'விரைந்து' (rushed to the scene) but the article only says Pandayasalai police 'உடனடியாக சம்பவ இடத்திற்கு விரைந்து வந்து விசாரணையைத் தொடங்கினர' — this matches, so no issue there; however, the slides_spec line 'போலீஸ் பாதுகாப்பு குறித்து கேள்வி எழுந்துள்ளது' (questions raised about police security) is present in the article, so no issue there either
+  Reel script says the escapee was taken into custody at the central prison for judicial custody ('நீதிமன்றக் காவலுக்காக சிறைக்கு அழைத்து வரப்பட்டார்') — the article says the judge ordered him placed in judicial custody in prison, which is consistent; no issue
+  Reel script omits the fact that the suspect was arrested in connection with a robbery case in the Annur police limits — the article's key facts (arrest by Annur police in a வழிப்பறி case) are present, so no issue
+  Caption states the escape happened 'போலீசாரை ஏமாற்றி' (deceiving police) which is a loose paraphrase; article says he diverted police attention — acceptable wording, not a factual error
+  Reel script says the escape was 'இறக்கும்போது' (while being unloaded from vehicle) — the article says the escape occurred when he was being taken out of the vehicle to be led inside, which is consistent
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: Reel script says the police station was 'விரைந்து' (rushed to the scene) but the article only says Pandayasalai police 'உடனடியாக சம்பவ இடத்திற்கு விரைந்து வந்து விசாரணையைத் தொடங்கினர' — this matches, so no issue there; however, the slides_spec line 'போலீஸ் பாதுகாப்பு குறித்து கேள்வி எழுந்துள்ளது' (questions raised about police security) is present in the article, so no issue there either
+  fact-check: Reel script says the escapee was taken into custody at the central prison for judicial custody ('நீதிமன்றக் காவலுக்காக சிறைக்கு அழைத்து வரப்பட்டார்') — the article says the judge ordered him placed in judicial custody in prison, which is consistent; no issue
+  fact-check: Reel script omits the fact that the suspect was arrested in connection with a robbery case in the Annur police limits — the article's key facts (arrest by Annur police in a வழிப்பறி case) are present, so no issue
+  fact-check: Caption states the escape happened 'போலீசாரை ஏமாற்றி' (deceiving police) which is a loose paraphrase; article says he diverted police attention — acceptable wording, not a factual error
+  fact-check: Reel script says the escape was 'இறக்கும்போது' (while being unloaded from vehicle) — the article says the escape occurred when he was being taken out of the vehicle to be led inside, which is consistent
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  reel_script says the landslide happened in October (அக்டோபர் 23ஆம் தேதி) and gives October dates for the cancellations (24-29), but the article only says 23rd and 24th-29th without naming a month
+  gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+slides_spec and caption also state 'அக். 23' and 'அக். 24 முதல் அக். 29' with a month the article does not give
+  reel_script says the service is cancelled for 3 days from 'நேற்று' to Sunday, but the article says 3 days from yesterday to tomorrow (Sunday) and the draft's slides_spec says 'நேற்று 7-வது நாள்' (the article says the work was on its 7th day yesterday, consistent), so the 'நேற்று முதல்' wording is acceptable, but the reel_script omits that the repair work is ongoing in the same sentence as the rail cancellation without stating the Sunday end date explicitly in the caption timeline
+  reel_script does not mention that the second landslide was between Adarly and Hillgrove stations' location precision is fine, but the caption's 'ஹில்குரோவ்' and the article's 'ஹில்கு ரோவ்' are the same place; no problem there
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: reel_script says the landslide happened in October (அக்டோபர் 23ஆம் தேதி) and gives October dates for the cancellations (24-29), but the article only says 23rd and 24th-29th without naming a month
+  fact-check: slides_spec and caption also state 'அக். 23' and 'அக். 24 முதல் அக். 29' with a month the article does not give
+  fact-check: reel_script says the service is cancelled for 3 days from 'நேற்று' to Sunday, but the article says 3 days from yesterday to tomorrow (Sunday) and the draft's slides_spec says 'நேற்று 7-வது நாள்' (the article says the work was on its 7th day yesterday, consistent), so the 'நேற்று முதல்' wording is acceptable, but the reel_script omits that the repair work is ongoing in the same sentence as the rail cancellation without stating the Sunday end date explicitly in the caption timeline
+  fact-check: reel_script does not mention that the second landslide was between Adarly and Hillgrove stations' location precision is fine, but the caption's 'ஹில்குரோவ்' and the article's 'ஹில்கு ரோவ்' are the same place; no problem there
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  The reel_script says the escape happened on 'அக்டோபர் 30ஆம் தேதி இரவு' (October 30 night), but the article only says 'நேற்று இரவு' (last night) with no specific date; the date is an invented detail.
+  The reel_script states 'இரண்டரை மாதங்களுக்கு முன், கர்நாடக போலீசார் அவரை கோவைக்கு ஒரு வழக்குக்காக அழைத்து வந்தபோது' — the article does not specify that he was brought from Karnataka 'for a case' in a way that conflicts, but it also states the first escape was 'இயற்கை உபாதை' stop; this is consistent. However, the reel_script omits the fact that he was arrested in the Annur police case (the article's central arrest was 'கோவை அன்னூர் போலீஸ் நிலைய வழக்கில் கைது'), leaving the arrest context unclear.
+  The caption states the posting time/date and the caption's 'நேரம்: நள்ளிரவு 1 மணி' is consistent, but the caption's 'நாள்: அக்டோபர் 31, 2026' is a posting-date line and is excluded; no issue there.
+  The slide 'கைது, தேடுதல்' says 'சிறை வாசலில் மீண்டும் தப்பி ஓடினார்' — 'மீண்டும்' (again) is a mixed-in claim; the article only describes one escape from the jail gate, while the earlier escape was from a police van, so the word implies a prior jail-gate escape that is not in the article.
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: The reel_script says the escape happened on 'அக்டோபர் 30ஆம் தேதி இரவு' (October 30 night), but the article only says 'நேற்று இரவு' (last night) with no specific date; the date is an invented detail.
+  fact-check: The reel_script states 'இரண்டரை மாதங்களுக்கு முன், கர்நாடக போலீசார் அவரை கோவைக்கு ஒரு வழக்குக்காக அழைத்து வந்தபோது' — the article does not specify that he was brought from Karnataka 'for a case' in a way that conflicts, but it also states the first escape was 'இயற்கை உபாதை' stop; this is consistent. However, the reel_script omits the fact that he was arrested in the Annur police case (the article's central arrest was 'கோவை அன்னூர் போலீஸ் நிலைய வழக்கில் கைது'), leaving the arrest context unclear.
+  fact-check: The caption states the posting time/date and the caption's 'நேரம்: நள்ளிரவு 1 மணி' is consistent, but the caption's 'நாள்: அக்டோபர் 31, 2026' is a posting-date line and is excluded; no issue there.
+  fact-check: The slide 'கைது, தேடுதல்' says 'சிறை வாசலில் மீண்டும் தப்பி ஓடினார்' — 'மீண்டும்' (again) is a mixed-in claim; the article only describes one escape from the jail gate, while the earlier escape was from a police van, so the word implies a prior jail-gate escape that is not in the article.
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The caption's 'முழு விவரம்' section adds that Tamil Nadu's Theni district also saw prisoners escape from police custody; the article mentions this, so it is supported, but the reel_script omits the 'arrested by Annur police for a robbery case' is included; however the reel_script omits the detail that the escape was reported in a second-to-second incident description and that the Theni comparison is absent, which is an important context fact missing from the reel script
+  The reel_script states 'வ உ சி பூங்கா' while the article gives the location as 'வ.உ.சி. பூங்கா' — same place, no error
+  The caption describes the escape as 'மின்னல் வேகத்தில்' (lightning speed) and 'போலீசாரின் கவனத்தைத் திசைதிருப்பி' — both are in the article and supported
+  The reel_script says the escape happened 'போலீசாரிடம் இருந்து' and the caption says 'போலீசாரை ஏமாற்றி' — consistent with the article's 'பிடியில் இருந்து' and 'ஏமாற்றி'
+  The caption's 'Coimbatore central prison accused escapes at gate, police manhunt | Coimbatore news' English line is extraneous text in the caption body, not a footer line listed as exempt
+claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The caption's 'முழு விவரம்' section adds that Tamil Nadu's Theni district also saw prisoners escape from police custody; the article mentions this, so it is supported, but the reel_script omits the 'arrested by Annur police for a robbery case' is included; however the reel_script omits the detail that the escape was reported in a second-to-second incident description and that the Theni comparison is absent, which is an important context fact missing from the reel script
+  fact-check: The reel_script states 'வ உ சி பூங்கா' while the article gives the location as 'வ.உ.சி. பூங்கா' — same place, no error
+  fact-check: The caption describes the escape as 'மின்னல் வேகத்தில்' (lightning speed) and 'போலீசாரின் கவனத்தைத் திசைதிருப்பி' — both are in the article and supported
+  fact-check: The reel_script says the escape happened 'போலீசாரிடம் இருந்து' and the caption says 'போலீசாரை ஏமாற்றி' — consistent with the article's 'பிடியில் இருந்து' and 'ஏமாற்றி'
+  fact-check: The caption's 'Coimbatore central prison accused escapes at gate, police manhunt | Coimbatore news' English line is extraneous text in the caption body, not a footer line listed as exempt
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The draft says the landslide happened on 'அக்டோபர் 23ஆம் தேதி' (October 23), but the article only says 'கடந்த 23-ந் தேதி' with no month named, so the month is an invented detail.
+  The reel_script and slides say the first cancellation was from 24 to 29 'ஆம் தேதி' and the 6 days are correct, but the reel_script says 'அக்டோபர் 23ஆம் தேதி' which adds the unsupported month.
+  The caption repeats the invented month 'அக்டோபர் 23ஆம் தேதி'.
+  The article says the cancellation was 'நேற்று முதல் நாளை (ஞாயிற்றுக்கிழமை) வரை 3 நாட்கள்', meaning it is from yesterday through Sunday; the draft's 'நேற்று முதல் ஞாயிற்றுக்கிழமை வரை' is consistent, but the slide and reel say 'மீண்டும் 3 நாட்கள்' which is fine. However the reel_script states the new landslide happened and cancellation was decided 'இதற்கு முன்' ordering is acceptable.
+  The reel_script omits the fact that the work to repair the track is still ongoing as the reason service remains suspended, and that the repair was not finished and continuous rain also caused the second cancellation; the article gives 'ரெயில் பாதையை சீரமைக்கும் பணி முடிவடையாததாலும், தொடர் மழை காரணமாகவும்' as the cause, which the reel_script does not mention.
+claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The draft says the landslide happened on 'அக்டோபர் 23ஆம் தேதி' (October 23), but the article only says 'கடந்த 23-ந் தேதி' with no month named, so the month is an invented detail.
+  fact-check: The reel_script and slides say the first cancellation was from 24 to 29 'ஆம் தேதி' and the 6 days are correct, but the reel_script says 'அக்டோபர் 23ஆம் தேதி' which adds the unsupported month.
+  fact-check: The caption repeats the invented month 'அக்டோபர் 23ஆம் தேதி'.
+  fact-check: The article says the cancellation was 'நேற்று முதல் நாளை (ஞாயிற்றுக்கிழமை) வரை 3 நாட்கள்', meaning it is from yesterday through Sunday; the draft's 'நேற்று முதல் ஞாயிற்றுக்கிழமை வரை' is consistent, but the slide and reel say 'மீண்டும் 3 நாட்கள்' which is fine. However the reel_script states the new landslide happened and cancellation was decided 'இதற்கு முன்' ordering is acceptable.
+  fact-check: The reel_script omits the fact that the work to repair the track is still ongoing as the reason service remains suspended, and that the repair was not finished and continuous rain also caused the second cancellation; the article gives 'ரெயில் பாதையை சீரமைக்கும் பணி முடிவடையாததாலும், தொடர் மழை காரணமாகவும்' as the cause, which the reel_script does not mention.
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The reel_script says the escape was from jail-gate area with 'Annur police station case' — article says he was arrested in the Annur police case, fine; however the reel_script states he 'ran away from the police van at Kanuvakkarai' and the article says he escaped during natural-call stop at Kanuvakkarai — consistent; but the caption states 'நேற்று இரவு அன்னூர் போலீசாரிடம் பிடிபட்டார்' and 'நள்ளிரவு 1 மணி' as the time of the event, while the article says he was taken to jail at 1 a.m. — the caption's '🕘 நேரம்: நள்ளிரவு 1 மணி' is consistent with the article
+  The caption's footer contains an extra English line 'Karaikal... (English search) Annur prisoner escapes jail gate | Coimbatore news', which is garbage text not in the article and not part of the allowed footer
+  The reel_script says Raghavan is 'Annur police station case' accused and 'arrested' but the article specifically says he was caught yesterday night by Annur police, which the draft presents as an arrest event without noting the case context correctly — the slides_spec says 'சிறை வாசலில் இருந்து தப்பினார்' while the article says he escaped at the jail gate: consistent
+  The caption says he 'ran away' when taken by Karnataka police for a case, but the article says Karnataka police brought him to Coimbatore 'for a case', which the caption describes as 'அழைத்து வந்தபோதும்' — acceptable; the reel_script omits that the escape was reported via a Karnataka police SI complaint leading to the Annur case being registered, which is present; no missing key fact
+  The reel_script's first sentence 'கோவை அன்னூரில் கைதான ராகவன் சிறை வாசலில் தப்பி ஓடிவிட்டார்' is grammatical and accurate
+claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The reel_script says the escape was from jail-gate area with 'Annur police station case' — article says he was arrested in the Annur police case, fine; however the reel_script states he 'ran away from the police van at Kanuvakkarai' and the article says he escaped during natural-call stop at Kanuvakkarai — consistent; but the caption states 'நேற்று இரவு அன்னூர் போலீசாரிடம் பிடிபட்டார்' and 'நள்ளிரவு 1 மணி' as the time of the event, while the article says he was taken to jail at 1 a.m. — the caption's '🕘 நேரம்: நள்ளிரவு 1 மணி' is consistent with the article
+  fact-check: The caption's footer contains an extra English line 'Karaikal... (English search) Annur prisoner escapes jail gate | Coimbatore news', which is garbage text not in the article and not part of the allowed footer
+  fact-check: The reel_script says Raghavan is 'Annur police station case' accused and 'arrested' but the article specifically says he was caught yesterday night by Annur police, which the draft presents as an arrest event without noting the case context correctly — the slides_spec says 'சிறை வாசலில் இருந்து தப்பினார்' while the article says he escaped at the jail gate: consistent
+  fact-check: The caption says he 'ran away' when taken by Karnataka police for a case, but the article says Karnataka police brought him to Coimbatore 'for a case', which the caption describes as 'அழைத்து வந்தபோதும்' — acceptable; the reel_script omits that the escape was reported via a Karnataka police SI complaint leading to the Annur case being registered, which is present; no missing key fact
+  fact-check: The reel_script's first sentence 'கோவை அன்னூரில் கைதான ராகவன் சிறை வாசலில் தப்பி ஓடிவிட்டார்' is grammatical and accurate
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 23 ('மேட்டுப்பாளையம்,  மண்சரிவால் சேதமடைந்த மலைரெயில் பாதையை 7-வத')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The draft says Raghavan was taken to the central prison 'at 1 a.m.' and the escape happened then; the article says the escape occurred while he was being taken to the central prison around 1 a.m., which matches, but the reel_script says 'அன்னூரில் கைதான' (arrested in Annur) — acceptable; however the reel_script states Raghavan 'தப்பியவர்' (escaped) two and a half months earlier in Karnataka, while the article says he was brought from Karnataka police custody and escaped near Kanuvakkarai, not that he escaped Karnataka police — the phrase 'கர்நாடக போலீசாரிடமிருந்து தப்பியவர்' misstates the location of the earlier escape
+  The reel_script says the earlier escape happened 'அன்னூர் அடுத்த கணுவக்கரையில்' near Annur, but it is mixed with the Karnataka police detail in one sentence, merging two different facts (the Karnataka transfer and the Annur-area escape) so the sequence is unclear
+  The caption says the earlier escape was when he was brought to Coimbatore 'ஒரு வழக்குக்காக' by Karnataka police, which is supported, but the caption adds 'நள்ளிரவு 1 மணி' as the time of the 'நேரம்' line while the article gives it as the time of the escape, consistent — no issue there
+  The slides_spec 'கைது எப்படி?' slide states 'இந்த வழக்கில் நேற்று இரவு அன்னூர் போலீசாரிடம் பிடிபட்டார்' but the article does not say the arrest was on the same case as the escape from the prison gate beyond 'இந்த வழக்கில', so this is supported; however the slide title 'கைது எப்படி?' (how was he arrested) is answered with no arrest method, so the slide content does not answer its own question
+  The reel_script omits the important fact that the 25-year-old was 'கைது செய்யப்பட்ட' in the Annur police case and the article's detail that the escape occurred while being taken to 'மத்திய சிறை' is present, but the reel_script omits that the Karnataka SI's complaint led to the case registration in a clear way only partially — minor, not missing
+claude rewrite 3 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The draft says Raghavan was taken to the central prison 'at 1 a.m.' and the escape happened then; the article says the escape occurred while he was being taken to the central prison around 1 a.m., which matches, but the reel_script says 'அன்னூரில் கைதான' (arrested in Annur) — acceptable; however the reel_script states Raghavan 'தப்பியவர்' (escaped) two and a half months earlier in Karnataka, while the article says he was brought from Karnataka police custody and escaped near Kanuvakkarai, not that he escaped Karnataka police — the phrase 'கர்நாடக போலீசாரிடமிருந்து தப்பியவர்' misstates the location of the earlier escape
+  fact-check: The reel_script says the earlier escape happened 'அன்னூர் அடுத்த கணுவக்கரையில்' near Annur, but it is mixed with the Karnataka police detail in one sentence, merging two different facts (the Karnataka transfer and the Annur-area escape) so the sequence is unclear
+  fact-check: The caption says the earlier escape was when he was brought to Coimbatore 'ஒரு வழக்குக்காக' by Karnataka police, which is supported, but the caption adds 'நள்ளிரவு 1 மணி' as the time of the 'நேரம்' line while the article gives it as the time of the escape, consistent — no issue there
+  fact-check: The slides_spec 'கைது எப்படி?' slide states 'இந்த வழக்கில் நேற்று இரவு அன்னூர் போலீசாரிடம் பிடிபட்டார்' but the article does not say the arrest was on the same case as the escape from the prison gate beyond 'இந்த வழக்கில', so this is supported; however the slide title 'கைது எப்படி?' (how was he arrested) is answered with no arrest method, so the slide content does not answer its own question
+  fact-check: The reel_script omits the important fact that the 25-year-old was 'கைது செய்யப்பட்ட' in the Annur police case and the article's detail that the escape occurred while being taken to 'மத்திய சிறை' is present, but the reel_script omits that the Karnataka SI's complaint led to the case registration in a clear way only partially — minor, not missing
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Ooty-Mettupalayam hill train track repai'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1043","first":"RN-94"}
+posting job started at once
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Robbery accused escapes from police at C'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1043","first":"RN-95"}
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Prisoner escapes from Annur Central Jail'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1044","first":"RN-96"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 source dinamalar list: 15 items
-source google 'கோவை': 59 items
+source google 'கோவை': 73 items
 source bing 'கோவை': 12 items
 source google 'கோயம்புத்தூர்': 55 items
 source bing 'கோயம்புத்தூர்': 12 items
-source google 'கோவை மாவட்டம்': 37 items
+source google 'பொள்ளாச்சி': 10 items
+source bing 'பொள்ளாச்சி': 12 items
+source google 'மேட்டுப்பாளையம்': 14 items
+source bing 'மேட்டுப்பாளையம்': 12 items
+source google 'சூலூர்': 0 items
+source bing 'சூலூர்': 12 items
+source google 'அன்னூர்': 6 items
+source bing 'அன்னூர்': 12 items
+source google 'கிணத்துக்கடவு': 0 items
+source bing 'கிணத்துக்கடவு': 12 items
+source google 'மதுக்கரை': 0 items
+source bing 'மதுக்கரை': 12 items
+source google 'பேரூர்': 2 items
+source bing 'பேரூர்': 12 items
+source google 'தொண்டாமுத்தூர்': 0 items
+source bing 'தொண்டாமுத்தூர்': 12 items
+source google 'ஆனைமலை': 0 items
+source bing 'ஆனைமலை': 12 items
+source google 'வால்பாறை': 2 items
+source bing 'வால்பாறை': 12 items
+source google 'காரமடை': 1 items
+source bing 'காரமடை': 12 items
+source google 'கருமத்தம்பட்டி': 0 items
+source bing 'கருமத்தம்பட்டி': 3 items
+source google 'கோவை மாவட்டம்': 23 items
 source bing 'கோவை மாவட்டம்': 12 items
 source google 'கோயம்புத்தூர் மாவட்டம்': 25 items
 source bing 'கோயம்புத்தூர் மாவட்டம்': 12 items
@@ -34,7 +283,7 @@ source google 'கோவை குறைதீர் கூட்டம்': 0 i
 source bing 'கோவை குறைதீர் கூட்டம்': 2 items
 source google 'Coimbatore power shutdown': 7 items
 source bing 'Coimbatore power shutdown': 10 items
-source google 'Coimbatore collector': 3 items
+source google 'Coimbatore collector': 2 items
 source bing 'Coimbatore collector': 12 items
 source google 'சிங்காநல்லூர்': 2 items
 source bing 'சிங்காநல்லூர்': 12 items
@@ -47,19 +296,35 @@ source bing 'உக்கடம்': 12 items
 source google 'காந்திபுரம்': 2 items
 source bing 'காந்திபுரம்': 12 items
 source google 'துடியலூர்': 1 items
-source bing 'துடியலூர்': 7 items
+source bing 'துடியலூர்': 8 items
+source google 'பெரியநாயக்கன்பாளையம்': 0 items
+source bing 'பெரியநாயக்கன்பாளையம்': 10 items
+source google 'சிறுமுகை': 0 items
+source bing 'சிறுமுகை': 5 items
 source google 'போத்தனூர்': 3 items
 source bing 'போத்தனூர்': 12 items
 source google 'வடவள்ளி': 1 items
 source bing 'வடவள்ளி': 8 items
 source google 'குனியமுத்தூர்': 0 items
 source bing 'குனியமுத்தூர்': 12 items
+source google 'நெகமம்': 0 items
+source bing 'நெகமம்': 8 items
+source google 'சோமனூர்': 0 items
+source bing 'சோமனூர்': 3 items
 source google 'மருதமலை': 0 items
 source bing 'மருதமலை': 12 items
-source google 'Coimbatore': 55 items
+source google 'Coimbatore': 67 items
 source bing 'Coimbatore': 12 items
-source google 'Kovai': 57 items
+source google 'Kovai': 87 items
 source bing 'Kovai': 12 items
+source google 'Pollachi': 7 items
+source bing 'Pollachi': 12 items
+source google 'Mettupalayam': 14 items
+source bing 'Mettupalayam': 12 items
+source google 'Valparai': 0 items
+source bing 'Valparai': 11 items
+source google 'Sulur': 19 items
+source bing 'Sulur': 12 items
 source google 'Singanallur': 2 items
 source bing 'Singanallur': 12 items
 source google 'அன்னூர் மின்தடை': 0 items
@@ -67,11 +332,11 @@ source bing 'அன்னூர் மின்தடை': 0 items
 source google 'கிணத்துக்கடவு மின்தடை': 0 items
 source bing 'கிணத்துக்கடவு மின்தடை': 1 items
 source google 'மதுக்கரை மின்தடை': 0 items
-source bing 'மதுக்கரை மின்தடை': 1 items
+source bing 'மதுக்கரை மின்தடை': 0 items
 source google 'வால்பாறை மின்தடை': 0 items
 source bing 'வால்பாறை மின்தடை': 3 items
 source google 'காரமடை மின்தடை': 0 items
-source bing 'காரமடை மின்தடை': 0 items
+source bing 'காரமடை மின்தடை': 1 items
 source google 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source bing 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source google 'பேரூர் மின்தடை': 0 items
@@ -96,68 +361,155 @@ source google தினமலர் 'கோவை': 100 items
 source bing தினமலர் 'கோவை': 12 items
 source google தினமலர் 'கோயம்புத்தூர்': 100 items
 source bing தினமலர் 'கோயம்புத்தூர்': 12 items
-source google தினமணி 'கோவை': 83 items
+source google தினமலர் 'பொள்ளாச்சி': 39 items
+source bing தினமலர் 'பொள்ளாச்சி': 12 items
+source google தினமணி 'கோவை': 100 items
 source bing தினமணி 'கோவை': 12 items
-source google தினமணி 'கோயம்புத்தூர்': 87 items
+source google தினமணி 'கோயம்புத்தூர்': 61 items
 source bing தினமணி 'கோயம்புத்தூர்': 12 items
+source google தினமணி 'பொள்ளாச்சி': 3 items
+source bing தினமணி 'பொள்ளாச்சி': 8 items
 source google கோவை மெயில் 'கோவை': 18 items
 source bing கோவை மெயில் 'கோவை': 12 items
 source google கோவை மெயில் 'கோயம்புத்தூர்': 18 items
 source bing கோவை மெயில் 'கோயம்புத்தூர்': 0 items
+source google கோவை மெயில் 'பொள்ளாச்சி': 17 items
+source bing கோவை மெயில் 'பொள்ளாச்சி': 0 items
 source google அரசியல் டுடே 'கோவை': 65 items
 source bing அரசியல் டுடே 'கோவை': 0 items
-source google அரசியல் டுடே 'கோயம்புத்தூர்': 65 items
+source google அரசியல் டுடே 'கோயம்புத்தூர்': 67 items
 source bing அரசியல் டுடே 'கோயம்புத்தூர்': 0 items
+source google அரசியல் டுடே 'பொள்ளாச்சி': 0 items
+source bing அரசியல் டுடே 'பொள்ளாச்சி': 0 items
 source google தினகரன் 'கோவை': 100 items
 source bing தினகரன் 'கோவை': 12 items
 source google தினகரன் 'கோயம்புத்தூர்': 100 items
 source bing தினகரன் 'கோயம்புத்தூர்': 12 items
-source google தினத்தந்தி 'கோவை': 36 items
+source google தினகரன் 'பொள்ளாச்சி': 9 items
+source bing தினகரன் 'பொள்ளாச்சி': 0 items
+source google தினத்தந்தி 'கோவை': 40 items
 source bing தினத்தந்தி 'கோவை': 12 items
-source google தினத்தந்தி 'கோயம்புத்தூர்': 15 items
+source google தினத்தந்தி 'கோயம்புத்தூர்': 17 items
 source bing தினத்தந்தி 'கோயம்புத்தூர்': 12 items
-source google மாலைமலர் 'கோவை': 18 items
+source google தினத்தந்தி 'பொள்ளாச்சி': 6 items
+source bing தினத்தந்தி 'பொள்ளாச்சி': 3 items
+source google மாலைமலர் 'கோவை': 24 items
 source bing மாலைமலர் 'கோவை': 12 items
-source google மாலைமலர் 'கோயம்புத்தூர்': 8 items
+source google மாலைமலர் 'கோயம்புத்தூர்': 14 items
 source bing மாலைமலர் 'கோயம்புத்தூர்': 12 items
-source google தந்தி டிவி 'கோவை': 43 items
+source google மாலைமலர் 'பொள்ளாச்சி': 1 items
+source bing மாலைமலர் 'பொள்ளாச்சி': 5 items
+source google தந்தி டிவி 'கோவை': 45 items
 source bing தந்தி டிவி 'கோவை': 12 items
 source google தந்தி டிவி 'கோயம்புத்தூர்': 37 items
 source bing தந்தி டிவி 'கோயம்புத்தூர்': 2 items
-source google இந்து தமிழ் 'கோவை': 60 items
+source google தந்தி டிவி 'பொள்ளாச்சி': 2 items
+source bing தந்தி டிவி 'பொள்ளாச்சி': 2 items
+source google இந்து தமிழ் 'கோவை': 55 items
 source bing இந்து தமிழ் 'கோவை': 12 items
 source google இந்து தமிழ் 'கோயம்புத்தூர்': 5 items
 source bing இந்து தமிழ் 'கோயம்புத்தூர்': 2 items
+source google இந்து தமிழ் 'பொள்ளாச்சி': 2 items
+source bing இந்து தமிழ் 'பொள்ளாச்சி': 3 items
 source google பாலிமர் 'கோவை': 3 items
 source bing பாலிமர் 'கோவை': 1 items
 source google பாலிமர் 'கோயம்புத்தூர்': 2 items
 source bing பாலிமர் 'கோயம்புத்தூர்': 4 items
-source google மாலை முரசு 'கோவை': 5 items
-source bing மாலை முரசு 'கோவை': 3 items
-source google மாலை முரசு 'கோயம்புத்தூர்': 2 items
+source google பாலிமர் 'பொள்ளாச்சி': 0 items
+source bing பாலிமர் 'பொள்ளாச்சி': 0 items
+source google மாலை முரசு 'கோவை': 3 items
+source bing மாலை முரசு 'கோவை': 2 items
+source google மாலை முரசு 'கோயம்புத்தூர்': 1 items
 source bing மாலை முரசு 'கோயம்புத்தூர்': 1 items
+source google மாலை முரசு 'பொள்ளாச்சி': 1 items
+source bing மாலை முரசு 'பொள்ளாச்சி': 0 items
 source google நியூஸ்18 தமிழ் 'கோவை': 100 items
 source bing நியூஸ்18 தமிழ் 'கோவை': 12 items
 source google நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 100 items
 source bing நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 12 items
+source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 1 items
+source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 3 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 14 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 9 items
-source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 10 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 8 items
+source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 12 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 1 items
+source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
 source தினமணி கோவை: 5 items
 source தினகரன் கோவை: 10 items
 source பாலிமர் கோவை: 2 items
 source இந்து தமிழ் கோவை: 9 items
-Tamil outlets only: kept 1890 of 2162 items
-all sources: 1890 items -> 898 different news
-candidate filter: old=311, not Coimbatore district news (state-wide=235, checked earlier=164, checked earlier=83, already filed=56, collected=17, checked earlier=13, checked earlier=9, checked earlier=6, checked earlier=4
-to write: 17 Coimbatore district candidates (max 200 stories)
-checked at collection: 3 real local news, 0 duplicates merged, 4 old, 6 other district / state-wide, 2 empty, 2 could not be opened (tried again later)
-collect round: nothing is written now - the writer job takes the queue by priority and posts each story at once
-candidates waiting: 17 Coimbatore; time left 49 min
-candidate loop ended: left 17, tried={'N': 0}, done={'N': 0}, time left 49 min
-filed: 0 Coimbatore district stories (target 200), reels only
-queue: 3 news waiting to be written
-write_stories.yml started
-All News sheet: {"ok":true,"added":7,"updated":0} 
-stories: 0
+Tamil outlets only: kept 2208 of 2610 items
+all sources: 2208 items -> 1022 different news
+candidate filter: old=345, not Coimbatore district news (state-wide=250, checked earlier=158, checked earlier=81, collected=76, already filed=64, checked earlier=12, checked earlier=9, checked earlier=9, not written=8, not written=6, checked earlier=4
+to write: 76 Coimbatore district candidates (max 3 stories)
+round: top 3 of 76 candidates + 1 power cut(s)
+candidates waiting: 76 Coimbatore; time left 51 min
+try (N) manual=False: முன்னாள் முதலமைச்சர் சாமி கும்பிடுறதுக்கும், மின் தடைக்கும் 
+try (N) manual=False: சிறை கதவருகே போலீசாரை ஏமாற்றி தப்பிய கைதி: நகர் முழுவதும் போ
+try (N) manual=False: வெள்ளி கொள்ளையில் மேலும் 3 பேர் சிக்கினர்
+skip (N) no Coimbatore place in article: முன்னாள் முதலமைச்சர் சாமி கும்பிடுறதுக்கும், மின் 
+try (N) manual=False: சமூகவலைதளத்தில் மோதல் டிரைவரை தாக்கிய 4 பேர் கைது
+skip (N) no Coimbatore place in article: வெள்ளி கொள்ளையில் மேலும் 3 பேர் சிக்கினர்
+try (N) manual=False: திருவொற்றியூர் மாநகராட்சி இளநிலை பொறியாளர் மீது நடவடிக்கை பா
+skip (N) too old (2026-10-30T18:36:58+05:30): சமூகவலைதளத்தில் மோதல் டிரைவரை தாக்கிய 4 பேர் கைது
+try (N) manual=False: நகை பறித்தவர் கைது
+skip (N) too old (2026-10-28T21:15:08+05:30): நகை பறித்தவர் கைது
+try (N) manual=False: தொண்டாமுத்தூர் வட்டாரத்தில் கனமழை
+skip (N) too old (2026-10-19T17:05:03+05:30): தொண்டாமுத்தூர் வட்டாரத்தில் கனமழை
+try (N) manual=False: கனமழை : வால்பாறை மலைப் பாதையில் விழுந்த ராட்சத பாறை; 16 மணி 
+skip (N) too old (2026-10-21T22:33:59.689Z): கனமழை : வால்பாறை மலைப் பாதையில் விழுந்த ராட்சத பாற
+try (N) manual=False: காா் மோதியதில் சாலையோரம் தூங்கியவா் உயிரிழப்பு
+skip (N) too old (2026-10-20T18:44:45.842Z): காா் மோதியதில் சாலையோரம் தூங்கியவா் உயிரிழப்பு
+try (N) manual=False: மதுக்கரை நகராட்சியில் ரெய்டு ரூ.79 ஆயிரம் ரொக்கம் சிக்கியது
+skip (N) too old (2026-10-24T00:58:31+05:30): மதுக்கரை நகராட்சியில் ரெய்டு ரூ.79 ஆயிரம் ரொக்கம் 
+try (N) manual=False: கைதி தப்பியோட்டம்!
+skip (N) too old (2026-10-30 12:27:00): திருவொற்றியூர் மாநகராட்சி இளநிலை பொறியாளர் மீது 
+try (N) manual=False: பெண் ஐபிஎஸ்க்கு எதிராக விசிகவினர் ஆர்ப்பாட்டம் | Shristi Sin
+skip (N) too old (2024-11-19 16:57:00): பெண் ஐபிஎஸ்க்கு எதிராக விசிகவினர் ஆர்ப்பாட்டம் | S
+try (N) manual=False: ஊட்டி-மேட்டுப்பாளையம் மலை ரெயில் பாதை சீரமைப்பு பணிகள் தீவிர
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
+posting job started at once
+try (N) manual=False: திருப்பூா் மாவட்டத்தில் பெண்களுக்கான வெற்றிப் பயணம் மேலும் .
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 6})
+try (N) manual=False: மழைநீர் வடிகாலும் சாக்கடை சீரமைப்பும்! மேட்டுப்பாளையம் 6வது 
+try (N) manual=False: தீபாவளி: போத்தனூரில் இருந்து சிறப்பு ரயில்கள் இயக்க வலியுறுத
+skip (N) too old (2026-10-18T20:10:51.860Z): திருப்பூா் மாவட்டத்தில் பெண்களுக்கான வெற்றிப் பயணம
+try (N) manual=False: நிரம்பி வழியும் தடுப்பணைகள், பெள்ளாதி குளம்
+skip (N) too old (2026-09-27T21:58:16.970Z): தீபாவளி: போத்தனூரில் இருந்து 
+சிறப்பு ரயில்கள் இயக
+try (N) manual=False: Gold Price Drops | திடீரென சரிந்த தங்கம் விலை 1 கிராம் எவ்வள
+skip (N) too old (2026-10-29T22:34:50+05:30): மழைநீர் வடிகாலும் சாக்கடை சீரமைப்பும்! மேட்டுப்பாள
+try (N) manual=False: TASMAC | டாஸ்மாக் மதுபான விலை உயர்வா? | Liquor Prices Hike |
+skip (N) could not open: Gold Price Drops | திடீரென சரிந்த தங்கம் விலை 1 கி [https://news.google.com/rss/articles/CBMikgFBVV95cUxNVzBFXzZ] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+try (N) manual=False: தற்போது பெய்து வரும் மழையில் பச்சை பசேலென மாறி ...
+skip (N) could not open: TASMAC | டாஸ்மாக் மதுபான விலை உயர்வா? | Liquor Pri [https://news.google.com/rss/articles/CBMilwFBVV95cUxPa1RBU3F] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+try (N) manual=False: பருவமழை முன்னெச்சரிக்கை நடவடிக்கைகள்: மாவட்ட ஆட்சியா் ...
+skip (N) too old (2026-10-21T22:40:31.194Z): பருவமழை முன்னெச்சரிக்கை நடவடிக்கைகள்: மாவட்ட ஆட்சி
+try (N) manual=False: நிகழாண்டு வடகிழக்கு பருவமழை 35% அதிகம்
+skip (N) too old (2026-10-28 17:06:39): தேனி சிறையில் 17 கைதிகள் ஓட்டம்:  13 பேர் மீண்டும்
+try (N) manual=False: சாலையை சீரமைக்கக்கோரி மழை நீரில் கப்பல் விடும் போராட்டம்
+skip (N) too old (2026-10-20T18:46:05.652Z): சாலையை சீரமைக்கக்கோரி மழை நீரில் கப்பல் விடும் போர
+try (N) manual=False: நான்கு நாட்களுக்கு பிறகு உக்ரமாக உதித்த சூரியன் மாலையில் ...
+skip (N) no Coimbatore place in article: நிகழாண்டு வடகிழக்கு பருவமழை 35% அதிகம்
+try (N) manual=False: பள்ளி ஆசிரியர்களுக்கு பாராட்டு விழா
+skip (N) too old (2026-10-30 19:01:06): கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத
+try (N) manual=False: ராமலிங்க சவுடேஸ்வரி அம்மன் கோவில் நவராத்திரி விழா: கத்தி போட
+skip (N) too old (2026-10-30T16:44:37+05:30): பள்ளி ஆசிரியர்களுக்கு பாராட்டு விழா
+try (N) manual=False: ஆயிரம் ஆண்டுகளுக்கு முந்தைய தேர்தல்..! உத்திரமேரூர் வைகுந்தப
+skip (N) too old (2026-10-20T09:24:00+05:30): ராமலிங்க சவுடேஸ்வரி அம்மன் கோவில் நவராத்திரி விழா:
+try (N) manual=False: நெடுஞ்சாலையில் ஓய்வெடுக்கும் மாடுகளால் வாகன ஓட்டிகளுக்கு சிர
+skip (N) could not open: ஆயிரம் ஆண்டுகளுக்கு முந்தைய தேர்தல்..! உத்திரமேரூர [https://news.google.com/rss/articles/CBMi1wFBVV95cUxPOWp6U3R] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/chenn
+try (N) manual=False: கோவை மத்திய சிறையில் இருந்து கைதி தப்பியோட்டம்
+skip (N) similar to a filed story: கோவை மத்திய சிறையிலிருந்து கைதி தப்பியோட்டம்: கடும
+try (N) manual=False: ரயில்வே கேட் மூடுவதற்கு கருத்து கேட்பு: பாலம் அமைக்க வலியுறு
+skip (N) no Coimbatore place in article: நெடுஞ்சாலையில் ஓய்வெடுக்கும் மாடுகளால் வாகன ஓட்டிக
+skip (N) too old (2026-10-26T18:06:37+05:30): நிரம்பி வழியும் தடுப்பணைகள், பெள்ளாதி குளம்
+skip (N) too old (2026-10-30T18:46:49+05:30): ரயில்வே கேட் மூடுவதற்கு கருத்து கேட்பு: பாலம் அமைக
+candidate loop ended: left 46, tried={'N': 30}, done={'N': 3}, time left 47 min
+filed: 3 Coimbatore district stories (target 3), reels only
+queue: 47 news waiting to be written
+All News sheet: {"ok":true,"added":58,"updated":2}
+All News sheet: {"ok":true,"added":4,"updated":2} 
+stories: 3
