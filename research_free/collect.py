@@ -150,7 +150,7 @@ INTEREST = [
     (7, ("குடிநீர்", "குப்பை", "சாக்கடை", "பாதாளச் சாக்கடை", "கொசு", "தெருவிளக்கு", "சாலை பள்ளம்", "சாலை மறியல்", "மாநகராட்சி",
          "போக்குவரத்து நெரிசல்", "போக்குவரத்து மாற்றம்", "தண்ணீர்", "கழிவுநீர்", "சாலை சீரமைப்பு")),
     (6, ("வேலைவாய்ப்பு", "வேலை வாய்ப்பு", "ஆட்சேர்ப்பு", "பணியிடம்", "பணியிடங்கள்", "காலிப்பணி")),
-    (6, ("மழை", "வானிலை", "புயல்", "வெள்ளம்", "வெப்பம்", "பள்ளி விடுமுறை", "விடுமுறை")),
+    (9, ("மழை", "வானிலை", "புயல்", "வெள்ளம்", "வெப்பம்", "பள்ளி விடுமுறை", "விடுமுறை")),      # owner 31 Oct: rain = crime (Namakkal insights: weather 1,804 median views)
     (5, ("விலை", "காய்கறி", "தக்காளி", "தேங்காய்", "உழவர் சந்தை", "சந்தை")),
     (5, ("பள்ளி", "கல்லூரி", "மாணவ", "தேர்வு", "தேர்வு முடிவு", "உதவித்தொகை", "சேர்க்கை")),
     (5, ("ரேஷன்", "மகளிர் உரிமை", "ஓய்வூதியம்", "திட்டம்", "மானியம்", "ஆட்சியர்", "அறிவிப்பு", "முகாம்", "சிறப்பு முகாம்")),
@@ -161,6 +161,30 @@ INTEREST = [
     (9, ("கனமழை", "மழை எச்சரிக்கை", "ஆரஞ்சு அலர்ட்", "ரெட் அலர்ட்", "வெள்ளப்பெருக்கு", "பனிமூட்டம்")),      # owner 31 Oct: rain warnings 2nd only to power cuts
     (3, ("திருவிழா", "கோவில்", "கோயில்", "தேரோட்ட", "மருதமலை", "சுற்றுலா")),
 ]
+
+
+# owner 31 Oct (17:07): each Coimbatore round posts its top 3 ONLY from these four kinds - power cut, rain, crime, accident (Namakkal insights,
+# 193 reels, median views: power cut 23,720 > weather 1,804 > crime 882 > accident 792; temple / civic / education / politics 280-512).
+# Judged on the HEADLINE. Env TOP_KINDS_ONLY=0 turns it off. Links given by hand are never filtered.
+TOP_KINDS = [
+    ("power_cut", re.compile(r"power (cut|shutdown|outage)|no power supply", re.I)),
+    ("rain", re.compile(r"மழை|வெள்ளம்|வெள்ளப்|வெள்ளத்|புயல்|அலர்ட்|நிலச்சரிவு|மண் சரிவு|பனிமூட்ட|சூறைக்காற்று|மின்னல்|\brain|flood|landslide|\bfog\b|\balert\b|நீர்வரத்து|அணை.{0,12}(திறப்பு|நிரம்)", re.I)),
+    ("crime", re.compile(r"கொலை|கைது|திருட|கொள்ளை|மோசடி|வழிப்பறி|நகை பறிப்பு|பறிமுதல்|தற்கொலை|தப்பி|கடத்த|போக்சோ|பாலியல்|"
+                         r"தாக்குதல்|தாக்கிய|அடிதடி|கஞ்சா|சிறை|தண்டனை|லஞ்ச|சைபர்|குண்டர்|வெட்டிக்|ரவுடி|வழக்குப்பதிவு|வழக்குப் பதிவு|"
+                         r"arrest|murder|theft|thie[fv]|robber|fraud|scam|escape|ganja|drugs?\b|sentenced|jail|prison|pocso|cyber|bribe|assault|attack", re.I)),
+    ("accident", re.compile(r"விபத்து|மோதி|மோதல்|பலி|உயிரிழ|சடலம|தீப்பிடி|தீப்பற்|கவிழ்ந்|மூழ்கி|மின்சாரம் தாக்கி|மின் தாக்கி|தவறி விழு|இடிந்து|"
+                            r"accident|collision|crash|killed|\bdies\b|\bdied\b|dead\b|death|fire\b|blaze|drown|electrocut|overturn|collapse", re.I)),
+]
+TOP_KINDS_ONLY = os.environ.get("TOP_KINDS_ONLY", "1") == "1"
+
+
+def top_kind(title):
+    """'power_cut' / 'rain' / 'crime' / 'accident' when the headline is one of the four kinds a round posts, else ''"""
+    t = title or ""
+    for k, p in TOP_KINDS:
+        if p.search(t) or (k == "power_cut" and _fr().is_power_cut(t)):
+            return k
+    return ""
 
 
 # owner 31 Oct: only news Instagram users watch is written. 30-31 Oct posts showed what they do not: recipes, health / building tips and
@@ -265,12 +289,13 @@ def is_dup(art, d, recent):
         if _fr().same_power_cut(r.get("headline_ta"), r.get("researched"), (d or {}).get("tamil_headline", art["title"]), art.get("published")):
             return True      # owner 30 Oct: the same power cut (same day, same place) already filed
     # 31 Oct (Coimbatore RN-96 = RN-95: one escape, two outlets, written in the same round; RN-39 = RN-76): the new SCRIPT against every story
-    # filed in the last day - this round's included - so the same event in other words is never filed twice
+    # filed in the last 2 days (owner 31 Oct: Namakkal RN-115 repeated RN-86 24 h 8 min later) - this round's included - so the same event
+    # in other words is never filed twice
     s = (d or {}).get("reel_script") or ""
     if s:
         today = datetime.datetime.now(_fr().IST).date()
         olds = [o for o in (_filed_script(r) for r in recent
-                            if (lambda od: od is None or abs((today - od).days) <= 1)(_fr().pub_date(r.get("researched")))) if o]
+                            if (lambda od: od is None or abs((today - od).days) <= 2)(_fr().pub_date(r.get("researched")))) if o]
         if olds:
             df = _fr().event_df(olds + [s])
             if any(_fr().same_event(o, s, df) for o in olds):
@@ -961,6 +986,13 @@ def main():
         if n["status"] == "collected" and (allnews.other_district(n["title"]) or allnews.outside_district(n["title"], n.get("via", ""))):
             n["status"] = "not Coimbatore district news (state-wide / other district)"
             continue
+        if n["status"] == "collected" and TOP_KINDS_ONLY and not n.get("manual"):
+            if not top_kind(n["title"]):
+                n["status"] = "not written: not power cut / rain / crime / accident"
+                continue
+            if allnews.statewide(n["title"], rain=top_kind(n["title"]) == "rain"):
+                n["status"] = "not written: state-wide / other-district news"
+                continue
         low = low_interest(n["title"], n.get("url", "")) if n["status"] == "collected" and not n.get("manual") else ""
         if low:      # owner 31 Oct: only news Instagram users watch is written (nothing opened, no model call)
             n["status"] = "not written: " + low

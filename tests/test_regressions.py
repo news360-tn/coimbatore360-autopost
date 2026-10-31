@@ -1586,3 +1586,53 @@ class SameEventNeverTwice(unittest.TestCase):
         self.assertFalse(fr.is_power_cut("முன்னாள் முதலமைச்சர் சாமி கும்பிடுறதுக்கும், மின் தடைக்கும் என்ன தொடர்பு"))
         self.assertFalse(fr.is_power_cut("தொடர் மின் தடையால் மக்கள் அவதி"))
         self.assertTrue(fr.is_power_cut("சூலூரில் நாளை மின் தடை"))
+
+
+class TopThreeOnlyFourKinds(unittest.TestCase):
+    """owner 31 Oct 17:07: a Coimbatore round posts its top 3 only from power cut / rain / crime / accident, Coimbatore-district news only
+    (reel RN-98, NDRF at Aliyar dam, was state-wide news every outlet carried)"""
+
+    def kind(self, t):
+        return collect.top_kind(t) if not allnews.statewide(t, rain=collect.top_kind(t) == "rain") else ""
+
+    def test_the_four_kinds_are_kept(self):
+        self.assertEqual("power_cut", self.kind("சூலூரில் நாளை மின் தடை"))
+        self.assertEqual("rain", self.kind("நவம்பர் 2ல் கோவை, நீலகிரியில் ஓரிரு இடங்களில் கனமழை வாய்ப்பு"))
+        self.assertEqual("rain", self.kind("கோவை தமிழக-கேரள எல்லையில் கடும் பனிமூட்டம்"))
+        self.assertEqual("crime", self.kind("பீளமேடுவில் பேருந்து ஓட்டுனர்கள் அடிதடி"))
+        self.assertEqual("crime", self.kind("கோவை மத்திய சிறை வாசலில் கைதி தப்பியோட்டம்"))
+        self.assertEqual("accident", self.kind("சித்தாளந்தூரில் சாலை கடக்க முயன்ற தொழிலாளி கார் மோதி பலி"))
+
+    def test_other_kinds_are_not_written(self):
+        for t in ("கோவை கணபதி சூலக்கல் மாரியம்மன் கோவிலில் வெள்ளிக்கிழமை சிறப்பு வழிபாடு",      # வெள்ளி(க்கிழமை) is not வெள்ளம்
+                  "தீபாவளி கூட்ட நெரிசல்: கோவை மாநகரில் 1,000 போலீசார் பாதுகாப்புப் பணியில்",      # police on duty is no crime
+                  "கோவையில் 13 ஆண்டுகளுக்குப் பிறகு ஆட்டோ வாடகை உயர்வு", "ஐப்பசி சனி: கரிவரதராஜ பெருமாள் கோயிலில் சிறப்பு வழிபாடு"):
+            self.assertEqual("", self.kind(t), t)
+
+    def test_state_wide_news_is_never_top_three(self):
+        for t in ("ஆழியாறு அணையில் தேசிய பேரிடர் மீட்பு படை ஆய்வு",
+                  "மீனாட்சி அம்மன் கோவிலில் மின்வெட்டு; கோவை சிறையில் கைதி ஓட்டம்: அமைச்சர் நிர்மல் குமாரை ரவுண்டு கட்டும் தலைவர்கள்",
+                  "கே.என்.நேரு வீடு உள்பட 25 இடங்களில் லஞ்ச ஒழிப்புத்துறை சோதனை", "தேனி சிறையில் 17 கைதிகள் தப்பி ஓட்டம்: கோவை சிறையில் பாதுகாப்பு",
+                  "கோவை உள்பட 10 மாவட்டங்களில் கனமழை"):
+            self.assertEqual("", self.kind(t), t)
+
+    def test_a_rain_alert_for_coimbatore_is_local(self):
+        self.assertFalse(allnews.outside_district("கோவையில் இன்று கனமழைக்கு வாய்ப்பு"))
+        self.assertTrue(allnews.outside_district("இன்று கனமழைக்கு வாய்ப்பு: வானிலை மையம்"))
+
+
+class SameFightTwoOutlets(unittest.TestCase):
+    """owner 31 Oct: RN-13 = RN-24, one bus drivers' fight told by Thanthi TV and Dinakaran an hour apart, was posted twice"""
+
+    A = ("கோவையில் பேருந்து ஓட்டுநர்கள் நடுரோட்டில் ஒருவரையொருவர் தாக்கிக்கொண்ட சம்பவம் வைரல் ஆனது. பயணிகளை ஏற்றுவதில் ஏற்பட்ட போட்டியால் "
+         "இரண்டு தனியார் பேருந்துகளின் ஓட்டுநர்கள் நடத்துநர்கள் அடிதடியில் ஈடுபட்டனர். பீளமேடு போலீசார் விசாரணை நடத்தி வருகின்றனர்.")
+    B = ("பீளமேடுவில் இரண்டு தனியார் பேருந்துகளின் ஓட்டுனர்கள் மற்றும் நடத்துனர்களிடையே பயணிகளை ஏற்றுவதில் போட்டியால் நடுரோட்டில் அடிதடி "
+         "ஏற்பட்டது. பேருந்துகளில் பயணிகள் இருந்தும் ஒருவரையொருவர் தாக்கிக்கொண்டனர். வீடியோ வைரல் ஆனது. பீளமேடு போலீசார் விசாரணை.")
+
+    def test_fight_is_an_incident(self):
+        self.assertIn("fight", fr._incidents(self.A))
+        self.assertIn("fight", fr._incidents(self.B))
+
+    def test_two_day_window(self):
+        src = open(os.path.join(os.path.dirname(__file__), "..", "research_free", "collect.py"), encoding="utf-8").read()
+        self.assertIn("abs((today - od).days) <= 2)", src)

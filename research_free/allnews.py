@@ -249,13 +249,35 @@ def outside_district(text, via=""):
     that names another place and none of ours. A headline that names no place at all is KEPT (many local reports omit it) - the article itself
     is checked for a Coimbatore place before anything is written (collect.py)."""
     text = text or ""
-    if any(w in text for w in ALWAYS_OUTSIDE) or any(w in text for w in WEATHER_FORECAST):
+    if any(w in text for w in ALWAYS_OUTSIDE):
+        return True
+    if any(w in text for w in WEATHER_FORECAST) and not has_place(text):      # owner 31 Oct: a rain alert FOR Coimbatore is news; a general forecast is not
         return True
     if has_place(text):
         return False
     if via == "dinamalar-list":
         return False
     return any(w in _no_city_roads(text) for w in OUTSIDE_WORDS)
+
+
+# owner 31 Oct (reel RN-98, NDRF at Aliyar dam - every outlet in the state carried it): news about the whole state / another district is
+# never in a round's top 3, even when its headline also names a Coimbatore place
+STATE_NEWS = ["NDRF", "தேசிய பேரிடர் மீட்பு", "சிறப்பு ரயில்", "அமைச்சர்", "முதல்வர்", "தமிழக", "தமிழ்நாடு", "தமிழகம்", "மாநில", "உள்ளிட்ட",
+              "மாவட்டங்க", "இந்தியா", "மத்திய அரசு", "பிரதமர்"]
+
+
+def statewide(title, rain=False):
+    """True when the headline is about the whole state, the country or another district too (not a Coimbatore-only event).
+    rain=True: a Coimbatore rain / fog report may also name a neighbour (Nilgiris, the Kerala border at Walayar) - only state-wide or
+    many-district wording counts then"""
+    t = _no_city_roads(title or "")
+    low = t.lower()
+    if rain:
+        return not has_place(t) or any(w in t for w in ALWAYS_OUTSIDE + ["NDRF", "தேசிய பேரிடர் மீட்பு", "மாவட்டங்க", "தமிழகம் முழுவதும்"])
+    if re.search(r"\d+\s*இடங்களில்", t):      # RN-38: raids at 25 places across the state
+        return True
+    return (any(w in t for w in STATE_NEWS + STATE_WIDE + ALWAYS_OUTSIDE) or any(f in t for w in OTHER_PLACES if w not in ("கோபி", "பவானி") for f in _forms(w))      # also people's names
+            or any(re.search(r"\b" + w + r"\b", low) for w in OTHER_EN))
 
 
 def area_of(text, default=AREA):
