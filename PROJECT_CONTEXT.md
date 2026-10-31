@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `ecbb9d2` | test: today-only freshness check no longer fails every night 00:00-02:00 IST (matches the owner's FRESH_HOURS 0 rule) |
 | 2026-10-31 | `d480193` | rasipalan: proofreader may only fix sandhi/spacing (never a changed letter); TV9 'மேஷ ராசி' headings read |
 | 2026-10-31 | `cf77638` | rasipalan: test runs keep the slides and log on a preview branch |
 | 2026-10-31 | `9034b5d` | Daily rasipalan carousel for Coimbatore 360 (7:31 AM, Tamil daily-calendar design, festival themes) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-30 | `c28740a` | image test output |
 | 2026-10-30 | `8540ebc` | imagegen-test: each free picture service tested on its own (Cloudflare, SiliconFlow, Pollinations, NVIDIA) - nothing posted |
 | 2026-10-30 | `3729cb8` | Free pictures first (owner 30 Oct): Cloudflare kept for pictures (not writing, 4 steps = ~230 free pictures/day) -> SiliconFlow free FLUX -> Together free FLUX -> Pollinations -> NVIDIA -> FAL only when all fail (each new service skipped until its key is set); 2 news-specific pictures per reel on every page (cover = main event, 2nd = detail); the cover is kept if the 2nd picture fails; switches in config.json free_images |
-| 2026-10-30 | `9943e0e` | Code bugs never repeat (owner): tests fail on any undefined name in poster/research_free/reel (pyflakes on GitHub - would have stopped the 29 Oct 'verify' posting crash) and run the caption + posting-check steps end to end on a sample story |
 <!-- recent-changes:end -->
