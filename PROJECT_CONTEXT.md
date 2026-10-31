@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `1b1521e` | Coimbatore: no daily limit - every 2-hour round posts its top 3 (only Instagram's 50 a day applies); a round keeps trying until 3 are written |
 | 2026-10-31 | `466a2bb` | The same event is never posted twice: incidents matched by name / distinctive number; round-mates checked (owner 31 Oct) |
 | 2026-10-31 | `e6a1029` | Location tags: only ids Instagram accepts are used; ig-probe checks them (owner 31 Oct) |
 | 2026-10-31 | `ea88c0c` | 10 rounds a day, top 3 of the whole district each; fix the posting watchdog (owner 31 Oct) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `849f93c` | Coimbatore quality check (owner): card lines never cut mid-phrase (RN-34), English words in the voice script sent back - the voice drops them (RN-34), state-wide stories not written or posted (RN-8 TNEB, RN-20 prisons) |
 | 2026-10-29 | `7201ad8` | Fix: every post job crashed with NameError (verify not imported in clean_caption) since 13:00 UTC 29 Oct |
 | 2026-10-29 | `51b8910` | Topic / tag / author / page-N listing pages are never written or posted as a news story (RN-194: abplive topic page gave a Cuddalore story) |
-| 2026-10-29 | `1643d19` | Writer started by the collector waits for the queue instead of skipping; same event from another outlet is not written again |
 <!-- recent-changes:end -->
