@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `27811da` | Real news photos: only our page's branding - source watermarks / channel logos removed, no source credit (owner 31 Oct) |
 | 2026-10-31 | `0429960` | Real news photos: the source article's own photo is used when it shows this news, enhanced to a presentable picture; else AI pictures (owner 31 Oct) |
 | 2026-10-31 | `a5ec073` | Coimbatore: each round's top 3 only from power cut / rain / crime / accident, Coimbatore-district news only; repeats never posted (owner 31 Oct) |
 | 2026-10-31 | `1b1521e` | Coimbatore: no daily limit - every 2-hour round posts its top 3 (only Instagram's 50 a day applies); a round keeps trying until 3 are written |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `3f6b7de` | English search line never cut in the middle of a word |
 | 2026-10-29 | `c546c12` | Coimbatore reach plan (owner): reels at most 60 s (70-105 words, key facts once; every detail stays in the caption's full-details block, checked at writing), English search line added at posting, 5 focused hashtags (page + district + area + topic + broad, junk tags dropped), no brand names/logos in pictures, location tags on; all behind poster/config.json reach switches |
 | 2026-10-29 | `da1b5f9` | Known issues never repeat (owner): one list (research_free/known_issues.py) checked when a story is written AND right before posting - script about the article, letters of another script (repaired first), English words the voice skips, card cut mid-phrase, words said twice; every entry has a real bad and good example run by the tests |
-| 2026-10-29 | `849f93c` | Coimbatore quality check (owner): card lines never cut mid-phrase (RN-34), English words in the voice script sent back - the voice drops them (RN-34), state-wide stories not written or posted (RN-8 TNEB, RN-20 prisons) |
 <!-- recent-changes:end -->
