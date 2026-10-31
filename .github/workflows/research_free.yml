@@ -1,10 +1,11 @@
 name: research-free
 # Coimbatore 360: collects Coimbatore-district news only.
-# every 4 hours at :07 (IST 01:37, 05:37, 09:37, 13:37, 17:37, 21:37; GitHub often starts it a little late). Runs ONLY while research_free/ENABLED exists (Actions -> collect-switch -> start/pause). Every round collects today's Coimbatore city news; write-stories writes it and posting follows at once
-# (quality-checked) and sends ONE images-needed e-mail - only when there is news. Stories still waiting for images from an earlier round are listed again in it.
+# owner 31 Oct: 10 ROUNDS a day at IST 04:00, 06:00, 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00, 22:00 (GitHub often starts it a little late).
+# Each round collects today's WHOLE-district news, compares it with today's earlier collected news that was not posted yet, writes the
+# TOP 3 by expected views (+ every power cut) and starts posting at once. A new day starts fresh. Runs ONLY while research_free/ENABLED exists.
 on:
   schedule:
-    - cron: "7 */4 * * *"    # owner 31 Oct (Coimbatore): every 4 hours COLLECT (was 2 hours) (city news of today, queued by priority); write-stories.yml writes them and posting follows at once
+    - cron: "30 22,0,2,4,6,8,10,12,14,16 * * *"    # UTC = IST 04:00 ... 22:00 every 2 hours (owner 31 Oct)
   workflow_dispatch:
     inputs:
       dry:
@@ -65,11 +66,12 @@ jobs:
           GH_REPO: ${{ github.repository }}
           AUTO_IMAGES: "1"          # ONE image per story: free first (Cloudflare -> NVIDIA), then FAL schnell -> dev; if all fail for 30 min -> plain branded background
           WRITE_STORIES: '1'
-          COLLECT_MODE: ${{ github.event.inputs.manual_url != '' && 'both' || 'collect' }}      # a link given by hand is written at once
+          COLLECT_MODE: both        # owner 31 Oct: each round collects AND writes its top 3 (a link given by hand is written at once too)
+          MAX_STORIES: "3"          # owner 31 Oct: top 3 per round by expected views; every power cut is written on top
           WRITE_WORKERS: "3"        # stories written at the same time
           FRESH_DAYS: "1"           # owner 29 Oct: news published TODAY only (Coimbatore)
-          CITY_ONLY: "1"            # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
-          DAILY_CAP: "50"           # owner 29 Oct: up to Instagram's limit of 50 a day (city news is never capped below it)
+          CITY_ONLY: "0"            # owner 31 Oct: the WHOLE district competes (a city story wins a tie: score +1)
+          DAILY_CAP: "30"           # owner 31 Oct: 10 rounds x 3; power cuts are never capped
         run: |
           mkdir -p research_free/results
           FLAG=""; [ "${{ github.event.inputs.dry }}" = "true" ] && FLAG="--dry"

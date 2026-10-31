@@ -36,8 +36,8 @@ env:
   POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # picture check: does the AI image show the news?
   SARVAM_API_KEY: ${{ secrets.SARVAM_API_KEY }}      # owner 30 Oct: free writers (skipped until the key is set)
-  DAILY_CAP: "50"     # owner 29 Oct: do not miss city news - up to Instagram's own limit of 50 posts a day
-  CITY_ONLY: "1"      # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
+  DAILY_CAP: "30"     # owner 31 Oct: 10 rounds x top 3; power cuts / High news are never capped
+  CITY_ONLY: "0"      # owner 31 Oct: the whole district (top 3 per round decides)
   POST_MAX_AGE_DAYS: "0"      # owner 29 Oct 18:29: only news PUBLISHED TODAY is posted
   DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
   PREBUILD: ${{ github.event_name == 'workflow_dispatch' && inputs.prebuild && '1' || '' }}
@@ -84,13 +84,16 @@ jobs:
               except Exception: return 1e9
           try: q = len(json.load(open("research_free/archive/queue.json")))
           except Exception: q = 0
-          print("collect" if age("collect") > 255 else "",      # owner 31 Oct: collection every 4 h (255 = 4 h + 15 min grace, as Namakkal) "write" if q and age("write") > 30 else "")
-          print(f"last collect {age('collect'):.0f} min ago, last write {age('write'):.0f} min ago, queue {q}")
+          # owner 31 Oct: rounds at IST 04:00 ... 22:00 every 2 h. An overdue round (GitHub skipped it) is restarted only inside that
+          # window, 2 h 40 min after the last one; never at night. The story writer is never restarted: each round writes its own top 3.
+          ist = now + d.timedelta(hours=5, minutes=30)
+          hm = ist.hour * 60 + ist.minute
+          print("collect" if 4 * 60 + 40 <= hm <= 23 * 60 and age("collect") > 160 else "")
+          print(f"last round {age('collect'):.0f} min ago, IST {ist:%H:%M}, queue {q}")
           PY
           cat /tmp/wd.txt
           todo=$(head -1 /tmp/wd.txt)
-          case "$todo" in *collect*) gh workflow run research_free.yml -f dry=false && echo "news collection was overdue: started now";; esac
-          case "$todo" in *write*) gh workflow run write_stories.yml && echo "queued news waiting: story writer started now";; esac
+          case "$todo" in *collect*) gh workflow run research_free.yml -f dry=false && echo "news round was overdue: started now";; esac
           true
       - name: Keep the schedule alive (daily heartbeat)
         if: github.event_name == 'schedule' && env.BRIDGE_URL != ''

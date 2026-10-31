@@ -1,10 +1,7 @@
 name: write-stories
-# every 20 minutes: takes the news queue (filled every 4 hours by research-free), highest priority first, writes the story
-# (quality-checked, pictures made) and starts the posting job at once. Runs ONLY while research_free/ENABLED exists.
-# An empty queue ends the run in seconds.
+# owner 31 Oct: NO schedule - each research-free round (IST 04:00 ... 22:00, every 2 hours) writes its own top 3 and posts them.
+# Run by hand only: writes the top 3 of today's waiting news (quality-checked, pictures made) and starts the posting job.
 on:
-  schedule:
-    - cron: "*/20 * * * *"
   workflow_dispatch:
 permissions:
   contents: write
@@ -71,8 +68,9 @@ jobs:
           WRITE_STORIES: '1'
           WRITE_WORKERS: "3"
           FRESH_DAYS: "1"           # owner 29 Oct: news published TODAY only (Coimbatore)
-          CITY_ONLY: "1"            # owner 29 Oct: Coimbatore CITY only for now; "0" = the whole district
-          DAILY_CAP: "50"           # owner 29 Oct: up to Instagram's limit of 50 a day (city news is never capped below it)
+          CITY_ONLY: "0"            # owner 31 Oct: the whole district
+          DAILY_CAP: "30"           # owner 31 Oct: 10 rounds x top 3; power cuts are never capped
+          MAX_STORIES: "3"          # owner 31 Oct: a hand run writes the top 3 too
         run: |
           mkdir -p research_free/results
           python -u research_free/collect.py > research_free/results/write.log 2>&1 || echo "exit $?" >> research_free/results/write.log

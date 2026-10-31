@@ -158,6 +158,7 @@ INTEREST = [
     (8, ("காட்டு யானை", "யானை", "சிறுத்தை", "கரடி")),      # owner 31 Oct: wildlife is the most shared Coimbatore-only news (was 4)
     (7, ("அணை நீர்மட்டம்", "சிறுவாணி", "பில்லூர்", "ஆழியாறு", "குடிநீர் நிறுத்த")),      # dams / water supply of the city
     (9, ("ஆன்லைன் மோசடி", "சைபர் கிரைம்", "சைபர் க்ரைம்")),      # fraud warnings are forwarded to family
+    (9, ("கனமழை", "மழை எச்சரிக்கை", "ஆரஞ்சு அலர்ட்", "ரெட் அலர்ட்", "வெள்ளப்பெருக்கு", "பனிமூட்டம்")),      # owner 31 Oct: rain warnings 2nd only to power cuts
     (3, ("திருவிழா", "கோவில்", "கோயில்", "தேரோட்ட", "மருதமலை", "சுற்றுலா")),
 ]
 
@@ -281,6 +282,8 @@ def score(n):
         s += 1 if age_h < 6 else 0
     except Exception:
         pass
+    if any(w in n.get("title", "") for w in allnews.CITY_AREAS):
+        s += 1      # owner 31 Oct: whole district, but most followers live in the city - a city story wins a tie
     return s
 
 
@@ -297,7 +300,9 @@ def load_queue():
         q = json.loads(QUEUE.read_text(encoding="utf-8"))
     except Exception:
         return []
-    cut = (datetime.datetime.now(IST) - datetime.timedelta(days=2)).isoformat()
+    # owner 31 Oct: each day starts fresh - only news queued TODAY (IST) is compared again in the next round (a power cut for today
+    # published last evening is found again by the collection and kept by its cut day)
+    cut = datetime.datetime.now(IST).replace(hour=0, minute=0, second=0, microsecond=0).isoformat()
     return [dict(x, outlets=list(x.get("outlets") or []), alts=list(x.get("alts") or [x["url"]])) for x in q if x.get("queued_at", "") >= cut]
 
 
@@ -963,6 +968,12 @@ def main():
     log.append("candidate filter: " + ", ".join(f"{k.split(':')[0][:40]}={v}" for k, v in Counter(n["status"] for n in news).most_common()))
     log.append(f"to write: {len(queues[AREA])} Coimbatore district candidates (max {MAX_STORIES} stories)")
     target, done, tried = {AREA: MAX_STORIES}, {AREA: 0}, {AREA: 0}
+    if MODE == "both" and not PRIORITY_ONLY[0]:
+        # owner 31 Oct: each round writes the TOP 3 by expected views; every power cut is written on top of them, first
+        pcs = [q for q in queues[AREA] if _fr().is_power_cut(q["title"])]
+        queues[AREA] = pcs + [q for q in queues[AREA] if q not in pcs]
+        target = {AREA: MAX_STORIES + len(pcs)}
+        log.append(f"round: top {MAX_STORIES} of {len(queues[AREA])} candidates" + (f" + {len(pcs)} power cut(s)" if pcs else ""))
     if TODAY[0] >= DAILY_CAP:
         log.append(f"daily cap: {TODAY[0]} stories already written today (cap {DAILY_CAP}) - only main / important news is written now")
     if os.environ.get("WRITE_STORIES", "1") == "0" or TODAY[0] >= DAILY_CAP:      # archive-only round: collect and store everything, write nothing, send no email
@@ -1146,7 +1157,7 @@ def main():
     # owner 26 Oct: ONLY news that was opened and checked (real Coimbatore-district news that can be written) goes into the queue.
     # A link that could not be opened is not queued - the next collection finds it again and checks it then.
     waiting = [n for n in news if str(n["status"]).startswith(("collected", "could not open", "not filed"))
-               and (n.get("verified") or n.get("manual")) and allnews.local_ok(n["url"], n.get("title", ""))]
+               and (n.get("verified") or n.get("manual") or MODE == "both") and allnews.local_ok(n["url"], n.get("title", ""))]      # 31 Oct: a round's leftovers compete again next round (checked when written)
     for k in (["collect"] if MODE == "collect" else ["write"] if MODE == "write" else ["collect", "write"]):
         mark_run(k)
     left = 0
@@ -1155,8 +1166,7 @@ def main():
         log.append(f"queue: {left} news waiting to be written")
     except Exception as e:
         log.append(f"queue not saved: {e}")
-    progressed = sum(done.values()) > 0 or time.time() > DEADLINE - 300      # wrote something, or ran out of time with news left
-    if left and (MODE == "collect" or (MODE == "write" and progressed)):
+    if left and MODE == "collect":      # owner 31 Oct: a writer round never restarts itself - the next round compares the rest again
         # the writer goes on at once (after this run has saved the queue - both share one concurrency group, so it starts when this one ends);
         # a writer round that could not write anything does not restart itself (no loop) - its 20-minute schedule tries again
         trigger_workflow("write_stories.yml", None, log)

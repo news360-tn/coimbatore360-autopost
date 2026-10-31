@@ -94,8 +94,10 @@ class CoimbatorePriority(unittest.TestCase):
         score = lambda t: collect.interest({"title": t, "text": ""})
         cut, crime, acc, civic = (score("சிங்காநல்லூரில் நாளை மின் தடை"), score("காந்திபுரத்தில் நகை திருடியவர் கைது"),
                                   score("உக்கடத்தில் பஸ் மோதி விபத்து"), score("வடவள்ளியில் குடிநீர் தட்டுப்பாடு"))
-        rest = (score("கோவையில் தனியார் வேலைவாய்ப்பு முகாம்"), score("கோவையில் கனமழை"), score("கோவை கோயில் திருவிழா"))
+        rest = (score("கோவையில் தனியார் வேலைவாய்ப்பு முகாம்"), score("கோவை கோயில் திருவிழா"))
         self.assertTrue(cut > crime > acc > civic > max(rest), (cut, crime, acc, civic, rest))
+        rain = score("கோவையில் கனமழை")      # owner 31 Oct scale: rain warning 9 - just below a power cut, level with crime
+        self.assertTrue(cut > rain >= crime, (cut, rain, crime))
 
     def test_today_only(self):
         self.assertEqual(1, collect.FRESH_DAYS)
@@ -103,12 +105,12 @@ class CoimbatorePriority(unittest.TestCase):
         self.assertFalse(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(days=1)).isoformat()))
         self.assertTrue(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(hours=2)).isoformat()))      # 11:30 pm news at the 1 am round
 
-    def test_every_four_hours_cap_50(self):      # owner 31 Oct: collect every 4 h (29 Oct: 2 h), post at once, do not miss city news
+    def test_ten_rounds_cap_30(self):      # owner 31 Oct: rounds IST 04:00-22:00 every 2 h, top 3 each (29 Oct: every 2 h, cap 50)
         wf = ROOT / ".github" / "workflows"
-        self.assertIn('cron: "7 */4 * * *"', (wf / "research_free.yml").read_text())
-        self.assertIn('age("collect") > 255', (wf / "post.yml").read_text())
+        self.assertIn('cron: "30 22,0,2,4,6,8,10,12,14,16 * * *"', (wf / "research_free.yml").read_text())
+        self.assertIn('age("collect") > 160', (wf / "post.yml").read_text())
         for f in ("post.yml", "research_free.yml", "write_stories.yml"):
-            self.assertIn('DAILY_CAP: "50"', (wf / f).read_text(), f)
+            self.assertIn('DAILY_CAP: "30"', (wf / f).read_text(), f)
         for wf in ("research_free.yml", "write_stories.yml"):
             self.assertIn('FRESH_DAYS: "1"', (ROOT / ".github" / "workflows" / wf).read_text())
 
@@ -1448,7 +1450,67 @@ class OnlyWatchedNews(unittest.TestCase):
         self.assertLess(prep.index("low_interest(art[\"title\"]"), prep.index("ask_json") if "ask_json" in prep else prep.index("run."))
         self.assertIn('"not written: " + low, "s": "notext"', src)      # notext = checked earlier, never opened again
 
-    def test_collection_every_4_hours_and_watchdog_agrees(self):
-        wf = (ROOT / ".github" / "workflows" / "research_free.yml").read_text(encoding="utf-8")
-        self.assertIn('cron: "7 */4 * * *"', wf)
-        self.assertIn('age("collect") > 255', (ROOT / ".github" / "workflows" / "post.yml").read_text(encoding="utf-8"))
+    def test_writer_has_no_schedule_of_its_own(self):      # owner 31 Oct: the rounds write the stories (top 3 each)
+        wf = (ROOT / ".github" / "workflows" / "write_stories.yml").read_text(encoding="utf-8")
+        self.assertNotIn("schedule:", wf)
+
+
+class RoundsTopThree(unittest.TestCase):
+    """owner 31 Oct: 10 rounds a day (IST 04:00 ... 22:00, every 2 hours). Each round collects today's WHOLE-district news, compares it
+    with today's earlier collected news that was not posted yet, writes the TOP 3 by expected views (every power cut on top) and posts
+    them at once. A new day starts fresh. A slow or failed story never holds the next round."""
+    WF = ROOT / ".github" / "workflows"
+
+    def test_rounds_at_the_owners_times(self):
+        cron = re.search(r'cron: "(\d+) ([\d,]+) \* \* \*"', (self.WF / "research_free.yml").read_text(encoding="utf-8"))
+        times = sorted(((int(h) * 60 + int(cron.group(1)) + 330) % 1440) // 60 for h in cron.group(2).split(","))
+        self.assertEqual([4, 6, 8, 10, 12, 14, 16, 18, 20, 22], times)      # UTC + 5:30 = IST, on the hour
+        self.assertEqual(0, (int(cron.group(1)) + 30) % 60)
+
+    def test_each_round_writes_top_3_of_the_whole_district(self):
+        wf = (self.WF / "research_free.yml").read_text(encoding="utf-8")
+        for s in ("COLLECT_MODE: both", 'MAX_STORIES: "3"', 'CITY_ONLY: "0"', 'FRESH_DAYS: "1"'):
+            self.assertIn(s, wf)
+        self.assertIn('CITY_ONLY: "0"', (self.WF / "post.yml").read_text(encoding="utf-8"))
+
+    def test_power_cuts_are_written_on_top_of_the_3(self):
+        src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
+        self.assertIn("target = {AREA: MAX_STORIES + len(pcs)}", src)
+        self.assertIn("queues[AREA] = pcs + [q for q in queues[AREA] if q not in pcs]", src)
+
+    def test_leftovers_compete_next_round_and_a_new_day_starts_fresh(self):
+        old = collect.QUEUE
+        with tempfile.TemporaryDirectory() as d:
+            now = datetime.datetime.now(IST)
+            collect.QUEUE = Path(d) / "queue.json"
+            collect.QUEUE.write_text(json.dumps([
+                {"key": "a", "url": "u1", "title": "இன்று காலை சேகரித்தது", "queued_at": now.replace(hour=0, minute=5).isoformat()},
+                {"key": "b", "url": "u2", "title": "நேற்று சேகரித்தது", "queued_at": (now - datetime.timedelta(days=1)).isoformat()}]), encoding="utf-8")
+            try:
+                self.assertEqual(["a"], [q["key"] for q in collect.load_queue()])
+            finally:
+                collect.QUEUE = old
+        src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
+        self.assertIn('or MODE == "both") and allnews.local_ok', src)      # a round's unwritten news is kept for the next round
+
+    def test_city_story_wins_a_tie(self):
+        n = {"title": "திருட்டு வழக்கில் 2 பேர் கைது", "snippet": "", "mentions": 1, "published": ""}
+        city = dict(n, title="காந்திபுரத்தில் திருட்டு வழக்கில் 2 பேர் கைது")
+        self.assertEqual(collect.score(n) + 1, collect.score(city))
+
+    def test_rain_warning_ranks_just_below_power_cut(self):
+        self.assertGreaterEqual(collect.interest({"title": "கோவையில் கனமழை எச்சரிக்கை", "text": ""}), 10)
+        self.assertGreater(collect.interest({"title": "நாளை மின் தடை", "text": ""}), collect.interest({"title": "கோவில் திருவிழா", "text": ""}))
+
+    def test_no_round_waits_for_a_writer_chain(self):
+        src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
+        self.assertIn('if left and MODE == "collect":', src)      # a writer run never restarts itself
+        self.assertNotIn("write_stories.yml && echo", (self.WF / "post.yml").read_text(encoding="utf-8"))      # watchdog restarts rounds only
+
+    def test_every_python_snippet_in_the_workflows_compiles(self):
+        # 31 Oct: a '#' comment inside the watchdog's print(...) broke it - the 03:59 UTC posting run failed (SyntaxError)
+        for f in sorted(self.WF.glob("*.yml")):
+            for block in re.findall(r"python3? - <<'PY'[^\n]*\n(.*?)\n\s*PY\n", f.read_text(encoding="utf-8"), re.S):
+                lines = block.split("\n")
+                pad = min(len(l) - len(l.lstrip()) for l in lines if l.strip())
+                compile("\n".join(l[pad:] for l in lines), f.name, "exec")
