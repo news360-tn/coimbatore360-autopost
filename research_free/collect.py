@@ -264,6 +264,17 @@ def is_dup(art, d, recent):
             return True
         if _fr().same_power_cut(r.get("headline_ta"), r.get("researched"), (d or {}).get("tamil_headline", art["title"]), art.get("published")):
             return True      # owner 30 Oct: the same power cut (same day, same place) already filed
+    # 31 Oct (Coimbatore RN-96 = RN-95: one escape, two outlets, written in the same round; RN-39 = RN-76): the new SCRIPT against every story
+    # filed in the last day - this round's included - so the same event in other words is never filed twice
+    s = (d or {}).get("reel_script") or ""
+    if s:
+        today = datetime.datetime.now(_fr().IST).date()
+        olds = [o for o in (_filed_script(r) for r in recent
+                            if (lambda od: od is None or abs((today - od).days) <= 1)(_fr().pub_date(r.get("researched")))) if o]
+        if olds:
+            df = _fr().event_df(olds + [s])
+            if any(_fr().same_event(o, s, df) for o in olds):
+                return True
     return False
 
 
