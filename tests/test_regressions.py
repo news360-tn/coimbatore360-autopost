@@ -1636,3 +1636,10 @@ class SameFightTwoOutlets(unittest.TestCase):
     def test_two_day_window(self):
         src = open(os.path.join(os.path.dirname(__file__), "..", "research_free", "collect.py"), encoding="utf-8").read()
         self.assertIn("abs((today - od).days) <= 2)", src)
+
+
+class CollapseIsAnIncident(unittest.TestCase):
+    """owner 31 Oct: Namakkal RN-86 = RN-115, one wall collapse told by Dinamani and Dinamalar a day apart"""
+
+    def test_collapse(self):
+        self.assertIn("collapse", fr._incidents("நாமக்கல் கலெக்டர் குடியிருப்பின் சுற்றுச்சுவர் கனமழையால் இடிந்து விழுந்தது"))

@@ -393,7 +393,8 @@ def same_event(a, b, df_n):
 # escape). An INCIDENT is the same event when both reports name the same person or the same distinctive number - or share many rare words.
 INCIDENT = {"escape": r"தப்பி", "arrest": r"கைது", "verdict": r"தண்டனை", "accident": r"விபத்து|மோதி", "death": r"உயிரிழ|பலி|சடலம",
             "fire": r"தீப்பிடி|தீப்பற்|தீ விபத்து", "transfer": r"இடமாற்ற", "seizure": r"பறிமுதல்", "fraud": r"மோசடி", "theft": r"திருட|கொள்ளை",
-            "murder": r"கொலை", "fight": r"அடிதடி|கைகலப்பு|தாக்கிக்கொண்|மோதிக்கொண்"}      # owner 31 Oct: RN-13 = RN-24 (bus drivers' fight) posted twice
+            "murder": r"கொலை", "fight": r"அடிதடி|கைகலப்பு|தாக்கிக்கொண்|மோதிக்கொண்",
+            "collapse": r"இடிந்து|இடிந்த|சரிந்து விழு"}      # owner 31 Oct: Namakkal RN-115 = RN-86 (collector bungalow wall, two outlets)      # owner 31 Oct: RN-13 = RN-24 (bus drivers' fight) posted twice
 _NAME = (re.compile(r"([஀-௿]{3,})\s*\(\d{1,3}\)"), re.compile(r"([஀-௿]{3,})\s+(?:என்பவ|என்ற\s)"),
          re.compile(r"\d{1,3}\s*வயது(?:டைய|ான|ுடைய)?\s+([஀-௿]{3,})"))
 
