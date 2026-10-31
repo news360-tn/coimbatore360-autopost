@@ -1,7 +1,4 @@
-writing [N]: Inky Pinky Ponky போட்டு தப்பியோடும் கைதிகள் - Dummy முதலமைச்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-writing [N]: Inky Pinky Ponky போட்டு தப்பியோடும் கைதிகள் - Dummy முதலமைச்
+writing [N]: கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அளவுக்கு டம
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
@@ -9,233 +6,81 @@ fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-writing [N]: Kovai Prison Escape| மீண்டும் ஒரு கைதி தப்பியோட்டம்.. எஸ்பி 
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-ok gemini/gemini-3.5-flash (22s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 ok gemini/gemini-3-flash-preview (9s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-dead for this round: gemini/gemini-3-flash-preview
-ok gemini/gemini-3-flash-preview (20s)
 attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
   not grounded: location 'மத்திய' is not in the article
-  not grounded: only 34% of the words come from the article (e.g. மத்திய, பரபரப்பை, ஏற்படுத்தியுள்ளது, இன்று, அக்டோபர்); use the article's own words and facts
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/openai/gpt-oss-120b (5s)
-factcheck by groq/openai/gpt-oss-120b: 3 problems
-  Draft uses the phrase “இன்கி பிங்கி பாங்கி” for the escape method, which does not appear in the article (article says “Inky Pinky Ponky”)
-  Caption misspells the opposition leader’s name as “உதயநிதி ஸ்ட்ரீன்” instead of “உதயநிதி ஸ்டாலின்”
-  Reel script claims “ஆட்சி நிர்வாகம் சீர்குலைந்துள்ளது”, a statement not present in the article (article mentions “Dummy முதலமைச்சரின் ஆட்சி லட்சணம்”)
-attempt 1 gemini/gemini-3-flash-preview: 3 problems
-  fact-check: Draft uses the phrase “இன்கி பிங்கி பாங்கி” for the escape method, which does not appear in the article (article says “Inky Pinky Ponky”)
-  fact-check: Caption misspells the opposition leader’s name as “உதயநிதி ஸ்ட்ரீன்” instead of “உதயநிதி ஸ்டாலின்”
-  fact-check: Reel script claims “ஆட்சி நிர்வாகம் சீர்குலைந்துள்ளது”, a statement not present in the article (article mentions “Dummy முதலமைச்சரின் ஆட்சி லட்சணம்”)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing 
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing 
+switching away from gemini/gemini-3-flash-preview for 10 min
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
 ok groq/qwen/qwen3.8-27b (4s)
-attempt 2 groq/qwen/qwen3.8-27b: 3 problems
-  reel_script has English words (Dummy) - the voice cannot read them; write them in Tamil letters
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-  known issue english_in_voice: voice script has English words the voice skips (Dummy) - rewrite so it does not happen again
+attempt 2 groq/qwen/qwen3.8-27b: 1 problems
+  reel_script has 53 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/openai/gpt-oss-120b (5s)
-attempt 2 groq/openai/gpt-oss-120b: 1 problems
-  missing key: scenes
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 switching away from groq/qwen/qwen3.8-27b for 10 min
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  slides must have 3 or 4 items
-  reel_script has 27 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 56 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
+  reel_script has English words (inky, pinky, ponky) - the voice cannot read them; write them in Tamil letters
+  reel_script must have no English letters (write English words and abbreviations in Tamil script)
+  known issue english_in_voice: voice script has English words the voice skips (inky, pinky, ponky) - rewrite so it does not happen again
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  The reel_script and caption say Udhayanidhi's statement and the escape happened in 'Coimbatore Central Prison' and the article only names 'கோவை மத்தியச் சிறை' — this matches, so no issue there.
-  The article does not say the escape happened recently or that details are 'not yet released'; the draft's claim that police have not released information and that details 'will be shared once released' (slides_spec 'அரசின் பதில' slide and caption) is an invented claim not in the article.
-  The slides_spec 'அரசின் பதில' slide states government/police responses are pending ('காவல்துறை தகவல்கள் வெளியிடவில்லை'), which the article does not state; the article only contains the opposition leader's statement.
-  The reel_script omits that the article attributes the criticism to a post on X, which it does include; however it omits the article's specific claim about the CM rushing to by-election constituencies out of fear of defeat, an important part of the article's argument.
-  The article's claim that the CM must personally carry out any future transfers/suspensions is reflected, but the slides_spec 'அரசின் பதில' lines ('பணியிட மாற்றம், சஸ்பெண்ட் நடவடிக்கை குறித்து அரசு தரப்பு') misrepresent the article by implying a government response on transfers/suspensions that the article does not report.
-claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: The reel_script and caption say Udhayanidhi's statement and the escape happened in 'Coimbatore Central Prison' and the article only names 'கோவை மத்தியச் சிறை' — this matches, so no issue there.
-  fact-check: The article does not say the escape happened recently or that details are 'not yet released'; the draft's claim that police have not released information and that details 'will be shared once released' (slides_spec 'அரசின் பதில' slide and caption) is an invented claim not in the article.
-  fact-check: The slides_spec 'அரசின் பதில' slide states government/police responses are pending ('காவல்துறை தகவல்கள் வெளியிடவில்லை'), which the article does not state; the article only contains the opposition leader's statement.
-  fact-check: The reel_script omits that the article attributes the criticism to a post on X, which it does include; however it omits the article's specific claim about the CM rushing to by-election constituencies out of fear of defeat, an important part of the article's argument.
-  fact-check: The article's claim that the CM must personally carry out any future transfers/suspensions is reflected, but the slides_spec 'அரசின் பதில' lines ('பணியிட மாற்றம், சஸ்பெண்ட் நடவடிக்கை குறித்து அரசு தரப்பு') misrepresent the article by implying a government response on transfers/suspensions that the article does not report.
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 34 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The reel_script and slides claim the Coimbatore prison escape follows escapes from Puzhal and Theni prisons, but the article says the escape from Coimbatore followed escapes from Puzhal and Theni — this is consistent; however the draft says the 'government' has 'ஆட்சியில் அதிகாரம் இல்லாத' (no real power) — the article only calls it a 'dummy chief minister' rule, and the draft's slide claim 'ஆட்சியில் சிறைப் பாதுகாப்பு சீர்குலைந்துள்ளதாக குற்றச்சாட்டு' is a paraphrase, but the reel_script's 'ஆட்சியில் அதிகாரம் இல்லாத முதலமைச்சர் போல நடப்பதாக' is an added characterization not stated as such in the article.
+  The article quotes the criticism as 'the escape of a prisoner using inky pinky ponky' (a mocking phrase about the police/prison escape method) and mentions the Chief Minister running to by-election constituencies out of fear of defeat; the draft's reel_script omits the 'inky pinky ponky' reference and the sarcastic 'Palayamkottai or Salem next?' remark, which are key parts of the article's criticism.
+  The draft says Udhayanidhi Stalin 'குற்றம் சாட்டியுள்ளார்' about weak prison security, but the article only states he condemned the situation; the claim that prison security is weak is an interpretive addition.
 claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
-  slides must have 3 or 4 items
-  reel_script has 45 words; need 60-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  not grounded: only 46% of the words come from the article (e.g. இதையடுத்து, மாவட்ட, காவல், கண்காணிப்பாளர், பாதுகாப்பு); use the article's own words and facts
+  fact-check: The reel_script and slides claim the Coimbatore prison escape follows escapes from Puzhal and Theni prisons, but the article says the escape from Coimbatore followed escapes from Puzhal and Theni — this is consistent; however the draft says the 'government' has 'ஆட்சியில் அதிகாரம் இல்லாத' (no real power) — the article only calls it a 'dummy chief minister' rule, and the draft's slide claim 'ஆட்சியில் சிறைப் பாதுகாப்பு சீர்குலைந்துள்ளதாக குற்றச்சாட்டு' is a paraphrase, but the reel_script's 'ஆட்சியில் அதிகாரம் இல்லாத முதலமைச்சர் போல நடப்பதாக' is an added characterization not stated as such in the article.
+  fact-check: The article quotes the criticism as 'the escape of a prisoner using inky pinky ponky' (a mocking phrase about the police/prison escape method) and mentions the Chief Minister running to by-election constituencies out of fear of defeat; the draft's reel_script omits the 'inky pinky ponky' reference and the sarcastic 'Palayamkottai or Salem next?' remark, which are key parts of the article's criticism.
+  fact-check: The draft says Udhayanidhi Stalin 'குற்றம் சாட்டியுள்ளார்' about weak prison security, but the article only states he condemned the situation; the claim that prison security is weak is an interpretive addition.
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script must have no English letters (write English words and abbreviations in Tamil script)
-ok anthropic/claude-haiku-5-5
-real photo: no picture on the source page -> AI pictures
-fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
-free fact-check unavailable, using Claude: no free model answered: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Rea
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 1 problems
-  The article does not say the escaped prisoner was re-arrested or that the escape was in any specific way; however the key missing fact is the article gives no details beyond one prisoner escaping from Coimbatore Central Prison, so the reel_script's claim that Coimbatore's escape came after Puzhal and Theni is supported, but the reel_script and caption say 'Udhayanidhi Stalin' criticised the 'government' and 'chief minister' in the draft as if speaking of the current state, which is consistent; the main problem is the caption's claim that 'Puzhal and Theni prisons also saw prisoners escape' is in the article, so no issue there. Specifically: the draft's slides_spec line 'பணியிடமாற்ற நடவடிக்கைகளை விமர்சித்து அறிக்கை' (criticising transfer/suspension actions) is not in the article's core claims about who did what, and the article's statement about transfers/suspensions is only a rhetorical jibe that the chief minister must suspend himself, not a criticism of a specific transfer action.
-attempt 1 gemini/gemini-3.5-flash: 1 problems
-  fact-check: The article does not say the escaped prisoner was re-arrested or that the escape was in any specific way; however the key missing fact is the article gives no details beyond one prisoner escaping from Coimbatore Central Prison, so the reel_script's claim that Coimbatore's escape came after Puzhal and Theni is supported, but the reel_script and caption say 'Udhayanidhi Stalin' criticised the 'government' and 'chief minister' in the draft as if speaking of the current state, which is consistent; the main problem is the caption's claim that 'Puzhal and Theni prisons also saw prisoners escape' is in the article, so no issue there. Specifically: the draft's slides_spec line 'பணியிடமாற்ற நடவடிக்கைகளை விமர்சித்து அறிக்கை' (criticising transfer/suspension actions) is not in the article's core claims about who did what, and the article's statement about transfers/suspensions is only a rhetorical jibe that the chief minister must suspend himself, not a criticism of a specific transfer action.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free models unavailable: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  The slide line 'தப்பிய கைதி குறித்த கூடுதல் விவரம் வெளியிடப்படவில்லை' (no further details about the escaped prisoner were released) is not stated in the article.
-  The reel_script and caption say Udhayanidhi asked whether the next escape would be from 'Palayamkottai or Salem' prison, and the slide adds 'சிறையா'; the article only asks 'பாளையம்கோட்டையா? சேலமா?' without specifying prisons, so 'சிறை' is an added detail (minor).
-  The reel_script and caption describe the Chief Minister as having 'ஆட்சி நிலை' and the slide says 'ஆட்சி உள்ளதாக' – the article's sense is that the ruling 'Dummy Chief Minister's' governance is so poor that prisoners escape; the draft's phrasing 'ஆட்சி நிலை' is vague and does not clearly convey this meaning.
-  The reel_script says 'கைதிகள் தப்பிச் செல்லும் அளவுக்கு ஆட்சி நிலை இருப்பதாக' and the slide line 'சிறைக் கைதிகள் தப்பிச் செல்லும் அளவுக்கு ஆட்சி உள்ளதாக அவர்' is ungrammatically broken and loses the sarcastic 'Dummy முதலமைச்சர்' criticism, which the article makes central.
-  The article's 'தேனி' escape is described as 'புழல், தேனியைத் தொடர்ந்து' – the reel_script correctly mentions it, but the article does not state the Coimbatore escapee was the sole or only prisoner; the 'ஒரு கைதி' count is consistent, so no issue there.
-  The reel_script omits the article's accusation that the government is a 'கையாலாகாத அரசு' and that prisoners are fleeing knowing it, an important point of the critique, though this is a lesser omission.
-claude rewrite 3 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: The slide line 'தப்பிய கைதி குறித்த கூடுதல் விவரம் வெளியிடப்படவில்லை' (no further details about the escaped prisoner were released) is not stated in the article.
-  fact-check: The reel_script and caption say Udhayanidhi asked whether the next escape would be from 'Palayamkottai or Salem' prison, and the slide adds 'சிறையா'; the article only asks 'பாளையம்கோட்டையா? சேலமா?' without specifying prisons, so 'சிறை' is an added detail (minor).
-  fact-check: The reel_script and caption describe the Chief Minister as having 'ஆட்சி நிலை' and the slide says 'ஆட்சி உள்ளதாக' – the article's sense is that the ruling 'Dummy Chief Minister's' governance is so poor that prisoners escape; the draft's phrasing 'ஆட்சி நிலை' is vague and does not clearly convey this meaning.
-  fact-check: The reel_script says 'கைதிகள் தப்பிச் செல்லும் அளவுக்கு ஆட்சி நிலை இருப்பதாக' and the slide line 'சிறைக் கைதிகள் தப்பிச் செல்லும் அளவுக்கு ஆட்சி உள்ளதாக அவர்' is ungrammatically broken and loses the sarcastic 'Dummy முதலமைச்சர்' criticism, which the article makes central.
-  fact-check: The article's 'தேனி' escape is described as 'புழல், தேனியைத் தொடர்ந்து' – the reel_script correctly mentions it, but the article does not state the Coimbatore escapee was the sole or only prisoner; the 'ஒரு கைதி' count is consistent, so no issue there.
-  fact-check: The reel_script omits the article's accusation that the government is a 'கையாலாகாத அரசு' and that prisoners are fleeing knowing it, an important point of the critique, though this is a lesser omission.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-images made: 2 for 'Another prisoner escapes from Kovai pris'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1842","first":"RN-102"}
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-posting job started at once
-real photo skipped (photo uploaded 2026-10-12 (older than the news)): https://cf-images.assettype.com/maalai-malar%2F2026-10-12%2Fls9aot3y%2Fudhayanidhistalin00
-real photo skipped (photo uploaded 2026-10-12 (older than the news)): https://cf-images.assettype.com/maalai-malar/2026-10-12/ls9aot3y/udhayanidhistalin004.jpg?
-real photo skipped (photo uploaded 2026-08-10 (older than the news)): https://images.assettype.com/maalai-malar/2026-08-10/184k622z/image-125.png
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  The article does not say whether the escaped prisoner has been arrested or recaptured; the draft's '👮 நடவடிக்கை: இதுகுறித்த கூடுதல் விவரம் இன்னும் தெரியவரவில்லை' implies no further info, which is an unverified claim about the investigation status, but more importantly the draft states 'இதுகுறித்த கூடுதல் விவரம் இன்னும் தெரியவரவில்லை' (more details not yet known) which is not stated in the article.
-  The article says Udhayanidhi said 'Dummy முதலமைச்சரின் ஆட்சி லட்சணம்' and asks 'அடுத்து பாளையம்கோட்டையா? சேலமா?' (is it Palayamkottai or Salem next?) — the reel_script and caption omit this key pointed criticism and the escape-next-location rhetoric, and the 'Inky Pinky Ponky' mocking jibe is entirely missing.
-  The draft says 'அதிகாரிகளைப் பணியிடமாற்றம், சஸ்பெண்ட் செய்வது குறித்தும்' (about transfers/suspensions of officials), but the article says the CM must transfer/suspend himself ('முதலமைச்சர் தன்னைத் தானே தான் செய்துகொள்ள வேண்டும்') — the draft misrepresents the sentence as referring to officials and as a question rather than a sarcastic statement.
-  The draft says the escape happened 'இந்தச் சம்பவம்' following Puzhal and Theni 'தப்பியோட்டங்கள்' — the article says 'தொடர்ந்து', which is consistent, but the reel_script's slide 'அதிகாரிகளைப் பணியிடமாற்றம்' misstates the message as a question about officials, which is an invented framing.
-claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: The article does not say whether the escaped prisoner has been arrested or recaptured; the draft's '👮 நடவடிக்கை: இதுகுறித்த கூடுதல் விவரம் இன்னும் தெரியவரவில்லை' implies no further info, which is an unverified claim about the investigation status, but more importantly the draft states 'இதுகுறித்த கூடுதல் விவரம் இன்னும் தெரியவரவில்லை' (more details not yet known) which is not stated in the article.
-  fact-check: The article says Udhayanidhi said 'Dummy முதலமைச்சரின் ஆட்சி லட்சணம்' and asks 'அடுத்து பாளையம்கோட்டையா? சேலமா?' (is it Palayamkottai or Salem next?) — the reel_script and caption omit this key pointed criticism and the escape-next-location rhetoric, and the 'Inky Pinky Ponky' mocking jibe is entirely missing.
-  fact-check: The draft says 'அதிகாரிகளைப் பணியிடமாற்றம், சஸ்பெண்ட் செய்வது குறித்தும்' (about transfers/suspensions of officials), but the article says the CM must transfer/suspend himself ('முதலமைச்சர் தன்னைத் தானே தான் செய்துகொள்ள வேண்டும்') — the draft misrepresents the sentence as referring to officials and as a question rather than a sarcastic statement.
-  fact-check: The draft says the escape happened 'இந்தச் சம்பவம்' following Puzhal and Theni 'தப்பியோட்டங்கள்' — the article says 'தொடர்ந்து', which is consistent, but the reel_script's slide 'அதிகாரிகளைப் பணியிடமாற்றம்' misstates the message as a question about officials, which is an invented framing.
-image match: False The image is an AI-generated generic depiction of a prison gate and guard, and does not show Udhayanidhi Stalin, the esc
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Prisoner escapes from Coimbatore Central'
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  The slides_spec line 'இதுவரை அதிகாரபூர்வ நடவடிக்கை குறித்த விவரம்' (official action details so far) is an invented claim; the article contains no such information about official action being unavailable.
-  The reel_script states that the prisoner escape was 'the' event, but the article does not say the prisoner was caught or not; the draft's slide heading 'பணியிடமாற்றம்?' and the line about the chief minister being the one to transfer/suspend is a paraphrase that changes the sarcastic claim, which is acceptable, but the slides line 'முதலமைச்சரே' is fine. The main unsupported addition is the 'official action' line noted above.
-  The caption and reel_script say the prisoner 'escaped from' the central jail as a fact, which matches the article, but the reel_script omits the article's key point that the chief minister is running to by-election constituencies out of fear of defeat being presented as cause-and-effect; this is a minor omission rather than a missing core fact.
-  The caption says 'தமிழ்நாட்டு மக்களின் பாதுகாப்பு தொடர்ந்து கேள்விக்குறியாவதாக' while the reel_script says 'கேள்விக்குறியாகி வருவதாக'; both are consistent with the article, so no error there.
-claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: The slides_spec line 'இதுவரை அதிகாரபூர்வ நடவடிக்கை குறித்த விவரம்' (official action details so far) is an invented claim; the article contains no such information about official action being unavailable.
-  fact-check: The reel_script states that the prisoner escape was 'the' event, but the article does not say the prisoner was caught or not; the draft's slide heading 'பணியிடமாற்றம்?' and the line about the chief minister being the one to transfer/suspend is a paraphrase that changes the sarcastic claim, which is acceptable, but the slides line 'முதலமைச்சரே' is fine. The main unsupported addition is the 'official action' line noted above.
-  fact-check: The caption and reel_script say the prisoner 'escaped from' the central jail as a fact, which matches the article, but the reel_script omits the article's key point that the chief minister is running to by-election constituencies out of fear of defeat being presented as cause-and-effect; this is a minor omission rather than a missing core fact.
-  fact-check: The caption says 'தமிழ்நாட்டு மக்களின் பாதுகாப்பு தொடர்ந்து கேள்விக்குறியாவதாக' while the reel_script says 'கேள்விக்குறியாகி வருவதாக'; both are consistent with the article, so no error there.
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1842","first":"RN-103"}
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 7 problems
-  The article says the escaped inmate was from Coimbatore Central Prison, but the draft's slides_spec 'loc' and the headline hashtag context are consistent; however, the reel_script and slides omit that the article raises the question of Pallayamkottai or Salem as possible next escapes, which is part of the criticism.
-  The article says Udhayanidhi said the Chief Minister is running to by-election constituencies out of fear of defeat; the draft says the CM 'goes to' by-election constituencies, which is consistent, but the slide line 'தோல்வி பயத்தில் முதலமைச்சர் இடைத்தேர்தல்' is an incomplete, ungrammatical sentence with no clear meaning in Tamil.
-  The slide line 'கைதிகள் தப்பிச் செல்லும் அளவுக்கு ஆட்சி லட்சணம் உள்ளது' drops the 'Dummy' Chief Minister reference and reads as a general statement about the government rather than the article's specific criticism of the Chief Minister's rule.
-  The slide line 'இனி பணியிட மாற்றம், சஸ்பெண்ட் செய்தால் முதலமைச்சரே' is an incomplete sentence with no clear meaning; the predicate (செய்துகொள்ள வேண்டும்) is missing.
-  The caption says the Chief Minister's rule 'உள்ளதாக' is criticised in a way that leaves the object of the sentence ambiguous: 'முதலமைச்சரின் ஆட்சி' is cut off mid-thought in the caption ('கைதிகள் தப்பிச் செல்லும் அளவுக்கு முதலமைச்சரின் ஆட்சி உள்ளதாக') which mixes the escape claim with a separate claim, creating an unclear sentence.
-  The reel_script omits the article's note that the prisoners themselves recognised the government as ineffective ('இது கையாலாகாத அரசு என தெரிந்து கொண்டு'), a key rhetorical point of the criticism.
-  The slides 'hl2' headline 'உதயநிதி கடும் விமர்சனம்' and the first slide title 'உதயநிதியின்' is a truncated title with no noun, which is not a clear Tamil phrase.
-claude rewrite 3 anthropic/claude-haiku-5-5: 7 problems
-  fact-check: The article says the escaped inmate was from Coimbatore Central Prison, but the draft's slides_spec 'loc' and the headline hashtag context are consistent; however, the reel_script and slides omit that the article raises the question of Pallayamkottai or Salem as possible next escapes, which is part of the criticism.
-  fact-check: The article says Udhayanidhi said the Chief Minister is running to by-election constituencies out of fear of defeat; the draft says the CM 'goes to' by-election constituencies, which is consistent, but the slide line 'தோல்வி பயத்தில் முதலமைச்சர் இடைத்தேர்தல்' is an incomplete, ungrammatical sentence with no clear meaning in Tamil.
-  fact-check: The slide line 'கைதிகள் தப்பிச் செல்லும் அளவுக்கு ஆட்சி லட்சணம் உள்ளது' drops the 'Dummy' Chief Minister reference and reads as a general statement about the government rather than the article's specific criticism of the Chief Minister's rule.
-  fact-check: The slide line 'இனி பணியிட மாற்றம், சஸ்பெண்ட் செய்தால் முதலமைச்சரே' is an incomplete sentence with no clear meaning; the predicate (செய்துகொள்ள வேண்டும்) is missing.
-  fact-check: The caption says the Chief Minister's rule 'உள்ளதாக' is criticised in a way that leaves the object of the sentence ambiguous: 'முதலமைச்சரின் ஆட்சி' is cut off mid-thought in the caption ('கைதிகள் தப்பிச் செல்லும் அளவுக்கு முதலமைச்சரின் ஆட்சி உள்ளதாக') which mixes the escape claim with a separate claim, creating an unclear sentence.
-  fact-check: The reel_script omits the article's note that the prisoners themselves recognised the government as ineffective ('இது கையாலாகாத அரசு என தெரிந்து கொண்டு'), a key rhetorical point of the criticism.
-  fact-check: The slides 'hl2' headline 'உதயநிதி கடும் விமர்சனம்' and the first slide title 'உதயநிதியின்' is a truncated title with no noun, which is not a clear Tamil phrase.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 ok anthropic/claude-haiku-5-5
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 source dinamalar list: 15 items
-source google 'கோவை': 95 items
+source google 'கோவை': 96 items
 source bing 'கோவை': 12 items
-source google 'கோயம்புத்தூர்': 31 items
+source google 'கோயம்புத்தூர்': 42 items
 source bing 'கோயம்புத்தூர்': 12 items
-source google 'பொள்ளாச்சி': 13 items
+source google 'பொள்ளாச்சி': 12 items
 source bing 'பொள்ளாச்சி': 12 items
-source google 'மேட்டுப்பாளையம்': 10 items
+source google 'மேட்டுப்பாளையம்': 9 items
 source bing 'மேட்டுப்பாளையம்': 12 items
 source google 'சூலூர்': 0 items
 source bing 'சூலூர்': 12 items
-source google 'அன்னூர்': 6 items
+source google 'அன்னூர்': 7 items
 source bing 'அன்னூர்': 12 items
 source google 'கிணத்துக்கடவு': 0 items
 source bing 'கிணத்துக்கடவு': 12 items
@@ -253,11 +98,11 @@ source google 'காரமடை': 3 items
 source bing 'காரமடை': 12 items
 source google 'கருமத்தம்பட்டி': 0 items
 source bing 'கருமத்தம்பட்டி': 3 items
-source google 'கோவை மாவட்டம்': 23 items
+source google 'கோவை மாவட்டம்': 46 items
 source bing 'கோவை மாவட்டம்': 12 items
 source google 'கோயம்புத்தூர் மாவட்டம்': 26 items
 source bing 'கோயம்புத்தூர் மாவட்டம்': 12 items
-source google 'கோவை மின்தடை': 8 items
+source google 'கோவை மின்தடை': 12 items
 source bing 'கோவை மின்தடை': 12 items
 source google 'பொள்ளாச்சி மின்தடை': 0 items
 source bing 'பொள்ளாச்சி மின்தடை': 3 items
@@ -313,10 +158,10 @@ source google 'மருதமலை': 0 items
 source bing 'மருதமலை': 12 items
 source google 'Coimbatore': 100 items
 source bing 'Coimbatore': 12 items
-source google 'Kovai': 100 items
+source google 'Kovai': 91 items
 source bing 'Kovai': 12 items
-source google 'Pollachi': 8 items
-source bing 'Pollachi': 12 items
+source google 'Pollachi': 6 items
+source bing 'Pollachi': 11 items
 source google 'Mettupalayam': 9 items
 source bing 'Mettupalayam': 12 items
 source google 'Valparai': 0 items
@@ -330,11 +175,11 @@ source bing 'அன்னூர் மின்தடை': 0 items
 source google 'கிணத்துக்கடவு மின்தடை': 0 items
 source bing 'கிணத்துக்கடவு மின்தடை': 1 items
 source google 'மதுக்கரை மின்தடை': 0 items
-source bing 'மதுக்கரை மின்தடை': 0 items
+source bing 'மதுக்கரை மின்தடை': 1 items
 source google 'வால்பாறை மின்தடை': 0 items
 source bing 'வால்பாறை மின்தடை': 3 items
 source google 'காரமடை மின்தடை': 0 items
-source bing 'காரமடை மின்தடை': 1 items
+source bing 'காரமடை மின்தடை': 0 items
 source google 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source bing 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source google 'பேரூர் மின்தடை': 0 items
@@ -347,10 +192,10 @@ source google 'பெரியநாயக்கன்பாளையம் ம�
 source bing 'பெரியநாயக்கன்பாளையம் மின்தடை': 0 items
 source google 'கோவை மின்தடை நாளை': 7 items
 source bing 'கோவை மின்தடை நாளை': 11 items
-source google 'கோவை மின்தடை பகுதிகள்': 9 items
+source google 'கோவை மின்தடை பகுதிகள்': 8 items
 source bing 'கோவை மின்தடை பகுதிகள்': 12 items
 source google 'Coimbatore power cut tomorrow': 3 items
-source bing 'Coimbatore power cut tomorrow': 11 items
+source bing 'Coimbatore power cut tomorrow': 10 items
 source google 'Pollachi power cut': 0 items
 source bing 'Pollachi power cut': 0 items
 source google 'Mettupalayam power cut': 3 items
@@ -363,19 +208,19 @@ source google தினமலர் 'பொள்ளாச்சி': 33 items
 source bing தினமலர் 'பொள்ளாச்சி': 12 items
 source google தினமணி 'கோவை': 100 items
 source bing தினமணி 'கோவை': 12 items
-source google தினமணி 'கோயம்புத்தூர்': 60 items
+source google தினமணி 'கோயம்புத்தூர்': 85 items
 source bing தினமணி 'கோயம்புத்தூர்': 12 items
 source google தினமணி 'பொள்ளாச்சி': 4 items
 source bing தினமணி 'பொள்ளாச்சி': 8 items
-source google கோவை மெயில் 'கோவை': 19 items
+source google கோவை மெயில் 'கோவை': 18 items
 source bing கோவை மெயில் 'கோவை': 12 items
-source google கோவை மெயில் 'கோயம்புத்தூர்': 19 items
+source google கோவை மெயில் 'கோயம்புத்தூர்': 18 items
 source bing கோவை மெயில் 'கோயம்புத்தூர்': 0 items
-source google கோவை மெயில் 'பொள்ளாச்சி': 11 items
+source google கோவை மெயில் 'பொள்ளாச்சி': 10 items
 source bing கோவை மெயில் 'பொள்ளாச்சி': 0 items
-source google அரசியல் டுடே 'கோவை': 49 items
+source google அரசியல் டுடே 'கோவை': 50 items
 source bing அரசியல் டுடே 'கோவை': 0 items
-source google அரசியல் டுடே 'கோயம்புத்தூர்': 49 items
+source google அரசியல் டுடே 'கோயம்புத்தூர்': 50 items
 source bing அரசியல் டுடே 'கோயம்புத்தூர்': 0 items
 source google அரசியல் டுடே 'பொள்ளாச்சி': 0 items
 source bing அரசியல் டுடே 'பொள்ளாச்சி': 0 items
@@ -383,9 +228,9 @@ source google தினகரன் 'கோவை': 100 items
 source bing தினகரன் 'கோவை': 12 items
 source google தினகரன் 'கோயம்புத்தூர்': 100 items
 source bing தினகரன் 'கோயம்புத்தூர்': 12 items
-source google தினகரன் 'பொள்ளாச்சி': 1 items
+source google தினகரன் 'பொள்ளாச்சி': 2 items
 source bing தினகரன் 'பொள்ளாச்சி': 0 items
-source google தினத்தந்தி 'கோவை': 43 items
+source google தினத்தந்தி 'கோவை': 47 items
 source bing தினத்தந்தி 'கோவை': 12 items
 source google தினத்தந்தி 'கோயம்புத்தூர்': 21 items
 source bing தினத்தந்தி 'கோயம்புத்தூர்': 12 items
@@ -402,16 +247,16 @@ source bing தந்தி டிவி 'கோவை': 12 items
 source google தந்தி டிவி 'கோயம்புத்தூர்': 30 items
 source bing தந்தி டிவி 'கோயம்புத்தூர்': 1 items
 source google தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source bing தந்தி டிவி 'பொள்ளாச்சி': 2 items
-source google இந்து தமிழ் 'கோவை': 41 items
+source bing தந்தி டிவி 'பொள்ளாச்சி': 1 items
+source google இந்து தமிழ் 'கோவை': 40 items
 source bing இந்து தமிழ் 'கோவை': 12 items
 source google இந்து தமிழ் 'கோயம்புத்தூர்': 4 items
 source bing இந்து தமிழ் 'கோயம்புத்தூர்': 2 items
 source google இந்து தமிழ் 'பொள்ளாச்சி': 1 items
 source bing இந்து தமிழ் 'பொள்ளாச்சி': 2 items
-source google பாலிமர் 'கோவை': 4 items
+source google பாலிமர் 'கோவை': 2 items
 source bing பாலிமர் 'கோவை': 1 items
-source google பாலிமர் 'கோயம்புத்தூர்': 4 items
+source google பாலிமர் 'கோயம்புத்தூர்': 3 items
 source bing பாலிமர் 'கோயம்புத்தூர்': 4 items
 source google பாலிமர் 'பொள்ளாச்சி': 0 items
 source bing பாலிமர் 'பொள்ளாச்சி': 0 items
@@ -430,83 +275,45 @@ source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 13 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 7 items
-source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 12 items
+source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 11 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 1 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
 source தினமணி கோவை: 5 items
 source தினகரன் கோவை: 10 items
 source பாலிமர் கோவை: 2 items
 source இந்து தமிழ் கோவை: 9 items
-Tamil outlets only: kept 2166 of 2606 items
-all sources: 2166 items -> 1046 different news
-candidate filter: not written=416, not Coimbatore district news (state-wide=240, checked earlier=119, checked earlier=107, already filed=67, old=63, collected=28, not written=17, checked earlier=9, checked earlier=9, checked earlier=7, checked earlier=4, not written=1
-to write: 28 Coimbatore district candidates (max 3 stories)
-round: top 3 of 28 candidates + 1 power cut(s)
-candidates waiting: 28 Coimbatore; time left 51 min
-try (N) manual=False: மின்வெட்டு, கைதிகள் தப்பி ஓடிய விவகாரம்: வலுக்கும் எதிர்ப்பு
+Tamil outlets only: kept 2203 of 2653 items
+all sources: 2203 items -> 1035 different news
+candidate filter: not written=391, not Coimbatore district news (state-wide=240, checked earlier=121, checked earlier=101, already filed=66, old=63, not written=15, collected=9, checked earlier=8, checked earlier=7, checked earlier=7, checked earlier=7, not written=1
+to write: 9 Coimbatore district candidates (max 3 stories)
+round: top 3 of 9 candidates
+candidates waiting: 9 Coimbatore; time left 51 min
 try (N) manual=False: பல மாதங்களுக்கு பின் சிக்கிய கைதி.. கோவை மத்திய சிறை வளாகத்த
-try (N) manual=False: அலங்காநல்லூரில் வீட்டின் பூட்டை உடைத்து 19 சவரன் தங்க நகைகள்
-skip (N) could not open: பல மாதங்களுக்கு பின் சிக்கிய கைதி.. கோவை மத்திய சி [https://tamil.news18.com/tamil-nadu/prisoner-escapes-from-co] 403 Client Error: Forbidden for url: https://tamil.news18.com/tamil-nadu/prisone
 try (N) manual=False: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும் புதிய ca
-skip (N) no Coimbatore place in article: மின்வெட்டு, கைதிகள் தப்பி ஓடிய விவகாரம்: வலுக்கும்
-try (N) manual=False: தப்பி ஓடிய கைதியை இரவோடு இரவாக ‘துாக்கிய’ போலீசார்
-skip (N) too old (2026-10-18T18:50:27+05:30): தப்பி ஓடிய கைதியை இரவோடு இரவாக ‘தூக்கிய’ போலீசார்
-try (N) manual=False: கோவை சிறைச்சாலையில் இருந்து கைதி தப்பி ஓடியது எப்படி? - காவல
-skip (N) could not open: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும [https://news.google.com/rss/articles/CBMisgFBVV95cUxPTzRvOHF] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/techn
-try (N) manual=False: கோவையில் தப்பிய கைதி ராகவனை பிடிக்க 6 தனிப்படைகள் அமைப்பு
-skip (N) similar to a filed story: கோவை சிறைச்சாலையில் இருந்து கைதி தப்பி ஓடியது எப்ப
 try (N) manual=False: சிறையிலிருந்து கைதிகள் தப்பியோடுவது அதிகரித்துள்ளது கவலையளி
-skip (N) same event as RN-95: கோவையில் தப்பிய கைதி ராகவனை பிடிக்க 6 தனிப்படைகள் 
-try (N) manual=False: தவெக ஆட்சியில் சிறைக் கைதிகள் தப்பியோடுவது சர்வசாதாரணமாகி வி
-skip (N) no Coimbatore place in article: தவெக ஆட்சியில் சிறைக் கைதிகள் தப்பியோடுவது சர்வசாத
-try (N) manual=False: Inky Pinky Ponky போட்டு தப்பியோடும் கைதிகள் - Dummy முதலமைச்
-skip (N) no Coimbatore place in article: அலங்காநல்லூரில் வீட்டின் பூட்டை உடைத்து 19 சவரன் த
-try (N) manual=False: “கையாலாகாத அரசு என தெரிந்து சிறையில் இருந்து கைதிகள் ஓட்டம்”
-skip (N) no Coimbatore place in article: “கையாலாகாத அரசு என தெரிந்து சிறையில் இருந்து கைதிக
-try (N) manual=False: Inky Pinky Ponky போட்டு தப்பியோடும் கைதிகள் - Dummy முதலமைச்
-skip (N) similar to a filed story: சிறையிலிருந்து கைதிகள் தப்பியோடுவது அதிகரித்துள்ள
+skip (N) could not open: பல மாதங்களுக்கு பின் சிக்கிய கைதி.. கோவை மத்திய சி [https://tamil.news18.com/tamil-nadu/prisoner-escapes-from-co] 403 Client Error: Forbidden for url: https://tamil.news18.com/tamil-nadu/prisone
 try (N) manual=False: கோவை மத்திய சிறையில் இன்று கைதி தப்பி ஓட்டம்: தவெக ஆட்சியில்
-skip (N) similar to a filed story: கோவை மத்திய சிறையில் இன்று கைதி தப்பி ஓட்டம்: தவெக
-try (N) manual=False: Jail Escape கோவை ஜெயிலில் இருந்து தப்பியோடிய கைதி சிசிடிவியி
-skip (N) only a headline, 11 words of text: Jail Escape கோவை ஜெயிலில் இருந்து தப்பியோடிய கைதி  [https://www.thanthitv.com/news/breaking/jail-escape-footage-]
+skip (N) similar to a filed story: சிறையிலிருந்து கைதிகள் தப்பியோடுவது அதிகரித்துள்ள
 try (N) manual=False: கோவை மத்திய சிறையிலிருந்து கைதி தப்பியோட்டம்: கடும் நடவடிக்க
-skip (N) similar to a filed story: கோவை மத்திய சிறையிலிருந்து கைதி தப்பியோட்டம்: கடும
+skip (N) could not open: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும [https://news.google.com/rss/articles/CBMisgFBVV95cUxPTzRvOHF] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/techn
 try (N) manual=False: JUST NOW | கோவையில் தப்பிய கைதி! - 6 தனிப்படை அமைப்பு | Pris
-skip (N) could not open: JUST NOW | கோவையில் தப்பிய கைதி! - 6 தனிப்படை அமைப [https://news.google.com/rss/articles/CBMimwFBVV95cUxNcEp4aFl] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
-try (N) manual=False: Kovai Prison Escape| மீண்டும் ஒரு கைதி தப்பியோட்டம்.. எஸ்பி 
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
-posting job started at once
-try (N) manual=False: கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அளவுக்கு டம
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 5})
-try (N) manual=False: கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அளவுக்கு டம
-skip (N) same event as a story filed this round: கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அ
-try (N) manual=False: கோவை மத்திய சிறையிலிருந்து கைதி தப்பியோட்டம்: கடும் நடவடிக்க
-skip (N) similar to a filed story: கோவை மத்திய சிறையிலிருந்து கைதி தப்பியோட்டம்: கடும
-try (N) manual=False: குற்றப்பிரிவு அலுவலகத்தில் 16 வயது சிறுமிக்கு பாலியல் வன்கொட
-skip (N) same event as a story filed this round: கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அ
+skip (N) similar to a filed story: கோவை மத்திய சிறையில் இன்று கைதி தப்பி ஓட்டம்: தவெக
 try (N) manual=False: Coimbatore BIG BREAKING | மீண்டும் மீண்டும் கைதி தப்பியோட்டம
-skip (N) no Coimbatore place in article: குற்றப்பிரிவு அலுவலகத்தில் 16 வயது சிறுமிக்கு பாலி
+skip (N) could not open: JUST NOW | கோவையில் தப்பிய கைதி! - 6 தனிப்படை அமைப [https://news.google.com/rss/articles/CBMimwFBVV95cUxNcEp4aFl] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
 try (N) manual=False: மீண்டும் ஓர் அதிர்ச்சி சம்பவம்... கோவை சிறையில் இருந்து கைதி
+skip (N) similar to a filed story: கோவை மத்திய சிறையிலிருந்து கைதி தப்பியோட்டம்: கடும
+try (N) manual=False: கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அளவுக்கு டம
 skip (N) could not open: Coimbatore BIG BREAKING | மீண்டும் மீண்டும் கைதி த [https://news.google.com/rss/articles/CBMimgFBVV95cUxOZ2U1Zzh] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
-try (N) manual=False: வேலூரில் சிறைத்துறை உணவகம், பெட்ரோல் பங்க் திடீர் மூடல்!
 skip (N) could not open: மீண்டும் ஓர் அதிர்ச்சி சம்பவம்... கோவை சிறையில் இர [https://news.google.com/rss/articles/CBMixwFBVV95cUxNQTFfa3g] 403 Client Error: Forbidden for url: https://tamil.news18.com/tamil-nadu/after-t
-try (N) manual=False: Prisoner Escapes
-skip (N) no Coimbatore place in article: வேலூரில் சிறைத்துறை உணவகம், பெட்ரோல் பங்க் திடீர் 
-try (N) manual=False: விசாரணைக் கைதி தப்பி ஓட்டம்: தொடர் நிகழ்வுகளைத் தடுக்க கடுமை
-skip (N) no Coimbatore place in article: Prisoner Escapes
-try (N) manual=False: பணியில் கவனக்குறைவாக செயல்பட்டால் கடும் நடவடிக்கை: சிறைத்துற
-skip (N) same event as RN-95: விசாரணைக் கைதி தப்பி ஓட்டம்: தொடர் நிகழ்வுகளைத் தட
-skip (N) no Coimbatore place in article: பணியில் கவனக்குறைவாக செயல்பட்டால் கடும் நடவடிக்கை:
-NOT filed (N) Inky Pinky Ponky போட்டு தப்பியோடும் கைதிகள் - Dumm: duplicate after write
-candidate loop ended: left 0, tried={'N': 27}, done={'N': 2}, time left 48 min
-filed: 2 Coimbatore district stories (target 3), reels only
+NOT filed (N) கைதிகள் inky pinky ponky போட்டு தப்பிச் செல்லும் அ: duplicate after write
+candidate loop ended: left 0, tried={'N': 9}, done={'N': 0}, time left 48 min
+filed: 0 Coimbatore district stories (target 3), reels only
 queue: 6 news waiting to be written
-All News sheet: {"ok":true,"added":32,"updated":28}
-All News sheet: {"ok":true,"added":44,"updated":16}
-All News sheet: {"ok":true,"added":43,"updated":17}
-All News sheet: {"ok":true,"added":51,"updated":9}
-All News sheet: {"ok":true,"added":49,"updated":11}
-All News sheet: {"ok":true,"added":31,"updated":29}
-All News sheet: {"ok":true,"added":31,"updated":29}
-All News sheet: {"ok":true,"added":0,"updated":23} 
-stories: 2
+All News sheet: {"ok":true,"added":4,"updated":56}
+All News sheet: {"ok":true,"added":1,"updated":59}
+All News sheet: {"ok":true,"added":22,"updated":38}
+All News sheet: {"ok":true,"added":7,"updated":53}
+All News sheet: {"ok":true,"added":6,"updated":54}
+All News sheet: {"ok":true,"added":1,"updated":59}
+All News sheet: {"ok":true,"added":4,"updated":49} 
+stories: 0
