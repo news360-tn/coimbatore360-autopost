@@ -110,7 +110,7 @@ class CoimbatorePriority(unittest.TestCase):
         self.assertIn('cron: "30 22,0,2,4,6,8,10,12,14,16 * * *"', (wf / "research_free.yml").read_text())
         self.assertIn('age("collect") > 160', (wf / "post.yml").read_text())
         for f in ("post.yml", "research_free.yml", "write_stories.yml"):
-            self.assertIn('DAILY_CAP: "30"', (wf / f).read_text(), f)
+            self.assertIn('DAILY_CAP: "1000"', (wf / f).read_text(), f)      # owner 31 Oct 4:48 PM: no daily limit
         for wf in ("research_free.yml", "write_stories.yml"):
             self.assertIn('FRESH_DAYS: "1"', (ROOT / ".github" / "workflows" / wf).read_text())
 

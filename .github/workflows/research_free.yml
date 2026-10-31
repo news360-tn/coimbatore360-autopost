@@ -71,7 +71,7 @@ jobs:
           WRITE_WORKERS: "3"        # stories written at the same time
           FRESH_DAYS: "1"           # owner 29 Oct: news published TODAY only (Coimbatore)
           CITY_ONLY: "0"            # owner 31 Oct: the WHOLE district competes (a city story wins a tie: score +1)
-          DAILY_CAP: "30"           # owner 31 Oct: 10 rounds x 3; power cuts are never capped
+          DAILY_CAP: "1000"         # owner 31 Oct (4:48 PM): NO daily limit - every 2-hour round posts its top 3; only Instagram's own 50 a day applies
         run: |
           mkdir -p research_free/results
           FLAG=""; [ "${{ github.event.inputs.dry }}" = "true" ] && FLAG="--dry"

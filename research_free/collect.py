@@ -1006,7 +1006,7 @@ def main():
         target = {AREA: 0}
         log.append("collect round: nothing is written now - the writer job takes the queue by priority and posts each story at once")
     # every story -> ONE post on Coimbatore 360 (single page, no collaborator)
-    tries_cap = {AREA: MAX_STORIES * 10}
+    tries_cap = {AREA: MAX_STORIES * int(os.environ.get("TRIES_PER_STORY", "40"))}      # owner 31 Oct: 30 tries left a round with 0 of its top 3 (old / repeated news first) - keep going until 3 are written or time runs out
     log.append(f"candidates waiting: {len(queues[AREA])} Coimbatore; time left {int((DEADLINE - time.time()) / 60)} min")
 
     def prepare(n, area):
