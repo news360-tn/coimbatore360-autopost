@@ -103,7 +103,8 @@ class CoimbatorePriority(unittest.TestCase):
         self.assertEqual(1, collect.FRESH_DAYS)
         self.assertTrue(collect.fresh(datetime.datetime.now(IST).isoformat()))
         self.assertFalse(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(days=1)).isoformat()))
-        self.assertTrue(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(hours=2)).isoformat()))      # 11:30 pm news at the 1 am round
+        two = datetime.datetime.now(IST) - datetime.timedelta(hours=2)      # owner 29 Oct 18:29: TODAY's news only (FRESH_HOURS 0) -
+        self.assertEqual(collect.fresh(two.isoformat()), two.date() == datetime.datetime.now(IST).date())      # this failed every night 00:00-02:00
 
     def test_ten_rounds_cap_30(self):      # owner 31 Oct: rounds IST 04:00-22:00 every 2 h, top 3 each (29 Oct: every 2 h, cap 50)
         wf = ROOT / ".github" / "workflows"
