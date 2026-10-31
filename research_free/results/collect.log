@@ -1,248 +1,145 @@
-writing [N]: மீனாட்சி அம்மன் கோவிலில் மின்வெட்டு; கோவை சிறையில் கைதி ஓட்ட
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.6-flash (29s)
-attempt 1 gemini/gemini-3.6-flash: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 17 ('இந்த விவகாரம் ஓய்வதற்குள் தேனி மாவட்ட சிறையில் இருந்து 17 கை'); 17 ('அந்த அதிர்ச்சி விலகும் முன்பே தேனி தேக்கம்பட்டி மாவட்ட சிறைய')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-writing [N]: ஆழியார் அணையை பார்வையிட்ட தேசிய பேரிடர் மீட்பு படையினர்
+writing [N]: வனபத்ரகாளியம்மன் கோவில் சாலையில் மழைநீர் செல்ல வழி அமைக்கப்ப
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+writing [N]: ஐப்பசி சனி: பெருமாள், ஆஞ்சநேயர் கோயில்களில் சிறப்பு வழிபாடு
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-ok gemini/gemini-3.6-flash (20s)
-attempt 2 gemini/gemini-3.6-flash: 1 problems
-  reel_script has 83 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.6-flash (21s)
-attempt 3 gemini/gemini-3.6-flash: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 17 ('இந்த விவகாரம் ஓய்வதற்குள் தேனி மாவட்ட சிறையில் இருந்து 17 கை'); 17 ('அந்த அதிர்ச்சி விலகும் முன்பே தேனி தேக்கம்பட்டி மாவட்ட சிறைய')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.6-flash for 10 min
-writing [N]: சென்னை-போத்தனூர் இடையே சேலம் வழியாக சிறப்பு ரெயில்
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3.6-flash (24s)
-attempt 4 gemini/gemini-3.6-flash: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('தமிழ்நாடு முதலமைச்சர் விஜய் தலைமையிலான த.வெ.க அரசு, ஆட்சியைப')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.5-flash (23s)
-attempt 1 gemini/gemini-3.5-flash: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 20 ('இங்கிருந்து 5.20 மணிக்கு புறப்பட்டு ஈரோடு, திருப்பூர் வழியாக'); 05 ('இங்கிருந்து 2.05 மணிக்கு புறப்பட்டு ஜோலார்பேட்டை வழியாக மறுந')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
-ok gemini/gemini-3.5-flash (23s)
-attempt 5 gemini/gemini-3.5-flash: 1 problems
-  reel_script has 74 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.5-flash (28s)
-attempt 1 gemini/gemini-3.5-flash: 2 problems
-  caption has letters of another script (මාන්) - write only Tamil (and English names)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): ஆழியாறு ('தேசிய பேரிடர் மீட்பு படை உதவி ஆய்வாளர் பிரதீப் பட் தலைமையில்'); ஆழியாறு ('அப்போது ஆழியாறு ஆற்றில் வெள்ளப்பெருக்கு ஏற்பட்டு, கோபாலபுரம்')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.5-flash (17s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (10s)
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
   "error": {
     "code": 503,
     "message": "This model is currently experiencing high d
-ok gemini/gemini-3.5-flash (24s)
-attempt 6 gemini/gemini-3.5-flash: 2 problems
-  stray Tamil sign 'ு' after 'ு' in «டுத்துுள்ள»
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('தமிழ்நாடு முதலமைச்சர் விஜய் தலைமையிலான த.வெ.க அரசு, ஆட்சியைப')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-switching away from gemini/gemini-3.5-flash for 10 min
-ok gemini/gemini-3.5-flash (28s)
-attempt 7 gemini/gemini-3.5-flash: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 17 ('இந்த விவகாரம் ஓய்வதற்குள் தேனி மாவட்ட சிறையில் இருந்து 17 கை'); 17 ('அந்த அதிர்ச்சி விலகும் முன்பே தேனி தேக்கம்பட்டி மாவட்ட சிறைய')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.5-flash (23s)
-attempt 2 gemini/gemini-3.5-flash: 2 problems
+attempt 1 gemini/gemini-3-flash-preview: 1 problems
   sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  not grounded: location 'பொள்ளாச்சி' is not in the article
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3-flash-preview (14s)
-attempt 8 gemini/gemini-3-flash-preview: 2 problems
+ok gemini/gemini-3-flash-preview (10s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+ok gemini/gemini-3-flash-preview (15s)
+attempt 1 gemini/gemini-3-flash-preview: 1 problems
   sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('தமிழ்நாடு முதலமைச்சர் விஜய் தலைமையிலான த.வெ.க அரசு, ஆட்சியைப')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3-flash-preview (16s)
-attempt 9 gemini/gemini-3-flash-preview: 1 problems
-  reel_script has 83 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (31s)
-attempt 3 gemini/gemini-3-flash-preview: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): கோவை ('தேசிய பேரிடர் மீட்பு படை உதவி ஆய்வாளர் பிரதீப் பட் தலைமையில்')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (13s)
-attempt 10 gemini/gemini-3-flash-preview: 2 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 17 ('இந்த விவகாரம் ஓய்வதற்குள் தேனி மாவட்ட சிறையில் இருந்து 17 கை'); 17 ('அந்த அதிர்ச்சி விலகும் முன்பே தேனி தேக்கம்பட்டி மாவட்ட சிறைய')
-fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
 ok gemini/gemini-3-flash-preview (12s)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/openai/gpt-oss-120b (3s)
-factcheck by groq/openai/gpt-oss-120b: 0 problems
-attempt 2 gemini/gemini-3.5-flash: 0 problems
+ok gemini/gemini-3-flash-preview (11s)
+factcheck by gemini/gemini-3-flash-preview: 0 problems
+attempt 2 gemini/gemini-3-flash-preview: 0 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (8s)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-ok groq/openai/gpt-oss-120b (5s)
-factcheck by groq/openai/gpt-oss-120b: 3 problems
-  Reel script gives Sivakumar an incorrect title (வட்டாட்சியர் instead of தாசில்தார்) and omits other officials (Abhi Rahman and Aruchami) mentioned in the article
-  Caption invents a specific date (அக். 30 and 30 அக்டோபர் 2026) which is not stated in the article
-  Caption gives Sivakumar an incorrect title (வட்டாட்சியர் instead of தாசில்தார்)
-attempt 4 gemini/gemini-3-flash-preview: 3 problems
-  fact-check: Reel script gives Sivakumar an incorrect title (வட்டாட்சியர் instead of தாசில்தார்) and omits other officials (Abhi Rahman and Aruchami) mentioned in the article
-  fact-check: Caption invents a specific date (அக். 30 and 30 அக்டோபர் 2026) which is not stated in the article
-  fact-check: Caption gives Sivakumar an incorrect title (வட்டாட்சியர் instead of தாசில்தார்)
+ok gemini/gemini-3-flash-preview (56s)
+factcheck by gemini/gemini-3-flash-preview: 2 problems
+  The reel_script mentions the abhishekam was performed with 'milk and fragrant substances' (பால் மற்றும் வாசனை திரவியங்கள்), which is not mentioned in the article.
+  The reel_script mentions that crowds were present 'from the morning' (காலை முதலே), which is not mentioned in the article.
+attempt 2 gemini/gemini-3-flash-preview: 2 problems
+  fact-check: The reel_script mentions the abhishekam was performed with 'milk and fragrant substances' (பால் மற்றும் வாசனை திரவியங்கள்), which is not mentioned in the article.
+  fact-check: The reel_script mentions that crowds were present 'from the morning' (காலை முதலே), which is not mentioned in the article.
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-ok anthropic/claude-haiku-5-5
+ok gemini/gemini-3-flash-preview (25s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (4s)
+factcheck by groq/openai/gpt-oss-120b: 5 problems
+  Uses the title “வட்டாட்சியர்” which is not in the article (article mentions தாசில்தார்)
+  Reel script states “தீவிர நடவடிக்கை எடுக்கப்பட்டு வருகிறது” implying actions already underway, but article only mentions planned pit digging
+  Missing the former MLA அருண்குமார்’s statement and involvement, an important fact from the article
+  Slides_spec also includes the invented “வட்டாட்சியர்” title
+  Slide 2 line mixes invented “வட்டாட்சியர்” with officials, which is not in the article
+proofread rejected (5 problems)
+  fact-check: Uses the title “வட்டாட்சியர்” which is not in the article (article mentions தாசில்தார்)
+  fact-check: Reel script states “தீவிர நடவடிக்கை எடுக்கப்பட்டு வருகிறது” implying actions already underway, but article only mentions planned pit digging
+  fact-check: Missing the former MLA அருண்குமார்’s statement and involvement, an important fact from the article
+  fact-check: Slides_spec also includes the invented “வட்டாட்சியர்” title
+  fact-check: Slide 2 line mixes invented “வட்டாட்சியர்” with officials, which is not in the article
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+ok groq/openai/gpt-oss-120b (3s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Action to prevent waterlogging on Mettup'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1441","first":"RN-100"}
+ok gemini/gemini-3-flash-preview (54s)
+factcheck by gemini/gemini-3-flash-preview: 4 problems
+  The year 2026 in the date is not mentioned in the article and is incorrect.
+  The place 'Mettupalayam' (மேட்டுப்பாளையம்) is not mentioned in the article.
+  The slide mentions 'road renovation' (சீரமைப்பு), which differs from the article's mention of 'drainage path construction' (மழைநீர் செல்ல வழி).
+  Important facts from the article, such as the High Court order to remove the EVR statue and the police worship in Tiruvannamalai, are missing from the script.
+attempt 3 gemini/gemini-3-flash-preview: 4 problems
+  fact-check: The year 2026 in the date is not mentioned in the article and is incorrect.
+  fact-check: The place 'Mettupalayam' (மேட்டுப்பாளையம்) is not mentioned in the article.
+  fact-check: The slide mentions 'road renovation' (சீரமைப்பு), which differs from the article's mention of 'drainage path construction' (மழைநீர் செல்ல வழி).
+  fact-check: Important facts from the article, such as the High Court order to remove the EVR statue and the police worship in Tiruvannamalai, are missing from the script.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+posting job started at once
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-switching away from groq/openai/gpt-oss-120b for 10 min
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-ok groq/openai/gpt-oss-120b (6s)
-proofread rejected (3 problems)
-  missing key: reel_script
-  missing key: caption
-  missing key: scenes
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 6 problems
-  reel_script says Raghavan was arrested for theft in Annur area; the article says he was arrested for theft-related offences in Annur, which is roughly consistent, but the reel_script mentions 'திருட்டு வழக்கில்' — acceptable; however the reel_script omits that he was recaptured/caught after escaping from police custody on the arrest day, an important fact missing
-  reel_script states 'மதுரை மீனாட்சி அம்மன் கோவிலில் அடுத்தடுத்து மின்தடை' is attributed to Nayinar Nagendran, which matches the article; however the headline's claim 'மின்தடை' at Meenakshi temple is supported, no issue there
-  slides_spec 'மின்தடை சர்ச்சை' slide says 'முன்னாள் முதல்வர் சுவாமி தரிசனத்தின் போதும் மின்தடை' — the article says the power cut occurred on the day before the Deputy President's visit after Edappadi Palaniswami's darshan, so the wording is loosely accurate, but the slide mixes the former CM's darshan with the outage without stating the Vice-President visit
-  caption attributes the 'அன்னூர் காவல் நிலையத்தில் கைது செய்யப்பட்ட அன்றே அவர் காவலர்களின் பிடியிலிருந்து தப்பியிருந்ததாக' fact to Anbumani Ramadoss, which is correct, but the caption's 'நடவடிக்கை' line presents Anbumani's demand as an action, which is a misleading label
-  caption date line '🗓️ நாள்: அக். 31, 2026' — the year is not stated in the article; the posting-date footer is exempt, but this is inside the body and is an unsupported year
-  reel_script says 'அ தி மு க பொதுச் செயலாளர் எடப்பாடி பழனிசாமி, சிறைக் கைதிகள் அடிக்கடி தப்பி ஓடுவதைக் கண்டித்துள்ளார்' — consistent with article, no issue; but the reel_script omits that R.B. Udhayakumar's demand is in slides only and the caption omits the Nirmal Kumar resignation demand, which is an important political fact of the article's headline
-claude rewrite 1 anthropic/claude-haiku-5-5: 6 problems
-  fact-check: reel_script says Raghavan was arrested for theft in Annur area; the article says he was arrested for theft-related offences in Annur, which is roughly consistent, but the reel_script mentions 'திருட்டு வழக்கில்' — acceptable; however the reel_script omits that he was recaptured/caught after escaping from police custody on the arrest day, an important fact missing
-  fact-check: reel_script states 'மதுரை மீனாட்சி அம்மன் கோவிலில் அடுத்தடுத்து மின்தடை' is attributed to Nayinar Nagendran, which matches the article; however the headline's claim 'மின்தடை' at Meenakshi temple is supported, no issue there
-  fact-check: slides_spec 'மின்தடை சர்ச்சை' slide says 'முன்னாள் முதல்வர் சுவாமி தரிசனத்தின் போதும் மின்தடை' — the article says the power cut occurred on the day before the Deputy President's visit after Edappadi Palaniswami's darshan, so the wording is loosely accurate, but the slide mixes the former CM's darshan with the outage without stating the Vice-President visit
-  fact-check: caption attributes the 'அன்னூர் காவல் நிலையத்தில் கைது செய்யப்பட்ட அன்றே அவர் காவலர்களின் பிடியிலிருந்து தப்பியிருந்ததாக' fact to Anbumani Ramadoss, which is correct, but the caption's 'நடவடிக்கை' line presents Anbumani's demand as an action, which is a misleading label
-  fact-check: caption date line '🗓️ நாள்: அக். 31, 2026' — the year is not stated in the article; the posting-date footer is exempt, but this is inside the body and is an unsupported year
-  fact-check: reel_script says 'அ தி மு க பொதுச் செயலாளர் எடப்பாடி பழனிசாமி, சிறைக் கைதிகள் அடிக்கடி தப்பி ஓடுவதைக் கண்டித்துள்ளார்' — consistent with article, no issue; but the reel_script omits that R.B. Udhayakumar's demand is in slides only and the caption omits the Nirmal Kumar resignation demand, which is an important political fact of the article's headline
-ok anthropic/claude-haiku-5-5
 ok anthropic/claude-haiku-5-5
 claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): ஆழியாறு ('தேசிய பேரிடர் மீட்பு படை உதவி ஆய்வாளர் பிரதீப் பட் தலைமையில்'); ஆழியாறு ('அப்போது ஆழியாறு ஆற்றில் வெள்ளப்பெருக்கு ஏற்பட்டு, கோபாலபுரம்')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('தமிழ்நாடு முதலமைச்சர் விஜய் தலைமையிலான த.வெ.க அரசு, ஆட்சியைப'); 17 ('இந்த விவகாரம் ஓய்வதற்குள் தேனி மாவட்ட சிறையில் இருந்து 17 கை'); 17 ('அந்த அதிர்ச்சி விலகும் முன்பே தேனி தேக்கம்பட்டி மாவட்ட சிறைய')
+  reel_script has 58 words; need 72-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 ok anthropic/claude-haiku-5-5
 claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has 80 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): ஆழியாறு ('தேசிய பேரிடர் மீட்பு படை உதவி ஆய்வாளர் பிரதீப் பட் தலைமையில்'); ஆழியாறு ('அப்போது ஆழியாறு ஆற்றில் வெள்ளப்பெருக்கு ஏற்பட்டு, கோபாலபுரம்')
+  reel_script has 62 words; need 72-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script has 58 words; need 72-105 (the key facts once each, in at most 60 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/qwen/qwen3.8-27b (4s)
-proofread rejected (2 problems)
-  reel_script has 81 words; need 85-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-image match: False The photo shows a generic train at a platform/track at dusk, not the specific news event or announcement of the Diwali s
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): ஆழியாறு ('தேசிய பேரிடர் மீட்பு படை உதவி ஆய்வாளர் பிரதீப் பட் தலைமையில்'); ஆழியாறு ('அப்போது ஆழியாறு ஆற்றில் வெள்ளப்பெருக்கு ஏற்பட்டு, கோபாலபுரம்')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 723, Requested 584. Please try again in 18.42s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1096. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
 
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-image match: False The image shows a generic AI-generated scene of passengers on a train platform at night and does not contain any specifi
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok anthropic/claude-haiku-5-5
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 ok anthropic/claude-haiku-5-5
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Diwali special train announced between C'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1303","first":"RN-97"}
-posting job started at once
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models
-images made: 2 for 'National Disaster Response Force team in'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1303","first":"RN-98"}
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match: False The image depicts a generic street scene featuring TNEB electrical equipment and a utility worker from behind, not the M
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Power cuts at Meenakshi Amman temple and'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1303","first":"RN-99"}
+images made: 2 for 'Aippasi Saturday: special worship at Kar'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261031-1443","first":"RN-101"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
-source dinamalar list: 15 items
-source google 'கோவை': 87 items
+source dinamalar list FAILED: HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read timeout=40)
+source google 'கோவை': 94 items
 source bing 'கோவை': 12 items
-source google 'கோயம்புத்தூர்': 37 items
+source google 'கோயம்புத்தூர்': 54 items
 source bing 'கோயம்புத்தூர்': 12 items
-source google 'பொள்ளாச்சி': 8 items
+source google 'பொள்ளாச்சி': 12 items
 source bing 'பொள்ளாச்சி': 12 items
 source google 'மேட்டுப்பாளையம்': 13 items
 source bing 'மேட்டுப்பாளையம்': 12 items
 source google 'சூலூர்': 0 items
 source bing 'சூலூர்': 12 items
-source google 'அன்னூர்': 6 items
-source bing 'அன்னூர்': 11 items
+source google 'அன்னூர்': 7 items
+source bing 'அன்னூர்': 12 items
 source google 'கிணத்துக்கடவு': 0 items
 source bing 'கிணத்துக்கடவு': 12 items
 source google 'மதுக்கரை': 0 items
@@ -259,11 +156,11 @@ source google 'காரமடை': 3 items
 source bing 'காரமடை': 12 items
 source google 'கருமத்தம்பட்டி': 0 items
 source bing 'கருமத்தம்பட்டி': 3 items
-source google 'கோவை மாவட்டம்': 47 items
-source bing 'கோவை மாவட்டம்': 11 items
+source google 'கோவை மாவட்டம்': 49 items
+source bing 'கோவை மாவட்டம்': 12 items
 source google 'கோயம்புத்தூர் மாவட்டம்': 30 items
 source bing 'கோயம்புத்தூர் மாவட்டம்': 12 items
-source google 'கோவை மின்தடை': 11 items
+source google 'கோவை மின்தடை': 9 items
 source bing 'கோவை மின்தடை': 12 items
 source google 'பொள்ளாச்சி மின்தடை': 0 items
 source bing 'பொள்ளாச்சி மின்தடை': 4 items
@@ -275,7 +172,7 @@ source google 'கோயம்புத்தூர் மின்தடை': 9
 source bing 'கோயம்புத்தூர் மின்தடை': 12 items
 source google 'கோவை ஆட்சியர் அறிவிப்பு': 1 items
 source bing 'கோவை ஆட்சியர் அறிவிப்பு': 12 items
-source google 'கோவை மாவட்ட நிர்வாகம்': 7 items
+source google 'கோவை மாவட்ட நிர்வாகம்': 6 items
 source bing 'கோவை மாவட்ட நிர்வாகம்': 12 items
 source google 'கோவை வேலைவாய்ப்பு முகாம்': 0 items
 source bing 'கோவை வேலைவாய்ப்பு முகாம்': 1 items
@@ -289,7 +186,7 @@ source google 'Coimbatore power shutdown': 7 items
 source bing 'Coimbatore power shutdown': 10 items
 source google 'Coimbatore collector': 4 items
 source bing 'Coimbatore collector': 12 items
-source google 'சிங்காநல்லூர்': 2 items
+source google 'சிங்காநல்லூர்': 1 items
 source bing 'சிங்காநல்லூர்': 12 items
 source google 'பீளமேடு': 6 items
 source bing 'பீளமேடு': 12 items
@@ -300,7 +197,7 @@ source bing 'உக்கடம்': 12 items
 source google 'காந்திபுரம்': 2 items
 source bing 'காந்திபுரம்': 12 items
 source google 'துடியலூர்': 2 items
-source bing 'துடியலூர்': 8 items
+source bing 'துடியலூர்': 7 items
 source google 'பெரியநாயக்கன்பாளையம்': 0 items
 source bing 'பெரியநாயக்கன்பாளையம்': 10 items
 source google 'சிறுமுகை': 0 items
@@ -312,22 +209,22 @@ source bing 'வடவள்ளி': 8 items
 source google 'குனியமுத்தூர்': 0 items
 source bing 'குனியமுத்தூர்': 12 items
 source google 'நெகமம்': 0 items
-source bing 'நெகமம்': 7 items
+source bing 'நெகமம்': 8 items
 source google 'சோமனூர்': 0 items
 source bing 'சோமனூர்': 3 items
 source google 'மருதமலை': 0 items
 source bing 'மருதமலை': 12 items
-source google 'Coimbatore': 85 items
+source google 'Coimbatore': 100 items
 source bing 'Coimbatore': 12 items
-source google 'Kovai': 100 items
+source google 'Kovai': 90 items
 source bing 'Kovai': 12 items
 source google 'Pollachi': 7 items
 source bing 'Pollachi': 12 items
-source google 'Mettupalayam': 13 items
+source google 'Mettupalayam': 14 items
 source bing 'Mettupalayam': 12 items
 source google 'Valparai': 0 items
 source bing 'Valparai': 12 items
-source google 'Sulur': 16 items
+source google 'Sulur': 14 items
 source bing 'Sulur': 12 items
 source google 'Singanallur': 0 items
 source bing 'Singanallur': 12 items
@@ -340,7 +237,7 @@ source bing 'மதுக்கரை மின்தடை': 1 items
 source google 'வால்பாறை மின்தடை': 0 items
 source bing 'வால்பாறை மின்தடை': 3 items
 source google 'காரமடை மின்தடை': 0 items
-source bing 'காரமடை மின்தடை': 0 items
+source bing 'காரமடை மின்தடை': 1 items
 source google 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source bing 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source google 'பேரூர் மின்தடை': 0 items
@@ -354,7 +251,7 @@ source bing 'பெரியநாயக்கன்பாளையம் மி
 source google 'கோவை மின்தடை நாளை': 7 items
 source bing 'கோவை மின்தடை நாளை': 11 items
 source google 'கோவை மின்தடை பகுதிகள்': 11 items
-source bing 'கோவை மின்தடை பகுதிகள்': 11 items
+source bing 'கோவை மின்தடை பகுதிகள்': 12 items
 source google 'Coimbatore power cut tomorrow': 3 items
 source bing 'Coimbatore power cut tomorrow': 10 items
 source google 'Pollachi power cut': 0 items
@@ -365,19 +262,19 @@ source google தினமலர் 'கோவை': 100 items
 source bing தினமலர் 'கோவை': 12 items
 source google தினமலர் 'கோயம்புத்தூர்': 100 items
 source bing தினமலர் 'கோயம்புத்தூர்': 12 items
-source google தினமலர் 'பொள்ளாச்சி': 39 items
+source google தினமலர் 'பொள்ளாச்சி': 38 items
 source bing தினமலர் 'பொள்ளாச்சி': 12 items
 source google தினமணி 'கோவை': 100 items
 source bing தினமணி 'கோவை': 12 items
-source google தினமணி 'கோயம்புத்தூர்': 60 items
+source google தினமணி 'கோயம்புத்தூர்': 61 items
 source bing தினமணி 'கோயம்புத்தூர்': 12 items
 source google தினமணி 'பொள்ளாச்சி': 3 items
 source bing தினமணி 'பொள்ளாச்சி': 8 items
-source google கோவை மெயில் 'கோவை': 20 items
+source google கோவை மெயில் 'கோவை': 19 items
 source bing கோவை மெயில் 'கோவை': 12 items
-source google கோவை மெயில் 'கோயம்புத்தூர்': 20 items
+source google கோவை மெயில் 'கோயம்புத்தூர்': 19 items
 source bing கோவை மெயில் 'கோயம்புத்தூர்': 0 items
-source google கோவை மெயில் 'பொள்ளாச்சி': 18 items
+source google கோவை மெயில் 'பொள்ளாச்சி': 17 items
 source bing கோவை மெயில் 'பொள்ளாச்சி': 0 items
 source google அரசியல் டுடே 'கோவை': 61 items
 source bing அரசியல் டுடே 'கோவை': 0 items
@@ -389,35 +286,35 @@ source google தினகரன் 'கோவை': 100 items
 source bing தினகரன் 'கோவை': 12 items
 source google தினகரன் 'கோயம்புத்தூர்': 100 items
 source bing தினகரன் 'கோயம்புத்தூர்': 12 items
-source google தினகரன் 'பொள்ளாச்சி': 7 items
+source google தினகரன் 'பொள்ளாச்சி': 6 items
 source bing தினகரன் 'பொள்ளாச்சி': 0 items
-source google தினத்தந்தி 'கோவை': 45 items
+source google தினத்தந்தி 'கோவை': 43 items
 source bing தினத்தந்தி 'கோவை': 12 items
 source google தினத்தந்தி 'கோயம்புத்தூர்': 21 items
 source bing தினத்தந்தி 'கோயம்புத்தூர்': 12 items
 source google தினத்தந்தி 'பொள்ளாச்சி': 6 items
-source bing தினத்தந்தி 'பொள்ளாச்சி': 3 items
+source bing தினத்தந்தி 'பொள்ளாச்சி': 2 items
 source google மாலைமலர் 'கோவை': 37 items
 source bing மாலைமலர் 'கோவை': 12 items
 source google மாலைமலர் 'கோயம்புத்தூர்': 19 items
 source bing மாலைமலர் 'கோயம்புத்தூர்': 12 items
-source google மாலைமலர் 'பொள்ளாச்சி': 1 items
+source google மாலைமலர் 'பொள்ளாச்சி': 0 items
 source bing மாலைமலர் 'பொள்ளாச்சி': 5 items
 source google தந்தி டிவி 'கோவை': 33 items
 source bing தந்தி டிவி 'கோவை': 12 items
-source google தந்தி டிவி 'கோயம்புத்தூர்': 26 items
+source google தந்தி டிவி 'கோயம்புத்தூர்': 25 items
 source bing தந்தி டிவி 'கோயம்புத்தூர்': 2 items
 source google தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source bing தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source google இந்து தமிழ் 'கோவை': 51 items
+source bing தந்தி டிவி 'பொள்ளாச்சி': 2 items
+source google இந்து தமிழ் 'கோவை': 46 items
 source bing இந்து தமிழ் 'கோவை': 12 items
 source google இந்து தமிழ் 'கோயம்புத்தூர்': 4 items
 source bing இந்து தமிழ் 'கோயம்புத்தூர்': 2 items
 source google இந்து தமிழ் 'பொள்ளாச்சி': 2 items
 source bing இந்து தமிழ் 'பொள்ளாச்சி': 2 items
-source google பாலிமர் 'கோவை': 3 items
-source bing பாலிமர் 'கோவை': 2 items
-source google பாலிமர் 'கோயம்புத்தூர்': 3 items
+source google பாலிமர் 'கோவை': 4 items
+source bing பாலிமர் 'கோவை': 1 items
+source google பாலிமர் 'கோயம்புத்தூர்': 4 items
 source bing பாலிமர் 'கோயம்புத்தூர்': 4 items
 source google பாலிமர் 'பொள்ளாச்சி': 0 items
 source bing பாலிமர் 'பொள்ளாச்சி': 0 items
@@ -431,90 +328,90 @@ source google நியூஸ்18 தமிழ் 'கோவை': 100 items
 source bing நியூஸ்18 தமிழ் 'கோவை': 12 items
 source google நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 100 items
 source bing நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 12 items
-source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 1 items
+source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 0 items
 source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 4 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 14 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 8 items
-source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 10 items
+source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 12 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 1 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
 source தினமணி கோவை: 5 items
 source தினகரன் கோவை: 10 items
 source பாலிமர் கோவை: 2 items
 source இந்து தமிழ் கோவை: 9 items
-Tamil outlets only: kept 2228 of 2663 items
-all sources: 2228 items -> 1026 different news
-candidate filter: old=338, not Coimbatore district news (state-wide=245, checked earlier=150, checked earlier=101, collected=93, already filed=60, checked earlier=13, checked earlier=8, checked earlier=8, not written=8, not written=7, checked earlier=3
-to write: 93 Coimbatore district candidates (max 3 stories)
-round: top 3 of 93 candidates + 3 power cut(s)
-candidates waiting: 93 Coimbatore; time left 51 min
-try (N) manual=False: மின்வெட்டு, கைதிகள் தப்பி ஓடிய விவகாரம்: வலுக்கும் எதிர்ப்பு
-try (N) manual=False: பரவைச் சந்தை பகுதியில்
-இன்று மின் தடை
+Tamil outlets only: kept 2203 of 2672 items
+all sources: 2203 items -> 1009 different news
+candidate filter: old=335, not Coimbatore district news (state-wide=243, checked earlier=144, collected=105, checked earlier=95, already filed=61, checked earlier=10, checked earlier=8, checked earlier=8, not written=7, not written=7, checked earlier=3
+to write: 105 Coimbatore district candidates (max 3 stories)
+round: top 3 of 105 candidates + 1 power cut(s)
+candidates waiting: 105 Coimbatore; time left 51 min
 try (N) manual=False: கோவை கைதி தப்பியோட்டம் - 4 போலீசார் சஸ்பெண்ட்
-skip (N) similar to a filed story: கோவை கைதி தப்பியோட்டம் - 4 போலீசார் சஸ்பெண்ட்
-try (N) manual=False: மீனாட்சி அம்மன் கோவிலில் மின்வெட்டு; கோவை சிறையில் கைதி ஓட்ட
-skip (N) no Coimbatore place in article: மின்வெட்டு, கைதிகள் தப்பி ஓடிய விவகாரம்: வலுக்கும்
+try (N) manual=False: மின்வெட்டு, கைதிகள் தப்பி ஓடிய விவகாரம்: வலுக்கும் எதிர்ப்பு
 try (N) manual=False: கோவை போக்குவரத்து போலீசார், வாகன ஓட்டிகளுக்கு துண்டு பிரசுரங
-skip (N) no Coimbatore place in article: பரவைச் சந்தை பகுதியில் 
-இன்று மின் தடை
+skip (N) no Coimbatore place in article: மின்வெட்டு, கைதிகள் தப்பி ஓடிய விவகாரம்: வலுக்கும்
 try (N) manual=False: மாணவர் அகிலன் மரணத்திற்கு காரணமான கைது செய்யப்படணும்': பெற்ற
+skip (N) similar to a filed story: கோவை கைதி தப்பியோட்டம் - 4 போலீசார் சஸ்பெண்ட்
+try (N) manual=False: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும் புதிய ca
 skip (N) similar to a filed story: மாணவர் அகிலன் மரணத்திற்கு காரணமான கைது செய்யப்படணு
 try (N) manual=False: டிஜிட்டல் மோசடியில் பாதிக்கப்பட்டவர்களுக்கு வங்கிகள் இழப்பீட
-skip (N) could not open: கோவை போக்குவரத்து போலீசார், வாகன ஓட்டிகளுக்கு துண் [https://news.google.com/rss/articles/CBMiYkFVX3lxTE9HQkpHVk9] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
-try (N) manual=False: பேரணாம்பட்டு அரசு பள்ளி பிளஸ்-1 மாணவிகள் 2 பேர் திடீர் மாயம்
-skip (N) no Coimbatore place in article: பேரணாம்பட்டு அரசு பள்ளி பிளஸ்-1 மாணவிகள் 2 பேர் தி
-try (N) manual=False: பர்லியார் அருகே ஆபத்தான பாறைகள் அகற்றும் பணி தீவிரம்
-skip (N) no Coimbatore place in article: பர்லியார் அருகே ஆபத்தான பாறைகள் அகற்றும் பணி தீவிர
-try (N) manual=False: ஆழியார் அணையை பார்வையிட்ட தேசிய பேரிடர் மீட்பு படையினர்
-skip (N) could not open: டிஜிட்டல் மோசடியில் பாதிக்கப்பட்டவர்களுக்கு வங்கிக [https://news.google.com/rss/articles/CBMi4gFBVV95cUxPRXB2RDB] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
+skip (N) could not open: மோசடி அழைப்புகளுக்கு இனி செக்! WhatsApp கொண்டுவரும [https://news.google.com/rss/articles/CBMisgFBVV95cUxPTzRvOHF] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/techn
 try (N) manual=False: தப்பி ஓடிய கைதியை இரவோடு இரவாக ‘துாக்கிய’ போலீசார்
-skip (N) could not open: தப்பி ஓடிய கைதியை இரவோடு இரவாக ‘துாக்கிய’ போலீசார் [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] 502 Server Error: Bad Gateway for url: https://www.dinamalar.com/news/tamil-nadu
-try (N) manual=False: பைக்கில் தனியே சென்றவா்களை மிரட்டி கைப்பேசிகள் பறிப்பு: 3 பே
-skip (N) no Coimbatore place in article: பைக்கில் தனியே சென்றவா்களை மிரட்டி கைப்பேசிகள் பறி
-try (N) manual=False: மின்சாரம் பாய்ந்து பெண் உயிரிழப்பு
-skip (N) no Coimbatore place in article: மின்சாரம் பாய்ந்து பெண் உயிரிழப்பு
-try (N) manual=False: நான்கு நாட்களுக்கு பிறகு உக்ரமாக உதித்த சூரியன் மாலையில் நித
-skip (N) too old (2026-10-30 19:01:06): கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத
-try (N) manual=False: கோவை கலெக்டர் அலுவலகத்தில் விவசாயிகள் குறைதீர் முகாம் நடந்தத
-skip (N) too old (2026-10-30 14:18:37): கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத
+skip (N) could not open: கோவை போக்குவரத்து போலீசார், வாகன ஓட்டிகளுக்கு துண் [https://news.google.com/rss/articles/CBMiYkFVX3lxTE9HQkpHVk9] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
+try (N) manual=False: வீரவநல்லூா் நகைக் கடை கொள்ளை வழக்கு:
+3 பேருக்கு 7 ஆண்டுகள் ச
+skip (N) could not open: தப்பி ஓடிய கைதியை இரவோடு இரவாக ‘துாக்கிய’ போலீசார் [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
 try (N) manual=False: தங்கம் விலை அதிரடி சரிவு! இன்றைய நிலவரம் (அக். 31)
-skip (N) no Coimbatore place in article: தங்கம் விலை அதிரடி சரிவு! இன்றைய நிலவரம் (அக். 31)
-try (N) manual=False: GOLD PRICE TODAY: இன்று தங்கம் வாங்குவோருக்கு அடித்த ஜாக்பாட
-skip (N) no Coimbatore place in article: GOLD PRICE TODAY: இன்று தங்கம் வாங்குவோருக்கு அடித
-try (N) manual=False: “ரூ.30 அரிசிக்கு வரவேற்பு இல்லை; தரமான அரிசியை விநியோகிக்க அ
-skip (N) no Coimbatore place in article: “ரூ.30 அரிசிக்கு வரவேற்பு இல்லை; தரமான அரிசியை  வி
+skip (N) could not open: டிஜிட்டல் மோசடியில் பாதிக்கப்பட்டவர்களுக்கு வங்கிக [https://news.google.com/rss/articles/CBMi4gFBVV95cUxPRXB2RDB] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
 try (N) manual=False: Gold Price Drops | திடீரென சரிந்த தங்கம் விலை 1 கிராம் எவ்வள
-skip (N) could not open: Gold Price Drops | திடீரென சரிந்த தங்கம் விலை 1 கி [https://news.google.com/rss/articles/CBMikgFBVV95cUxNVzBFXzZ] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
-try (N) manual=False: TASMAC | டாஸ்மாக் மதுபான விலை உயர்வா? | Liquor Prices Hike |
-skip (N) could not open: TASMAC | டாஸ்மாக் மதுபான விலை உயர்வா? | Liquor Pri [https://news.google.com/rss/articles/CBMilwFBVV95cUxPa1RBU3F] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+skip (N) no Coimbatore place in article: வீரவநல்லூா் நகைக் கடை கொள்ளை வழக்கு: 
+3 பேருக்கு 7
 try (N) manual=False: Breaking News | அரசு ஊழியர்களுக்கு வந்த முக்கிய அறிவிப்பு.. 
+skip (N) no Coimbatore place in article: தங்கம் விலை அதிரடி சரிவு! இன்றைய நிலவரம் (அக். 31)
+try (N) manual=False: வனபத்ரகாளியம்மன் கோவில் சாலையில் மழைநீர் செல்ல வழி ...
+skip (N) could not open: Gold Price Drops | திடீரென சரிந்த தங்கம் விலை 1 கி [https://news.google.com/rss/articles/CBMikgFBVV95cUxNVzBFXzZ] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+try (N) manual=False: விவசாயம் செழிக்க மழையை கொடு தாயே! ஆழியாறில் மனமுருகி வழிபாடு
 skip (N) could not open: Breaking News | அரசு ஊழியர்களுக்கு வந்த முக்கிய அற [https://news.google.com/rss/articles/CBMimwFBVV95cUxONk54bnB] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
-try (N) manual=False: Girls Missing | வேலூரில் அடுத்த அதிர்ச்சி - மாணவிகள் இருவர் 
-skip (N) no Coimbatore place in article: Girls Missing | வேலூரில் அடுத்த அதிர்ச்சி - மாணவிக
-try (N) manual=False: வனபத்ரகாளியம்மன் கோவிலில் ரூ. 1.98 கோடியில் கான்கிரீட் சாலைக
-skip (N) too old (2026-10-29T10:32:00+05:30): வனபத்ரகாளியம்மன் கோவிலில் ரூ. 1.98 கோடியில் கான்கி
+try (N) manual=False: 275 படிக்கட்டுகளிலும் வெவ்வேறு யோகாசனங்கள் செய்து மாணவர்கள் 
+skip (N) too old (2026-10-21T11:13:00+05:30): விவசாயம் செழிக்க மழையை கொடு தாயே! ஆழியாறில் மனமுரு
+try (N) manual=False: கோவை சிறைச்சாலையில் இருந்து கைதி தப்பி ஓடியது எப்படி? - காவல
+skip (N) no Coimbatore place in article: 275 படிக்கட்டுகளிலும் வெவ்வேறு யோகாசனங்கள் செய்து 
+try (N) manual=False: மூளைச்சாவடைந்த 27வயது இளைஞர்; 6 பேருக்கு மறுவாழ்வு
+skip (N) no Coimbatore place in article: மூளைச்சாவடைந்த 27வயது இளைஞர்; 6 பேருக்கு மறுவாழ்வு
+try (N) manual=False: TASMAC | டாஸ்மாக் மதுபான விலை உயர்வா? | Liquor Prices Hike |
+skip (N) similar to a filed story: கோவை சிறைச்சாலையில் இருந்து கைதி தப்பி ஓடியது எப்ப
 try (N) manual=False: வால்பாறை பயணத்தை தவிர்க்க அறிவுரை: அபாயகரமான பகுதிகளில் கவனம
-skip (N) could not open: வால்பாறை பயணத்தை தவிர்க்க அறிவுரை: அபாயகரமான பகுதி [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] 502 Server Error: Bad Gateway for url: https://www.dinamalar.com/news/tamil-nadu
-try (N) manual=False: காரமடை அருகே ஸ்ரீ விநாயகா வித்யாலயா பள்ளியின் முன்னாள் மாணவன
-skip (N) too old (2026-10-30 19:02:37): கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத
+skip (N) could not open: TASMAC | டாஸ்மாக் மதுபான விலை உயர்வா? | Liquor Pri [https://news.google.com/rss/articles/CBMilwFBVV95cUxPa1RBU3F] 403 Client Error: Forbidden for url: https://tamil.news18.com/videos/tamil-nadu/
+try (N) manual=False: ஐப்பசி சனி: பெருமாள், ஆஞ்சநேயர் கோயில்களில் சிறப்பு வழிபாடு
+skip (N) could not open: வால்பாறை பயணத்தை தவிர்க்க அறிவுரை: அபாயகரமான பகுதி [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
+try (N) manual=False: திருத்தணி முருகன் கோயில் புதிய இணை ஆணையராக எஸ்.நித்யா பொறுப்
+skip (N) no Coimbatore place in article: திருத்தணி முருகன் கோயில் புதிய இணை ஆணையராக எஸ்.நித
 try (N) manual=False: ஆயிரம் ஆண்டுகளுக்கு முந்தைய தேர்தல்..! உத்திரமேரூர் வைகுந்தப
 skip (N) could not open: ஆயிரம் ஆண்டுகளுக்கு முந்தைய தேர்தல்..! உத்திரமேரூர [https://news.google.com/rss/articles/CBMi1wFBVV95cUxPOWp6U3R] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/chenn
-try (N) manual=False: ரயில்வே ஸ்டேஷனுக்கு பாதை அமைக்க வேண்டும்
-skip (N) too old (2026-10-30T16:45:05+05:30): ரயில்வே ஸ்டேஷனுக்கு பாதை அமைக்க வேண்டும்
-try (N) manual=False: சென்னை-போத்தனூர் இடையே சேலம் வழியாக சிறப்பு ரெயில்
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 3})
+try (N) manual=False: வார இறுதி, முகூா்த்த நாள்கள்: 2,160 சிறப்பு பேருந்துகள் இயக்
+skip (N) too old (2026-10-29T22:48:44.589Z): வார இறுதி, முகூா்த்த நாள்கள்: 2,160 சிறப்பு பேருந்
+try (N) manual=False: கோவையில் தப்பிய கைதி ராகவனை பிடிக்க 6 தனிப்படை அமைப்பு
+skip (N) same event as RN-95: கோவையில் தப்பிய கைதி ராகவனை பிடிக்க 6 தனிப்படை அமை
+try (N) manual=False: பழுதான பாலம் போக்குவரத்துக்கு சிக்கல்
+skip (N) too old (2026-10-22T18:06:23+05:30): பழுதான பாலம் போக்குவரத்துக்கு சிக்கல்
+try (N) manual=False: மாதேஸ்வரர் கோவில் கும்பாபிஷேக விழா
+skip (N) could not open: மாதேஸ்வரர் கோவில் கும்பாபிஷேக விழா [https://www.dinamalar.com/news/tamil-nadu-district-news-coim] 502 Server Error: Bad Gateway for url: https://www.dinamalar.com/news/tamil-nadu
+try (N) manual=False: கோயில் அரச மரத்தில் திடீரென சுரந்த பால்: கற்பூரம் ஏற்றி வழிப
+skip (N) too old (2026-10-26T16:36:00+05:30): கோயில் அரச மரத்தில் திடீரென சுரந்த பால்: கற்பூரம் 
+try (N) manual=False: விசைத்தறி கூடங்களில் ஆயுத பூஜை கொண்டாட்டம்
+skip (N) too old (2026-10-19T19:03:02+05:30): விசைத்தறி கூடங்களில் ஆயுத பூஜை கொண்டாட்டம்
+try (N) manual=False: நடராஜர் கோயில் நிர்வாகம் தீட்சிதர்கள் மீது கோர்ட் அதிருப்தி 
+skip (N) could not open: நடராஜர் கோயில் நிர்வாகம் தீட்சிதர்கள் மீது கோர்ட்  [https://news.google.com/rss/articles/CBMi5wFBVV95cUxQc1ZtaTN] 502 Server Error: Bad Gateway for url: https://l-www.dinamalar.com/videos/genera
+try (N) manual=False: அன்னூர் வட்டார முருகன் கோவில்களில் கிருத்திகை வழிபாடு
+skip (N) too old (2026-10-28T09:17:00+05:30): அன்னூர் வட்டார முருகன் கோவில்களில் கிருத்திகை வழிப
+try (N) manual=False: விநாயகர், பெருமாள் கோவில்களில் கும்பாபிஷேகம் திரளான பக்தர்கள
+skip (N) too old (2026-10-26T04:26:00+05:30): விநாயகர், பெருமாள் கோவில்களில் கும்பாபிஷேகம் திரளா
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
 posting job started at once
-try (N) manual=False: செட்டிபாளையத்தில் ரயில் நிறுத்தம்: மறுமலா்ச்சி மக்கள் இயக்கம
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 5})
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 8})
-try (N) manual=False: முருகன் கோவில்களில் ஐப்பசி கிருத்திகை வழிபாடு: பக்தர்கள் பரவ
-skip (N) too old (2026-10-20T18:52:31.054Z): செட்டிபாளையத்தில் ரயில் நிறுத்தம்: மறுமலா்ச்சி மக்
-skip (N) too old (2026-10-27T10:34:00+05:30): முருகன் கோவில்களில் ஐப்பசி கிருத்திகை வழிபாடு: பக்
-candidate loop ended: left 63, tried={'N': 30}, done={'N': 3}, time left 45 min
-filed: 3 Coimbatore district stories (target 3), reels only
-queue: 70 news waiting to be written
-All News sheet: {"ok":true,"added":22,"updated":38}
-All News sheet: {"ok":true,"added":11,"updated":18} 
-stories: 3
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})
+candidate loop ended: left 75, tried={'N': 30}, done={'N': 2}, time left 46 min
+filed: 2 Coimbatore district stories (target 3), reels only
+queue: 85 news waiting to be written
+All News sheet: {"ok":true,"added":16,"updated":44}
+All News sheet: {"ok":true,"added":6,"updated":36} 
+stories: 2
