@@ -263,7 +263,9 @@ def outside_district(text, via=""):
 # owner 31 Oct (reel RN-98, NDRF at Aliyar dam - every outlet in the state carried it): news about the whole state / another district is
 # never in a round's top 3, even when its headline also names a Coimbatore place
 STATE_NEWS = ["NDRF", "தேசிய பேரிடர் மீட்பு", "சிறப்பு ரயில்", "அமைச்சர்", "முதல்வர்", "தமிழக", "தமிழ்நாடு", "தமிழகம்", "மாநில", "உள்ளிட்ட",
-              "மாவட்டங்க", "இந்தியா", "மத்திய அரசு", "பிரதமர்"]
+              "மாவட்டங்க", "இந்தியா", "மத்திய அரசு", "பிரதமர்",
+              # owner 31 Oct (RN-103): a state leader's reaction is state politics, not Coimbatore news
+              "உதயநிதி", "ஸ்டாலின்", "எடப்பாடி", "அன்புமணி", "அண்ணாமலை", "சீமான்", "விமர்சனம்", "விமர்சித்", "ரவுண்டு கட்ட"]
 
 
 def statewide(title, rain=False):
@@ -495,6 +497,10 @@ def article_any(url):
         pub = m.group(1) if m else ""
     if len(body) < 200:
         h2 = re.sub(r"<(style|script|noscript|svg)[^>]*>.*?</\1>", " ", h, flags=re.S)
+        # owner 31 Oct (Coimbatore RN-102, a Thanthi TV 'breaking' page with only a headline, a video and hashtags): the 'Also Read' /
+        # related-story cards (other stories' headlines) and headings were taken as the article's text. They are not the story.
+        h2 = re.split(r">\s*(?:Also Read|Related (?:News|Stories|Articles)|Read More|இதையும் படிக்க|இதையும் படியுங்கள்|தொடர்புடைய செய்திகள்|மேலும் படிக்க)\s*<", h2, maxsplit=1)[0]
+        h2 = re.sub(r"<(h[1-6]|a|figcaption|time|button|nav|header|footer)\b[^>]*>.*?</\1>", " ", h2, flags=re.S | re.I)
         paras = [re.sub(r"\s+", " ", html.unescape(x)).strip() for x in re.sub(r"<[^>]+>", "\n", h2).split("\n")]
         paras = [x for x in paras if len(x) > 60 and re.search(r"[஀-௿]", x) and "{" not in x and "css-" not in x]
         seen, out = set(), []
