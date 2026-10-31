@@ -103,10 +103,10 @@ class CoimbatorePriority(unittest.TestCase):
         self.assertFalse(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(days=1)).isoformat()))
         self.assertTrue(collect.fresh((datetime.datetime.now(IST) - datetime.timedelta(hours=2)).isoformat()))      # 11:30 pm news at the 1 am round
 
-    def test_every_two_hours_cap_50(self):      # owner 29 Oct: collect every 2 h, post at once, do not miss city news
+    def test_every_four_hours_cap_50(self):      # owner 31 Oct: collect every 4 h (29 Oct: 2 h), post at once, do not miss city news
         wf = ROOT / ".github" / "workflows"
-        self.assertIn('cron: "7 */2 * * *"', (wf / "research_free.yml").read_text())
-        self.assertIn('age("collect") > 135', (wf / "post.yml").read_text())
+        self.assertIn('cron: "7 */4 * * *"', (wf / "research_free.yml").read_text())
+        self.assertIn('age("collect") > 255', (wf / "post.yml").read_text())
         for f in ("post.yml", "research_free.yml", "write_stories.yml"):
             self.assertIn('DAILY_CAP: "50"', (wf / f).read_text(), f)
         for wf in ("research_free.yml", "write_stories.yml"):
@@ -1403,3 +1403,52 @@ class RefusedNotWrittenAgain(unittest.TestCase):
         known = [k for k, _ in collect.REFUSED_FINAL + collect.REFUSED_ONCE_MORE] + ["all free models failed", "bad draft"]
         for r in re.findall(r'return None, f?"([^"{:]+)', body):
             self.assertTrue(any(r.startswith(k.rstrip(":")) or k.startswith(r) for k in known), r)
+
+
+class OnlyWatchedNews(unittest.TestCase):
+    """owner 31 Oct: Coimbatore 360 writes only news Instagram users watch. Posted 30-31 Oct although nobody watches such posts:
+    recipes, health / building tips, an editorial, awareness days, awards, trophies, a tender, a walkout, a tribute"""
+    LOW = [("சுவையான ஆப்பிள் ரப்டி தயாரிப்பது எப்படி?", ""),                                  # RN-91 recipe
+           ("ஆந்திரா ஸ்டைல் காரசாரமான மட்டன் கறி", "https://www.dinamalar.com/news/x/andhra-style-spicy-mutton-curry/4363834"),
+           ("அடிக்கடி வயிறு உப்புசம் ஏற்பட 6 காரணங்கள்", ""),                                   # RN-89 health tips
+           ("கான்கிரீட்டின் தரம்: M20, M25 எண்கள் எதைக் குறிக்கின்றன?", ""),                     # RN-75 building tips
+           ("இனி தமிழ்நாட்டுக்கு நிறைய விமானங்கள் வந்து போகும்", "https://www.dailythanthi.com/others/thalayangam/x"),      # RN-84 editorial
+           ("உலக பக்கவாத தினத்தில் கேஎம்சிஎச் மருத்துவமனை நீல நிறத்தில் ஒளிர்ந்தது", ""),          # RN-74
+           ("கோவை எக்கி பம்ப்ஸுக்கு சர்வதேச சிறப்பு அங்கீகார விருது", ""),                        # RN-34
+           ("நீலாம்பூர் – மதுக்கரை பைபாஸ்: பராமரிப்புக்கு டெண்டர் அழைப்பு", ""),                  # RN-18
+           ("கோவை இருகூரில் தேவர் சிலைக்கு கனிமொழி சந்தோஷ் மரியாதை", ""),                         # RN-70
+           ("சர்வதேச கராத்தே போட்டிகளில் கோவை அணிக்கு சாம்பியன் பட்டம்; 19 பதக்கங்கள்", "")]       # RN-68
+    KEEP = ["இடையர்பாளையத்தில் 2.2 டன் ரேஷன் அரிசி பறிமுதல்; ஒருவர் கைது", "கற்பகம் ஜங்ஷனில் 3 ஆண்டுகளில் 23 விபத்து; 5 பேர் உயிரிழப்பு",
+            "குடிநீருக்கு 20 மடங்கு கூடுதல் கட்டணம்: சூயஸ் நிறுவனத்தால் அதிர்ச்சி", "ரூ.11.15 கோடி போலி ஜிஎஸ்டி ரசீது மோசடி: கோவை தொழிலதிபருக்கு 5 ஆண்டுகள் சிறை",
+            "தீபாவளி கூட்ட நெரிசல்: கோவை மாநகரில் 1,000 போலீசார் பாதுகாப்புப் பணியில்", "கோவை முன்சிப் கோர்ட்கள் டாடாபாத்துக்கு மாற்றம்",
+            "நவம்பர் 2ல் கோவை, நீலகிரியில் ஓரிரு இடங்களில் கனமழை வாய்ப்பு", "கோவையில் 47 ஆயிரம் தெரு நாய்களுக்கு கருத்தடை அறுவை சிகிச்சை",
+            "கோவை இருகூரில் தேவர் ஜெயந்தி விழாவில் பட்டாசு தீப்பொறியால் பந்தல் தீப்பற்றியது", "நவம்பர் 1ஆம் தேதி கோவையில் குரூப் 2 தேர்வு: 73 மையங்களில் நடைபெறுகிறது",
+            "தொண்டாமுத்தூரில் காட்டு யானை புகுந்து பயிர்கள் சேதம்", "சூலூர் துணை மின் நிலையத்தில் விழிப்புணர்வு நிகழ்ச்சி: நாளை மின் தடை",
+            "கவுண்டம்பாளையத்தில் குடிநீர் பிரச்சினைக்கு தீர்வு காண கோரிக்கை"]
+
+    def test_unwatched_types_are_not_written(self):
+        for title, url in self.LOW:
+            self.assertTrue(collect.low_interest(title, url), title)
+
+    def test_real_news_is_always_written(self):
+        for title in self.KEEP:
+            self.assertEqual("", collect.low_interest(title), title)
+
+    def test_switch_off_writes_everything(self):
+        real = collect._selection
+        collect._selection = lambda: {"skip_low_interest": False}
+        try:
+            self.assertEqual("", collect.low_interest("சுவையான ஆப்பிள் ரப்டி தயாரிப்பது எப்படி?"))
+        finally:
+            collect._selection = real
+
+    def test_low_interest_is_final_and_checked_before_any_model_call(self):
+        src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
+        prep = src[src.index("    def prepare("):]
+        self.assertLess(prep.index("low_interest(art[\"title\"]"), prep.index("ask_json") if "ask_json" in prep else prep.index("run."))
+        self.assertIn('"not written: " + low, "s": "notext"', src)      # notext = checked earlier, never opened again
+
+    def test_collection_every_4_hours_and_watchdog_agrees(self):
+        wf = (ROOT / ".github" / "workflows" / "research_free.yml").read_text(encoding="utf-8")
+        self.assertIn('cron: "7 */4 * * *"', wf)
+        self.assertIn('age("collect") > 255', (ROOT / ".github" / "workflows" / "post.yml").read_text(encoding="utf-8"))

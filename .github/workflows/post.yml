@@ -84,7 +84,7 @@ jobs:
               except Exception: return 1e9
           try: q = len(json.load(open("research_free/archive/queue.json")))
           except Exception: q = 0
-          print("collect" if age("collect") > 135 else "", "write" if q and age("write") > 30 else "")
+          print("collect" if age("collect") > 255 else "",      # owner 31 Oct: collection every 4 h (255 = 4 h + 15 min grace, as Namakkal) "write" if q and age("write") > 30 else "")
           print(f"last collect {age('collect'):.0f} min ago, last write {age('write'):.0f} min ago, queue {q}")
           PY
           cat /tmp/wd.txt

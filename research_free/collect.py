@@ -155,9 +155,47 @@ INTEREST = [
     (5, ("பள்ளி", "கல்லூரி", "மாணவ", "தேர்வு", "தேர்வு முடிவு", "உதவித்தொகை", "சேர்க்கை")),
     (5, ("ரேஷன்", "மகளிர் உரிமை", "ஓய்வூதியம்", "திட்டம்", "மானியம்", "ஆட்சியர்", "அறிவிப்பு", "முகாம்", "சிறப்பு முகாம்")),
     (4, ("பேருந்து", "சாலை", "போக்குவரத்து", "ரயில்", "பாலம்", "மேம்பாலம்", "விமான நிலையம்")),
-    (4, ("காட்டு யானை", "யானை")),
+    (8, ("காட்டு யானை", "யானை", "சிறுத்தை", "கரடி")),      # owner 31 Oct: wildlife is the most shared Coimbatore-only news (was 4)
+    (7, ("அணை நீர்மட்டம்", "சிறுவாணி", "பில்லூர்", "ஆழியாறு", "குடிநீர் நிறுத்த")),      # dams / water supply of the city
+    (9, ("ஆன்லைன் மோசடி", "சைபர் கிரைம்", "சைபர் க்ரைம்")),      # fraud warnings are forwarded to family
     (3, ("திருவிழா", "கோவில்", "கோயில்", "தேரோட்ட", "மருதமலை", "சுற்றுலா")),
 ]
+
+
+# owner 31 Oct: only news Instagram users watch is written. 30-31 Oct posts showed what they do not: recipes, health / building tips and
+# an editorial (RN-75, 77, 84, 86-91), awareness days, awards, trophies, a tender, a walkout, a tribute (RN-10, 18, 31, 34, 42, 68, 70, 74, 78);
+# Namakkal + Coimbatore insights agree (ceremonies / education events / politics lowest). Never for a power cut or urgent news.
+LOW_EDITORIAL_URL = re.compile(r"thalayangam|editorial|/opinion|/columns?/|/others/", re.I)
+LOW_FEATURE = re.compile(r"எப்படி|காரணங்கள்|அறிகுறி|கவனிக்க வேண்டிய|டிப்ஸ்|ரெசிபி|செய்முறை|நன்மைகள்|தெரியுமா|ஆபத்து யாருக்கு|"
+                         r"தாக்கும்\s+\S+\s+நோய்|ஸ்டைல்|கொத்சு|ரப்டி|சுவையான|காரசாரமான|தீர்வு|என்ன செய்வது|எதைக் குறிக்கின்றன")
+LOW_FEATURE_URL = re.compile(r"how-to|how-does|causes-of|recipe|-curry|who-is-most-at-risk|benefits-of|tips-for|symptoms|-in-children|"
+                             r"with-all-the-flavours", re.I)
+LOW_CEREMONY = re.compile(r"விழிப்புணர்வு\s*(பேரணி|நிகழ்ச்சி|ஊர்வலம்)|கருத்தரங்கு|பட்டமளிப்பு|விருது|கௌரவ|சிலைக்கு.{0,20}மரியாதை|மாலை அணிவித்|"
+                          r"ஒளிர்ந்த|உலக\s+\S+\s+தின|ஆண்டு விழா|ஆலோசனைக் கூட்டம்|ஆய்வுக் கூட்டம்|டெண்டர்|வெளிநடப்பு|சாம்பியன்|பதக்க|"
+                          r"போட்டியில்.{0,25}(முதலிடம்|வெற்றி)|தலைவராக.{0,30}தேர்வு|பதவி உயர்வு")
+NEVER_LOW = re.compile(r"மின்\s*தடை|மின்தடை|மின்\s*நிறுத்த|மின்\s*வெட்டு|பலி|உயிரிழ|விபத்து|கைது|தீ\s*விபத்து|தீப்பொறி|தீப்பிடி|மோசடி|பறிமுதல்|கொலை|"
+                       r"திருட|காணவில்லை|யானை|சிறுத்தை|வெள்ள|கனமழை|எச்சரிக்கை|குடிநீர்|வேலைவாய்ப்பு|ஆட்சேர்ப்பு")
+
+
+def low_interest(title, url=""):
+    """'' = worth writing; else why Coimbatore viewers would not watch it (config "selection": {"skip_low_interest": false} = off)"""
+    t, u = title or "", url or ""
+    if not _selection().get("skip_low_interest", True) or NEVER_LOW.search(t) or _fr().is_power_cut(t):
+        return ""
+    if LOW_EDITORIAL_URL.search(u):
+        return "editorial / opinion, not news"
+    if (LOW_FEATURE.search(t) or LOW_FEATURE_URL.search(u)) and not allnews.has_place(t):
+        return "feature / tips / recipe, not a Coimbatore event"
+    if LOW_CEREMONY.search(t):
+        return "ceremony / award / awareness event (low views)"
+    return ""
+
+
+def _selection():
+    try:
+        return json.loads((HERE.parent / "poster" / "config.json").read_text(encoding="utf-8")).get("selection") or {}
+    except Exception:
+        return {}
 
 
 def interest(art):
@@ -907,6 +945,10 @@ def main():
         if n["status"] == "collected" and (allnews.other_district(n["title"]) or allnews.outside_district(n["title"], n.get("via", ""))):
             n["status"] = "not Coimbatore district news (state-wide / other district)"
             continue
+        low = low_interest(n["title"], n.get("url", "")) if n["status"] == "collected" and not n.get("manual") else ""
+        if low:      # owner 31 Oct: only news Instagram users watch is written (nothing opened, no model call)
+            n["status"] = "not written: " + low
+            continue
         if n["status"] == "collected" and (fresh(n["published"]) or _fr().power_cut_ahead(n["title"], n["published"])):
             queues[AREA].append(n)
         elif n["status"] == "collected" and any(w in (n.get("source") or "") for w in ("தினமணி", "தினமலர்")) and rechecks < 60:
@@ -984,6 +1026,9 @@ def main():
         town = allnews.outside_city(art["title"], art["text"][:300])
         if town and not n.get("manual"):      # owner 29 Oct: Coimbatore city only for now
             return {"skip": f"not Coimbatore city news ({town})", "s": "notcity", "log": f"skip ({area}) outside the city ({town}): {art['title'][:50]}"}
+        low = "" if n.get("manual") else low_interest(art["title"], art["url"])
+        if low:      # owner 31 Oct: the article's own headline (a listing title can differ) - checked before any model call
+            return {"skip": "not written: " + low, "s": "notext", "log": f"skip ({area}) low interest ({low}): {art['title'][:50]}"}
         if not n.get("manual") and any(_fr().similar(r.get("headline_ta", ""), art["title"], 0.55, r.get("researched"))
                                        or same_news(r.get("headline_ta", ""), art["title"], r.get("researched"))
                                        or _fr().same_power_cut(r.get("headline_ta"), r.get("researched"), art["title"], art["published"]) for r in recent):      # already posted / written
