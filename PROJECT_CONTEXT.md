@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `bb85c5f` | Headline-only pages are never written; one prison escape is one event; 'details not yet known' scripts are not news (owner 31 Oct) |
 | 2026-10-31 | `47f461e` | Coimbatore: a wall / building collapse is an incident (the same event from two outlets is not posted twice) (owner 31 Oct) |
 | 2026-10-31 | `27811da` | Real news photos: only our page's branding - source watermarks / channel logos removed, no source credit (owner 31 Oct) |
 | 2026-10-31 | `0429960` | Real news photos: the source article's own photo is used when it shows this news, enhanced to a presentable picture; else AI pictures (owner 31 Oct) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `0807636` | Coimbatore (owner): power-cut news from the WHOLE district (every town searched for its shutdown notice, never blocked by the city filter); all other news stays city only; power cut stays first priority |
 | 2026-10-29 | `5d59cf1` | Caption holds ALL the news (owner): every number, date, age, amount and place in the article sentences about this story must be in the caption, else the writer adds it (RN-175, 178, 181, 185, 186 missed one); other headlines on the page and datelines ignored; never drops a story; switch reach.caption_all_facts |
 | 2026-10-29 | `3f6b7de` | English search line never cut in the middle of a word |
-| 2026-10-29 | `c546c12` | Coimbatore reach plan (owner): reels at most 60 s (70-105 words, key facts once; every detail stays in the caption's full-details block, checked at writing), English search line added at posting, 5 focused hashtags (page + district + area + topic + broad, junk tags dropped), no brand names/logos in pictures, location tags on; all behind poster/config.json reach switches |
 <!-- recent-changes:end -->
