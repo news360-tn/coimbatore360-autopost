@@ -1514,3 +1514,22 @@ class RoundsTopThree(unittest.TestCase):
                 lines = block.split("\n")
                 pad = min(len(l) - len(l.lstrip()) for l in lines if l.strip())
                 compile("\n".join(l[pad:] for l in lines), f.name, "exec")
+
+
+class LocationTags(unittest.TestCase):
+    """31 Oct: Namakkal's location tags were refused 30 of 30 times (old Instagram explore ids; the API wants the Facebook Page id of the
+    place). A location id is used only after the ig-probe check accepted it - never an unchecked one"""
+    def test_unchecked_id_is_never_tried(self):
+        real_v, real_l = post.verified_locations, post.CONFIG.get("locations")
+        post.CONFIG["locations"] = {"pollachi": "111", "coimbatore": "222"}
+        try:
+            post.verified_locations = lambda: set()
+            self.assertEqual("", post.pick_location({"headline_ta": "பொள்ளாச்சியில் விபத்து"}, {}))
+            post.verified_locations = lambda: {"222"}
+            self.assertEqual("222", post.pick_location({"headline_ta": "பொள்ளாச்சியில் விபத்து", "location": "Coimbatore"}, {}))
+        finally:
+            post.verified_locations, post.CONFIG["locations"] = real_v, real_l
+
+    def test_probe_checks_without_publishing(self):
+        src = (ROOT / "poster" / "ig_probe.py").read_text(encoding="utf-8")
+        self.assertNotIn("media_publish", src[src.index("def check_locations"):])
