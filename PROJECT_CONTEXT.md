@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `d25783f` | Only news Instagram users watch is written; collection every 4 hours (owner 31 Oct) |
+| 2026-10-30 | `f40cfc4` | Heartbeat |
 | 2026-10-30 | `9578ca7` | Refused stories are not written again and again (owner 30 Oct) |
 | 2026-10-30 | `3a52ae7` | Power cuts never missed, never reposted (owner 30 Oct) |
 | 2026-10-30 | `fb188b1` | Same event from two outlets in one writer round is caught (stories filed this round join the check), and short reports of one event count as the same (RN-214 = RN-209) |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `7e526c7` | Coimbatore: only news PUBLISHED TODAY (IST) is written and posted - the article must show today's date, no late-night carry-over, posting gate today only; publish times read in IST |
 | 2026-10-29 | `204b989` | Collection is never cancelled by the story writer: each has its own queue; the collector waits while a writer runs, the writer skips its round while a collection runs (Coimbatore lost 2 collections on 29 Oct) |
 | 2026-10-29 | `609e1c8` | Coimbatore: collect only from the 13 researched outlets (Dinamalar, Dinamani, Covai Mail, Arasiyal Today, Dinakaran, Daily Thanthi, Maalaimalar, Thanthi TV, Hindu Tamil, Polimer, Malai Murasu, News18 Tamil, Indian Express Tamil) |
-| 2026-10-29 | `06baa10` | No old events and no same-event repeats: an old event re-told in a new article is not filed or posted (Coimbatore RN-29); the same event from another outlet in other words is not posted twice (RN-13/24, RN-86/115) |
-| 2026-10-28 | `779647f` | Reel longer than 90 s: shorten the script automatically and render again instead of holding the story (RN-153) |
 <!-- recent-changes:end -->
