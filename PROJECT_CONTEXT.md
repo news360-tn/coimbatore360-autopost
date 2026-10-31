@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `ea88c0c` | 10 rounds a day, top 3 of the whole district each; fix the posting watchdog (owner 31 Oct) |
 | 2026-10-31 | `d25783f` | Only news Instagram users watch is written; collection every 4 hours (owner 31 Oct) |
 | 2026-10-30 | `f40cfc4` | Heartbeat |
 | 2026-10-30 | `9578ca7` | Refused stories are not written again and again (owner 30 Oct) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-29 | `1643d19` | Writer started by the collector waits for the queue instead of skipping; same event from another outlet is not written again |
 | 2026-10-29 | `7e526c7` | Coimbatore: only news PUBLISHED TODAY (IST) is written and posted - the article must show today's date, no late-night carry-over, posting gate today only; publish times read in IST |
 | 2026-10-29 | `204b989` | Collection is never cancelled by the story writer: each has its own queue; the collector waits while a writer runs, the writer skips its round while a collection runs (Coimbatore lost 2 collections on 29 Oct) |
-| 2026-10-29 | `609e1c8` | Coimbatore: collect only from the 13 researched outlets (Dinamalar, Dinamani, Covai Mail, Arasiyal Today, Dinakaran, Daily Thanthi, Maalaimalar, Thanthi TV, Hindu Tamil, Polimer, Malai Murasu, News18 Tamil, Indian Express Tamil) |
 <!-- recent-changes:end -->
