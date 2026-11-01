@@ -130,7 +130,7 @@ def candidates(log_lines, since=None):
                 u = allnews.resolve(u)
             except Exception:
                 continue
-        u = u.split("?")[0].rstrip("/").replace("dinamani.com/amp/story/", "dinamani.com/")
+        u = u.split("?")[0].rstrip("/").replace("dinamani.com/amp/story/", "dinamani.com/").replace("://l-www.dinamalar.com", "://www.dinamalar.com")
         if u not in seen and ("dinamalar.com/news" in u or "dinamani.com/" in u):
             seen.add(u)
             out.append(dict(it, url=u))
@@ -167,6 +167,11 @@ def check_article(it, recent):
         return None, "not Coimbatore district"
     if allnews.other_district(title):
         return None, "other district"
+    # 1 Nov: a Dinamalar page of another district / state section (puducherry, tamil-nadu-news, premium-news ...) is taken only when
+    # its headline or first lines name a Coimbatore-district place ("போதையில் தகராறு 18 பேர்" was Puducherry news)
+    if "dinamalar.com" in it["url"] and "district-news-coimbatore" not in it["url"] \
+            and not (allnews.has_place(title) or allnews.has_place(art["text"][:300])):
+        return None, "not Coimbatore district"
     if AD.search(title):
         return None, "shop offer / advertisement"
     low = collect.low_interest(title, it["url"])
