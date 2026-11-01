@@ -23,7 +23,7 @@ concurrency:
 jobs:
   pick:
     runs-on: ubuntu-latest
-    timeout-minutes: 230
+    timeout-minutes: 300
     env:
       PICK_DRY: ${{ github.event_name == 'workflow_dispatch' && inputs.dry || '0' }}
       BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
@@ -96,6 +96,7 @@ jobs:
               echo "writer exit $? (try $TRY)" >> research_free/results/pick_write.log; sleep 30
             done
             python -u research_free/pick.py mark >> research_free/results/pick.log 2>&1 || true
+            gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main >/dev/null 2>&1 || true      # post now (GitHub's 5-minute schedule often runs only hourly)
             tail -25 research_free/results/pick_write.log
           }
           write
@@ -105,6 +106,18 @@ jobs:
             python -u research_free/pick.py late 2>&1 | tee -a research_free/results/pick.log
             write
           done
+      - name: Check that EVERY picked news is on Instagram (else start posting again; after 1 hour fail loudly - GitHub e-mails the owner)
+        # owner 1 Nov: 7 of 12 ticked news were silently held by the poster ('stale') - a picked news may never stay unposted unnoticed
+        if: env.PICK_DRY != '1'
+        run: |
+          set -o pipefail      # the verify exit code must pass through tee
+          for i in $(seq 1 12); do
+            python -u research_free/pick.py verify 2>&1 | tee -a research_free/results/pick.log && exit 0
+            gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main >/dev/null 2>&1 || true      # post now, do not wait for GitHub's schedule
+            sleep 300
+          done
+          python -u research_free/pick.py verify 2>&1 | tee -a research_free/results/pick.log && exit 0
+          echo "::error::some picked news is still not posted after 1 hour - see 'NOT POSTED' lines above"; exit 1
       - name: Save logs and state
         if: always()
         run: |

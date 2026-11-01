@@ -155,6 +155,48 @@ class OwnerPickIsPosted(unittest.TestCase):
         finally:
             post._PICKED = None
 
+class EndToEndOwnerPick(unittest.TestCase):
+    """owner 1 Nov: ticked -> written -> POSTED, for every ticked news. A rule anywhere between (freshness, duplicate, place) may never
+    hold a picked news back again, and one that is not posted is reported (the pick workflow then fails loudly)."""
+    def test_every_picked_news_goes_through(self):
+        sys.path.insert(0, str(ROOT / "poster"))
+        import post
+        urls = ["https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/old-news/1",          # published yesterday evening
+                "https://l-www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/l-www-link/2",     # listed as l-www, written as www
+                "https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Oct/31/x"]
+        rnd = {"ids": [pick.pid(u) for u in urls], "written": [pick.pid(u) for u in urls],
+               "decided": {"how": "owner ticked 3", "ids": [pick.pid(u) for u in urls]}}
+        post._PICKED = set(rnd["written"])
+        posted_before = {"story_id": "RN-1", "headline_ta": "கோவை மாநகராட்சி குடிநீர் கட்டணம் உயர்வு இல்லை", "headline_en": "",
+                         "post_status": "Posted", "coimbatore_link": "https://instagram.com/p/x", "researched": "01 Nov 2026, 08:00",
+                         "source": "https://other.example/a"}
+        rows = []
+        for k, u in enumerate(urls):
+            rows.append({"story_id": f"RN-{10 + k}", "source": u.replace("l-www.", "www."), "published": "2026-10-20T18:00:00+05:30",
+                         "researched": "20 Oct 2026, 18:00", "headline_ta": posted_before["headline_ta"],      # looks like a duplicate
+                         "headline_en": "", "category": "Civic", "location": "Chennai", "reel_script": "", "caption": "",
+                         "images": "x" * 50, "slides_spec": "{}", "review": "Auto", "post_to": "coimbatore"})
+        old_all = post.ALL_ROWS
+        post.ALL_ROWS = rows + [posted_before]
+        try:
+            for r in rows:
+                self.assertEqual(post.skip_reason(r), "", r["story_id"])
+        finally:
+            post.ALL_ROWS = old_all
+            post._PICKED = None
+        # verify: 1 posted, 2 waiting -> reported, the workflow retries and then fails loudly
+        rows[0]["post_status"] = "Posted"
+        st = pick.picked_status(rnd, rows)
+        self.assertEqual(list(st.values()).count("posted"), 1)
+        self.assertTrue(all(v.startswith("queued") for k, v in st.items() if v != "posted"))
+        self.assertEqual(pick.picked_status(rnd, rows[:1])[pick.pid(urls[2])], "not written")
+
+    def test_workflow_checks_and_fails_loudly(self):
+        wf = (ROOT / ".github" / "workflows" / "pick.yml").read_text(encoding="utf-8")
+        self.assertIn("pick.py verify", wf)
+        self.assertIn("some picked news is still not posted after 1 hour", wf)
+        self.assertIn("actions/workflows/post.yml/dispatches", wf)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -382,6 +382,55 @@ def cmd_late():
     return write_urls([pool[i]["url"] for i in extra])
 
 
+def pid_forms(url):
+    """the ids a story's link can have (Dinamalar l-www / www, Dinamani amp) - the same rule as poster/post.py owner_picked()"""
+    u = str(url or "").strip()
+    forms = {u, u.replace("://www.dinamalar", "://l-www.dinamalar"), u.replace("://l-www.dinamalar", "://www.dinamalar"),
+             u.replace("/amp/story/", "/"), u.rstrip("/")}
+    return {pid(x) for x in forms if x}
+
+
+def picked_status(rnd, rows):
+    """owner 1 Nov: every picked news must be POSTED. -> {id: 'posted' | 'queued RN-x' | 'not written'}"""
+    want = list(dict.fromkeys(list(rnd.get("written") or []) + list((rnd.get("decided") or {}).get("ids") or [])))
+    by = {}
+    for r in rows:
+        for i in pid_forms(r.get("source")):
+            by.setdefault(i, r)
+    out = {}
+    for i in want:
+        r = by.get(i)
+        if not r:
+            out[i] = "not written"
+        elif r.get("coimbatore_link") or str(r.get("post_status") or "").lower().startswith("posted"):
+            out[i] = "posted"
+        else:
+            out[i] = f"queued {r.get('story_id')} ({r.get('post_status') or 'no status'})"
+    return out
+
+
+def cmd_verify():
+    """exit 0 = every news picked in the latest round is on Instagram; exit 3 = some are not (the workflow retries, then fails loudly)"""
+    st = load_state()
+    rid, rnd = current_round(st)
+    if not rid or not rnd.get("decided"):
+        log("verify: no decided round")
+        return 0
+    rows = []
+    for a in ("queue", "recent"):
+        try:
+            rows += bridge_get(a).get("rows", [])
+        except Exception as e:
+            log(f"verify: bridge {a} failed: {e}")
+    stat = picked_status(rnd, rows)
+    title = {k: v.get("title", "") for k, v in st.get("pool", {}).items()}
+    bad = {k: v for k, v in stat.items() if v != "posted"}
+    log(f"verify {rid}: {len(stat) - len(bad)} of {len(stat)} picked news posted")
+    for k, v in bad.items():
+        log(f"   NOT POSTED {k}: {v} - {title.get(k, '')[:60]}")
+    return 3 if bad else 0
+
+
 def mark_posted(rows):
     """pool items whose link is now in the Sheet are 'posted' (never listed again)"""
     st = load_state()
@@ -403,6 +452,8 @@ if __name__ == "__main__":
         cmd_decide()
     elif cmd == "late":
         cmd_late()
+    elif cmd == "verify":
+        sys.exit(cmd_verify())
     elif cmd == "mark":
         log(f"{mark_posted(recent_rows())} listed news now posted")
     else:
