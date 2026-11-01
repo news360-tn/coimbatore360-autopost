@@ -81,6 +81,9 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `32025f6` | pick: the evening round is the latest round (text sort put 'evening' before 'morning' - the 4 PM ticks were ignored); resume input to decide the latest round again |
+| 2026-11-01 | `d54f494` | pick: written and posted |
+| 2026-11-01 | `1bc2bec` | pick: list sent |
 | 2026-11-01 | `f981a49` | rasipalan: திதி / நட்சத்திரம் / யோகம் as Maalaimalar's daily panchangam (Vakya) prints them; own calculation only when not found |
 | 2026-11-01 | `40389cf` | stories shared |
 | 2026-11-01 | `26b3a7e` | story catch-up: a post shared once is remembered (poster/story_shared.json) - the rasipalan got a 2nd story |
@@ -108,7 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `d46df56` | pick: list sent |
 | 2026-11-01 | `1f21229` | pick: the selection page is now a Google Form (opens with any number of Google accounts signed in); ticks read from the form responses |
 | 2026-11-01 | `91fdc03` | pick: list sent |
-| 2026-11-01 | `eb08da4` | pick: written and posted |
-| 2026-11-01 | `4865401` | pick: written and posted |
-| 2026-11-01 | `005651f` | pick.yml: a stopped round really stops the job (pipefail) |
 <!-- recent-changes:end -->
