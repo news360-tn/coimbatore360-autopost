@@ -1,109 +1,17 @@
-writing [N]: கோயில் உண்டியலில் பணம் திருடியவா் கைது
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.6-flash (19s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-ok gemini/gemini-3.5-flash (6s)
-factcheck by gemini/gemini-3.5-flash: 1 problems
-  The name of the accused (Gowtham) is missing from the reel script.
-attempt 1 gemini/gemini-3.6-flash: 1 problems
-  fact-check: The name of the accused (Gowtham) is missing from the reel script.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.5-flash
-ok gemini/gemini-3-flash-preview (9s)
-attempt 2 gemini/gemini-3-flash-preview: 1 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing 
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-dead for this round: gemini/gemini-3-flash-preview
-ok groq/openai/gpt-oss-120b (7s)
-attempt 3 groq/openai/gpt-oss-120b: 3 problems
-  missing key: reel_script
-  missing key: caption
-  missing key: scenes
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-switching away from groq/openai/gpt-oss-120b for 10 min
-ok groq/qwen/qwen3.8-27b (4s)
-attempt 4 groq/qwen/qwen3.8-27b: 1 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  slides_spec 'யார்' slide: 'அவரைப் பிடித்தார்' (he caught him) omits that the devotees also caught him together—minor, but the caption/reel say 'பக்தர்கள்' and the slide attributes the catch only to Subramani with others; not a factual error, so consider this only a wording imprecision
-  slides_spec 'யார்' slide and reel_script: 'சுப்பிரமணி (40 வயது)' and 'கௌதம் (32 வயது)' — article gives ages only as (40) and (32) with no unit; adding 'வயது' is an interpretive addition, acceptable but not stated in the article
-  reel_script omits that the devotees physically surrounded and caught the thief together with Subramani, and the slide reads as if Subramani acted alone in catching him
-  Caption and reel say 'பக்தர்களால் பிடிபட்டார்' and the reel's 'சுற்றிவளைத்துப் பிடித்தனர்' — consistent with article; no error found there
-claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: slides_spec 'யார்' slide: 'அவரைப் பிடித்தார்' (he caught him) omits that the devotees also caught him together—minor, but the caption/reel say 'பக்தர்கள்' and the slide attributes the catch only to Subramani with others; not a factual error, so consider this only a wording imprecision
-  fact-check: slides_spec 'யார்' slide and reel_script: 'சுப்பிரமணி (40 வயது)' and 'கௌதம் (32 வயது)' — article gives ages only as (40) and (32) with no unit; adding 'வயது' is an interpretive addition, acceptable but not stated in the article
-  fact-check: reel_script omits that the devotees physically surrounded and caught the thief together with Subramani, and the slide reads as if Subramani acted alone in catching him
-  fact-check: Caption and reel say 'பக்தர்களால் பிடிபட்டார்' and the reel's 'சுற்றிவளைத்துப் பிடித்தனர்' — consistent with article; no error found there
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 0 problems
-claude rewrite 2 anthropic/claude-haiku-5-5: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok anthropic/claude-haiku-5-5
-real photo skipped (photo uploaded 2026-08-02 (older than the news)): https://media.dinamani.com/dinamani/2026-08-02/0b3tiym0/கைது
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.1-flash, gemini-flash-latest
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match: False The image is AI-generated and does not show a thief being caught by devotees; it only depicts a metal box, crumpled pape
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Thief caught stealing from temple hundi '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261101-0433","first":"RN-105"}
-posting job started at once
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 source dinamalar list: 15 items
 source google 'கோவை': 100 items
 source bing 'கோவை': 12 items
-source google 'கோயம்புத்தூர்': 33 items
+source google 'கோயம்புத்தூர்': 43 items
 source bing 'கோயம்புத்தூர்': 12 items
 source google 'பொள்ளாச்சி': 7 items
 source bing 'பொள்ளாச்சி': 12 items
-source google 'மேட்டுப்பாளையம்': 8 items
+source google 'மேட்டுப்பாளையம்': 9 items
 source bing 'மேட்டுப்பாளையம்': 12 items
 source google 'சூலூர்': 0 items
 source bing 'சூலூர்': 12 items
-source google 'அன்னூர்': 7 items
+source google 'அன்னூர்': 6 items
 source bing 'அன்னூர்': 12 items
 source google 'கிணத்துக்கடவு': 0 items
 source bing 'கிணத்துக்கடவு': 12 items
@@ -123,9 +31,9 @@ source google 'கருமத்தம்பட்டி': 0 items
 source bing 'கருமத்தம்பட்டி': 3 items
 source google 'கோவை மாவட்டம்': 45 items
 source bing 'கோவை மாவட்டம்': 12 items
-source google 'கோயம்புத்தூர் மாவட்டம்': 26 items
+source google 'கோயம்புத்தூர் மாவட்டம்': 25 items
 source bing 'கோயம்புத்தூர் மாவட்டம்': 12 items
-source google 'கோவை மின்தடை': 8 items
+source google 'கோவை மின்தடை': 12 items
 source bing 'கோவை மின்தடை': 12 items
 source google 'பொள்ளாச்சி மின்தடை': 0 items
 source bing 'பொள்ளாச்சி மின்தடை': 3 items
@@ -141,7 +49,7 @@ source google 'கோவை மாவட்ட நிர்வாகம்': 4 i
 source bing 'கோவை மாவட்ட நிர்வாகம்': 12 items
 source google 'கோவை வேலைவாய்ப்பு முகாம்': 0 items
 source bing 'கோவை வேலைவாய்ப்பு முகாம்': 2 items
-source google 'கோவை ஆட்சேர்ப்பு': 12 items
+source google 'கோவை ஆட்சேர்ப்பு': 13 items
 source bing 'கோவை ஆட்சேர்ப்பு': 1 items
 source google 'கோவை சிறப்பு முகாம்': 2 items
 source bing 'கோவை சிறப்பு முகாம்': 12 items
@@ -155,14 +63,14 @@ source google 'சிங்காநல்லூர்': 1 items
 source bing 'சிங்காநல்லூர்': 12 items
 source google 'பீளமேடு': 7 items
 source bing 'பீளமேடு': 12 items
-source google 'சரவணம்பட்டி': 1 items
+source google 'சரவணம்பட்டி': 0 items
 source bing 'சரவணம்பட்டி': 12 items
 source google 'உக்கடம்': 2 items
 source bing 'உக்கடம்': 12 items
 source google 'காந்திபுரம்': 2 items
 source bing 'காந்திபுரம்': 12 items
 source google 'துடியலூர்': 2 items
-source bing 'துடியலூர்': 8 items
+source bing 'துடியலூர்': 7 items
 source google 'பெரியநாயக்கன்பாளையம்': 0 items
 source bing 'பெரியநாயக்கன்பாளையம்': 10 items
 source google 'சிறுமுகை': 0 items
@@ -179,17 +87,17 @@ source google 'சோமனூர்': 0 items
 source bing 'சோமனூர்': 3 items
 source google 'மருதமலை': 0 items
 source bing 'மருதமலை': 12 items
-source google 'Coimbatore': 96 items
+source google 'Coimbatore': 91 items
 source bing 'Coimbatore': 12 items
-source google 'Kovai': 100 items
+source google 'Kovai': 95 items
 source bing 'Kovai': 12 items
-source google 'Pollachi': 5 items
+source google 'Pollachi': 6 items
 source bing 'Pollachi': 11 items
-source google 'Mettupalayam': 9 items
+source google 'Mettupalayam': 8 items
 source bing 'Mettupalayam': 12 items
 source google 'Valparai': 0 items
 source bing 'Valparai': 12 items
-source google 'Sulur': 14 items
+source google 'Sulur': 11 items
 source bing 'Sulur': 12 items
 source google 'Singanallur': 0 items
 source bing 'Singanallur': 12 items
@@ -214,8 +122,8 @@ source bing 'கருமத்தம்பட்டி மின்தடை': 
 source google 'பெரியநாயக்கன்பாளையம் மின்தடை': 0 items
 source bing 'பெரியநாயக்கன்பாளையம் மின்தடை': 0 items
 source google 'கோவை மின்தடை நாளை': 7 items
-source bing 'கோவை மின்தடை நாளை': 10 items
-source google 'கோவை மின்தடை பகுதிகள்': 8 items
+source bing 'கோவை மின்தடை நாளை': 11 items
+source google 'கோவை மின்தடை பகுதிகள்': 10 items
 source bing 'கோவை மின்தடை பகுதிகள்': 12 items
 source google 'Coimbatore power cut tomorrow': 4 items
 source bing 'Coimbatore power cut tomorrow': 10 items
@@ -227,23 +135,23 @@ source google தினமலர் 'கோவை': 100 items
 source bing தினமலர் 'கோவை': 12 items
 source google தினமலர் 'கோயம்புத்தூர்': 100 items
 source bing தினமலர் 'கோயம்புத்தூர்': 12 items
-source google தினமலர் 'பொள்ளாச்சி': 17 items
+source google தினமலர் 'பொள்ளாச்சி': 12 items
 source bing தினமலர் 'பொள்ளாச்சி': 12 items
 source google தினமணி 'கோவை': 100 items
 source bing தினமணி 'கோவை': 12 items
-source google தினமணி 'கோயம்புத்தூர்': 60 items
+source google தினமணி 'கோயம்புத்தூர்': 79 items
 source bing தினமணி 'கோயம்புத்தூர்': 12 items
-source google தினமணி 'பொள்ளாச்சி': 4 items
+source google தினமணி 'பொள்ளாச்சி': 5 items
 source bing தினமணி 'பொள்ளாச்சி': 9 items
 source google கோவை மெயில் 'கோவை': 20 items
 source bing கோவை மெயில் 'கோவை': 12 items
-source google கோவை மெயில் 'கோயம்புத்தூர்': 19 items
+source google கோவை மெயில் 'கோயம்புத்தூர்': 20 items
 source bing கோவை மெயில் 'கோயம்புத்தூர்': 0 items
-source google கோவை மெயில் 'பொள்ளாச்சி': 10 items
+source google கோவை மெயில் 'பொள்ளாச்சி': 8 items
 source bing கோவை மெயில் 'பொள்ளாச்சி': 0 items
 source google அரசியல் டுடே 'கோவை': 52 items
 source bing அரசியல் டுடே 'கோவை': 0 items
-source google அரசியல் டுடே 'கோயம்புத்தூர்': 52 items
+source google அரசியல் டுடே 'கோயம்புத்தூர்': 53 items
 source bing அரசியல் டுடே 'கோயம்புத்தூர்': 0 items
 source google அரசியல் டுடே 'பொள்ளாச்சி': 0 items
 source bing அரசியல் டுடே 'பொள்ளாச்சி': 0 items
@@ -251,27 +159,27 @@ source google தினகரன் 'கோவை': 100 items
 source bing தினகரன் 'கோவை': 12 items
 source google தினகரன் 'கோயம்புத்தூர்': 100 items
 source bing தினகரன் 'கோயம்புத்தூர்': 12 items
-source google தினகரன் 'பொள்ளாச்சி': 2 items
+source google தினகரன் 'பொள்ளாச்சி': 1 items
 source bing தினகரன் 'பொள்ளாச்சி': 0 items
-source google தினத்தந்தி 'கோவை': 46 items
+source google தினத்தந்தி 'கோவை': 47 items
 source bing தினத்தந்தி 'கோவை': 12 items
-source google தினத்தந்தி 'கோயம்புத்தூர்': 22 items
+source google தினத்தந்தி 'கோயம்புத்தூர்': 23 items
 source bing தினத்தந்தி 'கோயம்புத்தூர்': 12 items
 source google தினத்தந்தி 'பொள்ளாச்சி': 6 items
 source bing தினத்தந்தி 'பொள்ளாச்சி': 3 items
-source google மாலைமலர் 'கோவை': 22 items
+source google மாலைமலர் 'கோவை': 23 items
 source bing மாலைமலர் 'கோவை': 12 items
 source google மாலைமலர் 'கோயம்புத்தூர்': 14 items
 source bing மாலைமலர் 'கோயம்புத்தூர்': 12 items
 source google மாலைமலர் 'பொள்ளாச்சி': 2 items
 source bing மாலைமலர் 'பொள்ளாச்சி': 5 items
-source google தந்தி டிவி 'கோவை': 55 items
+source google தந்தி டிவி 'கோவை': 54 items
 source bing தந்தி டிவி 'கோவை': 12 items
 source google தந்தி டிவி 'கோயம்புத்தூர்': 30 items
 source bing தந்தி டிவி 'கோயம்புத்தூர்': 0 items
 source google தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source bing தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source google இந்து தமிழ் 'கோவை': 37 items
+source bing தந்தி டிவி 'பொள்ளாச்சி': 0 items
+source google இந்து தமிழ் 'கோவை': 32 items
 source bing இந்து தமிழ் 'கோவை': 12 items
 source google இந்து தமிழ் 'கோயம்புத்தூர்': 4 items
 source bing இந்து தமிழ் 'கோயம்புத்தூர்': 2 items
@@ -283,9 +191,9 @@ source google பாலிமர் 'கோயம்புத்தூர்': 3
 source bing பாலிமர் 'கோயம்புத்தூர்': 4 items
 source google பாலிமர் 'பொள்ளாச்சி': 0 items
 source bing பாலிமர் 'பொள்ளாச்சி': 0 items
-source google மாலை முரசு 'கோவை': 5 items
+source google மாலை முரசு 'கோவை': 7 items
 source bing மாலை முரசு 'கோவை': 3 items
-source google மாலை முரசு 'கோயம்புத்தூர்': 2 items
+source google மாலை முரசு 'கோயம்புத்தூர்': 3 items
 source bing மாலை முரசு 'கோயம்புத்தூர்': 1 items
 source google மாலை முரசு 'பொள்ளாச்சி': 1 items
 source bing மாலை முரசு 'பொள்ளாச்சி': 0 items
@@ -295,9 +203,9 @@ source google நியூஸ்18 தமிழ் 'கோயம்புத்�
 source bing நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 12 items
 source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 2 items
 source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 4 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 13 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 6 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 5 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 11 items
 source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 1 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
@@ -305,49 +213,33 @@ source தினமணி கோவை: 5 items
 source தினகரன் கோவை: 10 items
 source பாலிமர் கோவை: 2 items
 source இந்து தமிழ் கோவை: 9 items
-Tamil outlets only: kept 2122 of 2587 items
-all sources: 2122 items -> 1023 different news
-candidate filter: not written=412, not Coimbatore district news (state-wide=242, checked earlier=101, checked earlier=87, old=66, already filed=56, not written=14, collected=13, checked earlier=10, checked earlier=8, checked earlier=8, checked earlier=3, not written=2, not written=1
-to write: 13 Coimbatore district candidates (max 3 stories)
-round: top 3 of 13 candidates
-candidates waiting: 13 Coimbatore; time left 51 min
-try (N) manual=False: கோயில் உண்டியலில் பணம் திருடியவா் கைது
-try (N) manual=False: விஷம் குடித்து பெண் தற்கொலை
-try (N) manual=False: 40 கிலோ குட்காவுடன் 2 பேர் கைது ரூ.1.25 லட்சம், கார் பறிமுதல
-skip (N) no Coimbatore place in article: விஷம் குடித்து பெண் தற்கொலை
-try (N) manual=False: சொத்து தகராறில் அண்ணனை வெட்டிய தம்பி கைது
-skip (N) no Coimbatore place in article: சொத்து தகராறில் அண்ணனை 
-வெட்டிய தம்பி கைது
+Tamil outlets only: kept 2139 of 2600 items
+all sources: 2139 items -> 1022 different news
+candidate filter: not written=429, not Coimbatore district news (state-wide=241, checked earlier=100, checked earlier=84, old=64, already filed=51, not written=16, checked earlier=9, checked earlier=9, checked earlier=7, collected=6, checked earlier=3, not written=2, not written=1
+to write: 6 Coimbatore district candidates (max 3 stories)
+round: top 3 of 6 candidates
+candidates waiting: 6 Coimbatore; time left 51 min
+try (N) manual=False: கூரையை உடைத்து திருடியவர் கைது
 try (N) manual=False: மோசடி வழக்கில் தனியாா் அறக்கட்டளை நிா்வாகி கைது
-skip (N) no Coimbatore place in article: மோசடி வழக்கில் தனியாா் அறக்கட்டளை நிா்வாகி கைது
-try (N) manual=False: குவாரி நீரில் மூழ்கி இளைஞர் பலி!
-skip (N) no Coimbatore place in article: குவாரி நீரில் மூழ்கி இளைஞர் பலி!
-try (N) manual=False: காங்கயத்தில் தண்ணீா் தொட்டியில் தவறி விழுந்து பெண் குழந்தை உ
-skip (N) no Coimbatore place in article: காங்கயத்தில் தண்ணீா் தொட்டியில் தவறி விழுந்து பெண்
-try (N) manual=False: கருவலூா் அருகே குடிசை வீட்டில் தீ விபத்து
-skip (N) no Coimbatore place in article: கருவலூா் அருகே குடிசை வீட்டில் தீ விபத்து
-try (N) manual=False: அரூா் அருகே பெண்ணிடம் நகை பறிப்பு
-skip (N) no Coimbatore place in article: அரூா் அருகே பெண்ணிடம் நகை பறிப்பு
 try (N) manual=False: மழை நீர் தேக்கத்தால் ஸ்தம்பித்த போக்குவரத்து . இடம்: கோவை, ப
-skip (N) too old (2026-10-31T22:38:02+05:30): 40 கிலோ குட்காவுடன் 2 பேர் கைது ரூ.1.25 லட்சம், கா
+skip (N) no Coimbatore place in article: மோசடி வழக்கில் தனியாா் அறக்கட்டளை நிா்வாகி கைது
+try (N) manual=False: கருவலூா் அருகே குடிசை வீட்டில் தீ விபத்து
+skip (N) too old (2026-10-19 07:50:42): கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத
+try (N) manual=False: ஊதியூா் அருகே மின்சாரம் பாய்ந்து விவசாயி உயிரிழப்பு
+skip (N) too old (2026-10-28T16:36:30+05:30): கூரையை உடைத்து திருடியவர் கைது
 try (N) manual=False: ரிமாண்ட் செய்ய வந்தபோது கோவை சிறையில் போலீஸாரைத் தள்ளிவிட்ட
 skip (N) similar to a filed story: ரிமாண்ட் செய்ய வந்தபோது கோவை சிறையில் போலீஸாரைத் 
-try (N) manual=False: பூட்டிய வீட்டில் 5 பவுன், ரூ.43 ஆயிரம் திருடிய நபரைப் பிடித்
-skip (N) no Coimbatore place in article: பூட்டிய வீட்டில் 5 பவுன், ரூ.43 ஆயிரம் திருடிய நபர
-try (N) manual=False: தேசிய ரேசிங் சேலஞ்ச்: அனந்துவுக்கு இரட்டை வெற்றி
-skip (N) no Coimbatore place in article: தேசிய ரேசிங் சேலஞ்ச்: அனந்துவுக்கு இரட்டை வெற்றி
-skip (N) could not open: மழை நீர் தேக்கத்தால் ஸ்தம்பித்த போக்குவரத்து . இடம [https://www.dinamalar.com/photos/today-photos/498944] HTTPSConnectionPool(host='www.dinamalar.com', port=443): Read timed out. (read t
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 3})
-posting job started at once
-candidate loop ended: left 0, tried={'N': 13}, done={'N': 1}, time left 48 min
-filed: 1 Coimbatore district stories (target 3), reels only
-queue: 1 news waiting to be written
-All News sheet: {"ok":true,"added":6,"updated":54}
-All News sheet: {"ok":true,"added":4,"updated":56}
-All News sheet: {"ok":true,"added":23,"updated":37}
-All News sheet: {"ok":true,"added":34,"updated":26}
-All News sheet: {"ok":true,"added":12,"updated":48}
+skip (N) no Coimbatore place in article: ஊதியூா் அருகே மின்சாரம் பாய்ந்து விவசாயி உயிரிழப்ப
+skip (N) no Coimbatore place in article: கருவலூா் அருகே குடிசை வீட்டில் தீ விபத்து
+candidate loop ended: left 0, tried={'N': 6}, done={'N': 0}, time left 50 min
+filed: 0 Coimbatore district stories (target 3), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":2,"updated":58}
+All News sheet: {"ok":true,"added":1,"updated":59}
+All News sheet: {"ok":true,"added":13,"updated":47}
+All News sheet: {"ok":true,"added":16,"updated":44}
+All News sheet: {"ok":true,"added":11,"updated":49}
 All News sheet: {"ok":true,"added":5,"updated":55}
-All News sheet: {"ok":true,"added":7,"updated":53}
-All News sheet: {"ok":true,"added":4,"updated":7} 
-stories: 1
+All News sheet: {"ok":true,"added":3,"updated":57}
+All News sheet: {"ok":true,"added":1,"updated":27} 
+stories: 0
