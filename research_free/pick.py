@@ -45,7 +45,7 @@ def load_state():
 
 def save_state(st):
     STATE.parent.mkdir(parents=True, exist_ok=True)
-    rounds = dict(sorted(st.get("rounds", {}).items())[-20:])      # keep the last 10 days of rounds
+    rounds = dict(sorted(st.get("rounds", {}).items(), key=lambda kv: round_order(kv[0]))[-20:])      # keep the last 10 days of rounds
     st["rounds"] = rounds
     STATE.write_text(json.dumps(st, ensure_ascii=False, indent=1), encoding="utf-8")
 
@@ -318,8 +318,15 @@ def cmd_collect():
     return rid
 
 
+def round_order(rid):
+    """'2026-11-01_morning' < '2026-11-01_evening' < '2026-11-02_morning' (1 Nov: sorted as text, 'evening' came BEFORE 'morning' -
+    the 4 PM round decided on the morning round's ticks and posted nothing)"""
+    day, _, part = str(rid).partition("_")
+    return day, {"morning": 0, "evening": 1}.get(part, 2), part
+
+
 def current_round(st):
-    rs = sorted(st.get("rounds", {}).items())
+    rs = sorted(st.get("rounds", {}).items(), key=lambda kv: round_order(kv[0]))
     return rs[-1] if rs else (None, None)
 
 

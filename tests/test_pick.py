@@ -201,6 +201,14 @@ class EndToEndOwnerPick(unittest.TestCase):
             if "post.yml/dispatches" in line:
                 self.assertIn("inputs[dry_run]=false", line)
 
+class RoundOrder(unittest.TestCase):
+    """1 Nov: the 4 PM round took the morning round as the latest (text sort: 'evening' < 'morning') and posted nothing"""
+    def test_evening_is_latest(self):
+        st = {"rounds": {"2026-11-01_morning": {"x": 1}, "2026-11-01_evening": {"x": 2}, "2026-10-31_evening": {"x": 0}}}
+        self.assertEqual(pick.current_round(st)[0], "2026-11-01_evening")
+        st["rounds"]["2026-11-02_morning"] = {"x": 3}
+        self.assertEqual(pick.current_round(st)[0], "2026-11-02_morning")
+
 
 if __name__ == "__main__":
     unittest.main()

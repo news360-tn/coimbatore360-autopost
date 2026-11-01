@@ -14,6 +14,9 @@ on:
       dry:
         description: "1 = collect and show the list only (no e-mail, nothing written or posted)"
         default: "0"
+      resume:
+        description: "1 = no new list: decide the LATEST round again (the owner's ticks, else the top 12), write and post it"
+        default: "0"
 permissions:
   contents: write
   actions: write      # starts the posting job as soon as a story is saved
@@ -57,13 +60,14 @@ jobs:
           pip install -q requests googlenewsdecoder==0.2.2 pillow
           pip install -q opencv-contrib-python-headless==4.10.0.84 pillow-avif-plugin==1.4.6 || echo 'photo tools not installed'
       - name: Collect and e-mail the list
+        if: github.event_name != 'workflow_dispatch' || inputs.resume != '1'
         run: |
           mkdir -p research_free/results
           : > research_free/results/pick_write.log
           set -o pipefail      # a stopped round (list not e-mailed) must stop the job - tee would hide the exit code
           python -u research_free/pick.py collect 2>&1 | tee research_free/results/pick.log
       - name: Save the round (the next round starts where this one ended)
-        if: always()
+        if: always() && (github.event_name != 'workflow_dispatch' || inputs.resume != '1')
         run: |
           git config user.name "news360-bot"; git config user.email "bot@users.noreply.github.com"
           git add -f research_free/archive/pick_state.json research_free/results/pick.log 2>/dev/null || true
