@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `1fa9d2b` | hold a story from posting when its fact-check found any problem or its location is unknown (RN-272); the verification label now shows the real check result instead of a fixed 'not checked by Claude yet' |
+| 2026-11-01 | `7d4ef29` | pick: written and posted |
 | 2026-11-01 | `32025f6` | pick: the evening round is the latest round (text sort put 'evening' before 'morning' - the 4 PM ticks were ignored); resume input to decide the latest round again |
 | 2026-11-01 | `d54f494` | pick: written and posted |
 | 2026-11-01 | `1bc2bec` | pick: list sent |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `ac85e79` | rasipalan: find today's article when the day is written 01 or the link has no date (1 Nov nothing posted) |
 | 2026-11-01 | `c6266ea` | pick: Dinamalar pages outside its Coimbatore district section are listed only when they name a Coimbatore place (a Puducherry story was listed) |
 | 2026-11-01 | `d46df56` | pick: list sent |
-| 2026-11-01 | `1f21229` | pick: the selection page is now a Google Form (opens with any number of Google accounts signed in); ticks read from the form responses |
-| 2026-11-01 | `91fdc03` | pick: list sent |
 <!-- recent-changes:end -->
