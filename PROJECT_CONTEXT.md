@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `f51c1b8` | the fact-check / location hold also applies to owner ready reels (they skipped every news check before); RN-272 repost path |
 | 2026-11-01 | `f26a4d8` | writer must name the town or village from the article in location (a district alone is not allowed); a story whose location is only the district is held from posting (RN-272) |
 | 2026-11-01 | `1fa9d2b` | hold a story from posting when its fact-check found any problem or its location is unknown (RN-272); the verification label now shows the real check result instead of a fixed 'not checked by Claude yet' |
 | 2026-11-01 | `7d4ef29` | pick: written and posted |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `ff7d052` | rasipalan posted |
 | 2026-11-01 | `490d2d3` | rasipalan: never miss a day - 1 source enough after 9:30, keep trying until 12:30, backups 9:45 and 11:45 |
 | 2026-11-01 | `ac85e79` | rasipalan: find today's article when the day is written 01 or the link has no date (1 Nov nothing posted) |
-| 2026-11-01 | `c6266ea` | pick: Dinamalar pages outside its Coimbatore district section are listed only when they name a Coimbatore place (a Puducherry story was listed) |
 <!-- recent-changes:end -->
