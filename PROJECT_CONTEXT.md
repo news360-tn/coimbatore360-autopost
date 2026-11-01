@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `f9384a2` | story catch-up: log quota / posts / stories seen |
 | 2026-11-01 | `a7a2ed2` | stories: every post (news reel, carousel, rasipalan, any job) also goes to the story - fixed 25-post cut removed, missing stories caught up every run, last 5 of the 50/day kept for news |
 | 2026-11-01 | `4802cdf` | powercut: log the title of a power cut skipped as another district |
 | 2026-11-01 | `7244f7a` | powercut: search results kept only when the headline is a power cut (first run took 20+ min resolving every result); self-contained module |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `9892579` | pick: Google / Bing news searches limited to Dinamalar + Dinamani fill the window (the list pages show only the latest ~20-40) |
 | 2026-11-01 | `81fe7e7` | pick: shop offers / advertorials are not listed; titles on one line; state save never fails a test run |
 | 2026-11-01 | `1dffb82` | pick: written and posted |
-| 2026-11-01 | `47e6d7e` | Coimbatore 360: news only at 6 AM / 4 PM from Dinamalar + Dinamani, owner ticks the news in an e-mail check-box page (else top 12), every picked news posted at once |
 <!-- recent-changes:end -->
