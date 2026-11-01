@@ -271,6 +271,11 @@ def cmd_collect():
         if is_posted(it["url"], it["title"], recent):
             pool.pop(k)
             continue
+        # 1 Nov: a story listed before a filter existed (Puducherry news) must not come back as a leftover
+        if allnews.other_district(it["title"]) or ("dinamalar.com" in it["url"] and "district-news-coimbatore" not in it["url"]
+                                                  and not (allnews.has_place(it["title"]) or allnews.has_place(it.get("summary", "")[:300]))):
+            pool.pop(k)
+            continue
         left.append(dict(it, leftover=True))
     new = rank(new)
     left = rank(left)
