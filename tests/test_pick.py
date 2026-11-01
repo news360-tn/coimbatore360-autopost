@@ -139,6 +139,22 @@ class Wiring(unittest.TestCase):
         for s in ("function pickList_", "function makePickForm_", "FormApp.openById", "pickStatus_", "function authorizeForms"):
             self.assertIn(s, gs)
 
+class OwnerPickIsPosted(unittest.TestCase):
+    """1 Nov: 7 news the owner ticked at 9 AM (published 31 Oct evening) were held by the poster as 'stale: not today'"""
+    def test_picked_story_has_no_skip(self):
+        sys.path.insert(0, str(ROOT / "poster"))
+        import post
+        url = "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/1"
+        post._PICKED = {pick.pid(url)}
+        try:
+            row = {"story_id": "RN-1", "source": url, "published": "2020-01-01T10:00:00+05:30", "headline_ta": "செய்தி", "reel_script": "",
+                   "caption": ""}
+            self.assertTrue(post.owner_picked(row))
+            self.assertTrue(post.owner_picked(dict(row, source=url.replace("www.", "l-www."))))
+            self.assertFalse(post.owner_picked(dict(row, source="https://www.dinamani.com/other")))
+        finally:
+            post._PICKED = None
+
 
 if __name__ == "__main__":
     unittest.main()

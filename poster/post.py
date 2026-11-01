@@ -193,6 +193,30 @@ def script_of(o):
     return _SCRIPTS.get(o.get("story_id") or "", "")
 
 
+_PICKED = None
+
+
+def owner_picked(row):
+    """owner 1 Nov (Coimbatore pick flow): a news the owner ticked (or the automatic top 12) is posted - no freshness / duplicate /
+    place check may hold it back (31 Oct articles picked at 9 AM on 1 Nov were held as 'stale: not today')"""
+    global _PICKED
+    if _PICKED is None:
+        _PICKED = set()
+        try:
+            st = json.loads((ROOT / "research_free" / "archive" / "pick_state.json").read_text(encoding="utf-8"))
+            for r in (st.get("rounds") or {}).values():
+                _PICKED |= set(r.get("written") or []) | set((r.get("decided") or {}).get("ids") or [])
+        except Exception:
+            pass
+    u = str(row.get("source") or "").strip()
+    if not u or not _PICKED:
+        return False
+    import hashlib
+    forms = {u, u.replace("://www.dinamalar", "://l-www.dinamalar"), u.replace("://l-www.dinamalar", "://www.dinamalar"),
+             u.replace("/amp/story/", "/"), u.rstrip("/")}
+    return any("C" + hashlib.sha1(x.encode()).hexdigest()[:7] in _PICKED for x in forms)
+
+
 def skip_reason(row):
     """'' = fine to post. Otherwise why this story must not go out: its announced date has passed (power cut, job fair, 'today' news ...),
     or the same news was already posted under another story id."""
@@ -204,6 +228,8 @@ def skip_reason(row):
         ki = known_issues.problems(fixed)
         if ki:
             return f"known issue {ki[0][0]}: {ki[0][1]}"
+    if owner_picked(row):
+        return ""
     f = filed_at(row)
     same_day = bool(f and f.date() == datetime.now(IST).date())      # filed today: it goes out today, whatever the clock says
     nd = freshness.news_date(row.get("published"), row.get("source"), f)
