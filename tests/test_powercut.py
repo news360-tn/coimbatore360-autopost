@@ -5,7 +5,7 @@ from unittest import mock
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "research_free"))
 import powercut      # noqa: E402
-import pick          # noqa: E402
+import pick          # noqa: E402  (pid is the same in both)
 
 IST = pick.IST
 
@@ -32,7 +32,7 @@ class PowerCutLane(unittest.TestCase):
                 return now
         with mock.patch.object(powercut, "links", return_value=links), \
                 mock.patch.object(powercut.allnews, "article_any", side_effect=lambda u: dict(arts[u], url=u)), \
-                mock.patch.object(powercut.pick, "recent_rows", return_value=list(recent)), \
+                mock.patch.object(powercut, "recent_rows", return_value=list(recent)), \
                 mock.patch.object(powercut.datetime, "datetime", FakeDT):
             powercut.cmd_find()
         return [l for l in powercut.URLS.read_text().split("\n") if l]

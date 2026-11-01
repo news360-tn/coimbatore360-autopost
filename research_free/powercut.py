@@ -15,15 +15,61 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import allnews      # noqa: E402
-import pick         # noqa: E402
 
-STATE = HERE / "archive" / "powercut_state.json"
-URLS = HERE / "results" / "powercut_urls.txt"
-IST = pick.IST
-DRY = os.environ.get("POWERCUT_DRY", "") == "1"
+# ---- the only part that differs between the Coimbatore and the Namakkal copy of this file
 QUERIES = ["கோவை மின்தடை", "கோயம்புத்தூர் மின்தடை", "நாளைய மின்தடை கோவை", "பொள்ளாச்சி மின்தடை", "மேட்டுப்பாளையம் மின்தடை",
            "சூலூர் மின்தடை", "அன்னூர் மின்தடை", "கோவை மின் நிறுத்தம்"]
 SITES = ("dinamani.com", "dinamalar.com", "covaimail.com")      # order = preference when two papers print the same cut
+DISTRICT_URL = ("district-news-coimbatore", "edition-coimbatore", "covaimail.com")      # a link of the district's own page
+# ----
+
+STATE = HERE / "archive" / "powercut_state.json"
+URLS = HERE / "results" / "powercut_urls.txt"
+IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
+DRY = os.environ.get("POWERCUT_DRY", "") == "1"
+
+
+def pid(url):
+    """the same id as poster/post.py owner_picked() uses"""
+    import hashlib
+    return "C" + hashlib.sha1(url.encode()).hexdigest()[:7]
+
+
+def pid_forms(url):
+    u = str(url or "").strip()
+    forms = {u, u.replace("://www.dinamalar", "://l-www.dinamalar"), u.replace("://l-www.dinamalar", "://www.dinamalar"),
+             u.replace("/amp/story/", "/"), u.rstrip("/")}
+    return {pid(x) for x in forms if x}
+
+
+def bridge_get(action):
+    import collect
+    return collect.bridge(action)
+
+
+def recent_rows():
+    rr = bridge_get("recent")
+    if not rr.get("ok"):
+        raise RuntimeError(f"bridge recent: {rr}")
+    return rr["rows"]
+
+
+def status(ids, rows):
+    """{id: 'posted' | 'queued RN-x (...)' | 'not written'}"""
+    by = {}
+    for r in rows:
+        for i in pid_forms(r.get("source")):
+            by.setdefault(i, r)
+    out = {}
+    for i in ids:
+        r = by.get(i)
+        if not r:
+            out[i] = "not written"
+        elif any(str(v).startswith("http") for k, v in r.items() if k.endswith("_link")) or str(r.get("post_status") or "").lower().startswith(("posted", "partly")):
+            out[i] = "posted"
+        else:
+            out[i] = f"queued {r.get('story_id')} ({r.get('post_status') or 'no status'})"
+    return out
 
 
 def log(*a):
@@ -56,16 +102,25 @@ def norm(u):
 
 
 def links():
-    """article links of the three outlets: the two papers' Coimbatore pages + news searches for power cuts on all three"""
-    lines, items = [], []
-    items += pick.candidates(lines, datetime.datetime.now(IST) - datetime.timedelta(hours=36))
-    for l in lines:
-        log(l)
+    """article links: the two papers' own district pages (every link, opened once and remembered) + news searches for power cuts
+    (only results whose HEADLINE is a power cut are kept - 1 Nov: resolving every search result took over 20 minutes)"""
+    items = []
+    try:
+        items += allnews.from_dinamalar_list()
+    except Exception as e:
+        log(f"Dinamalar list failed: {str(e)[:120]}")
+    try:
+        for cfg in json.loads((HERE / "sources.json").read_text(encoding="utf-8")):
+            if "dinamani.com" in cfg["url"]:
+                items += allnews.from_listing(dict(cfg, limit=80))
+    except Exception as e:
+        log(f"Dinamani list failed: {str(e)[:120]}")
+    F = fr()
     for q in QUERIES:
         for dom in SITES:
             for fn in (allnews.from_google, allnews.from_bing):
                 try:
-                    items += [x for x in fn(f"{q} site:{dom}") if dom in (x.get("site", "") + x.get("url", ""))]
+                    items += [x for x in fn(f"{q} site:{dom}") if dom in (x.get("site", "") + x.get("url", "")) and F.is_power_cut(x.get("title", ""))]
                 except Exception as e:
                     log(f"{fn.__name__} '{q}' {dom} failed: {str(e)[:80]}")
     out, seen = [], set()
@@ -102,9 +157,8 @@ def check(it, today, now):
     text = art.get("text") or ""
     if not F.is_power_cut(title):
         return None, "not a power cut"
-    if not (allnews.has_place(title) or allnews.has_place(text[:800]) or "district-news-coimbatore" in it["url"]
-            or "edition-coimbatore" in it["url"] or "covaimail.com" in it["url"]):
-        return None, "not Coimbatore district"
+    if not (allnews.has_place(title) or allnews.has_place(text[:800]) or any(d in it["url"] for d in DISTRICT_URL)):
+        return None, "not this district"
     if allnews.other_district(title):
         return None, "other district"
     pub = art.get("published") or it.get("published") or ""
@@ -116,7 +170,7 @@ def check(it, today, now):
     over = F.power_cut_over(title, "", pub, now)
     if over:
         return None, over
-    return {"id": pick.pid(it["url"]), "url": it["url"], "title": title, "published": pub, "cut_day": day.isoformat()}, ""
+    return {"id": pid(it["url"]), "url": it["url"], "title": title, "published": pub, "cut_day": day.isoformat()}, ""
 
 
 def same_cut(a, b):
@@ -129,7 +183,7 @@ def cmd_find():
     today = now.date()
     st = load()
     try:
-        recent = pick.recent_rows()
+        recent = recent_rows()
     except Exception as e:
         log("Sheet rows not available - duplicate check uses this job's own list only:", str(e)[:120])
         recent = []
@@ -180,10 +234,10 @@ def cmd_verify():
     rows = []
     for a in ("queue", "recent"):
         try:
-            rows += pick.bridge_get(a).get("rows", [])
+            rows += bridge_get(a).get("rows", [])
         except Exception as e:
             log(f"verify: bridge {a} failed: {e}")
-    stat = pick.picked_status({"written": list(want)}, rows)
+    stat = status(list(want), rows)
     bad = {}
     for k, v in stat.items():
         if v == "posted":
