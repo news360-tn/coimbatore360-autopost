@@ -1045,15 +1045,24 @@ function retryMessage() {
 
 
 // ================================================================== owner's pick (owner 1 Nov)
-// 6 AM and 4 PM: the GitHub job sends the news list (Dinamalar + Dinamani Coimbatore) -> this e-mails it with a button to a check-box
-// page -> the owner ticks and presses Submit -> GitHub writes and posts EVERY ticked news. No submit in 1 hour: GitHub posts the top 12.
+// 6 AM and 4 PM: the GitHub job sends the news list (Dinamalar + Dinamani Coimbatore) -> this makes a GOOGLE FORM with a check box for
+// every news and e-mails its link -> the owner ticks and presses Submit -> GitHub writes and posts EVERY ticked news.
+// No submit in 1 hour: GitHub posts the top 12. (A Google Form opens on any phone / computer, with any number of Google accounts signed in.)
 var PICK_TAB = 'Picks';
-var PICK_HEAD = ['Round', 'Token', 'Created (IST)', 'Deadline', 'Items', 'Auto picked', 'Owner ticked', 'Submitted (IST)'];
+var PICK_HEAD = ['Round', 'Token', 'Created (IST)', 'Deadline', 'Items', 'Auto picked', 'Owner ticked', 'Submitted (IST)', 'Form id'];
+
+/** Run ONCE from the editor after pasting this code (Run -> authorizeForms): Google asks for the Forms permission. */
+function authorizeForms() {
+  var f = FormApp.create('Coimbatore 360 - permission test');
+  DriveApp.getFileById(f.getId()).setTrashed(true);
+  Logger.log('Google Forms permission OK');
+}
 
 function picksSheet_() {
   var ss = SpreadsheetApp.openById(SHEET_ID);
   var sh = ss.getSheetByName(PICK_TAB);
   if (!sh) { sh = ss.insertSheet(PICK_TAB); sh.appendRow(PICK_HEAD); sh.setFrozenRows(1); }
+  if (sh.getRange(1, PICK_HEAD.length).getValue() !== PICK_HEAD[PICK_HEAD.length - 1]) sh.getRange(1, 1, 1, PICK_HEAD.length).setValues([PICK_HEAD]);
   return sh;
 }
 function pickRow_(round) {
@@ -1064,16 +1073,40 @@ function pickRow_(round) {
   return null;
 }
 function esc_(t) { return String(t || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+function pickFolder_() {
+  var root = DriveApp.getFolderById(ROOT_FOLDER_ID), it = root.getFoldersByName('Pick forms');
+  return it.hasNext() ? it.next() : root.createFolder('Pick forms');
+}
+
+function makePickForm_(b, label, items) {
+  var form = FormApp.create('கோவை செய்திகள் – ' + label + ' – ' + Utilities.formatDate(new Date(), 'Asia/Kolkata', 'dd MMM yyyy'));
+  try { DriveApp.getFileById(form.getId()).moveTo(pickFolder_()); } catch (err) { }
+  form.setDescription('பதிவிட வேண்டிய செய்திகளைத் தேர்வு செய்து Submit செய்யுங்கள். தேர்வு செய்த ஒவ்வொரு செய்தியும் எழுதப்பட்டு, ரீல் செய்து உடனே பதிவிடப்படும்.\n' +
+    b.deadline + '-க்குள் Submit செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 12) + ' செய்திகள் தானாக பதிவிடப்படும்.\n⏳ = முந்தைய பட்டியலில் இருந்து (இன்னும் பதிவிடவில்லை)');
+  form.setCollectEmail(false);
+  form.setAllowResponseEdits(false);
+  form.setShowLinkToRespondAgain(true);      // more news can be ticked later: they are added
+  form.setProgressBar(false);
+  form.setConfirmationMessage('✅ தேர்வு செய்யப்பட்டது. எழுதி, ரீல் செய்து, உடனே பதிவிடப்படும். (கூடுதலாக தேர்வு செய்ய மீண்டும் Submit செய்யலாம்.)');
+  try { form.setRequireLogin(false); } catch (err) { }
+  var choices = items.map(function (x, i) {
+    var sum = String(x.summary || '').slice(0, 140);
+    return (i + 1) + '. ' + (x.leftover ? '⏳ ' : '') + x.title + (sum ? ' — ' + sum : '') + ' (' + x.source + ')';
+  });
+  form.addCheckboxItem().setTitle('செய்திகள் (' + items.length + ')').setChoiceValues(choices).setRequired(false);
+  return form;
+}
 
 function pickList_(b) {
   var sh = picksSheet_();
   var token = Utilities.getUuid().replace(/-/g, '');
   var items = b.items || [];
-  var old = pickRow_(b.round);
-  var row = [b.round, token, nowIst_(), b.deadline || '', JSON.stringify(items), '', '', ''];
-  if (old) sh.getRange(old.row, 1, 1, row.length).setValues([row]); else sh.appendRow(row);
-  var url = ScriptApp.getService().getUrl() + '?action=pick&round=' + encodeURIComponent(b.round) + '&t=' + token;
   var label = /morning/.test(b.round) ? 'காலை' : 'மாலை';
+  var form = makePickForm_(b, label, items);
+  var url = form.getPublishedUrl();
+  var old = pickRow_(b.round);
+  var row = [b.round, token, nowIst_(), b.deadline || '', JSON.stringify(items), '', '', '', form.getId()];
+  if (old) sh.getRange(old.row, 1, 1, row.length).setValues([row]); else sh.appendRow(row);
   var newOnes = items.filter(function (x) { return !x.leftover; }), left = items.filter(function (x) { return x.leftover; });
   function block(list, start) {
     return list.map(function (x, i) {
@@ -1084,18 +1117,18 @@ function pickList_(b) {
         ' · <a href="' + esc_(x.url) + '">செய்தி</a></div></td></tr>';
     }).join('');
   }
+  var btn = '<a href="' + url + '" style="display:inline-block;background:#c62828;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-size:18px;font-weight:bold">✅ செய்திகளைத் தேர்வு செய்ய</a>';
   var html = '<div style="font-family:Arial,sans-serif;max-width:680px">' +
     '<h2 style="margin:0 0 6px">கோவை செய்திகள் – ' + label + ' (' + items.length + ')</h2>' +
     '<div style="color:#555;margin-bottom:12px">செய்தி வெளியான நேரம்: ' + esc_(b.window) + '<br>' +
-    b.deadline + '-க்குள் தேர்வு செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 12) + ' செய்திகள் தானாக பதிவிடப்படும்.</div>' +
-    '<a href="' + url + '" style="display:inline-block;background:#c62828;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-size:18px;font-weight:bold">✅ செய்திகளைத் தேர்வு செய்ய</a>' +
+    b.deadline + '-க்குள் தேர்வு செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 12) + ' செய்திகள் தானாக பதிவிடப்படும்.</div>' + btn +
     (newOnes.length ? '<h3 style="margin:18px 0 4px">🆕 புதிய செய்திகள்</h3><table>' + block(newOnes, 1) + '</table>' : '') +
     (left.length ? '<h3 style="margin:18px 0 4px">⏳ முந்தைய பட்டியலில் இருந்து (இன்னும் பதிவிடவில்லை)</h3><table>' + block(left, newOnes.length + 1) + '</table>' : '') +
-    '<p><a href="' + url + '" style="display:inline-block;background:#c62828;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-size:18px;font-weight:bold">✅ செய்திகளைத் தேர்வு செய்ய</a></p></div>';
+    '<p>' + btn + '</p><p style="color:#888;font-size:12px">தேர்வு பக்கம் (Google Form): ' + url + '</p></div>';
   var plain = 'கோவை செய்திகள் – ' + label + ' (' + items.length + ')\nதேர்வு செய்ய: ' + url + '\n\n' +
     items.map(function (x, i) { return (i + 1) + '. ' + x.title + '\n   ' + x.summary + '\n   ' + x.source + ' ' + x.url; }).join('\n\n');
   GmailApp.sendEmail(OWNER_EMAIL, '[COIMBATORE360 PICK] கோவை செய்திகள் – ' + label + ' (' + items.length + ') – தேர்வு செய்யவும்', plain, { htmlBody: html });
-  return { ok: true, round: b.round, items: items.length };
+  return { ok: true, round: b.round, items: items.length, form: url };
 }
 
 function pickAuto_(b) {
@@ -1105,60 +1138,37 @@ function pickAuto_(b) {
   return { ok: true };
 }
 
+/** the owner's ticks: every Google Form response of the round (several submits are added together) + any ids written in "Owner ticked" */
 function pickStatus_(round) {
   var r = pickRow_(round);
   if (!r) return { ok: true, submitted: false };
+  var items = JSON.parse(String(r.v[4] || '[]'));
+  var ids = [], at = String(r.v[7] || ''), submitted = false;
   var ticked = String(r.v[6] || '');
-  return { ok: true, submitted: !!ticked, ids: ticked ? JSON.parse(ticked) : [], at: String(r.v[7] || '') };
-}
-
-function pickPage_(e) {
-  var r = pickRow_(e.parameter.round);
-  var t = HtmlService.createTemplate(
-    '<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><base target="_top">' +
-    '<style>body{font-family:Arial,sans-serif;margin:0;padding:12px;background:#faf7f2}h2{margin:4px 0 10px}' +
-    '.it{display:flex;gap:12px;background:#fff;border:1px solid #ddd;border-radius:10px;padding:12px;margin:8px 0}' +
-    '.it input{width:26px;height:26px;flex:none;margin-top:2px}.t{font-weight:bold;font-size:16px}.s{color:#444;margin:4px 0}.m{color:#888;font-size:12px}' +
-    '.bar{position:sticky;bottom:0;background:#faf7f2;padding:10px 0}button{width:100%;padding:16px;font-size:18px;font-weight:bold;background:#c62828;color:#fff;border:0;border-radius:10px}' +
-    '.note{background:#fff3cd;padding:10px;border-radius:8px;margin:8px 0}</style></head><body>' +
-    '<? if (!ok) { ?><h2>இந்த இணைப்பு செல்லாது</h2><? } else { ?>' +
-    '<h2>கோவை செய்திகள் – தேர்வு செய்யவும்</h2>' +
-    '<? if (auto.length) { ?><div class="note">தானாக <?= auto.length ?> செய்திகள் ஏற்கனவே பதிவிடப்படுகின்றன (✔ குறியிட்டவை). கூடுதலாக தேர்வு செய்தால் அவையும் பதிவிடப்படும்.</div><? } ?>' +
-    '<? if (done) { ?><div class="note">நீங்கள் ஏற்கனவே <?= mine.length ?> செய்திகளைத் தேர்வு செய்துள்ளீர்கள். மாற்றி மீண்டும் சமர்ப்பிக்கலாம் – புதியவை சேர்க்கப்படும்.</div><? } ?>' +
-    '<? for (var i = 0; i < items.length; i++) { var x = items[i]; var on = mine.indexOf(x.id) >= 0 || auto.indexOf(x.id) >= 0; ?>' +
-    '<label class="it"><input type="checkbox" value="<?= x.id ?>" <?= on ? "checked" : "" ?> <?= auto.indexOf(x.id) >= 0 ? "disabled" : "" ?>>' +
-    '<div><div class="t"><?= (i + 1) + ". " + x.title ?><?= x.leftover ? " ⏳" : "" ?></div><div class="s"><?= x.summary ?></div>' +
-    '<div class="m"><?= x.category ?> · <?= x.source ?></div></div></label><? } ?>' +
-    '<div class="bar"><button id="b" onclick="go()">✅ சமர்ப்பிக்கவும் (Submit)</button></div>' +
-    '<div id="r" style="font-size:18px;font-weight:bold;margin:12px 0"></div>' +
-    '<script>function go(){var ids=[].slice.call(document.querySelectorAll("input:checked:not([disabled])")).map(function(c){return c.value});' +
-    'if(!ids.length&&!confirm("எந்தச் செய்தியும் தேர்வு செய்யவில்லை. தொடரவா?"))return;document.getElementById("b").disabled=true;' +
-    'google.script.run.withSuccessHandler(function(m){document.getElementById("r").textContent=m;document.getElementById("b").disabled=false})' +
-    '.withFailureHandler(function(err){document.getElementById("r").textContent="பிழை: "+err;document.getElementById("b").disabled=false})' +
-    '.submitPicks(<?!= JSON.stringify(round) ?>,<?!= JSON.stringify(token) ?>,ids)}</script><? } ?></body></html>');
-  t.ok = !!(r && e.parameter.t && String(r.v[1]) === String(e.parameter.t));
-  t.items = t.ok ? JSON.parse(String(r.v[4] || '[]')) : [];
-  t.auto = t.ok && r.v[5] ? JSON.parse(String(r.v[5])) : [];
-  t.mine = t.ok && r.v[6] ? JSON.parse(String(r.v[6])) : [];
-  t.done = t.mine.length > 0;
-  t.round = e.parameter.round || '';
-  t.token = e.parameter.t || '';
-  return t.evaluate().setTitle('கோவை செய்திகள் – தேர்வு').addMetaTag('viewport', 'width=device-width, initial-scale=1');
-}
-
-/** called from the check-box page (google.script.run): saves the ticked news; GitHub posts every one of them */
-function submitPicks(round, token, ids) {
-  var lock = LockService.getScriptLock();
-  lock.waitLock(20000);
-  try {
-    var r = pickRow_(round);
-    if (!r || String(r.v[1]) !== String(token)) return 'இந்த இணைப்பு செல்லாது';
-    var before = r.v[6] ? JSON.parse(String(r.v[6])) : [];
-    var all = before.concat((ids || []).filter(function (x) { return before.indexOf(x) < 0; }));
-    var sh = picksSheet_();
-    sh.getRange(r.row, 7, 1, 2).setValues([[JSON.stringify(all), nowIst_()]]);
-    return '✅ ' + all.length + ' செய்திகள் தேர்வு செய்யப்பட்டன. எழுதி, ரீல் செய்து, உடனே பதிவிடப்படும்.';
-  } finally {
-    lock.releaseLock();
+  if (ticked) { submitted = true; JSON.parse(ticked).forEach(function (x) { if (ids.indexOf(x) < 0) ids.push(x); }); }
+  var fid = String(r.v[8] || '');
+  if (fid) {
+    var resps = FormApp.openById(fid).getResponses();
+    resps.forEach(function (resp) {
+      submitted = true;
+      at = Utilities.formatDate(resp.getTimestamp(), 'Asia/Kolkata', 'dd MMM yyyy, HH:mm');
+      resp.getItemResponses().forEach(function (ir) {
+        var v = ir.getResponse();
+        (Array.isArray(v) ? v : [v]).forEach(function (txt) {
+          var m = String(txt).match(/^(\d+)\./);
+          var it = m ? items[+m[1] - 1] : null;
+          if (it && ids.indexOf(it.id) < 0) ids.push(it.id);
+        });
+      });
+    });
   }
+  return { ok: true, submitted: submitted, ids: ids, at: at };
+}
+
+// the older check-box page (kept so an old e-mail link still answers)
+function pickPage_(e) {
+  return HtmlService.createHtmlOutput('<p style="font-family:Arial;font-size:18px">புதிய மின்னஞ்சலில் உள்ள Google Form இணைப்பைப் பயன்படுத்துங்கள்.</p>');
+}
+function submitPicks(round, token, ids) {
+  return 'புதிய மின்னஞ்சலில் உள்ள Google Form இணைப்பைப் பயன்படுத்துங்கள்.';
 }

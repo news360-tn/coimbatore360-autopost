@@ -136,7 +136,7 @@ class Wiring(unittest.TestCase):
 
     def test_bridge_has_the_check_box_page(self):
         gs = (ROOT / "apps_script" / "Code.gs").read_text(encoding="utf-8")
-        for s in ("function pickList_", "function pickPage_", "function submitPicks(", "pickStatus_", "action === 'pick'"):
+        for s in ("function pickList_", "function makePickForm_", "FormApp.openById", "pickStatus_", "function authorizeForms"):
             self.assertIn(s, gs)
 
 
