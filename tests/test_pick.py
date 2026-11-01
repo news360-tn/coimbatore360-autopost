@@ -196,6 +196,10 @@ class EndToEndOwnerPick(unittest.TestCase):
         self.assertIn("pick.py verify", wf)
         self.assertIn("some picked news is still not posted after 1 hour", wf)
         self.assertIn("actions/workflows/post.yml/dispatches", wf)
+        # 1 Nov: a manual post.yml run defaults to TEST (dry_run) - every start must say dry_run=false or nothing is posted
+        for line in wf.splitlines():
+            if "post.yml/dispatches" in line:
+                self.assertIn("inputs[dry_run]=false", line)
 
 
 if __name__ == "__main__":

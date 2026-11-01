@@ -96,7 +96,7 @@ jobs:
               echo "writer exit $? (try $TRY)" >> research_free/results/pick_write.log; sleep 30
             done
             python -u research_free/pick.py mark >> research_free/results/pick.log 2>&1 || true
-            gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main >/dev/null 2>&1 || true      # post now (GitHub's 5-minute schedule often runs only hourly)
+            gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main -f "inputs[dry_run]=false" -f "inputs[prebuild]=false" >/dev/null 2>&1 || true      # post now (GitHub's 5-minute schedule often runs only hourly)
             tail -25 research_free/results/pick_write.log
           }
           write
@@ -113,7 +113,7 @@ jobs:
           set -o pipefail      # the verify exit code must pass through tee
           for i in $(seq 1 12); do
             python -u research_free/pick.py verify 2>&1 | tee -a research_free/results/pick.log && exit 0
-            gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main >/dev/null 2>&1 || true      # post now, do not wait for GitHub's schedule
+            gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main -f "inputs[dry_run]=false" -f "inputs[prebuild]=false" >/dev/null 2>&1 || true      # post now, do not wait for GitHub's schedule
             sleep 300
           done
           python -u research_free/pick.py verify 2>&1 | tee -a research_free/results/pick.log && exit 0
