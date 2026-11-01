@@ -920,7 +920,7 @@ def file_story(art, res, errors_log, recent, scenes=None):
         scenes = [s for s in (d["scenes"] if isinstance(d["scenes"], list) else [d["scenes"]]) if isinstance(s, str) and s.strip()]
         scenes = scenes or [f"The main scene of this news: {d.get('english_headline', '')}, {d.get('location', '')}."]
     prompts = "\n---\n".join(IMG_TEMPLATE.format(scene=x.strip()) for x in scenes[:pictures_per_reel()])      # owner 30 Oct: 2 pictures per reel
-    ver = f"FREE-MODEL DRAFT ({model}) - not checked by Claude yet" + (f"; validator problems: {'; '.join(errors)}" if errors else "")
+    ver = f"DRAFT ({model}) - fact-check: no problems found" if not errors else f"DRAFT ({model}) - NOT CLEAN, held from posting - problems: {'; '.join(errors)}"
     return {"tamil_headline": d["tamil_headline"], "english_headline": d["english_headline"], "category": d["category"], "location": d["location"],
             "importance": d["importance"], "scope": d.get("scope", ""), "post_to": PAGE_NAME, "slides_spec": d["slides_spec"], "reel_script": d["reel_script"],
             "caption": d["caption"], "prompts": prompts, "source": art["url"], "published": art["published"], "verification": ver,
