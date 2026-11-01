@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `7244f7a` | powercut: search results kept only when the headline is a power cut (first run took 20+ min resolving every result); self-contained module |
 | 2026-11-01 | `125329d` | powercut: Coimbatore power-shutdown notices posted at once without a tick - hourly, Dinamani + Dinamalar (+ Covai Mail backup), never twice, never late, fails loudly if not posted |
 | 2026-11-01 | `099c2fc` | pick: start the posting job for REAL (dry_run=false) - a manual post.yml start defaults to test |
 | 2026-11-01 | `c22dbac` | pick: end-to-end guard - every ticked news must be POSTED: posting starts at once, verify every 5 min for 1 h, then fail loudly; end-to-end test |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `47e6d7e` | Coimbatore 360: news only at 6 AM / 4 PM from Dinamalar + Dinamani, owner ticks the news in an e-mail check-box page (else top 12), every picked news posted at once |
 | 2026-10-31 | `ecbb9d2` | test: today-only freshness check no longer fails every night 00:00-02:00 IST (matches the owner's FRESH_HOURS 0 rule) |
 | 2026-10-31 | `d480193` | rasipalan: proofreader may only fix sandhi/spacing (never a changed letter); TV9 'மேஷ ராசி' headings read |
-| 2026-10-31 | `cf77638` | rasipalan: test runs keep the slides and log on a preview branch |
 <!-- recent-changes:end -->
