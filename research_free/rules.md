@@ -11,7 +11,7 @@ OUTPUT JSON KEYS
  "tamil_headline": "Tamil headline, one line",
  "english_headline": "English headline, one line",
  "category": "English category, e.g. Weather & Agriculture, Business & Prices, Health, Civic Issues, Temples & Events, Roads & Transport, Government & Services, Education, Crime & Safety, மின் தடை (for power shutdown)",
- "location": "English place, e.g. Pollachi town, Coimbatore district",
+ "location": "English town or village NAMED IN THE ARTICLE, then the district, e.g. Pollachi town, Coimbatore district. A district alone is NOT allowed. If the article names no town or village, write \"unknown\".",
  "importance": "High | Medium | Low   (High: affects many people today: power shutdown in Coimbatore city / Pollachi / Mettupalayam, a district job camp, heavy rain alert, big public safety/service news)",
  "scope": "district | local   (district: useful to people in the WHOLE district, wherever they live - a Collector / district administration announcement, a government scheme, camp or deadline for the district, district job / recruitment notice, exam or school notice for the district, district-wide power / water / transport notice; local: an event in one town or village - accident, crime, local function, one village's problem)",
  "post_to": "Coimbatore 360   (always exactly this: there is only one page)",
