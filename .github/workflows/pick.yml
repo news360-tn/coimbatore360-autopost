@@ -31,6 +31,7 @@ jobs:
       CITY_ONLY: "0"
       PICK_AUTO_TOP: "12"
       PICK_WAIT_MIN: "60"
+      PICK_REQUIRE_EMAIL: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}      # by hand: no e-mail = stop (nothing posted)
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       SARVAM_API_KEY: ${{ secrets.SARVAM_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

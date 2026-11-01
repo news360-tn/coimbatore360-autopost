@@ -24,7 +24,6 @@ URLS = HERE / "results" / "pick_urls.txt"
 AUTO_TOP = int(os.environ.get("PICK_AUTO_TOP", "12"))
 WAIT_MIN = int(os.environ.get("PICK_WAIT_MIN", "60"))
 LEFT_HOURS = 24
-FIRST_WINDOW_H = 14
 AD = re.compile(r"தள்ளுபடி|ஆஃபர்|ஆபர்|அள்ளுங்க|அள்ளுவோம்|விற்பனை தொடக்கம்|ஷோரூம்|புதிய கிளை திறப்பு|சிறப்பு விற்பனை")      # advertorials, not news
 DRY = os.environ.get("PICK_DRY", "") in ("1", "true", "yes")
 
@@ -61,6 +60,15 @@ def when(s):
         return t if t.tzinfo else t.replace(tzinfo=IST)
     except Exception:
         return None
+
+
+def first_start(t):
+    """very first round: the owner's window boundary before it (06:00 or 16:00, yesterday 16:00 for a morning round)"""
+    d = t.date()
+    six, four = (datetime.datetime.combine(d, datetime.time(h), IST) for h in (6, 16))
+    if t >= four:
+        return six
+    return four - datetime.timedelta(days=1)
 
 
 def summary(text, title):
@@ -221,7 +229,7 @@ def recent_rows():
 def cmd_collect():
     st = load_state()
     t_end = now()
-    t_start = when(st.get("last_end")) or (t_end - datetime.timedelta(hours=FIRST_WINDOW_H))
+    t_start = when(st.get("last_end")) or first_start(t_end)
     rid = t_end.strftime("%Y-%m-%d_") + ("morning" if t_end.hour < 12 else "evening")
     log(f"round {rid}: news published {t_start:%d %b %H:%M} -> {t_end:%d %b %H:%M} (Dinamalar + Dinamani Coimbatore)")
     recent = recent_rows()
@@ -280,6 +288,8 @@ def cmd_collect():
             log("list e-mailed with the check-box page")
         except Exception as e:      # the Apps Script was not updated yet / did not answer: the top 12 are posted without waiting
             log("COULD NOT E-MAIL THE LIST (update + redeploy apps_script/Code.gs):", str(e)[:200])
+            if os.environ.get("PICK_REQUIRE_EMAIL") == "1":      # a round started by hand: stop, post nothing, the window stays open
+                raise SystemExit("the list could not be e-mailed - nothing posted; the next round collects this window again")
     elif not items:
         log("no news in this window - no e-mail")
     st["last_end"] = t_end.isoformat()      # the next round starts here (also when this round found nothing)
