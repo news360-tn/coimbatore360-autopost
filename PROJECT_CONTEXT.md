@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `8295eba` | pick: a leftover from another district (Puducherry story) is dropped, not listed again |
+| 2026-11-01 | `719440c` | rasipalan posted |
 | 2026-11-01 | `3a2a758` | rasipalan writer: 5 tries, best draft kept, only the lines still wrong are replaced (1 Nov Coimbatore repost failed over 1 line) |
 | 2026-11-01 | `e93a9f5` | rasipalan: repost input - post today again once the old post is deleted |
 | 2026-11-01 | `ce26223` | rasipalan: நல்ல நேரம், சூலம் (+பரிகாரம்), சுபமுகூர்த்த நாள் on the panchangam slide and caption; ஞாயிற்றுக்கிழமை spelling; overlap check |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-31 | `bfe422a` | Real photos: one Gemini 'too many requests' (429) stops the photo check for 30 min - the free quota stays for the writer (owner 31 Oct) |
 | 2026-10-31 | `bb85c5f` | Headline-only pages are never written; one prison escape is one event; 'details not yet known' scripts are not news (owner 31 Oct) |
 | 2026-10-31 | `47f461e` | Coimbatore: a wall / building collapse is an incident (the same event from two outlets is not posted twice) (owner 31 Oct) |
-| 2026-10-31 | `27811da` | Real news photos: only our page's branding - source watermarks / channel logos removed, no source credit (owner 31 Oct) |
-| 2026-10-31 | `0429960` | Real news photos: the source article's own photo is used when it shows this news, enhanced to a presentable picture; else AI pictures (owner 31 Oct) |
 <!-- recent-changes:end -->
