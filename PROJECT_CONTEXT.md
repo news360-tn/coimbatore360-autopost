@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `ac85e79` | rasipalan: find today's article when the day is written 01 or the link has no date (1 Nov nothing posted) |
 | 2026-11-01 | `c6266ea` | pick: Dinamalar pages outside its Coimbatore district section are listed only when they name a Coimbatore place (a Puducherry story was listed) |
 | 2026-11-01 | `d46df56` | pick: list sent |
 | 2026-11-01 | `1f21229` | pick: the selection page is now a Google Form (opens with any number of Google accounts signed in); ticks read from the form responses |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-31 | `e6a1029` | Location tags: only ids Instagram accepts are used; ig-probe checks them (owner 31 Oct) |
 | 2026-10-31 | `ea88c0c` | 10 rounds a day, top 3 of the whole district each; fix the posting watchdog (owner 31 Oct) |
 | 2026-10-31 | `d25783f` | Only news Instagram users watch is written; collection every 4 hours (owner 31 Oct) |
-| 2026-10-30 | `f40cfc4` | Heartbeat |
 <!-- recent-changes:end -->
