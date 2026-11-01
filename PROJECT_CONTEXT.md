@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `86e7929` | voice: no dash ever reaches the voice - 'சேலம் - நாமக்கல்' was read as minus (RN-256); routes read முதல் ... வரை |
 | 2026-11-01 | `ff7d052` | rasipalan posted |
 | 2026-11-01 | `490d2d3` | rasipalan: never miss a day - 1 source enough after 9:30, keep trying until 12:30, backups 9:45 and 11:45 |
 | 2026-11-01 | `ac85e79` | rasipalan: find today's article when the day is written 01 or the link has no date (1 Nov nothing posted) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-31 | `a5ec073` | Coimbatore: each round's top 3 only from power cut / rain / crime / accident, Coimbatore-district news only; repeats never posted (owner 31 Oct) |
 | 2026-10-31 | `1b1521e` | Coimbatore: no daily limit - every 2-hour round posts its top 3 (only Instagram's 50 a day applies); a round keeps trying until 3 are written |
 | 2026-10-31 | `466a2bb` | The same event is never posted twice: incidents matched by name / distinctive number; round-mates checked (owner 31 Oct) |
-| 2026-10-31 | `e6a1029` | Location tags: only ids Instagram accepts are used; ig-probe checks them (owner 31 Oct) |
 <!-- recent-changes:end -->
