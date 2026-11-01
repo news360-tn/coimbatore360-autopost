@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `b52de74` | post: news the owner ticked in the pick form is always posted - no 'stale' hold (7 of 12 were held on 1 Nov) |
+| 2026-11-01 | `dd53944` | pick: written and posted |
 | 2026-11-01 | `8295eba` | pick: a leftover from another district (Puducherry story) is dropped, not listed again |
 | 2026-11-01 | `719440c` | rasipalan posted |
 | 2026-11-01 | `3a2a758` | rasipalan writer: 5 tries, best draft kept, only the lines still wrong are replaced (1 Nov Coimbatore repost failed over 1 line) |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-31 | `9034b5d` | Daily rasipalan carousel for Coimbatore 360 (7:31 AM, Tamil daily-calendar design, festival themes) |
 | 2026-10-31 | `299d7eb` | Heartbeat |
 | 2026-10-31 | `bfe422a` | Real photos: one Gemini 'too many requests' (429) stops the photo check for 30 min - the free quota stays for the writer (owner 31 Oct) |
-| 2026-10-31 | `bb85c5f` | Headline-only pages are never written; one prison escape is one event; 'details not yet known' scripts are not news (owner 31 Oct) |
-| 2026-10-31 | `47f461e` | Coimbatore: a wall / building collapse is an incident (the same event from two outlets is not posted twice) (owner 31 Oct) |
 <!-- recent-changes:end -->
