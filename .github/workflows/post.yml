@@ -89,7 +89,7 @@ jobs:
           # window, 2 h 40 min after the last one; never at night. The story writer is never restarted: each round writes its own top 3.
           ist = now + d.timedelta(hours=5, minutes=30)
           hm = ist.hour * 60 + ist.minute
-          print("collect" if 4 * 60 + 40 <= hm <= 23 * 60 and age("collect") > 160 else "")
+          print("")      # owner 1 Nov: collection runs only at 6 AM / 4 PM (pick.yml) - an "overdue" 2-hourly round is never started
           print(f"last round {age('collect'):.0f} min ago, IST {ist:%H:%M}, queue {q}")
           PY
           cat /tmp/wd.txt

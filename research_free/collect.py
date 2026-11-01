@@ -326,6 +326,7 @@ def score(n):
 # collect / write split (owner 26 Oct): the 4-hourly round only COLLECTS and queues every eligible news by priority;
 # the writer round (every 20 min) takes the queue in priority order, writes the story, and the posting job posts it at once.
 MODE = os.environ.get("COLLECT_MODE", "both")      # collect | write | both
+PICK_ONLY = os.environ.get("PICK_ONLY", "") == "1"      # owner 1 Nov: write only MANUAL_URL links (the owner's / automatic pick)
 QUEUE = ARCHIVE / "queue.json"
 QFIELDS = ("key", "url", "title", "source", "published", "via", "query", "snippet", "outlets", "alts", "mentions", "area", "score", "queued_at", "verified")
 
@@ -980,9 +981,13 @@ def main():
         news = [n for n in load_queue() if n.get("verified") and allnews.local_ok(n["url"], n.get("title", ""))]
         log.append(f"write round: {len(news)} news waiting in the queue (written in priority order)")
     else:
-        news = allnews.collect(log)                               # EVERY item from every source
-        have = {n["key"] for n in news}
-        news += [q for q in load_queue() if q["key"] not in have]      # earlier collected, not written yet: stays in the queue
+        if PICK_ONLY:      # owner 1 Nov (Coimbatore pick flow): ONLY the links the owner ticked / the automatic top 12 are written
+            news = []
+            log.append("pick round: only the picked links are written (research_free/pick.py)")
+        else:
+            news = allnews.collect(log)                               # EVERY item from every source
+            have = {n["key"] for n in news}
+            news += [q for q in load_queue() if q["key"] not in have]      # earlier collected, not written yet: stays in the queue
     for n in news:
         n["score"] = score(n)
         n["status"] = "collected"
@@ -1227,8 +1232,10 @@ def main():
     for k in (["collect"] if MODE == "collect" else ["write"] if MODE == "write" else ["collect", "write"]):
         mark_run(k)
     left = 0
+    if PICK_ONLY:
+        waiting = []      # the pick flow keeps its own list (pick_state.json): nothing is queued for the 2-hourly writer
     try:
-        left = save_queue(waiting)
+        left = save_queue(waiting) if not PICK_ONLY else 0
         log.append(f"queue: {left} news waiting to be written")
     except Exception as e:
         log.append(f"queue not saved: {e}")

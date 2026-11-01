@@ -108,8 +108,8 @@ class CoimbatorePriority(unittest.TestCase):
 
     def test_ten_rounds_cap_30(self):      # owner 31 Oct: rounds IST 04:00-22:00 every 2 h, top 3 each (29 Oct: every 2 h, cap 50)
         wf = ROOT / ".github" / "workflows"
-        self.assertIn('cron: "30 22,0,2,4,6,8,10,12,14,16 * * *"', (wf / "research_free.yml").read_text())
-        self.assertIn('age("collect") > 160', (wf / "post.yml").read_text())
+        self.assertNotIn("schedule:", (wf / "research_free.yml").read_text())      # owner 1 Nov: 2-hourly rounds stopped (pick.yml)
+        self.assertNotIn('age("collect") > 160 else', (wf / "post.yml").read_text())      # the watchdog never starts a round
         for f in ("post.yml", "research_free.yml", "write_stories.yml"):
             self.assertIn('DAILY_CAP: "1000"', (wf / f).read_text(), f)      # owner 31 Oct 4:48 PM: no daily limit
         for wf in ("research_free.yml", "write_stories.yml"):
@@ -1462,11 +1462,10 @@ class RoundsTopThree(unittest.TestCase):
     them at once. A new day starts fresh. A slow or failed story never holds the next round."""
     WF = ROOT / ".github" / "workflows"
 
-    def test_rounds_at_the_owners_times(self):
-        cron = re.search(r'cron: "(\d+) ([\d,]+) \* \* \*"', (self.WF / "research_free.yml").read_text(encoding="utf-8"))
-        times = sorted(((int(h) * 60 + int(cron.group(1)) + 330) % 1440) // 60 for h in cron.group(2).split(","))
-        self.assertEqual([4, 6, 8, 10, 12, 14, 16, 18, 20, 22], times)      # UTC + 5:30 = IST, on the hour
-        self.assertEqual(0, (int(cron.group(1)) + 30) % 60)
+    def test_rounds_at_the_owners_times(self):      # owner 1 Nov: collection only at 6 AM and 4 PM (pick.yml)
+        wf = (self.WF / "pick.yml").read_text(encoding="utf-8")
+        times = sorted(((int(h) * 60 + int(m) + 330) % 1440) / 60 for m, h in re.findall(r'cron: "(\d+) (\d+) \* \* \*"', wf))
+        self.assertEqual([6, 16], times)
 
     def test_each_round_writes_top_3_of_the_whole_district(self):
         wf = (self.WF / "research_free.yml").read_text(encoding="utf-8")

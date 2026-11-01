@@ -1,11 +1,8 @@
 name: research-free
-# Coimbatore 360: collects Coimbatore-district news only.
-# owner 31 Oct: 10 ROUNDS a day at IST 04:00, 06:00, 08:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00, 22:00 (GitHub often starts it a little late).
-# Each round collects today's WHOLE-district news, compares it with today's earlier collected news that was not posted yet, writes the
-# TOP 3 by expected views (+ every power cut) and starts posting at once. A new day starts fresh. Runs ONLY while research_free/ENABLED exists.
+# Coimbatore 360 - owner 1 Nov: the 2-hourly rounds are STOPPED. News is collected only at 6 AM and 4 PM by pick.yml (Dinamalar +
+# Dinamani, the owner ticks the news in an e-mail page; no reply in 1 hour = top 12). This workflow is kept for writing a link by hand
+# (manual_url) and for the old automatic round if the owner ever starts it by hand.
 on:
-  schedule:
-    - cron: "30 22,0,2,4,6,8,10,12,14,16 * * *"    # UTC = IST 04:00 ... 22:00 every 2 hours (owner 31 Oct)
   workflow_dispatch:
     inputs:
       dry:

@@ -47,6 +47,8 @@ function sheet_() { return SpreadsheetApp.openById(SHEET_ID).getSheetByName(TAB)
 function nowIst_() { return Utilities.formatDate(new Date(), 'Asia/Kolkata', 'dd MMM yyyy, HH:mm'); }
 
 function doGet(e) {
+  // owner 1 Nov: the check-box page opened from the pick e-mail (its own one-round token, never the bridge key)
+  if (e && e.parameter && e.parameter.action === 'pick') return pickPage_(e);
   if (!authorized_(e)) return json_({ ok: false, error: 'unauthorized' });
   try {
     var a = e.parameter.action;
@@ -57,6 +59,7 @@ function doGet(e) {
     if (a === 'recent') return json_({ ok: true, rows: recent_() });
     if (a === 'ping') return json_({ ok: true, time: nowIst_() });
     if (a === 'autoPending') return json_({ ok: true, rows: autoPending_() });
+    if (a === 'pickStatus') return json_(pickStatus_(e.parameter.round));
     return json_({ ok: false, error: 'unknown action ' + a });
   } catch (err) {
     return json_({ ok: false, error: String(err) });
@@ -76,6 +79,8 @@ function doPost(e) {
     if (body.action === 'reoffer') return json_(reoffer_(body));
     if (body.action === 'setImages') return json_(setImages_(body));
     if (body.action === 'repost') return json_(repost_(body));
+    if (body.action === 'pickList') return json_(pickList_(body));
+    if (body.action === 'pickAuto') return json_(pickAuto_(body));
     return json_({ ok: false, error: 'unknown action ' + body.action });
   } catch (err) {
     return json_({ ok: false, error: String(err) });
@@ -1036,4 +1041,124 @@ function retryMessage() {
   var msg = GmailApp.getMessageById('MESSAGE_ID_HERE');
   var report = readyOne_(msg);
   GmailApp.sendEmail(OWNER_EMAIL, '[COIMBATORE360 RETRY REPORT] ready reels', report.join('\n') + '\n\nSheet: ' + SHEET_LINK);
+}
+
+
+// ================================================================== owner's pick (owner 1 Nov)
+// 6 AM and 4 PM: the GitHub job sends the news list (Dinamalar + Dinamani Coimbatore) -> this e-mails it with a button to a check-box
+// page -> the owner ticks and presses Submit -> GitHub writes and posts EVERY ticked news. No submit in 1 hour: GitHub posts the top 12.
+var PICK_TAB = 'Picks';
+var PICK_HEAD = ['Round', 'Token', 'Created (IST)', 'Deadline', 'Items', 'Auto picked', 'Owner ticked', 'Submitted (IST)'];
+
+function picksSheet_() {
+  var ss = SpreadsheetApp.openById(SHEET_ID);
+  var sh = ss.getSheetByName(PICK_TAB);
+  if (!sh) { sh = ss.insertSheet(PICK_TAB); sh.appendRow(PICK_HEAD); sh.setFrozenRows(1); }
+  return sh;
+}
+function pickRow_(round) {
+  var sh = picksSheet_(), last = sh.getLastRow();
+  if (last < 2) return null;
+  var vals = sh.getRange(2, 1, last - 1, PICK_HEAD.length).getValues();
+  for (var i = vals.length - 1; i >= 0; i--) if (String(vals[i][0]) === String(round)) return { row: i + 2, v: vals[i] };
+  return null;
+}
+function esc_(t) { return String(t || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+
+function pickList_(b) {
+  var sh = picksSheet_();
+  var token = Utilities.getUuid().replace(/-/g, '');
+  var items = b.items || [];
+  var old = pickRow_(b.round);
+  var row = [b.round, token, nowIst_(), b.deadline || '', JSON.stringify(items), '', '', ''];
+  if (old) sh.getRange(old.row, 1, 1, row.length).setValues([row]); else sh.appendRow(row);
+  var url = ScriptApp.getService().getUrl() + '?action=pick&round=' + encodeURIComponent(b.round) + '&t=' + token;
+  var label = /morning/.test(b.round) ? 'காலை' : 'மாலை';
+  var newOnes = items.filter(function (x) { return !x.leftover; }), left = items.filter(function (x) { return x.leftover; });
+  function block(list, start) {
+    return list.map(function (x, i) {
+      return '<tr><td style="padding:8px;vertical-align:top;font-weight:bold">' + (start + i) + '</td><td style="padding:8px">' +
+        '<div style="font-size:16px;font-weight:bold">' + esc_(x.title) + '</div>' +
+        '<div style="color:#444;margin:4px 0">' + esc_(x.summary) + '</div>' +
+        '<div style="color:#888;font-size:12px">' + esc_(x.category) + ' · ' + esc_(x.source) + ' · ' + esc_(String(x.published || '').slice(0, 16).replace('T', ' ')) +
+        ' · <a href="' + esc_(x.url) + '">செய்தி</a></div></td></tr>';
+    }).join('');
+  }
+  var html = '<div style="font-family:Arial,sans-serif;max-width:680px">' +
+    '<h2 style="margin:0 0 6px">கோவை செய்திகள் – ' + label + ' (' + items.length + ')</h2>' +
+    '<div style="color:#555;margin-bottom:12px">செய்தி வெளியான நேரம்: ' + esc_(b.window) + '<br>' +
+    b.deadline + '-க்குள் தேர்வு செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 12) + ' செய்திகள் தானாக பதிவிடப்படும்.</div>' +
+    '<a href="' + url + '" style="display:inline-block;background:#c62828;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-size:18px;font-weight:bold">✅ செய்திகளைத் தேர்வு செய்ய</a>' +
+    (newOnes.length ? '<h3 style="margin:18px 0 4px">🆕 புதிய செய்திகள்</h3><table>' + block(newOnes, 1) + '</table>' : '') +
+    (left.length ? '<h3 style="margin:18px 0 4px">⏳ முந்தைய பட்டியலில் இருந்து (இன்னும் பதிவிடவில்லை)</h3><table>' + block(left, newOnes.length + 1) + '</table>' : '') +
+    '<p><a href="' + url + '" style="display:inline-block;background:#c62828;color:#fff;padding:14px 26px;border-radius:8px;text-decoration:none;font-size:18px;font-weight:bold">✅ செய்திகளைத் தேர்வு செய்ய</a></p></div>';
+  var plain = 'கோவை செய்திகள் – ' + label + ' (' + items.length + ')\nதேர்வு செய்ய: ' + url + '\n\n' +
+    items.map(function (x, i) { return (i + 1) + '. ' + x.title + '\n   ' + x.summary + '\n   ' + x.source + ' ' + x.url; }).join('\n\n');
+  GmailApp.sendEmail(OWNER_EMAIL, '[COIMBATORE360 PICK] கோவை செய்திகள் – ' + label + ' (' + items.length + ') – தேர்வு செய்யவும்', plain, { htmlBody: html });
+  return { ok: true, round: b.round, items: items.length };
+}
+
+function pickAuto_(b) {
+  var r = pickRow_(b.round);
+  if (!r) return { ok: false, error: 'no such round' };
+  picksSheet_().getRange(r.row, 6).setValue(JSON.stringify(b.ids || []));
+  return { ok: true };
+}
+
+function pickStatus_(round) {
+  var r = pickRow_(round);
+  if (!r) return { ok: true, submitted: false };
+  var ticked = String(r.v[6] || '');
+  return { ok: true, submitted: !!ticked, ids: ticked ? JSON.parse(ticked) : [], at: String(r.v[7] || '') };
+}
+
+function pickPage_(e) {
+  var r = pickRow_(e.parameter.round);
+  var t = HtmlService.createTemplate(
+    '<!doctype html><html><head><meta name="viewport" content="width=device-width,initial-scale=1"><base target="_top">' +
+    '<style>body{font-family:Arial,sans-serif;margin:0;padding:12px;background:#faf7f2}h2{margin:4px 0 10px}' +
+    '.it{display:flex;gap:12px;background:#fff;border:1px solid #ddd;border-radius:10px;padding:12px;margin:8px 0}' +
+    '.it input{width:26px;height:26px;flex:none;margin-top:2px}.t{font-weight:bold;font-size:16px}.s{color:#444;margin:4px 0}.m{color:#888;font-size:12px}' +
+    '.bar{position:sticky;bottom:0;background:#faf7f2;padding:10px 0}button{width:100%;padding:16px;font-size:18px;font-weight:bold;background:#c62828;color:#fff;border:0;border-radius:10px}' +
+    '.note{background:#fff3cd;padding:10px;border-radius:8px;margin:8px 0}</style></head><body>' +
+    '<? if (!ok) { ?><h2>இந்த இணைப்பு செல்லாது</h2><? } else { ?>' +
+    '<h2>கோவை செய்திகள் – தேர்வு செய்யவும்</h2>' +
+    '<? if (auto.length) { ?><div class="note">தானாக <?= auto.length ?> செய்திகள் ஏற்கனவே பதிவிடப்படுகின்றன (✔ குறியிட்டவை). கூடுதலாக தேர்வு செய்தால் அவையும் பதிவிடப்படும்.</div><? } ?>' +
+    '<? if (done) { ?><div class="note">நீங்கள் ஏற்கனவே <?= mine.length ?> செய்திகளைத் தேர்வு செய்துள்ளீர்கள். மாற்றி மீண்டும் சமர்ப்பிக்கலாம் – புதியவை சேர்க்கப்படும்.</div><? } ?>' +
+    '<? for (var i = 0; i < items.length; i++) { var x = items[i]; var on = mine.indexOf(x.id) >= 0 || auto.indexOf(x.id) >= 0; ?>' +
+    '<label class="it"><input type="checkbox" value="<?= x.id ?>" <?= on ? "checked" : "" ?> <?= auto.indexOf(x.id) >= 0 ? "disabled" : "" ?>>' +
+    '<div><div class="t"><?= (i + 1) + ". " + x.title ?><?= x.leftover ? " ⏳" : "" ?></div><div class="s"><?= x.summary ?></div>' +
+    '<div class="m"><?= x.category ?> · <?= x.source ?></div></div></label><? } ?>' +
+    '<div class="bar"><button id="b" onclick="go()">✅ சமர்ப்பிக்கவும் (Submit)</button></div>' +
+    '<div id="r" style="font-size:18px;font-weight:bold;margin:12px 0"></div>' +
+    '<script>function go(){var ids=[].slice.call(document.querySelectorAll("input:checked:not([disabled])")).map(function(c){return c.value});' +
+    'if(!ids.length&&!confirm("எந்தச் செய்தியும் தேர்வு செய்யவில்லை. தொடரவா?"))return;document.getElementById("b").disabled=true;' +
+    'google.script.run.withSuccessHandler(function(m){document.getElementById("r").textContent=m;document.getElementById("b").disabled=false})' +
+    '.withFailureHandler(function(err){document.getElementById("r").textContent="பிழை: "+err;document.getElementById("b").disabled=false})' +
+    '.submitPicks(<?!= JSON.stringify(round) ?>,<?!= JSON.stringify(token) ?>,ids)}</script><? } ?></body></html>');
+  t.ok = !!(r && e.parameter.t && String(r.v[1]) === String(e.parameter.t));
+  t.items = t.ok ? JSON.parse(String(r.v[4] || '[]')) : [];
+  t.auto = t.ok && r.v[5] ? JSON.parse(String(r.v[5])) : [];
+  t.mine = t.ok && r.v[6] ? JSON.parse(String(r.v[6])) : [];
+  t.done = t.mine.length > 0;
+  t.round = e.parameter.round || '';
+  t.token = e.parameter.t || '';
+  return t.evaluate().setTitle('கோவை செய்திகள் – தேர்வு').addMetaTag('viewport', 'width=device-width, initial-scale=1');
+}
+
+/** called from the check-box page (google.script.run): saves the ticked news; GitHub posts every one of them */
+function submitPicks(round, token, ids) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(20000);
+  try {
+    var r = pickRow_(round);
+    if (!r || String(r.v[1]) !== String(token)) return 'இந்த இணைப்பு செல்லாது';
+    var before = r.v[6] ? JSON.parse(String(r.v[6])) : [];
+    var all = before.concat((ids || []).filter(function (x) { return before.indexOf(x) < 0; }));
+    var sh = picksSheet_();
+    sh.getRange(r.row, 7, 1, 2).setValues([[JSON.stringify(all), nowIst_()]]);
+    return '✅ ' + all.length + ' செய்திகள் தேர்வு செய்யப்பட்டன. எழுதி, ரீல் செய்து, உடனே பதிவிடப்படும்.';
+  } finally {
+    lock.releaseLock();
+  }
 }
