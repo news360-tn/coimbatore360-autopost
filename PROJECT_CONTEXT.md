@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `81fe7e7` | pick: shop offers / advertorials are not listed; titles on one line; state save never fails a test run |
+| 2026-11-01 | `1dffb82` | pick: written and posted |
 | 2026-11-01 | `47e6d7e` | Coimbatore 360: news only at 6 AM / 4 PM from Dinamalar + Dinamani, owner ticks the news in an e-mail check-box page (else top 12), every picked news posted at once |
 | 2026-10-31 | `ecbb9d2` | test: today-only freshness check no longer fails every night 00:00-02:00 IST (matches the owner's FRESH_HOURS 0 rule) |
 | 2026-10-31 | `d480193` | rasipalan: proofreader may only fix sandhi/spacing (never a changed letter); TV9 'மேஷ ராசி' headings read |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-30 | `799fd5e` | Remove Cerebras writer: it now needs a card (paid after $5 trial) |
 | 2026-10-30 | `fc91049` | Free writers: Gemini 3.6/3.5 first, Sarvam + Cerebras (skipped until keys), Gemma ready (off), Groq short retry on 413; remove GitHub Models, Mistral, OpenRouter, NVIDIA text; writer-compare test workflow |
 | 2026-10-30 | `acfe77d` | SiliconFlow removed (owner): not free for this account ('balance insufficient'); picture order Cloudflare -> Pollinations -> NVIDIA -> FAL |
-| 2026-10-30 | `c28740a` | image test output |
-| 2026-10-30 | `8540ebc` | imagegen-test: each free picture service tested on its own (Cloudflare, SiliconFlow, Pollinations, NVIDIA) - nothing posted |
 <!-- recent-changes:end -->
