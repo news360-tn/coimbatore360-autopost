@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `f981a49` | rasipalan: திதி / நட்சத்திரம் / யோகம் as Maalaimalar's daily panchangam (Vakya) prints them; own calculation only when not found |
+| 2026-11-01 | `40389cf` | stories shared |
 | 2026-11-01 | `26b3a7e` | story catch-up: a post shared once is remembered (poster/story_shared.json) - the rasipalan got a 2nd story |
 | 2026-11-01 | `b744fc1` | story catch-up: video re-hosted on Cloudinary first (Instagram refused its own CDN link: container ERROR); tries capped per run |
 | 2026-11-01 | `918b22b` | story catch-up: a post's owner id is the account's app id - every post was taken for the other page's collab |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `eb08da4` | pick: written and posted |
 | 2026-11-01 | `4865401` | pick: written and posted |
 | 2026-11-01 | `005651f` | pick.yml: a stopped round really stops the job (pipefail) |
-| 2026-11-01 | `b6a73be` | pick: first round starts at the owner's boundary (yesterday 4 PM / 6 AM); a round started by hand stops (posts nothing) if the list cannot be e-mailed |
-| 2026-11-01 | `be2dc24` | pick: written and posted |
 <!-- recent-changes:end -->
