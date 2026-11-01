@@ -25,6 +25,7 @@ AUTO_TOP = int(os.environ.get("PICK_AUTO_TOP", "12"))
 WAIT_MIN = int(os.environ.get("PICK_WAIT_MIN", "60"))
 LEFT_HOURS = 24
 FIRST_WINDOW_H = 14
+AD = re.compile(r"தள்ளுபடி|ஆஃபர்|ஆபர்|அள்ளுங்க|அள்ளுவோம்|விற்பனை தொடக்கம்|ஷோரூம்|புதிய கிளை திறப்பு|சிறப்பு விற்பனை")      # advertorials, not news
 DRY = os.environ.get("PICK_DRY", "") in ("1", "true", "yes")
 
 
@@ -130,7 +131,7 @@ def check_article(it, recent):
     except Exception as e:
         return None, f"could not open ({str(e)[:50]})"
     art["url"] = it["url"]
-    title = (art.get("title") or "").replace("ுா", "ூ").strip()
+    title = re.sub(r"\s+", " ", (art.get("title") or "").replace("ுா", "ூ")).strip()
     if not title:
         return None, "no title"
     if len(collect.body_words(art)) < collect.HEADLINE_ONLY_MIN:
@@ -142,6 +143,8 @@ def check_article(it, recent):
         return None, "not Coimbatore district"
     if allnews.other_district(title):
         return None, "other district"
+    if AD.search(title):
+        return None, "shop offer / advertisement"
     low = collect.low_interest(title, it["url"])
     if low and ("feature" in low or "editorial" in low):
         return None, low      # recipes, tips, opinion: not news (ceremonies / awards stay - the owner decides)
