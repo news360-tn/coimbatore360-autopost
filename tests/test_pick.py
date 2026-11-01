@@ -32,7 +32,7 @@ class PickFlow(unittest.TestCase):
         cands = [{"url": a["url"], "via": "listing"} for a in found]
         by = {a["url"]: a for a in found}
         with mock.patch.object(pick, "now", return_value=now), \
-                mock.patch.object(pick, "candidates", return_value=cands), \
+                mock.patch.object(pick, "candidates", side_effect=lambda l, since=None: cands), \
                 mock.patch.object(pick, "check_article", side_effect=lambda it, r: (dict(by[it["url"]]), "")), \
                 mock.patch.object(pick, "recent_rows", return_value=list(recent)), \
                 mock.patch.object(pick, "is_posted", side_effect=lambda u, t, r: any(x.get("source") == u for x in r)), \

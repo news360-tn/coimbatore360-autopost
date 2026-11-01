@@ -90,7 +90,7 @@ def category(title):
     return "பொது"
 
 
-def candidates(log_lines):
+def candidates(log_lines, since=None):
     """Dinamalar Coimbatore district list + Dinamani Coimbatore edition: article links"""
     items = []
     try:
@@ -104,10 +104,26 @@ def candidates(log_lines):
                 items += allnews.from_listing(dict(cfg, limit=80))
     except Exception as e:
         log_lines.append(f"Dinamani list failed: {str(e)[:120]}")
+    # the district list pages show only the latest ~20-40 news: Google / Bing news searches limited to the two papers fill the rest of the window
+    for q in ("கோவை", "கோயம்புத்தூர்", "பொள்ளாச்சி", "மேட்டுப்பாளையம்"):
+        for dom in ("dinamalar.com", "dinamani.com"):
+            for fn in (allnews.from_google, allnews.from_bing):
+                try:
+                    got = [x for x in fn(f"{q} site:{dom}") if dom in (x.get("site", "") + x.get("url", ""))
+                           and not (since and when(x.get("published")) and when(x.get("published")) < since)]      # older than the window: not opened
+                    items += got
+                except Exception as e:
+                    log_lines.append(f"{fn.__name__} {dom} '{q}' failed: {str(e)[:80]}")
     seen, out = set(), []
     for it in items:
-        u = it["url"].split("?")[0].rstrip("/")
-        if u not in seen and ("dinamalar.com" in u or "dinamani.com" in u):
+        u = it["url"]
+        if "news.google.com" in u:
+            try:
+                u = allnews.resolve(u)
+            except Exception:
+                continue
+        u = u.split("?")[0].rstrip("/").replace("dinamani.com/amp/story/", "dinamani.com/")
+        if u not in seen and ("dinamalar.com/news" in u or "dinamani.com/" in u):
             seen.add(u)
             out.append(dict(it, url=u))
     return out
@@ -210,7 +226,7 @@ def cmd_collect():
     log(f"round {rid}: news published {t_start:%d %b %H:%M} -> {t_end:%d %b %H:%M} (Dinamalar + Dinamani Coimbatore)")
     recent = recent_rows()
     lines = []
-    cands = candidates(lines)
+    cands = candidates(lines, t_start)
     for l in lines:
         log(l)
     log(f"{len(cands)} links on the two papers' Coimbatore pages")
