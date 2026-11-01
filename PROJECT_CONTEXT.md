@@ -81,6 +81,10 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `1f21229` | pick: the selection page is now a Google Form (opens with any number of Google accounts signed in); ticks read from the form responses |
+| 2026-11-01 | `91fdc03` | pick: list sent |
+| 2026-11-01 | `eb08da4` | pick: written and posted |
+| 2026-11-01 | `4865401` | pick: written and posted |
 | 2026-11-01 | `005651f` | pick.yml: a stopped round really stops the job (pipefail) |
 | 2026-11-01 | `b6a73be` | pick: first round starts at the owner's boundary (yesterday 4 PM / 6 AM); a round started by hand stops (posts nothing) if the list cannot be e-mailed |
 | 2026-11-01 | `be2dc24` | pick: written and posted |
@@ -107,8 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-30 | `f40cfc4` | Heartbeat |
 | 2026-10-30 | `9578ca7` | Refused stories are not written again and again (owner 30 Oct) |
 | 2026-10-30 | `3a52ae7` | Power cuts never missed, never reposted (owner 30 Oct) |
-| 2026-10-30 | `fb188b1` | Same event from two outlets in one writer round is caught (stories filed this round join the check), and short reports of one event count as the same (RN-214 = RN-209) |
-| 2026-10-30 | `b17f80e` | Writer/collector: the Sheet bridge is tried 3 times when Apps Script does not answer (writer crashed once at 09:00 UTC 30 Oct on a 120 s timeout) |
-| 2026-10-30 | `ee7ce70` | Sarvam out of the live writer order until writer-compare proves it |
-| 2026-10-30 | `bea20ac` | Sarvam: reasoning low (API accepts low/medium/high only) |
 <!-- recent-changes:end -->
