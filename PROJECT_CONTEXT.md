@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `125329d` | powercut: Coimbatore power-shutdown notices posted at once without a tick - hourly, Dinamani + Dinamalar (+ Covai Mail backup), never twice, never late, fails loudly if not posted |
 | 2026-11-01 | `099c2fc` | pick: start the posting job for REAL (dry_run=false) - a manual post.yml start defaults to test |
 | 2026-11-01 | `c22dbac` | pick: end-to-end guard - every ticked news must be POSTED: posting starts at once, verify every 5 min for 1 h, then fail loudly; end-to-end test |
 | 2026-11-01 | `b52de74` | post: news the owner ticked in the pick form is always posted - no 'stale' hold (7 of 12 were held on 1 Nov) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-31 | `ecbb9d2` | test: today-only freshness check no longer fails every night 00:00-02:00 IST (matches the owner's FRESH_HOURS 0 rule) |
 | 2026-10-31 | `d480193` | rasipalan: proofreader may only fix sandhi/spacing (never a changed letter); TV9 'மேஷ ராசி' headings read |
 | 2026-10-31 | `cf77638` | rasipalan: test runs keep the slides and log on a preview branch |
-| 2026-10-31 | `9034b5d` | Daily rasipalan carousel for Coimbatore 360 (7:31 AM, Tamil daily-calendar design, festival themes) |
 <!-- recent-changes:end -->
