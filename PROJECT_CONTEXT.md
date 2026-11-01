@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `c6266ea` | pick: Dinamalar pages outside its Coimbatore district section are listed only when they name a Coimbatore place (a Puducherry story was listed) |
+| 2026-11-01 | `d46df56` | pick: list sent |
 | 2026-11-01 | `1f21229` | pick: the selection page is now a Google Form (opens with any number of Google accounts signed in); ticks read from the form responses |
 | 2026-11-01 | `91fdc03` | pick: list sent |
 | 2026-11-01 | `eb08da4` | pick: written and posted |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-31 | `ea88c0c` | 10 rounds a day, top 3 of the whole district each; fix the posting watchdog (owner 31 Oct) |
 | 2026-10-31 | `d25783f` | Only news Instagram users watch is written; collection every 4 hours (owner 31 Oct) |
 | 2026-10-30 | `f40cfc4` | Heartbeat |
-| 2026-10-30 | `9578ca7` | Refused stories are not written again and again (owner 30 Oct) |
-| 2026-10-30 | `3a52ae7` | Power cuts never missed, never reposted (owner 30 Oct) |
 <!-- recent-changes:end -->
