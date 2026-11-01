@@ -60,6 +60,7 @@ jobs:
         run: |
           mkdir -p research_free/results
           : > research_free/results/pick_write.log
+          set -o pipefail      # a stopped round (list not e-mailed) must stop the job - tee would hide the exit code
           python -u research_free/pick.py collect 2>&1 | tee research_free/results/pick.log
       - name: Save the round (the next round starts where this one ended)
         if: always()
@@ -70,7 +71,9 @@ jobs:
           for i in 1 2 3 4 5; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null; sleep $((i*4)); done || true
       - name: Wait for the owner's pick (max 1 hour), else the top 12
         if: env.PICK_DRY != '1'
-        run: python -u research_free/pick.py decide 2>&1 | tee -a research_free/results/pick.log
+        run: |
+          set -o pipefail
+          python -u research_free/pick.py decide 2>&1 | tee -a research_free/results/pick.log
       - name: Write, make the reels and post every picked news
         if: env.PICK_DRY != '1'
         env:
