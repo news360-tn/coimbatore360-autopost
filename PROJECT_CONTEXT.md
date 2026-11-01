@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-01 | `005651f` | pick.yml: a stopped round really stops the job (pipefail) |
 | 2026-11-01 | `b6a73be` | pick: first round starts at the owner's boundary (yesterday 4 PM / 6 AM); a round started by hand stops (posts nothing) if the list cannot be e-mailed |
 | 2026-11-01 | `be2dc24` | pick: written and posted |
 | 2026-11-01 | `9892579` | pick: Google / Bing news searches limited to Dinamalar + Dinamani fill the window (the list pages show only the latest ~20-40) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-10-30 | `b17f80e` | Writer/collector: the Sheet bridge is tried 3 times when Apps Script does not answer (writer crashed once at 09:00 UTC 30 Oct on a 120 s timeout) |
 | 2026-10-30 | `ee7ce70` | Sarvam out of the live writer order until writer-compare proves it |
 | 2026-10-30 | `bea20ac` | Sarvam: reasoning low (API accepts low/medium/high only) |
-| 2026-10-30 | `325ffed` | Sarvam: thinking off, bigger answer budget; empty answers logged with the reason |
 <!-- recent-changes:end -->
