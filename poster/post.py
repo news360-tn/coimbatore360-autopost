@@ -208,6 +208,10 @@ def owner_picked(row):
                 _PICKED |= set(r.get("written") or []) | set((r.get("decided") or {}).get("ids") or [])
         except Exception:
             pass
+        try:      # owner 1 Nov: power-shutdown notices are posted at once, without a tick (research_free/powercut.py)
+            _PICKED |= set(json.loads((ROOT / "research_free" / "archive" / "powercut_state.json").read_text(encoding="utf-8")).get("done", {}))
+        except Exception:
+            pass
     u = str(row.get("source") or "").strip()
     if not u or not _PICKED:
         return False

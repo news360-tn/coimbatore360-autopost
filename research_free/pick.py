@@ -244,9 +244,16 @@ def cmd_collect():
         log(l)
     log(f"{len(cands)} links on the two papers' Coimbatore pages")
     pool = st.setdefault("pool", {})
+    try:
+        power_done = set(json.loads((HERE / "archive" / "powercut_state.json").read_text(encoding="utf-8")).get("done", {}))
+    except Exception:
+        power_done = set()
     new, reasons = [], {}
     for it in cands:
         if pid(it["url"]) in pool:      # listed in an earlier round: it comes back only as a leftover (below)
+            continue
+        if pid(it["url"]) in power_done:      # owner 1 Nov: a power cut is posted at once by powercut.py - not asked again
+            reasons["power cut - posted automatically"] = reasons.get("power cut - posted automatically", 0) + 1
             continue
         item, why = check_article(it, recent)
         if not item:
