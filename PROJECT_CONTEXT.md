@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-10-31 | `b17eecc` | Every reel from the FULL article, told like a news reader; reels up to 90 s (owner 31 Oct) |
 | 2026-11-02 | `2a153ad` | the fact-check hold stops only FACTUAL problems; formatting-only flags (word count, line length, cut-off slide text) post - owner-ticked news must not be held for them |
 | 2026-11-02 | `f703d2e` | stories shared |
 | 2026-11-02 | `f515a92` | post.py: the entry point ran main() before the new skip_reason/news_hold were defined (NameError, every post run failed); entry point moved to the end + a test |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `dd53944` | pick: written and posted |
 | 2026-11-01 | `8295eba` | pick: a leftover from another district (Puducherry story) is dropped, not listed again |
 | 2026-11-01 | `719440c` | rasipalan posted |
-| 2026-11-01 | `3a2a758` | rasipalan writer: 5 tries, best draft kept, only the lines still wrong are replaced (1 Nov Coimbatore repost failed over 1 line) |
 <!-- recent-changes:end -->
