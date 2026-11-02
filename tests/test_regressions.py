@@ -1018,6 +1018,113 @@ class InsightsBeforeEveryRound(unittest.TestCase):
         src = (ROOT / "poster" / "insights.py").read_text(encoding="utf-8")
         self.assertIn('metric=",".join(MET)', src)
 
+
+
+class HashtagPattern2Nov(unittest.TestCase):
+    """owner 2 Nov: 5 tags from fixed lists - page + area + town + local topic + Tamil place; never the writer's own tags"""
+
+    def tags(self, head, cap_tags="#Coimbatore360 #TamilNews #Trichy #தீ #Accident"):
+        row = {"headline_ta": head, "headline_en": "x", "location": "", "caption": head + "\n\n📍 கோவை | 2 நவம்பர் 2026\n\n" + cap_tags}
+        return post.final_caption(row).strip().split("\n")[-1].split()
+
+    def test_town_topic_tamil(self):
+        self.assertEqual(sorted(self.tags("பொள்ளாச்சியில் கனமழை: சாலைகளில் வெள்ளம்")),
+                         sorted(["#Coimbatore360", "#Coimbatore", "#Pollachi", "#CoimbatoreRain", "#கோவை"]))
+        self.assertIn("#CoimbatorePowerCut", self.tags("சூலூரில் நாளை மின் தடை"))
+        t = self.tags("கோவையில் லாரி மோதி இருவர் பலி")
+        self.assertEqual(5, len(t))
+        self.assertIn("#Kovai", t)      # no town named: the fallback tag, never an invented one
+        for bad in ("#TamilNews", "#Trichy", "#தீ", "#Accident"):
+            self.assertNotIn(bad, t)
+
+class FacebookEverything2Nov(unittest.TestCase):
+    """owner 2 Nov: every Instagram post (reel, carousel, ready reel, rasipalan) also goes to the page's Facebook page with a story;
+    never twice, never breaks Instagram, failed ones tried again at most 2 more times, location line first, 3 hashtags"""
+
+    def setUp(self):
+        import facebook
+        self.fb = facebook
+        self.tmp = tempfile.mkdtemp()
+        self.old = (facebook.STATE, dict(os.environ))
+        facebook.STATE = Path(self.tmp)
+        os.environ.update(FB_PAGE_ID_COIMBATORE="111", FB_TOKEN_COIMBATORE="tok")
+        os.environ.pop("FB_PAGE_ID_NAMAKKAL", None)      # a page with no secrets
+        self.calls = []
+
+    def tearDown(self):
+        self.fb.STATE = self.old[0]
+        os.environ.clear(); os.environ.update(self.old[1])
+
+    CAP = "நாமகிரிப்பேட்டையில் விபத்து\n\n📍 நாமகிரிப்பேட்டை | 2 நவம்பர் 2026\n\n#Namakkal #Namagiripettai #RasipuramNews #ராசிபுரம் #Coimbatore360"
+
+    def test_caption_location_first_three_tags(self):
+        c = self.fb.fb_caption(self.CAP, "#Coimbatore360")
+        self.assertTrue(c.startswith("நாமகிரிப்பேட்டையில்"))
+        self.assertIn("📍 நாமகிரிப்பேட்டை", c)
+        self.assertEqual(c.split("\n")[-1].split(), ["#Namagiripettai", "#RasipuramNews", "#Coimbatore360"])
+        self.assertEqual(self.fb.fb_caption("x\n\n#ராசிபலன் #RasiPalan #a #b #Coimbatore360", "#Coimbatore360", tags=["#ராசிபலன்", "#RasiPalan"]).split("\n")[-1],
+                         "#ராசிபலன் #RasiPalan #Coimbatore360")
+
+    def _fake(self, fail=False):
+        fb = self
+        def reel(pid, tok, url, cap):
+            fb.calls.append(("reel", pid, url))
+            if fail:
+                raise RuntimeError("Facebook down")
+            return "v1", "https://www.facebook.com/reel/v1"
+        def photos(pid, tok, urls, cap):
+            fb.calls.append(("photos", pid, tuple(urls)))
+            return "p1", "https://www.facebook.com/p1", "ph1"
+        self.fb.publish_reel, self.fb.publish_photos = reel, photos
+        self.fb.story_video = lambda pid, tok, url: fb.calls.append(("story_video", url)) or "s1"
+        self.fb.story_photo = lambda pid, tok, image_url="", photo_id="": fb.calls.append(("story_photo", photo_id)) or "s2"
+
+    def tearDown_fns(self):
+        import importlib
+        importlib.reload(self.fb)
+
+    def test_reel_and_story_once(self):
+        self.addCleanup(self.tearDown_fns)
+        self._fake()
+        link = self.fb.share("coimbatore", "RN-1", "reel", ["https://v/1.mp4"], self.CAP, "#Coimbatore360")
+        self.assertEqual(link, "https://www.facebook.com/reel/v1")
+        self.assertEqual([c[0] for c in self.calls], ["reel", "story_video"])
+        self.assertEqual(self.fb.share("coimbatore", "RN-1", "reel", ["https://v/1.mp4"], self.CAP, "#Coimbatore360"), link)
+        self.assertEqual(len(self.calls), 2)      # never posted twice
+
+    def test_carousel_photos_and_story(self):
+        self.addCleanup(self.tearDown_fns)
+        self._fake()
+        self.fb.share("coimbatore", "RN-2", "photos", ["a.jpg", "b.jpg"], self.CAP, "#Coimbatore360")
+        self.assertEqual(self.calls, [("photos", "111", ("a.jpg", "b.jpg")), ("story_photo", "ph1")])
+
+    def test_not_set_up_page_and_dry_run_post_nothing(self):
+        self.addCleanup(self.tearDown_fns)
+        self._fake()
+        self.assertEqual(self.fb.share("namakkal", "RN-3", "reel", ["v"], self.CAP, "#Namakkal360"), "")
+        self.assertEqual(self.fb.share("coimbatore", "RN-3", "reel", ["v"], self.CAP, "#Coimbatore360", dry=True), "")
+        self.assertEqual(self.calls, [])
+
+    def test_failure_is_retried_at_most_twice_and_never_raises(self):
+        self.addCleanup(self.tearDown_fns)
+        self._fake(fail=True)
+        self.assertEqual(self.fb.share("coimbatore", "RN-4", "reel", ["v"], self.CAP, "#Coimbatore360"), "")
+        for _ in range(4):
+            self.fb.retry_failed()
+        self.assertEqual(len(self.calls), 3)      # first try + 2 retries
+        self.assertEqual(self.fb.state("coimbatore", "RN-4", "reel")["status"], "failed")
+
+    def test_post_py_shares_every_instagram_post(self):
+        src = (ROOT / "poster" / "post.py").read_text(encoding="utf-8")
+        self.assertEqual(src.count('share_facebook(sid, "reel"'), 3)      # news reel (live + dry) and the ready reel
+        self.assertEqual(src.count('share_facebook(sid, "photos"'), 2)    # news carousel (live + dry)
+        self.assertIn("facebook.share(", (ROOT / "rasipalan" / "rasi_daily.py").read_text(encoding="utf-8"))
+        wf = (ROOT / ".github" / "workflows" / "post.yml").read_text(encoding="utf-8")
+        for k in ("FB_TOKEN_COIMBATORE", "facebook.py retry", "git add -f poster/fb_posted"):
+            self.assertIn(k, wf)
+
+
+
 if __name__ == "__main__":
     unittest.main()
 
@@ -1278,7 +1385,7 @@ class ReachPlan29Oct(unittest.TestCase):
     def test_five_focused_hashtags(self):
         tags = post.final_caption(dict(self.ROW)).strip().split("\n")[-1].split()
         self.assertEqual(5, len(tags))
-        for t in ("#Coimbatore360", "#Coimbatore", "#Gandhipuram", "#Accident", "#CoimbatoreNews"):
+        for t in ("#Coimbatore360", "#Coimbatore", "#Gandhipuram", "#CoimbatoreNews", "#கோவை"):      # owner 2 Nov pattern
             self.assertIn(t, tags)
         self.assertNotIn("#தீபுறம்போக்கு", tags)      # junk tag from the writer is dropped
 

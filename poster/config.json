@@ -89,11 +89,39 @@
       "துடியலூ": "#Thudiyalur",
       "நீலாம்பூ": "#Neelambur",
       "செல்வபுர": "#Selvapuram",
-      "ரேஸ்கோர்ஸ்": "#RaceCourse"
+      "ரேஸ்கோர்ஸ்": "#RaceCourse",
+      "பொள்ளாச்சி": "#Pollachi",
+      "மேட்டுப்பாளைய": "#Mettupalayam",
+      "சூலூ": "#Sulur",
+      "அன்னூ": "#Annur",
+      "வால்பாறை": "#Valparai",
+      "கிணத்துக்கடவு": "#Kinathukadavu",
+      "மதுக்கரை": "#Madukkarai",
+      "தொண்டாமுத்தூ": "#Thondamuthur",
+      "காரமடை": "#Karamadai",
+      "பெரியநாயக்கன்பாளைய": "#Periyanaickenpalayam",
+      "ஆனைமலை": "#Anaimalai",
+      "சிறுமுகை": "#Sirumugai",
+      "கருமத்தம்பட்டி": "#Karumathampatti",
+      "பேரூ": "#Perur"
     },
     "extra_tag": "#Kovai",
     "search_suffix": "Coimbatore news",
-    "caption_all_facts": true
+    "caption_all_facts": true,
+    "hashtag_profiles": {
+      "#coimbatore360": {
+        "page": "#Coimbatore360",
+        "area": "#Coimbatore",
+        "news": "#CoimbatoreNews",
+        "tamil": "#கோவை",
+        "fallback": "#Kovai",
+        "topic": {
+          "weather": "#CoimbatoreRain",
+          "power_cut": "#CoimbatorePowerCut"
+        }
+      }
+    },
+    "hashtag_note": "owner 2 Nov: 5 tags, all from these fixed lists (never the writer's own tags): page + area + town (place_tags; a village maps to its town tag) + local topic (rain / power cut, else the page's news tag) + the Tamil place tag. A Rasipuram reel never carries a Namakkal page tag; no #TamilNews / #TamilNadu style tags"
   },
   "free_images": {
     "note": "owner 30 Oct: pictures from free services first (Cloudflare -> Pollinations -> NVIDIA), FAL only when all fail",

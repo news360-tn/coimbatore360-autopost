@@ -57,7 +57,7 @@ caption rules
   3. End with ONE short save/share prompt that fits the story (e.g. "தேவைப்படுவோருக்கு Share செய்யுங்கள்"). NEVER ask people to comment (no "கமெண்டில் சொல்லுங்கள்", no questions to the audience).
   Every sentence in correct, formal written Tamil (proper spelling and sandhi), no colloquial forms, nothing the article does not say.
 - Then ONE short English search line (REQUIRED - a draft without it is sent back) so people searching in English find the post, e.g. "Pollachi power cut tomorrow | Coimbatore news". Then a line "📍 exact place, Coimbatore | date" naming the town, village or city area. Then exactly: உள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏
-- Then exactly 5 hashtags (Instagram allows at most 5): #Coimbatore360 + #Coimbatore + ONE for the exact town/place (English or Tamil, e.g. #Pollachi, #Mettupalayam) + ONE for the topic + #CoimbatoreNews (for power shutdowns the topic tag is #மின்தடை; for job news #வேலைவாய்ப்பு). When the place itself is Coimbatore city, use the city area (e.g. #Gandhipuram) or #கோவை as the place tag.
+- Then exactly 5 hashtags (Instagram allows at most 5; owner 2 Nov - the system sets them from fixed lists, write them like this): #Coimbatore360 #Coimbatore + the town / city area the story names (#Pollachi, #Mettupalayam, #Gandhipuram ...) + #CoimbatoreNews (#CoimbatoreRain for rain, #CoimbatorePowerCut for power cuts) + #கோவை. Never invent a tag, never another district's tag, never #TamilNews / #TamilNadu.
 - No links, no source names, no clickbait, no false urgency.
 
 scenes rules
