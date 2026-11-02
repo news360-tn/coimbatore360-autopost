@@ -81,6 +81,9 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-02 | `812204d` | Facebook: every Instagram post (news reel, carousel, ready reel, rasipalan) also posted to the page's Facebook page with a story; hashtags from fixed lists (owner 2 Nov) |
+| 2026-11-02 | `5e63af8` | powercut: notices written |
+| 2026-11-02 | `8d212f6` | stories shared |
 | 2026-11-02 | `6b76e27` | Coimbatore 360: 20 news a day picked automatically from 7 Tamil outlets by insights, no e-mail; full review fixes (owner 2 Nov) |
 | 2026-11-02 | `ee2312c` | pick: list sent |
 | 2026-11-02 | `1d64171` | A zero-padded date is not an invented number: '02 நவம்பர் 2026' in the caption held every story on 1-9 Nov (owner 2 Nov) |
@@ -108,7 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `4802cdf` | powercut: log the title of a power cut skipped as another district |
 | 2026-11-01 | `7244f7a` | powercut: search results kept only when the headline is a power cut (first run took 20+ min resolving every result); self-contained module |
 | 2026-11-01 | `125329d` | powercut: Coimbatore power-shutdown notices posted at once without a tick - hourly, Dinamani + Dinamalar (+ Covai Mail backup), never twice, never late, fails loudly if not posted |
-| 2026-11-01 | `099c2fc` | pick: start the posting job for REAL (dry_run=false) - a manual post.yml start defaults to test |
-| 2026-11-01 | `c22dbac` | pick: end-to-end guard - every ticked news must be POSTED: posting starts at once, verify every 5 min for 1 h, then fail loudly; end-to-end test |
-| 2026-11-01 | `b52de74` | post: news the owner ticked in the pick form is always posted - no 'stale' hold (7 of 12 were held on 1 Nov) |
 <!-- recent-changes:end -->
