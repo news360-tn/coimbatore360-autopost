@@ -1,22 +1,16 @@
-21:30:14 SKIP RN-2 stale: published 29 Oct, not today
-21:30:14 SKIP RN-40 stale: published 30 Oct, not today
-21:30:14 SKIP RN-41 stale: published 30 Oct, not today
-21:30:14 SKIP RN-46 stale: published 30 Oct, not today
-21:30:14 SKIP RN-47 stale: published 30 Oct, not today
-21:30:14 SKIP RN-51 stale: published 30 Oct, not today
-21:30:14 SKIP RN-65 known issue meta_article: headline talks about the article instead of the news ('கட்டுரை')
-21:30:14 SKIP RN-83 known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, krishnasweets)
-21:30:14 SKIP RN-104 stale: published 31 Oct, not today
-21:30:16 story catch-up coimbatore: quota 49/50, 40 recent posts, 24 live stories, owner ids ['17841473413980585', '40734050286193711']
-21:30:16 story catch-up coimbatore: 49/50 posts in 24 h - the rest waits for room
-21:30:16 9 stories in the queue, ready to post: 0
-21:30:16   keys: ['batch', 'caption', 'category', 'coimbatore_link', 'doc', 'email_sent', 'gmail_id', 'headline_en', 'headline_ta', 'images', 'importance', 'location', 'notes', 'notion', 'other_sources', 'post_status', 'post_to', 'posted_at', 'prompts', 'published', 'reel', 'reel_link', 'reel_script', 'researched', 'review', 'review_page', 'row', 'slides_spec', 'source', 'spare_link', 'story_id', 'verification']
-21:30:16    RN-2 review= 'Auto' images= 103 spec= 785 pages= ['coimbatore'] links= '' '' age_h= 80.2 ready= False set_started= True
-21:30:16    RN-40 review= 'Auto' images= 103 spec= 888 pages= ['coimbatore'] links= '' '' age_h= 67.1 ready= False set_started= True
-21:30:16    RN-41 review= 'Auto' images= 103 spec= 637 pages= ['coimbatore'] links= '' '' age_h= 67.1 ready= False set_started= True
-21:30:16    RN-46 review= 'Auto' images= 103 spec= 547 pages= ['coimbatore'] links= '' '' age_h= 62.8 ready= False set_started= True
-21:30:16    RN-47 review= 'Auto' images= 103 spec= 942 pages= ['coimbatore'] links= '' '' age_h= 62.8 ready= False set_started= True
-21:30:16    RN-51 review= 'Auto' images= 103 spec= 897 pages= ['coimbatore'] links= '' '' age_h= 59.1 ready= False set_started= True
-21:30:16    RN-65 review= 'Auto' images= 205 spec= 683 pages= ['coimbatore'] links= '' '' age_h= 51.0 ready= False set_started= True
-21:30:16    RN-83 review= 'Auto' images= 205 spec= 928 pages= ['coimbatore'] links= '' '' age_h= 47.0 ready= False set_started= True
-21:30:16    RN-104 review= 'Auto' images= 205 spec= 750 pages= ['coimbatore'] links= '' '' age_h= 24.9 ready= False set_started= True
+Traceback (most recent call last):
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 1679, in <module>
+    main()
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 1625, in main
+    n = len(pick_all(rows))
+            ^^^^^^^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 416, in pick_all
+    c = [r for r in rows if ready(r) and (set_started(r) or is_urgent(r))]
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 416, in <listcomp>
+    c = [r for r in rows if ready(r) and (set_started(r) or is_urgent(r))]
+                            ^^^^^^^^
+  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 349, in ready
+    why = news_hold(row) if is_ready_reel(row) else skip_reason(row)    # owner reels: no news checks, but the fact-check / location hold always applies
+                                                    ^^^^^^^^^^^
+NameError: name 'skip_reason' is not defined
