@@ -1,16 +1,47 @@
-Traceback (most recent call last):
-  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 1679, in <module>
-    main()
-  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 1625, in main
-    n = len(pick_all(rows))
-            ^^^^^^^^^^^^^^
-  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 416, in pick_all
-    c = [r for r in rows if ready(r) and (set_started(r) or is_urgent(r))]
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 416, in <listcomp>
-    c = [r for r in rows if ready(r) and (set_started(r) or is_urgent(r))]
-                            ^^^^^^^^
-  File "/home/runner/work/coimbatore360-autopost/coimbatore360-autopost/poster/post.py", line 349, in ready
-    why = news_hold(row) if is_ready_reel(row) else skip_reason(row)    # owner reels: no news checks, but the fact-check / location hold always applies
-                                                    ^^^^^^^^^^^
-NameError: name 'skip_reason' is not defined
+10:04:22 SKIP RN-2 stale: published 29 Oct, not today
+10:04:22 SKIP RN-40 stale: published 30 Oct, not today
+10:04:22 SKIP RN-41 stale: published 30 Oct, not today
+10:04:22 SKIP RN-46 stale: published 30 Oct, not today
+10:04:22 SKIP RN-47 stale: published 30 Oct, not today
+10:04:22 SKIP RN-51 stale: published 30 Oct, not today
+10:04:22 SKIP RN-65 known issue meta_article: headline talks about the article instead of the news ('கட்டுரை')
+10:04:22 SKIP RN-83 known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, krishnasweets)
+10:04:22 SKIP RN-104 stale: published 31 Oct, not today
+10:04:22 SKIP RN-128 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: caption misses facts of the article (put every one in 📰 முழு விவரம்): 3 ('இங்கு ஆராதனை திருவிழா டிசம்பா் 27 முதல் ஜனவரி 1-
+10:04:22 SKIP RN-129 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: numbers not found in the article: 000, 10000
+10:04:22 SKIP RN-130 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: reel_script has 84 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the capt
+10:04:22 SKIP RN-131 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: fact-check: The reel_script and slides_spec say the Kuruchi march was flagged off by 'சதீஷ் மலர்' and others, which matche
+10:04:22 SKIP RN-132 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+10:04:22 SKIP RN-133 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: slide 3 line 1 is cut off mid-phrase ('ம் நோக்கி சென்ற பைக்') - write a complete short phrase; known issue card_cut_mid_ph
+10:04:22 SKIP RN-134 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: reel_script has 84 words; need 85-105 (the key facts once each, in at most 60 seconds; every other detail goes in the capt
+10:04:22 SKIP RN-135 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: numbers not found in the article: 02
+10:04:22 SKIP RN-136 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: caption misses facts of the article (put every one in 📰 முழு விவரம்): 60 ('கோவை: மாநகரின் 60 வார்டுகளில் 24 மணி நேரம் குடி
+10:04:22 SKIP RN-137 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: fact-check: Caption says the body was buried on Saturday after he died on October 30, but the caption's date line is consi
+10:04:22 SKIP RN-138 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: slide 1 line 1 longer than 60 characters
+10:04:22 SKIP RN-139 held: fact-check problems - DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+10:04:24 story catch-up coimbatore: quota 36/50, 40 recent posts, 18 live stories, owner ids ['17841473413980585', '40734050286193711']
+10:05:33 story catch-up coimbatore: story 18109523273351042 for the post of 01 Nov 15:26 UTC (VIDEO)
+10:05:49 story catch-up coimbatore: story 18138256045637052 for the post of 02 Nov 02:28 UTC (CAROUSEL_ALBUM)
+10:05:49 21 stories in the queue, ready to post: 0
+10:05:49   keys: ['batch', 'caption', 'category', 'coimbatore_link', 'doc', 'email_sent', 'gmail_id', 'headline_en', 'headline_ta', 'images', 'importance', 'location', 'notes', 'notion', 'other_sources', 'post_status', 'post_to', 'posted_at', 'prompts', 'published', 'reel', 'reel_link', 'reel_script', 'researched', 'review', 'review_page', 'row', 'slides_spec', 'source', 'spare_link', 'story_id', 'verification']
+10:05:49    RN-2 review= 'Auto' images= 103 spec= 785 pages= ['coimbatore'] links= '' '' age_h= 92.8 ready= False set_started= True
+10:05:49    RN-40 review= 'Auto' images= 103 spec= 888 pages= ['coimbatore'] links= '' '' age_h= 79.7 ready= False set_started= True
+10:05:49    RN-41 review= 'Auto' images= 103 spec= 637 pages= ['coimbatore'] links= '' '' age_h= 79.7 ready= False set_started= True
+10:05:49    RN-46 review= 'Auto' images= 103 spec= 547 pages= ['coimbatore'] links= '' '' age_h= 75.4 ready= False set_started= True
+10:05:49    RN-47 review= 'Auto' images= 103 spec= 942 pages= ['coimbatore'] links= '' '' age_h= 75.3 ready= False set_started= True
+10:05:49    RN-51 review= 'Auto' images= 103 spec= 897 pages= ['coimbatore'] links= '' '' age_h= 71.7 ready= False set_started= True
+10:05:49    RN-65 review= 'Auto' images= 205 spec= 683 pages= ['coimbatore'] links= '' '' age_h= 63.5 ready= False set_started= True
+10:05:49    RN-83 review= 'Auto' images= 205 spec= 928 pages= ['coimbatore'] links= '' '' age_h= 59.6 ready= False set_started= True
+10:05:49    RN-104 review= 'Auto' images= 205 spec= 750 pages= ['coimbatore'] links= '' '' age_h= 37.5 ready= False set_started= True
+10:05:49    RN-128 review= 'Auto' images= 205 spec= 849 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-129 review= 'Auto' images= 205 spec= 872 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-130 review= 'Auto' images= 205 spec= 956 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-131 review= 'Auto' images= 205 spec= 719 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-132 review= 'Auto' images= 205 spec= 783 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-133 review= 'Auto' images= 205 spec= 918 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-134 review= 'Auto' images= 205 spec= 883 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-135 review= 'Auto' images= 205 spec= 753 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-136 review= 'Auto' images= 205 spec= 900 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-137 review= 'Auto' images= 205 spec= 658 pages= ['coimbatore'] links= '' '' age_h= 1.9 ready= False set_started= True
+10:05:49    RN-138 review= 'Auto' images= 205 spec= 698 pages= ['coimbatore'] links= '' '' age_h= 1.8 ready= False set_started= True
+10:05:49    RN-139 review= 'Auto' images= 205 spec= 768 pages= ['coimbatore'] links= '' '' age_h= 1.8 ready= False set_started= True
