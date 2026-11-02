@@ -81,6 +81,13 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-02 | `dab6a61` | pick verify: held / stale picked news count as skipped, not waiting (run 41436128396 false alarm); Facebook record keeps the story id (owner 2 Nov) |
+| 2026-11-02 | `d0d9c18` | pick: list sent |
+| 2026-11-02 | `56b50dc` | pick: written and posted |
+| 2026-11-02 | `31796a0` | powercut: notices written |
+| 2026-11-02 | `63c6b44` | facebook RN-147 |
+| 2026-11-02 | `299165c` | powercut: notices written |
+| 2026-11-02 | `fb39b4c` | facebook RN-134 |
 | 2026-11-02 | `812204d` | Facebook: every Instagram post (news reel, carousel, ready reel, rasipalan) also posted to the page's Facebook page with a story; hashtags from fixed lists (owner 2 Nov) |
 | 2026-11-02 | `5e63af8` | powercut: notices written |
 | 2026-11-02 | `8d212f6` | stories shared |
@@ -104,11 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-01 | `f981a49` | rasipalan: திதி / நட்சத்திரம் / யோகம் as Maalaimalar's daily panchangam (Vakya) prints them; own calculation only when not found |
 | 2026-11-01 | `40389cf` | stories shared |
 | 2026-11-01 | `26b3a7e` | story catch-up: a post shared once is remembered (poster/story_shared.json) - the rasipalan got a 2nd story |
-| 2026-11-01 | `b744fc1` | story catch-up: video re-hosted on Cloudinary first (Instagram refused its own CDN link: container ERROR); tries capped per run |
-| 2026-11-01 | `918b22b` | story catch-up: a post's owner id is the account's app id - every post was taken for the other page's collab |
-| 2026-11-01 | `f9384a2` | story catch-up: log quota / posts / stories seen |
-| 2026-11-01 | `a7a2ed2` | stories: every post (news reel, carousel, rasipalan, any job) also goes to the story - fixed 25-post cut removed, missing stories caught up every run, last 5 of the 50/day kept for news |
-| 2026-11-01 | `4802cdf` | powercut: log the title of a power cut skipped as another district |
-| 2026-11-01 | `7244f7a` | powercut: search results kept only when the headline is a power cut (first run took 20+ min resolving every result); self-contained module |
-| 2026-11-01 | `125329d` | powercut: Coimbatore power-shutdown notices posted at once without a tick - hourly, Dinamani + Dinamalar (+ Covai Mail backup), never twice, never late, fails loudly if not posted |
 <!-- recent-changes:end -->
