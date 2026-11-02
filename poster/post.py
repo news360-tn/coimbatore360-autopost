@@ -224,7 +224,7 @@ def owner_picked(row):
 def _skip_reason_base(row):
     """'' = fine to post. Otherwise why this story must not go out: its announced date has passed (power cut, job fair, 'today' news ...),
     or the same news was already posted under another story id."""
-    import difflib, freshness
+    import freshness
     if not is_ready_reel(row):      # owner 29 Oct: an issue found once never goes out again (research_free/known_issues.py)
         sys.path.insert(0, str(ROOT / "research_free"))
         import known_issues, verify
@@ -351,6 +351,8 @@ def ready(row):
         if row.get("story_id") not in _SKIPPED:
             _SKIPPED.add(row.get("story_id"))
             log("SKIP", row.get("story_id"), why)
+            if why.startswith("held") and age_hours(row) <= 24:      # owner 2 Nov: a run that posts nothing must not look like a plain success
+                print(f"::warning title=Held from posting {row.get('story_id')}::{why[:300]}", flush=True)
         return False
     # a story that already went out on one page is only carried over to its other page while it is still fresh (same day);
     # an older one is never posted again later (stale news, e.g. yesterday's power cut)
@@ -597,6 +599,46 @@ def render_carousel(row, spec, work):
     if not 2 <= len(jpgs) <= 10:
         raise RuntimeError(f"{row['story_id']}: {len(jpgs)} slides (Instagram allows 2-10)")
     return jpgs
+
+
+_KEY_FACT = re.compile(r"\d|கைது|வழக்கு|உயிரிழ|பலி|காயம்|மீட்|பறிமுதல்|அபராதம்|சிறை|உத்தரவு|நடவடிக்கை|புகார்|உறுதி|விடுவி|மின்\s*தடை|"
+                       r"நேரம்|மணி|தேதி|ரூ\.|லட்சம்|கோடி|ஆயிரம்")
+
+
+def shorten_script_detail(txt, ratio):
+    """owner 2 Nov (review): a reel over 90 s loses the LEAST informative sentences first (no number, no outcome, no time/place fact),
+    never the first one (the one-line story); returns (script, dropped sentences in story order)"""
+    sents = [s.strip() for s in re.split(r"(?<=[.!?\u0964])\s+", (txt or "").strip()) if s.strip()]
+    follow = [s for s in sents[-1:] if "பின்தொடரு" in s or "Follow" in s]
+    body = sents[:-1] if follow else sents
+    if len(body) <= 2:
+        return txt, []
+    budget = sum(len(s) for s in body) * max(0.3, min(ratio, 0.95))
+    order = sorted(range(1, len(body)), key=lambda i: (len(_KEY_FACT.findall(body[i])) > 0, len(_KEY_FACT.findall(body[i])), i))
+    drop, total = set(), sum(len(s) for s in body)
+    for i in order:
+        if total <= budget or len(body) - len(drop) <= 2:
+            break
+        drop.add(i)
+        total -= len(body[i])
+    if not drop:
+        drop.add(order[0])
+    keep = [s for i, s in enumerate(body) if i not in drop]
+    return " ".join(keep + follow), [body[i] for i in sorted(drop)]
+
+
+def add_to_caption(caption, sentences):
+    """the sentences a long reel could not say go into the caption (before the hashtags) unless the caption already tells them"""
+    cap = caption or ""
+    def stems(t):
+        return {w[:4] for w in re.findall(r"[\u0B80-\u0BFF]{4,}", t)}
+    have = stems(cap)
+    extra = [x for x in sentences if stems(x) and len(stems(x) - have) / len(stems(x)) > 0.5]
+    if not extra:
+        return cap
+    i = cap.find("\n#")
+    add = "\n" + "\n".join(extra)
+    return (cap[:i] + add + cap[i:]) if i >= 0 else cap + add
 
 
 def shorten_script(txt, ratio):
@@ -881,6 +923,11 @@ def _story_room():
     """owner 1 Nov: EVERY post also goes to the story. Only the last few posts of Instagram's 24-hour limit are kept for news posts
     (config story_reserve, default 5); a story that has to wait is posted later by story_catchup() - never lost."""
     reserve = int(CONFIG.get("story_reserve", 5))
+    LIMIT.pop(PAGE, None)      # owner 2 Nov (review): the count read when this job started is old - other jobs posted meanwhile
+    try:
+        limit_reached(PAGE)
+    except Exception:
+        pass
     if USED.get(PAGE) is None or PAGE not in TOTAL:
         return True
     return USED[PAGE] + 1 <= TOTAL[PAGE] - reserve
@@ -1025,9 +1072,14 @@ def still_needed(sid, page, kind):
     and another job may have posted the same news meanwhile (Instagram feeds of both pages and the Sheet are read again)"""
     try:
         rows = bridge_get("queue")["rows"]
-        r = next((x for x in rows if x.get("story_id") == sid), None)
     except Exception:
-        return True
+        try:
+            time.sleep(20)
+            rows = bridge_get("queue")["rows"]
+        except Exception as e:      # owner 2 Nov (review): without the Sheet we cannot know it is not posted yet - wait for the next run
+            log("Sheet not readable right before publishing - waits for the next run:", str(e)[:120])
+            return False
+    r = next((x for x in rows if x.get("story_id") == sid), None)
     if r is not None and kind == "reel":
         global ALL_ROWS
         try:
@@ -1124,6 +1176,18 @@ def ig_recent(page):
     return IG_RECENT[page]
 
 
+def minutes_since_last_post(page):
+    """minutes since this page's newest Instagram post (1e9 when unknown) - owner 2 Nov: posts are spread, never a burst"""
+    try:
+        ts = max((t for t, _ in ig_recent(page) if t), default="")
+        if not ts:
+            return 1e9
+        t = datetime.fromisoformat(ts.replace("+0000", "+00:00"))
+        return (datetime.now(timezone.utc) - t).total_seconds() / 60
+    except Exception:
+        return 1e9
+
+
 def ig_duplicate(row, page):
     """the story id/time of a recent Instagram post of this page that is the same news, else ''"""
     import freshness
@@ -1185,7 +1249,6 @@ def run_ready_reel(row, page):
         return []
     try:
         url = json.loads(row["images"])[0]
-        import verify
         # owner reels are posted as they are (owner decision, 24 Oct): no technical checks
         caption = (row.get("caption") or "").strip()     # the .md caption exactly as the owner wrote it
         if DRY:
@@ -1246,7 +1309,7 @@ def run_story_page(row, page):
     if LOC_ID:
         log("location tag:", LOC_ID)
     # owner 25 Oct: text problems are fixed automatically, the story is never skipped for them
-    cap_fixed = clean_caption(row)
+    clean_caption(row)      # fixes row['caption'] in place
     problems = check_text(row, spec)
     if problems:
         log("text fixed automatically:", "; ".join(problems))
@@ -1349,6 +1412,8 @@ def run_story_page(row, page):
                 checks.append(f"{len(jpgs)} slides rendered, no clipped text")
             if need_reel:
                 try:
+                    if CONFIG.get("reel_design") == "v4":
+                        raise RuntimeError("the v4 reel design always uses the voice model")
                     v = bridge_get("voice", story=sid)
                     if v.get("found"):
                         voice_file = work / f"voice{v.get('ext', '.m4a')}"
@@ -1362,10 +1427,13 @@ def run_story_page(row, page):
                     dur = verify.reel_duration(mp4)
                     if not (probs and dur > 90 and not voice_file and all("outside 10-90" in p for p in probs)):
                         break
-                    shorter = shorten_script(row.get("reel_script") or "", 84.0 / dur)
+                    shorter, dropped = shorten_script_detail(row.get("reel_script") or "", 84.0 / dur)
                     if shorter == row.get("reel_script"):
                         break
                     log(f"reel {dur:.1f}s is longer than 90 s: script shortened from {len(row.get('reel_script') or '')} to {len(shorter)} characters")
+                    for x in dropped:
+                        log("   sentence moved to the caption only:", x[:120])
+                    caption = add_to_caption(caption, dropped)      # owner 2 Nov: every fact stays available (the caption has the full news)
                     row["reel_script"] = shorter
                     rs = verify.clean_obj(reel_spec(row, spec, images))
                     checks.append(f"reel script shortened automatically (was {dur:.0f} s)")
@@ -1387,6 +1455,7 @@ def run_story_page(row, page):
     # 1b. upload the finished files once and remember the links (a later run, or a retry after an Instagram error, publishes at once)
     if cached:
         media = cached
+        caption = cached.get("caption") or caption      # a prebuilt long reel brings its extended caption
     else:
         media = {"carousel": [], "reel": "", "cover": "", "story": ""}
         try:
@@ -1403,7 +1472,7 @@ def run_story_page(row, page):
                 except Exception as e:
                     log("cover upload failed:", e)
             if media["reel"] and (media["carousel"] or not need_carousel):
-                save_cache(sid, key, media, checks)
+                save_cache(sid, key, dict(media, caption=caption), checks)      # owner 2 Nov: the caption that goes with THIS reel
         except Exception as e:
             return fail(row, "carousel", f"Upload failed: {e}")
     if PREBUILD:
@@ -1456,6 +1525,7 @@ def run_story_page(row, page):
                 log("ERROR carousel", sid, e)
                 bridge_post("error", {"row": row["row"], "page": PAGE, "kind": "carousel", "error": str(e)[:900]})
     if need_reel:
+        published = False
         try:
             url = media["reel"]
             if DRY:
@@ -1468,20 +1538,24 @@ def run_story_page(row, page):
                 token = bridge_get("token", page=PAGE)["token"]
                 cover_url = media.get("cover") or ""
                 mid, link, collab_ok, why = publish_reel(token, url, caption, collab, cover_url)
+                published = True
                 log("reel posted", sid, link)
                 USED[PAGE] = USED.get(PAGE, 0) + 1
-                first_comment(token, mid, sid, 1)
-                publish_story(token, url, "video")
                 bridge_post("posted", {"row": row["row"], "page": PAGE, "kind": "reel", "permalink": link, "media_id": mid,
                                        "media_urls": [url], "caption": caption, "voice": voice, "collab": collab_ok, "checks": note})
                 done.append(("reel", link))
+                first_comment(token, mid, sid, 1)
+                publish_story(token, url, "video")
                 try:      # website OFF for now: website.send does nothing without WEBSITE_INGEST_KEY (a website problem never stops posting)
                     import website
                     website.send(row, link)
                 except Exception as e:
                     log("website step skipped:", str(e)[:150])
         except Exception as e:
-            if is_limit_error(e):
+            if published:      # owner 2 Nov (review): it IS on Instagram - never "tried again in the next run"
+                log("ERROR after the reel was published (it is on Instagram, NOT posted again):", sid, str(e)[:200])
+                print(f"::error title=Reel {sid} published but not fully recorded::{str(e)[:200]}", flush=True)
+            elif is_limit_error(e):
                 LIMIT[PAGE] = True
                 log("LIMIT: Instagram post limit hit while posting reel", sid, "- waits, not a failure")
             elif is_transient(e):
@@ -1514,6 +1588,13 @@ def auto_images():
     imagegen.generate; earlier pictures are never reused); if no model works, the reel is made without pictures (setImages with NOIMAGE).
     Credit guard: at most 40 images per run."""
     pend = bridge_get("autoPending").get("rows", [])
+    if pend and not all(r.get("source") for r in pend):      # owner 2 Nov (review): the Apps Script list has no article link -
+        try:                                                  # without it the real photo step never ran (AI pictures every time)
+            srcs = {x.get("story_id"): x.get("source") for x in bridge_get("queue").get("rows", [])}
+            for r in pend:
+                r["source"] = r.get("source") or srcs.get(r.get("story_id")) or ""
+        except Exception as e:
+            log("article links for the real photos not read:", str(e)[:120])
     if not pend:
         return
     budget = time.time() + int(os.environ.get("AUTO_IMG_SECONDS", "420"))      # the check job must finish; the rest waits for the next run
@@ -1546,6 +1627,9 @@ def auto_images():
                 bridge_post("setImages", {"row": r["row"], "story_id": r["story_id"], "images": urls})
                 log("real photos queued:", r["story_id"], len(urls), credit)
                 continue
+            if getattr(realphoto, "NEEDS_RETRY", [False])[0] and age_hours(r) < float(CONFIG.get("real_photo_wait_hours", 2)):
+                log("real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet):", r["story_id"])
+                continue      # owner 2 Nov (review): one Gemini 429 used to replace the real photo with AI art for good
         except Exception as e:
             log("real photo step skipped:", r.get("story_id"), str(e)[:120])
         try:
@@ -1643,19 +1727,40 @@ def main():
                     full = {p for p in PAGES if n and limit_reached(p)}
                     if full:
                         log("Instagram 24-hour limit reached for", sorted(full), "- their stories wait (nothing is dropped)")
+                    # owner 2 Nov (review): a reel AND its Instagram story both count in the 50 posts of 24 h
+                    per_story = 2 if CONFIG.get("post_stories", True) else 1
                     left = {p: TOTAL[p] - USED[p] for p in TOTAL if p in USED}      # posts this page may still make in the 24-hour window
-                    ids, waiting = [], []
+                    # owner 2 Nov (review): no bursts and no hour-long runs - one story per page per run, at least spacing_min after
+                    # the page's last post; the next run (every few minutes) posts the next one. Urgent news never waits.
+                    spacing = float((CONFIG.get("posting") or {}).get("spacing_min", 12))
+                    ids, waiting, slots = [], [], {}
                     for r in (pick_all(rows) if n else []):
-                        pg = [p for p in pages_of(r) if not page_done(r, p) and p not in full and left.get(p, 1) > 0]
+                        todo = [p for p in pages_of(r) if not page_done(r, p)]
+                        pg = [p for p in todo if p not in full and left.get(p, per_story) >= per_story
+                              and (is_urgent(r) or USED.get(p, 0) < SOFT_CAP)]      # owner 2 Nov (review): over the cap only urgent news
+                        if todo and not pg:
+                            log("  ", r["story_id"], "waits: Instagram's 24-hour post limit is (almost) used on", todo)
+                            continue
                         why = prime_wait(r)
                         if pg and why:
                             waiting.append(r["story_id"]); log("  ", r["story_id"], why)
                             continue
-                        if pg and len(ids) < 12:
-                            ids.append(r["story_id"])
-                            for p in pg:
-                                left[p] = left.get(p, 99) - 1   # owner 25 Oct: up to 12 per run, priority order, no waiting (was 3 per run, 25 min apart: far too slow for 24 stories per round)
-                    inc = [{"story": i, "slot": k * 6, "prebuild": ""} for k, i in enumerate(ids)]
+                        if not pg:
+                            continue
+                        busy = [p for p in pg if p in slots or minutes_since_last_post(p) < spacing]
+                        if busy and not is_urgent(r):
+                            waiting.append(r["story_id"])
+                            log("  ", r["story_id"], f"waits for the {spacing:.0f}-minute gap after the last post on {busy}")
+                            continue
+                        k = max([slots.get(p, -1) for p in pg]) + 1      # urgent news of one run: 6 minutes apart
+                        ids.append((r["story_id"], k * 6))
+                        for p in pg:
+                            slots[p] = k
+                            left[p] = left.get(p, 99) - per_story
+                        if len(ids) >= 12:
+                            break
+                    inc = [{"story": i, "slot": sl, "prebuild": ""} for i, sl in ids]
+                    ids = [i for i, _ in ids]
                     # stories whose set has not started yet: make the carousel/reel ahead, so they go out the moment it starts
                     urgent = set(ids)
                     pre = [r["story_id"] for r in rows if ready(r) and r["story_id"] not in urgent and (not set_started(r) or r["story_id"] in waiting) and not all(cache_path(r["story_id"], p).exists() for p in pages_of(r) if not page_done(r, p))][:12]      # waiting reels are made ahead, so they go out the minute prime time starts
@@ -1687,14 +1792,46 @@ def _real_numbers(problem):
     return m.group(1) + ", ".join(left) if left else ""
 
 
+_ARTICLE_TEXT = {}
+
+
+def _location_still_wrong(row, problem):
+    """owner 2 Nov (RN-284 'பரமத்தி வேலூர்' vs the article's 'ப.வேலுார்'): a 'location not in the article' note saved before the check was
+    fixed is judged again against the article with today's check. Article not readable -> the note stands (held)."""
+    if not problem.startswith("not grounded: location"):
+        return True
+    src = str(row.get("source") or "").strip()
+    if not src.startswith("http"):
+        return True
+    try:
+        sys.path.insert(0, str(ROOT / "research_free"))
+        import allnews, validate
+        if src not in _ARTICLE_TEXT:
+            _ARTICLE_TEXT[src] = ""      # a failed fetch is remembered too: ready() asks ~4 times per check
+            _ARTICLE_TEXT[src] = allnews.article_any(src).get("text") or ""
+        art = _ARTICLE_TEXT[src]
+        if len(art) < 200:
+            return True
+        sp = json.loads(row.get("slides_spec") or "{}")
+        now = [p for p in validate.grounding_problems({"slides_spec": sp, "tamil_headline": "", "reel_script": "", "caption": ""}, art)
+               if p.startswith("not grounded: location")]
+        if not now:
+            log("hold lifted:", row.get("story_id"), "-", problem[:80], "- the location IS in the article (checked again)")
+        return bool(now)
+    except Exception as e:
+        log("location re-check failed (stays held):", row.get("story_id"), str(e)[:80])
+        return True
+
+
 def news_hold(row):
     """owner 2 Nov (RN-272): a story with any fact-check problem, or whose location is unknown or only a district, is held"""
     v_ = str(row.get("verification") or "")
     if "NOT CLEAN" in v_:
         # owner 2 Nov: only FACTUAL problems hold a story; formatting-only flags (word count, line length, cut-off slide text) do not
         probs_ = v_.split("problems:", 1)[1] if "problems:" in v_ else v_
-        facts_ = [p.strip() for p in probs_.split("; ") if re.search(r"fact-check|misses facts|numbers not found|not grounded|invented|made up|wrong|contradict", p, re.I)]
+        facts_ = [p.strip() for p in probs_.split("; ") if re.search(r"fact-check|numbers not found|not grounded|invented|made up|wrong|contradict", p, re.I)]      # owner 2 Nov: "caption misses facts" is a missing detail, not a wrong fact - it posts
         facts_ = [f for f in (_real_numbers(p) for p in facts_) if f]
+        facts_ = [f for f in facts_ if _location_still_wrong(row, f)]
         if facts_:
             return "held: fact-check problems - " + "; ".join(facts_)[:200]
     loc_ = str(row.get("location") or "").strip()

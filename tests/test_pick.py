@@ -1,5 +1,5 @@
 """owner 1 Nov (Coimbatore): collection only at 6 AM / 4 PM from Dinamalar + Dinamani, by published-time windows; the owner ticks the
-news in an e-mail page, else the top 12; posted news never listed again; listed-not-posted news returns while < 24 h old."""
+news in an e-mail page, else the top 8; posted news never listed again; listed-not-posted news returns while < 24 h old."""
 import datetime, json, sys, tempfile, unittest
 from pathlib import Path
 from unittest import mock
@@ -18,14 +18,15 @@ def art(url, title, pub, score=5, pc=False):
 class PickFlow(unittest.TestCase):
     def setUp(self):
         self.d = tempfile.TemporaryDirectory()
-        self.old = (pick.STATE, pick.URLS, pick.DRY)
+        self.old = (pick.STATE, pick.URLS, pick.DRY, pick.EMAIL)
+        pick.EMAIL = True      # these tests cover the e-mail flow (it can be switched on again with PICK_EMAIL=1)
         pick.STATE = Path(self.d.name) / "pick_state.json"
         pick.URLS = Path(self.d.name) / "urls.txt"
         pick.DRY = False
         self.sent = []
 
     def tearDown(self):
-        pick.STATE, pick.URLS, pick.DRY = self.old
+        pick.STATE, pick.URLS, pick.DRY, pick.EMAIL = self.old
         self.d.cleanup()
 
     def run_collect(self, now, found, recent=()):
@@ -93,13 +94,13 @@ class PickFlow(unittest.TestCase):
         urls, pool = self.decide({"ok": True, "submitted": True, "ids": [pick.pid("https://www.dinamani.com/2"), pick.pid("https://www.dinamani.com/0")]})
         self.assertEqual(urls, ["https://www.dinamani.com/2", "https://www.dinamani.com/0"])      # low score too: the owner decides
 
-    def test_no_reply_top_12(self):
+    def test_no_reply_top_8(self):
         urls, _ = self.decide({"ok": True, "submitted": False})
-        self.assertEqual(len(urls), 12)
+        self.assertEqual(len(urls), 8)      # owner 2 Nov: 12 -> 8
         self.assertEqual(urls[0], "https://www.dinamani.com/14")
         self.assertEqual(self.sent[-1][0], "pickAuto")
 
-    def test_list_not_emailed_means_top_12_at_once(self):
+    def test_list_not_emailed_means_top_8_at_once(self):
         t = datetime.datetime(2026, 11, 1, 6, 0, tzinfo=IST)
         a = art("https://www.dinamani.com/z", "z", t)
         far = (datetime.datetime.now(IST) + datetime.timedelta(hours=1)).isoformat()
@@ -110,9 +111,27 @@ class PickFlow(unittest.TestCase):
             pick.cmd_decide()
         self.assertEqual(pick.URLS.read_text(), a["url"])
 
-    def test_fewer_than_12_all_posted(self):
+    def test_fewer_than_8_all_posted(self):
         urls, _ = self.decide({"ok": True, "submitted": False}, items=5)
         self.assertEqual(len(urls), 5)
+
+    def test_auto_pick_never_takes_suicide_or_obituary(self):
+        t = datetime.datetime(2026, 11, 1, 6, 0, tzinfo=IST)
+        xs = [art("https://www.dinamani.com/s", "தொழில் நஷ்டம்: நகை தொழிலாளி தற்கொலை", t, 99),
+              art("https://www.dinamani.com/o", "பொன்னுசாமி கவுண்டா் (108) காலமானாா்", t, 98),
+              art("https://www.dinamalar.com/c", "ஸ்ரீ சேஷாத்ரி சுவாமிகள் அதிஷ்டானத்தில் ஆராதனை திருவிழா!", t, 97),
+              art("https://www.dinamalar.com/f", "டிரெஸ் பர்ச்சேசில் ஏ.ஐ., அணிந்து பார்க்காமலே வாங்கலாம்!", t, 96),
+              art("https://www.dinamani.com/k", "கோவையில் லாரி மோதி இருவர் பலி", t, 5)]
+        pool = {a["id"]: a for a in xs}
+        pick.STATE.write_text(json.dumps({"last_end": t.isoformat(), "pool": pool, "rounds": {"2026-11-01_morning": {
+            "ids": list(pool), "deadline": t.isoformat(), "written": [], "decided": None, "sent": True}}}))
+        with mock.patch.object(pick, "bridge_get", return_value={"ok": True, "submitted": False}), \
+                mock.patch.object(pick, "bridge_post", return_value={"ok": True}):
+            pick.cmd_decide()
+        self.assertEqual(pick.URLS.read_text(), "https://www.dinamani.com/k")
+        # the owner ticks the suicide news: it is posted (the owner decides)
+        urls, _ = self.decide({"ok": True, "submitted": True, "ids": [pick.pid("https://www.dinamani.com/3")]})
+        self.assertEqual(urls, ["https://www.dinamani.com/3"])
 
     def test_late_ticks_are_added_once(self):
         self.decide({"ok": True, "submitted": False})
@@ -131,7 +150,7 @@ class Wiring(unittest.TestCase):
         src = (ROOT / "research_free" / "collect.py").read_text(encoding="utf-8")
         self.assertIn("if PICK_ONLY:", src)
         wf = (ROOT / ".github" / "workflows" / "pick.yml").read_text(encoding="utf-8")
-        for s in ('PICK_ONLY: "1"', 'PICK_AUTO_TOP: "12"', 'PICK_WAIT_MIN: "60"', 'MANUAL_URL="$urls"'):
+        for s in ('PICK_ONLY: "1"', 'PICK_EMAIL: "0"', 'PICK_WAIT_MIN: "60"', 'MANUAL_URL="$urls"'):
             self.assertIn(s, wf)
 
     def test_bridge_has_the_check_box_page(self):
@@ -194,7 +213,7 @@ class EndToEndOwnerPick(unittest.TestCase):
     def test_workflow_checks_and_fails_loudly(self):
         wf = (ROOT / ".github" / "workflows" / "pick.yml").read_text(encoding="utf-8")
         self.assertIn("pick.py verify", wf)
-        self.assertIn("some picked news is still not posted after 1 hour", wf)
+        self.assertIn("some picked news is still not posted after 2.5 hours", wf)
         self.assertIn("actions/workflows/post.yml/dispatches", wf)
         # 1 Nov: a manual post.yml run defaults to TEST (dry_run) - every start must say dry_run=false or nothing is posted
         for line in wf.splitlines():
@@ -212,3 +231,85 @@ class RoundOrder(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AutomaticTwentyADay(unittest.TestCase):
+    """owner 2 Nov: "do not ask me to confirm" - 20 news a day (8 + 6 + 6) picked automatically from more Tamil outlets"""
+
+    def setUp(self):
+        self.d = tempfile.TemporaryDirectory()
+        self.old = (pick.STATE, pick.URLS, pick.DRY, pick.EMAIL)
+        pick.STATE, pick.URLS, pick.DRY, pick.EMAIL = Path(self.d.name) / "s.json", Path(self.d.name) / "u.txt", False, False
+        self.sent = []
+
+    def tearDown(self):
+        pick.STATE, pick.URLS, pick.DRY, pick.EMAIL = self.old
+        self.d.cleanup()
+
+    def collect(self, now, cands, check):
+        with mock.patch.object(pick, "now", return_value=now), \
+                mock.patch.object(pick, "candidates", side_effect=lambda l, since=None: [dict(c) for c in cands]), \
+                mock.patch.object(pick, "check_article", side_effect=check), \
+                mock.patch.object(pick, "recent_rows", return_value=[]), \
+                mock.patch.object(pick, "is_posted", return_value=False), \
+                mock.patch.object(pick, "bridge_post", side_effect=lambda a, p: self.sent.append((a, p)) or {"ok": True}):
+            return pick.cmd_collect()
+
+    def test_no_email_and_the_top_news_are_written_at_once(self):
+        t = datetime.datetime(2026, 11, 3, 6, 0, tzinfo=IST)
+        pick.STATE.write_text(json.dumps({"last_end": (t - datetime.timedelta(hours=9)).isoformat(), "pool": {}, "rounds": {}}))
+        heads = ["பீளமேட்டில் நகை திருட்டு", "சூலூரில் லாரி விபத்து", "வால்பாறையில் யானை நடமாட்டம்", "குடிநீர் கட்டண உயர்வு ரத்து",
+                 "அன்னூரில் மின் கம்பம் சாய்ந்தது", "பொள்ளாச்சி சந்தையில் தேங்காய் விலை", "காந்திபுரம் மேம்பால பணி தாமதம்",
+                 "மேட்டுப்பாளையத்தில் கனமழை எச்சரிக்கை", "கிணத்துக்கடவில் பள்ளி மாணவர் சாதனை", "ரயில் நேர மாற்றம் அறிவிப்பு"]
+        arts = {f"https://www.dinakaran.com/n{i}": art(f"https://www.dinakaran.com/n{i}", heads[i], t - datetime.timedelta(hours=1), i) for i in range(10)}
+        rid = self.collect(t, [{"url": u} for u in arts], lambda it, r: (dict(arts[it["url"]]), ""))
+        self.assertEqual(rid, "2026-11-03_06")
+        self.assertFalse([a for a, _ in self.sent if a == "pickList"])      # nothing e-mailed
+        with mock.patch.object(pick, "bridge_get", side_effect=AssertionError("must not wait for the owner")), \
+                mock.patch.object(pick, "bridge_post", return_value={"ok": True}), mock.patch.object(pick, "AUTO_TOP", 8):
+            pick.cmd_decide()
+        self.assertEqual(len([l for l in pick.URLS.read_text().split("\n") if l]), 8)
+
+    def test_a_link_that_failed_to_open_is_tried_again_next_round(self):
+        t = datetime.datetime(2026, 11, 3, 6, 0, tzinfo=IST)
+        pick.STATE.write_text(json.dumps({"last_end": (t - datetime.timedelta(hours=9)).isoformat(), "pool": {}, "rounds": {}}))
+        u = "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/x/123456"
+        a = art(u, "கோவையில் விபத்து", t - datetime.timedelta(hours=2))
+        self.collect(t, [{"url": u}], lambda it, r: (None, "could not open (502)"))
+        self.assertIn(u, json.loads(pick.STATE.read_text())["retry"])
+        t2 = t + datetime.timedelta(hours=4)      # the next round: the link is not in the papers' lists any more
+        self.collect(t2, [], lambda it, r: (dict(a), ""))
+        st = json.loads(pick.STATE.read_text())
+        self.assertIn(a["id"], st["pool"])      # listed although published before this window
+        self.assertNotIn(u, st["retry"])
+
+    def test_round_names_by_hour_sort_with_the_old_names(self):
+        self.assertLess(pick.round_order("2026-11-02_morning"), pick.round_order("2026-11-02_10"))
+        self.assertLess(pick.round_order("2026-11-02_10"), pick.round_order("2026-11-02_evening"))
+        self.assertLess(pick.round_order("2026-11-02_evening"), pick.round_order("2026-11-02_19"))
+
+    def test_more_outlets(self):
+        src = (ROOT / "research_free" / "pick.py").read_text(encoding="utf-8")
+        for d in ("dinakaran.com", "dailythanthi.com", "maalaimalar.com", "hindutamil.in", "polimernews.com"):
+            self.assertIn(d, pick.OUTLETS)
+        self.assertIn("any(d in cfg[\"url\"] for d in OUTLETS)", src)
+
+    def test_a_picked_news_never_written_comes_back(self):
+        t = datetime.datetime(2026, 11, 3, 10, 0, tzinfo=IST)
+        a = art("https://www.dinamani.com/p", "கோவை குடிநீர் பிரச்சனை", t - datetime.timedelta(hours=5))
+        for picked_h, listed in ((1, False), (4, True)):
+            pool = {a["id"]: dict(a, listed_at=(t - datetime.timedelta(hours=5)).isoformat(), picked_at=(t - datetime.timedelta(hours=picked_h)).isoformat())}
+            pick.STATE.write_text(json.dumps({"last_end": (t - datetime.timedelta(hours=4)).isoformat(), "pool": pool, "rounds": {}}))
+            self.collect(t, [], lambda it, r: (None, "x"))
+            ids = json.loads(pick.STATE.read_text())["rounds"].get("2026-11-03_10", {}).get("ids", [])
+            self.assertEqual(a["id"] in ids, listed, picked_h)
+
+    def test_a_failed_link_still_in_the_list_is_a_retry_too(self):
+        t = datetime.datetime(2026, 11, 3, 6, 0, tzinfo=IST)
+        pick.STATE.write_text(json.dumps({"last_end": (t - datetime.timedelta(hours=9)).isoformat(), "pool": {}, "rounds": {}}))
+        u = "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/y/654321"
+        a = art(u, "கோவையில் தீ விபத்து", t - datetime.timedelta(hours=1))
+        self.collect(t, [{"url": u}], lambda it, r: (None, "could not open (502)"))
+        self.collect(t + datetime.timedelta(hours=4), [{"url": u}], lambda it, r: (dict(a), ""))      # still in the paper's list
+        self.assertIn(a["id"], json.loads(pick.STATE.read_text())["pool"])
+

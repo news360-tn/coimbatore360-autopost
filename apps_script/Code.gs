@@ -635,7 +635,7 @@ function autoPending_() {
   sh.getRange(2, 1, last - 1, NCOLS).getValues().forEach(function (v, i) {
     var r = rowObj_(v, i + 2);
     if (r.post_status === 'Auto images' && r.prompts) {
-      out.push({ row: r.row, story_id: r.story_id, prompts: String(r.prompts), category: r.category, location: r.location, post_to: r.post_to, headline_ta: r.headline_ta, headline_en: r.headline_en, researched: r.researched });
+      out.push({ row: r.row, story_id: r.story_id, source: r.source, prompts: String(r.prompts), category: r.category, location: r.location, post_to: r.post_to, headline_ta: r.headline_ta, headline_en: r.headline_en, researched: r.researched });
     }
   });
   return out;
@@ -1047,7 +1047,7 @@ function retryMessage() {
 // ================================================================== owner's pick (owner 1 Nov)
 // 6 AM and 4 PM: the GitHub job sends the news list (Dinamalar + Dinamani Coimbatore) -> this makes a GOOGLE FORM with a check box for
 // every news and e-mails its link -> the owner ticks and presses Submit -> GitHub writes and posts EVERY ticked news.
-// No submit in 1 hour: GitHub posts the top 12. (A Google Form opens on any phone / computer, with any number of Google accounts signed in.)
+// No submit in 1 hour: GitHub posts the top 8. (A Google Form opens on any phone / computer, with any number of Google accounts signed in.)
 var PICK_TAB = 'Picks';
 var PICK_HEAD = ['Round', 'Token', 'Created (IST)', 'Deadline', 'Items', 'Auto picked', 'Owner ticked', 'Submitted (IST)', 'Form id'];
 
@@ -1082,7 +1082,7 @@ function makePickForm_(b, label, items) {
   var form = FormApp.create('கோவை செய்திகள் – ' + label + ' – ' + Utilities.formatDate(new Date(), 'Asia/Kolkata', 'dd MMM yyyy'));
   try { DriveApp.getFileById(form.getId()).moveTo(pickFolder_()); } catch (err) { }
   form.setDescription('பதிவிட வேண்டிய செய்திகளைத் தேர்வு செய்து Submit செய்யுங்கள். தேர்வு செய்த ஒவ்வொரு செய்தியும் எழுதப்பட்டு, ரீல் செய்து உடனே பதிவிடப்படும்.\n' +
-    b.deadline + '-க்குள் Submit செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 12) + ' செய்திகள் தானாக பதிவிடப்படும்.\n⏳ = முந்தைய பட்டியலில் இருந்து (இன்னும் பதிவிடவில்லை)');
+    b.deadline + '-க்குள் Submit செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 8) + ' செய்திகள் தானாக பதிவிடப்படும்.\n⏳ = முந்தைய பட்டியலில் இருந்து (இன்னும் பதிவிடவில்லை)');
   form.setCollectEmail(false);
   form.setAllowResponseEdits(false);
   form.setShowLinkToRespondAgain(true);      // more news can be ticked later: they are added
@@ -1121,7 +1121,7 @@ function pickList_(b) {
   var html = '<div style="font-family:Arial,sans-serif;max-width:680px">' +
     '<h2 style="margin:0 0 6px">கோவை செய்திகள் – ' + label + ' (' + items.length + ')</h2>' +
     '<div style="color:#555;margin-bottom:12px">செய்தி வெளியான நேரம்: ' + esc_(b.window) + '<br>' +
-    b.deadline + '-க்குள் தேர்வு செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 12) + ' செய்திகள் தானாக பதிவிடப்படும்.</div>' + btn +
+    b.deadline + '-க்குள் தேர்வு செய்யவில்லை என்றால், முதல் ' + (b.auto_top || 8) + ' செய்திகள் தானாக பதிவிடப்படும்.</div>' + btn +
     (newOnes.length ? '<h3 style="margin:18px 0 4px">🆕 புதிய செய்திகள்</h3><table>' + block(newOnes, 1) + '</table>' : '') +
     (left.length ? '<h3 style="margin:18px 0 4px">⏳ முந்தைய பட்டியலில் இருந்து (இன்னும் பதிவிடவில்லை)</h3><table>' + block(left, newOnes.length + 1) + '</table>' : '') +
     '<p>' + btn + '</p><p style="color:#888;font-size:12px">தேர்வு பக்கம் (Google Form): ' + url + '</p></div>';

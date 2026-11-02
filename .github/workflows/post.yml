@@ -36,7 +36,7 @@ env:
   POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
   GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}   # picture check: does the AI image show the news?
   SARVAM_API_KEY: ${{ secrets.SARVAM_API_KEY }}      # owner 30 Oct: free writers (skipped until the key is set)
-  DAILY_CAP: "1000"   # owner 31 Oct (4:48 PM): NO daily limit - every 2-hour round posts its top 3; only Instagram's own 50 a day applies
+  DAILY_CAP: "44"   # owner 31 Oct: no daily limit of our own - only Instagram's 50 a day (reels + stories); owner 2 Nov (review): the last 6 are kept for urgent news / power cuts
   CITY_ONLY: "0"      # owner 31 Oct: the whole district (top 3 per round decides)
   POST_MAX_AGE_DAYS: "0"      # owner 29 Oct 18:29: only news PUBLISHED TODAY is posted
   DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run && '1' || '' }}
@@ -65,14 +65,15 @@ jobs:
           else
             pip install -q requests==2.32.5 pillow==11.3.0
             pip install -q opencv-contrib-python-headless==4.10.0.84 pillow-avif-plugin==1.4.6 || echo 'photo tools not installed'      # owner 31 Oct: real news photos
-            python poster/post.py check 2>&1 | tee .last_check
+            set +e; python poster/post.py check 2>&1 | tee .last_check; CHECK_RC=${PIPESTATUS[0]}; set -e      # owner 2 Nov: a crash must not look green
           fi
           git config user.name "news360-bot"; git config user.email "news360-bot@users.noreply.github.com"
-          if grep -q "ready to post: [1-9]" .last_check || [ "$(date -u +%M)" -lt 5 ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then git add -f .last_check && git commit -qm "check log" && { git pull -q --rebase -X theirs && git push -q || git rebase --abort 2>/dev/null; } || true; fi
+          if grep -q "ready to post: [1-9]" .last_check || [ "$(date -u +%M)" -lt 5 ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then git add -f .last_check && git commit -qm "check log" && { for i in 1 2 3 4; do git pull -q --rebase -X theirs --autostash && git push -q && break; git rebase --abort 2>/dev/null; sleep $((i*3)); done; } || true; fi
           # owner 1 Nov: the list of posts already shared to the story (never twice) is saved after every check
-          if [ -f poster/story_shared.json ]; then git add -f poster/story_shared.json && git commit -qm "stories shared" && { git pull -q --rebase -X theirs && git push -q || git rebase --abort 2>/dev/null; } || true; fi
+          if [ -f poster/story_shared.json ]; then git add -f poster/story_shared.json && git commit -qm "stories shared" && { for i in 1 2 3 4 5; do git pull -q --rebase -X theirs --autostash && git push -q && break; git rebase --abort 2>/dev/null; sleep $((i*3)); done; } || true; fi
+          if [ "${CHECK_RC:-0}" != "0" ]; then echo "::error::post.py check crashed (exit $CHECK_RC) - nothing was posted in this run"; exit 1; fi
       - name: Watchdog - restart an overdue collection or writer (GitHub sometimes skips scheduled runs)
-        if: github.event_name == 'schedule' && env.BRIDGE_URL != ''
+        if: always() && github.event_name == 'schedule' && env.BRIDGE_URL != ''
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -99,7 +100,7 @@ jobs:
           case "$todo" in *collect*) gh workflow run research_free.yml -f dry=false && echo "news round was overdue: started now";; esac
           true
       - name: Keep the schedule alive (daily heartbeat)
-        if: github.event_name == 'schedule' && env.BRIDGE_URL != ''
+        if: always() && github.event_name == 'schedule' && env.BRIDGE_URL != ''
         run: |
           if [ "$(date -u +%H)" = "18" ] && [ "$(date -u +%M)" -lt 20 ]; then
             date -u +"%Y-%m-%d %H:%M UTC" > .heartbeat

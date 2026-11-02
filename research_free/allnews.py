@@ -42,9 +42,23 @@ OUTLET_WORDS = ["தினமலர்", "தினத்தந்தி", "த�
 
 
 def _get(url, timeout=40, headers=None):
-    r = requests.get(url, headers=headers or UA, timeout=timeout, allow_redirects=True)
-    r.raise_for_status()
-    return r
+    """owner 2 Nov (review): 38 of 77 articles 'could not be opened' in one round - a server error / timeout is tried again (3 tries)"""
+    last = None
+    for k in range(3):
+        try:
+            r = requests.get(url, headers=headers or UA, timeout=timeout, allow_redirects=True)
+            r.raise_for_status()
+            return r
+        except requests.HTTPError as e:
+            last = e
+            if e.response is not None and e.response.status_code < 500 and e.response.status_code != 429:
+                raise      # 403 / 404: trying again does not help
+        except (requests.ConnectionError, requests.Timeout) as e:
+            last = e
+            if k >= 1:
+                break      # a server that timed out twice is given up (a round must not wait minutes per link)
+        time.sleep(3 * (k + 1))
+    raise last
 
 
 # Coimbatore district places (city areas / taluks / towns / well-known villages). A story that names none of them AND names a state-wide or
@@ -511,3 +525,47 @@ def incomplete(text):
     must not write a reel from a fragment"""
     t = (text or "").strip()
     return len(re.findall(r"[஀-௿]", t)) < 120 or not SENTENCE_END.search(t)
+
+
+def _place_norm(t):
+    return (t or "").replace("\u0bc1\u0bbe", "\u0bc2").replace("ப்ப", "ப")      # மோகனுார் = மோகனூர், பள்ளிப்பாளையம் = பள்ளிபாளையம்
+
+
+CANON_PLACES = [w for w in dict.fromkeys(COIMBATORE_WORDS + TOWNS) if not w.isascii() and w not in ("கோவை", "கோயம்புத்தூர்")]
+
+
+def places_in(text):
+    """the district's towns / villages a text names (the district / city name itself is not counted) - owner 2 Nov (review)"""
+    t = text or ""
+    try:
+        import names
+        t = names.full_places(t)      # ப.வேலூர் -> பரமத்தி வேலூர், மே.பாளையம் -> மேட்டுப்பாளையம்
+    except Exception:
+        pass
+    for w in globals().get("NOT_PLACE", []):
+        t = t.replace(w, " ")
+    if "_no_city_roads" in globals():
+        t = globals()["_no_city_roads"](t)      # 'மேட்டுப்பாளையம் சாலை' is a road inside the city
+    for r_ in globals().get("TOWN_ROADS", []):
+        t = t.replace(r_, " ")
+    t = _place_norm(t)
+    return {w for w in CANON_PLACES if any(_place_norm(f) in t for f in _stem_forms(w) if len(f) >= 4)}
+
+
+def different_places(a, b):
+    """True when both headlines name a town / village of the district and they share none: 'வெண்ணந்தூர் கிராம சபை' and
+    'மோகனூர் கிராம சபை' are two news, never one (owner 2 Nov review: 30 of ~40 writer skips were such false duplicates)"""
+    x, y = places_in(a), places_in(b)
+    return bool(x and y and not (x & y))
+
+
+def written_elsewhere(headline, script):
+    """a written story whose headline names no Coimbatore-district place and whose first two sentences name another district / the
+    whole state is not Coimbatore news (the Namakkal RN-195 fix: Erode onion prices were written for the page)"""
+    if has_place(headline or ""):
+        return ""
+    body = re.sub(r"மேலும் செய்திகளுக்கு.*$", "", script or "")
+    first2 = " ".join(re.split(r"(?<=[.!?])\s+", body.strip())[:2])
+    if first2 and other_district(first2):
+        return "not Coimbatore district news (the story's first lines name another place and no Coimbatore place)"
+    return ""

@@ -3,12 +3,13 @@
 Twice a day (6:00 AM and 4:00 PM IST) the news of Dinamalar and Dinamani's Coimbatore pages ONLY is collected - by the article's own
 published time, in back-to-back windows (yesterday 4 PM -> 6 AM, then 6 AM -> 4 PM; a late or failed round continues from the last end).
 The list goes to the owner by e-mail with a check-box page (Apps Script bridge). The owner ticks news and presses Submit:
-EVERY ticked news is written and posted (no other check). No submit within 1 hour: the top 12 by importance are written and posted.
+EVERY ticked news is written and posted (no other check). No submit within 1 hour: the top 8 by importance are written and posted
+(owner 2 Nov: 12 -> 8; never a suicide, an obituary or a ceremony - only the owner's tick posts those).
 A submit after the automatic pick ADDS the extra ticked news. Already posted news is never listed again; news listed but not posted
 comes back in the next round's list while it is less than 24 hours old.
 
   python research_free/pick.py collect   -> collect, save the round, send the list (prints the round id)
-  python research_free/pick.py decide    -> wait for the submit (max WAIT_MIN) or pick the top 12; writes the links to pick_urls.txt
+  python research_free/pick.py decide    -> wait for the submit (max WAIT_MIN) or pick the top 8; writes the links to pick_urls.txt
   python research_free/pick.py late      -> links ticked after the decision and not written yet -> pick_urls.txt ('' when none)
 State: research_free/archive/pick_state.json (committed by the workflow)."""
 import datetime, difflib, hashlib, json, os, re, sys, time
@@ -21,11 +22,16 @@ import allnews      # noqa: E402
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 STATE = HERE / "archive" / "pick_state.json"
 URLS = HERE / "results" / "pick_urls.txt"
-AUTO_TOP = int(os.environ.get("PICK_AUTO_TOP", "12"))
+AUTO_TOP = int(os.environ.get("PICK_AUTO_TOP", "8"))      # owner 2 Nov: 12 -> 8
 WAIT_MIN = int(os.environ.get("PICK_WAIT_MIN", "60"))
 LEFT_HOURS = 24
 AD = re.compile(r"தள்ளுபடி|ஆஃபர்|ஆபர்|அள்ளுங்க|அள்ளுவோம்|விற்பனை தொடக்கம்|ஷோரூம்|புதிய கிளை திறப்பு|சிறப்பு விற்பனை")      # advertorials, not news
 DRY = os.environ.get("PICK_DRY", "") in ("1", "true", "yes")
+# owner 2 Nov: "do not ask me to confirm" - no e-mail; every round's top news (PICK_AUTO_TOP, 8 + 6 + 6 = 20 a day) is written at once.
+EMAIL = os.environ.get("PICK_EMAIL", "0") == "1"
+# owner 2 Nov: more than two papers - every Tamil outlet the collector already trusts for Coimbatore
+OUTLETS = {"dinamalar.com": "தினமலர்", "dinamani.com": "தினமணி", "dinakaran.com": "தினகரன்", "dailythanthi.com": "தினத்தந்தி",
+           "maalaimalar.com": "மாலைமலர்", "hindutamil.in": "இந்து தமிழ்", "polimernews.com": "பாலிமர்"}
 
 
 def log(*a):
@@ -108,18 +114,26 @@ def candidates(log_lines, since=None):
     try:
         cfgs = json.loads((HERE / "sources.json").read_text(encoding="utf-8"))
         for cfg in cfgs:
-            if "dinamani.com" in cfg["url"]:
-                items += allnews.from_listing(dict(cfg, limit=80))
+            if any(d in cfg["url"] for d in OUTLETS):      # owner 2 Nov: every Tamil outlet's Coimbatore page (was Dinamani only)
+                try:
+                    items += allnews.from_listing(dict(cfg, limit=80))
+                except Exception as e:
+                    log_lines.append(f"{cfg.get('name', cfg['url'])} list failed: {str(e)[:100]}")
     except Exception as e:
         log_lines.append(f"Dinamani list failed: {str(e)[:120]}")
     # the district list pages show only the latest ~20-40 news: Google / Bing news searches limited to the two papers fill the rest of the window
-    for q in ("கோவை", "கோயம்புத்தூர்", "பொள்ளாச்சி", "மேட்டுப்பாளையம்"):
-        for dom in ("dinamalar.com", "dinamani.com"):
-            for fn in (allnews.from_google, allnews.from_bing):
+    both = (allnews.from_google, allnews.from_bing)
+    searches = [(q, d, both) for q in ("கோவை", "கோயம்புத்தூர்", "பொள்ளாச்சி", "மேட்டுப்பாளையம்") for d in ("dinamalar.com", "dinamani.com")]
+    # owner 2 Nov: the other Tamil outlets - one Google search each (a round must stay a few minutes, not half an hour)
+    searches += [("கோவை", d, (allnews.from_google,)) for d in OUTLETS if d not in ("dinamalar.com", "dinamani.com")]
+    for q, dom, fns in searches:
+        if True:
+            for fn in fns:
                 try:
                     got = [x for x in fn(f"{q} site:{dom}") if dom in (x.get("site", "") + x.get("url", ""))
                            and not (since and when(x.get("published")) and when(x.get("published")) < since)]      # older than the window: not opened
-                    items += got
+                    got.sort(key=lambda x: str(x.get("published") or ""), reverse=True)
+                    items += got[:25]      # the newest 25 of a search (each Google link costs a decode)
                 except Exception as e:
                     log_lines.append(f"{fn.__name__} {dom} '{q}' failed: {str(e)[:80]}")
     seen, out = set(), []
@@ -131,7 +145,7 @@ def candidates(log_lines, since=None):
             except Exception:
                 continue
         u = u.split("?")[0].rstrip("/").replace("dinamani.com/amp/story/", "dinamani.com/").replace("://l-www.dinamalar.com", "://www.dinamalar.com")
-        if u not in seen and ("dinamalar.com/news" in u or "dinamani.com/" in u):
+        if u not in seen and ("dinamalar.com/news" in u or any(d in u for d in OUTLETS if d != "dinamalar.com")):
             seen.add(u)
             out.append(dict(it, url=u))
     return out
@@ -184,7 +198,7 @@ def check_article(it, recent):
     pub = art.get("published") or ""
     n = {"title": title, "snippet": art["text"][:400], "published": pub, "mentions": 1}
     return {"id": pid(it["url"]), "url": it["url"], "title": title, "summary": summary(art["text"], title),
-            "source": "தினமலர்" if "dinamalar.com" in it["url"] else "தினமணி", "published": pub, "category": category(title),
+            "source": next((v for k, v in OUTLETS.items() if k in it["url"]), "செய்தி"), "published": pub, "category": category(title),
             "score": collect.score(n), "power_cut": bool(collect._fr().is_power_cut(title))}, ""
 
 
@@ -201,6 +215,28 @@ def merge_same(items):
         else:
             out.append(it)
     return out
+
+
+# owner 2 Nov (morning round: a suicide, a 108-year-old's obituary, a temple ceremony were in the automatic 12): the automatic pick takes
+# only news people watch. The owner can still tick any of these - a ticked news is always posted.
+AUTO_SKIP = re.compile(r"தற்கொலை|தூக்கிட்டு|தூக்கில் தொங்கி|தூக்குப்போட்டு|தீக்குளி|விஷம் குடித்து|பூச்சிக்கொல்லி மருந்தை குடித்து|"
+                       r"காலமான|மறைவு|இரங்கல்|அஞ்சலி|நினைவு நாள்|suicide", re.I)
+# 2 Nov morning list: 'ஆராதனை திருவிழா', 'பொன் விழா, கருத்தரங்கம்', 'டிரெஸ் பர்ச்சேசில் ... வாங்கலாம்!', 'ஷாப்பிங் திருவிழா', 'மாடித்தோட்டம்'
+AUTO_LOW = re.compile(r"ஆராதனை|குருபூஜை|பொன் விழா|வெள்ளி விழா|வைர விழா|கருத்தரங்க|ஷாப்பிங்|பர்ச்சேஸ்|வாங்கலாம்|மாடித்தோட்ட")
+
+
+def auto_ok(it):
+    """'' = may be picked automatically, else why not"""
+    t = it.get("title") or ""
+    if AUTO_SKIP.search(t):
+        return "suicide / obituary - only when the owner ticks it"
+    if AUTO_LOW.search(t):
+        return "ceremony / shopping feature - only when the owner ticks it"
+    try:
+        import collect
+        return collect.low_interest(t, it.get("url") or "")
+    except Exception:
+        return ""
 
 
 def rank(items):
@@ -235,11 +271,27 @@ def cmd_collect():
     st = load_state()
     t_end = now()
     t_start = when(st.get("last_end")) or first_start(t_end)
-    rid = t_end.strftime("%Y-%m-%d_") + ("morning" if t_end.hour < 12 else "evening")
-    log(f"round {rid}: news published {t_start:%d %b %H:%M} -> {t_end:%d %b %H:%M} (Dinamalar + Dinamani Coimbatore)")
+    rid = t_end.strftime("%Y-%m-%d_%H")      # owner 2 Nov: 3 rounds a day (06 / 10 / 19); a late round keeps its own name
+    log(f"round {rid}: news published {t_start:%d %b %H:%M} -> {t_end:%d %b %H:%M} (" + ", ".join(OUTLETS.values()) + " - Coimbatore)")
+    try:      # owner 2 Nov: this round's order follows the insights read a moment ago
+        import learned
+        d_ = learned.load()
+        log(f"insights {d_.get('updated', '?')} ({d_.get('posts_measured', 0)} reels): topic weights {d_.get('topic_weight')}; best openings {(d_.get('top_openings') or [])[:2]}")
+    except Exception as e:
+        log("insights not loaded:", str(e)[:80])
     recent = recent_rows()
     lines = []
     cands = candidates(lines, t_start)
+    retry = st.setdefault("retry", {})      # owner 2 Nov (review): links that could not be opened are tried again (max 24 h)
+    have = {c["url"] for c in cands}
+    for u, r_ in list(retry.items()):
+        if (t_end - (when(r_.get("first")) or t_end)).total_seconds() > LEFT_HOURS * 3600:
+            retry.pop(u)
+        elif u not in have:
+            cands.append(dict(r_.get("it") or {"url": u}, _retry=True))
+    for c in cands:      # owner 2 Nov (review): still in the paper's list - a retry all the same (its window check is relaxed)
+        if c["url"] in retry:
+            c["_retry"] = True
     for l in lines:
         log(l)
     log(f"{len(cands)} links on the two papers' Coimbatore pages")
@@ -256,11 +308,15 @@ def cmd_collect():
             reasons["power cut - posted automatically"] = reasons.get("power cut - posted automatically", 0) + 1
             continue
         item, why = check_article(it, recent)
+        if why.startswith("could not open"):
+            retry.setdefault(it["url"], {"it": {k: v for k, v in it.items() if not k.startswith("_")}, "first": t_end.isoformat()})
+        else:
+            retry.pop(it["url"], None)
         if not item:
             reasons[why] = reasons.get(why, 0) + 1
             continue
         pt = when(item["published"])
-        if pt and pt < t_start:
+        if pt and pt < t_start and not (it.get("_retry") and (t_end - pt).total_seconds() < LEFT_HOURS * 3600):
             reasons["published before this window"] = reasons.get("published before this window", 0) + 1
             continue
         if pt and pt > t_end + datetime.timedelta(minutes=5):
@@ -283,6 +339,11 @@ def cmd_collect():
                                                   and not (allnews.has_place(it["title"]) or allnews.has_place(it.get("summary", "")[:300]))):
             pool.pop(k)
             continue
+        pk = when(it.get("picked_at"))
+        if pk and (t_end - pk).total_seconds() < 3 * 3600:
+            continue      # picked a moment ago: still being written
+        if pk:
+            log(f"picked but never written - offered again: {it['title'][:60]}")
         left.append(dict(it, leftover=True))
     new = rank(new)
     left = rank(left)
@@ -295,7 +356,9 @@ def cmd_collect():
     deadline = t_end + datetime.timedelta(minutes=WAIT_MIN)
     st["rounds"][rid] = {"window": [t_start.isoformat(), t_end.isoformat()], "ids": [x["id"] for x in items], "sent": False,
                          "deadline": deadline.isoformat(), "decided": None, "written": []}
-    if not DRY and items:
+    if not DRY and items and not EMAIL:
+        log(f"automatic pick (owner 2 Nov): no e-mail - the top {AUTO_TOP} are written at once")
+    elif not DRY and items:
         try:
             bridge_post("pickList", {"round": rid, "deadline": deadline.strftime("%I:%M %p").lstrip("0"), "auto_top": AUTO_TOP,
                                      "window": f"{t_start:%d %b %I:%M %p} – {t_end:%d %b %I:%M %p}",
@@ -303,7 +366,7 @@ def cmd_collect():
                                                | {"leftover": bool(x.get("leftover"))} for x in items]})
             st["rounds"][rid]["sent"] = True
             log("list e-mailed with the check-box page")
-        except Exception as e:      # the Apps Script was not updated yet / did not answer: the top 12 are posted without waiting
+        except Exception as e:      # the Apps Script was not updated yet / did not answer: the top 8 are posted without waiting
             log("COULD NOT E-MAIL THE LIST (update + redeploy apps_script/Code.gs):", str(e)[:200])
             if os.environ.get("PICK_REQUIRE_EMAIL") == "1":      # a round started by hand: stop, post nothing, the window stays open
                 raise SystemExit("the list could not be e-mailed - nothing posted; the next round collects this window again")
@@ -322,7 +385,8 @@ def round_order(rid):
     """'2026-11-01_morning' < '2026-11-01_evening' < '2026-11-02_morning' (1 Nov: sorted as text, 'evening' came BEFORE 'morning' -
     the 4 PM round decided on the morning round's ticks and posted nothing)"""
     day, _, part = str(rid).partition("_")
-    return day, {"morning": 0, "evening": 1}.get(part, 2), part
+    hour = {"morning": 6, "evening": 16}.get(part, int(part) if part.isdigit() else 99)
+    return day, hour, part
 
 
 def current_round(st):
@@ -345,7 +409,7 @@ def cmd_decide():
     pool = st.get("pool", {})
     deadline = when(rnd["deadline"])
     chosen, how = None, ""
-    while rnd.get("sent"):      # no e-mail went out: no one can tick - the top 12 at once
+    while rnd.get("sent"):      # no e-mail went out: no one can tick - the top 8 at once
         try:
             s = bridge_get("pickStatus", round=rid)
             if s.get("ok") and s.get("submitted"):
@@ -358,6 +422,10 @@ def cmd_decide():
         time.sleep(60)
     if chosen is None:
         items = rank([pool[i] for i in rnd["ids"] if i in pool])
+        left_out = [(x["title"], auto_ok(x)) for x in items if auto_ok(x)]
+        items = [x for x in items if not auto_ok(x)]
+        for t_, why_ in left_out:
+            log(f"   not picked automatically ({why_}): {t_[:70]}")
         chosen, how = [x["id"] for x in items[:AUTO_TOP]], f"no submit by {deadline:%I:%M %p} - automatic top {AUTO_TOP}"
         if not DRY:
             try:
@@ -369,7 +437,7 @@ def cmd_decide():
     rnd["written"] = sorted(set(rnd.get("written", [])) | set(chosen))
     for i in chosen:
         if i in pool:
-            pool[i]["written"] = True      # never offered again as an earlier (left-over) news
+            pool[i]["picked_at"] = now().isoformat()      # owner 2 Nov (review): 'written' only once it is really in the Sheet
     save_state(st)
     return write_urls([pool[i]["url"] for i in chosen if i in pool])
 
@@ -391,7 +459,7 @@ def cmd_late():
         log(f"owner ticked {len(extra)} more news after the decision - written now")
         rnd["written"] = sorted(set(rnd.get("written", [])) | set(extra))
         for i in extra:
-            pool[i]["written"] = True
+            pool[i]["picked_at"] = now().isoformat()
         save_state(st)
     return write_urls([pool[i]["url"] for i in extra])
 
@@ -469,6 +537,6 @@ if __name__ == "__main__":
     elif cmd == "verify":
         sys.exit(cmd_verify())
     elif cmd == "mark":
-        log(f"{mark_posted(recent_rows())} listed news now posted")
+        log(f"{mark_posted(recent_rows())} listed news now in the Sheet")
     else:
         sys.exit(__doc__)

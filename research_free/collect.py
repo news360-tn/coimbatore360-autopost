@@ -5,7 +5,7 @@ from pathlib import Path
 import requests
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-import llm, sources, run, allnews
+import llm, run, allnews
 
 IST = datetime.timezone(datetime.timedelta(hours=5, minutes=30))
 BRIDGE_URL, BRIDGE_KEY = os.environ.get("BRIDGE_URL", ""), os.environ.get("BRIDGE_KEY", "")
@@ -372,7 +372,7 @@ def same_news(a, b, filed=None, days=3):
     28 Oct: two shared words in short headlines matched old, other news ('140 மி.மீ. மழை' ~ RN-58, 'சர்வீஸ் சாலை குப்பை' ~ RN-69,
     '30ல் விவசாயிகள் குறைதீர் கூட்டம்' ~ RN-140): at least 3 shared stems, and only against stories filed in the last `days` days"""
     x, y = _stems(a), _stems(b)
-    if len(x) < 3 or len(y) < 3 or _fr().different_numbers(a, b) or _fr().different_power_cut(a, b):
+    if len(x) < 3 or len(y) < 3 or _fr().different_numbers(a, b) or _fr().different_power_cut(a, b) or allnews.different_places(a, b):
         return False
     f = _fr().pub_date(filed) if filed else None
     if f and (datetime.datetime.now(_fr().IST).date() - f).days > days:
@@ -406,10 +406,11 @@ def same_event_filed(art, recent, days=1):
     if not scripts:
         return ""
     key = len(scripts)
-    if key not in _EVENT_DF:
+    df = _EVENT_DF.get(key)
+    if df is None:      # owner 2 Nov (review): 3 writer threads share this cache - never clear-then-read (KeyError)
+        df = fr.event_df(scripts)
         _EVENT_DF.clear()
-        _EVENT_DF[key] = fr.event_df(scripts)
-    df = _EVENT_DF[key]
+        _EVENT_DF[key] = df
     mine = fr.pub_date(art.get("published")) or datetime.datetime.now(fr.IST).date()
     text = (art.get("title") or "") + " " + (art.get("text") or "")[:2500]
     for r in recent:
@@ -874,12 +875,17 @@ def file_story(art, res, errors_log, recent, scenes=None):
         d["scenes"], d["tamil_headline"]
     except Exception as e:
         return None, f"bad draft: {e}"
-    HARD = ("not grounded", "numbers not found", "fact-check", "source/outlet", "not a JSON", "missing key")
     # owner 25 Oct: a draft is NOT rejected for length, word count or validator problems. It is rewritten by the models (free, then Claude),
     # and whatever is left goes out with the problems written in its verification note for the owner to see.
-    hard = list(errors)
     # owner 29 Oct (RN-12): a draft whose words mostly do NOT come from a Tamil article is made up -> never filed (fake news rule).
     # Only for Tamil articles: an English article has no Tamil words to compare with, so the check would always fail there.
+    if not art.get("manual"):
+        try:
+            why = allnews.written_elsewhere(d.get("tamil_headline") or "", d.get("reel_script") or "")
+        except Exception:
+            why = ""
+        if why:      # owner 2 Nov (review): the Namakkal RN-195 fix, now here too
+            return None, why
     m_ = next((re.search(r"not grounded: only (\d+)%", e) for e in errors if "not grounded: only" in e), None)
     tamil_words = len(re.findall(r"[\u0B80-\u0BFF]{4,}", art.get("text") or ""))
     if m_ and int(m_.group(1)) < 50 and tamil_words >= 60:
@@ -1178,7 +1184,7 @@ def main():
     from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
     workers = max(1, int(os.environ.get("WRITE_WORKERS", "3")))      # stories written at the same time (the models answer in parallel)
     reserve = int(os.environ.get("RESERVE_MIN", "6")) * 60           # no new story is started this close to the deadline
-    turn, filed_titles, unsent = [0], [], []
+    filed_titles, unsent = [], []
     running = {}
     pool = ThreadPoolExecutor(max_workers=workers)
     while True:

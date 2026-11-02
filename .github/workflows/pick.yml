@@ -2,20 +2,21 @@ name: pick
 # Coimbatore 360 - owner 1 Nov. News is collected ONLY at 6:00 AM and 4:00 PM IST, from Dinamalar and Dinamani's Coimbatore pages, by
 # the article's published time (yesterday 4 PM -> 6 AM, then 6 AM -> 4 PM). The list is e-mailed with a check-box page.
 #   owner submits  -> EVERY ticked news is written, made into a reel and posted at once (no other check)
-#   no submit in 1 hour -> the top 12 by importance are written and posted
+#   no submit in 1 hour -> the top 8 by importance are written and posted
 #   ticked after that -> added (written and posted too)
 # Each reel is posted as soon as it is ready. Posted news never comes back; listed but not posted news returns in the next list (< 24 h).
 on:
   schedule:
-    - cron: "30 0 * * *"      # 06:00 IST
-    - cron: "30 10 * * *"     # 16:00 IST
+    - cron: "30 0 * * *"      # 06:00 IST - 8 news (owner 2 Nov: 20 a day, picked automatically from the insights order)
+    - cron: "30 4 * * *"      # 10:00 IST - 6 news (06-12 IST is the page's best time)
+    - cron: "30 13 * * *"     # 19:00 IST - 6 news (posted 20-22 IST, the page's next-best time)
   workflow_dispatch:
     inputs:
       dry:
         description: "1 = collect and show the list only (no e-mail, nothing written or posted)"
         default: "0"
       resume:
-        description: "1 = no new list: decide the LATEST round again (the owner's ticks, else the top 12), write and post it"
+        description: "1 = no new list: decide the LATEST round again (the owner's ticks, else the top 8), write and post it"
         default: "0"
 permissions:
   contents: write
@@ -32,9 +33,10 @@ jobs:
       BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
       BRIDGE_KEY: ${{ secrets.BRIDGE_KEY }}
       CITY_ONLY: "0"
-      PICK_AUTO_TOP: "12"
+      PICK_AUTO_TOP: ${{ github.event.schedule == '30 0 * * *' && '8' || '6' }}      # owner 2 Nov: 8 + 6 + 6 = 20 news a day
+      PICK_EMAIL: "0"      # owner 2 Nov: "do not ask me to confirm" - no list e-mail, the top news are written at once
       PICK_WAIT_MIN: "60"
-      PICK_REQUIRE_EMAIL: ${{ github.event_name == 'workflow_dispatch' && '1' || '0' }}      # by hand: no e-mail = stop (nothing posted)
+      PICK_REQUIRE_EMAIL: "0"
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       SARVAM_API_KEY: ${{ secrets.SARVAM_API_KEY }}
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -59,6 +61,11 @@ jobs:
         run: |
           pip install -q requests googlenewsdecoder==0.2.2 pillow
           pip install -q opencv-contrib-python-headless==4.10.0.84 pillow-avif-plugin==1.4.6 || echo 'photo tools not installed'
+      - name: Read the latest Instagram insights (this round's news follow what viewers watch and share now)
+        if: github.event_name != 'workflow_dispatch' || inputs.resume != '1'
+        timeout-minutes: 8
+        run: |      # owner 2 Nov: before EVERY round (was once a day at 02:10); not readable -> the last weights are used
+          python -u poster/insights.py 2>&1 | tail -4 || true
       - name: Collect and e-mail the list
         if: github.event_name != 'workflow_dispatch' || inputs.resume != '1'
         run: |
@@ -70,10 +77,10 @@ jobs:
         if: always() && (github.event_name != 'workflow_dispatch' || inputs.resume != '1')
         run: |
           git config user.name "news360-bot"; git config user.email "bot@users.noreply.github.com"
-          git add -f research_free/archive/pick_state.json research_free/results/pick.log 2>/dev/null || true
+          git add -f research_free/archive/pick_state.json research_free/results/pick.log poster/insights research_free/learned.json 2>/dev/null || true
           git commit -qm "pick: list sent" || true
           for i in 1 2 3 4 5; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null; sleep $((i*4)); done || true
-      - name: Wait for the owner's pick (max 1 hour), else the top 12
+      - name: Wait for the owner's pick (max 1 hour), else the top 8
         if: env.PICK_DRY != '1'
         run: |
           set -o pipefail
@@ -105,7 +112,8 @@ jobs:
           }
           write
           # news ticked AFTER the decision (late submit / second submit) is added: checked every 5 minutes for 40 minutes
-          for i in $(seq 1 8); do
+          [ "$PICK_EMAIL" = "1" ] || exit 0      # owner 2 Nov: no e-mail, so no late ticks to wait for
+          for i in $(seq 1 18); do      # owner 2 Nov (review): 90 minutes for a late tick (was 40)
             sleep 300
             python -u research_free/pick.py late 2>&1 | tee -a research_free/results/pick.log
             write
@@ -115,13 +123,13 @@ jobs:
         if: env.PICK_DRY != '1'
         run: |
           set -o pipefail      # the verify exit code must pass through tee
-          for i in $(seq 1 12); do
+          for i in $(seq 1 30); do      # owner 2 Nov: posts are 12+ minutes apart - 2.5 hours for 8 news (was 1 hour)
             python -u research_free/pick.py verify 2>&1 | tee -a research_free/results/pick.log && exit 0
             gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main -f "inputs[dry_run]=false" -f "inputs[prebuild]=false" >/dev/null 2>&1 || true      # post now, do not wait for GitHub's schedule
             sleep 300
           done
           python -u research_free/pick.py verify 2>&1 | tee -a research_free/results/pick.log && exit 0
-          echo "::error::some picked news is still not posted after 1 hour - see 'NOT POSTED' lines above"; exit 1
+          echo "::error::some picked news is still not posted after 2.5 hours - see 'NOT POSTED' lines above"; exit 1
       - name: Save logs and state
         if: always()
         run: |
