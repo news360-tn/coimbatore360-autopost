@@ -118,7 +118,7 @@ jobs:
             python -u research_free/pick.py late 2>&1 | tee -a research_free/results/pick.log
             write
           done
-      - name: Check that EVERY picked news is on Instagram (else start posting again; after 1 hour fail loudly - GitHub e-mails the owner)
+      - name: Check that EVERY picked news is on Instagram (else start posting again; after 2.5 hours fail loudly - GitHub e-mails the owner; held / stale news count as skipped)
         # owner 1 Nov: 7 of 12 ticked news were silently held by the poster ('stale') - a picked news may never stay unposted unnoticed
         if: env.PICK_DRY != '1'
         run: |

@@ -205,10 +205,43 @@ class EndToEndOwnerPick(unittest.TestCase):
             post._PICKED = None
         # verify: 1 posted, 2 waiting -> reported, the workflow retries and then fails loudly
         rows[0]["post_status"] = "Posted"
-        st = pick.picked_status(rnd, rows)
-        self.assertEqual(list(st.values()).count("posted"), 1)
-        self.assertTrue(all(v.startswith("queued") for k, v in st.items() if v != "posted"))
-        self.assertEqual(pick.picked_status(rnd, rows[:1])[pick.pid(urls[2])], "not written")
+        post.ALL_ROWS, post._PICKED = rows + [posted_before], set(rnd["written"])      # verify uses the same posting rule as post.py
+        try:
+            st = pick.picked_status(rnd, rows)
+            self.assertEqual(list(st.values()).count("posted"), 1)
+            self.assertTrue(all(v.startswith("queued") for k, v in st.items() if v != "posted"), st)
+            self.assertEqual(pick.picked_status(rnd, rows[:1])[pick.pid(urls[2])], "not written")
+        finally:
+            post.ALL_ROWS, post._PICKED = old_all, None
+
+    def test_held_news_is_skipped_not_waiting(self):      # 2 Nov run 41436128396: RN-141/142/143/146 held -> every round red
+        rnd = {"written": ["a1", "a2"], "decided": {"ids": ["a1", "a2"]}}
+        rows = [{"source": "https://x/a1", "story_id": "RN-141", "post_status": "Queued"},
+                {"source": "https://x/a2", "story_id": "RN-144", "post_status": "Queued"}]
+        old = (pick.pid, pick._never_posted)
+        pick.pid = lambda u: u.rstrip("/").split("/")[-1]
+        pick._never_posted = lambda r: "held: fact-check problems - numbers not found in the article: 1000" if r["story_id"] == "RN-141" else ""
+        try:
+            st = pick.picked_status(rnd, rows)
+        finally:
+            pick.pid, pick._never_posted = old
+        self.assertTrue(st["a1"].startswith("skipped RN-141: held"))
+        self.assertTrue(st["a2"].startswith("queued RN-144"))      # still waiting: the run keeps checking / fails if never posted
+
+    def test_never_posted_uses_the_posting_rule(self):
+        row = {"story_id": "RN-141", "verification": "NOT CLEAN problems: numbers not found in the article: 1000",
+               "location": "கோவை, பீளமேடு", "source": "", "caption": "", "reel_script": ""}
+        import post
+        old = post._location_still_wrong, post._real_numbers, post._skip_reason_base
+        post._location_still_wrong = lambda r, f: True
+        post._real_numbers = lambda p: p
+        post._skip_reason_base = lambda r: ""
+        try:
+            self.assertTrue(pick._never_posted(row).startswith("held: fact-check problems"))
+            row["verification"] = "CLEAN"
+            self.assertEqual(pick._never_posted(row), "")
+        finally:
+            post._location_still_wrong, post._real_numbers, post._skip_reason_base = old
 
     def test_workflow_checks_and_fails_loudly(self):
         wf = (ROOT / ".github" / "workflows" / "pick.yml").read_text(encoding="utf-8")

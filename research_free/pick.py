@@ -472,8 +472,20 @@ def pid_forms(url):
     return {pid(x) for x in forms if x}
 
 
+def _never_posted(row):
+    """owner 2 Nov (pick run 41436128396): a picked news that post.py will never post - held for a wrong fact / no town, stale,
+    a duplicate - is 'skipped', not 'still waiting' (it stayed 'Queued' and turned every round red). The same rule as post.py."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "poster"))
+        import post
+        return post.skip_reason(row) or ""
+    except Exception as e:
+        log("verify: posting rule not checked:", str(e)[:120])
+        return ""
+
+
 def picked_status(rnd, rows):
-    """owner 1 Nov: every picked news must be POSTED. -> {id: 'posted' | 'queued RN-x' | 'not written'}"""
+    """owner 1 Nov: every picked news must be POSTED. -> {id: 'posted' | 'queued RN-x' | 'skipped RN-x: why' | 'not written'}"""
     want = list(dict.fromkeys(list(rnd.get("written") or []) + list((rnd.get("decided") or {}).get("ids") or [])))
     by = {}
     for r in rows:
@@ -487,7 +499,8 @@ def picked_status(rnd, rows):
         elif r.get("coimbatore_link") or str(r.get("post_status") or "").lower().startswith("posted"):
             out[i] = "posted"
         else:
-            out[i] = f"queued {r.get('story_id')} ({r.get('post_status') or 'no status'})"
+            why = _never_posted(r)
+            out[i] = f"skipped {r.get('story_id')}: {why}" if why else f"queued {r.get('story_id')} ({r.get('post_status') or 'no status'})"
     return out
 
 
@@ -506,8 +519,11 @@ def cmd_verify():
             log(f"verify: bridge {a} failed: {e}")
     stat = picked_status(rnd, rows)
     title = {k: v.get("title", "") for k, v in st.get("pool", {}).items()}
-    bad = {k: v for k, v in stat.items() if v != "posted"}
-    log(f"verify {rid}: {len(stat) - len(bad)} of {len(stat)} picked news posted")
+    skipped = {k: v for k, v in stat.items() if v.startswith("skipped")}
+    bad = {k: v for k, v in stat.items() if v != "posted" and k not in skipped}
+    log(f"verify {rid}: {len(stat) - len(bad) - len(skipped)} of {len(stat)} picked news posted, {len(skipped)} skipped on purpose")
+    for k, v in skipped.items():
+        log(f"   SKIPPED {k}: {v[:160]} - {title.get(k, '')[:60]}")      # held / stale / duplicate: post.py never posts it
     for k, v in bad.items():
         log(f"   NOT POSTED {k}: {v} - {title.get(k, '')[:60]}")
     return 3 if bad else 0
