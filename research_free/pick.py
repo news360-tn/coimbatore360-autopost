@@ -188,6 +188,10 @@ def check_article(it, recent):
         return None, "not Coimbatore district"
     if AD.search(title):
         return None, "shop offer / advertisement"
+    # owner 3 Nov: the writer's own district check, run here too - a picked story the writer then refuses (another place in its first
+    # lines, e.g. a state political story on the district list) left the round short (10 AM round: 4 of 6 written)
+    if allnews.written_elsewhere(title, art.get("text") or ""):
+        return None, "not Coimbatore district"
     low = collect.low_interest(title, it["url"])
     if low and ("feature" in low or "editorial" in low):
         return None, low      # recipes, tips, opinion: not news (ceremonies / awards stay - the owner decides)
