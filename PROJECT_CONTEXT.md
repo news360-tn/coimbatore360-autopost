@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-02 | `dab6a61` | pick verify: held / stale picked news count as skipped, not waiting (run 41436128396 false alarm); Facebook record keeps the story id (owner 2 Nov) |
-| 2026-11-02 | `d0d9c18` | pick: list sent |
-| 2026-11-02 | `56b50dc` | pick: written and posted |
-| 2026-11-02 | `31796a0` | powercut: notices written |
-| 2026-11-02 | `63c6b44` | facebook RN-147 |
-| 2026-11-02 | `299165c` | powercut: notices written |
-| 2026-11-02 | `fb39b4c` | facebook RN-134 |
-| 2026-11-02 | `812204d` | Facebook: every Instagram post (news reel, carousel, ready reel, rasipalan) also posted to the page's Facebook page with a story; hashtags from fixed lists (owner 2 Nov) |
-| 2026-11-02 | `5e63af8` | powercut: notices written |
-| 2026-11-02 | `8d212f6` | stories shared |
-| 2026-11-02 | `6b76e27` | Coimbatore 360: 20 news a day picked automatically from 7 Tamil outlets by insights, no e-mail; full review fixes (owner 2 Nov) |
-| 2026-11-02 | `ee2312c` | pick: list sent |
-| 2026-11-02 | `1d64171` | A zero-padded date is not an invented number: '02 நவம்பர் 2026' in the caption held every story on 1-9 Nov (owner 2 Nov) |
-| 2026-10-31 | `b17eecc` | Every reel from the FULL article, told like a news reader; reels up to 90 s (owner 31 Oct) |
-| 2026-11-02 | `2a153ad` | the fact-check hold stops only FACTUAL problems; formatting-only flags (word count, line length, cut-off slide text) post - owner-ticked news must not be held for them |
-| 2026-11-02 | `f703d2e` | stories shared |
-| 2026-11-02 | `f515a92` | post.py: the entry point ran main() before the new skip_reason/news_hold were defined (NameError, every post run failed); entry point moved to the end + a test |
-| 2026-11-02 | `97c5b5a` | pick: written and posted |
-| 2026-11-02 | `d36565a` | rasipalan posted |
-| 2026-11-02 | `40bc5bc` | pick: list sent |
-| 2026-11-01 | `f51c1b8` | the fact-check / location hold also applies to owner ready reels (they skipped every news check before); RN-272 repost path |
-| 2026-11-01 | `f26a4d8` | writer must name the town or village from the article in location (a district alone is not allowed); a story whose location is only the district is held from posting (RN-272) |
-| 2026-11-01 | `1fa9d2b` | hold a story from posting when its fact-check found any problem or its location is unknown (RN-272); the verification label now shows the real check result instead of a fixed 'not checked by Claude yet' |
-| 2026-11-01 | `7d4ef29` | pick: written and posted |
-| 2026-11-01 | `32025f6` | pick: the evening round is the latest round (text sort put 'evening' before 'morning' - the 4 PM ticks were ignored); resume input to decide the latest round again |
-| 2026-11-01 | `d54f494` | pick: written and posted |
-| 2026-11-01 | `1bc2bec` | pick: list sent |
-| 2026-11-01 | `f981a49` | rasipalan: திதி / நட்சத்திரம் / யோகம் as Maalaimalar's daily panchangam (Vakya) prints them; own calculation only when not found |
-| 2026-11-01 | `40389cf` | stories shared |
-| 2026-11-01 | `26b3a7e` | story catch-up: a post shared once is remembered (poster/story_shared.json) - the rasipalan got a 2nd story |
+| 2026-11-03 | `ad885a1` | fix 3 Nov check: (1) workflow save steps retried 0 times - 'git rebase --abort' with no rebase exited the step under bash -e (RN-308's Facebook record was never saved; restored); (2) a fact-check flag about cut-off text / line length / word count posts; (3) a district-only location gets the first town the article names; (4) Coimbatore picker runs the writer's district check so a round is not left short |
+| 2026-11-03 | `582cd78` | powercut: notices written |
+| 2026-11-03 | `d155162` | stories shared |
+| 2026-11-03 | `4203015` | powercut: notices written |
+| 2026-11-03 | `fa86655` | powercut: notices written |
+| 2026-11-03 | `bc2a9d3` | powercut: notices written |
+| 2026-11-03 | `68ee105` | powercut: notices written |
+| 2026-11-03 | `26e9f53` | powercut: notices written |
+| 2026-11-03 | `91cb1b5` | pick: written and posted |
+| 2026-11-03 | `1d8b0d0` | powercut: notices written |
+| 2026-11-03 | `bb41b0e` | powercut: notices written |
+| 2026-11-03 | `1b87e5b` | powercut: notices written |
+| 2026-11-03 | `a9c5fce` | powercut: notices written |
+| 2026-11-03 | `3e96950` | facebook RN-154 |
+| 2026-11-03 | `d6a336e` | stories shared |
+| 2026-11-03 | `24d89ad` | powercut: notices written |
+| 2026-11-03 | `9055907` | facebook RN-162 |
+| 2026-11-03 | `eb482a8` | pick: list sent |
+| 2026-11-03 | `a24ce99` | facebook RN-157 |
+| 2026-11-03 | `c1e2bff` | powercut: notices written |
+| 2026-11-03 | `22a7dfc` | facebook RN-158 |
+| 2026-11-03 | `35c3d84` | pick: written and posted |
+| 2026-11-03 | `e815919` | powercut: notices written |
+| 2026-11-03 | `c9566ee` | powercut: notices written |
+| 2026-11-03 | `7023212` | powercut: notices written |
+| 2026-11-03 | `d27005b` | powercut: notices written |
+| 2026-11-03 | `5429e41` | stories shared |
+| 2026-11-03 | `dc19ecc` | facebook RN-156 |
+| 2026-11-03 | `7a4129c` | powercut: notices written |
+| 2026-11-03 | `e8f6dd4` | rasipalan posted |
 <!-- recent-changes:end -->
