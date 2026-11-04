@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-04 | `ca8b924` | hold: a checker note it marks itself as acceptable / not an error is not a problem (RN-334, 4 Nov) |
 | 2026-11-04 | `6925702` | post: retry the bridge queue read on timeout / 5xx (Apps Script answered after 120 s and RN-335 job failed before posting, 4 Nov) |
 | 2026-11-04 | `a89c6cb` | workflows: pin runners to ubuntu-24.04 - ubuntu-latest moved to 26.04 and Playwright cannot install Chromium there (post Install step failed 4 Nov) |
 | 2026-11-04 | `fec56c0` | powercut: notices written |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-04 | `75df9e7` | pick: written and posted |
 | 2026-11-04 | `66fd4a4` | powercut: notices written |
 | 2026-11-04 | `eee3786` | powercut: notices written |
-| 2026-11-04 | `05b859d` | facebook RN-172 |
 <!-- recent-changes:end -->
