@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-03 | `ef4d7d0` | hold rechecks: wording flags (ungrammatical / unclear) post; the district / city name itself (கோயம்புத்தூர் vs கோவை) is not an invented place (RN-146, RN-151) |
-| 2026-11-03 | `0b8dd20` | facebook RN-143 |
-| 2026-11-03 | `6813f5d` | hold rechecks (3 Nov): numbers the article writes in words / thousands / commas are found; 'incomplete sentence' / 'ends abruptly' flags are formatting; a district-only location posts when the story's own text names the town |
-| 2026-11-03 | `613d0ee` | powercut: notices written |
-| 2026-11-03 | `b10986e` | powercut: notices written |
-| 2026-11-03 | `ad885a1` | fix 3 Nov check: (1) workflow save steps retried 0 times - 'git rebase --abort' with no rebase exited the step under bash -e (RN-308's Facebook record was never saved; restored); (2) a fact-check flag about cut-off text / line length / word count posts; (3) a district-only location gets the first town the article names; (4) Coimbatore picker runs the writer's district check so a round is not left short |
-| 2026-11-03 | `582cd78` | powercut: notices written |
-| 2026-11-03 | `d155162` | stories shared |
-| 2026-11-03 | `4203015` | powercut: notices written |
-| 2026-11-03 | `fa86655` | powercut: notices written |
-| 2026-11-03 | `bc2a9d3` | powercut: notices written |
-| 2026-11-03 | `68ee105` | powercut: notices written |
-| 2026-11-03 | `26e9f53` | powercut: notices written |
-| 2026-11-03 | `91cb1b5` | pick: written and posted |
-| 2026-11-03 | `1d8b0d0` | powercut: notices written |
-| 2026-11-03 | `bb41b0e` | powercut: notices written |
-| 2026-11-03 | `1b87e5b` | powercut: notices written |
-| 2026-11-03 | `a9c5fce` | powercut: notices written |
-| 2026-11-03 | `3e96950` | facebook RN-154 |
-| 2026-11-03 | `d6a336e` | stories shared |
-| 2026-11-03 | `24d89ad` | powercut: notices written |
-| 2026-11-03 | `9055907` | facebook RN-162 |
-| 2026-11-03 | `eb482a8` | pick: list sent |
-| 2026-11-03 | `a24ce99` | facebook RN-157 |
-| 2026-11-03 | `c1e2bff` | powercut: notices written |
-| 2026-11-03 | `22a7dfc` | facebook RN-158 |
-| 2026-11-03 | `35c3d84` | pick: written and posted |
-| 2026-11-03 | `e815919` | powercut: notices written |
-| 2026-11-03 | `c9566ee` | powercut: notices written |
-| 2026-11-03 | `7023212` | powercut: notices written |
+| 2026-11-04 | `a89c6cb` | workflows: pin runners to ubuntu-24.04 - ubuntu-latest moved to 26.04 and Playwright cannot install Chromium there (post Install step failed 4 Nov) |
+| 2026-11-04 | `fec56c0` | powercut: notices written |
+| 2026-11-04 | `88c83c7` | stories shared |
+| 2026-11-04 | `8a8436b` | powercut: notices written |
+| 2026-11-04 | `34ca964` | powercut: notices written |
+| 2026-11-04 | `fa3d52b` | powercut: notices written |
+| 2026-11-04 | `0121b56` | powercut: notices written |
+| 2026-11-04 | `0115a63` | facebook RN-182 |
+| 2026-11-04 | `a12cd57` | pick: written and posted |
+| 2026-11-04 | `0a218d1` | powercut: notices written |
+| 2026-11-04 | `ba6ee1e` | facebook RN-183 |
+| 2026-11-04 | `54ab7ef` | facebook RN-184 |
+| 2026-11-04 | `979d1f8` | facebook RN-181 |
+| 2026-11-04 | `2d12d9f` | facebook RN-180 |
+| 2026-11-04 | `f2163ae` | pick: list sent |
+| 2026-11-04 | `14434c8` | powercut: notices written |
+| 2026-11-04 | `1fe5995` | powercut: notices written |
+| 2026-11-04 | `9acdba8` | powercut: notices written |
+| 2026-11-04 | `95c11c4` | stories shared |
+| 2026-11-04 | `918396b` | powercut: notices written |
+| 2026-11-04 | `070118e` | powercut: notices written |
+| 2026-11-04 | `d79ac5c` | powercut: notices written |
+| 2026-11-04 | `afc7fa8` | powercut: notices written |
+| 2026-11-04 | `58256e6` | powercut: notices written |
+| 2026-11-04 | `10b1d4b` | facebook RN-176 |
+| 2026-11-04 | `75df9e7` | pick: written and posted |
+| 2026-11-04 | `66fd4a4` | powercut: notices written |
+| 2026-11-04 | `eee3786` | powercut: notices written |
+| 2026-11-04 | `05b859d` | facebook RN-172 |
+| 2026-11-04 | `6c73c43` | facebook RN-169 |
 <!-- recent-changes:end -->
