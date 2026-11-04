@@ -47,7 +47,7 @@ env:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 12      # also makes the automatic pictures (max 7 min per run)
     outputs:
       ready: ${{ steps.chk.outputs.ready }}
@@ -124,7 +124,7 @@ jobs:
   post:
     needs: check
     if: needs.check.outputs.ready == '1'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 90
     strategy:
       fail-fast: false
