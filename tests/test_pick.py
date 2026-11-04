@@ -243,6 +243,31 @@ class EndToEndOwnerPick(unittest.TestCase):
         finally:
             post._location_still_wrong, post._real_numbers, post._skip_reason_base = old
 
+    def test_refused_pick_is_skipped_and_not_offered_again(self):      # 3 Nov: the gold-seizure news ('duplicate after write') kept 3 rounds red
+        import tempfile
+        url = "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/gold/1"
+        k = pick.pid(url)
+        st = {"pool": {k: {"url": url, "title": "பெண் பயணி கடத்தி வந்த ரூ.1 கோடி தங்கம் பறிமுதல்"}},
+              "rounds": {"2026-11-03_07": {"written": [k], "decided": {"ids": [k]}}}}
+        old = pick.REFUSED_FILE
+        pick.REFUSED_FILE = Path(tempfile.mkdtemp()) / "pick_refused.json"
+        pick.REFUSED_FILE.write_text(json.dumps({url: "not filed: duplicate after write"}), encoding="utf-8")
+        try:
+            self.assertEqual(pick.mark_refused(st), 1)
+        finally:
+            pick.REFUSED_FILE = old
+        self.assertEqual(st["pool"][k]["refused"], "not filed: duplicate after write")
+        rnd = st["rounds"]["2026-11-03_07"]
+        self.assertTrue(pick.picked_status(rnd, [])[k].startswith("skipped: the writer refused it"))
+        self.assertEqual(pick.picked_status({"written": [k]}, [])[k], "not written")      # not refused -> still reported
+        src = (ROOT / "research_free" / "pick.py").read_text(encoding="utf-8")
+        self.assertIn('if it.get("refused"):', src)      # never a leftover again
+
+    def test_collect_saves_refusals_for_the_pick(self):
+        import collect
+        self.assertTrue("not filed: duplicate after write".startswith(collect.REFUSED))
+        self.assertFalse("could not open the article: 502".startswith(collect.REFUSED))      # tried again, not refused
+
     def test_workflow_checks_and_fails_loudly(self):
         wf = (ROOT / ".github" / "workflows" / "pick.yml").read_text(encoding="utf-8")
         self.assertIn("pick.py verify", wf)

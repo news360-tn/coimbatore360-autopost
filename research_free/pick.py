@@ -343,6 +343,8 @@ def cmd_collect():
                                                   and not (allnews.has_place(it["title"]) or allnews.has_place(it.get("summary", "")[:300]))):
             pool.pop(k)
             continue
+        if it.get("refused"):
+            continue      # owner 4 Nov: the writer said no (e.g. duplicate after write) - kept in the pool so it is not "new" again
         pk = when(it.get("picked_at"))
         if pk and (t_end - pk).total_seconds() < 3 * 3600:
             continue      # picked a moment ago: still being written
@@ -496,9 +498,12 @@ def picked_status(rnd, rows):
         for i in pid_forms(r.get("source")):
             by.setdefault(i, r)
     out = {}
+    refused = rnd.get("refused") or {}
     for i in want:
         r = by.get(i)
-        if not r:
+        if not r and i in refused:
+            out[i] = f"skipped: the writer refused it - {refused[i]}"
+        elif not r:
             out[i] = "not written"
         elif r.get("coimbatore_link") or str(r.get("post_status") or "").lower().startswith("posted"):
             out[i] = "posted"
@@ -549,6 +554,28 @@ def cmd_verify():
     return 3 if bad else 0
 
 
+REFUSED_FILE = HERE / "results" / "pick_refused.json"
+
+
+def mark_refused(st):
+    """owner 4 Nov (3 Nov rounds all red): a picked news the writer refused (duplicate after write, other district, no text) is
+    remembered - never offered again as a leftover, and the round check counts it as skipped, not 'not written'"""
+    try:
+        ref = json.loads(REFUSED_FILE.read_text(encoding="utf-8"))
+    except Exception:
+        return 0
+    rid, rnd = current_round(st)
+    pool, n = st.get("pool", {}), 0
+    for url, why in ref.items():
+        for k in pid_forms(url):
+            if k in pool and not pool[k].get("refused"):
+                pool[k]["refused"] = why
+                n += 1
+            if rnd is not None and k in (rnd.get("written") or []) + list((rnd.get("decided") or {}).get("ids") or []):
+                rnd.setdefault("refused", {})[k] = why
+    return n
+
+
 def mark_posted(rows):
     """pool items whose link is now in the Sheet are 'posted' (never listed again)"""
     st = load_state()
@@ -558,6 +585,9 @@ def mark_posted(rows):
         if it["url"] in srcs and not it.get("posted"):
             it["posted"] = True
             n += 1
+    r = mark_refused(st)
+    if r:
+        log(f"{r} picked news refused by the writer - not offered again")
     save_state(st)
     return n
 
