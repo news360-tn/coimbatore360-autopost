@@ -84,7 +84,14 @@ jobs:
         if: env.PICK_DRY != '1'
         run: |
           set -o pipefail
+          save_state() {      # 5 Nov (RN-188): post runs read pick_state.json from main - save the picked ids BEFORE posting, or a picked
+                              # news published yesterday is skipped as 'stale' until this job ends 2.5 hours later
+            git add -f research_free/archive/pick_state.json 2>/dev/null || true
+            git commit -qm "pick: picked news saved" || true
+            for i in 1 2 3 4 5; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*4)); done || true
+          }
           python -u research_free/pick.py decide 2>&1 | tee -a research_free/results/pick.log
+          save_state
       - name: Write, make the reels and post every picked news
         if: env.PICK_DRY != '1'
         env:
@@ -97,6 +104,12 @@ jobs:
           FRESH_DAYS: "1"
           DAILY_CAP: "1000"
         run: |
+          save_state() {      # 5 Nov (RN-188): post runs read pick_state.json from main - save the picked ids BEFORE posting, or a picked
+                              # news published yesterday is skipped as 'stale' until this job ends 2.5 hours later
+            git add -f research_free/archive/pick_state.json 2>/dev/null || true
+            git commit -qm "pick: picked news saved" || true
+            for i in 1 2 3 4 5; do git pull -q --rebase -X theirs --autostash origin main && git push -q && break; git rebase --abort 2>/dev/null || true; sleep $((i*4)); done || true
+          }
           write() {
             urls=$(cat research_free/results/pick_urls.txt 2>/dev/null | tr '\n' ' ')
             n=$(echo $urls | wc -w)
@@ -107,6 +120,7 @@ jobs:
               echo "writer exit $? (try $TRY)" >> research_free/results/pick_write.log; sleep 30
             done
             python -u research_free/pick.py mark >> research_free/results/pick.log 2>&1 || true
+            save_state
             gh api -X POST "repos/$GH_REPO/actions/workflows/post.yml/dispatches" -f ref=main -f "inputs[dry_run]=false" -f "inputs[prebuild]=false" >/dev/null 2>&1 || true      # post now (GitHub's 5-minute schedule often runs only hourly)
             tail -25 research_free/results/pick_write.log
           }

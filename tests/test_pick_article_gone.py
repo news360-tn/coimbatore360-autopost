@@ -39,5 +39,16 @@ class ArticleGone(unittest.TestCase):
             self.assertEqual(pick.cmd_verify(), 3)
 
 
+class PickStateSavedBeforePosting(unittest.TestCase):
+    """5 Nov RN-188: post runs read pick_state.json from main, so the pick workflow must push it before it starts any post run"""
+
+    def test_save_before_dispatch(self):
+        wf = (Path(__file__).resolve().parent.parent / ".github" / "workflows" / "pick.yml").read_text(encoding="utf-8")
+        w = wf.split("write() {", 1)[1]
+        self.assertLess(w.index("save_state"), w.index("post.yml/dispatches"))
+        d = wf.split("pick.py decide", 1)[1]
+        self.assertLess(d.index("save_state"), d.index("- name:"))
+
+
 if __name__ == "__main__":
     unittest.main()
