@@ -508,6 +508,18 @@ def picked_status(rnd, rows):
     return out
 
 
+def _article_gone(url):
+    """True only when the paper answers 404 / 410 for the article (deleted). A timeout or 5xx is NOT gone - it is tried again."""
+    if not url:
+        return False
+    try:
+        import requests
+        r = requests.get(url, timeout=30, allow_redirects=True, headers={"User-Agent": "Mozilla/5.0"})
+        return r.status_code in (404, 410)
+    except Exception:
+        return False
+
+
 def cmd_verify():
     """exit 0 = every news picked in the latest round is on Instagram; exit 3 = some are not (the workflow retries, then fails loudly)"""
     st = load_state()
@@ -522,7 +534,11 @@ def cmd_verify():
         except Exception as e:
             log(f"verify: bridge {a} failed: {e}")
     stat = picked_status(rnd, rows)
-    title = {k: v.get("title", "") for k, v in st.get("pool", {}).items()}
+    pool = st.get("pool", {})
+    for k, v in list(stat.items()):      # 5 Nov (pick runs 41973850497 + 01:42 UTC): the paper deleted the article - it can never be written
+        if v == "not written" and _article_gone((pool.get(k) or {}).get("url", "")):
+            stat[k] = "skipped (not written): the newspaper removed the article (page not found)"
+    title = {k: v.get("title", "") for k, v in pool.items()}
     skipped = {k: v for k, v in stat.items() if v.startswith("skipped")}
     bad = {k: v for k, v in stat.items() if v != "posted" and k not in skipped}
     log(f"verify {rid}: {len(stat) - len(bad) - len(skipped)} of {len(stat)} picked news posted, {len(skipped)} skipped on purpose")
