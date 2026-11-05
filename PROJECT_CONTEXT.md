@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-04 | `ca8b924` | hold: a checker note it marks itself as acceptable / not an error is not a problem (RN-334, 4 Nov) |
-| 2026-11-04 | `6925702` | post: retry the bridge queue read on timeout / 5xx (Apps Script answered after 120 s and RN-335 job failed before posting, 4 Nov) |
-| 2026-11-04 | `a89c6cb` | workflows: pin runners to ubuntu-24.04 - ubuntu-latest moved to 26.04 and Playwright cannot install Chromium there (post Install step failed 4 Nov) |
-| 2026-11-04 | `fec56c0` | powercut: notices written |
-| 2026-11-04 | `88c83c7` | stories shared |
-| 2026-11-04 | `8a8436b` | powercut: notices written |
-| 2026-11-04 | `34ca964` | powercut: notices written |
-| 2026-11-04 | `fa3d52b` | powercut: notices written |
-| 2026-11-04 | `0121b56` | powercut: notices written |
-| 2026-11-04 | `0115a63` | facebook RN-182 |
-| 2026-11-04 | `a12cd57` | pick: written and posted |
-| 2026-11-04 | `0a218d1` | powercut: notices written |
-| 2026-11-04 | `ba6ee1e` | facebook RN-183 |
-| 2026-11-04 | `54ab7ef` | facebook RN-184 |
-| 2026-11-04 | `979d1f8` | facebook RN-181 |
-| 2026-11-04 | `2d12d9f` | facebook RN-180 |
-| 2026-11-04 | `f2163ae` | pick: list sent |
-| 2026-11-04 | `14434c8` | powercut: notices written |
-| 2026-11-04 | `1fe5995` | powercut: notices written |
-| 2026-11-04 | `9acdba8` | powercut: notices written |
-| 2026-11-04 | `95c11c4` | stories shared |
-| 2026-11-04 | `918396b` | powercut: notices written |
-| 2026-11-04 | `070118e` | powercut: notices written |
-| 2026-11-04 | `d79ac5c` | powercut: notices written |
-| 2026-11-04 | `afc7fa8` | powercut: notices written |
-| 2026-11-04 | `58256e6` | powercut: notices written |
-| 2026-11-04 | `10b1d4b` | facebook RN-176 |
-| 2026-11-04 | `75df9e7` | pick: written and posted |
-| 2026-11-04 | `66fd4a4` | powercut: notices written |
-| 2026-11-04 | `eee3786` | powercut: notices written |
+| 2026-11-05 | `b13dc76` | pick verify: a picked article the paper deleted (404/410) counts as skipped, not waited on for 2.5 h (pick runs failed 5 Nov on the removed hallmark-gold article) |
+| 2026-11-05 | `2b8ef4e` | powercut: notices written |
+| 2026-11-05 | `f1db45d` | pick: written and posted |
+| 2026-11-05 | `cd01f05` | facebook RN-203 |
+| 2026-11-05 | `dfbb5a2` | powercut: notices written |
+| 2026-11-05 | `f53151f` | facebook RN-201 |
+| 2026-11-05 | `ebff10d` | facebook RN-200 |
+| 2026-11-05 | `6ac407d` | facebook RN-202 |
+| 2026-11-05 | `477196b` | facebook RN-199 |
+| 2026-11-05 | `5267f29` | pick: list sent |
+| 2026-11-05 | `debd04a` | powercut: notices written |
+| 2026-11-05 | `b74228d` | powercut: notices written |
+| 2026-11-05 | `d4ccb05` | powercut: notices written |
+| 2026-11-05 | `9592bd5` | powercut: notices written |
+| 2026-11-05 | `e980a21` | facebook RN-196 |
+| 2026-11-05 | `20e079d` | powercut: notices written |
+| 2026-11-05 | `36cc209` | powercut: notices written |
+| 2026-11-05 | `f59f193` | facebook RN-194 |
+| 2026-11-05 | `aed4e2b` | powercut: notices written |
+| 2026-11-05 | `d855169` | powercut: notices written |
+| 2026-11-05 | `22372bf` | facebook RN-197 |
+| 2026-11-05 | `3ca5d27` | facebook RN-198 |
+| 2026-11-05 | `d2ff7d2` | facebook RN-195 |
+| 2026-11-05 | `33b49e1` | pick: written and posted |
+| 2026-11-05 | `aca5edf` | powercut: notices written |
+| 2026-11-05 | `6f61ff9` | powercut: notices written |
+| 2026-11-05 | `93d3ff3` | powercut: notices written |
+| 2026-11-05 | `08997da` | stories shared |
+| 2026-11-05 | `075e50b` | powercut: notices written |
+| 2026-11-05 | `689eed3` | pick: list sent |
 <!-- recent-changes:end -->
