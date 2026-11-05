@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-05 | `8b72904` | pick: push pick_state.json right after the decision and after each write, before post runs start (RN-188 was skipped as stale for 2.5 h because post runs could not see it was picked) |
 | 2026-11-05 | `b13dc76` | pick verify: a picked article the paper deleted (404/410) counts as skipped, not waited on for 2.5 h (pick runs failed 5 Nov on the removed hallmark-gold article) |
 | 2026-11-05 | `2b8ef4e` | powercut: notices written |
 | 2026-11-05 | `f1db45d` | pick: written and posted |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-05 | `93d3ff3` | powercut: notices written |
 | 2026-11-05 | `08997da` | stories shared |
 | 2026-11-05 | `075e50b` | powercut: notices written |
-| 2026-11-05 | `689eed3` | pick: list sent |
 <!-- recent-changes:end -->
