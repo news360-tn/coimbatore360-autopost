@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-09 | `c617ca9` | ig-comments: put the encrypted report in the log (artifact host not reachable) |
 | 2026-11-09 | `52579dc` | ig-comments: read-only, encrypted report of comments on recent posts (manual run only) |
 | 2026-11-09 | `b64bfd6` | powercut: notices written |
 | 2026-11-09 | `692c0ef` | pick: written and posted |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-09 | `d027b08` | facebook retry |
 | 2026-11-09 | `7a0438b` | facebook retry |
 | 2026-11-09 | `d077c35` | facebook RN-274 |
-| 2026-11-09 | `7f3c25b` | powercut: notices written |
 <!-- recent-changes:end -->
