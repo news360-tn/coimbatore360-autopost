@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-05 | `8b72904` | pick: push pick_state.json right after the decision and after each write, before post runs start (RN-188 was skipped as stale for 2.5 h because post runs could not see it was picked) |
-| 2026-11-05 | `b13dc76` | pick verify: a picked article the paper deleted (404/410) counts as skipped, not waited on for 2.5 h (pick runs failed 5 Nov on the removed hallmark-gold article) |
-| 2026-11-05 | `2b8ef4e` | powercut: notices written |
-| 2026-11-05 | `f1db45d` | pick: written and posted |
-| 2026-11-05 | `cd01f05` | facebook RN-203 |
-| 2026-11-05 | `dfbb5a2` | powercut: notices written |
-| 2026-11-05 | `f53151f` | facebook RN-201 |
-| 2026-11-05 | `ebff10d` | facebook RN-200 |
-| 2026-11-05 | `6ac407d` | facebook RN-202 |
-| 2026-11-05 | `477196b` | facebook RN-199 |
-| 2026-11-05 | `5267f29` | pick: list sent |
-| 2026-11-05 | `debd04a` | powercut: notices written |
-| 2026-11-05 | `b74228d` | powercut: notices written |
-| 2026-11-05 | `d4ccb05` | powercut: notices written |
-| 2026-11-05 | `9592bd5` | powercut: notices written |
-| 2026-11-05 | `e980a21` | facebook RN-196 |
-| 2026-11-05 | `20e079d` | powercut: notices written |
-| 2026-11-05 | `36cc209` | powercut: notices written |
-| 2026-11-05 | `f59f193` | facebook RN-194 |
-| 2026-11-05 | `aed4e2b` | powercut: notices written |
-| 2026-11-05 | `d855169` | powercut: notices written |
-| 2026-11-05 | `22372bf` | facebook RN-197 |
-| 2026-11-05 | `3ca5d27` | facebook RN-198 |
-| 2026-11-05 | `d2ff7d2` | facebook RN-195 |
-| 2026-11-05 | `33b49e1` | pick: written and posted |
-| 2026-11-05 | `aca5edf` | powercut: notices written |
-| 2026-11-05 | `6f61ff9` | powercut: notices written |
-| 2026-11-05 | `93d3ff3` | powercut: notices written |
-| 2026-11-05 | `08997da` | stories shared |
-| 2026-11-05 | `075e50b` | powercut: notices written |
+| 2026-11-09 | `52579dc` | ig-comments: read-only, encrypted report of comments on recent posts (manual run only) |
+| 2026-11-09 | `b64bfd6` | powercut: notices written |
+| 2026-11-09 | `692c0ef` | pick: written and posted |
+| 2026-11-09 | `e2c035e` | powercut: notices written |
+| 2026-11-09 | `82f6759` | powercut: notices written |
+| 2026-11-09 | `11fe716` | powercut: notices written |
+| 2026-11-09 | `ff2eda2` | powercut: notices written |
+| 2026-11-09 | `68064eb` | facebook retry |
+| 2026-11-09 | `4693f40` | facebook retry |
+| 2026-11-09 | `90e6812` | facebook RN-281 |
+| 2026-11-09 | `fcedb0a` | pick: picked news saved |
+| 2026-11-09 | `7af11ff` | pick: picked news saved |
+| 2026-11-09 | `6795e68` | pick: list sent |
+| 2026-11-09 | `bb4d539` | powercut: notices written |
+| 2026-11-09 | `b129972` | powercut: notices written |
+| 2026-11-09 | `3237306` | powercut: notices written |
+| 2026-11-09 | `7bfb268` | powercut: notices written |
+| 2026-11-09 | `ca06b67` | powercut: notices written |
+| 2026-11-09 | `dd03325` | powercut: notices written |
+| 2026-11-09 | `0b3b159` | powercut: notices written |
+| 2026-11-09 | `f313552` | powercut: notices written |
+| 2026-11-09 | `862c6f9` | powercut: notices written |
+| 2026-11-09 | `d567b0c` | powercut: notices written |
+| 2026-11-09 | `5b860bc` | pick: written and posted |
+| 2026-11-09 | `1f2bde2` | powercut: notices written |
+| 2026-11-09 | `65a31f4` | powercut: notices written |
+| 2026-11-09 | `d027b08` | facebook retry |
+| 2026-11-09 | `7a0438b` | facebook retry |
+| 2026-11-09 | `d077c35` | facebook RN-274 |
+| 2026-11-09 | `7f3c25b` | powercut: notices written |
 <!-- recent-changes:end -->
