@@ -760,3 +760,107 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":1,"updated":0} 
 stories: 0
+writing [N]: நாளை மின்தடை
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (19s)
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  slide 2 line 2 is cut off mid-phrase ('், விஸ்வபாரதி பார்க்') - write a complete short phrase
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ர்டன், விஸ்வபாரதி பார்க்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (32s)
+attempt 2 gemini/gemini-3-flash-preview: 2 problems
+  slide 2 line 2 is cut off mid-phrase ('், விஸ்வபாரதி பார்க்') - write a complete short phrase
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ர்டன், விஸ்வபாரதி பார்க்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (13s)
+attempt 3 gemini/gemini-3-flash-preview: 1 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 4 groq/qwen/qwen3.8-27b: 2 problems
+  slide 2 line 2 is cut off mid-phrase ('், விஸ்வபாரதி பார்க்') - write a complete short phrase
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ர்டன், விஸ்வபாரதி பார்க்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 1 problems
+  reel_script calls 'ஆர்.டி.ஓ. ஆபீஸ்' a 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (Revenue Divisional Officer office), which is a different place name than the article's 'ஆர்.டி.ஓ. ஆபீஸ்'
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  fact-check: reel_script calls 'ஆர்.டி.ஓ. ஆபீஸ்' a 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (Revenue Divisional Officer office), which is a different place name than the article's 'ஆர்.டி.ஓ. ஆபீஸ்'
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 8 problems
+  reel_script says the cause is maintenance work (பராமரிப்புப் பணிகள்), but the article gives no reason for the power cut
+  reel_script names the date as நவம்பர் 11ஆம் தேதி செவ்வாய்க்கிழமை, which is not stated in the article
+  reel_script calls the office ராஜன் நகர், வருவாய் கோட்டாட்சியர் ஆபீஸ், but the article says ஆர்.டி.ஓ. ஆபீஸ; 'வருவாய் கோட்டாட்சியர்' is an added description not in the article
+  reel_script says 'ஒரு பகுதிகளிலும்' which is ungrammatical and mixes plural with singular
+  reel_script says 'ராஜன் நகர்... மின்விநியோகம் இருக்காது' and lists the RDO office and other places as affected by 'மின்விநியோகம் இருக்காது' while the article only lists them as affected areas of the cut, so the phrasing is not clearly faithful
+  reel_script states the duration as '5 மணி நேரம்', a derived figure not stated in the article
+  caption repeats the maintenance-work cause and the date 'நவ். 11, செவ்வாய்க்கிழமை' which are not in the article
+  slides_spec says 'காரணம்' cause phrase ('பழங்கரை துணை மின் நிலையம் காரணம்') is ungrammatical and does not clearly state the reason
+claude rewrite 3 anthropic/claude-haiku-5-5: 8 problems
+  fact-check: reel_script says the cause is maintenance work (பராமரிப்புப் பணிகள்), but the article gives no reason for the power cut
+  fact-check: reel_script names the date as நவம்பர் 11ஆம் தேதி செவ்வாய்க்கிழமை, which is not stated in the article
+  fact-check: reel_script calls the office ராஜன் நகர், வருவாய் கோட்டாட்சியர் ஆபீஸ், but the article says ஆர்.டி.ஓ. ஆபீஸ; 'வருவாய் கோட்டாட்சியர்' is an added description not in the article
+  fact-check: reel_script says 'ஒரு பகுதிகளிலும்' which is ungrammatical and mixes plural with singular
+  fact-check: reel_script says 'ராஜன் நகர்... மின்விநியோகம் இருக்காது' and lists the RDO office and other places as affected by 'மின்விநியோகம் இருக்காது' while the article only lists them as affected areas of the cut, so the phrasing is not clearly faithful
+  fact-check: reel_script states the duration as '5 மணி நேரம்', a derived figure not stated in the article
+  fact-check: caption repeats the maintenance-work cause and the date 'நவ். 11, செவ்வாய்க்கிழமை' which are not in the article
+  fact-check: slides_spec says 'காரணம்' cause phrase ('பழங்கரை துணை மின் நிலையம் காரணம்') is ungrammatical and does not clearly state the reason
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-tiruppur/tribal-sub-station-from-morning-1000-to-evening-00hrs/4372606
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 39 min
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-tiru
+NOT filed (N) நாளை மின்தடை: not Coimbatore district news (the story's first lines name another place and no Coimbatore place)
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 37 min
+filed: 0 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 0
