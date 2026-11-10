@@ -644,3 +644,119 @@ filed: 1 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
 stories: 1
+writing [N]: நாளை மின்தடை
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (14s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3-flash-preview (17s)
+factcheck by gemini/gemini-3-flash-preview: 4 problems
+  The date 'November 11' is not mentioned in the article
+  The day 'Wednesday' is not mentioned in the article
+  The cause 'monthly maintenance' is not mentioned in the article
+  The location 'Avinasi' is not mentioned in the article
+attempt 1 gemini/gemini-3-flash-preview: 4 problems
+  fact-check: The date 'November 11' is not mentioned in the article
+  fact-check: The day 'Wednesday' is not mentioned in the article
+  fact-check: The cause 'monthly maintenance' is not mentioned in the article
+  fact-check: The location 'Avinasi' is not mentioned in the article
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (5s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The article lists 'ஆர்.டி.ஓ. ஆபீஸ்' (RTO office), but the reel_script and caption translate it as 'வருவாய் கோட்டாட்சியர் அலுவலகம்' (Revenue Divisional Officer's office), which is a different office.
+  The reel_script states that power cuts 'அமலுக்கு வருகிறது' and that work is ongoing at the substation ('பணிகள் நடக்கின்றன'), while the article only says the power cut is scheduled for tomorrow and does not mention ongoing work or its cause at the substation; this cause is an added detail not in the article.
+  The reel_script says the areas 'தாக்கம் அடைகின்றன' (are affected) and tells viewers to take precautions; the instruction 'மின்தடை நேரத்தில் முன்னேற்பாடுகளை மேற்கொள்ளுங்கள்' is not in the article, which is an invented detail.
+attempt 2 groq/qwen/qwen3.8-27b: 3 problems
+  fact-check: The article lists 'ஆர்.டி.ஓ. ஆபீஸ்' (RTO office), but the reel_script and caption translate it as 'வருவாய் கோட்டாட்சியர் அலுவலகம்' (Revenue Divisional Officer's office), which is a different office.
+  fact-check: The reel_script states that power cuts 'அமலுக்கு வருகிறது' and that work is ongoing at the substation ('பணிகள் நடக்கின்றன'), while the article only says the power cut is scheduled for tomorrow and does not mention ongoing work or its cause at the substation; this cause is an added detail not in the article.
+  fact-check: The reel_script says the areas 'தாக்கம் அடைகின்றன' (are affected) and tells viewers to take precautions; the instruction 'மின்தடை நேரத்தில் முன்னேற்பாடுகளை மேற்கொள்ளுங்கள்' is not in the article, which is an invented detail.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 17 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 9 problems
+  reel_script states the date as 10 November (Tuesday) and the slides and caption repeat it; the article gives no date, only 'நாளை' (tomorrow)
+  reel_script says the outage is for maintenance work at the Pazhangarai substation; the article gives no cause
+  reel_script says 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (Revenue Divisional Officer office) but the article says 'ஆர்.டி.ஓ. ஆபீஸ்', which is the same office under its abbreviation; the translation expands it to a different title
+  reel_script omits கமிட்டியார் காலனி and டீ பப்ளிக் ஸ்கூல from the listed areas, while the caption includes them
+  reel_script omits கைகாட்டிப்புதூர் and ரங்கா நகர் as full areas and reduces them to 'ஒரு பகுதிகளிலும்' (a grammatically unclear phrase)
+  slides_spec 'மேலும் பகுதிகள்' slide lists 'ஆர்.டி.ஓ. ஆபீஸ், குளத்துப்பாளையம், விஜிவி நகர்' etc., and the slide 'எந்தப் பகுதிகள்?' adds 'உட்பட' implying other areas not in the article's list
+  slides_spec 'கவனிக்க' slide adds 'மின்சார உபகரணங்களை அணைத்து வையுங்கள்' and 'மின் தடை நேரத்தில் வாகனங்களை கவனமாக ஓட்டுங்கள்', which are advice not present in the article
+  reel_script's 'மின் தடை நேரத்தில் பொதுமக்கள்...' sentence and the slides_spec 'pazhangarai பகுதியில்' headline present the outage as affecting 'பழங்கரை பகுதி' generally, while the article only lists the substation's supply areas
+  reel_script 'மின்விநியோகம் இருக்காது' is fine, but the slide title 'பழங்கரை துணை மின் நிலையப் பகுதி' and headline are used interchangeably with area names, mixing the substation with the locality
+claude rewrite 2 anthropic/claude-haiku-5-5: 9 problems
+  fact-check: reel_script states the date as 10 November (Tuesday) and the slides and caption repeat it; the article gives no date, only 'நாளை' (tomorrow)
+  fact-check: reel_script says the outage is for maintenance work at the Pazhangarai substation; the article gives no cause
+  fact-check: reel_script says 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (Revenue Divisional Officer office) but the article says 'ஆர்.டி.ஓ. ஆபீஸ்', which is the same office under its abbreviation; the translation expands it to a different title
+  fact-check: reel_script omits கமிட்டியார் காலனி and டீ பப்ளிக் ஸ்கூல from the listed areas, while the caption includes them
+  fact-check: reel_script omits கைகாட்டிப்புதூர் and ரங்கா நகர் as full areas and reduces them to 'ஒரு பகுதிகளிலும்' (a grammatically unclear phrase)
+  fact-check: slides_spec 'மேலும் பகுதிகள்' slide lists 'ஆர்.டி.ஓ. ஆபீஸ், குளத்துப்பாளையம், விஜிவி நகர்' etc., and the slide 'எந்தப் பகுதிகள்?' adds 'உட்பட' implying other areas not in the article's list
+  fact-check: slides_spec 'கவனிக்க' slide adds 'மின்சார உபகரணங்களை அணைத்து வையுங்கள்' and 'மின் தடை நேரத்தில் வாகனங்களை கவனமாக ஓட்டுங்கள்', which are advice not present in the article
+  fact-check: reel_script's 'மின் தடை நேரத்தில் பொதுமக்கள்...' sentence and the slides_spec 'pazhangarai பகுதியில்' headline present the outage as affecting 'பழங்கரை பகுதி' generally, while the article only lists the substation's supply areas
+  fact-check: reel_script 'மின்விநியோகம் இருக்காது' is fine, but the slide title 'பழங்கரை துணை மின் நிலையப் பகுதி' and headline are used interchangeably with area names, mixing the substation with the locality
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  sentence 1 (one-line story) has 16 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  stray Tamil sign '்' after '.' in «ி.ஆர்.் நக»
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1829. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok groq/qwen/qwen3.8-27b (1s)
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-tiruppur/tribal-sub-station-from-morning-1000-to-evening-00hrs/4372606
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 39 min
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-tiru
+NOT filed (N) நாளை மின்தடை: not Coimbatore district news (the story's first lines name another place and no Coimbatore place)
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 37 min
+filed: 0 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":1,"updated":0} 
+stories: 0
