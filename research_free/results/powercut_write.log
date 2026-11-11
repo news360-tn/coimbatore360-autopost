@@ -2034,3 +2034,205 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
 stories: 0
+writing [N]: நாளைய (நவ.12) மின் தடை: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+writing [N]: கோயம்புத்தூர் : நாளைய (நவ.13) மின்தடை
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+ok gemini/gemini-3-flash-preview (17s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3-flash-preview (6s)
+factcheck by gemini/gemini-3-flash-preview: 2 problems
+  The draft claims the day is Friday (வெள்ளிக்கிழமை), which is not mentioned in the article.
+  The draft mentions maintenance work (பராமரிப்புப் பணிகள்) as the cause, which is not stated in the article.
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  fact-check: The draft claims the day is Friday (வெள்ளிக்கிழமை), which is not mentioned in the article.
+  fact-check: The draft mentions maintenance work (பராமரிப்புப் பணிகள்) as the cause, which is not stated in the article.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.5-flash (26s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (6s)
+factcheck by gemini/gemini-3-flash-preview: 4 problems
+  The draft incorrectly identifies Nov 12 as Thursday (வியாழக்கிழமை).
+  The caption incorrectly specifies the year as 2026.
+  The draft attributes the power cut to 'monthly maintenance' (மாதாந்திரப் பராமரிப்பு), which is not mentioned in the article.
+  The draft includes invented instructions regarding water storage and electrical appliance safety.
+attempt 1 gemini/gemini-3.5-flash: 4 problems
+  fact-check: The draft incorrectly identifies Nov 12 as Thursday (வியாழக்கிழமை).
+  fact-check: The caption incorrectly specifies the year as 2026.
+  fact-check: The draft attributes the power cut to 'monthly maintenance' (மாதாந்திரப் பராமரிப்பு), which is not mentioned in the article.
+  fact-check: The draft includes invented instructions regarding water storage and electrical appliance safety.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (5s)
+attempt 2 groq/qwen/qwen3.8-27b: 1 problems
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+free models unavailable: no free model answered: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read t
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The caption says the power cut is due to 'maintenance work' (பராமரிப்புப் பணிகள்), which is not stated in the article.
+  The slides_spec's third slide adds 'மின் தடை பகுதிகளில் உள்ளோர் கவனமாக இருங்கள்' (residents in the affected areas should be careful), an advice not in the article.
+  The reel_script adds advice to finish necessary work before the cut and to prepare mobile charge and drinking water, which are not in the article.
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: The caption says the power cut is due to 'maintenance work' (பராமரிப்புப் பணிகள்), which is not stated in the article.
+  fact-check: The slides_spec's third slide adds 'மின் தடை பகுதிகளில் உள்ளோர் கவனமாக இருங்கள்' (residents in the affected areas should be careful), an advice not in the article.
+  fact-check: The reel_script adds advice to finish necessary work before the cut and to prepare mobile charge and drinking water, which are not in the article.
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  slides must have 3 or 4 items
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  reel_script says 'மின்தடை பகுதிகளில் அடங்கும்' / 'பட்டியலில் உள்ளன' and the caption frames the areas as a list, but the article gives no detail beyond the area names; the phrase 'மின் வாரியத்தைத் தொடர்பு கொள்ளலாம்' (contact the electricity board) is an invented suggestion not in the article
+  reel_script says 'யமுனா நகர் மற்றும் காளப்பநாயக்கன்பாளையத்தின் ஒரு பகுதியில்' — the article lists 'காளப்பநாயக்கன்பாளையம் ஒரு பகுதி' which is ambiguous but the draft's rendering is acceptable; however the article gives no time, duration or cause of the power cut, and the draft does not claim one, so no error here beyond the invented contact suggestion
+  reel_script states 'ஜி சி டி நகர்' and 'கே என் ஜி புதூர்' with spaces removed from abbreviations, and the caption and slides list 'ஜி.சி.டி.' and 'கே.என்.ஜி.' — inconsistent rendering but same places, not a factual error
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: reel_script says 'மின்தடை பகுதிகளில் அடங்கும்' / 'பட்டியலில் உள்ளன' and the caption frames the areas as a list, but the article gives no detail beyond the area names; the phrase 'மின் வாரியத்தைத் தொடர்பு கொள்ளலாம்' (contact the electricity board) is an invented suggestion not in the article
+  fact-check: reel_script says 'யமுனா நகர் மற்றும் காளப்பநாயக்கன்பாளையத்தின் ஒரு பகுதியில்' — the article lists 'காளப்பநாயக்கன்பாளையம் ஒரு பகுதி' which is ambiguous but the draft's rendering is acceptable; however the article gives no time, duration or cause of the power cut, and the draft does not claim one, so no error here beyond the invented contact suggestion
+  fact-check: reel_script states 'ஜி சி டி நகர்' and 'கே என் ஜி புதூர்' with spaces removed from abbreviations, and the caption and slides list 'ஜி.சி.டி.' and 'கே.என்.ஜி.' — inconsistent rendering but same places, not a factual error
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  The caption says the power cut is due to maintenance work (பராமரிப்புப் பணிகள்), but the article does not state any cause for the outage.
+  The slides_spec includes the advice 'மின் சாதனங்களை அணைத்து வையுங்கள்' (switch off electrical appliances), which is not in the article.
+  The reel_script adds the advice about charging mobile phones, storing drinking water and essentials, which is not in the article.
+  The reel_script's 'மின்விநியோகம் இருக்காது' and the caption's 'மின் தடை ஏற்படும்' are consistent with the article, but the caption's statement that the cut affects the area under Muthukoundanpudur substation is only in the reel script, not the article's list of affected areas wording; the reel script also omits that the article lists the affected areas as 'மின் தடை ஏற்படும் இடங்கள' only partially in the caption (the caption omits all listed areas).
+claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: The caption says the power cut is due to maintenance work (பராமரிப்புப் பணிகள்), but the article does not state any cause for the outage.
+  fact-check: The slides_spec includes the advice 'மின் சாதனங்களை அணைத்து வையுங்கள்' (switch off electrical appliances), which is not in the article.
+  fact-check: The reel_script adds the advice about charging mobile phones, storing drinking water and essentials, which is not in the article.
+  fact-check: The reel_script's 'மின்விநியோகம் இருக்காது' and the caption's 'மின் தடை ஏற்படும்' are consistent with the article, but the caption's statement that the cut affects the area under Muthukoundanpudur substation is only in the reel script, not the article's list of affected areas wording; the reel script also omits that the article lists the affected areas as 'மின் தடை ஏற்படும் இடங்கள' only partially in the caption (the caption omits all listed areas).
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
+  reel_script talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
+  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  known issue meta_article: script talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+ok anthropic/claude-haiku-5-5
+real photo: no picture on the source page -> AI pictures
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs ~0.0020 pollen, but your available balance is 0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  The article gives no time window for the power cut, but the draft's reel_script and caption omit this, which is acceptable; however the caption adds 'குடிநீர்' (drinking water) preparation advice that is not in the article
+  The reel_script adds advice to prepare necessary items in advance (முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்), which is an invented detail not in the article
+  The caption adds 'மொபைல் சார்ஜ், குடிநீர்' preparation advice, an invented detail not in the article
+  The reel_script states power supply 'will not be available' (மின்விநியோகம் இருக்காது) and 'power will stop' (மின்சாரம் நின்றுவிடும்) for the areas; the article only states a power cut (மின்தடை) without describing its nature beyond that, a minor embellishment
+  The caption says the areas are affected ('பாதிக்கப்படும்') and the headline lists 'தடாகம் ரோடு' as a headline area; this is consistent, but the reel_script claims 'சில பகுதிகளில்' while the article lists specific areas, which is acceptable
+  The reel_script lists 'காளப்பநாயக்கன்பாளையம் ஒரு பகுதி' and 'யமுனா நகர' under the phrase 'மின்விநியோகம் இருக்காது' which is fine; the slides_spec 'loc' field names 'காளப்பநாயக்கன்பாளையம், கோவை' as location, which is a reasonable derivation
+claude rewrite 3 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: The article gives no time window for the power cut, but the draft's reel_script and caption omit this, which is acceptable; however the caption adds 'குடிநீர்' (drinking water) preparation advice that is not in the article
+  fact-check: The reel_script adds advice to prepare necessary items in advance (முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்), which is an invented detail not in the article
+  fact-check: The caption adds 'மொபைல் சார்ஜ், குடிநீர்' preparation advice, an invented detail not in the article
+  fact-check: The reel_script states power supply 'will not be available' (மின்விநியோகம் இருக்காது) and 'power will stop' (மின்சாரம் நின்றுவிடும்) for the areas; the article only states a power cut (மின்தடை) without describing its nature beyond that, a minor embellishment
+  fact-check: The caption says the areas are affected ('பாதிக்கப்படும்') and the headline lists 'தடாகம் ரோடு' as a headline area; this is consistent, but the reel_script claims 'சில பகுதிகளில்' while the article lists specific areas, which is acceptable
+  fact-check: The reel_script lists 'காளப்பநாயக்கன்பாளையம் ஒரு பகுதி' and 'யமுனா நகர' under the phrase 'மின்விநியோகம் இருக்காது' which is fine; the slides_spec 'loc' field names 'காளப்பநாயக்கன்பாளையம், கோவை' as location, which is a reasonable derivation
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+image match: True The photo shows electrical line maintenance work being performed by a technician on a utility pole in an Indian street s
+image match: True The photo shows a TNEB (Tamil Nadu Electricity Board) electrical box and utility pole, which serves as a relevant illust
+images made: 2 for 'Coimbatore Power Cut on Nov 12: 10 AM to'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261111-1928","first":"RN-314"}
+posting job started at once
+writing [N]: நாளைய(நவ.12) மின்தடை: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 17 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  numbers not found in the article: 7
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 7
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/power-outage-coimbatore/4373353
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/power-outage-coimbatore/4373031
+manual link added: https://www.dinamalar.com/amp/news/tamil-nadu-district-news-coimbatore/tomorrow-barrier-coimbatore/4372989
+candidate filter: collected=3
+to write: 3 Coimbatore district candidates (max 3 stories)
+round: top 3 of 3 candidates
+candidates waiting: 3 Coimbatore; time left 39 min
+try (N) manual=True: https://www.dinamalar.com/amp/news/tamil-nadu-district-news-
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 2})
+posting job started at once
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+NOT filed (N) கோயம்புத்தூர் : நாளைய (நவ.13) மின்தடை: duplicate after write
+NOT filed (N) நாளைய(நவ.12) மின்தடை: கோயம்புத்தூர்: duplicate after write
+candidate loop ended: left 0, tried={'N': 3}, done={'N': 1}, time left 32 min
+filed: 1 Coimbatore district stories (target 3), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":2,"updated":1} 
+stories: 1
