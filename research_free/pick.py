@@ -484,7 +484,11 @@ def _never_posted(row):
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "poster"))
         import post
-        return post.skip_reason(row) or ""
+        why = post.skip_reason(row) or ""
+        if not why:      # owner 11 Nov: the same news is already on Instagram (posted from another row) - the post job skips it for ever
+            d = post._ig_dup_for_check(row, "coimbatore")
+            why = f"already on Instagram ({d})" if d else ""
+        return why
     except Exception as e:
         log("verify: posting rule not checked:", str(e)[:120])
         return ""

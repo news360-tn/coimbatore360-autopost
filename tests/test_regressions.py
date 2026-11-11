@@ -1128,6 +1128,56 @@ class FacebookEverything2Nov(unittest.TestCase):
 
 
 
+class CheckSkipsInstagramDuplicates11Nov(unittest.TestCase):
+    """11 Nov: RN-220/236/295 were already on Instagram; the post job skipped them but the check chose them again every 5 minutes
+    (6-11 Nov) and every other ready news waited. The check now runs the same duplicate rule first."""
+
+    def test_same_rule_as_the_post_job(self):
+        old = post.ig_duplicate
+        post.ig_duplicate = lambda row, page: "2026-11-07T05:34:17+0000" if row.get("story_id") == "RN-236" else ""
+        try:
+            self.assertTrue(post._ig_dup_for_check({"story_id": "RN-236", "slides_spec": "{}"}, "coimbatore"))
+            self.assertEqual(post._ig_dup_for_check({"story_id": "RN-300", "slides_spec": "{}"}, "coimbatore"), "")
+            self.assertEqual(post._ig_dup_for_check({"story_id": "RN-236", "slides_spec": json.dumps({"ready_reel": True})}, "coimbatore"), "")
+            self.assertEqual(post._ig_dup_for_check({"story_id": "RN-236", "slides_spec": "{}", "reel_link": "x"}, "coimbatore"), "")
+        finally:
+            post.ig_duplicate = old
+
+    def test_check_loop_uses_it_before_choosing(self):
+        src = (ROOT / "poster" / "post.py").read_text(encoding="utf-8")
+        loop = src[src.index("for r in (pick_all(rows) if n else []):"):]
+        self.assertLess(loop.index("_ig_dup_for_check"), loop.index("ids.append"))
+
+
+class PowercutVerifySkips11Nov(unittest.TestCase):
+    """11 Nov: powercut runs were red for hours on notices the writer refused ('duplicate after write') and on RN-295, whose power cut
+    was already on Instagram - both are never posted on purpose and must not fail the run"""
+
+    def test_refused_and_duplicate_are_skipped(self):
+        import importlib, powercut
+        importlib.reload(powercut)
+        now = datetime.datetime.now(IST)
+        u1, u2, u3 = "https://x/a1", "https://x/a2", "https://x/a3"
+        k1, k2, k3 = powercut.pid(u1), powercut.pid(u2), powercut.pid(u3)
+        st = {"done": {k: {"at": now.isoformat(), "title": "நாளை மின்தடை", "published": now.isoformat(), "cut_day": (now.date() + datetime.timedelta(days=1)).isoformat(), "url": u}
+                       for k, u in ((k1, u1), (k2, u2), (k3, u3))}}
+        rows = [{"source": u2, "story_id": "RN-295", "post_status": "Queued"}, {"source": u3, "story_id": "RN-301", "post_status": "Queued"}]
+        tmp = Path(tempfile.mkdtemp())
+        (tmp / "results").mkdir()
+        (tmp / "results" / "pick_refused.json").write_text(json.dumps({u1: "not filed: duplicate after write"}), encoding="utf-8")
+        old = (powercut.load, powercut.bridge_get, powercut.HERE, powercut._never_posted)
+        powercut.load = lambda: st
+        powercut.bridge_get = lambda a: {"rows": rows}
+        powercut.HERE = tmp
+        powercut._never_posted = lambda r: "already on Instagram (2026-11-10T18:25:03+0000)" if r and r["story_id"] == "RN-295" else ""
+        try:
+            self.assertEqual(powercut.cmd_verify(), 3)      # RN-301 is really waiting -> still reported
+            rows[1]["post_status"] = "Posted"
+            self.assertEqual(powercut.cmd_verify(), 0)      # refused + already on Instagram = skipped, not failures
+        finally:
+            powercut.load, powercut.bridge_get, powercut.HERE, powercut._never_posted = old
+
+
 if __name__ == "__main__":
     unittest.main()
 

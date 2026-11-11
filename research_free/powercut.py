@@ -259,9 +259,21 @@ def cmd_verify():
         except Exception as e:
             log(f"verify: bridge {a} failed: {e}")
     stat = status(list(want), rows)
+    try:      # owner 11 Nov: notices the writer refused (duplicate after write / another district) - written in the same job
+        refused = {pid(u): why for u, why in json.loads((HERE / "results" / "pick_refused.json").read_text(encoding="utf-8")).items()}
+    except Exception:
+        refused = {}
+    by = {}
+    for r in rows:
+        for i in pid_forms(r.get("source")):
+            by.setdefault(i, r)
     bad = {}
     for k, v in stat.items():
         if v == "posted":
+            continue
+        why = refused.get(k, "") if v == "not written" else _never_posted(by.get(k)) if v.startswith("queued") else ""
+        if why:
+            log(f"   SKIPPED {k}: {why[:150]} - {want[k]['title'][:60]}")      # never posted on purpose - not a failure
             continue
         if fr().power_cut_over(want[k]["title"], "", want[k]["published"], now) or want[k]["cut_day"] < now.date().isoformat():
             log(f"   {k}: cut over before it was posted - {want[k]['title'][:60]}")
@@ -271,6 +283,23 @@ def cmd_verify():
     for k, v in bad.items():
         log(f"   NOT POSTED {k}: {v} - {want[k]['title'][:60]}")
     return 3 if bad else 0
+
+
+def _never_posted(row):
+    """the posting rule of poster/post.py: held / stale, or the same power cut already on Instagram -> never posted"""
+    if not row:
+        return ""
+    try:
+        sys.path.insert(0, str(HERE.parent / "poster"))
+        import post
+        why = post.skip_reason(row) or ""
+        if not why:
+            d = post._ig_dup_for_check(row, "coimbatore")
+            why = f"already on Instagram ({d})" if d else ""
+        return why
+    except Exception as e:
+        log("verify: posting rule not checked:", str(e)[:120])
+        return ""
 
 
 def ids():
