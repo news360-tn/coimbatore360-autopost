@@ -12,7 +12,8 @@
    "score": 11.14,
    "power_cut": false,
    "listed_at": "2026-11-10T19:58:29.662499+05:30",
-   "picked_at": "2026-11-11T10:55:15.214287+05:30"
+   "picked_at": "2026-11-11T10:55:15.214287+05:30",
+   "refused": "not filed: stale: says 'today' but was published 10 Nov"
   },
   "Ce94eb72": {
    "id": "Ce94eb72",
@@ -25,7 +26,8 @@
    "score": 10.14,
    "power_cut": false,
    "listed_at": "2026-11-10T19:58:29.662499+05:30",
-   "picked_at": "2026-11-11T10:55:15.214298+05:30"
+   "picked_at": "2026-11-11T10:55:15.214298+05:30",
+   "refused": "not filed: stale: says 'today' but was published 10 Nov"
   },
   "C779c818": {
    "id": "C779c818",
@@ -38,7 +40,8 @@
    "score": 9.88,
    "power_cut": false,
    "listed_at": "2026-11-10T19:58:29.662499+05:30",
-   "picked_at": "2026-11-11T10:55:15.214302+05:30"
+   "picked_at": "2026-11-11T10:55:15.214302+05:30",
+   "posted": true
   },
   "C03aca1a": {
    "id": "C03aca1a",
@@ -51,7 +54,8 @@
    "score": 9.63,
    "power_cut": false,
    "listed_at": "2026-11-10T19:58:29.662499+05:30",
-   "picked_at": "2026-11-11T10:55:15.214305+05:30"
+   "picked_at": "2026-11-11T10:55:15.214305+05:30",
+   "posted": true
   },
   "Ccc36749": {
    "id": "Ccc36749",
@@ -304,7 +308,8 @@
    "score": 9.6,
    "power_cut": false,
    "listed_at": "2026-11-11T07:06:17.968757+05:30",
-   "picked_at": "2026-11-11T10:55:15.214307+05:30"
+   "picked_at": "2026-11-11T10:55:15.214307+05:30",
+   "refused": "not filed: duplicate after write"
   },
   "C11a85bc": {
    "id": "C11a85bc",
@@ -488,7 +493,8 @@
    "score": 10.88,
    "power_cut": false,
    "listed_at": "2026-11-11T10:53:59.651467+05:30",
-   "picked_at": "2026-11-11T10:55:15.214293+05:30"
+   "picked_at": "2026-11-11T10:55:15.214293+05:30",
+   "refused": "not filed: duplicate after write"
   },
   "C7b26283": {
    "id": "C7b26283",
@@ -2006,7 +2012,13 @@
     "Ce94eb72",
     "Cf70bdc9",
     "Cfa31015"
-   ]
+   ],
+   "refused": {
+    "Cd3948fd": "not filed: duplicate after write",
+    "Ce94eb72": "not filed: stale: says 'today' but was published 10 Nov",
+    "Cf70bdc9": "not filed: duplicate after write",
+    "Cfa31015": "not filed: stale: says 'today' but was published 10 Nov"
+   }
   }
  },
  "retry": {}
