@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `f7697da` | comment replies: one reply form per page (works anywhere) - full news, the comment, 5-7 tick-box replies (one or more) or own text, Post reply / Skip / Hide; nothing is posted before the owner presses Post reply; manual test e-mail (owner 11 Nov) |
+| 2026-11-11 | `f0d7f5f` | facebook RN-238 |
 | 2026-11-11 | `6a0bacd` | power cuts: a cancellation / postponement / day change is posted (urgent) only when this page posted that cut - never dropped as a duplicate of the original; the power-cut check remembers notices the writer refused (owner 11 Nov) |
 | 2026-11-11 | `abb1ac1` | powercut: notices written |
 | 2026-11-11 | `6c6ade2` | comments: old unanswered comments offered too (60 days, 100 posts); comments the page already answered in the app are skipped (owner 11 Nov) |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `e438f89` | facebook RN-310 |
 | 2026-11-11 | `aefd6dd` | facebook retry |
 | 2026-11-11 | `845e482` | facebook RN-309 |
-| 2026-11-11 | `86a87d3` | pick: picked news saved |
-| 2026-11-11 | `6d9499b` | powercut: notices written |
 <!-- recent-changes:end -->
