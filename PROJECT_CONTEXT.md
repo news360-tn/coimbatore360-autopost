@@ -81,6 +81,15 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `4157385` | caption ends with 'Source: <paper> (<date>): <article link>'; no source comment under the post (owner 11 Nov) |
+| 2026-11-11 | `bbe4aed` | facebook RN-230 |
+| 2026-11-11 | `743a5ce` | powercut: notices written |
+| 2026-11-11 | `25415ce` | facebook RN-227 |
+| 2026-11-11 | `121f6f8` | facebook RN-228 |
+| 2026-11-11 | `3ef0d21` | powercut: notices written |
+| 2026-11-11 | `c94f28a` | facebook RN-224 |
+| 2026-11-11 | `07c0b0f` | facebook RN-225 |
+| 2026-11-11 | `547c7e6` | powercut: notices written |
 | 2026-11-11 | `a64de44` | Apps Script: comment replies merged into Code.gs - the owner pastes one file (owner 11 Nov) |
 | 2026-11-11 | `49b6e3d` | facebook RN-222 |
 | 2026-11-11 | `71905fc` | facebook RN-218 |
@@ -102,13 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `be78aea` | check: news already on Instagram is skipped before choosing (RN-220/236/295 chosen every 5 min since 6 Nov, 41 ready news waited); pick + powercut verify: refused / already-on-Instagram news count as skipped (owner 11 Nov) |
 | 2026-11-04 | `b232c83` | pick: a picked news the writer refused is remembered - skipped in the round check, never offered again (3 Nov rounds red); Facebook photo story gets its own fresh upload (rasipalan story 400 Invalid parameter) |
 | 2026-11-11 | `c3369be` | powercut: notices written |
-| 2026-11-11 | `b680839` | powercut: notices written |
-| 2026-11-11 | `b6dc491` | pick: written and posted |
-| 2026-11-11 | `a178212` | powercut: notices written |
-| 2026-11-11 | `3de483c` | powercut: notices written |
-| 2026-11-11 | `dd88165` | stories shared |
-| 2026-11-11 | `505f501` | stories shared |
-| 2026-11-11 | `14ef98d` | rasipalan posted |
-| 2026-11-11 | `b99b957` | powercut: notices written |
-| 2026-11-11 | `40fbca1` | facebook retry |
 <!-- recent-changes:end -->
