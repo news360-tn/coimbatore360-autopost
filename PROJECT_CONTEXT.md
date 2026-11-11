@@ -81,6 +81,9 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `6c6ade2` | comments: old unanswered comments offered too (60 days, 100 posts); comments the page already answered in the app are skipped (owner 11 Nov) |
+| 2026-11-11 | `e828968` | powercut: notices written |
+| 2026-11-11 | `04cdaed` | facebook RN-234 |
 | 2026-11-11 | `4157385` | caption ends with 'Source: <paper> (<date>): <article link>'; no source comment under the post (owner 11 Nov) |
 | 2026-11-11 | `bbe4aed` | facebook RN-230 |
 | 2026-11-11 | `743a5ce` | powercut: notices written |
@@ -108,7 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `6d9499b` | powercut: notices written |
 | 2026-11-11 | `2ada96c` | pick: picked news saved |
 | 2026-11-11 | `c3ed22a` | pick: list sent |
-| 2026-11-11 | `be78aea` | check: news already on Instagram is skipped before choosing (RN-220/236/295 chosen every 5 min since 6 Nov, 41 ready news waited); pick + powercut verify: refused / already-on-Instagram news count as skipped (owner 11 Nov) |
-| 2026-11-04 | `b232c83` | pick: a picked news the writer refused is remembered - skipped in the round check, never offered again (3 Nov rounds red); Facebook photo story gets its own fresh upload (rasipalan story 400 Invalid parameter) |
-| 2026-11-11 | `c3369be` | powercut: notices written |
 <!-- recent-changes:end -->
