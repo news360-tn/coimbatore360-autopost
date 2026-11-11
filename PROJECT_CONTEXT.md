@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-09 | `c617ca9` | ig-comments: put the encrypted report in the log (artifact host not reachable) |
-| 2026-11-09 | `52579dc` | ig-comments: read-only, encrypted report of comments on recent posts (manual run only) |
-| 2026-11-09 | `b64bfd6` | powercut: notices written |
-| 2026-11-09 | `692c0ef` | pick: written and posted |
-| 2026-11-09 | `e2c035e` | powercut: notices written |
-| 2026-11-09 | `82f6759` | powercut: notices written |
-| 2026-11-09 | `11fe716` | powercut: notices written |
-| 2026-11-09 | `ff2eda2` | powercut: notices written |
-| 2026-11-09 | `68064eb` | facebook retry |
-| 2026-11-09 | `4693f40` | facebook retry |
-| 2026-11-09 | `90e6812` | facebook RN-281 |
-| 2026-11-09 | `fcedb0a` | pick: picked news saved |
-| 2026-11-09 | `7af11ff` | pick: picked news saved |
-| 2026-11-09 | `6795e68` | pick: list sent |
-| 2026-11-09 | `bb4d539` | powercut: notices written |
-| 2026-11-09 | `b129972` | powercut: notices written |
-| 2026-11-09 | `3237306` | powercut: notices written |
-| 2026-11-09 | `7bfb268` | powercut: notices written |
-| 2026-11-09 | `ca06b67` | powercut: notices written |
-| 2026-11-09 | `dd03325` | powercut: notices written |
-| 2026-11-09 | `0b3b159` | powercut: notices written |
-| 2026-11-09 | `f313552` | powercut: notices written |
-| 2026-11-09 | `862c6f9` | powercut: notices written |
-| 2026-11-09 | `d567b0c` | powercut: notices written |
-| 2026-11-09 | `5b860bc` | pick: written and posted |
-| 2026-11-09 | `1f2bde2` | powercut: notices written |
-| 2026-11-09 | `65a31f4` | powercut: notices written |
-| 2026-11-09 | `d027b08` | facebook retry |
-| 2026-11-09 | `7a0438b` | facebook retry |
-| 2026-11-09 | `d077c35` | facebook RN-274 |
+| 2026-11-04 | `b232c83` | pick: a picked news the writer refused is remembered - skipped in the round check, never offered again (3 Nov rounds red); Facebook photo story gets its own fresh upload (rasipalan story 400 Invalid parameter) |
+| 2026-11-11 | `c3369be` | powercut: notices written |
+| 2026-11-11 | `b680839` | powercut: notices written |
+| 2026-11-11 | `b6dc491` | pick: written and posted |
+| 2026-11-11 | `a178212` | powercut: notices written |
+| 2026-11-11 | `3de483c` | powercut: notices written |
+| 2026-11-11 | `dd88165` | stories shared |
+| 2026-11-11 | `505f501` | stories shared |
+| 2026-11-11 | `14ef98d` | rasipalan posted |
+| 2026-11-11 | `b99b957` | powercut: notices written |
+| 2026-11-11 | `40fbca1` | facebook retry |
+| 2026-11-11 | `f290f2e` | facebook retry |
+| 2026-11-11 | `ff5c785` | facebook RN-302 |
+| 2026-11-11 | `f685151` | pick: picked news saved |
+| 2026-11-11 | `eacea1e` | pick: picked news saved |
+| 2026-11-11 | `08f937e` | pick: list sent |
+| 2026-11-11 | `2ca3327` | powercut: notices written |
+| 2026-11-10 | `fa868bc` | facebook retry |
+| 2026-11-10 | `f5eb300` | facebook retry |
+| 2026-11-10 | `28e4ba3` | facebook RN-301 |
+| 2026-11-10 | `e0ac624` | powercut: notices written |
+| 2026-11-10 | `1ff99e0` | pick: written and posted |
+| 2026-11-10 | `ae263f2` | powercut: notices written |
+| 2026-11-10 | `f658261` | powercut: notices written |
+| 2026-11-10 | `2c48011` | powercut: notices written |
+| 2026-11-10 | `bbc16ed` | facebook retry |
+| 2026-11-10 | `aa616e9` | facebook retry |
+| 2026-11-10 | `3ec2a35` | powercut: notices written |
+| 2026-11-10 | `8b37750` | facebook RN-297 |
+| 2026-11-10 | `73936c6` | facebook RN-298 |
 <!-- recent-changes:end -->
