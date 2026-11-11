@@ -49,6 +49,7 @@ function nowIst_() { return Utilities.formatDate(new Date(), 'Asia/Kolkata', 'dd
 function doGet(e) {
   // owner 1 Nov: the check-box page opened from the pick e-mail (its own one-round token, never the bridge key)
   if (e && e.parameter && e.parameter.action === 'pick') return pickPage_(e);
+  if (e && e.parameter && e.parameter.c) return commentPage_(e);      // owner 11 Nov: comment reply link (Comments.gs; the link's own secret)
   if (!authorized_(e)) return json_({ ok: false, error: 'unauthorized' });
   try {
     var a = e.parameter.action;
@@ -58,6 +59,7 @@ function doGet(e) {
     if (a === 'voice') return json_(voice_(e.parameter.story));
     if (a === 'recent') return json_({ ok: true, rows: recent_() });
     if (a === 'ping') return json_({ ok: true, time: nowIst_() });
+    if (a === 'commentsSeen') return json_({ ok: true, ids: commentsSeen_() });
     if (a === 'autoPending') return json_({ ok: true, rows: autoPending_() });
     if (a === 'pickStatus') return json_(pickStatus_(e.parameter.round));
     return json_({ ok: false, error: 'unknown action ' + a });
@@ -67,11 +69,13 @@ function doGet(e) {
 }
 
 function doPost(e) {
+  if (e && e.parameter && e.parameter.c && e.parameter.what) return commentSubmit_(e);      // owner 11 Nov: the owner's choice (Comments.gs)
   if (!authorized_(e)) return json_({ ok: false, error: 'unauthorized' });
   var lock = LockService.getScriptLock();
   lock.waitLock(30000);
   try {
     var body = JSON.parse(e.postData.contents);
+    if (body.action === 'commentNew') return json_(commentNew_(body));
     if (body.action === 'posted') return json_(posted_(body));
     if (body.action === 'error') return json_(error_(body));
     if (body.action === 'addStories') return json_(addStories_(body));
