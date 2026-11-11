@@ -1293,3 +1293,109 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
 stories: 0
+writing [N]: நாளைய மின்தடை: பழங்கரை
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (20s)
+attempt 1 gemini/gemini-3-flash-preview: 5 problems
+  slide 2 line 2 is cut off mid-phrase (', விஸ்வ பாரதி பார்க்') - write a complete short phrase
+  numbers not found in the article: 7
+  stray Tamil sign '்' after 'ா' in « தன்வா்ஷின»
+  stray Tamil sign '்' after 'ா' in « தன்வா்ஷின»
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('்டன், விஸ்வ பாரதி பார்க்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 2 groq/qwen/qwen3.8-27b: 3 problems
+  slide 2 line 2 is cut off mid-phrase (', விஸ்வ பாரதி பார்க்') - write a complete short phrase
+  numbers not found in the article: 26
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('்டன், விஸ்வ பாரதி பார்க்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  slide 3 line 1 is cut off mid-phrase (', விஸ்வ பாரதி பார்க்') - write a complete short phrase
+  numbers not found in the article: 7
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('்டன், விஸ்வ பாரதி பார்க்') - rewrite so it does not happen again
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  reel_script says 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (RDO office) but the article says 'ஆர்.டி.ஓ. ஆபீஸ்' — the expansion is an added interpretation, though arguably the same thing; flagged as a wording change to a government office name
+  reel_script omits the 'மாதாந்திர பராமரிப்பு' cause? No — but it adds a generic instruction 'மின்வாரியம் அறிவித்த நேரத்தில் மட்டும் மின் தடை' in slides_spec, which is not in the article
+  reel_script and slides_spec group 'ஸ்ரீ ராம் நகர்' etc. but slides_spec lists 'டீ பப்ளிக் பள்ளி பகுதி' — the article lists 'டீ பப்ளிக் பள்ளி' as a place, so calling it an area is a minor reinterpretation
+  reel_script adds 'முன்கூட்டியே மொபைல் சார்ஜ்... குடிநீர் போன்ற தேவைகளை பார்த்துக்கொள்ளுங்கள்' — advice not present in the article (the caption includes it, which is also not in the article)
+  reel_script omits several listed areas that are in the article (e.g. விஸ்வ பாரதி பார்க, கைகாட்டிபுதூர், ரங்கா நகர், கமிட்டியார் காலனி, வெங்கடாசலபதி நகர், துரைசாமி நகர், பெரியாயிபாளையம, வி.ஜி.வி. நகர், திருநீலகண்டர் வீதி, நெசவாளர் காலனி, மகாலட்சுமி நகர்) — the reel says 'உள்ளிட்ட பல பகுதிகள்' so this is acceptable, but the partial-area qualifiers (ஒரு பகுதி) are dropped from the caption list in slides and reel
+  caption 'மின் தடை' wording: caption and slides say 'மின் தடை' while article says 'மின்தடை' — consistent, not an issue; caption's 'காலை 9 – மாலை 4 மணி' headline is accurate
+claude rewrite 2 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: reel_script says 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (RDO office) but the article says 'ஆர்.டி.ஓ. ஆபீஸ்' — the expansion is an added interpretation, though arguably the same thing; flagged as a wording change to a government office name
+  fact-check: reel_script omits the 'மாதாந்திர பராமரிப்பு' cause? No — but it adds a generic instruction 'மின்வாரியம் அறிவித்த நேரத்தில் மட்டும் மின் தடை' in slides_spec, which is not in the article
+  fact-check: reel_script and slides_spec group 'ஸ்ரீ ராம் நகர்' etc. but slides_spec lists 'டீ பப்ளிக் பள்ளி பகுதி' — the article lists 'டீ பப்ளிக் பள்ளி' as a place, so calling it an area is a minor reinterpretation
+  fact-check: reel_script adds 'முன்கூட்டியே மொபைல் சார்ஜ்... குடிநீர் போன்ற தேவைகளை பார்த்துக்கொள்ளுங்கள்' — advice not present in the article (the caption includes it, which is also not in the article)
+  fact-check: reel_script omits several listed areas that are in the article (e.g. விஸ்வ பாரதி பார்க, கைகாட்டிபுதூர், ரங்கா நகர், கமிட்டியார் காலனி, வெங்கடாசலபதி நகர், துரைசாமி நகர், பெரியாயிபாளையம, வி.ஜி.வி. நகர், திருநீலகண்டர் வீதி, நெசவாளர் காலனி, மகாலட்சுமி நகர்) — the reel says 'உள்ளிட்ட பல பகுதிகள்' so this is acceptable, but the partial-area qualifiers (ஒரு பகுதி) are dropped from the caption list in slides and reel
+  fact-check: caption 'மின் தடை' wording: caption and slides say 'மின் தடை' while article says 'மின்தடை' — consistent, not an issue; caption's 'காலை 9 – மாலை 4 மணி' headline is accurate
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  reel_script says "ஏழு மணி நேரம்" (seven hours) — the article gives 9 AM to 4 PM, which is 7 hours, so this is consistent; no problem there. However, reel_script states the power cut is 'செய்யப்படுகிறது' (done deliberately) with no article basis beyond maintenance work, which is acceptable.
+  reel_script says 'ஆர்.டி.ஓ. ஆபீஸ்' was rendered as 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (Revenue Divisional Officer office); this is an expansion of the abbreviation not stated in the article, so it is an unsupported detail.
+  reel_script and slides say the cut affects 'பல பகுதிகளில்' and lists areas in a way that drops the partial-area qualifiers in some places, and the slides_spec 'எந்தப் பகுதிகள்?' slide lists 'பழங்கரை' and 'ராஜன் நகர்' etc. without flagging that it is a partial list; this is a minor omission rather than a factual error.
+  slides_spec 'முழுப் பட்டியல்' slide says 'சில பகுதிகளில் ஒரு பகுதி மட்டும் பாதிக்கப்படும்' and reel_script says 'கைகாட்டிபுதூர், ரங்கா நகர், பெரியாயிபாளையம் ஆகியவற்றில் ஒரு பகுதி மட்டும் பாதிக்கப்படும்' — consistent with article, no issue.
+  caption says 'மின் தடைக்கு முன் மொபைல் சார்ஜ், குடிநீர் போன்றவற்றை தயார் செய்துகொள்ளுங்கள்' — advice not in the article; this is an invented detail.
+claude rewrite 3 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: reel_script says "ஏழு மணி நேரம்" (seven hours) — the article gives 9 AM to 4 PM, which is 7 hours, so this is consistent; no problem there. However, reel_script states the power cut is 'செய்யப்படுகிறது' (done deliberately) with no article basis beyond maintenance work, which is acceptable.
+  fact-check: reel_script says 'ஆர்.டி.ஓ. ஆபீஸ்' was rendered as 'வருவாய் கோட்டாட்சியர் ஆபீஸ்' (Revenue Divisional Officer office); this is an expansion of the abbreviation not stated in the article, so it is an unsupported detail.
+  fact-check: reel_script and slides say the cut affects 'பல பகுதிகளில்' and lists areas in a way that drops the partial-area qualifiers in some places, and the slides_spec 'எந்தப் பகுதிகள்?' slide lists 'பழங்கரை' and 'ராஜன் நகர்' etc. without flagging that it is a partial list; this is a minor omission rather than a factual error.
+  fact-check: slides_spec 'முழுப் பட்டியல்' slide says 'சில பகுதிகளில் ஒரு பகுதி மட்டும் பாதிக்கப்படும்' and reel_script says 'கைகாட்டிபுதூர், ரங்கா நகர், பெரியாயிபாளையம் ஆகியவற்றில் ஒரு பகுதி மட்டும் பாதிக்கப்படும்' — consistent with article, no issue.
+  fact-check: caption says 'மின் தடைக்கு முன் மொபைல் சார்ஜ், குடிநீர் போன்றவற்றை தயார் செய்துகொள்ளுங்கள்' — advice not in the article; this is an invented detail.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/tiruppur/2026/Nov/10/%E0%AE%A8%E0%AE%BE%E0%AE%B3%E0%AF%88%E0%AE%AF-%E0%AE%AE%E0%AE%BF%E0%AE%A9%E0%AF%8D%E0%AE%A4%E0%AE%9F%E0%AF%88-%E0%AE%AA%E0%AE%B4%E0%AE%99%E0%AF%8D%E0%AE%95%E0%AE%B0%E0%AF%88-3
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 39 min
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/tir
+NOT filed (N) நாளைய மின்தடை: பழங்கரை: duplicate after write
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 38 min
+filed: 0 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 0
