@@ -81,6 +81,20 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `e913c1f` | Facebook: only top news by insights (urgent / best topics), 5 a day 2 h apart, 24 h pause on Facebook's limit (368), no retry; news source (paper + date) on the reel header, end card and captions, article link in the Facebook caption and the page's Instagram comment; comment replies e-mailed with 3 options - posted only after the owner's choice (owner 11 Nov) |
+| 2026-11-11 | `3884c40` | facebook retry |
+| 2026-11-11 | `789a8d9` | facebook retry |
+| 2026-11-11 | `026cd9b` | facebook RN-217 |
+| 2026-11-11 | `d95f5a8` | facebook retry |
+| 2026-11-11 | `0eecd08` | pick: written and posted |
+| 2026-11-11 | `ae1ba6d` | facebook retry |
+| 2026-11-11 | `e438f89` | facebook RN-310 |
+| 2026-11-11 | `aefd6dd` | facebook retry |
+| 2026-11-11 | `845e482` | facebook RN-309 |
+| 2026-11-11 | `86a87d3` | pick: picked news saved |
+| 2026-11-11 | `6d9499b` | powercut: notices written |
+| 2026-11-11 | `2ada96c` | pick: picked news saved |
+| 2026-11-11 | `c3ed22a` | pick: list sent |
 | 2026-11-11 | `be78aea` | check: news already on Instagram is skipped before choosing (RN-220/236/295 chosen every 5 min since 6 Nov, 41 ready news waited); pick + powercut verify: refused / already-on-Instagram news count as skipped (owner 11 Nov) |
 | 2026-11-04 | `b232c83` | pick: a picked news the writer refused is remembered - skipped in the round check, never offered again (3 Nov rounds red); Facebook photo story gets its own fresh upload (rasipalan story 400 Invalid parameter) |
 | 2026-11-11 | `c3369be` | powercut: notices written |
@@ -97,18 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `ff5c785` | facebook RN-302 |
 | 2026-11-11 | `f685151` | pick: picked news saved |
 | 2026-11-11 | `eacea1e` | pick: picked news saved |
-| 2026-11-11 | `08f937e` | pick: list sent |
-| 2026-11-11 | `2ca3327` | powercut: notices written |
-| 2026-11-10 | `fa868bc` | facebook retry |
-| 2026-11-10 | `f5eb300` | facebook retry |
-| 2026-11-10 | `28e4ba3` | facebook RN-301 |
-| 2026-11-10 | `e0ac624` | powercut: notices written |
-| 2026-11-10 | `1ff99e0` | pick: written and posted |
-| 2026-11-10 | `ae263f2` | powercut: notices written |
-| 2026-11-10 | `f658261` | powercut: notices written |
-| 2026-11-10 | `2c48011` | powercut: notices written |
-| 2026-11-10 | `bbc16ed` | facebook retry |
-| 2026-11-10 | `aa616e9` | facebook retry |
-| 2026-11-10 | `3ec2a35` | powercut: notices written |
-| 2026-11-10 | `8b37750` | facebook RN-297 |
 <!-- recent-changes:end -->
