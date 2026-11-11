@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `27f7af2` | Apps Script: comment-poll functions renamed without the trailing underscore (private functions are hidden from the Run list) - setupCommentPoll |
 | 2026-11-11 | `192dd17` | comment replies: Google Form per batch (works on any device, no account) - news, comment, tick-box replies (one or more), own reply, Reply/Skip/Hide; posted only after the owner submits; 5-minute check (setupCommentPoll_) |
 | 2026-11-11 | `de49eec` | facebook RN-312 |
 | 2026-11-11 | `026cf77` | comment reply form: the e-mailed link and form buttons use the bridge's own public address (getUrl gave an address that opened Google Drive) (owner 11 Nov) |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `789a8d9` | facebook retry |
 | 2026-11-11 | `026cd9b` | facebook RN-217 |
 | 2026-11-11 | `d95f5a8` | facebook retry |
-| 2026-11-11 | `0eecd08` | pick: written and posted |
 <!-- recent-changes:end -->
