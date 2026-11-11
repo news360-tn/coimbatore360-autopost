@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `6a0bacd` | power cuts: a cancellation / postponement / day change is posted (urgent) only when this page posted that cut - never dropped as a duplicate of the original; the power-cut check remembers notices the writer refused (owner 11 Nov) |
+| 2026-11-11 | `abb1ac1` | powercut: notices written |
 | 2026-11-11 | `6c6ade2` | comments: old unanswered comments offered too (60 days, 100 posts); comments the page already answered in the app are skipped (owner 11 Nov) |
 | 2026-11-11 | `e828968` | powercut: notices written |
 | 2026-11-11 | `04cdaed` | facebook RN-234 |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `845e482` | facebook RN-309 |
 | 2026-11-11 | `86a87d3` | pick: picked news saved |
 | 2026-11-11 | `6d9499b` | powercut: notices written |
-| 2026-11-11 | `2ada96c` | pick: picked news saved |
-| 2026-11-11 | `c3ed22a` | pick: list sent |
 <!-- recent-changes:end -->
