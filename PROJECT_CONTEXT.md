@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `be78aea` | check: news already on Instagram is skipped before choosing (RN-220/236/295 chosen every 5 min since 6 Nov, 41 ready news waited); pick + powercut verify: refused / already-on-Instagram news count as skipped (owner 11 Nov) |
 | 2026-11-04 | `b232c83` | pick: a picked news the writer refused is remembered - skipped in the round check, never offered again (3 Nov rounds red); Facebook photo story gets its own fresh upload (rasipalan story 400 Invalid parameter) |
 | 2026-11-11 | `c3369be` | powercut: notices written |
 | 2026-11-11 | `b680839` | powercut: notices written |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-10 | `aa616e9` | facebook retry |
 | 2026-11-10 | `3ec2a35` | powercut: notices written |
 | 2026-11-10 | `8b37750` | facebook RN-297 |
-| 2026-11-10 | `73936c6` | facebook RN-298 |
 <!-- recent-changes:end -->
