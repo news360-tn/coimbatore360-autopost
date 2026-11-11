@@ -1971,3 +1971,66 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":1,"updated":0} 
 stories: 0
+writing [N]: கோயம்புத்தூர் : நாளைய (நவ.13) மின்தடை
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (15s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (1s)
+factcheck by groq/openai/gpt-oss-120b: 0 problems
+attempt 1 gemini/gemini-3.6-flash: 0 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (4s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The article names only the power-cut areas and date; the draft says the outage is for 'maintenance work' (பராமரிப்புப் பணிகள்), which is not stated in the article.
+  The reel_script states the cut is in 'Coimbatore district' and 'many places' (பல்வேறு இடங்களில்), but the article only lists specific localities.
+  The article lists 'Salem' location names but the draft's reel_script states the cut is 'at Kanuvai, Thadagam Road' areas as a single cause without basis; the stated cause (maintenance) is invented.
+  The reel_script and slides say the outage 'will not have electricity' and 'will be affected', adding a 'அறிவுரை' (advice to take precautions) not in the article, though the article does say residents should plan in advance.
+  The reel_script omits the time of the outage, which the article does not specify, so no omission is involved; however the reel_script's 'Coimbatore district' phrasing is unsupported by the article's wording.
+proofread rejected (5 problems)
+  fact-check: The article names only the power-cut areas and date; the draft says the outage is for 'maintenance work' (பராமரிப்புப் பணிகள்), which is not stated in the article.
+  fact-check: The reel_script states the cut is in 'Coimbatore district' and 'many places' (பல்வேறு இடங்களில்), but the article only lists specific localities.
+  fact-check: The article lists 'Salem' location names but the draft's reel_script states the cut is 'at Kanuvai, Thadagam Road' areas as a single cause without basis; the stated cause (maintenance) is invented.
+  fact-check: The reel_script and slides say the outage 'will not have electricity' and 'will be affected', adding a 'அறிவுரை' (advice to take precautions) not in the article, though the article does say residents should plan in advance.
+  fact-check: The reel_script omits the time of the outage, which the article does not specify, so no omission is involved; however the reel_script's 'Coimbatore district' phrasing is unsupported by the article's wording.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/amp/news/tamil-nadu-district-news-coimbatore/tomorrow-barrier-coimbatore/4372989
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 39 min
+try (N) manual=True: https://www.dinamalar.com/amp/news/tamil-nadu-district-news-
+NOT filed (N) கோயம்புத்தூர் : நாளைய (நவ.13) மின்தடை: duplicate after write
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 38 min
+filed: 0 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 0
