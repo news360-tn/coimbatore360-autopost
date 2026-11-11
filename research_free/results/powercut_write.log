@@ -1649,3 +1649,100 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
 stories: 0
+writing [N]: கோவையில் நவம்பர் 12ம் தேதி மின்தடை: எந்தெந்த பகுதிகள் தெரியு
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: Expecting ',' delimiter: line 1 column 1264 (char 1263)
+poor answer - skipped for 30 min: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (14s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (4s)
+factcheck by groq/openai/gpt-oss-120b: 4 problems
+  Headline limits the outage to only Peelamedu and Neelambur areas, omitting many other areas listed in the article
+  Reel script leaves out several areas mentioned in the article such as பாரதி காலனி, இளங்கோ நகர், போலீஸ் குவார்ட்டர்ஸ், வி.ஜி.ராவ் நகர், பிஎஸ்ஜி மருத்துவமனை and திருவள்ளுவர் நகர்
+  Slides spec contains an invented location “பைபாஸ் சாலையின் ஒரு பகுதி” which is not in the article
+  Slides spec refers to “முத்துக்கவுண்டன்புதூர்” instead of the correct “முத்துக்கவுண்டன்புதூர் சாலை”, deviating from the article’s wording
+attempt 1 gemini/gemini-3-flash-preview: 4 problems
+  fact-check: Headline limits the outage to only Peelamedu and Neelambur areas, omitting many other areas listed in the article
+  fact-check: Reel script leaves out several areas mentioned in the article such as பாரதி காலனி, இளங்கோ நகர், போலீஸ் குவார்ட்டர்ஸ், வி.ஜி.ராவ் நகர், பிஎஸ்ஜி மருத்துவமனை and திருவள்ளுவர் நகர்
+  fact-check: Slides spec contains an invented location “பைபாஸ் சாலையின் ஒரு பகுதி” which is not in the article
+  fact-check: Slides spec refers to “முத்துக்கவுண்டன்புதூர்” instead of the correct “முத்துக்கவுண்டன்புதூர் சாலை”, deviating from the article’s wording
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 2 groq/qwen/qwen3.8-27b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  reel_script says 'நாளை' (tomorrow) for the outage, but the article only gives the date as Thursday, November 12 and does not say it is tomorrow
+  reel_script omits Pulliyakulam? No, it includes it; however it omits 'பிஎஸ்ஜி மருத்துவமனை' and other listed Peelamedu areas, which is acceptable only as a summary, so this is not flagged
+  slides_spec 'என்ன செய்யலாம்?' slide advises storing mobile charge and drinking water in advance, which is not stated in the article (invented advice)
+  slides_spec hl1 says 'கோவையில் நாளை மின்தடை' repeating the unsupported 'நாளை' (tomorrow) claim
+  caption header line 'கோவையில் நாளை மின்தடை' repeats the unsupported 'நாளை' (tomorrow) claim
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: reel_script says 'நாளை' (tomorrow) for the outage, but the article only gives the date as Thursday, November 12 and does not say it is tomorrow
+  fact-check: reel_script omits Pulliyakulam? No, it includes it; however it omits 'பிஎஸ்ஜி மருத்துவமனை' and other listed Peelamedu areas, which is acceptable only as a summary, so this is not flagged
+  fact-check: slides_spec 'என்ன செய்யலாம்?' slide advises storing mobile charge and drinking water in advance, which is not stated in the article (invented advice)
+  fact-check: slides_spec hl1 says 'கோவையில் நாளை மின்தடை' repeating the unsupported 'நாளை' (tomorrow) claim
+  fact-check: caption header line 'கோவையில் நாளை மின்தடை' repeats the unsupported 'நாளை' (tomorrow) claim
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  slides_spec.hl1 says the outage is for 'பீளமேடு' only, while the article covers both Peelamedu and Muthukoundanpudur substations (the headline is incomplete but not strictly false; minor)
+  slides_spec.slides[1] lists 'திருச்சி சாலை' and 'நஞ்சுண்டாபுரம்' under the general area list without clearly tying them to a substation; article places Nanjundapuram under Peelamedu and Thiruchi Road partially, so the grouping is loosely accurate
+  slides_spec.slides[2] says the electricity board 'advises the public to be cautious' - article says public should make precautionary arrangements; acceptable paraphrase
+  reel_script omits that the outage is due to monthly maintenance work at both substations being carried out; it says 'மாதாந்திர பராமரிப்புப் பணிகளே இதற்குக் காரணம்' which is present, so no omission here
+claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: slides_spec.hl1 says the outage is for 'பீளமேடு' only, while the article covers both Peelamedu and Muthukoundanpudur substations (the headline is incomplete but not strictly false; minor)
+  fact-check: slides_spec.slides[1] lists 'திருச்சி சாலை' and 'நஞ்சுண்டாபுரம்' under the general area list without clearly tying them to a substation; article places Nanjundapuram under Peelamedu and Thiruchi Road partially, so the grouping is loosely accurate
+  fact-check: slides_spec.slides[2] says the electricity board 'advises the public to be cautious' - article says public should make precautionary arrangements; acceptable paraphrase
+  fact-check: reel_script omits that the outage is due to monthly maintenance work at both substations being carried out; it says 'மாதாந்திர பராமரிப்புப் பணிகளே இதற்குக் காரணம்' which is present, so no omission here
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://covaimail.com/coimbatore-power-shutdown-november-12-peelamedu-muthugoundanpudur
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 39 min
+try (N) manual=True: https://covaimail.com/coimbatore-power-shutdown-november-12-
+NOT filed (N) கோவையில் நவம்பர் 12ம் தேதி மின்தடை: எந்தெந்த பகுதி: duplicate after write
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 37 min
+filed: 0 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 0
