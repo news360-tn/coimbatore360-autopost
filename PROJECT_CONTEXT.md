@@ -81,6 +81,10 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-11 | `a64de44` | Apps Script: comment replies merged into Code.gs - the owner pastes one file (owner 11 Nov) |
+| 2026-11-11 | `49b6e3d` | facebook RN-222 |
+| 2026-11-11 | `71905fc` | facebook RN-218 |
+| 2026-11-11 | `b8c5677` | powercut: notices written |
 | 2026-11-11 | `e913c1f` | Facebook: only top news by insights (urgent / best topics), 5 a day 2 h apart, 24 h pause on Facebook's limit (368), no retry; news source (paper + date) on the reel header, end card and captions, article link in the Facebook caption and the page's Instagram comment; comment replies e-mailed with 3 options - posted only after the owner's choice (owner 11 Nov) |
 | 2026-11-11 | `3884c40` | facebook retry |
 | 2026-11-11 | `789a8d9` | facebook retry |
@@ -107,8 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-11 | `14ef98d` | rasipalan posted |
 | 2026-11-11 | `b99b957` | powercut: notices written |
 | 2026-11-11 | `40fbca1` | facebook retry |
-| 2026-11-11 | `f290f2e` | facebook retry |
-| 2026-11-11 | `ff5c785` | facebook RN-302 |
-| 2026-11-11 | `f685151` | pick: picked news saved |
-| 2026-11-11 | `eacea1e` | pick: picked news saved |
 <!-- recent-changes:end -->
