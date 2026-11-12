@@ -81,6 +81,14 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-12 | `f43a08d` | post: start the next posting run after the 12-minute gap while stories wait (GitHub runs the 5-min schedule ~hourly; Coimbatore had 23 waiting, 1 posted per hour) |
+| 2026-11-12 | `a1f27a4` | facebook RN-332 |
+| 2026-11-12 | `3a79809` | pick: picked news saved |
+| 2026-11-12 | `d93f8bc` | pick: picked news saved |
+| 2026-11-12 | `f755cd1` | pick: list sent |
+| 2026-11-12 | `32fd8fc` | facebook RN-288 |
+| 2026-11-12 | `c053f99` | powercut: notices written |
+| 2026-11-12 | `8122b81` | stories shared |
 | 2026-11-12 | `5603740` | Cloudinary clean-up: this page's files older than 3 days deleted every hour (at 50% of the free limit reels older than 26 h too); a deleted prebuilt reel is uploaded again; rasipalan pictures in the page folder |
 | 2026-11-12 | `aedcdf4` | powercut: notices written |
 | 2026-11-12 | `7a946dc` | facebook RN-279 |
@@ -103,12 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-12 | `6564fcd` | facebook RN-264 |
 | 2026-11-12 | `a984932` | facebook RN-262 |
 | 2026-11-12 | `a2282a0` | powercut: notices written |
-| 2026-11-12 | `6ec0899` | facebook RN-258 |
-| 2026-11-12 | `91a3416` | stories shared |
-| 2026-11-12 | `b64fc6e` | facebook RN-330 |
-| 2026-11-12 | `31b4345` | powercut: notices written |
-| 2026-11-12 | `f349f40` | facebook RN-331 |
-| 2026-11-12 | `4967490` | facebook RN-327 |
-| 2026-11-12 | `38f75e3` | pick: picked news saved |
-| 2026-11-12 | `ea2687a` | powercut: notices written |
 <!-- recent-changes:end -->
