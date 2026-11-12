@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-12 | `ee4a7a9` | voice: numbers read the way people say them - English names in English (பிளஸ் டூ, குரூப் ஃபோர், டி ட்வென்டி, ஃபைவ் ஜி), endings joined (நாற்பதுக்கும், ...ஒன்றில், ரூபாய்க்கு), நெ. -> எண் |
+| 2026-11-12 | `a8f855c` | facebook RN-300 |
 | 2026-11-12 | `bc675f7` | voice: 'பிளஸ் 2' is read 'பிளஸ் டூ' (was 'பிளஸ் இரண்டு', RN-534); 'பிளஸ் 1' -> 'பிளஸ் ஒன்' |
 | 2026-11-12 | `7244958` | powercut: notices written |
 | 2026-11-12 | `2d86f35` | facebook RN-299 |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-12 | `c4f388b` | powercut: notices written |
 | 2026-11-12 | `5cad192` | powercut: notices written |
 | 2026-11-12 | `d2e2bb9` | facebook RN-278 |
-| 2026-11-12 | `1a68301` | powercut: notices written |
-| 2026-11-12 | `a2f641b` | powercut: notices written |
 <!-- recent-changes:end -->
