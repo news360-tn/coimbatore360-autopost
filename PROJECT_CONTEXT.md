@@ -81,6 +81,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-12 | `9e5d3ed` | cloudinary: keep the last 48 h only, clean once every 48 h (own workflow; hourly step removed) |
+| 2026-11-12 | `4ea1bac` | facebook RN-291 |
+| 2026-11-12 | `5252cdf` | powercut: notices written |
+| 2026-11-12 | `37e6442` | powercut: notices written |
+| 2026-11-12 | `57785e4` | facebook RN-290 |
 | 2026-11-12 | `f43a08d` | post: start the next posting run after the 12-minute gap while stories wait (GitHub runs the 5-min schedule ~hourly; Coimbatore had 23 waiting, 1 posted per hour) |
 | 2026-11-12 | `a1f27a4` | facebook RN-332 |
 | 2026-11-12 | `3a79809` | pick: picked news saved |
@@ -106,9 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-12 | `468dbc9` | facebook RN-229 |
 | 2026-11-12 | `993aa63` | powercut: notices written |
 | 2026-11-12 | `874a7a8` | pick: written and posted |
-| 2026-11-12 | `27a8af2` | facebook RN-266 |
-| 2026-11-12 | `70dca7b` | powercut: notices written |
-| 2026-11-12 | `6564fcd` | facebook RN-264 |
-| 2026-11-12 | `a984932` | facebook RN-262 |
-| 2026-11-12 | `a2282a0` | powercut: notices written |
 <!-- recent-changes:end -->
