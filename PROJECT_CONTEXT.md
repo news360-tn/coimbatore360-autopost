@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-13 | `aba8a65` | collection every 4 hours (01/05/09/13/17/21 IST, 4+4+3+3+3+3 = 20 news); posting waits for its start 08:00 / 12:00 / 18:00 then all news posts - no end time, nothing skipped; only power cuts at once; today's and yesterday's news (night news posts at 08:00). Power cuts: also the daily state-wide lists (News18 / ABP / Samayam) - Coimbatore's part only; Tirupur / Erode edition pages refused (owner 13 Nov) |
-| 2026-11-13 | `6ae873e` | powercut: notices written |
-| 2026-11-13 | `f516be9` | facebook RN-326 |
-| 2026-11-13 | `9b804e4` | powercut: notices written |
-| 2026-11-13 | `da359b0` | evening round 19:00 -> 17:00 IST (evening posts got far fewer views). Reel: spoken sentence 1 names the town and states the news (no question / teaser). ABP / Samayam named as sources (owner 13 Nov) |
-| 2026-11-13 | `c0c4a67` | facebook RN-323 |
-| 2026-11-13 | `bf7289c` | powercut: notices written |
-| 2026-11-13 | `438a97b` | powercut: notices written |
-| 2026-11-13 | `f6eecac` | stories shared |
-| 2026-11-13 | `8910d58` | pick: written and posted |
-| 2026-11-13 | `7700ecf` | powercut: notices written |
-| 2026-11-13 | `578e8ed` | facebook RN-318 |
-| 2026-11-13 | `45e6274` | powercut: notices written |
-| 2026-11-13 | `291722e` | facebook RN-317 |
-| 2026-11-13 | `73060ee` | facebook RN-315 |
-| 2026-11-13 | `6aa1cbc` | facebook RN-308 |
-| 2026-11-13 | `ec51754` | powercut: notices written |
-| 2026-11-13 | `cee3548` | reel end card: 'Source: <paper> (<date>)' instead of 'ஆதாரம்' (owner 13 Nov - same on every page); waiting reels rebuilt |
-| 2026-11-13 | `cf478a0` | facebook RN-304 |
-| 2026-11-13 | `abd5af8` | stories shared |
-| 2026-11-13 | `4aef62b` | powercut: notices written |
-| 2026-11-13 | `398ebc5` | facebook RN-347 |
-| 2026-11-13 | `a2c0e2b` | facebook RN-349 |
-| 2026-11-13 | `cbe2403` | pick: picked news saved |
-| 2026-11-13 | `e63f07e` | powercut: notices written |
-| 2026-11-13 | `0bd659e` | pick: picked news saved |
-| 2026-11-13 | `ae44f28` | pick: list sent |
-| 2026-11-13 | `510a417` | powercut: notices written |
-| 2026-11-13 | `7e47a44` | pick: written and posted |
-| 2026-11-13 | `73cf71b` | powercut: notices written |
+| 2026-11-13 | `e9f5403` | posting: no start-time wait - every eligible story posts as soon as it is ready (prime_time OFF); collection stays every 4 hours (owner 13 Nov 22:51) |
+| 2026-11-13 | `bc5b043` | powercut: notices written |
+| 2026-11-13 | `1e50867` | facebook RN-341 |
+| 2026-11-13 | `3ae8489` | facebook RN-342 |
+| 2026-11-13 | `93517ea` | powercut: notices written |
+| 2026-11-13 | `6f3ccc4` | pick: written and posted |
+| 2026-11-13 | `ed60c03` | pick: picked news saved |
+| 2026-11-13 | `6f0fae4` | pick: picked news saved |
+| 2026-11-13 | `021d9ea` | pick: list sent |
+| 2026-11-13 | `4835e2a` | facebook RN-343 |
+| 2026-11-13 | `e5169fe` | powercut: notices written |
+| 2026-11-13 | `2bcd001` | powercut: notices written |
+| 2026-11-13 | `f0544f7` | stories shared |
+| 2026-11-13 | `f7f8956` | powercut: notices written |
+| 2026-11-13 | `c7ceb04` | pick: written and posted |
+| 2026-11-13 | `fa04f7d` | facebook RN-339 |
+| 2026-11-13 | `8e1c750` | facebook RN-334 |
+| 2026-11-13 | `23473c1` | facebook RN-333 |
+| 2026-11-13 | `d49adac` | powercut: notices written |
+| 2026-11-13 | `f695348` | powercut: notices written |
+| 2026-11-13 | `24e0d3a` | facebook RN-354 |
+| 2026-11-13 | `e800802` | powercut: notices written |
+| 2026-11-13 | `b2ec358` | pick: picked news saved |
+| 2026-11-13 | `3399476` | pick: picked news saved |
+| 2026-11-13 | `b3df7b3` | pick: list sent |
+| 2026-11-13 | `aed5403` | powercut: notices written |
+| 2026-11-13 | `0f4c4dc` | facebook RN-328 |
+| 2026-11-13 | `b7f596f` | stories shared |
+| 2026-11-13 | `ad80349` | powercut: notices written |
+| 2026-11-13 | `18fdd52` | facebook RN-329 |
 <!-- recent-changes:end -->
