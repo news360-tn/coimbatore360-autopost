@@ -22,6 +22,10 @@ QUERIES = ["கோவை மின்தடை", "கோயம்புத்த
 SITES = ("dinamani.com", "dinamalar.com", "covaimail.com")      # order = preference when two papers print the same cut
 DISTRICT_URL = ("district-news-coimbatore", "edition-coimbatore", "covaimail.com")      # a link of the district's own page
 # ----
+# owner 13 Nov: the daily STATE-WIDE lists name every district's areas - a cut is often printed only there. Only OUR district's part
+# is used (allnews.district_section); a list without a Coimbatore part is refused as 'not this district'.
+STATE_SITES = ("tamil.news18.com", "tamil.abplive.com", "tamil.samayam.com")
+STATE_QUERIES = ["தமிழகத்தில் நாளை மின்தடை", "தமிழ்நாட்டில் நாளை மின்தடை பகுதிகள்"]
 
 STATE = HERE / "archive" / "powercut_state.json"
 URLS = HERE / "results" / "powercut_urls.txt"
@@ -124,6 +128,14 @@ def links():
                     items += [x for x in fn(f"{q} site:{dom}") if dom in (x.get("site", "") + x.get("url", "")) and F.is_power_cut(x.get("title", ""))]
                 except Exception as e:
                     log(f"{fn.__name__} '{q}' {dom} failed: {str(e)[:80]}")
+    for q in STATE_QUERIES:
+        for dom in STATE_SITES:
+            for fn in (allnews.from_google, allnews.from_bing):
+                try:
+                    items += [dict(x, state_list=True) for x in fn(f"{q} site:{dom}")
+                              if dom in (x.get("site", "") + x.get("url", "")) and F.is_power_cut(x.get("title", ""))]
+                except Exception as e:
+                    log(f"{fn.__name__} '{q}' {dom} failed: {str(e)[:80]}")
     out, seen = [], set()
     for it in items:
         u = it["url"]
@@ -133,7 +145,13 @@ def links():
             except Exception:
                 continue
         u = norm(u)
-        if u in seen or not any(d in u for d in SITES):
+        if it.get("state_list"):
+            if not any(d in u for d in STATE_SITES):
+                continue
+            u += allnews.SECTION_MARK      # read as: intro + our district's part only
+        elif not any(d in u for d in SITES):
+            continue
+        if u in seen:
             continue
         seen.add(u)
         out.append(dict(it, url=u))
@@ -159,6 +177,9 @@ def check(it, today, now):
     it["_title"] = title
     if not F.is_power_cut(title):
         return None, "not a power cut"
+    filed = allnews.url_district(it["url"])
+    if filed and filed not in allnews.DISTRICT_SLUGS and not allnews.has_place(title):
+        return None, "other district"      # owner 13 Nov: filed under another district's page (edition-coimbatore/tiruppur is Tirupur's)
     if not (allnews.has_place(title) or allnews.has_place(text[:800]) or any(d in it["url"] for d in DISTRICT_URL)):
         return None, "not this district"
     if allnews.other_district(title):
