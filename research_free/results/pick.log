@@ -1,262 +1,49 @@
-20:00:32 round 2026-11-12_20: news published 12 Nov 10:57 -> 12 Nov 20:00 (தினமலர், தினமணி, தினகரன், தினத்தந்தி, மாலைமலர், இந்து தமிழ், பாலிமர் - Coimbatore)
-20:00:32 insights 2026-11-12T20:00+05:30 (236 reels): topic weights {'education': -0.4, 'civic': -0.08, 'power_cut': 1.5, 'sports_culture': -0.08, 'politics': -0.45, 'crime': 0.18, 'weather': 0.08, 'accident': 1.5, 'poultry_agri': -0.25, 'temple': -0.01}; best openings ['🏆 கோவை நவக்கரையில் ஏ.ஜே.கே. விளையாட்டு திருவிழா 2026: வரும் 16 முதல் 23 வரை', '⚡ தடாகம் அருகே சார்ஜர் இணைத்தபோது மின்சாரம் பாய்ந்து தொழிலாளி உயிரிழப்பு']
-20:04:43 தினகரன் கோவை list failed: HTTPSConnectionPool(host='www.dinakaran.com', port=443): Read timed out. (read timeout=40)
-20:04:43 68 links on the two papers' Coimbatore pages
-20:08:21 skipped: not Coimbatore district=22, published before this window=15, already posted=4, only a headline=2, could not open (HTTPSConnectionPool(host='www.dinakaran.com', port)=2
-20:08:21 list: 18 new + 11 earlier news not posted yet
-20:08:21    1. [விபத்து] நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி (மாலைமலர்)
-20:08:21    2. [குற்றம்] கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு (தினமலர்)
-20:08:21    3. [விபத்து] கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்: கணவன், மன (தினமணி)
-20:08:21    4. [விபத்து] சுந்தராபுரம் அருகே பள்ளி பஸ் சாலையோர கடைக்குள் புகுந்து விபத்து (மாலைமலர்)
-20:08:21    5. [பொது] நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்பதால் மகிழ (தினமலர்)
-20:08:21    6. [பொது] அங்கன்வாடி மையம் எப்போது திறக்கப்படும் (தினமலர்)
-20:08:21    7. [பொது] ‘ஸ்பேம் கால்’ ‘பாம் கால்’ ஆனது் வெடிகுண்டு நிபுணர்கள் சோதனை (தினமலர்)
-20:08:21    8. [மாநகராட்சி] சென்னை, கோவை மாநகராட்சி டெண்டர் முறைகேடு: ஐஏஎஸ் அதிகாரிகள் இருவர் மீதா (இந்து தமிழ்)
-20:08:21    9. [பொது] குப்பை, கழிவுநீர் கலப்பால் மாசுபடும் மேட்டுப்பாளையம் பவானி ஆறு (இந்து தமிழ்)
-20:08:21   10. [குடிநீர்] அபாய நிலையில் குடிநீர் மேல்நிலை தொட்டி: சார் படம் உண்டு (தினமலர்)
-20:08:21   11. [பொது] குப்பையானது பேட்டரி வாகனங்கள் தூய்மைப்பணியில் நீடிக்கும் சிக்கல் (தினமலர்)
-20:08:21   12. [பொது] மே.பா. உழவர் சந்தைக்கு மக்கள் வருகை உயர்வு6 மாதங்களில் ரூ.35 கோடிக்கு  (தினமலர்)
-20:08:21   13. [ரயில்] 3 எக்ஸ்பிரஸ் ரயில்களை போத்தனூரில் நிறுத்த கோரிக்கை (தினமலர்)
-20:08:21   14. [கல்வி] ஏ.ஜே.கே கல்லூரியில் கேக் தயாரிப்பு திருவிழா (தினமலர்)
-20:08:21   15. [விலை] ஏலத்தில் தேங்காய் விலை சரிவு (தினமலர்)
-20:08:21   16. [பொது] பழனி ஆண்டவர் கோயிலில் கந்த சஷ்டி (தினமலர்)
-20:08:21   17. [பொது] கந்த சஷ்டி 3ம் நாள் பூஜை (தினமலர்)
-20:08:21   18. [பொது] தேன்கூடு வண்டு பாதிப்பு! வழிகாட்டும் ஆய்வாளர்கள் (தினமலர்)
-20:08:21   19. [பொது] ஸ்ரீ ஸ்ரீ காளி பூஜை 25 ஆம் ஆண்டு வெள்ளி விழா கோலாகலம்! அமைச்சர் சம்பத (தினமணி) (earlier)
-20:08:21   20. [கல்வி] எஸ்.என்.எஸ். தொழில்நுட்பக் கல்லூரியில் முன்னாள் மாணவா்கள் சந்திப்பு நி (தினமணி) (earlier)
-20:08:21   21. [பொது] ‘கட்சி நிதி’ வசூலை தி.மு.க., வெளியிடுமா பா.ஜ., பொருளாளர் எஸ்.ஆர்.சேகர் (தினமலர்) (earlier)
-20:08:21   22. [பொது] ஏஜேகே விளையாட்டுத் திருவிழா (தினமலர்) (earlier)
-20:08:21   23. [குற்றம்] பெண்ணை மிரட்டி நகை பறித்த வழக்கில் இளைஞருக்கு 10 ஆண்டுகள் கடுங்காவல் ச (தினமணி) (earlier)
-20:08:21   24. [ஆன்மிகம்] கோவில்களில் முடங்கி கிடக்கும் புறப்பாடு வாகனங்கள்: மரபு சிற்ப கலையை பா (தினமலர்) (earlier)
-20:08:21   25. [பொது] ஸ்டேன்ஸ் மில் தியாகிகள் நினைவு தினம் அனுசரிப்பு (தினமணி) (earlier)
-20:08:21   26. [குற்றம்] பெரியார் அறிவுலகம் ஊழல் குற்றச்சாட்டு: லஞ்ச ஒழிப்புத்துறை வழக்கு பதிவு (மாலைமலர்) (earlier)
-20:08:21   27. [பொது] “வெட்கித் தலைகுனிந்த நிலையில் நூலகங்கள்” - வானதி சீனிவாசன் வேதனை (இந்து தமிழ்) (earlier)
-20:08:21   28. [குற்றம்] பெரியார் அறிவுலக முறைகேடு - வழக்குப்பதிவு செய்தது லஞ்ச ஒழிப்புத் துறை (தினத்தந்தி) (earlier)
-20:08:21   29. [பொது] இந்தியாவின் உற்பத்தி மையமாகும் கொங்கு மண்டலம்: மத்திய, மாநில அரசுகள் க (தினமலர்) (earlier)
-20:08:21 automatic pick (owner 2 Nov): no e-mail - the top 6 are written at once
-ROUND=2026-11-12_20
-20:08:23    not picked automatically (ceremony / award / awareness event (low views)): சென்னை, கோவை மாநகராட்சி டெண்டர் முறைகேடு: ஐஏஎஸ் அதிகாரிகள் இருவர் மீதா
-20:08:23    not picked automatically (ceremony / shopping feature - only when the owner ticks it): ஸ்ரீ ஸ்ரீ காளி பூஜை 25 ஆம் ஆண்டு வெள்ளி விழா கோலாகலம்! அமைச்சர் சம்பத
-20:08:25 could not mark the automatic pick on the page: bridge pickAuto: no such round
-20:08:25 decided: no submit by 09:00 PM - automatic top 6 -> 6 news to write and post
-PICK_URLS=https://www.maalaimalar.com/news/tamilnadu/neelambur-near-accident-death-police-inquiry https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/jewellery-snatched-from-karumathampatti-near-woman/4373995 https://www.dinamani.com/tamilnadu/2026/Nov/12/car-crashes-into-bus-and-ends-up-inside-a-container-truck-in-coimbatore-husband-and-wife-killed https://www.maalaimalar.com/news/tamilnadu/sundarapuram-near-school-bus-accident https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/filling-akkamalai-barrage-happy-to-be-on-display-for-4-months/4373975 https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/when-will-the-anganwadi-center-open/4373999
-20:16:16 6 listed news now in the Sheet
-20:16:36 instagram duplicate check coimbatore: 50 recent posts read
-20:16:38 verify 2026-11-12_20: 0 of 6 picked news posted, 2 skipped on purpose
-20:16:38    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:16:38    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:16:38    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:16:38    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:16:38    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:16:38    NOT POSTED Cd0866bf: queued RN-332 (Queued) - சுந்தராபுரம் அருகே பள்ளி பஸ் சாலையோர கடைக்குள் புகுந்து விபத
-20:21:48 instagram duplicate check coimbatore: 50 recent posts read
-20:21:49 verify 2026-11-12_20: 0 of 6 picked news posted, 2 skipped on purpose
-20:21:49    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:21:49    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:21:49    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:21:49    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:21:49    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:21:49    NOT POSTED Cd0866bf: queued RN-332 (Queued) - சுந்தராபுரம் அருகே பள்ளி பஸ் சாலையோர கடைக்குள் புகுந்து விபத
-20:26:59 instagram duplicate check coimbatore: 50 recent posts read
-20:27:01 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:27:01    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:27:01    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:27:01    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:27:01    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:27:01    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:32:09 instagram duplicate check coimbatore: 50 recent posts read
-20:32:11 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:32:11    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:32:11    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:32:11    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:32:11    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:32:11    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:37:21 instagram duplicate check coimbatore: 50 recent posts read
-20:37:22 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:37:22    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:37:22    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:37:22    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:37:22    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:37:22    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:42:33 instagram duplicate check coimbatore: 50 recent posts read
-20:42:34 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:42:34    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:42:34    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:42:34    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:42:34    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:42:34    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:47:45 instagram duplicate check coimbatore: 50 recent posts read
-20:47:47 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:47:47    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:47:47    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:47:47    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:47:47    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:47:47    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:52:56 instagram duplicate check coimbatore: 50 recent posts read
-20:52:58 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:52:58    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:52:58    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:52:58    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:52:58    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:52:58    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-20:58:06 instagram duplicate check coimbatore: 50 recent posts read
-20:58:08 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-20:58:08    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-20:58:08    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-20:58:08    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-20:58:08    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-20:58:08    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:03:18 instagram duplicate check coimbatore: 50 recent posts read
-21:03:20 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:03:20    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:03:20    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:03:20    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:03:20    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:03:20    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:08:31 instagram duplicate check coimbatore: 50 recent posts read
-21:08:33 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:08:33    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:08:33    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:08:33    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:08:33    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:08:33    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:13:46 instagram duplicate check coimbatore: 50 recent posts read
-21:13:47 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:13:47    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:13:47    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:13:47    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:13:47    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:13:47    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:18:57 instagram duplicate check coimbatore: 50 recent posts read
-21:18:59 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:18:59    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:18:59    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:18:59    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:18:59    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:18:59    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:24:08 instagram duplicate check coimbatore: 50 recent posts read
-21:24:10 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:24:10    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:24:10    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:24:10    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:24:10    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:24:10    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:29:18 instagram duplicate check coimbatore: 50 recent posts read
-21:29:19 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:29:19    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:29:19    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:29:19    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:29:19    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:29:19    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:34:29 instagram duplicate check coimbatore: 50 recent posts read
-21:34:31 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:34:31    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:34:31    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:34:31    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:34:31    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:34:31    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:39:41 instagram duplicate check coimbatore: 50 recent posts read
-21:39:43 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:39:43    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:39:43    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:39:43    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:39:43    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:39:43    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:44:54 instagram duplicate check coimbatore: 50 recent posts read
-21:44:55 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:44:55    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:44:55    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:44:55    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:44:55    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:44:55    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:50:04 instagram duplicate check coimbatore: 50 recent posts read
-21:50:06 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:50:06    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:50:06    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:50:06    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:50:06    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:50:06    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-21:55:16 instagram duplicate check coimbatore: 50 recent posts read
-21:55:18 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-21:55:18    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-21:55:18    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-21:55:18    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-21:55:18    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-21:55:18    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:00:28 instagram duplicate check coimbatore: 50 recent posts read
-22:00:29 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:00:29    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:00:29    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:00:29    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:00:29    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:00:29    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:05:40 instagram duplicate check coimbatore: 50 recent posts read
-22:05:42 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:05:42    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:05:42    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:05:42    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:05:42    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:05:42    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:10:51 instagram duplicate check coimbatore: 50 recent posts read
-22:10:52 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:10:52    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:10:52    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:10:52    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:10:52    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:10:52    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:16:01 instagram duplicate check coimbatore: 50 recent posts read
-22:16:03 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:16:03    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:16:03    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:16:03    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:16:03    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:16:03    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:21:12 instagram duplicate check coimbatore: 50 recent posts read
-22:21:14 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:21:14    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:21:14    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:21:14    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:21:14    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:21:14    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:26:23 instagram duplicate check coimbatore: 50 recent posts read
-22:26:25 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:26:25    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:26:25    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:26:25    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:26:25    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:26:25    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:31:34 instagram duplicate check coimbatore: 50 recent posts read
-22:31:36 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:31:36    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:31:36    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:31:36    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:31:36    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:31:36    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:36:46 instagram duplicate check coimbatore: 50 recent posts read
-22:36:48 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:36:48    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:36:48    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:36:48    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:36:48    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:36:48    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:41:58 instagram duplicate check coimbatore: 50 recent posts read
-22:41:59 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:41:59    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:41:59    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:41:59    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:41:59    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:41:59    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:47:07 instagram duplicate check coimbatore: 50 recent posts read
-22:47:09 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:47:09    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:47:09    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:47:09    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:47:09    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:47:09    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
-22:52:19 instagram duplicate check coimbatore: 50 recent posts read
-22:52:20 verify 2026-11-12_20: 1 of 6 picked news posted, 2 skipped on purpose
-22:52:20    SKIPPED C376af97: skipped RN-336: held: fact-check problems - fact-check: The reel_script and slides say the victim was walking near her house and the person asked for water, but - கருமத்தம்பட்டி அருகேபெண்ணிடம் நகை பறிப்பு
-22:52:20    SKIPPED Caa3c22c: skipped RN-335: held: fact-check problems - numbers not found in the article: 7 - அங்கன்வாடி மையம் எப்போது திறக்கப்படும்
-22:52:20    NOT POSTED C15344b6: queued RN-334 (Queued) - நிரம்பி ததும்பும் அக்காமலை தடுப்பணை: 4 மாதங்களாக காட்சியளிப்
-22:52:20    NOT POSTED C199465e: queued RN-333 (Queued) - கோவையில் பேருந்தில் மோதி கண்டெய்னர் லாரிக்குள் புகுந்த கார்:
-22:52:20    NOT POSTED C2c1dddf: queued RN-337 (Queued) - நீலாம்பூர் அருகே விபத்தில் கணவன்-மனைவி பலி
+07:12:27 round 2026-11-13_07: news published 12 Nov 20:00 -> 13 Nov 07:12 (தினமலர், தினமணி, தினகரன், தினத்தந்தி, மாலைமலர், இந்து தமிழ், பாலிமர் - Coimbatore)
+07:12:27 insights 2026-11-13T07:12+05:30 (243 reels): topic weights {'education': -0.32, 'civic': -0.11, 'power_cut': 1.5, 'sports_culture': -0.09, 'politics': -0.46, 'crime': 0.15, 'weather': -0.05, 'accident': 1.5, 'poultry_agri': -0.26, 'temple': -0.02}; best openings ['🏆 கோவை நவக்கரையில் ஏ.ஜே.கே. விளையாட்டு திருவிழா 2026: வரும் 16 முதல் 23 வரை', '⚡ தடாகம் அருகே சார்ஜர் இணைத்தபோது மின்சாரம் பாய்ந்து தொழிலாளி உயிரிழப்பு']
+07:17:20 109 links on the two papers' Coimbatore pages
+07:19:37 skipped: not Coimbatore district=51, published before this window=24, same event already posted=1, already posted=1, only a headline=1, feature / tips / recipe, not a Coimbatore event=1
+07:19:38 list: 29 new + 13 earlier news not posted yet
+07:19:38    1. [குற்றம்] தனியாா் மருத்துவமனை விடுதியில் செவிலியா் தற்கொலை (தினமணி)
+07:19:38    2. [குற்றம்] தண்டவாளத்தில் கல் வைத்தவா் கைது (தினமணி)
+07:19:38    3. [குற்றம்] கத்தியை காட்டி பணம் பறித்தவர் கைது (தினமலர்)
+07:19:38    4. [குற்றம்] எழுத்து திருட்டுக்கு காரணமான பதிப்பகங்கள் மீது நடவடிக்கை (தினமலர்)
+07:19:38    5. [பொது] நகை கடைக்காரர்களுடன் போலீசார் ஆலோசனை (தினமலர்)
+07:19:38    6. [பொது] யானைகளின் வலசைப் பாதையில் விதிமீறும் ரிசார்ட்.! உரிய நடவடிக்கை எடுக்க  (தினகரன்)
+07:19:38    7. [குற்றம்] தவெக ஒன்றியச் செயலா் மீது பெண் நிா்வாகி பாலியல் புகாா் (தினமணி)
+07:19:38    8. [பொது] கிரைம் கார்னர்: கோயம்புத்தூர் (தினமலர்)
+07:19:38    9. [பொது] 6,317 கர்ப்பிணிகளுக்கு போன் போட்டு நலம் விசாரித்த செவிலியர்கள் (தினமலர்)
+07:19:38   10. [கல்வி] பள்ளி, கல்லூரி மாணவர்களை உள்ளே விடாதீர்கள்! 11 டு 11 பார்களுக்கு எச்சர (தினமலர்)
+07:19:38   11. [பொது] எஸ்.பி.வேலுமணிக்கு எதிரான ரூ.100 கோடி முறைகேடு வழக்கு: 2 ஐஏஎஸ் அதிகாரி (இந்து தமிழ்)
+07:19:38   12. [பொது] இருதயத் துடிப்பில் சீரற்ற தன்மையா! கே.எம்.சி.ஹெச்.,ல் சிறப்பு முகாம் (தினமலர்)
+07:19:38   13. [விலை] சின்ன வெங்காயம் கிலோ ரூ.60: –65 பல்கலை கணித்த பண்ணை விலை (தினமலர்)
+07:19:38   14. [ரயில்] ரூ.13.51 கோடி மதிப்பீட்டில் புதிய ரயில்வே பணிகளுக்கு டெண்டர் (தினமலர்)
+07:19:38   15. [பொது] வெட்மிக்ஸ் காணாம போச்சு; ஜல்லி பரவி கிடக்குது குண்டும் குழியுமானது வடவ (தினமலர்)
+07:19:38   16. [ரயில்] திருச்செந்தூருக்கு சிறப்பு ரயில் இயக்க பயணிகள் கோரிக்கை (தினமலர்)
+07:19:38   17. [சாலை] நெடுஞ்சாலைத்துறையுடன் ஊரக வளர்ச்சி இணைக்கப்படுமா! தி.மு.க., ஆட்சியின்  (தினமலர்)
+07:19:38   18. [பொது] விமானத்தில் வெளிநாடு சென்ற 2.5 டன் கோவை பலகாரங்கள் (தினமலர்)
+07:19:38   19. [பொது] விமான டிக்கெட் ரத்தால் இழப்பீடு வழங்க உத்தரவு (தினமலர்)
+07:19:38   20. [பொது] கந்தசஷ்டி சூரசம்ஹார விழா நாளை வேல்வாங்கும் உற்சவம் (தினமலர்)
+07:19:38   21. [பொது] மண் வளத்தை மீட்டெடுக்க வலியுறுத்தி, ஈஷா சாா்பில் உலக சாதனை மண் ஓவியம் (தினமணி)
+07:19:38   22. [பொது] ஊழலின் மொத்த மதிப்பு என்ன, யார், யாருக்கு தொடர்பு? போலி நூல் கொள்முதல் (தினகரன்)
+07:19:38   23. [குற்றம்] தவெக செயலாளர் பாலியல் தொல்லை; பெண் நிர்வாகி புகார்: கட்சியினர் சாதி ரீ (தினகரன்)
+07:19:38   24. [பொது] நவம்பா் 15-ஆம் தேதி மாவட்டத்தில் 9 மையங்களில் டிஎன்பிஎஸ்சி தோ்வு (தினமணி)
+07:19:38   25. [பொது] காதுக்குள் ஒரு மொழி பெயர்ப்பாளர் இனி நாம் எந்த நாட்டுக்கும் போகலாம் (தினமலர்)
+07:19:38   26. [பொது] பொங்கலூரை கோவையுடன் சேருங்கள்! முதல்வருக்கு மக்கள் கோரிக்கை (தினமலர்)
+07:19:38   27. [பொது] ஓட்டுச்சாவடி முகவர்கள் நியமிக்காத த.வெ.க. (தினமலர்)
+07:19:38   28. [குற்றம்] பெரியாா் அறிவுலக நூல் கொள்முதல் விவகாரம்: தவறு செய்தவா்களுக்கு உச்சபட் (தினமணி)
+07:19:38   29. [பொது] தேர்தல் வெற்றி தோல்வி பெண்கள் கையில்! மாவட்டத்தில் 27.68 லட்சம் வாக்கா (தினமலர்)
+07:19:38   30. [பொது] ‘ஸ்பேம் கால்’ ‘பாம் கால்’ ஆனது் வெடிகுண்டு நிபுணர்கள் சோதனை (தினமலர்) (earlier)
+07:19:38   31. [மாநகராட்சி] சென்னை, கோவை மாநகராட்சி டெண்டர் முறைகேடு: ஐஏஎஸ் அதிகாரிகள் இருவர் மீதா (இந்து தமிழ்) (earlier)
+07:19:38   32. [பொது] ஸ்ரீ ஸ்ரீ காளி பூஜை 25 ஆம் ஆண்டு வெள்ளி விழா கோலாகலம்! அமைச்சர் சம்பத (தினமணி) (earlier)
+07:19:38   33. [பொது] குப்பை, கழிவுநீர் கலப்பால் மாசுபடும் மேட்டுப்பாளையம் பவானி ஆறு (இந்து தமிழ்) (earlier)
+07:19:38   34. [குடிநீர்] அபாய நிலையில் குடிநீர் மேல்நிலை தொட்டி: சார் படம் உண்டு (தினமலர்) (earlier)
+07:19:38   35. [பொது] குப்பையானது பேட்டரி வாகனங்கள் தூய்மைப்பணியில் நீடிக்கும் சிக்கல் (தினமலர்) (earlier)
+07:19:38   36. [பொது] மே.பா. உழவர் சந்தைக்கு மக்கள் வருகை உயர்வு6 மாதங்களில் ரூ.35 கோடிக்கு  (தினமலர்) (earlier)
+07:19:38   37. [ரயில்] 3 எக்ஸ்பிரஸ் ரயில்களை போத்தனூரில் நிறுத்த கோரிக்கை (தினமலர்) (earlier)
+07:19:38   38. [கல்வி] ஏ.ஜே.கே கல்லூரியில் கேக் தயாரிப்பு திருவிழா (தினமலர்) (earlier)
+07:19:38   39. [விலை] ஏலத்தில் தேங்காய் விலை சரிவு (தினமலர்) (earlier)
+07:19:38   40. [பொது] பழனி ஆண்டவர் கோயிலில் கந்த சஷ்டி (தினமலர்) (earlier)
+07:19:38   41. [பொது] கந்த சஷ்டி 3ம் நாள் பூஜை (தினமலர்) (earlier)
+07:19:38   42. [பொது] தேன்கூடு வண்டு பாதிப்பு! வழிகாட்டும் ஆய்வாளர்கள் (தினமலர்) (earlier)
+07:19:38 automatic pick (owner 2 Nov): no e-mail - the top 8 are written at once
+ROUND=2026-11-13_07
