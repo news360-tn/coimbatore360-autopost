@@ -81,6 +81,12 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-13 | `bc0eaec` | goldrate: daily gold & silver rate carousel on this page (owner 14 Nov) - same job as Namakkal 360, own logo and handle |
+| 2026-11-13 | `2ee90ac` | facebook RN-352 |
+| 2026-11-13 | `723a15f` | Heartbeat |
+| 2026-11-13 | `9dee2ba` | facebook RN-356 |
+| 2026-11-13 | `3124ccb` | powercut: notices written |
+| 2026-11-13 | `0c2f4da` | facebook RN-350 |
 | 2026-11-13 | `e9f5403` | posting: no start-time wait - every eligible story posts as soon as it is ready (prime_time OFF); collection stays every 4 hours (owner 13 Nov 22:51) |
 | 2026-11-13 | `bc5b043` | powercut: notices written |
 | 2026-11-13 | `1e50867` | facebook RN-341 |
@@ -105,10 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-13 | `e800802` | powercut: notices written |
 | 2026-11-13 | `b2ec358` | pick: picked news saved |
 | 2026-11-13 | `3399476` | pick: picked news saved |
-| 2026-11-13 | `b3df7b3` | pick: list sent |
-| 2026-11-13 | `aed5403` | powercut: notices written |
-| 2026-11-13 | `0f4c4dc` | facebook RN-328 |
-| 2026-11-13 | `b7f596f` | stories shared |
-| 2026-11-13 | `ad80349` | powercut: notices written |
-| 2026-11-13 | `18fdd52` | facebook RN-329 |
 <!-- recent-changes:end -->
