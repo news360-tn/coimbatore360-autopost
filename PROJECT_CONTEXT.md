@@ -81,6 +81,19 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-13 | `da359b0` | evening round 19:00 -> 17:00 IST (evening posts got far fewer views). Reel: spoken sentence 1 names the town and states the news (no question / teaser). ABP / Samayam named as sources (owner 13 Nov) |
+| 2026-11-13 | `c0c4a67` | facebook RN-323 |
+| 2026-11-13 | `bf7289c` | powercut: notices written |
+| 2026-11-13 | `438a97b` | powercut: notices written |
+| 2026-11-13 | `f6eecac` | stories shared |
+| 2026-11-13 | `8910d58` | pick: written and posted |
+| 2026-11-13 | `7700ecf` | powercut: notices written |
+| 2026-11-13 | `578e8ed` | facebook RN-318 |
+| 2026-11-13 | `45e6274` | powercut: notices written |
+| 2026-11-13 | `291722e` | facebook RN-317 |
+| 2026-11-13 | `73060ee` | facebook RN-315 |
+| 2026-11-13 | `6aa1cbc` | facebook RN-308 |
+| 2026-11-13 | `ec51754` | powercut: notices written |
 | 2026-11-13 | `cee3548` | reel end card: 'Source: <paper> (<date>)' instead of 'ஆதாரம்' (owner 13 Nov - same on every page); waiting reels rebuilt |
 | 2026-11-13 | `cf478a0` | facebook RN-304 |
 | 2026-11-13 | `abd5af8` | stories shared |
@@ -98,17 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-13 | `6d1063e` | powercut: notices written |
 | 2026-11-13 | `ce54f14` | stories shared |
 | 2026-11-13 | `7a15d96` | stories shared |
-| 2026-11-13 | `00f8f8e` | facebook RN-295 |
-| 2026-11-13 | `783bba8` | rasipalan posted |
-| 2026-11-13 | `cde1bd2` | facebook RN-340 |
-| 2026-11-13 | `32de4e4` | pick: picked news saved |
-| 2026-11-13 | `0e917ff` | powercut: notices written |
-| 2026-11-13 | `1c17637` | pick: picked news saved |
-| 2026-11-13 | `661b5f2` | pick: list sent |
-| 2026-11-13 | `e46203e` | powercut: notices written |
-| 2026-11-12 | `52b0a36` | powercut: notices written |
-| 2026-11-12 | `11213bb` | facebook RN-303 |
-| 2026-11-12 | `78c5bfe` | pick: written and posted |
-| 2026-11-12 | `ee4a7a9` | voice: numbers read the way people say them - English names in English (பிளஸ் டூ, குரூப் ஃபோர், டி ட்வென்டி, ஃபைவ் ஜி), endings joined (நாற்பதுக்கும், ...ஒன்றில், ரூபாய்க்கு), நெ. -> எண் |
-| 2026-11-12 | `a8f855c` | facebook RN-300 |
 <!-- recent-changes:end -->
