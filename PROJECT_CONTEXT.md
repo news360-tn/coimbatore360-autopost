@@ -81,6 +81,10 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-13 | `aba8a65` | collection every 4 hours (01/05/09/13/17/21 IST, 4+4+3+3+3+3 = 20 news); posting waits for its start 08:00 / 12:00 / 18:00 then all news posts - no end time, nothing skipped; only power cuts at once; today's and yesterday's news (night news posts at 08:00). Power cuts: also the daily state-wide lists (News18 / ABP / Samayam) - Coimbatore's part only; Tirupur / Erode edition pages refused (owner 13 Nov) |
+| 2026-11-13 | `6ae873e` | powercut: notices written |
+| 2026-11-13 | `f516be9` | facebook RN-326 |
+| 2026-11-13 | `9b804e4` | powercut: notices written |
 | 2026-11-13 | `da359b0` | evening round 19:00 -> 17:00 IST (evening posts got far fewer views). Reel: spoken sentence 1 names the town and states the news (no question / teaser). ABP / Samayam named as sources (owner 13 Nov) |
 | 2026-11-13 | `c0c4a67` | facebook RN-323 |
 | 2026-11-13 | `bf7289c` | powercut: notices written |
@@ -107,8 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-13 | `510a417` | powercut: notices written |
 | 2026-11-13 | `7e47a44` | pick: written and posted |
 | 2026-11-13 | `73cf71b` | powercut: notices written |
-| 2026-11-13 | `e1fce74` | powercut: notices written |
-| 2026-11-13 | `6d1063e` | powercut: notices written |
-| 2026-11-13 | `ce54f14` | stories shared |
-| 2026-11-13 | `7a15d96` | stories shared |
 <!-- recent-changes:end -->
