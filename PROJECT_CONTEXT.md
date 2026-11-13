@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-13 | `cee3548` | reel end card: 'Source: <paper> (<date>)' instead of 'ஆதாரம்' (owner 13 Nov - same on every page); waiting reels rebuilt |
+| 2026-11-13 | `cf478a0` | facebook RN-304 |
+| 2026-11-13 | `abd5af8` | stories shared |
+| 2026-11-13 | `4aef62b` | powercut: notices written |
+| 2026-11-13 | `398ebc5` | facebook RN-347 |
+| 2026-11-13 | `a2c0e2b` | facebook RN-349 |
+| 2026-11-13 | `cbe2403` | pick: picked news saved |
+| 2026-11-13 | `e63f07e` | powercut: notices written |
+| 2026-11-13 | `0bd659e` | pick: picked news saved |
+| 2026-11-13 | `ae44f28` | pick: list sent |
+| 2026-11-13 | `510a417` | powercut: notices written |
+| 2026-11-13 | `7e47a44` | pick: written and posted |
+| 2026-11-13 | `73cf71b` | powercut: notices written |
+| 2026-11-13 | `e1fce74` | powercut: notices written |
+| 2026-11-13 | `6d1063e` | powercut: notices written |
+| 2026-11-13 | `ce54f14` | stories shared |
+| 2026-11-13 | `7a15d96` | stories shared |
+| 2026-11-13 | `00f8f8e` | facebook RN-295 |
+| 2026-11-13 | `783bba8` | rasipalan posted |
+| 2026-11-13 | `cde1bd2` | facebook RN-340 |
+| 2026-11-13 | `32de4e4` | pick: picked news saved |
+| 2026-11-13 | `0e917ff` | powercut: notices written |
+| 2026-11-13 | `1c17637` | pick: picked news saved |
+| 2026-11-13 | `661b5f2` | pick: list sent |
+| 2026-11-13 | `e46203e` | powercut: notices written |
+| 2026-11-12 | `52b0a36` | powercut: notices written |
+| 2026-11-12 | `11213bb` | facebook RN-303 |
+| 2026-11-12 | `78c5bfe` | pick: written and posted |
 | 2026-11-12 | `ee4a7a9` | voice: numbers read the way people say them - English names in English (பிளஸ் டூ, குரூப் ஃபோர், டி ட்வென்டி, ஃபைவ் ஜி), endings joined (நாற்பதுக்கும், ...ஒன்றில், ரூபாய்க்கு), நெ. -> எண் |
 | 2026-11-12 | `a8f855c` | facebook RN-300 |
-| 2026-11-12 | `bc675f7` | voice: 'பிளஸ் 2' is read 'பிளஸ் டூ' (was 'பிளஸ் இரண்டு', RN-534); 'பிளஸ் 1' -> 'பிளஸ் ஒன்' |
-| 2026-11-12 | `7244958` | powercut: notices written |
-| 2026-11-12 | `2d86f35` | facebook RN-299 |
-| 2026-11-12 | `9353e2c` | powercut: notices written |
-| 2026-11-12 | `f1f2596` | facebook RN-293 |
-| 2026-11-12 | `9e5d3ed` | cloudinary: keep the last 48 h only, clean once every 48 h (own workflow; hourly step removed) |
-| 2026-11-12 | `4ea1bac` | facebook RN-291 |
-| 2026-11-12 | `5252cdf` | powercut: notices written |
-| 2026-11-12 | `37e6442` | powercut: notices written |
-| 2026-11-12 | `57785e4` | facebook RN-290 |
-| 2026-11-12 | `f43a08d` | post: start the next posting run after the 12-minute gap while stories wait (GitHub runs the 5-min schedule ~hourly; Coimbatore had 23 waiting, 1 posted per hour) |
-| 2026-11-12 | `a1f27a4` | facebook RN-332 |
-| 2026-11-12 | `3a79809` | pick: picked news saved |
-| 2026-11-12 | `d93f8bc` | pick: picked news saved |
-| 2026-11-12 | `f755cd1` | pick: list sent |
-| 2026-11-12 | `32fd8fc` | facebook RN-288 |
-| 2026-11-12 | `c053f99` | powercut: notices written |
-| 2026-11-12 | `8122b81` | stories shared |
-| 2026-11-12 | `5603740` | Cloudinary clean-up: this page's files older than 3 days deleted every hour (at 50% of the free limit reels older than 26 h too); a deleted prebuilt reel is uploaded again; rasipalan pictures in the page folder |
-| 2026-11-12 | `aedcdf4` | powercut: notices written |
-| 2026-11-12 | `7a946dc` | facebook RN-279 |
-| 2026-11-12 | `e49ca55` | powercut: notices written |
-| 2026-11-12 | `ea79252` | facebook RN-280 |
-| 2026-11-12 | `d7f0342` | powercut: notices written |
-| 2026-11-12 | `bdcc88b` | facebook RN-277 |
-| 2026-11-12 | `c4f388b` | powercut: notices written |
-| 2026-11-12 | `5cad192` | powercut: notices written |
-| 2026-11-12 | `d2e2bb9` | facebook RN-278 |
 <!-- recent-changes:end -->
