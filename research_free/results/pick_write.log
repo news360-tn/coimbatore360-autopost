@@ -1,191 +1,198 @@
-writing [N]: உருளைக்கிழங்கு பாய் ரோட்டோரம் ‘பை’
-writing [N]: வெள்ளலூர் பயோ காஸ் திட்டத்துக்கு அனுமதியில்லை ; ஆர்.டி.ஐ. தக
-writing [N]: புதிய கமிஷனர் நியமனம்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+writing [N]: இளம் வயது கர்ப்பம் தடுக்க பள்ளிகளில் விழிப்புணர்வு
+writing [N]: மாணவர்களுக்கு கிடைத்தது கேக்
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+writing [N]: போதை பொருளால் ஆபத்து மாணவர்களுக்கு விழிப்புணர்வு
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (17s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (18s)
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  slide 3 line 2 is cut off mid-phrase ('வ, மாணவியருக்கு கேக்') - write a complete short phrase
+  known issue card_cut_mid_phrase: card cut off mid-phrase (' மாணவ, மாணவியருக்கு கேக்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (17s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-ok gemini/gemini-3.5-flash (26s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-ok gemini/gemini-3.6-flash (30s)
+ok gemini/gemini-3.6-flash (7s)
+factcheck by gemini/gemini-3.6-flash: 0 problems
+attempt 1 gemini/gemini-3.6-flash: 0 problems
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (4s)
-factcheck by gemini/gemini-3-flash-preview: 0 problems
-attempt 1 gemini/gemini-3.5-flash: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3.6-flash (33s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 ok gemini/gemini-3-flash-preview (5s)
 factcheck by gemini/gemini-3-flash-preview: 0 problems
 attempt 1 gemini/gemini-3.6-flash: 0 problems
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (10s)
+proofread rejected (2 problems)
+  sentence 1 (one-line story) has 20 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption needs 5 hashtags (Instagram max), has 6
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3-flash-preview (11s)
+proofread rejected (2 problems)
+  hl2 longer than 28 characters
+  caption needs 5 hashtags (Instagram max), has 7
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (6s)
+real photo: no picture on the source page -> AI pictures
+ok gemini/gemini-3-flash-preview (7s)
+ok gemini/gemini-3.6-flash (26s)
+attempt 2 gemini/gemini-3.6-flash: 2 problems
+  slide 3 line 2 is cut off mid-phrase (' 120 பேருக்குக் கேக்') - write a complete short phrase
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('யில் 120 பேருக்குக் கேக்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+image match: True The image shows an awareness presentation/lecturing session taking place in a hall at Valparai Govt Arts College, recogn
+image match: False The photo shows the exterior of Valparai Govt Arts Science College, but it does not show any drug awareness program or e
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Drug awareness program held at Valparai '
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0953","first":"RN-365"}
+posting job started at once
+real photo: no picture on the source page -> AI pictures
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+writing [N]: செய்தி சாரல்: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
-ok groq/openai/gpt-oss-120b (6s)
-proofread rejected (3 problems)
-  missing key: reel_script
-  missing key: caption
-  missing key: scenes
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/openai/gpt-oss-120b (3s)
-real photo: no picture on the source page -> AI pictures
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
-ok gemini/gemini-3-flash-preview (30s)
-factcheck by gemini/gemini-3-flash-preview: 3 problems
-  Slide 1 line 1 is an incomplete phrase (missing 'மண்டிகள்' after '70க்கும்') and has an unclosed <b> tag
-  Slide 3 line 1 is an incomplete phrase (missing 'ரோடு வரை' after 'நால்')
-  Slide 3 line 2 is an incomplete sentence (missing a verb like 'கோரிக்கை')
-attempt 1 gemini/gemini-3.6-flash: 3 problems
-  fact-check: Slide 1 line 1 is an incomplete phrase (missing 'மண்டிகள்' after '70க்கும்') and has an unclosed <b> tag
-  fact-check: Slide 3 line 1 is an incomplete phrase (missing 'ரோடு வரை' after 'நால்')
-  fact-check: Slide 3 line 2 is an incomplete sentence (missing a verb like 'கோரிக்கை')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-ok gemini/gemini-3-flash-preview (33s)
-proofread rejected (2 problems)
-  slide 3 line 2 longer than 60 characters
-  caption needs 5 hashtags (Instagram max), has 6
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/openai/gpt-oss-120b (2s)
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-switching away from groq/openai/gpt-oss-120b for 10 min
-ok groq/qwen/qwen3.8-27b (4s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok groq/qwen/qwen3.8-27b (1s)
-factcheck by groq/qwen/qwen3.8-27b: 4 problems
-  Headline and Reel Script incorrectly state that '70 or more potato sacks' (உருளைக்கிழங்கு பாய்கள்) are piled up, whereas the article states there are '70 or more potato stalls' (உருளைக்கிழங்கு மண்டிகள்). The number of piles is not specified as 70 in the article.
-  Reel Script sentence 'பாய்களை சாலையோரங்களில் எறியப்படுகின்றன' is grammatically incorrect in Tamil (mixing passive verb form with active subject without proper agreement); it should be 'எறியப்படுகிறது' or 'எறிகின்றனர்'.
-  Reel Script sentence 'விற்பனைக்கு வந்து கொண்டிருக்கிறது' is grammatically awkward/incorrect; the article uses 'வருகிறது' (comes), and the continuous form implies an ongoing action that doesn't fit the general statement well, though the main error is the grammatical structure 'விற்பனைக்கு' (for sale) vs 'விற்பனைக்கு வருகிறது' (comes for sale). More critically, the draft says 'விற்பனைக்கு வந்து கொண்டிருக்கிறது' which is a mix of 'coming for sale' and continuous tense, slightly deviating from the article's simple present 'வருகிறது'.
-  Slide 1 line 2 is an incomplete sentence fragment: 'லாரிகளில் வரும் உருளைக்கிழங்கு மூட்டைகளை மழை வெயிலிலிருந்து' lacks a verb or predicate to complete the thought.
-attempt 2 groq/qwen/qwen3.8-27b: 4 problems
-  fact-check: Headline and Reel Script incorrectly state that '70 or more potato sacks' (உருளைக்கிழங்கு பாய்கள்) are piled up, whereas the article states there are '70 or more potato stalls' (உருளைக்கிழங்கு மண்டிகள்). The number of piles is not specified as 70 in the article.
-  fact-check: Reel Script sentence 'பாய்களை சாலையோரங்களில் எறியப்படுகின்றன' is grammatically incorrect in Tamil (mixing passive verb form with active subject without proper agreement); it should be 'எறியப்படுகிறது' or 'எறிகின்றனர்'.
-  fact-check: Reel Script sentence 'விற்பனைக்கு வந்து கொண்டிருக்கிறது' is grammatically awkward/incorrect; the article uses 'வருகிறது' (comes), and the continuous form implies an ongoing action that doesn't fit the general statement well, though the main error is the grammatical structure 'விற்பனைக்கு' (for sale) vs 'விற்பனைக்கு வருகிறது' (comes for sale). More critically, the draft says 'விற்பனைக்கு வந்து கொண்டிருக்கிறது' which is a mix of 'coming for sale' and continuous tense, slightly deviating from the article's simple present 'வருகிறது'.
-  fact-check: Slide 1 line 2 is an incomplete sentence fragment: 'லாரிகளில் வரும் உருளைக்கிழங்கு மூட்டைகளை மழை வெயிலிலிருந்து' lacks a verb or predicate to complete the thought.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok groq/qwen/qwen3.8-27b (0s)
-factcheck by groq/qwen/qwen3.8-27b: 0 problems
-claude rewrite 1 anthropic/claude-haiku-5-5: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1663. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/qwen/qwen3.8-27b (1s)
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-image match: False The photo shows a generic industrial worker inspecting a stainless steel tank, rather than the actual Vellalore dump yar
-imagegen: black-forest-labs/flux.1-dev 500: Internal Server Error
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-second try not made for 'No TNPCB clearance requested for Rs 69 c' (the first one is used): all image models failed: all image models failed: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed ou
-images made: 2 for 'No TNPCB clearance requested for Rs 69 c'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0544","first":"RN-360"}
-posting job started at once
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
-real photo: vision check out of free quota
-writing [N]: கோவை அறிவுலகத்தில் போலி ஆங்கில நூல்கள் அகற்றம்
+images made: 2 for 'Child safety and adolescent awareness se'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0954","first":"RN-366"}
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 1 groq/qwen/qwen3.8-27b: 1 problems
+  hl1 (the first headline on screen) must name the place 'பொள்ளாச்சி', e.g. 'பொள்ளாச்சி: ...' or 'பொள்ளாச்சி-இல் ...' - viewers share news of their own area
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/qwen/qwen3.8-27b (4s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-image match: True The image shows a large heap of jute/burlap sacks dumped along the roadside curb, matching the description of sacks/mats
-ok groq/openai/gpt-oss-120b (4s)
-factcheck by groq/openai/gpt-oss-120b: 2 problems
-  Slide 3 line 1 is an incomplete Tamil sentence (missing the word 'நூல்கள்' after 'போலி')
-  Slide 3 line 2 is an incomplete Tamil sentence (missing a verb or completion, e.g., 'அகற்றப்பட்டுள்ளன')
-attempt 1 groq/qwen/qwen3.8-27b: 2 problems
-  fact-check: Slide 3 line 1 is an incomplete Tamil sentence (missing the word 'நூல்கள்' after 'போலி')
-  fact-check: Slide 3 line 2 is an incomplete Tamil sentence (missing a verb or completion, e.g., 'அகற்றப்பட்டுள்ளன')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your p
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  numbers not found in the article: 2000
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('5 மற்றும் 6வது தளங்களில் உள்ள ஆங்கில நூல் கொள்முதலிலும் முறை')
-image match: True The photo shows heaps of potato sacking mats/burlap sacks dumped along the side of a paved road with a motorcycle parked
-images made: 2 for 'Mettupalayam: potato sacking mats dumped'
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  numbers not found in the article: 2000
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  reel_script has numbers without their meaning (5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 6 ('5 மற்றும் 6வது தளங்களில் உள்ள ஆங்கில நூல் கொள்முதலிலும் முறை'); ஆர்.எஸ்.புரம் ('கோவை மாவட்டத்தில் ஆர்.எஸ்.புரம் மைய நூலகம் உள்பட 195 நூலகங்க')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/qwen/qwen3.8-27b (3s)
-proofread by groq/qwen/qwen3.8-27b: 1 problems
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  reel_script omits Thirumoorthy dam's outflow of 1,149 cubic feet per second, which the article states
+  reel_script omits Amaravathi dam's inflow of 209 cubic feet per second, which the article states
+  caption attributes the Thirumoorthy 60 ft height and Amaravathi 90 ft height correctly, but the caption's Thirumoorthy 1,149 outflow is not reflected in the reel, so the reel is incomplete relative to the caption
+  reel_script states weather as 'இரு இடங்களிலும் வானம் தெளிவாக இருக்கும்' which is grammatically acceptable, but the reel says the Pollachi dam's 'மொத்த உயரம்' (total height) which is a wording approximation of 'உயரத்தில்' (at height of) and is not an error in itself
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: reel_script omits Thirumoorthy dam's outflow of 1,149 cubic feet per second, which the article states
+  fact-check: reel_script omits Amaravathi dam's inflow of 209 cubic feet per second, which the article states
+  fact-check: caption attributes the Thirumoorthy 60 ft height and Amaravathi 90 ft height correctly, but the caption's Thirumoorthy 1,149 outflow is not reflected in the reel, so the reel is incomplete relative to the caption
+  fact-check: reel_script states weather as 'இரு இடங்களிலும் வானம் தெளிவாக இருக்கும்' which is grammatically acceptable, but the reel says the Pollachi dam's 'மொத்த உயரம்' (total height) which is a wording approximation of 'உயரத்தில்' (at height of) and is not an error in itself
+ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-bridge: 200 <!DOCTYPE html><html><head><script nonce="39yPrmX4NsQRV5EHjO9f-A">window['ppConfig'] = {productName: '26981ed0d57bbad37e728ff58134270c', deleteIsEnforced:  false , sealIsEnforced:  false , heartbeatRate:  0.5 , periodicReportingRateMillis:  60000.0 , disableAllReporting:  false };(function(){'use st
-ok groq/qwen/qwen3.8-27b (1s)
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0546","first":"RN-361"}
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  reel_script and caption state that 120 students received cake in Sulur-area schools as a general total, but the article only says 120 students received cake at Kittampalayam Middle School; the figure is misattributed to the whole set of schools
+  slides_spec line 'சூலூர் எம்.எல்.ஏ. சுகுமார்' describes Sukumar as MLA of Sulur; the article says Sulur TVK MLA, which matches, so no issue here, but slides_spec 'கிட்டாம்பாளையம் நடுநிலைப்பள்ளியில் 120 மாணவர்களுக்கு' is accurate; however the caption 'பல பள்ளிகளில்' and reel_script 'சூலூர் பகுதி பள்ளிகளில்' generalise the event beyond the schools named in the article
+  reel_script says the Sulur schools event was 'சூலூர் த வெ க சட்டமன்ற உறுப்பினர்' (TVK legislative member) with a mix of party abbreviation and title; this is a faithful rendering but the sentence joins the MLA's distribution in three schools with the cake-distribution at Kittampalayam, mixing separate events into one sentence
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: reel_script and caption state that 120 students received cake in Sulur-area schools as a general total, but the article only says 120 students received cake at Kittampalayam Middle School; the figure is misattributed to the whole set of schools
+  fact-check: slides_spec line 'சூலூர் எம்.எல்.ஏ. சுகுமார்' describes Sukumar as MLA of Sulur; the article says Sulur TVK MLA, which matches, so no issue here, but slides_spec 'கிட்டாம்பாளையம் நடுநிலைப்பள்ளியில் 120 மாணவர்களுக்கு' is accurate; however the caption 'பல பள்ளிகளில்' and reel_script 'சூலூர் பகுதி பள்ளிகளில்' generalise the event beyond the schools named in the article
+  fact-check: reel_script says the Sulur schools event was 'சூலூர் த வெ க சட்டமன்ற உறுப்பினர்' (TVK legislative member) with a mix of party abbreviation and title; this is a faithful rendering but the sentence joins the MLA's distribution in three schools with the cake-distribution at Kittampalayam, mixing separate events into one sentence
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  reel_script writes ages as newspaper shorthand (நீர்வரத்தும், 1,, நீர்வரத்தும், 1,); say it as a news reader: '12 வயது மகன் ராஜா', 'கவுசிக் (14 வயது)' -> '14 வயதான கவுசிக்'
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  The reel_script says the MLA distributed cake at the first three schools, but the article's sentence is ambiguous only about who gave the cake there; the draft's 'சூலூர் பெண்கள் மேல்நிலைப்பள்ளி' grouping is consistent with the article, so no issue there.
+  The reel_script says Sulur MLA Sukumar gave cake 'ஆகியவற்றில்' at three schools, but the article's first sentence lists the schools as places where he gave cake, which matches; however the slides_spec says 'சூலூர் பெண்கள் மேல்நிலைப்பள்ளியில் நிகழ்வு நடந்தது' and reel_script calls the MLA 'சட்டமன்ற உறுப்பினர்' while the article says 'எம்.எல்.ஏ.' - this is a wording equivalence, not an error.
+  The slides_spec hl1 ('சூலூரில் மாணவர்களுக்கு குழந்தைகள் தின') is an incomplete headline phrase that cuts off mid-thought and does not form a clear Tamil statement.
+  The slides_spec includes raw HTML markup '<b>120</b>' inside a line, which is not valid display text in Tamil copy.
+  The slides_spec line 'கிட்டாம்பாளையம் நடுநிலைப்பள்ளியில் 120 மாணவ' is cut off mid-phrase (missing 'மாணவியருக்கு'), so the sentence is incomplete and has no clear meaning.
+  The reel_script says the cake was distributed at 'இடையர்பாளையம் துவக்கப் பள்ளி' but the slides_spec line 'சுல்தான்பேட்டை ஒன்றியம் இடையர்பாளையம் துவக்கப் பள்ளியிலும்' is grammatically broken as a standalone slide line lacking a verb.
+claude rewrite 2 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: The reel_script says the MLA distributed cake at the first three schools, but the article's sentence is ambiguous only about who gave the cake there; the draft's 'சூலூர் பெண்கள் மேல்நிலைப்பள்ளி' grouping is consistent with the article, so no issue there.
+  fact-check: The reel_script says Sulur MLA Sukumar gave cake 'ஆகியவற்றில்' at three schools, but the article's first sentence lists the schools as places where he gave cake, which matches; however the slides_spec says 'சூலூர் பெண்கள் மேல்நிலைப்பள்ளியில் நிகழ்வு நடந்தது' and reel_script calls the MLA 'சட்டமன்ற உறுப்பினர்' while the article says 'எம்.எல்.ஏ.' - this is a wording equivalence, not an error.
+  fact-check: The slides_spec hl1 ('சூலூரில் மாணவர்களுக்கு குழந்தைகள் தின') is an incomplete headline phrase that cuts off mid-thought and does not form a clear Tamil statement.
+  fact-check: The slides_spec includes raw HTML markup '<b>120</b>' inside a line, which is not valid display text in Tamil copy.
+  fact-check: The slides_spec line 'கிட்டாம்பாளையம் நடுநிலைப்பள்ளியில் 120 மாணவ' is cut off mid-phrase (missing 'மாணவியருக்கு'), so the sentence is incomplete and has no clear meaning.
+  fact-check: The reel_script says the cake was distributed at 'இடையர்பாளையம் துவக்கப் பள்ளி' but the slides_spec line 'சுல்தான்பேட்டை ஒன்றியம் இடையர்பாளையம் துவக்கப் பள்ளியிலும்' is grammatically broken as a standalone slide line lacking a verb.
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 72 ('பரம்பிக்குளம் அணையின், 72 அடி உயரத்தில், நேற்றைய நிலவரப்படி,'); 120 ('ஆழியாறு அணையின், 120 அடி உயரத்தில், நேற்றைய நிலவரப்படி, 64.3'); 60 ('திருமூர்த்தி அணையின், 60 அடி உயரத்தில், நேற்றைய நிலவரப்படி, '); 90 ('அமராவதி அணையின், 90 அடி உயரத்தில், நேற்றைய நிலவரப்படி, 58.24')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+real photo: no picture on the source page -> AI pictures
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  Reel script and slides say the Sulur Girls Higher Secondary School event was attended by 'சூலூர் சட்டமன்ற உறுப்பினர்' (Sulur MLA) without the article specifying the constituency wording; minor, but the article names him as 'சூலூர் த.வெ.க., எம்.எல்.ஏ.' — acceptable. Main issue: the reel_script says the Samalapuram and Idayarpalayam schools had 'இதே நிகழ்வு' (the same event, i.e., MLA cake distribution), which the article does not state; the article only says cake and greeting cards were given by the MLA at the first school and does not say the MLA attended the others.
+  Slides spec for 'பிற பள்ளிகள்' says Arasur school cake was given with 'ஆசிரியர், ஆசிரியைகள் உடன் இருந்தனர' (were present with), which the article describes as the headmaster and teachers giving the cake, not merely being present.
+  The caption and reel_script state the Samalapuram Ayyan Kovil school and Idayarpalayam primary school event was 'இதே நிகழ்வு' with cake and cards, which is not specified in the article.
+claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: Reel script and slides say the Sulur Girls Higher Secondary School event was attended by 'சூலூர் சட்டமன்ற உறுப்பினர்' (Sulur MLA) without the article specifying the constituency wording; minor, but the article names him as 'சூலூர் த.வெ.க., எம்.எல்.ஏ.' — acceptable. Main issue: the reel_script says the Samalapuram and Idayarpalayam schools had 'இதே நிகழ்வு' (the same event, i.e., MLA cake distribution), which the article does not state; the article only says cake and greeting cards were given by the MLA at the first school and does not say the MLA attended the others.
+  fact-check: Slides spec for 'பிற பள்ளிகள்' says Arasur school cake was given with 'ஆசிரியர், ஆசிரியைகள் உடன் இருந்தனர' (were present with), which the article describes as the headmaster and teachers giving the cake, not merely being present.
+  fact-check: The caption and reel_script state the Samalapuram Ayyan Kovil school and Idayarpalayam primary school event was 'இதே நிகழ்வு' with cake and cards, which is not specified in the article.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+image match: False The image is an AI-generated depiction of a dam rather than an authentic photo representing the specific water levels of
+ok anthropic/claude-haiku-5-5
+image match: False The photo shows a scenic view of a dam and reservoir landscape, not a news report or data showing the specific water lev
+images made: 1 for 'Water levels of Parambikulam, Aliyar, Th'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0955","first":"RN-367"}
 real photo: no picture on the source page -> AI pictures
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match: False The image is a generic stock photo of an envelope with an 'Order' stamp and pen; it does not feature Commissioner Paulra
-second try not made for 'Kangeyam Municipality Commissioner Paulr' (the first one is used): all image models failed: all image models failed: None
-images made: 2 for 'Kangeyam Municipality Commissioner Paulr'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0547","first":"RN-362"}
-real photo: vision check resting (free quota busy)
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for '257 fake English books removed from Coim'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0547","first":"RN-363"}
+images made: 2 for 'Children's Day celebrated across schools'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261114-0955","first":"RN-368"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 pick round: only the picked links are written (research_free/pick.py)
-manual link added: https://www.dinamalar.com/news/tamil-nadu-news/removal-of-fake-english-scriptures-in-the-coimbatore-world-of-science/4375450
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/potato-boy-rotorum-pi/4375587
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/no-permission-for-vellalur-biogas-project-rti/4375567
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/appointment-of-new-commissioner/4375144
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/source-coimbatore/4375137
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/the-students-were-given-a-cake/4375117
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/awareness-in-schools-to-prevent-young-year-old-pregnancies/4375198
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/students-aware-of-the-dangers-of-drugs/4375328
 candidate filter: collected=4
 to write: 4 Coimbatore district candidates (max 4 stories)
 round: top 4 of 4 candidates
@@ -193,13 +200,13 @@ candidates waiting: 4 Coimbatore; time left 79 min
 try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
 try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
 try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 2})
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 3})
 posting job started at once
-try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-news/removal-of-fa
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 4})
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 6})
-auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 8})
-candidate loop ended: left 0, tried={'N': 4}, done={'N': 4}, time left 65 min
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 5})
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 7})
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 9})
+candidate loop ended: left 0, tried={'N': 4}, done={'N': 4}, time left 76 min
 filed: 4 Coimbatore district stories (target 4), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":4,"updated":0} 
