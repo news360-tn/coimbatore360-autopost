@@ -172,7 +172,8 @@
    "alts": [
     "https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/14/power-outage-tomorrow-kaduvettipalayam"
    ],
-   "listed_at": "2026-11-15T01:30:56.847720+05:30"
+   "listed_at": "2026-11-15T01:30:56.847720+05:30",
+   "picked_at": "2026-11-15T01:35:29.818236+05:30"
   },
   "C3a8e0a0": {
    "id": "C3a8e0a0",
@@ -184,7 +185,8 @@
    "category": "பொது",
    "score": 10.0,
    "power_cut": false,
-   "listed_at": "2026-11-15T01:30:56.847720+05:30"
+   "listed_at": "2026-11-15T01:30:56.847720+05:30",
+   "picked_at": "2026-11-15T01:35:29.818239+05:30"
   },
   "Caab3e6a": {
    "id": "Caab3e6a",
@@ -196,7 +198,8 @@
    "category": "பொது",
    "score": 8.0,
    "power_cut": false,
-   "listed_at": "2026-11-15T01:30:56.847720+05:30"
+   "listed_at": "2026-11-15T01:30:56.847720+05:30",
+   "picked_at": "2026-11-15T01:35:29.818243+05:30"
   },
   "C08e8ed7": {
    "id": "C08e8ed7",
@@ -1490,8 +1493,20 @@
    ],
    "sent": false,
    "deadline": "2026-11-15T02:30:56.847720+05:30",
-   "decided": null,
-   "written": []
+   "decided": {
+    "how": "automatic: top 2 of 18 by insights + 1 power cut",
+    "ids": [
+     "C44ec2eb",
+     "C3a8e0a0",
+     "Caab3e6a"
+    ],
+    "at": "2026-11-15T01:35:29.818221+05:30"
+   },
+   "written": [
+    "C3a8e0a0",
+    "C44ec2eb",
+    "Caab3e6a"
+   ]
   }
  },
  "retry": {}
