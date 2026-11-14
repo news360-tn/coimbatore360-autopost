@@ -81,6 +81,16 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-14 | `ab06a9d` | pick: each round's news chosen by the page's insights (at least 2/5/5/3/5/4 + up to 3 more well-watched, leftovers compete, power cuts on top); story share only for power cuts / urgent news |
+| 2026-11-14 | `bb41d7c` | stories shared |
+| 2026-11-14 | `0c1f7c5` | powercut: notices written |
+| 2026-11-14 | `f5415c7` | facebook RN-370 |
+| 2026-11-14 | `d75285f` | pick: picked news saved |
+| 2026-11-14 | `eca52bf` | facebook RN-355 |
+| 2026-11-14 | `6badc59` | powercut: notices written |
+| 2026-11-14 | `530e41c` | pick: picked news saved |
+| 2026-11-14 | `f36a665` | pick: list sent |
+| 2026-11-14 | `2f18b16` | facebook RN-316 |
 | 2026-11-14 | `e687005` | goldrate: import the browser only when slides are made (tests machine has none - fixes the red tests since 13 Nov) |
 | 2026-11-14 | `1d7c010` | posting: Gmail daily email limit no longer counts as a failed post record (sheet row is already saved - no 5x retries); checker notes ending 'so not a problem' no longer hold a story (14 Nov) |
 | 2026-11-14 | `0281eff` | powercut: notices written |
@@ -101,14 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-14 | `5e484c7` | pick: picked news saved |
 | 2026-11-14 | `238b2bc` | pick: picked news saved |
 | 2026-11-14 | `08c2192` | pick: list sent |
-| 2026-11-14 | `206ffb2` | powercut: notices written |
-| 2026-11-14 | `447637a` | powercut: notices written |
-| 2026-11-14 | `744f0f8` | powercut: notices written |
-| 2026-11-14 | `941a013` | pick: written and posted |
-| 2026-11-14 | `18ac8c2` | stories shared |
-| 2026-11-14 | `d79ae43` | powercut: notices written |
-| 2026-11-14 | `31cbcb6` | rasipalan posted |
-| 2026-11-14 | `8048e99` | facebook RN-364 |
-| 2026-11-14 | `ceaf6d2` | powercut: notices written |
-| 2026-11-14 | `a3f88c4` | powercut: notices written |
 <!-- recent-changes:end -->
