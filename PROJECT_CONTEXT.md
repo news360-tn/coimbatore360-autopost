@@ -81,6 +81,17 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-14 | `1d7c010` | posting: Gmail daily email limit no longer counts as a failed post record (sheet row is already saved - no 5x retries); checker notes ending 'so not a problem' no longer hold a story (14 Nov) |
+| 2026-11-14 | `0281eff` | powercut: notices written |
+| 2026-11-14 | `3a23f28` | facebook RN-351 |
+| 2026-11-14 | `2e7f8e5` | powercut: notices written |
+| 2026-11-14 | `9fe8273` | facebook RN-286 |
+| 2026-11-14 | `2f7b277` | pick: written and posted |
+| 2026-11-14 | `c647011` | powercut: notices written |
+| 2026-11-14 | `808f4c6` | stories shared |
+| 2026-11-14 | `0162ec2` | stories shared |
+| 2026-11-14 | `8079135` | powercut: notices written |
+| 2026-11-14 | `5ee9a0e` | stories shared |
 | 2026-11-14 | `a88502c` | custom_reel: manual one-off reel in the page design (never posts) - owner 14 Nov |
 | 2026-11-14 | `89ecc64` | powercut: notices written |
 | 2026-11-14 | `d048707` | powercut: notices written |
@@ -100,15 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-14 | `ceaf6d2` | powercut: notices written |
 | 2026-11-14 | `a3f88c4` | powercut: notices written |
 | 2026-11-14 | `8f25cc0` | pick: picked news saved |
-| 2026-11-14 | `48828ed` | pick: picked news saved |
-| 2026-11-14 | `7bd12b3` | pick: list sent |
-| 2026-11-13 | `60a7a69` | pick: written and posted |
-| 2026-11-13 | `691736f` | pick: picked news saved |
-| 2026-11-13 | `5063c0a` | pick: picked news saved |
-| 2026-11-13 | `4c6f038` | pick: list sent |
-| 2026-11-13 | `56e2908` | stories shared |
-| 2026-11-13 | `bc0eaec` | goldrate: daily gold & silver rate carousel on this page (owner 14 Nov) - same job as Namakkal 360, own logo and handle |
-| 2026-11-13 | `2ee90ac` | facebook RN-352 |
-| 2026-11-13 | `723a15f` | Heartbeat |
-| 2026-11-13 | `9dee2ba` | facebook RN-356 |
 <!-- recent-changes:end -->
