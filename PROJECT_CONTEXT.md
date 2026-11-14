@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-14 | `a88502c` | custom_reel: manual one-off reel in the page design (never posts) - owner 14 Nov |
+| 2026-11-14 | `89ecc64` | powercut: notices written |
+| 2026-11-14 | `d048707` | powercut: notices written |
+| 2026-11-14 | `08a45ce` | goldrate posted |
+| 2026-11-14 | `951204a` | powercut: notices written |
+| 2026-11-14 | `5e484c7` | pick: picked news saved |
+| 2026-11-14 | `238b2bc` | pick: picked news saved |
+| 2026-11-14 | `08c2192` | pick: list sent |
+| 2026-11-14 | `206ffb2` | powercut: notices written |
+| 2026-11-14 | `447637a` | powercut: notices written |
+| 2026-11-14 | `744f0f8` | powercut: notices written |
+| 2026-11-14 | `941a013` | pick: written and posted |
+| 2026-11-14 | `18ac8c2` | stories shared |
+| 2026-11-14 | `d79ae43` | powercut: notices written |
+| 2026-11-14 | `31cbcb6` | rasipalan posted |
+| 2026-11-14 | `8048e99` | facebook RN-364 |
+| 2026-11-14 | `ceaf6d2` | powercut: notices written |
+| 2026-11-14 | `a3f88c4` | powercut: notices written |
+| 2026-11-14 | `8f25cc0` | pick: picked news saved |
+| 2026-11-14 | `48828ed` | pick: picked news saved |
+| 2026-11-14 | `7bd12b3` | pick: list sent |
+| 2026-11-13 | `60a7a69` | pick: written and posted |
+| 2026-11-13 | `691736f` | pick: picked news saved |
+| 2026-11-13 | `5063c0a` | pick: picked news saved |
+| 2026-11-13 | `4c6f038` | pick: list sent |
+| 2026-11-13 | `56e2908` | stories shared |
 | 2026-11-13 | `bc0eaec` | goldrate: daily gold & silver rate carousel on this page (owner 14 Nov) - same job as Namakkal 360, own logo and handle |
 | 2026-11-13 | `2ee90ac` | facebook RN-352 |
 | 2026-11-13 | `723a15f` | Heartbeat |
 | 2026-11-13 | `9dee2ba` | facebook RN-356 |
-| 2026-11-13 | `3124ccb` | powercut: notices written |
-| 2026-11-13 | `0c2f4da` | facebook RN-350 |
-| 2026-11-13 | `e9f5403` | posting: no start-time wait - every eligible story posts as soon as it is ready (prime_time OFF); collection stays every 4 hours (owner 13 Nov 22:51) |
-| 2026-11-13 | `bc5b043` | powercut: notices written |
-| 2026-11-13 | `1e50867` | facebook RN-341 |
-| 2026-11-13 | `3ae8489` | facebook RN-342 |
-| 2026-11-13 | `93517ea` | powercut: notices written |
-| 2026-11-13 | `6f3ccc4` | pick: written and posted |
-| 2026-11-13 | `ed60c03` | pick: picked news saved |
-| 2026-11-13 | `6f0fae4` | pick: picked news saved |
-| 2026-11-13 | `021d9ea` | pick: list sent |
-| 2026-11-13 | `4835e2a` | facebook RN-343 |
-| 2026-11-13 | `e5169fe` | powercut: notices written |
-| 2026-11-13 | `2bcd001` | powercut: notices written |
-| 2026-11-13 | `f0544f7` | stories shared |
-| 2026-11-13 | `f7f8956` | powercut: notices written |
-| 2026-11-13 | `c7ceb04` | pick: written and posted |
-| 2026-11-13 | `fa04f7d` | facebook RN-339 |
-| 2026-11-13 | `8e1c750` | facebook RN-334 |
-| 2026-11-13 | `23473c1` | facebook RN-333 |
-| 2026-11-13 | `d49adac` | powercut: notices written |
-| 2026-11-13 | `f695348` | powercut: notices written |
-| 2026-11-13 | `24e0d3a` | facebook RN-354 |
-| 2026-11-13 | `e800802` | powercut: notices written |
-| 2026-11-13 | `b2ec358` | pick: picked news saved |
-| 2026-11-13 | `3399476` | pick: picked news saved |
 <!-- recent-changes:end -->
