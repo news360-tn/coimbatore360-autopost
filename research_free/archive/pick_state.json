@@ -122,7 +122,8 @@
    "score": 5.0,
    "power_cut": false,
    "listed_at": "2026-11-15T01:30:56.847720+05:30",
-   "picked_at": "2026-11-15T05:30:51.665376+05:30"
+   "picked_at": "2026-11-15T05:30:51.665376+05:30",
+   "posted": true
   },
   "C99ed8cd": {
    "id": "C99ed8cd",
@@ -135,7 +136,8 @@
    "score": 5.0,
    "power_cut": false,
    "listed_at": "2026-11-15T01:30:56.847720+05:30",
-   "picked_at": "2026-11-15T05:30:51.665378+05:30"
+   "picked_at": "2026-11-15T05:30:51.665378+05:30",
+   "posted": true
   },
   "Ceaf842d": {
    "id": "Ceaf842d",
@@ -148,7 +150,8 @@
    "score": 3.0,
    "power_cut": false,
    "listed_at": "2026-11-15T01:30:56.847720+05:30",
-   "picked_at": "2026-11-15T05:30:51.665380+05:30"
+   "picked_at": "2026-11-15T05:30:51.665380+05:30",
+   "posted": true
   },
   "Cf818649": {
    "id": "Cf818649",
@@ -161,7 +164,8 @@
    "score": 3.0,
    "power_cut": false,
    "listed_at": "2026-11-15T01:30:56.847720+05:30",
-   "picked_at": "2026-11-15T05:30:51.665382+05:30"
+   "picked_at": "2026-11-15T05:30:51.665382+05:30",
+   "refused": "not filed: duplicate after write"
   },
   "Ccf05d03": {
    "id": "Ccf05d03",
@@ -174,7 +178,8 @@
    "score": 3.0,
    "power_cut": false,
    "listed_at": "2026-11-15T01:30:56.847720+05:30",
-   "picked_at": "2026-11-15T05:30:51.665383+05:30"
+   "picked_at": "2026-11-15T05:30:51.665383+05:30",
+   "posted": true
   }
  },
  "rounds": {
@@ -1392,7 +1397,10 @@
     "Ccf05d03",
     "Ceaf842d",
     "Cf818649"
-   ]
+   ],
+   "refused": {
+    "Cf818649": "not filed: duplicate after write"
+   }
   }
  },
  "retry": {}
