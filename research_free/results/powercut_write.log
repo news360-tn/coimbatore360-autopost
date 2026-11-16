@@ -3442,3 +3442,194 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":1,"updated":0} 
 stories: 0
+writing [N]: நாளைய மின்தடை (16ம் தேதி)
+writing [N]: நாளை 17.11.26 கோவையில் இங்கெல்லாம் மின்தடை ஏற்படும்  - The C
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (14s)
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26 ('மாதாந்திர பராமரிப்பு பணிகளுக்காக நாளை (17.11.26/செவ்வாய்) கோ')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (13s)
+attempt 2 gemini/gemini-3-flash-preview: 1 problems
+  hl1 (the first headline on screen) must name the place 'பாப்பநாயக்கன்பாளையம்', e.g. 'பாப்பநாயக்கன்பாளையம்: ...' or 'பாப்பநாயக்கன்பாளையம்-இல் ...' - viewers share news of their own area
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (29s)
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  hl1 (the first headline on screen) must name the place 'பொள்ளாச்சி', e.g. 'பொள்ளாச்சி: ...' or 'பொள்ளாச்சி-இல் ...' - viewers share news of their own area
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok gemini/gemini-3-flash-preview (12s)
+attempt 3 gemini/gemini-3-flash-preview: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26 ('மாதாந்திர பராமரிப்பு பணிகளுக்காக நாளை (17.11.26/செவ்வாய்) கோ'); 26 ('நாளை 17.11.26 கோவையில் இங்கெல்லாம் மின்தடை ஏற்படும்  - The C')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+ok groq/qwen/qwen3.8-27b (1s)
+factcheck by groq/qwen/qwen3.8-27b: 4 problems
+  reel_script: The text 'காவல் கண்காணிப்பாளர்வடுகபாளையம்' is ungrammatical and contains an invented title ('Police Supervisor') not present in the article; the correct name is 'எஸ்.பி.வடுகபாளையம்'.
+  reel_script: The phrase 'நாளை நவம்பர் 16ஆம் தேதி' is followed later by 'நாளை நவம்பர் 17ஆம் தேதி', which is logically contradictory as 'tomorrow' cannot refer to two different dates in the same script without clear temporal separation (e.g., 'on the 16th' and 'on the 17th').
+  reel_script: The sentence 'மின் தடை நேரத்தில் தண்ணீர், மொபைல் சார்ஜ் போன்றவற்றை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' is ungrammatical and has no clear meaning in Tamil (one cannot 'prepare' water or mobile charge in this context; it likely intended to say 'store water' or 'charge devices').
+  caption: The phrase 'நாளை மறுநாள் (நவம்பர் 17)' is ungrammatical and contradictory ('Tomorrow the next day').
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: reel_script: The text 'காவல் கண்காணிப்பாளர்வடுகபாளையம்' is ungrammatical and contains an invented title ('Police Supervisor') not present in the article; the correct name is 'எஸ்.பி.வடுகபாளையம்'.
+  fact-check: reel_script: The phrase 'நாளை நவம்பர் 16ஆம் தேதி' is followed later by 'நாளை நவம்பர் 17ஆம் தேதி', which is logically contradictory as 'tomorrow' cannot refer to two different dates in the same script without clear temporal separation (e.g., 'on the 16th' and 'on the 17th').
+  fact-check: reel_script: The sentence 'மின் தடை நேரத்தில் தண்ணீர், மொபைல் சார்ஜ் போன்றவற்றை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' is ungrammatical and has no clear meaning in Tamil (one cannot 'prepare' water or mobile charge in this context; it likely intended to say 'store water' or 'charge devices').
+  fact-check: caption: The phrase 'நாளை மறுநாள் (நவம்பர் 17)' is ungrammatical and contradictory ('Tomorrow the next day').
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+switching away from groq/openai/gpt-oss-120b for 10 min
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): செட்டிபாளையம் ('கோமங்கலம், கோமங்கலம்புதூர், சங்கம்பாளையம், பண்ணைக்கிணறு, கோழ')
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 19, 22
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 17 ('நாளைய மின் தடை (17ம் தேதி)')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1063. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok groq/qwen/qwen3.8-27b (1s)
+writing [N]: நாளைய மின்தடை: வெள்ளக்கோவில், ராசாத்தாவலசு, தாசவநாயக்கன்பட்ட
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok groq/qwen/qwen3.8-27b (0s)
+factcheck by groq/qwen/qwen3.8-27b: 2 problems
+  reel_script contains the phrase 'அக்டோபர் அல்ல' (October no), which is not in the article and creates confusion/contradiction regarding the month (the article specifies November 17).
+  slides_spec slide 2 title is 'பாப்பநாய்கன்பாளையம' which is a misspelling (missing final character) of the place name.
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  fact-check: reel_script contains the phrase 'அக்டோபர் அல்ல' (October no), which is not in the article and creates confusion/contradiction regarding the month (the article specifies November 17).
+  fact-check: slides_spec slide 2 title is 'பாப்பநாய்கன்பாளையம' which is a misspelling (missing final character) of the place name.
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  reel_script talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
+  known issue meta_article: script talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர் மாநகரம்', e.g. 'கோயம்புத்தூர் மாநகரம்: ...' or 'கோயம்புத்தூர் மாநகரம்-இல் ...' - viewers share news of their own area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('மாதாந்திர பராமரிப்பு பணிகளுக்காக நாளை (17.11.26/செவ்வாய்) கோ'); 26 ('மாதாந்திர பராமரிப்பு பணிகளுக்காக நாளை (17.11.26/செவ்வாய்) கோ')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 17 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  not grounded: place word 'கோயம்புத்தூர்' is not in the article
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): கோவை ('மாதாந்திர பராமரிப்பு பணிகளுக்காக நாளை (17.11.26/செவ்வாய்) கோ')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok groq/qwen/qwen3.8-27b (4s)
+proofread rejected (2 problems)
+  slide 2 title longer than 18 characters
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26 ('மாதாந்திர பராமரிப்பு பணிகளுக்காக நாளை (17.11.26/செவ்வாய்) கோ'); 26 ('நாளை 17.11.26 கோவையில் இங்கெல்லாம் மின்தடை ஏற்படும்  - The C')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check out of free quota
+image match: False The photo shows a utility worker in a location with Southeast Asian script (not Coimbatore, India) and non-Indian vehicl
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The article says the outage is on Thursday (நவ. 17) from 9 AM to 2 PM, and the draft's Tamil-day wording matches, but the draft's slides_spec and tamil_headline describe the outage as covering the four substations in a way that is not directly stated; more importantly, the caption adds 'மொபைல் சார்ஜ், குடிநீர் போன்றவற்றை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (advice to charge mobiles and store drinking water), which is not in the article
+  The reel_script says 'வெள்ளக்கோவில், மேட்டுப்பாளையம் உள்ளிட்ட பகுதிகளில் மின்தடை' and the slides say 'வெள்ளக்கோவில், மேட்டுப்பாளையம் பகுதிகள் உட்பட பல கிராமங்கள்' calling the affected areas villages, whereas the article lists localities/neighbourhoods, not specifically villages
+  The caption's English hashtag line 'Vellakoil Mettupalayam power cut tomorrow 9 AM to 2 PM | Coimbatore news' is an added English summary not from the article, though it is in the footer area and so is excluded
+claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: The article says the outage is on Thursday (நவ. 17) from 9 AM to 2 PM, and the draft's Tamil-day wording matches, but the draft's slides_spec and tamil_headline describe the outage as covering the four substations in a way that is not directly stated; more importantly, the caption adds 'மொபைல் சார்ஜ், குடிநீர் போன்றவற்றை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (advice to charge mobiles and store drinking water), which is not in the article
+  fact-check: The reel_script says 'வெள்ளக்கோவில், மேட்டுப்பாளையம் உள்ளிட்ட பகுதிகளில் மின்தடை' and the slides say 'வெள்ளக்கோவில், மேட்டுப்பாளையம் பகுதிகள் உட்பட பல கிராமங்கள்' calling the affected areas villages, whereas the article lists localities/neighbourhoods, not specifically villages
+  fact-check: The caption's English hashtag line 'Vellakoil Mettupalayam power cut tomorrow 9 AM to 2 PM | Coimbatore news' is an added English summary not from the article, though it is in the footer area and so is excluded
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1063. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Power shutdown in Pappanaickenpalayam an'
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261116-1224","first":"RN-409"}
+posting job started at once
+ok anthropic/claude-haiku-5-5
+real photo skipped (photo uploaded 2026-01-31 (older than the news)): https://media.dinamani.com/dinamani/2026-01-31/t14nmocl/%E0%AE%AE%E0%AE%BF%E0%AE%A9%E0%AF%
+real photo skipped (photo uploaded 2026-01-31 (older than the news)): https://media.dinamani.com/dinamani/2026-01-31/t14nmocl/மின்தடை?w=1200&h=675&auto=format%2
+image match: False The image is an AI-generated graphic depicting an electricity worker rather than an actual photograph of the power maint
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Power cut tomorrow (17 Nov) in Vellakoil'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261116-1224","first":"RN-410"}
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/tiruppur/2026/Nov/15/%E0%AE%A8%E0%AE%BE%E0%AE%B3%E0%AF%88%E0%AE%AF-%E0%AE%AE%E0%AE%BF%E0%AE%A9%E0%AF%8D%E0%AE%A4%E0%AE%9F%E0%AF%88-%E0%AE%B5%E0%AF%86%E0%AE%B3%E0%AF%8D%E0%AE%B3%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%8B%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AF%8D-%E0%AE%B0%E0%AE%BE%E0%AE%9A%E0%AE%BE%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BE%E0%AE%B5%E0%AE%B2%E0%AE%9A%E0%AF%81-%E0%AE%A4%E0%AE%BE%E0%AE%9A%E0%AE%B5%E0%AE%A8%E0%AE%BE%E0%AE%AF%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%A9%E0%AF%8D%E0%AE%AA%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AE%BF-%E0%AE%AE%E0%AF%87%E0%AE%9F%E0%AF%8D%E0%AE%9F%E0%AF%81%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%B3%E0%AF%88%E0%AE%AF%E0%AE%AE%E0%AF%8D
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/today-s-power-outage-16th/4377034
+manual link added: https://covaimail.com/power-shutdown-scheduled-to-take-place-in-coimbatore-on-17th-of-november-2026
+candidate filter: collected=3
+to write: 3 Coimbatore district candidates (max 3 stories)
+round: top 3 of 3 candidates
+candidates waiting: 3 Coimbatore; time left 39 min
+try (N) manual=True: https://covaimail.com/power-shutdown-scheduled-to-take-place
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+NOT filed (N) நாளைய மின்தடை (16ம் தேதி): duplicate after write
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/tir
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 3})
+posting job started at once
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 6})
+candidate loop ended: left 0, tried={'N': 3}, done={'N': 2}, time left 37 min
+filed: 2 Coimbatore district stories (target 3), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":2,"updated":1} 
+stories: 2
