@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-16 | `eac718e` | post: while news is still waiting, a live posting run starts the next one (GitHub skipped most 5-minute runs on 16 Nov) |
+| 2026-11-16 | `4e93fc0` | pick: written and posted |
+| 2026-11-16 | `7de45b1` | facebook RN-422 |
+| 2026-11-16 | `69729cb` | facebook RN-420 |
+| 2026-11-16 | `a447dda` | facebook RN-419 |
+| 2026-11-16 | `0013e2b` | pick: picked news saved |
+| 2026-11-16 | `c096f8c` | pick: picked news saved |
+| 2026-11-16 | `51b8a8c` | pick: list sent |
+| 2026-11-16 | `a22de9f` | pick: written and posted |
+| 2026-11-16 | `e923042` | facebook RN-416 |
+| 2026-11-16 | `6cad0ff` | facebook RN-414 |
+| 2026-11-16 | `146125b` | facebook RN-412 |
+| 2026-11-16 | `5a4131f` | facebook RN-418 |
+| 2026-11-16 | `6c6a1a6` | facebook RN-417 |
+| 2026-11-16 | `a53aea7` | facebook RN-415 |
+| 2026-11-16 | `09df1d4` | facebook RN-411 |
+| 2026-11-16 | `cd756c1` | pick: picked news saved |
+| 2026-11-16 | `d9cd5c1` | pick: picked news saved |
+| 2026-11-16 | `6b7988d` | pick: list sent |
+| 2026-11-16 | `99a691c` | powercut: notices written |
+| 2026-11-16 | `5f1e91b` | facebook RN-409 |
+| 2026-11-16 | `b933f40` | facebook RN-410 |
+| 2026-11-16 | `50047fc` | stories shared |
+| 2026-11-16 | `7cbe0cc` | powercut: notices written |
+| 2026-11-16 | `5610eef` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-16 | `4de4de3` | goldrate posted |
+| 2026-11-16 | `59fe703` | facebook RN-405 |
+| 2026-11-16 | `a217692` | stories shared |
+| 2026-11-16 | `93fef06` | pick: written and posted |
 | 2026-11-16 | `d1f24da` | pick: a round GitHub skipped adds its count to the next round; lifestyle columns not written automatically; leftover count in the round log |
-| 2026-11-16 | `d23969d` | rasipalan posted |
-| 2026-11-16 | `654ac97` | facebook RN-404 |
-| 2026-11-16 | `4ee92c0` | facebook RN-408 |
-| 2026-11-16 | `a91d421` | facebook RN-406 |
-| 2026-11-16 | `8a71134` | pick: picked news saved |
-| 2026-11-16 | `7a9e8b9` | pick: picked news saved |
-| 2026-11-16 | `a58422d` | pick: list sent |
-| 2026-11-15 | `7804c1d` | facebook RN-403 |
-| 2026-11-15 | `ea2f815` | pick: written and posted |
-| 2026-11-15 | `3f60975` | facebook RN-402 |
-| 2026-11-15 | `496a4dd` | pick: picked news saved |
-| 2026-11-15 | `3f8900d` | pick: picked news saved |
-| 2026-11-15 | `307dce4` | pick: list sent |
-| 2026-11-15 | `c5ca033` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-15 | `5b9d26c` | powercut: notices written |
-| 2026-11-15 | `2dcccac` | powercut: notices written |
-| 2026-11-15 | `b8acf75` | pick: written and posted |
-| 2026-11-15 | `aef8736` | facebook RN-400 |
-| 2026-11-15 | `f2849d4` | powercut: notices written |
-| 2026-11-15 | `91b6cc2` | facebook RN-401 |
-| 2026-11-15 | `586bff5` | powercut: notices written |
-| 2026-11-15 | `e07070b` | facebook RN-399 |
-| 2026-11-15 | `2ae0777` | facebook RN-398 |
-| 2026-11-15 | `9c8d85f` | powercut: notices written |
-| 2026-11-15 | `40d93be` | facebook RN-397 |
-| 2026-11-15 | `8930e2f` | pick: picked news saved |
-| 2026-11-15 | `6c21b08` | pick: picked news saved |
-| 2026-11-15 | `6d0cb49` | pick: list sent |
-| 2026-11-15 | `da7852f` | powercut: notices written |
 <!-- recent-changes:end -->
