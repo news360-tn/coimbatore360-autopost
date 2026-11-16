@@ -3735,3 +3735,138 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
 stories: 0
+writing [N]: கோவை மாவட்டத்தில் நாளை (17-11-2026) மின்தடை: புராணி காலனி, ஆ
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+writing [N]: நாளைய(நவ.17) மின்தடை: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (43s)
+attempt 1 gemini/gemini-3.6-flash: 1 problems
+  hl1 (the first headline on screen) must name the place 'கீரணத்தம்', e.g. 'கீரணத்தம்: ...' or 'கீரணத்தம்-இல் ...' - viewers share news of their own area
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.6-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (13s)
+attempt 1 gemini/gemini-3-flash-preview: 1 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (7s)
+attempt 2 groq/openai/gpt-oss-120b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `or
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 3 groq/qwen/qwen3.8-27b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail gemini/gemini-3.5-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.5-flash
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `or
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-1
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+switching away from groq/openai/gpt-oss-120b for 10 min
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  reel_script must end with exactly: மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.
+  known issue meta_article: cards talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+ok groq/qwen/qwen3.8-27b (4s)
+factcheck by groq/qwen/qwen3.8-27b: 1 problems
+  Caption footer incorrectly identifies the location as 'Coimbatore' (English text) whereas the article and draft specify 'Kovai' (Coimbatore district, but the specific towns are in Kovai/Udumalpette, and the headline says Kovai). While Coimbatore is the district name, the article title and context focus on Kovai (Coimbatore city/district). However, a more significant issue is the missing detail: The article lists 'Kalyana Mandapam' alongside Ramakrishna Hospital, which is included in the slides but the reel script only mentions 'Ramakrishna Hospital area'. More critically, the reel script omits the specific mention that the power cut is for 'monthly maintenance' in the context of the *Tamil Nadu* state-wide initiative mentioned in the article, though it does mention the cause. Let's look closer. The article says 'Kovai District'. The caption says 'Coimbatore'. This is a translation variance, usually acceptable. Let's check the date. Article: 17-11-2026. Draft: 17-11-2026. Correct. Time: 9 AM. Correct. Locations: All listed in slides are in the article. Reel script lists a subset. Is there a missing *important* fact? The article lists many villages. The reel script summarizes. This is acceptable for a reel. Let's check for grammatical errors or invented details. 'நவா - இந்தியா சாலை' is in the article. 'கணபதி பேருந்து நிலையம்' is in the article. Wait, the article lists 'Kovai District - Areas: ...'. The caption says 'Coimbatore power cut'. Kovai is Coimbatore. This is fine. Let's re-read the 'NOT problems' section. 'wording choices'. Is 'Coimbatore' vs 'Kovai' a problem? Usually, local news pages use the local name. The draft uses 'Kovai' in Tamil and 'Coimbatore' in English footer. This is standard. Let's look for a factual error. Article: 'Kovai District'. Draft: 'Kovai District'. Correct. Article: 'Udumalpette areas'. Draft: 'Udumalpette areas'. Correct. Is there a missing *result* or *arrest*? No, it's a notice. Let's check the date again. Article: 'Naalai (17-11-2026)'. Draft: 'Naalai November 17'. Correct. Let's check the time. Article: 'Kaalai 9 mani mudhal'. Draft: 'Kaalai 9 mani mudhal'. Correct. Let's check the cause. Article: 'Maadanthira paraamirppu panigal'. Draft: 'Maadanthira min paraamirppu panigal'. Correct. Let's check the locations in the reel script. 'Purani Colony, Avarampalayam, Ganesh Nagar, Kamaadheenu Nagar'. In article. 'Nava - India Salai, Ganapathi Bus Stand, Sittapudur'. In article. 'JGNM Hospital, Ramakrishna Hospital'. In article. 'Udumalpette areas: Udumalai, Nehru Street, Railway Station'. In article. Everything seems correct. Wait, let's look at the caption footer again. 'Coimbatore power cut tomorrow 17 Nov 2026'. The article is about Kovai (Coimbatore). This is not an error. Let's look at the slides. Slide 2: 'Pazhayoor, B.N. Palayam, Almu Nagar, Kuppayapalayam'. All in article. Slide 3: 'JGNM Hospital area', 'Ramakrishna Hospital and Kalyana Mandapam area'. In article. Slide 4: 'Udumalpette areas... Udumalai, Nehru Street, Railway Station'. In article. Is there any ungrammatical sentence? 'நவா - இந்தியா சாலை' is a bit awkward but reflects the article's 'Nava - India Salai'. The article actually says 'நவா - இந்தியா சாலை'. So it's faithful. Let's check the headline. 'Kovaiyil Naalai Mintadai'. Article: 'Kovai Maavattathil Naalai Mintadai'. Headline is a summary. Acceptable. Let's check the reel script sentence: 'மின் தடை ஏற்படும் பகுதிகளில் புராணி காலனி, ஆவாரம்பாளையம், கணேஷ் நகர், காமதேனு நகர் ஆகியவை அடங்கும்.' This implies these are the *only* ones or the main ones. The next sentence adds more. This is fine. Is there a problem with the date? The article says 'Naalai (17-11-2026)'. The draft says 'Naalai November 17'. 17-11 is November 17. Correct. Let's check the time again. 'Kaalai 9 mani'. Correct. Let's check the cause. 'Maadanthira min paraamirppu'. Correct. Let's check the workers. 'Min Saar Vaariya Uzhivargal'. Correct. Let's check the specific tasks. 'Siriyappaazhukalai sariseyvathu', 'Min kambaangal, min vazhitadaangalil unna marakkilaikalai agatruvathu'. Correct. It seems the draft is accurate. Let me double check the 'NOT problems' list. 'caption footer... posting-date line'. The posting date is today. The article date is 17-11-2026. The draft uses 17-11-2026 as the event date. This is correct. The footer says 'tomorrow 17 Nov 2026'. This is consistent with the article saying 'Naalai (17-11-2026)'. Wait, if the article is published *on* the day before, 'Naalai' is the 17th. The draft says 'Naalai 17-11-2026'. This is consistent. Is there any subtle error? 'Kovai Maavattathil' vs 'Kovaiyil'. The article title says 'Kovai Maavattathil'. The draft headline says 'Kovaiyil'. This is a minor simplification, not a factual error. The reel script says 'Kovai Maavattathil'. Correct. Let's look at the slides spec 'loc': 'Purani Colony, Kovai'. Correct. 'hl1': 'Purani Colony, Avarampalayathil Naalai'. Correct. 'hl2': 'Naalai Kaalai 9 Mani Mudhal'. Correct. I don't see any factual errors, invented details, or grammatical issues. The draft is faithful to the article.
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  fact-check: Caption footer incorrectly identifies the location as 'Coimbatore' (English text) whereas the article and draft specify 'Kovai' (Coimbatore district, but the specific towns are in Kovai/Udumalpette, and the headline says Kovai). While Coimbatore is the district name, the article title and context focus on Kovai (Coimbatore city/district). However, a more significant issue is the missing detail: The article lists 'Kalyana Mandapam' alongside Ramakrishna Hospital, which is included in the slides but the reel script only mentions 'Ramakrishna Hospital area'. More critically, the reel script omits the specific mention that the power cut is for 'monthly maintenance' in the context of the *Tamil Nadu* state-wide initiative mentioned in the article, though it does mention the cause. Let's look closer. The article says 'Kovai District'. The caption says 'Coimbatore'. This is a translation variance, usually acceptable. Let's check the date. Article: 17-11-2026. Draft: 17-11-2026. Correct. Time: 9 AM. Correct. Locations: All listed in slides are in the article. Reel script lists a subset. Is there a missing *important* fact? The article lists many villages. The reel script summarizes. This is acceptable for a reel. Let's check for grammatical errors or invented details. 'நவா - இந்தியா சாலை' is in the article. 'கணபதி பேருந்து நிலையம்' is in the article. Wait, the article lists 'Kovai District - Areas: ...'. The caption says 'Coimbatore power cut'. Kovai is Coimbatore. This is fine. Let's re-read the 'NOT problems' section. 'wording choices'. Is 'Coimbatore' vs 'Kovai' a problem? Usually, local news pages use the local name. The draft uses 'Kovai' in Tamil and 'Coimbatore' in English footer. This is standard. Let's look for a factual error. Article: 'Kovai District'. Draft: 'Kovai District'. Correct. Article: 'Udumalpette areas'. Draft: 'Udumalpette areas'. Correct. Is there a missing *result* or *arrest*? No, it's a notice. Let's check the date again. Article: 'Naalai (17-11-2026)'. Draft: 'Naalai November 17'. Correct. Let's check the time. Article: 'Kaalai 9 mani mudhal'. Draft: 'Kaalai 9 mani mudhal'. Correct. Let's check the cause. Article: 'Maadanthira paraamirppu panigal'. Draft: 'Maadanthira min paraamirppu panigal'. Correct. Let's check the locations in the reel script. 'Purani Colony, Avarampalayam, Ganesh Nagar, Kamaadheenu Nagar'. In article. 'Nava - India Salai, Ganapathi Bus Stand, Sittapudur'. In article. 'JGNM Hospital, Ramakrishna Hospital'. In article. 'Udumalpette areas: Udumalai, Nehru Street, Railway Station'. In article. Everything seems correct. Wait, let's look at the caption footer again. 'Coimbatore power cut tomorrow 17 Nov 2026'. The article is about Kovai (Coimbatore). This is not an error. Let's look at the slides. Slide 2: 'Pazhayoor, B.N. Palayam, Almu Nagar, Kuppayapalayam'. All in article. Slide 3: 'JGNM Hospital area', 'Ramakrishna Hospital and Kalyana Mandapam area'. In article. Slide 4: 'Udumalpette areas... Udumalai, Nehru Street, Railway Station'. In article. Is there any ungrammatical sentence? 'நவா - இந்தியா சாலை' is a bit awkward but reflects the article's 'Nava - India Salai'. The article actually says 'நவா - இந்தியா சாலை'. So it's faithful. Let's check the headline. 'Kovaiyil Naalai Mintadai'. Article: 'Kovai Maavattathil Naalai Mintadai'. Headline is a summary. Acceptable. Let's check the reel script sentence: 'மின் தடை ஏற்படும் பகுதிகளில் புராணி காலனி, ஆவாரம்பாளையம், கணேஷ் நகர், காமதேனு நகர் ஆகியவை அடங்கும்.' This implies these are the *only* ones or the main ones. The next sentence adds more. This is fine. Is there a problem with the date? The article says 'Naalai (17-11-2026)'. The draft says 'Naalai November 17'. 17-11 is November 17. Correct. Let's check the time again. 'Kaalai 9 mani'. Correct. Let's check the cause. 'Maadanthira min paraamirppu'. Correct. Let's check the workers. 'Min Saar Vaariya Uzhivargal'. Correct. Let's check the specific tasks. 'Siriyappaazhukalai sariseyvathu', 'Min kambaangal, min vazhitadaangalil unna marakkilaikalai agatruvathu'. Correct. It seems the draft is accurate. Let me double check the 'NOT problems' list. 'caption footer... posting-date line'. The posting date is today. The article date is 17-11-2026. The draft uses 17-11-2026 as the event date. This is correct. The footer says 'tomorrow 17 Nov 2026'. This is consistent with the article saying 'Naalai (17-11-2026)'. Wait, if the article is published *on* the day before, 'Naalai' is the 17th. The draft says 'Naalai 17-11-2026'. This is consistent. Is there any subtle error? 'Kovai Maavattathil' vs 'Kovaiyil'. The article title says 'Kovai Maavattathil'. The draft headline says 'Kovaiyil'. This is a minor simplification, not a factual error. The reel script says 'Kovai Maavattathil'. Correct. Let's look at the slides spec 'loc': 'Purani Colony, Kovai'. Correct. 'hl1': 'Purani Colony, Avarampalayathil Naalai'. Correct. 'hl2': 'Naalai Kaalai 9 Mani Mudhal'. Correct. I don't see any factual errors, invented details, or grammatical issues. The draft is faithful to the article.
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 0 problems
+claude rewrite 2 anthropic/claude-haiku-5-5: 0 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+ok anthropic/claude-haiku-5-5
+real photo: no picture on the source page -> AI pictures
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+imagegen: black-forest-labs/flux.1-schnell 422: {"detail":[{"type":"extra_forbidden","loc":["body","seed"],"msg":"Extra inputs are not permitted","input":331382}]}
+imagegen: black-forest-labs/flux.1-dev 422: {"detail":[{"type":"extra_forbidden","loc":["body","seed"],"msg":"Extra inputs are not permitted","input":331382}]}
+imagegen: fal fal-ai/flux/schnell 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing."}
+imagegen: fal fal-ai/flux/dev 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing."}
+image NOT made for 'Power cut tomorrow (17 Nov) in Coimbator': all image models failed: fal fal-ai/flux/dev 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing."}
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (17-11-2026) மின்தடை: புராணி காலனி, ஆ')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+bridge: 200 {"ok":true,"added":1,"auto_queued":0,"emailed":0,"reoffered":0,"batch":"B20261116-2248","first":"RN-423"}
+posting job started at once
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+bridge: 200 {"ok":true,"added":1,"auto_queued":0,"emailed":0,"reoffered":0,"batch":"B20261116-2248","first":"RN-424"}
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/today-s-power-outage-coimbatore/4377695
+manual link added: https://tamil.abplive.com/news/tamil-nadu/tamilnadu-power-shutdown-17-11-2026-vellore-karur-kovai-power-cut-areas-affected-279880#district-section
+candidate filter: collected=2
+to write: 2 Coimbatore district candidates (max 2 stories)
+round: top 2 of 2 candidates
+candidates waiting: 2 Coimbatore; time left 39 min
+try (N) manual=True: https://tamil.abplive.com/news/tamil-nadu/tamilnadu-power-sh
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+auto image failed for 'Power cut tomorrow (17 Nov) in Coimbator': all image models failed: fal fal-ai/flux/dev 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your bala -> posting job retries
+auto images: 0 of 1 stories ({})
+posting job started at once
+auto images: 0 of 1 stories ({})
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 2}, time left 36 min
+filed: 2 Coimbatore district stories (target 2), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":2,"updated":0} 
+stories: 2
