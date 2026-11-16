@@ -3633,3 +3633,105 @@ filed: 2 Coimbatore district stories (target 3), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":2,"updated":1} 
 stories: 2
+writing [N]: நாளைய மின்தடை (16ம் தேதி)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 1 groq/qwen/qwen3.8-27b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your p
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  numbers not found in the article: 19, 23
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): செட்டிபாளையம் ('கோமங்கலம், கோமங்கலம்புதூர், சங்கம்பாளையம், பண்ணைக்கிணறு, கோழ')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'சாலைப்புதூர்' and the news itself, e.g. 'சாலைப்புதூர்-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 17 ('நாளைய மின் தடை (17ம் தேதி)')
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+free fact-check unavailable, using Claude: no free model answered: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. 
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 14 problems
+  reel_script says 'நவம்பர் 16ஆம் தேதி திங்கள்கிழமை' — the article gives only the 16th, with no month or weekday; the added month and weekday are not in the article.
+  reel_script says the outage is for 'பராமரிப்புப் பணிகள்' (maintenance work) at the substation — the article gives no cause.
+  reel_script lists 'காவல் கண்காணிப்பாளர்வடுகபாளையம' — the article says 'எஸ்.பி.வடுகபாளையம' (S.P. Vadugapalayam), so 'எஸ்.பி.' was wrongly expanded into 'காவல் கண்காணிப்பாளர்' (Superintendent of Police), a different meaning, and the words are run together.
+  reel_script says 'நாளை சாலைப்புதூர் பகுதியில் மின்தடை' and later Sāalaipudur details; the article's Saalaipudur list is correct but the reel omits the important fact that the Ayyarpadi and Komangalampudur areas (Valparai/Pollachi) are also affected at the same time, and the Palappampatti outage is described in the reel as 'நவம்பர் 17ஆம் தேதி' with a month not in the article.
+  reel_script says 'நவம்பர் 17ஆம் தேதி' for Palappampatti — the article only says 17ம் தேதி; the month is invented.
+  reel_script mentions 'Coimbatore' page follow line — allowed, but the reel's Komangalampudur sentence says 'கோமங்கலம்புதூர் துணை மின் நிலையப் பகுதிகளிலும்' with no mention of the list being incomplete; minor, not a factual error.
+  reel_script omits the contact for Komangalampudur (ராஜா, செயற்பொறியாளர், பொள்ளாச்சி) and Palappampatti (மூர்த்தி, செயற்பொறியாளர், உடுமலை), which are important information in the article.
+  slides_spec 'எப்போது?' slide says '<b>16 நவம்பர்</b> (திங்கள்கிழமை)' — month and weekday are not in the article.
+  slides_spec 'பிற பகுதிகள்' slide says the Palappampatti outage is on 'நாளை மறுநாள் (17ம் தேதி)' — 'நாளை மறுநாள்' (day after tomorrow) is an inference from the article's dates, and the weekday/month used in the caption (நவ. 17, செவ்வாய்க்கிழமை) is invented.
+  slides_spec 'தகவல்' slide adds 'மின்சாதனப் பணிகளுக்கு முன் தயார் நிலையில் இருங்கள்' — this advice is not in the article.
+  caption says 'பராமரிப்புப் பணி நடைபெறுவதால்' (due to maintenance work) — cause not in the article.
+  caption header says 'நாளை (நவ. 16, திங்கள்கிழமை)' — month and weekday invented.
+  caption says 'நாளை மறுநாள் (நவ. 17, செவ்வாய்க்கிழமை)' for Palappampatti — month and weekday invented.
+  caption tail says 'மின்சாதனங்களை முன்கூட்டியே சார்ஜ் செய்து தயாராக வைத்துக்கொள்ளுங்கள்' — advice not in the article.
+claude rewrite 3 anthropic/claude-haiku-5-5: 14 problems
+  fact-check: reel_script says 'நவம்பர் 16ஆம் தேதி திங்கள்கிழமை' — the article gives only the 16th, with no month or weekday; the added month and weekday are not in the article.
+  fact-check: reel_script says the outage is for 'பராமரிப்புப் பணிகள்' (maintenance work) at the substation — the article gives no cause.
+  fact-check: reel_script lists 'காவல் கண்காணிப்பாளர்வடுகபாளையம' — the article says 'எஸ்.பி.வடுகபாளையம' (S.P. Vadugapalayam), so 'எஸ்.பி.' was wrongly expanded into 'காவல் கண்காணிப்பாளர்' (Superintendent of Police), a different meaning, and the words are run together.
+  fact-check: reel_script says 'நாளை சாலைப்புதூர் பகுதியில் மின்தடை' and later Sāalaipudur details; the article's Saalaipudur list is correct but the reel omits the important fact that the Ayyarpadi and Komangalampudur areas (Valparai/Pollachi) are also affected at the same time, and the Palappampatti outage is described in the reel as 'நவம்பர் 17ஆம் தேதி' with a month not in the article.
+  fact-check: reel_script says 'நவம்பர் 17ஆம் தேதி' for Palappampatti — the article only says 17ம் தேதி; the month is invented.
+  fact-check: reel_script mentions 'Coimbatore' page follow line — allowed, but the reel's Komangalampudur sentence says 'கோமங்கலம்புதூர் துணை மின் நிலையப் பகுதிகளிலும்' with no mention of the list being incomplete; minor, not a factual error.
+  fact-check: reel_script omits the contact for Komangalampudur (ராஜா, செயற்பொறியாளர், பொள்ளாச்சி) and Palappampatti (மூர்த்தி, செயற்பொறியாளர், உடுமலை), which are important information in the article.
+  fact-check: slides_spec 'எப்போது?' slide says '<b>16 நவம்பர்</b> (திங்கள்கிழமை)' — month and weekday are not in the article.
+  fact-check: slides_spec 'பிற பகுதிகள்' slide says the Palappampatti outage is on 'நாளை மறுநாள் (17ம் தேதி)' — 'நாளை மறுநாள்' (day after tomorrow) is an inference from the article's dates, and the weekday/month used in the caption (நவ. 17, செவ்வாய்க்கிழமை) is invented.
+  fact-check: slides_spec 'தகவல்' slide adds 'மின்சாதனப் பணிகளுக்கு முன் தயார் நிலையில் இருங்கள்' — this advice is not in the article.
+  fact-check: caption says 'பராமரிப்புப் பணி நடைபெறுவதால்' (due to maintenance work) — cause not in the article.
+  fact-check: caption header says 'நாளை (நவ. 16, திங்கள்கிழமை)' — month and weekday invented.
+  fact-check: caption says 'நாளை மறுநாள் (நவ. 17, செவ்வாய்க்கிழமை)' for Palappampatti — month and weekday invented.
+  fact-check: caption tail says 'மின்சாதனங்களை முன்கூட்டியே சார்ஜ் செய்து தயாராக வைத்துக்கொள்ளுங்கள்' — advice not in the article.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+proofread skipped: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198829, Requested 2597. Please try again in 10m16.032s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/today-s-power-outage-16th/4377034
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 39 min
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+NOT filed (N) நாளைய மின்தடை (16ம் தேதி): duplicate after write
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 0}, time left 38 min
+filed: 0 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":0,"updated":1} 
+stories: 0
