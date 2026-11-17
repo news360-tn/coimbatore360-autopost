@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-16 | `eac718e` | post: while news is still waiting, a live posting run starts the next one (GitHub skipped most 5-minute runs on 16 Nov) |
-| 2026-11-16 | `4e93fc0` | pick: written and posted |
-| 2026-11-16 | `7de45b1` | facebook RN-422 |
-| 2026-11-16 | `69729cb` | facebook RN-420 |
-| 2026-11-16 | `a447dda` | facebook RN-419 |
-| 2026-11-16 | `0013e2b` | pick: picked news saved |
-| 2026-11-16 | `c096f8c` | pick: picked news saved |
-| 2026-11-16 | `51b8a8c` | pick: list sent |
-| 2026-11-16 | `a22de9f` | pick: written and posted |
-| 2026-11-16 | `e923042` | facebook RN-416 |
-| 2026-11-16 | `6cad0ff` | facebook RN-414 |
-| 2026-11-16 | `146125b` | facebook RN-412 |
-| 2026-11-16 | `5a4131f` | facebook RN-418 |
-| 2026-11-16 | `6c6a1a6` | facebook RN-417 |
-| 2026-11-16 | `a53aea7` | facebook RN-415 |
-| 2026-11-16 | `09df1d4` | facebook RN-411 |
-| 2026-11-16 | `cd756c1` | pick: picked news saved |
-| 2026-11-16 | `d9cd5c1` | pick: picked news saved |
-| 2026-11-16 | `6b7988d` | pick: list sent |
-| 2026-11-16 | `99a691c` | powercut: notices written |
-| 2026-11-16 | `5f1e91b` | facebook RN-409 |
-| 2026-11-16 | `b933f40` | facebook RN-410 |
-| 2026-11-16 | `50047fc` | stories shared |
-| 2026-11-16 | `7cbe0cc` | powercut: notices written |
-| 2026-11-16 | `5610eef` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-16 | `4de4de3` | goldrate posted |
-| 2026-11-16 | `59fe703` | facebook RN-405 |
-| 2026-11-16 | `a217692` | stories shared |
-| 2026-11-16 | `93fef06` | pick: written and posted |
-| 2026-11-16 | `d1f24da` | pick: a round GitHub skipped adds its count to the next round; lifestyle columns not written automatically; leftover count in the round log |
+| 2026-11-17 | `7770311` | pictures: NVIDIA FLUX no longer accepts 'seed' (422) - dropped so the free NVIDIA pictures work again |
+| 2026-11-17 | `66c3aab` | goldrate posted |
+| 2026-11-17 | `435d0cd` | facebook RN-441 |
+| 2026-11-17 | `c696319` | powercut: notices written |
+| 2026-11-17 | `22e2cac` | facebook RN-442 |
+| 2026-11-17 | `47e40bf` | rasipalan posted |
+| 2026-11-17 | `c14e8e1` | powercut: notices written |
+| 2026-11-17 | `13ca46f` | pick: written and posted |
+| 2026-11-17 | `99ab2ac` | facebook RN-440 |
+| 2026-11-17 | `af7f7cc` | facebook RN-436 |
+| 2026-11-17 | `70b2324` | facebook RN-438 |
+| 2026-11-17 | `d96da08` | facebook RN-431 |
+| 2026-11-17 | `f0c0db4` | pick: picked news saved |
+| 2026-11-17 | `fc20e78` | pick: picked news saved |
+| 2026-11-17 | `47fcf54` | pick: list sent |
+| 2026-11-17 | `6603534` | pick: written and posted |
+| 2026-11-17 | `1b68cbe` | facebook RN-433 |
+| 2026-11-17 | `71f9d26` | facebook RN-434 |
+| 2026-11-17 | `3c87816` | facebook RN-430 |
+| 2026-11-17 | `47fefa4` | facebook RN-429 |
+| 2026-11-17 | `aa1e291` | facebook RN-388 |
+| 2026-11-17 | `ff269d5` | facebook RN-435 |
+| 2026-11-17 | `f9db210` | facebook RN-432 |
+| 2026-11-17 | `934f543` | pick: picked news saved |
+| 2026-11-17 | `591b282` | pick: picked news saved |
+| 2026-11-17 | `b1dc445` | pick: list sent |
+| 2026-11-16 | `4a0fc08` | pick: written and posted |
+| 2026-11-16 | `ab37ce1` | facebook RN-425 |
+| 2026-11-16 | `c2a750c` | facebook RN-428 |
+| 2026-11-16 | `2236ced` | facebook RN-423 |
 <!-- recent-changes:end -->
