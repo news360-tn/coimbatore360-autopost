@@ -1,163 +1,162 @@
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
-11:17:25 real photo: vision check out of free quota
-11:17:25 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-436
-11:17:26 real photo: vision check resting (free quota busy)
-11:17:26 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-437
-11:17:26 real photo: no picture on the source page -> AI pictures
+11:32:05 real photo not this news (The image is an AI-generated cartoon illustration rather than a real camera phot): https://images.dinamalar.com/data/large_2025/Tamil_News_lrg_43779082026111619214
 imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
 imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
 imagegen: black-forest-labs/flux.1-schnell 422: {"detail":[{"type":"extra_forbidden","loc":["body","seed"],"msg":"Extra inputs are not permitted","input":8}]}
 imagegen: black-forest-labs/flux.1-dev 422: {"detail":[{"type":"extra_forbidden","loc":["body","seed"],"msg":"Extra inputs are not permitted","input":8}]}
 imagegen: fal fal-ai/flux/schnell 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing."}
 imagegen: fal fal-ai/flux/dev 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashboard/billing."}
-11:17:28 image attempt 1 failed: all image models failed: fal fal-ai/flux/dev 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashbo
-11:17:48 image attempt 2 failed: all image models failed: all image models failed: None
-11:18:28 image attempt 3 failed: all image models failed: all image models failed: None
-11:19:28 image models failed for RN-438 all image models failed: all image models failed: None - the reel is made without pictures
-11:19:31 real photo: vision check resting (free quota busy)
-11:19:31 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-439
-11:19:32 real photo: vision check resting (free quota busy)
-11:19:32 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-440
-11:19:37 SKIP RN-2 stale: published 29 Oct, older than yesterday
-11:19:37 SKIP RN-40 stale: published 30 Oct, older than yesterday
-11:19:37 SKIP RN-41 stale: published 30 Oct, older than yesterday
-11:19:37 SKIP RN-46 stale: published 30 Oct, older than yesterday
-11:19:37 SKIP RN-47 stale: published 30 Oct, older than yesterday
-11:19:37 SKIP RN-51 stale: published 30 Oct, older than yesterday
-11:19:37 SKIP RN-65 known issue meta_article: headline talks about the article instead of the news ('கட்டுரை')
-11:19:37 SKIP RN-83 known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, krishnasweets)
-11:19:37 SKIP RN-104 stale: published 31 Oct, older than yesterday
-11:19:37 SKIP RN-131 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-137 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-141 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-146 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-149 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-160 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-161 stale: published 02 Nov, older than yesterday
-11:19:37 SKIP RN-163 stale: published 03 Nov, older than yesterday
-11:19:37 SKIP RN-164 stale: published 03 Nov, older than yesterday
-11:19:37 SKIP RN-168 stale: published 03 Nov, older than yesterday
-11:19:37 SKIP RN-173 stale: published 03 Nov, older than yesterday
-11:19:37 SKIP RN-185 stale: published 04 Nov, older than yesterday
-11:19:37 SKIP RN-186 stale: published 05 Nov, older than yesterday
-11:19:37 SKIP RN-192 stale: published 05 Nov, older than yesterday
-11:19:37 SKIP RN-204 stale: published 05 Nov, older than yesterday
-11:19:37 SKIP RN-209 stale: published 05 Nov, older than yesterday
-11:19:37 SKIP RN-211 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-212 stale: published 05 Nov, older than yesterday
-11:19:37 SKIP RN-219 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-223 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-226 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-231 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-232 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-235 stale: published 06 Nov, older than yesterday
-11:19:37 SKIP RN-244 stale: published 07 Nov, older than yesterday
-11:19:37 SKIP RN-245 stale: published 07 Nov, older than yesterday
-11:19:37 SKIP RN-246 stale: published 07 Nov, older than yesterday
-11:19:37 SKIP RN-247 stale: published 07 Nov, older than yesterday
-11:19:37 SKIP RN-251 stale: published 07 Nov, older than yesterday
-11:19:37 SKIP RN-252 stale: published 07 Nov, older than yesterday
-11:19:37 SKIP RN-260 stale: published 08 Nov, older than yesterday
-11:19:37 SKIP RN-267 stale: published 08 Nov, older than yesterday
-11:19:37 SKIP RN-269 stale: published 08 Nov, older than yesterday
-11:19:37 SKIP RN-273 stale: published 08 Nov, older than yesterday
-11:19:37 SKIP RN-275 stale: published 08 Nov, older than yesterday
-11:19:37 SKIP RN-276 stale: published 08 Nov, older than yesterday
-11:19:37 SKIP RN-285 stale: published 10 Nov, older than yesterday
-11:19:37 SKIP RN-287 stale: published 10 Nov, older than yesterday
-11:19:37 SKIP RN-296 stale: published 10 Nov, older than yesterday
-11:19:37 SKIP RN-305 stale: published 10 Nov, older than yesterday
-11:19:37 SKIP RN-306 stale: published 10 Nov, older than yesterday
-11:19:37 SKIP RN-307 stale: published 11 Nov, older than yesterday
-11:19:37 SKIP RN-311 stale: published 10 Nov, older than yesterday
-11:19:37 SKIP RN-319 stale: published 11 Nov, older than yesterday
-11:19:37 SKIP RN-322 stale: published 11 Nov, older than yesterday
-11:19:37 SKIP RN-325 stale: published 12 Nov, older than yesterday
-11:19:37 SKIP RN-335 stale: published 12 Nov, older than yesterday
-11:19:37 SKIP RN-336 stale: published 12 Nov, older than yesterday
-11:19:37 SKIP RN-344 stale: published 12 Nov, older than yesterday
-11:19:37 SKIP RN-345 stale: published 13 Nov, older than yesterday
-11:19:37 SKIP RN-346 stale: published 12 Nov, older than yesterday
-11:19:37 SKIP RN-348 stale: published 12 Nov, older than yesterday
-11:19:37 SKIP RN-371 held: fact-check problems - numbers not found in the article: 532000
-11:19:37 SKIP RN-375 held: fact-check problems - fact-check: The article says the student was a 'கல்லூரி மாணவி' who died when a vehicle hit her while she tried to cross the road, which matches the draft. However, the article does not say the road wi
-11:19:37 SKIP RN-407 held: fact-check problems - fact-check: Slide 1 (loc and 'எங்கே?' first line) states the junction is 'near Udumalai' (உடுமலை அருகே) and the loc field says 'உடுமலை'
-11:19:37 SKIP RN-413 held: location is only the district - the town from the article is missing
+11:32:07 image attempt 1 failed: all image models failed: fal fal-ai/flux/dev 403: {"detail":"User is locked. Reason: Exhausted balance. Top up your balance at fal.ai/dashbo
+11:32:27 image attempt 2 failed: all image models failed: all image models failed: None
+11:33:07 image attempt 3 failed: all image models failed: all image models failed: None
+11:34:07 image models failed for RN-436 all image models failed: all image models failed: None - the reel is made without pictures
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+11:34:11 real photo: vision check out of free quota
+11:34:11 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-437
+11:34:11 real photo: vision check resting (free quota busy)
+11:34:11 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-439
+11:34:12 real photo: vision check resting (free quota busy)
+11:34:12 real photo check out of free quota - the article's photo is tried again next run (no AI pictures yet): RN-440
+11:34:15 SKIP RN-2 stale: published 29 Oct, older than yesterday
+11:34:15 SKIP RN-40 stale: published 30 Oct, older than yesterday
+11:34:15 SKIP RN-41 stale: published 30 Oct, older than yesterday
+11:34:15 SKIP RN-46 stale: published 30 Oct, older than yesterday
+11:34:15 SKIP RN-47 stale: published 30 Oct, older than yesterday
+11:34:15 SKIP RN-51 stale: published 30 Oct, older than yesterday
+11:34:15 SKIP RN-65 known issue meta_article: headline talks about the article instead of the news ('கட்டுரை')
+11:34:15 SKIP RN-83 known issue english_in_voice: voice script has English words the voice skips (buykrishnasweets, krishnasweets)
+11:34:15 SKIP RN-104 stale: published 31 Oct, older than yesterday
+11:34:15 SKIP RN-131 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-137 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-141 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-146 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-149 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-160 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-161 stale: published 02 Nov, older than yesterday
+11:34:15 SKIP RN-163 stale: published 03 Nov, older than yesterday
+11:34:15 SKIP RN-164 stale: published 03 Nov, older than yesterday
+11:34:15 SKIP RN-168 stale: published 03 Nov, older than yesterday
+11:34:15 SKIP RN-173 stale: published 03 Nov, older than yesterday
+11:34:15 SKIP RN-185 stale: published 04 Nov, older than yesterday
+11:34:15 SKIP RN-186 stale: published 05 Nov, older than yesterday
+11:34:15 SKIP RN-192 stale: published 05 Nov, older than yesterday
+11:34:15 SKIP RN-204 stale: published 05 Nov, older than yesterday
+11:34:15 SKIP RN-209 stale: published 05 Nov, older than yesterday
+11:34:15 SKIP RN-211 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-212 stale: published 05 Nov, older than yesterday
+11:34:15 SKIP RN-219 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-223 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-226 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-231 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-232 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-235 stale: published 06 Nov, older than yesterday
+11:34:15 SKIP RN-244 stale: published 07 Nov, older than yesterday
+11:34:15 SKIP RN-245 stale: published 07 Nov, older than yesterday
+11:34:15 SKIP RN-246 stale: published 07 Nov, older than yesterday
+11:34:15 SKIP RN-247 stale: published 07 Nov, older than yesterday
+11:34:15 SKIP RN-251 stale: published 07 Nov, older than yesterday
+11:34:15 SKIP RN-252 stale: published 07 Nov, older than yesterday
+11:34:15 SKIP RN-260 stale: published 08 Nov, older than yesterday
+11:34:15 SKIP RN-267 stale: published 08 Nov, older than yesterday
+11:34:15 SKIP RN-269 stale: published 08 Nov, older than yesterday
+11:34:15 SKIP RN-273 stale: published 08 Nov, older than yesterday
+11:34:15 SKIP RN-275 stale: published 08 Nov, older than yesterday
+11:34:15 SKIP RN-276 stale: published 08 Nov, older than yesterday
+11:34:15 SKIP RN-285 stale: published 10 Nov, older than yesterday
+11:34:15 SKIP RN-287 stale: published 10 Nov, older than yesterday
+11:34:15 SKIP RN-296 stale: published 10 Nov, older than yesterday
+11:34:15 SKIP RN-305 stale: published 10 Nov, older than yesterday
+11:34:15 SKIP RN-306 stale: published 10 Nov, older than yesterday
+11:34:15 SKIP RN-307 stale: published 11 Nov, older than yesterday
+11:34:15 SKIP RN-311 stale: published 10 Nov, older than yesterday
+11:34:15 SKIP RN-319 stale: published 11 Nov, older than yesterday
+11:34:15 SKIP RN-322 stale: published 11 Nov, older than yesterday
+11:34:15 SKIP RN-325 stale: published 12 Nov, older than yesterday
+11:34:15 SKIP RN-335 stale: published 12 Nov, older than yesterday
+11:34:15 SKIP RN-336 stale: published 12 Nov, older than yesterday
+11:34:15 SKIP RN-344 stale: published 12 Nov, older than yesterday
+11:34:15 SKIP RN-345 stale: published 13 Nov, older than yesterday
+11:34:15 SKIP RN-346 stale: published 12 Nov, older than yesterday
+11:34:15 SKIP RN-348 stale: published 12 Nov, older than yesterday
+11:34:16 SKIP RN-371 held: fact-check problems - numbers not found in the article: 532000
+11:34:16 SKIP RN-375 held: fact-check problems - fact-check: The article says the student was a 'கல்லூரி மாணவி' who died when a vehicle hit her while she tried to cross the road, which matches the draft. However, the article does not say the road wi
+11:34:16 SKIP RN-407 held: fact-check problems - fact-check: Slide 1 (loc and 'எங்கே?' first line) states the junction is 'near Udumalai' (உடுமலை அருகே) and the loc field says 'உடுமலை'
+11:34:16 SKIP RN-413 held: location is only the district - the town from the article is missing
 ::warning title=Held from posting RN-413::held: location is only the district - the town from the article is missing
-11:19:39 SKIP RN-421 held: fact-check problems - not grounded: location 'பகுதி' is not in the article
+11:34:17 SKIP RN-421 held: fact-check problems - not grounded: location 'பகுதி' is not in the article
 ::warning title=Held from posting RN-421::held: fact-check problems - not grounded: location 'பகுதி' is not in the article
-11:19:41 story catch-up coimbatore: quota 34/50, 40 recent posts, 10 live stories, owner ids ['17841473413980585', '40734050286193711']
-11:19:41 67 stories in the queue, ready to post: 1
-11:19:41   keys: ['batch', 'caption', 'category', 'coimbatore_link', 'doc', 'email_sent', 'gmail_id', 'headline_en', 'headline_ta', 'images', 'importance', 'location', 'notes', 'notion', 'other_sources', 'post_status', 'post_to', 'posted_at', 'prompts', 'published', 'reel', 'reel_link', 'reel_script', 'researched', 'review', 'review_page', 'row', 'slides_spec', 'source', 'spare_link', 'story_id', 'verification']
-11:19:41    RN-2 review= 'Auto' images= 103 spec= 785 pages= ['coimbatore'] links= '' '' age_h= 454.0 ready= False set_started= True
-11:19:41    RN-40 review= 'Auto' images= 103 spec= 888 pages= ['coimbatore'] links= '' '' age_h= 440.9 ready= False set_started= True
-11:19:41    RN-41 review= 'Auto' images= 103 spec= 637 pages= ['coimbatore'] links= '' '' age_h= 440.9 ready= False set_started= True
-11:19:41    RN-46 review= 'Auto' images= 103 spec= 547 pages= ['coimbatore'] links= '' '' age_h= 436.6 ready= False set_started= True
-11:19:41    RN-47 review= 'Auto' images= 103 spec= 942 pages= ['coimbatore'] links= '' '' age_h= 436.6 ready= False set_started= True
-11:19:41    RN-51 review= 'Auto' images= 103 spec= 897 pages= ['coimbatore'] links= '' '' age_h= 432.9 ready= False set_started= True
-11:19:41    RN-65 review= 'Auto' images= 205 spec= 683 pages= ['coimbatore'] links= '' '' age_h= 424.8 ready= False set_started= True
-11:19:41    RN-83 review= 'Auto' images= 205 spec= 928 pages= ['coimbatore'] links= '' '' age_h= 420.8 ready= False set_started= True
-11:19:41    RN-104 review= 'Auto' images= 205 spec= 750 pages= ['coimbatore'] links= '' '' age_h= 398.7 ready= False set_started= True
-11:19:41    RN-131 review= 'Auto' images= 205 spec= 719 pages= ['coimbatore'] links= '' '' age_h= 363.1 ready= False set_started= True
-11:19:41    RN-137 review= 'Auto' images= 205 spec= 658 pages= ['coimbatore'] links= '' '' age_h= 363.1 ready= False set_started= True
-11:19:41    RN-141 review= 'Auto' images= 205 spec= 738 pages= ['coimbatore'] links= '' '' age_h= 353.7 ready= False set_started= True
-11:19:41    RN-146 review= 'Auto' images= 205 spec= 896 pages= ['coimbatore'] links= '' '' age_h= 353.6 ready= False set_started= True
-11:19:41    RN-149 review= 'Auto' images= 205 spec= 615 pages= ['coimbatore'] links= '' '' age_h= 351.2 ready= False set_started= True
-11:19:41    RN-160 review= 'Auto' images= 205 spec= 861 pages= ['coimbatore'] links= '' '' age_h= 336.4 ready= False set_started= True
-11:19:41    RN-161 review= 'Auto' images= 205 spec= 731 pages= ['coimbatore'] links= '' '' age_h= 336.4 ready= False set_started= True
-11:19:41    RN-163 review= 'Auto' images= 103 spec= 659 pages= ['coimbatore'] links= '' '' age_h= 336.4 ready= False set_started= True
-11:19:41    RN-164 review= 'Auto' images= 205 spec= 712 pages= ['coimbatore'] links= '' '' age_h= 327.0 ready= False set_started= True
-11:19:41    RN-168 review= 'Auto' images= 205 spec= 793 pages= ['coimbatore'] links= '' '' age_h= 326.7 ready= False set_started= True
-11:19:41    RN-173 review= 'Auto' images= 205 spec= 657 pages= ['coimbatore'] links= '' '' age_h= 315.7 ready= False set_started= True
-11:19:41    RN-185 review= 'Auto' images= 205 spec= 830 pages= ['coimbatore'] links= '' '' age_h= 303.1 ready= False set_started= True
-11:19:41    RN-186 review= 'Auto' images= 205 spec= 685 pages= ['coimbatore'] links= '' '' age_h= 291.9 ready= False set_started= True
-11:19:41    RN-192 review= 'Auto' images= 205 spec= 748 pages= ['coimbatore'] links= '' '' age_h= 291.8 ready= False set_started= True
-11:19:41    RN-204 review= 'Auto' images= 205 spec= 933 pages= ['coimbatore'] links= '' '' age_h= 279.0 ready= False set_started= True
-11:19:41    RN-209 review= 'Auto' images= 205 spec= 552 pages= ['coimbatore'] links= '' '' age_h= 268.0 ready= False set_started= True
-11:19:41    RN-211 review= 'Auto' images= 205 spec= 725 pages= ['coimbatore'] links= '' '' age_h= 267.9 ready= False set_started= True
-11:19:41    RN-212 review= 'Auto' images= 205 spec= 952 pages= ['coimbatore'] links= '' '' age_h= 264.3 ready= False set_started= True
-11:19:41    RN-219 review= 'Auto' images= 205 spec= 742 pages= ['coimbatore'] links= '' '' age_h= 254.9 ready= False set_started= True
-11:19:41    RN-223 review= 'Auto' images= 205 spec= 893 pages= ['coimbatore'] links= '' '' age_h= 244.1 ready= False set_started= True
-11:19:41    RN-226 review= 'Auto' images= 205 spec= 726 pages= ['coimbatore'] links= '' '' age_h= 244.1 ready= False set_started= True
-11:19:41    RN-231 review= 'Auto' images= 205 spec= 916 pages= ['coimbatore'] links= '' '' age_h= 240.5 ready= False set_started= True
-11:19:41    RN-232 review= 'Auto' images= 205 spec= 902 pages= ['coimbatore'] links= '' '' age_h= 240.5 ready= False set_started= True
-11:19:41    RN-235 review= 'Auto' images= 205 spec= 964 pages= ['coimbatore'] links= '' '' age_h= 240.5 ready= False set_started= True
-11:19:41    RN-244 review= 'Auto' images= 205 spec= 700 pages= ['coimbatore'] links= '' '' age_h= 220.0 ready= False set_started= True
-11:19:41    RN-245 review= 'Auto' images= 205 spec= 885 pages= ['coimbatore'] links= '' '' age_h= 220.0 ready= False set_started= True
-11:19:41    RN-246 review= 'Auto' images= 205 spec= 765 pages= ['coimbatore'] links= '' '' age_h= 220.0 ready= False set_started= True
-11:19:41    RN-247 review= 'Auto' images= 205 spec= 899 pages= ['coimbatore'] links= '' '' age_h= 220.0 ready= False set_started= True
-11:19:41    RN-251 review= 'Auto' images= 205 spec= 713 pages= ['coimbatore'] links= '' '' age_h= 216.5 ready= False set_started= True
-11:19:41    RN-252 review= 'Auto' images= 205 spec= 795 pages= ['coimbatore'] links= '' '' age_h= 216.5 ready= False set_started= True
-11:19:41    RN-260 review= 'Auto' images= 205 spec= 641 pages= ['coimbatore'] links= '' '' age_h= 207.5 ready= False set_started= True
-11:19:41    RN-267 review= 'Auto' images= 205 spec= 840 pages= ['coimbatore'] links= '' '' age_h= 195.8 ready= False set_started= True
-11:19:41    RN-269 review= 'Auto' images= 205 spec= 749 pages= ['coimbatore'] links= '' '' age_h= 195.8 ready= False set_started= True
-11:19:41    RN-273 review= 'Auto' images= 205 spec= 741 pages= ['coimbatore'] links= '' '' age_h= 192.3 ready= False set_started= True
-11:19:41    RN-275 review= 'Auto' images= 205 spec= 689 pages= ['coimbatore'] links= '' '' age_h= 192.3 ready= False set_started= True
-11:19:41    RN-276 review= 'Auto' images= 205 spec= 900 pages= ['coimbatore'] links= '' '' age_h= 192.3 ready= False set_started= True
-11:19:41    RN-285 review= 'Auto' images= 205 spec= 574 pages= ['coimbatore'] links= '' '' age_h= 171.7 ready= False set_started= True
-11:19:41    RN-287 review= 'Auto' images= 205 spec= 716 pages= ['coimbatore'] links= '' '' age_h= 171.7 ready= False set_started= True
-11:19:41    RN-296 review= 'Auto' images= 205 spec= 719 pages= ['coimbatore'] links= '' '' age_h= 159.2 ready= False set_started= True
-11:19:41    RN-305 review= 'Auto' images= 205 spec= 840 pages= ['coimbatore'] links= '' '' age_h= 148.1 ready= False set_started= True
-11:19:41    RN-306 review= 'Auto' images= 205 spec= 692 pages= ['coimbatore'] links= '' '' age_h= 148.1 ready= False set_started= True
-11:19:41    RN-307 review= 'Auto' images= 205 spec= 631 pages= ['coimbatore'] links= '' '' age_h= 148.1 ready= False set_started= True
-11:19:41    RN-311 review= 'Auto' images= 205 spec= 616 pages= ['coimbatore'] links= '' '' age_h= 144.1 ready= False set_started= True
-11:19:41    RN-319 review= 'Auto' images= 205 spec= 890 pages= ['coimbatore'] links= '' '' age_h= 134.9 ready= False set_started= True
-11:19:41    RN-322 review= 'Auto' images= 205 spec= 919 pages= ['coimbatore'] links= '' '' age_h= 123.7 ready= False set_started= True
-11:19:41    RN-325 review= 'Auto' images= 205 spec= 780 pages= ['coimbatore'] links= '' '' age_h= 123.5 ready= False set_started= True
-11:19:41    RN-335 review= 'Auto' images= 205 spec= 664 pages= ['coimbatore'] links= '' '' age_h= 111.1 ready= False set_started= True
-11:19:41    RN-336 review= 'Auto' images= 205 spec= 880 pages= ['coimbatore'] links= '' '' age_h= 111.1 ready= False set_started= True
-11:19:41    RN-344 review= 'Auto' images= 205 spec= 872 pages= ['coimbatore'] links= '' '' age_h= 99.8 ready= False set_started= True
-11:19:41    RN-345 review= 'Auto' images= 205 spec= 726 pages= ['coimbatore'] links= '' '' age_h= 99.8 ready= False set_started= True
-11:19:41    RN-346 review= 'Auto' images= 205 spec= 914 pages= ['coimbatore'] links= '' '' age_h= 96.4 ready= False set_started= True
-11:19:41    RN-348 review= 'Auto' images= 205 spec= 844 pages= ['coimbatore'] links= '' '' age_h= 96.3 ready= False set_started= True
-11:19:41    RN-371 review= 'Auto' images= 205 spec= 700 pages= ['coimbatore'] links= '' '' age_h= 69.0 ready= False set_started= True
-11:19:41    RN-375 review= 'Auto' images= 205 spec= 846 pages= ['coimbatore'] links= '' '' age_h= 65.5 ready= False set_started= True
-11:19:41    RN-407 review= 'Auto' images= 205 spec= 665 pages= ['coimbatore'] links= '' '' age_h= 29.4 ready= False set_started= True
-11:19:41    RN-413 review= 'Auto' images= 205 spec= 745 pages= ['coimbatore'] links= '' '' age_h= 18.9 ready= False set_started= True
-11:19:41    RN-421 review= 'Auto' images= 11 spec= 650 pages= ['coimbatore'] links= '' '' age_h= 17.1 ready= False set_started= True
-11:19:41    RN-438 review= 'Auto' images= 11 spec= 879 pages= ['coimbatore'] links= '' '' age_h= 0.5 ready= True set_started= True
-11:19:42 publishing quota coimbatore: 34/50
-11:19:44 instagram duplicate check coimbatore: 50 recent posts read
-11:19:44    RN-438 waits for the 12-minute gap after the last post on ['coimbatore']
-11:19:44 prebuilding ahead of the set start: ['RN-438']
+11:34:19 story catch-up coimbatore: quota 34/50, 40 recent posts, 10 live stories, owner ids ['17841473413980585', '40734050286193711']
+11:34:19 68 stories in the queue, ready to post: 2
+11:34:19   keys: ['batch', 'caption', 'category', 'coimbatore_link', 'doc', 'email_sent', 'gmail_id', 'headline_en', 'headline_ta', 'images', 'importance', 'location', 'notes', 'notion', 'other_sources', 'post_status', 'post_to', 'posted_at', 'prompts', 'published', 'reel', 'reel_link', 'reel_script', 'researched', 'review', 'review_page', 'row', 'slides_spec', 'source', 'spare_link', 'story_id', 'verification']
+11:34:19    RN-2 review= 'Auto' images= 103 spec= 785 pages= ['coimbatore'] links= '' '' age_h= 454.3 ready= False set_started= True
+11:34:19    RN-40 review= 'Auto' images= 103 spec= 888 pages= ['coimbatore'] links= '' '' age_h= 441.2 ready= False set_started= True
+11:34:19    RN-41 review= 'Auto' images= 103 spec= 637 pages= ['coimbatore'] links= '' '' age_h= 441.1 ready= False set_started= True
+11:34:19    RN-46 review= 'Auto' images= 103 spec= 547 pages= ['coimbatore'] links= '' '' age_h= 436.9 ready= False set_started= True
+11:34:19    RN-47 review= 'Auto' images= 103 spec= 942 pages= ['coimbatore'] links= '' '' age_h= 436.8 ready= False set_started= True
+11:34:19    RN-51 review= 'Auto' images= 103 spec= 897 pages= ['coimbatore'] links= '' '' age_h= 433.1 ready= False set_started= True
+11:34:19    RN-65 review= 'Auto' images= 205 spec= 683 pages= ['coimbatore'] links= '' '' age_h= 425.0 ready= False set_started= True
+11:34:19    RN-83 review= 'Auto' images= 205 spec= 928 pages= ['coimbatore'] links= '' '' age_h= 421.1 ready= False set_started= True
+11:34:19    RN-104 review= 'Auto' images= 205 spec= 750 pages= ['coimbatore'] links= '' '' age_h= 399.0 ready= False set_started= True
+11:34:19    RN-131 review= 'Auto' images= 205 spec= 719 pages= ['coimbatore'] links= '' '' age_h= 363.4 ready= False set_started= True
+11:34:19    RN-137 review= 'Auto' images= 205 spec= 658 pages= ['coimbatore'] links= '' '' age_h= 363.3 ready= False set_started= True
+11:34:19    RN-141 review= 'Auto' images= 205 spec= 738 pages= ['coimbatore'] links= '' '' age_h= 354.0 ready= False set_started= True
+11:34:19    RN-146 review= 'Auto' images= 205 spec= 896 pages= ['coimbatore'] links= '' '' age_h= 353.8 ready= False set_started= True
+11:34:19    RN-149 review= 'Auto' images= 205 spec= 615 pages= ['coimbatore'] links= '' '' age_h= 351.5 ready= False set_started= True
+11:34:19    RN-160 review= 'Auto' images= 205 spec= 861 pages= ['coimbatore'] links= '' '' age_h= 336.7 ready= False set_started= True
+11:34:19    RN-161 review= 'Auto' images= 205 spec= 731 pages= ['coimbatore'] links= '' '' age_h= 336.7 ready= False set_started= True
+11:34:19    RN-163 review= 'Auto' images= 103 spec= 659 pages= ['coimbatore'] links= '' '' age_h= 336.7 ready= False set_started= True
+11:34:19    RN-164 review= 'Auto' images= 205 spec= 712 pages= ['coimbatore'] links= '' '' age_h= 327.3 ready= False set_started= True
+11:34:19    RN-168 review= 'Auto' images= 205 spec= 793 pages= ['coimbatore'] links= '' '' age_h= 327.0 ready= False set_started= True
+11:34:19    RN-173 review= 'Auto' images= 205 spec= 657 pages= ['coimbatore'] links= '' '' age_h= 315.9 ready= False set_started= True
+11:34:19    RN-185 review= 'Auto' images= 205 spec= 830 pages= ['coimbatore'] links= '' '' age_h= 303.3 ready= False set_started= True
+11:34:19    RN-186 review= 'Auto' images= 205 spec= 685 pages= ['coimbatore'] links= '' '' age_h= 292.1 ready= False set_started= True
+11:34:19    RN-192 review= 'Auto' images= 205 spec= 748 pages= ['coimbatore'] links= '' '' age_h= 292.0 ready= False set_started= True
+11:34:19    RN-204 review= 'Auto' images= 205 spec= 933 pages= ['coimbatore'] links= '' '' age_h= 279.3 ready= False set_started= True
+11:34:19    RN-209 review= 'Auto' images= 205 spec= 552 pages= ['coimbatore'] links= '' '' age_h= 268.2 ready= False set_started= True
+11:34:19    RN-211 review= 'Auto' images= 205 spec= 725 pages= ['coimbatore'] links= '' '' age_h= 268.2 ready= False set_started= True
+11:34:19    RN-212 review= 'Auto' images= 205 spec= 952 pages= ['coimbatore'] links= '' '' age_h= 264.6 ready= False set_started= True
+11:34:19    RN-219 review= 'Auto' images= 205 spec= 742 pages= ['coimbatore'] links= '' '' age_h= 255.2 ready= False set_started= True
+11:34:19    RN-223 review= 'Auto' images= 205 spec= 893 pages= ['coimbatore'] links= '' '' age_h= 244.4 ready= False set_started= True
+11:34:19    RN-226 review= 'Auto' images= 205 spec= 726 pages= ['coimbatore'] links= '' '' age_h= 244.4 ready= False set_started= True
+11:34:19    RN-231 review= 'Auto' images= 205 spec= 916 pages= ['coimbatore'] links= '' '' age_h= 240.8 ready= False set_started= True
+11:34:19    RN-232 review= 'Auto' images= 205 spec= 902 pages= ['coimbatore'] links= '' '' age_h= 240.8 ready= False set_started= True
+11:34:19    RN-235 review= 'Auto' images= 205 spec= 964 pages= ['coimbatore'] links= '' '' age_h= 240.8 ready= False set_started= True
+11:34:19    RN-244 review= 'Auto' images= 205 spec= 700 pages= ['coimbatore'] links= '' '' age_h= 220.2 ready= False set_started= True
+11:34:19    RN-245 review= 'Auto' images= 205 spec= 885 pages= ['coimbatore'] links= '' '' age_h= 220.2 ready= False set_started= True
+11:34:19    RN-246 review= 'Auto' images= 205 spec= 765 pages= ['coimbatore'] links= '' '' age_h= 220.2 ready= False set_started= True
+11:34:19    RN-247 review= 'Auto' images= 205 spec= 899 pages= ['coimbatore'] links= '' '' age_h= 220.2 ready= False set_started= True
+11:34:19    RN-251 review= 'Auto' images= 205 spec= 713 pages= ['coimbatore'] links= '' '' age_h= 216.7 ready= False set_started= True
+11:34:19    RN-252 review= 'Auto' images= 205 spec= 795 pages= ['coimbatore'] links= '' '' age_h= 216.7 ready= False set_started= True
+11:34:19    RN-260 review= 'Auto' images= 205 spec= 641 pages= ['coimbatore'] links= '' '' age_h= 207.7 ready= False set_started= True
+11:34:19    RN-267 review= 'Auto' images= 205 spec= 840 pages= ['coimbatore'] links= '' '' age_h= 196.0 ready= False set_started= True
+11:34:19    RN-269 review= 'Auto' images= 205 spec= 749 pages= ['coimbatore'] links= '' '' age_h= 196.0 ready= False set_started= True
+11:34:19    RN-273 review= 'Auto' images= 205 spec= 741 pages= ['coimbatore'] links= '' '' age_h= 192.5 ready= False set_started= True
+11:34:19    RN-275 review= 'Auto' images= 205 spec= 689 pages= ['coimbatore'] links= '' '' age_h= 192.5 ready= False set_started= True
+11:34:19    RN-276 review= 'Auto' images= 205 spec= 900 pages= ['coimbatore'] links= '' '' age_h= 192.5 ready= False set_started= True
+11:34:19    RN-285 review= 'Auto' images= 205 spec= 574 pages= ['coimbatore'] links= '' '' age_h= 172.0 ready= False set_started= True
+11:34:19    RN-287 review= 'Auto' images= 205 spec= 716 pages= ['coimbatore'] links= '' '' age_h= 172.0 ready= False set_started= True
+11:34:19    RN-296 review= 'Auto' images= 205 spec= 719 pages= ['coimbatore'] links= '' '' age_h= 159.4 ready= False set_started= True
+11:34:19    RN-305 review= 'Auto' images= 205 spec= 840 pages= ['coimbatore'] links= '' '' age_h= 148.4 ready= False set_started= True
+11:34:19    RN-306 review= 'Auto' images= 205 spec= 692 pages= ['coimbatore'] links= '' '' age_h= 148.4 ready= False set_started= True
+11:34:19    RN-307 review= 'Auto' images= 205 spec= 631 pages= ['coimbatore'] links= '' '' age_h= 148.3 ready= False set_started= True
+11:34:19    RN-311 review= 'Auto' images= 205 spec= 616 pages= ['coimbatore'] links= '' '' age_h= 144.4 ready= False set_started= True
+11:34:19    RN-319 review= 'Auto' images= 205 spec= 890 pages= ['coimbatore'] links= '' '' age_h= 135.1 ready= False set_started= True
+11:34:20    RN-322 review= 'Auto' images= 205 spec= 919 pages= ['coimbatore'] links= '' '' age_h= 123.9 ready= False set_started= True
+11:34:20    RN-325 review= 'Auto' images= 205 spec= 780 pages= ['coimbatore'] links= '' '' age_h= 123.8 ready= False set_started= True
+11:34:20    RN-335 review= 'Auto' images= 205 spec= 664 pages= ['coimbatore'] links= '' '' age_h= 111.3 ready= False set_started= True
+11:34:20    RN-336 review= 'Auto' images= 205 spec= 880 pages= ['coimbatore'] links= '' '' age_h= 111.3 ready= False set_started= True
+11:34:20    RN-344 review= 'Auto' images= 205 spec= 872 pages= ['coimbatore'] links= '' '' age_h= 100.0 ready= False set_started= True
+11:34:20    RN-345 review= 'Auto' images= 205 spec= 726 pages= ['coimbatore'] links= '' '' age_h= 100.0 ready= False set_started= True
+11:34:20    RN-346 review= 'Auto' images= 205 spec= 914 pages= ['coimbatore'] links= '' '' age_h= 96.6 ready= False set_started= True
+11:34:20    RN-348 review= 'Auto' images= 205 spec= 844 pages= ['coimbatore'] links= '' '' age_h= 96.5 ready= False set_started= True
+11:34:20    RN-371 review= 'Auto' images= 205 spec= 700 pages= ['coimbatore'] links= '' '' age_h= 69.3 ready= False set_started= True
+11:34:20    RN-375 review= 'Auto' images= 205 spec= 846 pages= ['coimbatore'] links= '' '' age_h= 65.8 ready= False set_started= True
+11:34:20    RN-407 review= 'Auto' images= 205 spec= 665 pages= ['coimbatore'] links= '' '' age_h= 29.6 ready= False set_started= True
+11:34:20    RN-413 review= 'Auto' images= 205 spec= 745 pages= ['coimbatore'] links= '' '' age_h= 19.1 ready= False set_started= True
+11:34:20    RN-421 review= 'Auto' images= 11 spec= 650 pages= ['coimbatore'] links= '' '' age_h= 17.4 ready= False set_started= True
+11:34:20    RN-436 review= 'Auto' images= 11 spec= 910 pages= ['coimbatore'] links= '' '' age_h= 0.8 ready= True set_started= True
+11:34:20    RN-438 review= 'Auto' images= 11 spec= 879 pages= ['coimbatore'] links= '' '' age_h= 0.8 ready= True set_started= True
+11:34:21 publishing quota coimbatore: 34/50
+11:34:22 instagram duplicate check coimbatore: 50 recent posts read
+11:34:22    RN-436 waits for the 12-minute gap after the last post on ['coimbatore']
+11:34:22 prebuilding ahead of the set start: ['RN-436']
