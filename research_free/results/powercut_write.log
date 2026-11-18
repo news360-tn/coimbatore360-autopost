@@ -4230,3 +4230,139 @@ filed: 1 Coimbatore district stories (target 2), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":1,"updated":1} 
 stories: 1
+writing [N]: கோவை மாவட்டத்தில் நாளை (19-11-2026) மின்தடை: பல்வேறு பகுதிகள
+writing [N]: கோவை மாவட்டத்தில் நாளை (19-11-2026) மின்தடை: எம்.ஜி. சாலை, எ
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.6-flash
+fail gemini/gemini-3.6-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (17s)
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (19-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.5-flash (26s)
+attempt 1 gemini/gemini-3.5-flash: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 2 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 3 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 4 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 5 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 6 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 7 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+ok gemini/gemini-3-flash-preview (12s)
+attempt 2 gemini/gemini-3-flash-preview: 2 problems
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'வடவள்ளி' and the news itself, e.g. 'வடவள்ளி-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (19-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok groq/qwen/qwen3.8-27b (6s)
+attempt 3 groq/qwen/qwen3.8-27b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  reel_script talks about the article instead of the news (குறிப்பிடப்படவில்லை) - if the article has no real news, return an empty reel_script
+  caption talks about the article instead of the news (குறிப்பிடப்படவில்லை) - if the article has no real news, return an empty reel_script
+  numbers not found in the article: 13, 14, 15
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  known issue meta_article: script talks about the article instead of the news ('குறிப்பிடப்படவில்லை') - rewrite so it does not happen again
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (19-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'எம்.ஜி. சாலை' and the news itself, e.g. 'எம்.ஜி. சாலை-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 18 ('தமிழகத்தில் நவம்பர் 18-ந் தேதி வியாழக்கிழமை அன்று துணை மின் '); 2 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 3 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 4 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 5 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 6 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'எம்.ஜி.ரோடு' and the news itself, e.g. 'எம்.ஜி.ரோடு-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (19-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 2 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 3 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 4 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 5 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 6 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள'); 7 ('நகர், ஒண்டிப்புதூர்; சீரநாயக்கன்பாளையம் 2.பிஎன்புதூர் 3.வடவள')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  known issue meta_article: cards talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+ok anthropic/claude-haiku-5-5
+real photo: vision check unavailable: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=40)
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo not this news (The image is a generic stock photo of electricity transmission towers with the T): https://static.langimg.com/tml/thumb/135944377/power-outage-in-tamilnadu-on-nove
+real photo not downloaded: 400 Client Error: Bad Request for url: https://static.langimg.com/tml/thumb/1359
+real photo: vision check out of free quota
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Coimbatore district power cut tomorrow ('
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261118-1324","first":"RN-469"}
+posting job started at once
+real photo skipped (photo uploaded 2026-09-04 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2026/09/04/53c0e3c8181ca4612a675ab
+real photo skipped (photo uploaded 2025-05-04 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2025/05/04/baa3c4bb9c7d9c63868779a
+real photo skipped (photo uploaded 2024-06-01 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2024/06/01/30bb4f4955010c9438f31b5
+real photo not downloaded: cannot identify image file <_io.BytesIO object at 0x7f2c2c153100>
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Coimbatore power cut tomorrow (19 Nov 20'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261118-1324","first":"RN-470"}
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://tamil.samayam.com/tamil-nadu/news/power-outage-in-tamilnadu-on-november-19-2026-due-to-maintenance-work/articleshow/135944377.cms#district-section
+manual link added: https://tamil.abplive.com/news/coimbatore/coimbatore-power-cut-19-11-2026-know-timings-areas-affected-by-power-shutdown-280003#district-section
+candidate filter: collected=2
+to write: 2 Coimbatore district candidates (max 2 stories)
+round: top 2 of 2 candidates
+candidates waiting: 2 Coimbatore; time left 39 min
+try (N) manual=True: https://tamil.abplive.com/news/coimbatore/coimbatore-power-c
+try (N) manual=True: https://tamil.samayam.com/tamil-nadu/news/power-outage-in-ta
+auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 2})
+posting job started at once
+auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 4})
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 2}, time left 33 min
+filed: 2 Coimbatore district stories (target 2), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":2,"updated":0} 
+stories: 2
