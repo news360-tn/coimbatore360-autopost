@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-17 | `7770311` | pictures: NVIDIA FLUX no longer accepts 'seed' (422) - dropped so the free NVIDIA pictures work again |
-| 2026-11-17 | `66c3aab` | goldrate posted |
-| 2026-11-17 | `435d0cd` | facebook RN-441 |
-| 2026-11-17 | `c696319` | powercut: notices written |
-| 2026-11-17 | `22e2cac` | facebook RN-442 |
-| 2026-11-17 | `47e40bf` | rasipalan posted |
-| 2026-11-17 | `c14e8e1` | powercut: notices written |
-| 2026-11-17 | `13ca46f` | pick: written and posted |
-| 2026-11-17 | `99ab2ac` | facebook RN-440 |
-| 2026-11-17 | `af7f7cc` | facebook RN-436 |
-| 2026-11-17 | `70b2324` | facebook RN-438 |
-| 2026-11-17 | `d96da08` | facebook RN-431 |
-| 2026-11-17 | `f0c0db4` | pick: picked news saved |
-| 2026-11-17 | `fc20e78` | pick: picked news saved |
-| 2026-11-17 | `47fcf54` | pick: list sent |
-| 2026-11-17 | `6603534` | pick: written and posted |
-| 2026-11-17 | `1b68cbe` | facebook RN-433 |
-| 2026-11-17 | `71f9d26` | facebook RN-434 |
-| 2026-11-17 | `3c87816` | facebook RN-430 |
-| 2026-11-17 | `47fefa4` | facebook RN-429 |
-| 2026-11-17 | `aa1e291` | facebook RN-388 |
-| 2026-11-17 | `ff269d5` | facebook RN-435 |
-| 2026-11-17 | `f9db210` | facebook RN-432 |
-| 2026-11-17 | `934f543` | pick: picked news saved |
-| 2026-11-17 | `591b282` | pick: picked news saved |
-| 2026-11-17 | `b1dc445` | pick: list sent |
-| 2026-11-16 | `4a0fc08` | pick: written and posted |
-| 2026-11-16 | `ab37ce1` | facebook RN-425 |
-| 2026-11-16 | `c2a750c` | facebook RN-428 |
-| 2026-11-16 | `2236ced` | facebook RN-423 |
+| 2026-11-18 | `1f1bc05` | schedule: rasipalan 6:40 AM, gold 9:40 AM (MJDTA 9:30), afternoon gold change post after MJDTA's 3:30 PM rate, watchdog in the posting job starts them (and an overdue news round) when GitHub skips the schedule |
+| 2026-11-18 | `f1cc996` | facebook RN-477 |
+| 2026-11-18 | `4beb610` | pick: written and posted |
+| 2026-11-18 | `e9662ef` | facebook RN-476 |
+| 2026-11-18 | `fc7e07d` | facebook RN-474 |
+| 2026-11-18 | `6e5b18b` | facebook RN-473 |
+| 2026-11-18 | `8a65c1c` | facebook RN-471 |
+| 2026-11-18 | `b52f9a3` | facebook RN-472 |
+| 2026-11-18 | `a12279d` | facebook RN-479 |
+| 2026-11-18 | `90c0721` | facebook RN-478 |
+| 2026-11-18 | `0747a7e` | pick: picked news saved |
+| 2026-11-18 | `f60f78e` | pick: picked news saved |
+| 2026-11-18 | `5ec66fb` | pick: list sent |
+| 2026-11-18 | `2d269d7` | goldrate posted |
+| 2026-11-18 | `5eeb706` | rasipalan posted |
+| 2026-11-18 | `648cd2d` | powercut: notices written |
+| 2026-11-18 | `a80c724` | facebook RN-469 |
+| 2026-11-18 | `cc2572d` | facebook RN-470 |
+| 2026-11-18 | `31df180` | powercut: notices written |
+| 2026-11-18 | `44eef0f` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-18 | `4bec34b` | pick: written and posted |
+| 2026-11-18 | `da21292` | facebook RN-467 |
+| 2026-11-18 | `d41e87c` | facebook RN-464 |
+| 2026-11-18 | `b64b65b` | facebook RN-468 |
+| 2026-11-18 | `a876818` | facebook RN-466 |
+| 2026-11-18 | `528f584` | facebook RN-465 |
+| 2026-11-18 | `83ba813` | pick: picked news saved |
+| 2026-11-18 | `4e548ad` | pick: picked news saved |
+| 2026-11-18 | `87b7ffb` | pick: list sent |
+| 2026-11-18 | `ae6fdbf` | pick: written and posted |
 <!-- recent-changes:end -->
