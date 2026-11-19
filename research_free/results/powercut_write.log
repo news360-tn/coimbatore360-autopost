@@ -4614,3 +4614,111 @@ filed: 2 Coimbatore district stories (target 3), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":3,"updated":0} 
 stories: 2
+writing [N]: கோவை மாவட்டத்தில் நாளை (20-11-2026) மின்தடை: பல்வேறு பகுதிகள
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+writing [N]: நாளைய மின்தடை (19ம் தேதி)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok groq/qwen/qwen3.8-27b (5s)
+attempt 1 groq/qwen/qwen3.8-27b: 2 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  hl1 (the first headline on screen) must name the place 'கல்லிமடை', e.g. 'கல்லிமடை: ...' or 'கல்லிமடை-இல் ...' - viewers share news of their own area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (20-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 17 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'கல்லிமடை' and the news itself, e.g. 'கல்லிமடை-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (20-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
+  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (20-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+  known issue meta_article: caption talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 7 problems
+  The article never states the date as 19 November or as a Thursday; it only says 'நாளை (19ம் தேதி)' with no month or weekday, so 'நவம்பர் 19ஆம் தேதி வியாழக்கிழமை' (in reel_script and caption, and '19 நவம்பர் (வியாழக்கிழமை)' in slide 1) is an invented detail.
+  The article does not give a reason for the outage; 'பராமரிப்புப் பணிக்காக' (for maintenance work) in slide 1 is an invented cause.
+  reel_script says the power cut covers 'மூன்று துணை மின் நிலையங்கள்' in Pollachi and Negamam, but the article gives the regions only as the three substations; attributing the locations as 'பொள்ளாச்சி, நெகமம் பகுதிகள்' is acceptable only because the information sources are those two engineers, so this is borderline but the headline and slides present Pollachi/Negamam as the area covered, which the article does not state.
+  reel_script lists 'நல்லூர்' under தாளக்கரை முத்தூர், which is correct, but caption omits none of the reel's claims; however caption adds 'மொபைல் சார்ஜ், குடிநீரை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (charge mobile phones, prepare drinking water in advance), an advisory not present in the article – an invented detail.
+  slides_spec slide 3 title 'மார்ச்சநாயக்கன்பாள' is truncated/ungrammatical as a title, not a proper place name as written in the article.
+  slides_spec slide 2 lists 'சக்தி கார்டன்' and 'பெருமாள் நகர்', correct, but the caption's coverage line claims the areas are 'உள்ள பகுதிகளில் மின் தடை செய்யப்படுகிறது' while the reel script's 'காலை 10 மணி முதல் மாலை 3 மணி வரை மின்விநியோகம் இருக்காது' is consistent; no issue there.
+  caption's first paragraph says the power cut is in the areas under the three substations, but the caption's footer line includes 'Pollachi Negamam power cut tomorrow 10 am to 3 pm' which is a summary not drawn from the article's exact wording; minor, but the words 'tomorrow' and 'power cut' are not in the Tamil article.
+claude rewrite 2 anthropic/claude-haiku-5-5: 7 problems
+  fact-check: The article never states the date as 19 November or as a Thursday; it only says 'நாளை (19ம் தேதி)' with no month or weekday, so 'நவம்பர் 19ஆம் தேதி வியாழக்கிழமை' (in reel_script and caption, and '19 நவம்பர் (வியாழக்கிழமை)' in slide 1) is an invented detail.
+  fact-check: The article does not give a reason for the outage; 'பராமரிப்புப் பணிக்காக' (for maintenance work) in slide 1 is an invented cause.
+  fact-check: reel_script says the power cut covers 'மூன்று துணை மின் நிலையங்கள்' in Pollachi and Negamam, but the article gives the regions only as the three substations; attributing the locations as 'பொள்ளாச்சி, நெகமம் பகுதிகள்' is acceptable only because the information sources are those two engineers, so this is borderline but the headline and slides present Pollachi/Negamam as the area covered, which the article does not state.
+  fact-check: reel_script lists 'நல்லூர்' under தாளக்கரை முத்தூர், which is correct, but caption omits none of the reel's claims; however caption adds 'மொபைல் சார்ஜ், குடிநீரை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (charge mobile phones, prepare drinking water in advance), an advisory not present in the article – an invented detail.
+  fact-check: slides_spec slide 3 title 'மார்ச்சநாயக்கன்பாள' is truncated/ungrammatical as a title, not a proper place name as written in the article.
+  fact-check: slides_spec slide 2 lists 'சக்தி கார்டன்' and 'பெருமாள் நகர்', correct, but the caption's coverage line claims the areas are 'உள்ள பகுதிகளில் மின் தடை செய்யப்படுகிறது' while the reel script's 'காலை 10 மணி முதல் மாலை 3 மணி வரை மின்விநியோகம் இருக்காது' is consistent; no issue there.
+  fact-check: caption's first paragraph says the power cut is in the areas under the three substations, but the caption's footer line includes 'Pollachi Negamam power cut tomorrow 10 am to 3 pm' which is a summary not drawn from the article's exact wording; minor, but the words 'tomorrow' and 'power cut' are not in the Tamil article.
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 16 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/tomorrow-resistor-19th/4380176
+manual link added: https://tamil.abplive.com/news/coimbatore/coimbatore-power-cut-20-11-2026-know-timings-areas-affected-by-power-shutdown-280103/amp#district-section
+candidate filter: collected=2
+to write: 2 Coimbatore district candidates (max 2 stories)
+round: top 2 of 2 candidates
+candidates waiting: 2 Coimbatore; time left 39 min
+try (N) manual=True: https://tamil.abplive.com/news/coimbatore/coimbatore-power-c
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+NOT filed (N) கோவை மாவட்டத்தில் நாளை (20-11-2026) மின்தடை: பல்வே: duplicate after write
+NOT filed (N) நாளைய மின்தடை (19ம் தேதி): duplicate after write
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 0}, time left 39 min
+filed: 0 Coimbatore district stories (target 2), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":1,"updated":1} 
+stories: 0
