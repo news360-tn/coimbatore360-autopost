@@ -81,6 +81,25 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-19 | `c9cf170` | 19 Nov owner changes: reel length / wording, source first comment, 360 gold reel, posting windows, rasipalan before 9 AM |
+| 2026-11-19 | `8e034bd` | powercut: notices written |
+| 2026-11-19 | `65457a9` | powercut: notices written |
+| 2026-11-19 | `dda39ee` | pick: written and posted |
+| 2026-11-19 | `46e9c0b` | facebook RN-510 |
+| 2026-11-19 | `48faa84` | facebook RN-512 |
+| 2026-11-19 | `6ab3d18` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-19 | `e809d06` | pick: picked news saved |
+| 2026-11-19 | `9566ed9` | pick: picked news saved |
+| 2026-11-19 | `daccaec` | pick: list sent |
+| 2026-11-19 | `f4f836a` | pick: written and posted |
+| 2026-11-19 | `8ca39e4` | facebook RN-508 |
+| 2026-11-19 | `dfdb551` | facebook RN-509 |
+| 2026-11-19 | `5d94246` | facebook RN-506 |
+| 2026-11-19 | `b9b2e90` | facebook RN-507 |
+| 2026-11-19 | `08c78e5` | facebook RN-505 |
+| 2026-11-19 | `d4b6766` | pick: picked news saved |
+| 2026-11-19 | `93af2be` | pick: picked news saved |
+| 2026-11-19 | `ff62498` | pick: list sent |
 | 2026-11-19 | `3ce7091` | rasipalan + goldrate: publish again when Instagram says 'media not ready' (9007, nothing posted - Erode 19 Nov); Cloudinary upload tried 3 times with its reason in the log (Rasipuram rasipalan posted 18:43 on 18 Nov after 3 refusals) |
 | 2026-11-19 | `6985646` | goldrate posted |
 | 2026-11-19 | `62d90be` | tests: install pytest and run the suite with pytest (gold reel tests were red since 19 Nov); insights: retry the save when another job saved at the same moment |
@@ -92,23 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-19 | `084ca8e` | pick: picked news saved |
 | 2026-11-19 | `a51392c` | pick: list sent |
 | 2026-11-19 | `9acb0c5` | Gold reel: modern theme - full-screen scenes (hook, 22K, 24K, silver, follow) changing with each spoken line |
-| 2026-11-19 | `8d7e251` | powercut: notices written |
-| 2026-11-19 | `62de21f` | facebook RN-501 |
-| 2026-11-19 | `d60af79` | Gold & silver rate also as a reel, posted after the carousel (never twice; a reel problem never touches the carousel) |
-| 2026-11-19 | `91b1ea8` | powercut: notices written |
-| 2026-11-19 | `5ef8fac` | facebook RN-500 |
-| 2026-11-19 | `a381132` | pick: written and posted |
-| 2026-11-19 | `904838d` | facebook RN-499 |
-| 2026-11-19 | `377b3fc` | facebook RN-496 |
-| 2026-11-19 | `27cfe38` | facebook RN-497 |
-| 2026-11-19 | `e249239` | facebook RN-498 |
-| 2026-11-19 | `8ed7e29` | pick: picked news saved |
-| 2026-11-19 | `0943119` | pick: picked news saved |
-| 2026-11-19 | `b205b7a` | pick: list sent |
-| 2026-11-19 | `f52c49b` | goldrate posted |
-| 2026-11-19 | `4658b20` | pick: written and posted |
-| 2026-11-19 | `7638471` | facebook RN-492 |
-| 2026-11-19 | `456dbbb` | facebook RN-495 |
-| 2026-11-19 | `8397241` | facebook RN-493 |
-| 2026-11-19 | `44b9d1d` | pick: picked news saved |
 <!-- recent-changes:end -->
