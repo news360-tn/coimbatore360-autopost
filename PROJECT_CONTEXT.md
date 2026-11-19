@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-18 | `1f1bc05` | schedule: rasipalan 6:40 AM, gold 9:40 AM (MJDTA 9:30), afternoon gold change post after MJDTA's 3:30 PM rate, watchdog in the posting job starts them (and an overdue news round) when GitHub skips the schedule |
-| 2026-11-18 | `f1cc996` | facebook RN-477 |
-| 2026-11-18 | `4beb610` | pick: written and posted |
-| 2026-11-18 | `e9662ef` | facebook RN-476 |
-| 2026-11-18 | `fc7e07d` | facebook RN-474 |
-| 2026-11-18 | `6e5b18b` | facebook RN-473 |
-| 2026-11-18 | `8a65c1c` | facebook RN-471 |
-| 2026-11-18 | `b52f9a3` | facebook RN-472 |
-| 2026-11-18 | `a12279d` | facebook RN-479 |
-| 2026-11-18 | `90c0721` | facebook RN-478 |
-| 2026-11-18 | `0747a7e` | pick: picked news saved |
-| 2026-11-18 | `f60f78e` | pick: picked news saved |
-| 2026-11-18 | `5ec66fb` | pick: list sent |
-| 2026-11-18 | `2d269d7` | goldrate posted |
-| 2026-11-18 | `5eeb706` | rasipalan posted |
-| 2026-11-18 | `648cd2d` | powercut: notices written |
-| 2026-11-18 | `a80c724` | facebook RN-469 |
-| 2026-11-18 | `cc2572d` | facebook RN-470 |
-| 2026-11-18 | `31df180` | powercut: notices written |
-| 2026-11-18 | `44eef0f` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-18 | `4bec34b` | pick: written and posted |
-| 2026-11-18 | `da21292` | facebook RN-467 |
-| 2026-11-18 | `d41e87c` | facebook RN-464 |
-| 2026-11-18 | `b64b65b` | facebook RN-468 |
-| 2026-11-18 | `a876818` | facebook RN-466 |
-| 2026-11-18 | `528f584` | facebook RN-465 |
-| 2026-11-18 | `83ba813` | pick: picked news saved |
-| 2026-11-18 | `4e548ad` | pick: picked news saved |
-| 2026-11-18 | `87b7ffb` | pick: list sent |
-| 2026-11-18 | `ae6fdbf` | pick: written and posted |
+| 2026-11-19 | `d60af79` | Gold & silver rate also as a reel, posted after the carousel (never twice; a reel problem never touches the carousel) |
+| 2026-11-19 | `91b1ea8` | powercut: notices written |
+| 2026-11-19 | `5ef8fac` | facebook RN-500 |
+| 2026-11-19 | `a381132` | pick: written and posted |
+| 2026-11-19 | `904838d` | facebook RN-499 |
+| 2026-11-19 | `377b3fc` | facebook RN-496 |
+| 2026-11-19 | `27cfe38` | facebook RN-497 |
+| 2026-11-19 | `e249239` | facebook RN-498 |
+| 2026-11-19 | `8ed7e29` | pick: picked news saved |
+| 2026-11-19 | `0943119` | pick: picked news saved |
+| 2026-11-19 | `b205b7a` | pick: list sent |
+| 2026-11-19 | `f52c49b` | goldrate posted |
+| 2026-11-19 | `4658b20` | pick: written and posted |
+| 2026-11-19 | `7638471` | facebook RN-492 |
+| 2026-11-19 | `456dbbb` | facebook RN-495 |
+| 2026-11-19 | `8397241` | facebook RN-493 |
+| 2026-11-19 | `44b9d1d` | pick: picked news saved |
+| 2026-11-19 | `0f3da3f` | facebook RN-489 |
+| 2026-11-19 | `36faffc` | pick: picked news saved |
+| 2026-11-19 | `f31a8c9` | pick: list sent |
+| 2026-11-19 | `3482672` | pick: written and posted |
+| 2026-11-19 | `22b0a01` | facebook RN-486 |
+| 2026-11-19 | `9936554` | rasipalan posted |
+| 2026-11-19 | `6b0f2af` | facebook RN-490 |
+| 2026-11-19 | `28bcf5a` | pick: picked news saved |
+| 2026-11-19 | `32a16dc` | pick: picked news saved |
+| 2026-11-19 | `42bfd5d` | pick: list sent |
+| 2026-11-18 | `376f616` | pick: written and posted |
+| 2026-11-18 | `df3090d` | pick: picked news saved |
+| 2026-11-18 | `1771b1b` | pick: picked news saved |
 <!-- recent-changes:end -->
