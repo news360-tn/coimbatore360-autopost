@@ -81,6 +81,13 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-19 | `eafa359` | Gold reel: new bright poster design and faster pace (short lines, quicker voice, fast cuts) |
+| 2026-11-19 | `55b69ae` | pick: written and posted |
+| 2026-11-19 | `d2feeca` | facebook RN-504 |
+| 2026-11-19 | `63ad4e6` | facebook RN-503 |
+| 2026-11-19 | `4add506` | pick: picked news saved |
+| 2026-11-19 | `084ca8e` | pick: picked news saved |
+| 2026-11-19 | `a51392c` | pick: list sent |
 | 2026-11-19 | `9acb0c5` | Gold reel: modern theme - full-screen scenes (hook, 22K, 24K, silver, follow) changing with each spoken line |
 | 2026-11-19 | `8d7e251` | powercut: notices written |
 | 2026-11-19 | `62de21f` | facebook RN-501 |
@@ -104,11 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-19 | `0f3da3f` | facebook RN-489 |
 | 2026-11-19 | `36faffc` | pick: picked news saved |
 | 2026-11-19 | `f31a8c9` | pick: list sent |
-| 2026-11-19 | `3482672` | pick: written and posted |
-| 2026-11-19 | `22b0a01` | facebook RN-486 |
-| 2026-11-19 | `9936554` | rasipalan posted |
-| 2026-11-19 | `6b0f2af` | facebook RN-490 |
-| 2026-11-19 | `28bcf5a` | pick: picked news saved |
-| 2026-11-19 | `32a16dc` | pick: picked news saved |
-| 2026-11-19 | `42bfd5d` | pick: list sent |
 <!-- recent-changes:end -->
