@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-19 | `3ce7091` | rasipalan + goldrate: publish again when Instagram says 'media not ready' (9007, nothing posted - Erode 19 Nov); Cloudinary upload tried 3 times with its reason in the log (Rasipuram rasipalan posted 18:43 on 18 Nov after 3 refusals) |
+| 2026-11-19 | `6985646` | goldrate posted |
 | 2026-11-19 | `62d90be` | tests: install pytest and run the suite with pytest (gold reel tests were red since 19 Nov); insights: retry the save when another job saved at the same moment |
 | 2026-11-19 | `eafa359` | Gold reel: new bright poster design and faster pace (short lines, quicker voice, fast cuts) |
 | 2026-11-19 | `55b69ae` | pick: written and posted |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-19 | `456dbbb` | facebook RN-495 |
 | 2026-11-19 | `8397241` | facebook RN-493 |
 | 2026-11-19 | `44b9d1d` | pick: picked news saved |
-| 2026-11-19 | `0f3da3f` | facebook RN-489 |
-| 2026-11-19 | `36faffc` | pick: picked news saved |
 <!-- recent-changes:end -->
