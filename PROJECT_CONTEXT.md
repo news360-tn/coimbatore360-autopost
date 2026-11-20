@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `1be256b` | Facebook first comment = the same source comment as Instagram (link into the text if Facebook refuses the comment) |
 | 2026-11-20 | `f07df4d` | Facebook: up to 18 news a day per page (45 min apart), article link in the first comment, 3 hashtags |
 | 2026-11-20 | `d927a96` | Daily rasipalan as a reel in the 360 gold-reel pattern (music only); carousel only if the reel fails |
 | 2026-11-20 | `8b86302` | Reels without a picture: a designed background by news type, never the page logo |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `a6b4d7f` | pick: picked news saved |
 | 2026-11-20 | `7c46b83` | pick: picked news saved |
 | 2026-11-20 | `a210842` | pick: list sent |
-| 2026-11-20 | `bddd33a` | goldrate posted |
 <!-- recent-changes:end -->
