@@ -81,6 +81,19 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `74f3159` | Posting loop: start the next posting run with 3 tries |
+| 2026-11-20 | `30bfff2` | pick: written and posted |
+| 2026-11-20 | `251ec4d` | facebook RN-535 |
+| 2026-11-20 | `40a845c` | facebook RN-536 |
+| 2026-11-20 | `6e73cb2` | facebook RN-534 |
+| 2026-11-20 | `5770518` | pick: picked news saved |
+| 2026-11-20 | `d33551b` | pick: picked news saved |
+| 2026-11-20 | `edff3e6` | pick: list sent |
+| 2026-11-20 | `1d21e92` | facebook RN-532 |
+| 2026-11-20 | `6cac0f4` | facebook RN-531 |
+| 2026-11-20 | `ed4b40e` | facebook RN-533 |
+| 2026-11-20 | `cae87b7` | facebook RN-529 |
+| 2026-11-20 | `83b6f86` | facebook RN-530 |
 | 2026-11-20 | `d2df381` | Cloudinary clean-up every 6 hours; red run + e-mail when the login is refused, usage unreadable or 80% used |
 | 2026-11-20 | `33b2c90` | powercut: notices written |
 | 2026-11-20 | `cd2476e` | pick: written and posted |
@@ -98,17 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `9699672` | pick: picked news saved |
 | 2026-11-20 | `2c49356` | pick: picked news saved |
 | 2026-11-20 | `ddf27f8` | pick: list sent |
-| 2026-11-20 | `ec49cab` | pick: written and posted |
-| 2026-11-20 | `2060fe9` | facebook RN-524 |
-| 2026-11-20 | `70a7608` | facebook RN-523 |
-| 2026-11-20 | `57fa6e8` | facebook RN-521 |
-| 2026-11-20 | `196356f` | facebook RN-522 |
-| 2026-11-20 | `2758e10` | facebook RN-520 |
-| 2026-11-20 | `c802566` | pick: picked news saved |
-| 2026-11-20 | `0324d6d` | pick: picked news saved |
-| 2026-11-20 | `a72c1b0` | pick: list sent |
-| 2026-11-20 | `94ed96f` | Reel length back to the full news (at most 90 s, 70-160 words); captions always fit Instagram's 2,200 |
-| 2026-11-20 | `1e1bff8` | rasipalan posted |
-| 2026-11-20 | `0f3f030` | facebook RN-517 |
-| 2026-11-20 | `0a2d3b9` | facebook RN-516 |
 <!-- recent-changes:end -->
