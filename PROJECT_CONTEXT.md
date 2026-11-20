@@ -81,6 +81,12 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `5522625` | News reels: the design team's design (Tamil) with the 360 clock branding on every page |
+| 2026-11-20 | `507ddf2` | facebook RN-537 |
+| 2026-11-20 | `a6b4d7f` | pick: picked news saved |
+| 2026-11-20 | `7c46b83` | pick: picked news saved |
+| 2026-11-20 | `a210842` | pick: list sent |
+| 2026-11-20 | `bddd33a` | goldrate posted |
 | 2026-11-20 | `74f3159` | Posting loop: start the next posting run with 3 tries |
 | 2026-11-20 | `30bfff2` | pick: written and posted |
 | 2026-11-20 | `251ec4d` | facebook RN-535 |
@@ -105,10 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `84674b8` | News reels: 360 clock branding layer (logo progress ring, opening ring, clock-hand picture change, end-card ring) |
 | 2026-11-20 | `f3f3582` | goldrate posted |
 | 2026-11-20 | `0e6e695` | pick: written and posted |
-| 2026-11-20 | `10cab1b` | facebook RN-527 |
-| 2026-11-20 | `4ef1db6` | facebook RN-526 |
-| 2026-11-20 | `5f2895c` | facebook RN-528 |
-| 2026-11-20 | `9699672` | pick: picked news saved |
-| 2026-11-20 | `2c49356` | pick: picked news saved |
-| 2026-11-20 | `ddf27f8` | pick: list sent |
 <!-- recent-changes:end -->
