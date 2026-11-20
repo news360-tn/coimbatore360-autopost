@@ -81,6 +81,13 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `f174849` | Every news reel goes to the story again (stories_urgent_only false) |
+| 2026-11-20 | `ef792cc` | powercut: notices written |
+| 2026-11-20 | `d701281` | powercut: notices written |
+| 2026-11-20 | `108c050` | pick: written and posted |
+| 2026-11-20 | `90a0926` | pick: picked news saved |
+| 2026-11-20 | `ace7c5d` | pick: picked news saved |
+| 2026-11-20 | `c185d3e` | pick: list sent |
 | 2026-11-20 | `0fe47c4` | Promotion ads (owner-approved only, bottom of the reel during the news) and twice-a-day YouTube details e-mail |
 | 2026-11-20 | `70888ea` | pick: written and posted |
 | 2026-11-20 | `24a1c6d` | facebook RN-541 |
@@ -104,11 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `251ec4d` | facebook RN-535 |
 | 2026-11-20 | `40a845c` | facebook RN-536 |
 | 2026-11-20 | `6e73cb2` | facebook RN-534 |
-| 2026-11-20 | `5770518` | pick: picked news saved |
-| 2026-11-20 | `d33551b` | pick: picked news saved |
-| 2026-11-20 | `edff3e6` | pick: list sent |
-| 2026-11-20 | `1d21e92` | facebook RN-532 |
-| 2026-11-20 | `6cac0f4` | facebook RN-531 |
-| 2026-11-20 | `ed4b40e` | facebook RN-533 |
-| 2026-11-20 | `cae87b7` | facebook RN-529 |
 <!-- recent-changes:end -->
