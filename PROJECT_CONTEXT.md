@@ -81,6 +81,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `0fe47c4` | Promotion ads (owner-approved only, bottom of the reel during the news) and twice-a-day YouTube details e-mail |
+| 2026-11-20 | `70888ea` | pick: written and posted |
+| 2026-11-20 | `24a1c6d` | facebook RN-541 |
+| 2026-11-20 | `16eec4b` | facebook RN-539 |
+| 2026-11-20 | `1f8f2ae` | facebook RN-540 |
 | 2026-11-20 | `f479f99` | Fix: reels again made with reel4 (config reel_design back to v4) |
 | 2026-11-20 | `fb0f787` | pick: picked news saved |
 | 2026-11-20 | `e74258e` | pick: picked news saved |
@@ -106,9 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `6cac0f4` | facebook RN-531 |
 | 2026-11-20 | `ed4b40e` | facebook RN-533 |
 | 2026-11-20 | `cae87b7` | facebook RN-529 |
-| 2026-11-20 | `83b6f86` | facebook RN-530 |
-| 2026-11-20 | `d2df381` | Cloudinary clean-up every 6 hours; red run + e-mail when the login is refused, usage unreadable or 80% used |
-| 2026-11-20 | `33b2c90` | powercut: notices written |
-| 2026-11-20 | `cd2476e` | pick: written and posted |
-| 2026-11-20 | `1935420` | pick: picked news saved |
 <!-- recent-changes:end -->
