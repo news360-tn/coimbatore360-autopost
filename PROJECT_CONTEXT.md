@@ -81,6 +81,20 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `94ed96f` | Reel length back to the full news (at most 90 s, 70-160 words); captions always fit Instagram's 2,200 |
+| 2026-11-20 | `1e1bff8` | rasipalan posted |
+| 2026-11-20 | `0f3f030` | facebook RN-517 |
+| 2026-11-20 | `0a2d3b9` | facebook RN-516 |
+| 2026-11-20 | `9db8b8d` | facebook RN-519 |
+| 2026-11-20 | `bca0da2` | facebook RN-518 |
+| 2026-11-20 | `f4ab92b` | facebook RN-513 |
+| 2026-11-20 | `9c9a22b` | facebook RN-515 |
+| 2026-11-20 | `0e330e5` | facebook RN-514 |
+| 2026-11-19 | `789338f` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-19 | `3ebe57f` | pick: written and posted |
+| 2026-11-19 | `e426596` | pick: picked news saved |
+| 2026-11-19 | `430a37a` | pick: picked news saved |
+| 2026-11-19 | `16733d0` | pick: list sent |
 | 2026-11-19 | `7312326` | Posting time first: news posts 06:00-12:00 and 15:00-21:00 IST; collection fitted to it (04:00, 08:30, 13:00, 16:30, 18:30) |
 | 2026-11-19 | `c9cf170` | 19 Nov owner changes: reel length / wording, source first comment, 360 gold reel, posting windows, rasipalan before 9 AM |
 | 2026-11-19 | `8e034bd` | powercut: notices written |
@@ -97,18 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-19 | `dfdb551` | facebook RN-509 |
 | 2026-11-19 | `5d94246` | facebook RN-506 |
 | 2026-11-19 | `b9b2e90` | facebook RN-507 |
-| 2026-11-19 | `08c78e5` | facebook RN-505 |
-| 2026-11-19 | `d4b6766` | pick: picked news saved |
-| 2026-11-19 | `93af2be` | pick: picked news saved |
-| 2026-11-19 | `ff62498` | pick: list sent |
-| 2026-11-19 | `3ce7091` | rasipalan + goldrate: publish again when Instagram says 'media not ready' (9007, nothing posted - Erode 19 Nov); Cloudinary upload tried 3 times with its reason in the log (Rasipuram rasipalan posted 18:43 on 18 Nov after 3 refusals) |
-| 2026-11-19 | `6985646` | goldrate posted |
-| 2026-11-19 | `62d90be` | tests: install pytest and run the suite with pytest (gold reel tests were red since 19 Nov); insights: retry the save when another job saved at the same moment |
-| 2026-11-19 | `eafa359` | Gold reel: new bright poster design and faster pace (short lines, quicker voice, fast cuts) |
-| 2026-11-19 | `55b69ae` | pick: written and posted |
-| 2026-11-19 | `d2feeca` | facebook RN-504 |
-| 2026-11-19 | `63ad4e6` | facebook RN-503 |
-| 2026-11-19 | `4add506` | pick: picked news saved |
-| 2026-11-19 | `084ca8e` | pick: picked news saved |
-| 2026-11-19 | `a51392c` | pick: list sent |
 <!-- recent-changes:end -->
