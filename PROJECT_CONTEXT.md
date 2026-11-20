@@ -81,6 +81,24 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `84674b8` | News reels: 360 clock branding layer (logo progress ring, opening ring, clock-hand picture change, end-card ring) |
+| 2026-11-20 | `f3f3582` | goldrate posted |
+| 2026-11-20 | `0e6e695` | pick: written and posted |
+| 2026-11-20 | `10cab1b` | facebook RN-527 |
+| 2026-11-20 | `4ef1db6` | facebook RN-526 |
+| 2026-11-20 | `5f2895c` | facebook RN-528 |
+| 2026-11-20 | `9699672` | pick: picked news saved |
+| 2026-11-20 | `2c49356` | pick: picked news saved |
+| 2026-11-20 | `ddf27f8` | pick: list sent |
+| 2026-11-20 | `ec49cab` | pick: written and posted |
+| 2026-11-20 | `2060fe9` | facebook RN-524 |
+| 2026-11-20 | `70a7608` | facebook RN-523 |
+| 2026-11-20 | `57fa6e8` | facebook RN-521 |
+| 2026-11-20 | `196356f` | facebook RN-522 |
+| 2026-11-20 | `2758e10` | facebook RN-520 |
+| 2026-11-20 | `c802566` | pick: picked news saved |
+| 2026-11-20 | `0324d6d` | pick: picked news saved |
+| 2026-11-20 | `a72c1b0` | pick: list sent |
 | 2026-11-20 | `94ed96f` | Reel length back to the full news (at most 90 s, 70-160 words); captions always fit Instagram's 2,200 |
 | 2026-11-20 | `1e1bff8` | rasipalan posted |
 | 2026-11-20 | `0f3f030` | facebook RN-517 |
@@ -93,22 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-19 | `789338f` | comments: normal comments recorded (not e-mailed) |
 | 2026-11-19 | `3ebe57f` | pick: written and posted |
 | 2026-11-19 | `e426596` | pick: picked news saved |
-| 2026-11-19 | `430a37a` | pick: picked news saved |
-| 2026-11-19 | `16733d0` | pick: list sent |
-| 2026-11-19 | `7312326` | Posting time first: news posts 06:00-12:00 and 15:00-21:00 IST; collection fitted to it (04:00, 08:30, 13:00, 16:30, 18:30) |
-| 2026-11-19 | `c9cf170` | 19 Nov owner changes: reel length / wording, source first comment, 360 gold reel, posting windows, rasipalan before 9 AM |
-| 2026-11-19 | `8e034bd` | powercut: notices written |
-| 2026-11-19 | `65457a9` | powercut: notices written |
-| 2026-11-19 | `dda39ee` | pick: written and posted |
-| 2026-11-19 | `46e9c0b` | facebook RN-510 |
-| 2026-11-19 | `48faa84` | facebook RN-512 |
-| 2026-11-19 | `6ab3d18` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-19 | `e809d06` | pick: picked news saved |
-| 2026-11-19 | `9566ed9` | pick: picked news saved |
-| 2026-11-19 | `daccaec` | pick: list sent |
-| 2026-11-19 | `f4f836a` | pick: written and posted |
-| 2026-11-19 | `8ca39e4` | facebook RN-508 |
-| 2026-11-19 | `dfdb551` | facebook RN-509 |
-| 2026-11-19 | `5d94246` | facebook RN-506 |
-| 2026-11-19 | `b9b2e90` | facebook RN-507 |
 <!-- recent-changes:end -->
