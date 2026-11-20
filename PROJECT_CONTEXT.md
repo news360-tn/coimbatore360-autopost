@@ -81,6 +81,14 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-20 | `d2df381` | Cloudinary clean-up every 6 hours; red run + e-mail when the login is refused, usage unreadable or 80% used |
+| 2026-11-20 | `33b2c90` | powercut: notices written |
+| 2026-11-20 | `cd2476e` | pick: written and posted |
+| 2026-11-20 | `1935420` | pick: picked news saved |
+| 2026-11-20 | `da0a7ab` | pick: picked news saved |
+| 2026-11-20 | `51ad22d` | pick: list sent |
+| 2026-11-20 | `175adcd` | powercut: notices written |
+| 2026-11-20 | `ac0e56f` | comments: normal comments recorded (not e-mailed) |
 | 2026-11-20 | `84674b8` | News reels: 360 clock branding layer (logo progress ring, opening ring, clock-hand picture change, end-card ring) |
 | 2026-11-20 | `f3f3582` | goldrate posted |
 | 2026-11-20 | `0e6e695` | pick: written and posted |
@@ -103,12 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `1e1bff8` | rasipalan posted |
 | 2026-11-20 | `0f3f030` | facebook RN-517 |
 | 2026-11-20 | `0a2d3b9` | facebook RN-516 |
-| 2026-11-20 | `9db8b8d` | facebook RN-519 |
-| 2026-11-20 | `bca0da2` | facebook RN-518 |
-| 2026-11-20 | `f4ab92b` | facebook RN-513 |
-| 2026-11-20 | `9c9a22b` | facebook RN-515 |
-| 2026-11-20 | `0e330e5` | facebook RN-514 |
-| 2026-11-19 | `789338f` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-19 | `3ebe57f` | pick: written and posted |
-| 2026-11-19 | `e426596` | pick: picked news saved |
 <!-- recent-changes:end -->
