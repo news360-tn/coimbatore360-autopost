@@ -81,6 +81,29 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-21 | `aef5f6e` | Stop posting bursts: 10 min between news posts; an Instagram block pauses the page 6 h (news waits) instead of retrying every run |
+| 2026-11-21 | `8f7ef1a` | rasipalan posted |
+| 2026-11-21 | `2818bd9` | facebook RN-547 |
+| 2026-11-21 | `7e59beb` | facebook RN-548 |
+| 2026-11-21 | `8eaf1ed` | facebook RN-542 |
+| 2026-11-21 | `d545ced` | facebook RN-546 |
+| 2026-11-21 | `3f90449` | facebook RN-559 |
+| 2026-11-21 | `0161e60` | stories shared |
+| 2026-11-21 | `5ee47a3` | facebook RN-543 |
+| 2026-11-21 | `930b5c6` | facebook RN-551 |
+| 2026-11-20 | `b5fc7c7` | pick: written and posted |
+| 2026-11-20 | `00ac8e5` | pick: picked news saved |
+| 2026-11-20 | `3f3c5c3` | pick: picked news saved |
+| 2026-11-20 | `caf2a14` | pick: list sent |
+| 2026-11-20 | `afacdf6` | powercut: notices written |
+| 2026-11-20 | `e722205` | pick: written and posted |
+| 2026-11-20 | `80221fa` | pick: picked news saved |
+| 2026-11-20 | `973b73e` | pick: picked news saved |
+| 2026-11-20 | `6f13c80` | pick: list sent |
+| 2026-11-20 | `9ac7225` | pick: written and posted |
+| 2026-11-20 | `51ceb87` | pick: picked news saved |
+| 2026-11-20 | `528d8e2` | pick: picked news saved |
+| 2026-11-20 | `79490d9` | pick: list sent |
 | 2026-11-20 | `1be256b` | Facebook first comment = the same source comment as Instagram (link into the text if Facebook refuses the comment) |
 | 2026-11-20 | `f07df4d` | Facebook: up to 18 news a day per page (45 min apart), article link in the first comment, 3 hashtags |
 | 2026-11-20 | `d927a96` | Daily rasipalan as a reel in the 360 gold-reel pattern (music only); carousel only if the reel fails |
@@ -88,27 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `9ccc959` | stories shared |
 | 2026-11-20 | `d014390` | stories shared |
 | 2026-11-20 | `f174849` | Every news reel goes to the story again (stories_urgent_only false) |
-| 2026-11-20 | `ef792cc` | powercut: notices written |
-| 2026-11-20 | `d701281` | powercut: notices written |
-| 2026-11-20 | `108c050` | pick: written and posted |
-| 2026-11-20 | `90a0926` | pick: picked news saved |
-| 2026-11-20 | `ace7c5d` | pick: picked news saved |
-| 2026-11-20 | `c185d3e` | pick: list sent |
-| 2026-11-20 | `0fe47c4` | Promotion ads (owner-approved only, bottom of the reel during the news) and twice-a-day YouTube details e-mail |
-| 2026-11-20 | `70888ea` | pick: written and posted |
-| 2026-11-20 | `24a1c6d` | facebook RN-541 |
-| 2026-11-20 | `16eec4b` | facebook RN-539 |
-| 2026-11-20 | `1f8f2ae` | facebook RN-540 |
-| 2026-11-20 | `f479f99` | Fix: reels again made with reel4 (config reel_design back to v4) |
-| 2026-11-20 | `fb0f787` | pick: picked news saved |
-| 2026-11-20 | `e74258e` | pick: picked news saved |
-| 2026-11-20 | `bbc6206` | pick: list sent |
-| 2026-11-20 | `95cabdc` | News reels: one design on every page - the earlier, proven design with the source and date shown clearly |
-| 2026-11-20 | `76a9429` | Writer: the opening headline (hl1) is always a complete phrase |
-| 2026-11-20 | `203d461` | pick: written and posted |
-| 2026-11-20 | `5522625` | News reels: the design team's design (Tamil) with the 360 clock branding on every page |
-| 2026-11-20 | `507ddf2` | facebook RN-537 |
-| 2026-11-20 | `a6b4d7f` | pick: picked news saved |
-| 2026-11-20 | `7c46b83` | pick: picked news saved |
-| 2026-11-20 | `a210842` | pick: list sent |
 <!-- recent-changes:end -->
