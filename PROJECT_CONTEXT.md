@@ -81,6 +81,16 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-21 | `970b138` | YouTube: news reels uploaded automatically as Shorts (only with the page's keys) |
+| 2026-11-21 | `523669c` | facebook RN-577 |
+| 2026-11-21 | `9d0a5b6` | posted RN-577 |
+| 2026-11-21 | `6eb196f` | pick: picked news saved |
+| 2026-11-21 | `2a15d77` | pick: picked news saved |
+| 2026-11-21 | `094558e` | pick: list sent |
+| 2026-11-21 | `cd49f15` | pick: written and posted |
+| 2026-11-21 | `16cc7d4` | facebook RN-575 |
+| 2026-11-21 | `e90c930` | posted RN-575 |
+| 2026-11-21 | `e7935bd` | powercut: notices written |
 | 2026-11-21 | `c3228ab` | Facebook: every news that is on Instagram also goes to Facebook |
 | 2026-11-21 | `455c5a7` | powercut: notices written |
 | 2026-11-21 | `302eb4e` | comments: normal comments recorded (not e-mailed) |
@@ -101,14 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-21 | `aff0fe3` | facebook RN-570 |
 | 2026-11-21 | `9d96e45` | posted RN-570 |
 | 2026-11-21 | `4b28ba1` | facebook RN-569 |
-| 2026-11-21 | `dbeec7d` | posted RN-569 |
-| 2026-11-21 | `d511f64` | Posted report: one e-mail for all pages, 4 times a day |
-| 2026-11-21 | `a24e4d9` | facebook RN-568 |
-| 2026-11-21 | `ff28771` | facebook RN-567 |
-| 2026-11-21 | `9a5058f` | facebook RN-565 |
-| 2026-11-21 | `bbed12d` | facebook RN-561 |
-| 2026-11-21 | `900ab99` | Instagram-safe limits, file upload without Cloudinary, skipped e-mails restarted |
-| 2026-11-21 | `6be7d4b` | facebook RN-562 |
-| 2026-11-21 | `6437135` | pick: picked news saved |
-| 2026-11-21 | `4821ad1` | goldrate posted |
 <!-- recent-changes:end -->
