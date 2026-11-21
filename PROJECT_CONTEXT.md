@@ -81,6 +81,14 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-21 | `a9d97b6` | A news picture that cannot be downloaded (old Cloudinary account, 401/404) is left out - the reel uses the designed background, the page is never blocked |
+| 2026-11-21 | `7ade65e` | facebook RN-550 |
+| 2026-11-21 | `8497ba1` | goldrate posted |
+| 2026-11-21 | `ebf337e` | facebook RN-563 |
+| 2026-11-21 | `476db93` | facebook RN-560 |
+| 2026-11-21 | `560574e` | pick: picked news saved |
+| 2026-11-21 | `a0617ee` | pick: picked news saved |
+| 2026-11-21 | `3b8d99c` | pick: list sent |
 | 2026-11-21 | `f177c4f` | Keep 20 of Instagram's 50 daily posts for news: stories stop at 30 (news was waiting at 48/50) |
 | 2026-11-21 | `aef5f6e` | Stop posting bursts: 10 min between news posts; an Instagram block pauses the page 6 h (news waits) instead of retrying every run |
 | 2026-11-21 | `8f7ef1a` | rasipalan posted |
@@ -103,12 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-20 | `6f13c80` | pick: list sent |
 | 2026-11-20 | `9ac7225` | pick: written and posted |
 | 2026-11-20 | `51ceb87` | pick: picked news saved |
-| 2026-11-20 | `528d8e2` | pick: picked news saved |
-| 2026-11-20 | `79490d9` | pick: list sent |
-| 2026-11-20 | `1be256b` | Facebook first comment = the same source comment as Instagram (link into the text if Facebook refuses the comment) |
-| 2026-11-20 | `f07df4d` | Facebook: up to 18 news a day per page (45 min apart), article link in the first comment, 3 hashtags |
-| 2026-11-20 | `d927a96` | Daily rasipalan as a reel in the 360 gold-reel pattern (music only); carousel only if the reel fails |
-| 2026-11-20 | `8b86302` | Reels without a picture: a designed background by news type, never the page logo |
-| 2026-11-20 | `9ccc959` | stories shared |
-| 2026-11-20 | `d014390` | stories shared |
 <!-- recent-changes:end -->
