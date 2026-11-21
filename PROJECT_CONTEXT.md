@@ -81,6 +81,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-21 | `d511f64` | Posted report: one e-mail for all pages, 4 times a day |
+| 2026-11-21 | `a24e4d9` | facebook RN-568 |
+| 2026-11-21 | `ff28771` | facebook RN-567 |
+| 2026-11-21 | `9a5058f` | facebook RN-565 |
+| 2026-11-21 | `bbed12d` | facebook RN-561 |
 | 2026-11-21 | `900ab99` | Instagram-safe limits, file upload without Cloudinary, skipped e-mails restarted |
 | 2026-11-21 | `6be7d4b` | facebook RN-562 |
 | 2026-11-21 | `6437135` | pick: picked news saved |
@@ -106,9 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-21 | `7ade65e` | facebook RN-550 |
 | 2026-11-21 | `8497ba1` | goldrate posted |
 | 2026-11-21 | `ebf337e` | facebook RN-563 |
-| 2026-11-21 | `476db93` | facebook RN-560 |
-| 2026-11-21 | `560574e` | pick: picked news saved |
-| 2026-11-21 | `a0617ee` | pick: picked news saved |
-| 2026-11-21 | `3b8d99c` | pick: list sent |
-| 2026-11-21 | `f177c4f` | Keep 20 of Instagram's 50 daily posts for news: stories stop at 30 (news was waiting at 48/50) |
 <!-- recent-changes:end -->
