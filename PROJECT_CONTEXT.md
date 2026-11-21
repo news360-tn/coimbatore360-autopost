@@ -81,6 +81,14 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-21 | `1d5fe38` | Instagram-safe: stories only for power cuts / urgent news again (as Kovai and Chennai Minnal) |
+| 2026-11-21 | `83d21d4` | powercut: notices written |
+| 2026-11-21 | `01c714f` | powercut: notices written |
+| 2026-11-21 | `dea3009` | facebook RN-566 |
+| 2026-11-21 | `50dabaa` | pick: picked news saved |
+| 2026-11-21 | `9d4f08e` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-21 | `84e9a0a` | pick: picked news saved |
+| 2026-11-21 | `83db0f0` | pick: list sent |
 | 2026-11-21 | `df9a236` | Post news as soon as it is ready; only news with a source link; collect every 4 hours, max 35 a day |
 | 2026-11-21 | `8e6b88c` | facebook RN-554 |
 | 2026-11-21 | `4d500bf` | pick: written and posted |
@@ -103,12 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-21 | `3f90449` | facebook RN-559 |
 | 2026-11-21 | `0161e60` | stories shared |
 | 2026-11-21 | `5ee47a3` | facebook RN-543 |
-| 2026-11-21 | `930b5c6` | facebook RN-551 |
-| 2026-11-20 | `b5fc7c7` | pick: written and posted |
-| 2026-11-20 | `00ac8e5` | pick: picked news saved |
-| 2026-11-20 | `3f3c5c3` | pick: picked news saved |
-| 2026-11-20 | `caf2a14` | pick: list sent |
-| 2026-11-20 | `afacdf6` | powercut: notices written |
-| 2026-11-20 | `e722205` | pick: written and posted |
-| 2026-11-20 | `80221fa` | pick: picked news saved |
 <!-- recent-changes:end -->
