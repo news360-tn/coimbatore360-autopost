@@ -81,6 +81,15 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-21 | `900ab99` | Instagram-safe limits, file upload without Cloudinary, skipped e-mails restarted |
+| 2026-11-21 | `6be7d4b` | facebook RN-562 |
+| 2026-11-21 | `6437135` | pick: picked news saved |
+| 2026-11-21 | `4821ad1` | goldrate posted |
+| 2026-11-21 | `caad7df` | pick: picked news saved |
+| 2026-11-21 | `45a924a` | pick: list sent |
+| 2026-11-21 | `b40eaef` | facebook RN-564 |
+| 2026-11-21 | `1e85cbb` | facebook RN-553 |
+| 2026-11-21 | `007026e` | pick: written and posted |
 | 2026-11-21 | `1d5fe38` | Instagram-safe: stories only for power cuts / urgent news again (as Kovai and Chennai Minnal) |
 | 2026-11-21 | `83d21d4` | powercut: notices written |
 | 2026-11-21 | `01c714f` | powercut: notices written |
@@ -102,13 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-21 | `a0617ee` | pick: picked news saved |
 | 2026-11-21 | `3b8d99c` | pick: list sent |
 | 2026-11-21 | `f177c4f` | Keep 20 of Instagram's 50 daily posts for news: stories stop at 30 (news was waiting at 48/50) |
-| 2026-11-21 | `aef5f6e` | Stop posting bursts: 10 min between news posts; an Instagram block pauses the page 6 h (news waits) instead of retrying every run |
-| 2026-11-21 | `8f7ef1a` | rasipalan posted |
-| 2026-11-21 | `2818bd9` | facebook RN-547 |
-| 2026-11-21 | `7e59beb` | facebook RN-548 |
-| 2026-11-21 | `8eaf1ed` | facebook RN-542 |
-| 2026-11-21 | `d545ced` | facebook RN-546 |
-| 2026-11-21 | `3f90449` | facebook RN-559 |
-| 2026-11-21 | `0161e60` | stories shared |
-| 2026-11-21 | `5ee47a3` | facebook RN-543 |
 <!-- recent-changes:end -->
