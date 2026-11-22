@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-22 | `e3921f0` | Website: each posted story goes to the shared 7-district site with its district (only when the WEBSITE_INGEST_KEY secret is set; posting is not affected) |
-| 2026-11-22 | `f4c2f2a` | stories shared / Instagram pause |
-| 2026-11-22 | `421975d` | Dashboard status file for the owner's private dashboard |
-| 2026-11-22 | `7c1d0c2` | Facebook check: list the last 20 Facebook posts (was 10) |
-| 2026-11-22 | `890984f` | Facebook check: list each page's latest Facebook posts (read only) |
-| 2026-11-22 | `6e2ef82` | stories shared / Instagram pause |
-| 2026-11-22 | `e869211` | Facebook share e-mail: news on Instagram but not on Facebook after 3 hours |
-| 2026-11-22 | `e0586ef` | Facebook: slower pace on this busy page (60 min gap, 18 a day) |
-| 2026-11-22 | `8338774` | goldrate posted |
-| 2026-11-22 | `3bf9d49` | pick: written and posted |
-| 2026-11-22 | `1f1958a` | Manual post e-mail: attach a 720p copy of the reel (the full reel was too large) |
-| 2026-11-22 | `f8f3712` | facebook RN-593 |
-| 2026-11-22 | `0eb36f4` | posted RN-593 |
-| 2026-11-22 | `cca5bde` | stories shared / Instagram pause |
-| 2026-11-22 | `d94b0fa` | facebook RN-598 |
-| 2026-11-22 | `079379e` | posted RN-598 |
-| 2026-11-22 | `12102f6` | Manual post e-mail: news a page cannot post goes to the owner, one by one |
-| 2026-11-22 | `0a1a916` | facebook RN-595 |
-| 2026-11-22 | `dd4eb97` | posted RN-595 |
-| 2026-11-22 | `6aa87ee` | pick: picked news saved |
-| 2026-11-22 | `76d6b38` | facebook RN-572 |
-| 2026-11-22 | `ac104f5` | posted RN-572 |
-| 2026-11-22 | `559c43f` | pick: picked news saved |
-| 2026-11-22 | `522187c` | pick: list sent |
-| 2026-11-22 | `cbc81fb` | facebook RN-558 |
-| 2026-11-22 | `a9aaafd` | posted RN-558 |
-| 2026-11-22 | `4fb5c3a` | facebook RN-555 |
-| 2026-11-22 | `2e72417` | posted RN-555 |
-| 2026-11-22 | `b4807e2` | facebook RN-592 |
-| 2026-11-22 | `aa608c8` | posted RN-592 |
+| 2026-11-22 | `85a99c9` | Same-day news only, 15-35 a day: every news published today is written (max 35), yesterday's news is never posted, 22:00 round added; Namakkal writer split fix |
+| 2026-11-22 | `bb532da` | stories shared / Instagram pause |
+| 2026-11-22 | `e8f8f8d` | stories shared / Instagram pause |
+| 2026-11-22 | `5d1ae8d` | stories shared / Instagram pause |
+| 2026-11-22 | `6e266fc` | facebook RN-605 |
+| 2026-11-22 | `c3c0c24` | posted RN-605 |
+| 2026-11-22 | `a87076b` | pick: picked news saved |
+| 2026-11-22 | `9f07079` | stories shared / Instagram pause |
+| 2026-11-22 | `8e4e309` | stories shared / Instagram pause |
+| 2026-11-22 | `c417590` | pick: picked news saved |
+| 2026-11-22 | `1d8f49f` | pick: list sent |
+| 2026-11-22 | `7eb5f17` | stories shared / Instagram pause |
+| 2026-11-22 | `2ecff6b` | stories shared / Instagram pause |
+| 2026-11-22 | `bb9751f` | stories shared / Instagram pause |
+| 2026-11-22 | `25641d3` | stories shared / Instagram pause |
+| 2026-11-22 | `598f19d` | stories shared / Instagram pause |
+| 2026-11-22 | `dcedd7b` | stories shared / Instagram pause |
+| 2026-11-22 | `897a21e` | stories shared / Instagram pause |
+| 2026-11-22 | `781f38a` | stories shared / Instagram pause |
+| 2026-11-22 | `7f7bfed` | stories shared / Instagram pause |
+| 2026-11-22 | `ff1cfac` | stories shared / Instagram pause |
+| 2026-11-22 | `1bd01ec` | stories shared / Instagram pause |
+| 2026-11-22 | `bca84a0` | stories shared / Instagram pause |
+| 2026-11-22 | `08b8896` | stories shared / Instagram pause |
+| 2026-11-22 | `f2fe6ee` | pick: written and posted |
+| 2026-11-22 | `1c703fb` | facebook RN-602 |
+| 2026-11-22 | `5b4757f` | posted RN-602 |
+| 2026-11-22 | `94e545f` | stories shared / Instagram pause |
+| 2026-11-22 | `ec04d2e` | facebook RN-603 |
+| 2026-11-22 | `9c7c665` | posted RN-603 |
 <!-- recent-changes:end -->
