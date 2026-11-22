@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-22 | `f4547cc` | Collection: Bing backup when Google News is busy; dashboard file written only by the posting job |
-| 2026-11-22 | `9cb22ca` | stories shared / Instagram pause |
-| 2026-11-22 | `85a99c9` | Same-day news only, 15-35 a day: every news published today is written (max 35), yesterday's news is never posted, 22:00 round added; Namakkal writer split fix |
-| 2026-11-22 | `bb532da` | stories shared / Instagram pause |
-| 2026-11-22 | `e8f8f8d` | stories shared / Instagram pause |
-| 2026-11-22 | `5d1ae8d` | stories shared / Instagram pause |
-| 2026-11-22 | `6e266fc` | facebook RN-605 |
-| 2026-11-22 | `c3c0c24` | posted RN-605 |
-| 2026-11-22 | `a87076b` | pick: picked news saved |
-| 2026-11-22 | `9f07079` | stories shared / Instagram pause |
-| 2026-11-22 | `8e4e309` | stories shared / Instagram pause |
-| 2026-11-22 | `c417590` | pick: picked news saved |
-| 2026-11-22 | `1d8f49f` | pick: list sent |
-| 2026-11-22 | `7eb5f17` | stories shared / Instagram pause |
-| 2026-11-22 | `2ecff6b` | stories shared / Instagram pause |
-| 2026-11-22 | `bb9751f` | stories shared / Instagram pause |
-| 2026-11-22 | `25641d3` | stories shared / Instagram pause |
-| 2026-11-22 | `598f19d` | stories shared / Instagram pause |
-| 2026-11-22 | `dcedd7b` | stories shared / Instagram pause |
-| 2026-11-22 | `897a21e` | stories shared / Instagram pause |
-| 2026-11-22 | `781f38a` | stories shared / Instagram pause |
-| 2026-11-22 | `7f7bfed` | stories shared / Instagram pause |
-| 2026-11-22 | `ff1cfac` | stories shared / Instagram pause |
-| 2026-11-22 | `1bd01ec` | stories shared / Instagram pause |
-| 2026-11-22 | `bca84a0` | stories shared / Instagram pause |
-| 2026-11-22 | `08b8896` | stories shared / Instagram pause |
-| 2026-11-22 | `f2fe6ee` | pick: written and posted |
-| 2026-11-22 | `1c703fb` | facebook RN-602 |
-| 2026-11-22 | `5b4757f` | posted RN-602 |
-| 2026-11-22 | `94e545f` | stories shared / Instagram pause |
+| 2026-11-22 | `4e6f723` | Daily plan: 30 of today's published news + yesterday's pending news + urgent news after the 30; news older than yesterday never posted |
+| 2026-11-22 | `9b294a1` | stories shared / Instagram pause |
+| 2026-11-22 | `619434c` | stories shared / Instagram pause |
+| 2026-11-22 | `91a841e` | stories shared / Instagram pause |
+| 2026-11-22 | `fefb740` | stories shared / Instagram pause |
+| 2026-11-22 | `0dba2ea` | stories shared / Instagram pause |
+| 2026-11-22 | `670c7eb` | stories shared / Instagram pause |
+| 2026-11-22 | `8bc49bc` | stories shared / Instagram pause |
+| 2026-11-22 | `925a368` | stories shared / Instagram pause |
+| 2026-11-22 | `16354fa` | stories shared / Instagram pause |
+| 2026-11-22 | `5c776a6` | stories shared / Instagram pause |
+| 2026-11-22 | `37cb3d6` | stories shared / Instagram pause |
+| 2026-11-22 | `a37ba7e` | stories shared / Instagram pause |
+| 2026-11-22 | `0658c3c` | stories shared / Instagram pause |
+| 2026-11-22 | `02743cf` | stories shared / Instagram pause |
+| 2026-11-22 | `bfdc82c` | stories shared / Instagram pause |
+| 2026-11-22 | `d0ccc6f` | stories shared / Instagram pause |
+| 2026-11-22 | `3d6e648` | stories shared / Instagram pause |
+| 2026-11-22 | `d18c7e4` | pick: written and posted |
+| 2026-11-22 | `c2541ec` | stories shared / Instagram pause |
+| 2026-11-22 | `765098a` | stories shared / Instagram pause |
+| 2026-11-22 | `b981bd4` | stories shared / Instagram pause |
+| 2026-11-22 | `5113077` | stories shared / Instagram pause |
+| 2026-11-22 | `10aa344` | stories shared / Instagram pause |
+| 2026-11-22 | `b857611` | stories shared / Instagram pause |
+| 2026-11-22 | `78708c8` | stories shared / Instagram pause |
+| 2026-11-22 | `d9ad62d` | stories shared / Instagram pause |
+| 2026-11-22 | `29902a4` | stories shared / Instagram pause |
+| 2026-11-22 | `8266d00` | stories shared / Instagram pause |
+| 2026-11-22 | `85e93a1` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
