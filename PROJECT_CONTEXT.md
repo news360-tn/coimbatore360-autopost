@@ -81,6 +81,18 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-22 | `1932b3e` | Facebook: one post every 60 minutes, at most 15 a day per page, most important news first; after the 15 the rest goes to the owner's e-mail at once (share from Instagram) |
+| 2026-11-22 | `12b5d7b` | stories shared / Instagram pause |
+| 2026-11-22 | `a0cfcd7` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-22 | `a3c3068` | facebook RN-608 |
+| 2026-11-22 | `d4c8ea0` | posted RN-608 |
+| 2026-11-22 | `5dffd02` | stories shared / Instagram pause |
+| 2026-11-22 | `886ccb7` | facebook RN-606 |
+| 2026-11-22 | `b522352` | posted RN-606 |
+| 2026-11-22 | `b87d67a` | pick: picked news saved |
+| 2026-11-22 | `1469023` | pick: picked news saved |
+| 2026-11-22 | `922a168` | pick: list sent |
+| 2026-11-22 | `99013c0` | stories shared / Instagram pause |
 | 2026-11-22 | `4e6f723` | Daily plan: 30 of today's published news + yesterday's pending news + urgent news after the 30; news older than yesterday never posted |
 | 2026-11-22 | `9b294a1` | stories shared / Instagram pause |
 | 2026-11-22 | `619434c` | stories shared / Instagram pause |
@@ -99,16 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-22 | `bfdc82c` | stories shared / Instagram pause |
 | 2026-11-22 | `d0ccc6f` | stories shared / Instagram pause |
 | 2026-11-22 | `3d6e648` | stories shared / Instagram pause |
-| 2026-11-22 | `d18c7e4` | pick: written and posted |
-| 2026-11-22 | `c2541ec` | stories shared / Instagram pause |
-| 2026-11-22 | `765098a` | stories shared / Instagram pause |
-| 2026-11-22 | `b981bd4` | stories shared / Instagram pause |
-| 2026-11-22 | `5113077` | stories shared / Instagram pause |
-| 2026-11-22 | `10aa344` | stories shared / Instagram pause |
-| 2026-11-22 | `b857611` | stories shared / Instagram pause |
-| 2026-11-22 | `78708c8` | stories shared / Instagram pause |
-| 2026-11-22 | `d9ad62d` | stories shared / Instagram pause |
-| 2026-11-22 | `29902a4` | stories shared / Instagram pause |
-| 2026-11-22 | `8266d00` | stories shared / Instagram pause |
-| 2026-11-22 | `85e93a1` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
