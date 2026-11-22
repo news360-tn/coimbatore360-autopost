@@ -81,6 +81,12 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-22 | `1f1958a` | Manual post e-mail: attach a 720p copy of the reel (the full reel was too large) |
+| 2026-11-22 | `f8f3712` | facebook RN-593 |
+| 2026-11-22 | `0eb36f4` | posted RN-593 |
+| 2026-11-22 | `cca5bde` | stories shared / Instagram pause |
+| 2026-11-22 | `d94b0fa` | facebook RN-598 |
+| 2026-11-22 | `079379e` | posted RN-598 |
 | 2026-11-22 | `12102f6` | Manual post e-mail: news a page cannot post goes to the owner, one by one |
 | 2026-11-22 | `0a1a916` | facebook RN-595 |
 | 2026-11-22 | `dd4eb97` | posted RN-595 |
@@ -105,10 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-22 | `a6d898e` | facebook RN-584 |
 | 2026-11-22 | `34dcf84` | posted RN-584 |
 | 2026-11-22 | `2065d20` | facebook RN-578 |
-| 2026-11-22 | `aca5f5e` | posted RN-578 |
-| 2026-11-22 | `fec50b7` | facebook RN-587 |
-| 2026-11-22 | `7385e74` | posted RN-587 |
-| 2026-11-21 | `f64d24e` | facebook RN-588 |
-| 2026-11-21 | `af72a42` | posted RN-588 |
-| 2026-11-21 | `f631e95` | facebook RN-585 |
 <!-- recent-changes:end -->
