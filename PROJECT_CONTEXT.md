@@ -81,6 +81,9 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-22 | `e0586ef` | Facebook: slower pace on this busy page (60 min gap, 18 a day) |
+| 2026-11-22 | `8338774` | goldrate posted |
+| 2026-11-22 | `3bf9d49` | pick: written and posted |
 | 2026-11-22 | `1f1958a` | Manual post e-mail: attach a 720p copy of the reel (the full reel was too large) |
 | 2026-11-22 | `f8f3712` | facebook RN-593 |
 | 2026-11-22 | `0eb36f4` | posted RN-593 |
@@ -108,7 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-22 | `8d870ec` | rasipalan posted |
 | 2026-11-22 | `9009da5` | facebook RN-591 |
 | 2026-11-22 | `b9f299d` | posted RN-591 |
-| 2026-11-22 | `a6d898e` | facebook RN-584 |
-| 2026-11-22 | `34dcf84` | posted RN-584 |
-| 2026-11-22 | `2065d20` | facebook RN-578 |
 <!-- recent-changes:end -->
