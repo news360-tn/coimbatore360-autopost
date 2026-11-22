@@ -5087,3 +5087,135 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":0,"updated":1} 
 stories: 0
+writing [N]: கோவை மாவட்டத்தில் நாளை (23-11-2026) மின்தடை: 24 மணி நேரமும் 
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+writing [N]: நாளைய (நவ.24)மின்தடை: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok groq/qwen/qwen3.8-27b (5s)
+attempt 1 groq/qwen/qwen3.8-27b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  reel_script says the power cut covers all of the listed areas, but the article marks several as partial (ஒரு பகுதி): RS Puram, Thadagam Road, DB Road, Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi, and Sundapalayam Road. The draft omits these qualifiers.
+  reel_script says ஆர் எஸ் புரம் துணைமின் நிலையப் பகுதிகளில் மின்விநியோகம் இருக்காது, which mislabels the RS Puram substation as the area itself and is unclear wording.
+  reel_script says மின்தடை இருக்கும் at the start, but the article lists the areas under the RS Puram substation, so the whole Coimbatore city is wrongly implied.
+  slides_spec slide 'மக்கள் கவனத்திற்கு' mixes two different facts into one sentence: the mobile/water advice and the Idaiyar Veedhi and PM Samy Colony notice, and places Sundapalayam Road under 'people's attention' rather than as an affected area.
+  slides_spec and caption both say 'சுண்டப்பாளையம் ரோடு பகுதியிலும் மின் தடை' / 'Sundapalayam Road' without the partial qualifier in the slide, so the slide misstates the extent of the cut.
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: reel_script says the power cut covers all of the listed areas, but the article marks several as partial (ஒரு பகுதி): RS Puram, Thadagam Road, DB Road, Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi, and Sundapalayam Road. The draft omits these qualifiers.
+  fact-check: reel_script says ஆர் எஸ் புரம் துணைமின் நிலையப் பகுதிகளில் மின்விநியோகம் இருக்காது, which mislabels the RS Puram substation as the area itself and is unclear wording.
+  fact-check: reel_script says மின்தடை இருக்கும் at the start, but the article lists the areas under the RS Puram substation, so the whole Coimbatore city is wrongly implied.
+  fact-check: slides_spec slide 'மக்கள் கவனத்திற்கு' mixes two different facts into one sentence: the mobile/water advice and the Idaiyar Veedhi and PM Samy Colony notice, and places Sundapalayam Road under 'people's attention' rather than as an affected area.
+  fact-check: slides_spec and caption both say 'சுண்டப்பாளையம் ரோடு பகுதியிலும் மின் தடை' / 'Sundapalayam Road' without the partial qualifier in the slide, so the slide misstates the extent of the cut.
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 2 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 3 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 4 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 5 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 6 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  reel_script says 'ஐந்து மணி நேரம்' (five hours) for the outage; 10 AM to 3 PM is five hours, so this is consistent, but the reel_script and slides also drop the partial-area qualifiers (ஒரு பகுதி) for several roads (ஆர்.எஸ்.புரம், தடாகம் ரோடு, டி.பி. ரோடு, சுக்கிரவார்பேட்டை, ராஜ வீதி, பெரியகடை வீதி, சுண்டப்பாளையம் ரோடு), stating the whole roads are affected when the article says only parts are
+  reel_script states that the whole of Ram/RS Puram roads, Lally Road, etc. are affected without the east/west qualifiers given for T.V. Swamy Road and Sambandam Road in the article
+  slides_spec 'எந்தப் பகுதிகள்?' and reel_script omit the east/west qualification for டி.வி.சாமி ரோடு and சம்பந்தம் ரோடு, changing which sections are affected
+  reel_script claims 'மொபைல் சார்ஜ், குடிநீர் போன்றவற்றை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' advice, which is not in the article (invented advisory)
+  slides_spec last slide includes 'கவனிக்க வேண்டியவை' advice (mobile charge, water) that is not in the article (invented advisory)
+  caption says 'ஆர்.எஸ்.புரம் துணை மின் நிலையத்தில்' power cut and the reel_script says 'ஆர் எஸ் புரம் துணை மின் நிலையப் பகுதிகளில்', which matches the article; no issue there, but the reel_script's 'மின்விநியோகம் இருக்காது' (no supply) is an overstatement of a planned power cut only in some parts of the listed areas
+claude rewrite 3 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: reel_script says 'ஐந்து மணி நேரம்' (five hours) for the outage; 10 AM to 3 PM is five hours, so this is consistent, but the reel_script and slides also drop the partial-area qualifiers (ஒரு பகுதி) for several roads (ஆர்.எஸ்.புரம், தடாகம் ரோடு, டி.பி. ரோடு, சுக்கிரவார்பேட்டை, ராஜ வீதி, பெரியகடை வீதி, சுண்டப்பாளையம் ரோடு), stating the whole roads are affected when the article says only parts are
+  fact-check: reel_script states that the whole of Ram/RS Puram roads, Lally Road, etc. are affected without the east/west qualifiers given for T.V. Swamy Road and Sambandam Road in the article
+  fact-check: slides_spec 'எந்தப் பகுதிகள்?' and reel_script omit the east/west qualification for டி.வி.சாமி ரோடு and சம்பந்தம் ரோடு, changing which sections are affected
+  fact-check: reel_script claims 'மொபைல் சார்ஜ், குடிநீர் போன்றவற்றை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' advice, which is not in the article (invented advisory)
+  fact-check: slides_spec last slide includes 'கவனிக்க வேண்டியவை' advice (mobile charge, water) that is not in the article (invented advisory)
+  fact-check: caption says 'ஆர்.எஸ்.புரம் துணை மின் நிலையத்தில்' power cut and the reel_script says 'ஆர் எஸ் புரம் துணை மின் நிலையப் பகுதிகளில்', which matches the article; no issue there, but the reel_script's 'மின்விநியோகம் இருக்காது' (no supply) is an overstatement of a planned power cut only in some parts of the listed areas
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 24 ('கோவை மாவட்டம் - மின்தடை ஏற்படும் பகுதிகள்: 24 மணி நேரமும் கு'); 1 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 2 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 3 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 4 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம'); 5 ('1.மடம்பட்டி 2.ஆலாந்துறை 3.குப்பனூர் 4.கரடிமடை 5.பூண்டி 6.செம')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check out of free quota
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Coimbatore power cut tomorrow (23 Nov) i'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261122-2102","first":"RN-613"}
+posting job started at once
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/tomorrow-barrier-coimbatore/4383203
+manual link added: https://tamil.samayam.com/tamil-nadu/news/power-outage-in-tamilnadu-on-november-23-2026-due-to-maintenance-work/articleshow/136071742.cms#district-section
+candidate filter: collected=2
+to write: 2 Coimbatore district candidates (max 2 stories)
+round: top 2 of 2 candidates
+candidates waiting: 2 Coimbatore; time left 39 min
+try (N) manual=True: https://tamil.samayam.com/tamil-nadu/news/power-outage-in-ta
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+NOT filed (N) நாளைய (நவ.24)மின்தடை: கோயம்புத்தூர்: duplicate after write
+auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 2})
+posting job started at once
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 1}, time left 38 min
+filed: 1 Coimbatore district stories (target 2), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":2,"updated":0} 
+stories: 1
