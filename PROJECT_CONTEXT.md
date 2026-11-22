@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-21 | `970b138` | YouTube: news reels uploaded automatically as Shorts (only with the page's keys) |
-| 2026-11-21 | `523669c` | facebook RN-577 |
-| 2026-11-21 | `9d0a5b6` | posted RN-577 |
-| 2026-11-21 | `6eb196f` | pick: picked news saved |
-| 2026-11-21 | `2a15d77` | pick: picked news saved |
-| 2026-11-21 | `094558e` | pick: list sent |
-| 2026-11-21 | `cd49f15` | pick: written and posted |
-| 2026-11-21 | `16cc7d4` | facebook RN-575 |
-| 2026-11-21 | `e90c930` | posted RN-575 |
-| 2026-11-21 | `e7935bd` | powercut: notices written |
-| 2026-11-21 | `c3228ab` | Facebook: every news that is on Instagram also goes to Facebook |
-| 2026-11-21 | `455c5a7` | powercut: notices written |
-| 2026-11-21 | `302eb4e` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-21 | `c10b86a` | facebook RN-574 |
-| 2026-11-21 | `94716f3` | posted RN-574 |
-| 2026-11-21 | `6f9c3ff` | pick: picked news saved |
-| 2026-11-21 | `9dba8c2` | pick: picked news saved |
-| 2026-11-21 | `67f50d8` | pick: list sent |
-| 2026-11-21 | `f447883` | facebook RN-556 |
-| 2026-11-21 | `4040915` | posted RN-556 |
-| 2026-11-21 | `adc1ff5` | facebook RN-549 |
-| 2026-11-21 | `d122df5` | posted RN-549 |
-| 2026-11-21 | `95b6918` | facebook RN-573 |
-| 2026-11-21 | `2e90f40` | posted RN-573 |
-| 2026-11-21 | `4b1cb17` | pick: written and posted |
-| 2026-11-21 | `0cf8f60` | facebook RN-571 |
-| 2026-11-21 | `06828d2` | posted RN-571 |
-| 2026-11-21 | `aff0fe3` | facebook RN-570 |
-| 2026-11-21 | `9d96e45` | posted RN-570 |
-| 2026-11-21 | `4b28ba1` | facebook RN-569 |
+| 2026-11-22 | `12102f6` | Manual post e-mail: news a page cannot post goes to the owner, one by one |
+| 2026-11-22 | `0a1a916` | facebook RN-595 |
+| 2026-11-22 | `dd4eb97` | posted RN-595 |
+| 2026-11-22 | `6aa87ee` | pick: picked news saved |
+| 2026-11-22 | `76d6b38` | facebook RN-572 |
+| 2026-11-22 | `ac104f5` | posted RN-572 |
+| 2026-11-22 | `559c43f` | pick: picked news saved |
+| 2026-11-22 | `522187c` | pick: list sent |
+| 2026-11-22 | `cbc81fb` | facebook RN-558 |
+| 2026-11-22 | `a9aaafd` | posted RN-558 |
+| 2026-11-22 | `4fb5c3a` | facebook RN-555 |
+| 2026-11-22 | `2e72417` | posted RN-555 |
+| 2026-11-22 | `b4807e2` | facebook RN-592 |
+| 2026-11-22 | `aa608c8` | posted RN-592 |
+| 2026-11-22 | `66d5909` | facebook RN-589 |
+| 2026-11-22 | `afde662` | posted RN-589 |
+| 2026-11-22 | `6c2b17d` | facebook RN-590 |
+| 2026-11-22 | `0621fba` | posted RN-590 |
+| 2026-11-22 | `8d870ec` | rasipalan posted |
+| 2026-11-22 | `9009da5` | facebook RN-591 |
+| 2026-11-22 | `b9f299d` | posted RN-591 |
+| 2026-11-22 | `a6d898e` | facebook RN-584 |
+| 2026-11-22 | `34dcf84` | posted RN-584 |
+| 2026-11-22 | `2065d20` | facebook RN-578 |
+| 2026-11-22 | `aca5f5e` | posted RN-578 |
+| 2026-11-22 | `fec50b7` | facebook RN-587 |
+| 2026-11-22 | `7385e74` | posted RN-587 |
+| 2026-11-21 | `f64d24e` | facebook RN-588 |
+| 2026-11-21 | `af72a42` | posted RN-588 |
+| 2026-11-21 | `f631e95` | facebook RN-585 |
 <!-- recent-changes:end -->
