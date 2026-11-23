@@ -1,0 +1,84 @@
+writing [N]: கோவை மாநகராட்சியில் ரூ.2,300 கோடி இழப்பு: திமுக ஆட்சியில் எல
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (17s)
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  numbers not found in the article: 75
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 100 ('ஆட்சியில் சென்னை, கோவை மாநகராட்சிகளில் ரூ.100 கோடிக்கு டெண்ட'); 26 ('2021--26ல் கோவை மாநகராட்சியில் சிறப்பு தணிக்கை நடந்தது.'); 87 ('வணிகம், தொழிற்சாலை, கல்வி நிறுவனங்களுக்கு குடியிருப்புக்கான '); 17 ('வணிகம், தொழிற்சாலை, கல்வி நிறுவனங்களுக்கு குடியிருப்புக்கான '); 158 ('வீடுகளுக்கு வழங்கும் குடிநீர் இணைப்பை வணிக பயன்பாட்டுக்கு வழ'); 31 ('வீடுகளுக்கு வழங்கும் குடிநீர் இணைப்பை வணிக பயன்பாட்டுக்கு வழ')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (17s)
+attempt 2 gemini/gemini-3.6-flash: 2 problems
+  reel_script has 99 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 100 ('ஆட்சியில் சென்னை, கோவை மாநகராட்சிகளில் ரூ.100 கோடிக்கு டெண்ட'); 34 ('நிதிக்குழு பரிந்துரை மீறி சொத்து வரி தள்ளுபடி செய்ததில் ரூ.3'); 60 ('நிதிக்குழு பரிந்துரை மீறி சொத்து வரி தள்ளுபடி செய்ததில் ரூ.3'); 82 ('நீண்ட காலமாக நிலுவையில் உள்ள சொத்து வரி வசூல் செய்யாததில் ரூ'); 4 ('அவர்கள் மட்டுமே ரூ.2.4 கோடி வரி நிலுவை வைத்துள்ளனர்.'); 53 ('அதிக மதிப்பில் விலை பட்டியல் தயாரித்து, 'சதர்ன் சாலிட் வேஸ்ட')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (18s)
+attempt 3 gemini/gemini-3-flash-preview: 4 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 75
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 100 ('ஆட்சியில் சென்னை, கோவை மாநகராட்சிகளில் ரூ.100 கோடிக்கு டெண்ட'); 28 ('வீடுகளுக்கு வழங்கும் குடிநீர் இணைப்பை வணிக பயன்பாட்டுக்கு வழ'); 1988 ('வழக்கை காரணம் காட்டி அவிநாசி ரோட்டில் உள்ள பிரபல மருத்துவமனை'); 5 ('சொத்து வரியில் மட்டுமே 5 ஆண்டுகளில் ரூ.2,053 கோடி வருவாய் இழ'); 18 ('திடக்கழிவு மேலாண்மைக்காக, அதே நிறுவனத்துக்கு 18 சதவீதம் ஜி.எ'); 3 ('கட்டுமானம் அல்லாத பணிக்கு 1 சதவீத தொழிலாளர் நலநிதி வழங்கியதி')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 413: {"error":{"message":"Request too large for model `openai/gpt-oss-120b` in organization `or
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1,194 ('சர்வரில் முறைப்படுத்தாத காரணத்தால் ரூ.1,194 கோடி வருவாய் இழப'); 53 ('அதிக மதிப்பில் விலை பட்டியல் தயாரித்து, 'சதர்ன் சாலிட் வேஸ்ட'); 18 ('திடக்கழிவு மேலாண்மைக்காக, அதே நிறுவனத்துக்கு 18 சதவீதம் ஜி.எ'); 97 ('கூடுதலாக வழங்கியதில் ரூ.26.97 கோடி இழப்பு ஏற்பட்டுள்ளது.'); 1 ('கட்டுமானம் அல்லாத பணிக்கு 1 சதவீத தொழிலாளர் நலநிதி வழங்கியதி'); 3 ('கட்டுமானம் அல்லாத பணிக்கு 1 சதவீத தொழிலாளர் நலநிதி வழங்கியதி')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 100 ('ஆட்சியில் சென்னை, கோவை மாநகராட்சிகளில் ரூ.100 கோடிக்கு டெண்ட')
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 26 ('2021--26ல் கோவை மாநகராட்சியில் சிறப்பு தணிக்கை நடந்தது.'); 87 ('வணிகம், தொழிற்சாலை, கல்வி நிறுவனங்களுக்கு குடியிருப்புக்கான '); 17 ('வணிகம், தொழிற்சாலை, கல்வி நிறுவனங்களுக்கு குடியிருப்புக்கான '); 28 ('வீடுகளுக்கு வழங்கும் குடிநீர் இணைப்பை வணிக பயன்பாட்டுக்கு வழ'); 82 ('நீண்ட காலமாக நிலுவையில் உள்ள சொத்து வரி வசூல் செய்யாததில் ரூ'); 25 ('நீண்ட காலமாக நிலுவையில் உள்ள சொத்து வரி வசூல் செய்யாததில் ரூ')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok groq/openai/gpt-oss-120b (6s)
+proofread rejected (3 problems)
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok groq/openai/gpt-oss-120b (2s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check out of free quota
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Coimbatore Corporation faces Rs 2,300 cr'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261123-0836","first":"RN-619"}
+posting job started at once
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-news/rs-2300-crore-loss-in-coimbatore-municipal-corporation-corruption-in-everything-under-dmk-rule-says-audit-report/4383802
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 79 min
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-news/rs-2300-crore
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
+posting job started at once
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 77 min
+filed: 1 Coimbatore district stories (target 1), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":1,"updated":0} 
+stories: 1
