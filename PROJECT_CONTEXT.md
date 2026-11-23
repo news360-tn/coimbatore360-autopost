@@ -81,6 +81,18 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-23 | `420baf2` | YouTube Coimbatore: public, 20 a day, 40 min apart, 7-22 IST; daily cap 30 |
+| 2026-11-23 | `af2000e` | goldrate posted |
+| 2026-11-23 | `8d8c620` | stories shared / Instagram pause |
+| 2026-11-23 | `a94a962` | stories shared / Instagram pause |
+| 2026-11-23 | `a0e609a` | pick: picked news saved |
+| 2026-11-23 | `24225f8` | pick: list sent |
+| 2026-11-23 | `896c2b5` | stories shared / Instagram pause |
+| 2026-11-23 | `63cdb69` | stories shared / Instagram pause |
+| 2026-11-23 | `ca27b21` | stories shared / Instagram pause |
+| 2026-11-23 | `69219e2` | stories shared / Instagram pause |
+| 2026-11-23 | `4eb3f55` | stories shared / Instagram pause |
+| 2026-11-23 | `dc23174` | stories shared / Instagram pause |
 | 2026-11-23 | `24c4023` | Yesterday's pending news (held only by the daily maximum) is offered again; common place words (நகரம், ரோடு, நிலையம் ...) no longer hold a news; Indian number grouping (29,86,950) is understood |
 | 2026-11-23 | `4277822` | stories shared / Instagram pause |
 | 2026-11-23 | `93c4b8b` | stories shared / Instagram pause |
@@ -99,16 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-23 | `652dc9f` | stories shared / Instagram pause |
 | 2026-11-23 | `7f77a55` | powercut: notices written |
 | 2026-11-23 | `56aa9dc` | stories shared / Instagram pause |
-| 2026-11-23 | `e0b2f0b` | stories shared / Instagram pause |
-| 2026-11-23 | `a846fdf` | powercut: notices written |
-| 2026-11-23 | `207e2c2` | stories shared / Instagram pause |
-| 2026-11-23 | `4395dd5` | stories shared / Instagram pause |
-| 2026-11-23 | `67f0656` | stories shared / Instagram pause |
-| 2026-11-23 | `b9cbfa5` | stories shared / Instagram pause |
-| 2026-11-23 | `3712d1e` | stories shared / Instagram pause |
-| 2026-11-23 | `1f7c9dd` | stories shared / Instagram pause |
-| 2026-11-23 | `03c604c` | pick: written and posted |
-| 2026-11-23 | `c0bdd6a` | pick: picked news saved |
-| 2026-11-23 | `b23e1b1` | pick: list sent |
-| 2026-11-23 | `923749e` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
