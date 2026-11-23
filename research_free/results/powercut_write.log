@@ -5449,3 +5449,276 @@ filed: 0 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":1,"updated":0} 
 stories: 0
+writing [N]: கோவை மாவட்டத்தில் நாளை மின்தடை: நாளை பல்வேறு பகுதிகளில் காலை
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+writing [N]: நாளை மறுதினம் (நவ.25)மின்தடை: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+switching away from gemini/gemini-3.6-flash for 10 min
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.6-flash: Expecting ',' delimiter: line 49 column 3 (char 1379)
+poor answer - skipped for 30 min: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3.5-flash: Expecting ',' delimiter: line 49 column 3 (char 1371)
+poor answer - skipped for 30 min: gemini/gemini-3.5-flash
+ok gemini/gemini-3-flash-preview (12s)
+attempt 1 gemini/gemini-3-flash-preview: 3 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 7
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 2 ('அந்த வகையில் நாளை கோவையில் 2 துணை மின் நிலையங்களில் பராமரிப்')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (31s)
+attempt 1 gemini/gemini-3-flash-preview: 1 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing 
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 2 groq/qwen/qwen3.8-27b: 1 problems
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+not available on this plan: groq/qwen/qwen3.8-27b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your p
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  stray Tamil sign '்' after 'ா' in «ரிக்கா் சா»
+  stray Tamil sign '்' after 'ா' in «ரிக்கா் சா»
+  stray Tamil sign 'ா' after 'ா' in «்கிரவாா்பே»
+  stray Tamil sign '்' after 'ா' in «கிரவாா்பேட»
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  slides must have 3 or 4 items
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): கோயம்புத்தூர் ('நாளை மறுதினம் (நவ.25)மின்தடை: கோயம்புத்தூர்')
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 58 words; need 60-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The reel_script says the power cut is in the areas under RS Puram substation, but the article lists two substations and the draft omits the second substation's name and its affected areas, so the slide text 'கோவையில் 2 துணை மின் நிலையங்கள்' has no matching details for the second one.
+  The reel_script says Sukkiravarpettai, and the slides say 'சுக்கிரவார்பேட்டை (ஒரு பகுதி)' — the reel_script omits that it is only a partial area, which the article specifies.
+  The reel_script and slides omit that DT Road, Tadagam Road and RS Puram are only partial areas ('ஒரு பகுதி') in the article, presenting them as fully affected.
+  The reel_script says 'பொன்னையராஜபுரம் ஆகிய பகுதிகளில் மின்தடை இருக்கும்' and the slides do not mention that the article's list is cut off ('பொன்னையராஜப.'), so the complete listing cannot be verified.
+  The reel_script adds 'மக்கள் முன்கூட்டியே மொபைல் சார்ஜ், குடிநீர் தேவைகளைப் பார்த்துக்கொள்ளுங்கள்' — advice not present in the article (the caption also presents it as coming from the article's context).
+claude rewrite 2 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The reel_script says the power cut is in the areas under RS Puram substation, but the article lists two substations and the draft omits the second substation's name and its affected areas, so the slide text 'கோவையில் 2 துணை மின் நிலையங்கள்' has no matching details for the second one.
+  fact-check: The reel_script says Sukkiravarpettai, and the slides say 'சுக்கிரவார்பேட்டை (ஒரு பகுதி)' — the reel_script omits that it is only a partial area, which the article specifies.
+  fact-check: The reel_script and slides omit that DT Road, Tadagam Road and RS Puram are only partial areas ('ஒரு பகுதி') in the article, presenting them as fully affected.
+  fact-check: The reel_script says 'பொன்னையராஜபுரம் ஆகிய பகுதிகளில் மின்தடை இருக்கும்' and the slides do not mention that the article's list is cut off ('பொன்னையராஜப.'), so the complete listing cannot be verified.
+  fact-check: The reel_script adds 'மக்கள் முன்கூட்டியே மொபைல் சார்ஜ், குடிநீர் தேவைகளைப் பார்த்துக்கொள்ளுங்கள்' — advice not present in the article (the caption also presents it as coming from the article's context).
+ok anthropic/claude-haiku-5-5
+writing [N]: நாளைய (நவ.24)மின்தடை: கோயம்புத்தூர்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  caption talks about the article instead of the news (கட்டுரை) - if the article has no real news, return an empty reel_script
+  known issue meta_article: caption talks about the article instead of the news ('கட்டுரை') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  reel_script says 'ஆர் எஸ் புரம், தடாகம் ரோடு, லாலி ரோடு, டி பி ரோடு' lose the '(ஒரு பகுதி)' qualifier, so a partial area is presented as fully affected
+  reel_script says சம்பந்தம் ரோடு's east and west sides, which matches, but the reel_script omits the partial qualifiers for சுக்கிரவார்பேட்டை, ராஜ வீதி, பெரியகடை வீதி and சுண்டப்பாளையம் ரோடு, presenting them as fully affected
+  reel_script says 'நவம்பர் 24ஆம் தேதி' and the article says 'நாளைய (நவ.24)', which is consistent, but the reel_script omits 'செவ்வாய்க்கிழமை' which the caption states; not an error, but the caption's day-of-week is not supported by the article
+  slides_spec 'hl1' says 'கோவையில் நாளை மின் தடை' while the caption and headline say 'பல பகுதிகளில்', an unsupported framing that is not a problem with the article content itself
+  reel_script claims 'சில பகுதிகளில் ஒரு பகுதி மட்டும் பாதிக்கப்படும்' but does not state which ones, making the partial-area claim vague and misleading for the listed areas
+  reel_script says 'மக்கள் மொபைல் சார்ஜ் மற்றும் தண்ணீரை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' which is advice not present in the article, an invented detail
+claude rewrite 1 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: reel_script says 'ஆர் எஸ் புரம், தடாகம் ரோடு, லாலி ரோடு, டி பி ரோடு' lose the '(ஒரு பகுதி)' qualifier, so a partial area is presented as fully affected
+  fact-check: reel_script says சம்பந்தம் ரோடு's east and west sides, which matches, but the reel_script omits the partial qualifiers for சுக்கிரவார்பேட்டை, ராஜ வீதி, பெரியகடை வீதி and சுண்டப்பாளையம் ரோடு, presenting them as fully affected
+  fact-check: reel_script says 'நவம்பர் 24ஆம் தேதி' and the article says 'நாளைய (நவ.24)', which is consistent, but the reel_script omits 'செவ்வாய்க்கிழமை' which the caption states; not an error, but the caption's day-of-week is not supported by the article
+  fact-check: slides_spec 'hl1' says 'கோவையில் நாளை மின் தடை' while the caption and headline say 'பல பகுதிகளில்', an unsupported framing that is not a problem with the article content itself
+  fact-check: reel_script claims 'சில பகுதிகளில் ஒரு பகுதி மட்டும் பாதிக்கப்படும்' but does not state which ones, making the partial-area claim vague and misleading for the listed areas
+  fact-check: reel_script says 'மக்கள் மொபைல் சார்ஜ் மற்றும் தண்ணீரை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' which is advice not present in the article, an invented detail
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check out of free quota
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 8 problems
+  reel_script omits Thiyagi Kumaran Veedhi and Light House Road, which the article lists as affected
+  reel_script omits Lokamaniya Veedhi? no; reel_script omits Mekkarikkar Road? no; reel_script omits Sukkiravarpettai? no; reel_script omits Thiyagi Kumaran Veedhi, Light House Road, Idaiyar Veedhi and B.M. Samy Colony, which the article lists as affected
+  reel_script says Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi only partially affected, but the article marks Sukkiravarpettai as partial and Raja Veedhi and Periyakadai Veedhi as partial; the draft omits Periyakadai Veedhi being partial in the slides, and the slides list Raja Veedhi as partial while the article lists it as partial — no conflict, but the slides mark Sukkiravarpettai as partial only in the slides; reel_script says Sukkiravarpettai in full area ('சில இடங்கள்' is not stated for it), which is a mismatch with the article's '(ஒரு பகுதி)' marking
+  reel_script says Kavulibrown Salai, Lokamaniya Veedhi and Mekkarikkar Road are affected without the partial qualifier the article applies to none of them, but the caption and slides mix partial and full status inconsistently for Kavulibrown Salai, which the slides omit entirely
+  slides_spec omits Kavulibrown Salai, Lokamaniya Veedhi, Mekkarikkar Road, Thiyagi Kumaran Veedhi, Light House Road, Sullivan Veedhi, Telugu Veedhi, Periyakadai Veedhi, Idaiyar Veedhi and B.M. Samy Colony, although the article lists them
+  caption adds 'சில பகுதிகளில் ஒரு பகுதி மட்டுமே பாதிக்கப்படும்' but states that Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi are affected without marking them partial, and does not mark Thadagam Road, R.S. Puram, LALY Road or D.B. Road as partial consistently with the article
+  reel_script says 'ஆர் எஸ் புரம், தடாகம் ரோடு, லாலி ரோடு, டி பி ரோடு ஆகிய பகுதிகளில் சில இடங்கள் பாதிக்கப்படும்' which conflates partial status across several roads in one sentence with the article's mixed partial and full markings
+  reel_script sentence 'மேலும் செய்திகளுக்கு...' is fixed and acceptable, but the reel_script's sentence about Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi is incomplete: Periyakadai Veedhi is omitted from the reel_script entirely
+claude rewrite 2 anthropic/claude-haiku-5-5: 8 problems
+  fact-check: reel_script omits Thiyagi Kumaran Veedhi and Light House Road, which the article lists as affected
+  fact-check: reel_script omits Lokamaniya Veedhi? no; reel_script omits Mekkarikkar Road? no; reel_script omits Sukkiravarpettai? no; reel_script omits Thiyagi Kumaran Veedhi, Light House Road, Idaiyar Veedhi and B.M. Samy Colony, which the article lists as affected
+  fact-check: reel_script says Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi only partially affected, but the article marks Sukkiravarpettai as partial and Raja Veedhi and Periyakadai Veedhi as partial; the draft omits Periyakadai Veedhi being partial in the slides, and the slides list Raja Veedhi as partial while the article lists it as partial — no conflict, but the slides mark Sukkiravarpettai as partial only in the slides; reel_script says Sukkiravarpettai in full area ('சில இடங்கள்' is not stated for it), which is a mismatch with the article's '(ஒரு பகுதி)' marking
+  fact-check: reel_script says Kavulibrown Salai, Lokamaniya Veedhi and Mekkarikkar Road are affected without the partial qualifier the article applies to none of them, but the caption and slides mix partial and full status inconsistently for Kavulibrown Salai, which the slides omit entirely
+  fact-check: slides_spec omits Kavulibrown Salai, Lokamaniya Veedhi, Mekkarikkar Road, Thiyagi Kumaran Veedhi, Light House Road, Sullivan Veedhi, Telugu Veedhi, Periyakadai Veedhi, Idaiyar Veedhi and B.M. Samy Colony, although the article lists them
+  fact-check: caption adds 'சில பகுதிகளில் ஒரு பகுதி மட்டுமே பாதிக்கப்படும்' but states that Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi are affected without marking them partial, and does not mark Thadagam Road, R.S. Puram, LALY Road or D.B. Road as partial consistently with the article
+  fact-check: reel_script says 'ஆர் எஸ் புரம், தடாகம் ரோடு, லாலி ரோடு, டி பி ரோடு ஆகிய பகுதிகளில் சில இடங்கள் பாதிக்கப்படும்' which conflates partial status across several roads in one sentence with the article's mixed partial and full markings
+  fact-check: reel_script sentence 'மேலும் செய்திகளுக்கு...' is fixed and acceptable, but the reel_script's sentence about Sukkiravarpettai, Raja Veedhi and Periyakadai Veedhi is incomplete: Periyakadai Veedhi is omitted from the reel_script entirely
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  The reel_script says the power cut will happen in 'பல பகுதிகள்' and lists areas, but the article header gives the date as நாளைய (நவ.24); the draft's date wording is consistent, so no date problem.
+  The reel_script says 'ராஜ வீதி(ஒரு பகுதி)' and 'பெரியகடை வீதி(ஒரு பகுதி)' are affected, but the article specifies these as partial areas; the draft states this correctly, so this is not an error.
+  The caption says 'சுக்கிரவார்பேட்டை, ராஜ வீதி, பெரியகடை வீதி, சுண்டப்பாளையம் ரோடு ஆகியவற்றின் ஒரு பகுதியில்' which groups four areas under one partial-area statement, but the article marks only some of them as partial and lists others (like சுண்டப்பாளையம் ரோடு) with the partial marker only once; this merges facts from separate list entries into one sentence.
+  The reel_script says 'பொன்னையராஜபுரம், இ பி காலனி, சொக்கம்புதூர் ஆகிய பகுதிகளிலும் மின் தடை இருக்கும்' which is fine, but the reel_script's 'பெரியகடை வீதியின் ஒரு பகுதி, இடையர் வீதி, பி எம் சாமி காலனி, சுண்டப்பாளையம் ரோடு ஆகிய இடங்களிலும்' is a grammatically awkward run-on mixing partial and full areas in one sentence.
+claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: The reel_script says the power cut will happen in 'பல பகுதிகள்' and lists areas, but the article header gives the date as நாளைய (நவ.24); the draft's date wording is consistent, so no date problem.
+  fact-check: The reel_script says 'ராஜ வீதி(ஒரு பகுதி)' and 'பெரியகடை வீதி(ஒரு பகுதி)' are affected, but the article specifies these as partial areas; the draft states this correctly, so this is not an error.
+  fact-check: The caption says 'சுக்கிரவார்பேட்டை, ராஜ வீதி, பெரியகடை வீதி, சுண்டப்பாளையம் ரோடு ஆகியவற்றின் ஒரு பகுதியில்' which groups four areas under one partial-area statement, but the article marks only some of them as partial and lists others (like சுண்டப்பாளையம் ரோடு) with the partial marker only once; this merges facts from separate list entries into one sentence.
+  fact-check: The reel_script says 'பொன்னையராஜபுரம், இ பி காலனி, சொக்கம்புதூர் ஆகிய பகுதிகளிலும் மின் தடை இருக்கும்' which is fine, but the reel_script's 'பெரியகடை வீதியின் ஒரு பகுதி, இடையர் வீதி, பி எம் சாமி காலனி, சுண்டப்பாளையம் ரோடு ஆகிய இடங்களிலும்' is a grammatically awkward run-on mixing partial and full areas in one sentence.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match: False The photo shows cut branches propped against a power pole on a curb, which does not depict a news story or announcement 
+second try not made for 'Coimbatore power cut tomorrow at 2 subst' (the first one is used): all image models failed: all image models failed: None
+images made: 2 for 'Coimbatore power cut tomorrow at 2 subst'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0203","first":"RN-663"}
+posting job started at once
+writing [N]: நாளைய மின்தடை (24ம் தேதி)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free models unavailable: no free model answered: None
+image match: False The image is an AI-generated illustration (evident from garbled text on signs and license plates, and structural artifac
+second try not made for 'Power cut tomorrow (24 Nov) in Coimbator' (the first one is used): all image models failed: all image models failed: None
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  hl1 is 41 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  numbers not found in the article: 16
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Power cut tomorrow (24 Nov) in Coimbator'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0204","first":"RN-664"}
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 7 problems
+  The article does not give weekdays; the draft states 24 November is செவ்வாய்க்கிழமை (Tuesday) and 25 November is புதன்கிழமை (Wednesday), which are added details not in the article.
+  The article gives the dates only as 24ம் தேதி and 25ம் தேதி with no month; the draft adds the month 'நவம்பர்' (November), an invented detail not stated in the article.
+  The slides_spec and reel_script say 'நாளை' (tomorrow) for the 24th and 'நாளை மறுநாள்' for the 25th, which is a time reference not stated in the article, and the caption's headline says 'நாளை நெகமம் பகுதியில்' only mentioning Negamam though the reel_script calls it 'இரண்டு நாட்கள் மின்தடை' covering two areas, a mixed framing not supported by the article's separate listings.
+  The reel_script opens with 'இரண்டு நாட்கள் மின்தடை' (two days of power cut), which is a summary claim not in the article as a single statement.
+  The reel_script omits the article's note that the 24th cut covers only Negamam substation and the 25th only Angalakurichi substation is covered, and the draft's tamil_headline frames the cuts together as 'நெகமம், அங்கலக்குறிச்சி பகுதிகளில் நாளை மின்தடை', which wrongly implies both areas are cut tomorrow (the 25th is the day after tomorrow).
+  The caption's 'Negamam power cut tomorrow 10 AM to 3 PM' English line is a claim that the cut is tomorrow for Negamam, which is consistent only if the article date is tomorrow; however the caption and slides also state the 24th as a fixed weekday, adding unverified dating detail.
+  The slides_spec hl2 'காலை 10 – மாலை 3 மணி' is fine, but the slide title 'அங்கலக்குறிச்சி –' is an incomplete sentence fragment lacking the date clarity present in the article's header, making the slide text ungrammatical/unclear.
+claude rewrite 3 anthropic/claude-haiku-5-5: 7 problems
+  fact-check: The article does not give weekdays; the draft states 24 November is செவ்வாய்க்கிழமை (Tuesday) and 25 November is புதன்கிழமை (Wednesday), which are added details not in the article.
+  fact-check: The article gives the dates only as 24ம் தேதி and 25ம் தேதி with no month; the draft adds the month 'நவம்பர்' (November), an invented detail not stated in the article.
+  fact-check: The slides_spec and reel_script say 'நாளை' (tomorrow) for the 24th and 'நாளை மறுநாள்' for the 25th, which is a time reference not stated in the article, and the caption's headline says 'நாளை நெகமம் பகுதியில்' only mentioning Negamam though the reel_script calls it 'இரண்டு நாட்கள் மின்தடை' covering two areas, a mixed framing not supported by the article's separate listings.
+  fact-check: The reel_script opens with 'இரண்டு நாட்கள் மின்தடை' (two days of power cut), which is a summary claim not in the article as a single statement.
+  fact-check: The reel_script omits the article's note that the 24th cut covers only Negamam substation and the 25th only Angalakurichi substation is covered, and the draft's tamil_headline frames the cuts together as 'நெகமம், அங்கலக்குறிச்சி பகுதிகளில் நாளை மின்தடை', which wrongly implies both areas are cut tomorrow (the 25th is the day after tomorrow).
+  fact-check: The caption's 'Negamam power cut tomorrow 10 AM to 3 PM' English line is a claim that the cut is tomorrow for Negamam, which is consistent only if the article date is tomorrow; however the caption and slides also state the 24th as a fixed weekday, adding unverified dating detail.
+  fact-check: The slides_spec hl2 'காலை 10 – மாலை 3 மணி' is fine, but the slide title 'அங்கலக்குறிச்சி –' is an incomplete sentence fragment lacking the date clarity present in the article's header, making the slide text ungrammatical/unclear.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+real photo: no picture on the source page -> AI pictures
+image match: False The image is an AI-generated illustration of an electrician climbing a pole in a rural area, not an authentic photograph
+second try not made for 'Power cut tomorrow (24 Nov) in Negamam a' (the first one is used): all image models failed: all image models failed: None
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Power cut tomorrow (24 Nov) in Negamam a'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0204","first":"RN-665"}
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/power-outage/4384343
+manual link added: https://www.dinamalar.com/amp/news/tamil-nadu-district-news-coimbatore/tomorrow-barrier-coimbatore/4383203
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/tomorrow-barrier-coimbatore/4384143
+manual link added: https://tamil.abplive.com/news/coimbatore/coimbatore-take-note-power-cuts-scheduled-for-tomorrow-in-the-r-s-puram-and-chinna-thadagam-areas-is-your-locality-on-the-list-280401/amp#district-section
+candidate filter: collected=4
+to write: 4 Coimbatore district candidates (max 4 stories)
+round: top 4 of 4 candidates
+candidates waiting: 4 Coimbatore; time left 39 min
+try (N) manual=True: https://tamil.abplive.com/news/coimbatore/coimbatore-take-no
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+NOT filed (N) நாளை மறுதினம் (நவ.25)மின்தடை: கோயம்புத்தூர்: duplicate after write
+try (N) manual=True: https://www.dinamalar.com/amp/news/tamil-nadu-district-news-
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 2})
+posting job started at once
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 4})
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 6})
+candidate loop ended: left 0, tried={'N': 4}, done={'N': 3}, time left 30 min
+filed: 3 Coimbatore district stories (target 4), reels only
+queue: 0 news waiting to be written
+All News sheet: {"ok":true,"added":4,"updated":0} 
+stories: 3
