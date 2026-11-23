@@ -1,105 +1,210 @@
-writing [N]: நூலக புத்தகங்கள் கொள்முதல் முறைகேட்டில் மேலும் இரு பதிப்பகங்
+writing [N]: போக்குவரத்து விதிமீறல்களில் ஈடுபட்டதாக ஒரே நாளில் 1,782 போ்
+writing [N]: உடல்நலக்குறைவால் ஆண் குழந்தை உயிரிழப்பு
+writing [N]: கொசு மருந்து குடித்த தூய்மைப் பணியாளா் உயிரிழப்பு
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.6-flash (31s)
-attempt 1 gemini/gemini-3.6-flash: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 7 ('அவரது மனுவில், அகல் விளக்கு மற்றும் பீனிக்ஸ் பதிப்பகங்களில் ')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.6-flash for 10 min
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
+    "code": 429,
+    "message": "You exceeded your current quota, please chefail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+
+dead for this round: gemini/gemini-3.6-flash
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-ok gemini/gemini-3-flash-preview (12s)
-attempt 2 gemini/gemini-3-flash-preview: 3 problems
-  reel_script has 99 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 7 ('அவரது மனுவில், அகல் விளக்கு மற்றும் பீனிக்ஸ் பதிப்பகங்களில் ')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (15s)
-attempt 3 gemini/gemini-3-flash-preview: 3 problems
-  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  not grounded: place word 'கோயம்புத்தூர்' is not in the article
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 7 ('அவரது மனுவில், அகல் விளக்கு மற்றும் பீனிக்ஸ் பதிப்பகங்களில் ')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
-    "code": 503,
-    "message": "This model is currently experiencing 
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
 fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
-  hl1 is 46 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
-  reel_script has 181 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  hl1 (the first headline on screen) must name the place 'கோவை பெரியார் அறிவுலகம்', e.g. 'கோவை பெரியார் அறிவுலகம்: ...' or 'கோவை பெரியார் அறிவுலகம்-இல் ...' - viewers share news of their own area
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
-  hl1 is 43 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
-  hl1 (the first headline on screen) must name the place 'கோவை பெரியார் அறிவுலகம்', e.g. 'கோவை பெரியார் அறிவுலகம்: ...' or 'கோவை பெரியார் அறிவுலகம்-இல் ...' - viewers share news of their own area
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 7 ('அவரது மனுவில், அகல் விளக்கு மற்றும் பீனிக்ஸ் பதிப்பகங்களில் ')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/openai/gpt-oss-120b (7s)
-proofread rejected (3 problems)
-  missing key: reel_script
-  missing key: caption
-  missing key: scenes
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-ok groq/qwen/qwen3.8-27b (3s)
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+ok groq/qwen/qwen3.8-27b (13s)
+attempt 1 groq/qwen/qwen3.8-27b: 1 problems
+  hl1 is 43 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
-real photo: vision check out of free quota
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  hl1 is 42 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 121, 146, 349400
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 400 ('இவா்களிடம் இருந்து மொத்தம் ரூ.3 லட்சத்து 49 ஆயிரத்து 400 அபர')
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  slide 1 line 1 longer than 60 characters
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  hl1 is 42 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  numbers not found in the article: 349400
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  hl1 is 49 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  hl1 (the first headline on screen) must name the place 'போத்தனூர்', e.g. 'போத்தனூர்: ...' or 'போத்தனூர்-இல் ...' - viewers share news of their own area
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok groq/qwen/qwen3.8-27b (4s)
+proofread by groq/qwen/qwen3.8-27b: 1 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  reel_script has 79 words; need 84-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1675. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok anthropic/claude-haiku-5-5
+real photo skipped (photo uploaded 2026-04-26 (older than the news)): https://media.dinamani.com/dinamani/2026-04-26/ywd6xu2b/%E0%AE%AA%E0%AF%88%E0%AE%95%E0%AF%
+real photo skipped (photo uploaded 2026-04-26 (older than the news)): https://media.dinamani.com/dinamani/2026-04-26/ywd6xu2b/பைக்-மோதி-ஒடிஸா-மாநிலத்தை-சோ்ந்தவ
 imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
 imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
-image match: False The image is an AI-generated illustration of a generic courtroom or assembly hall, not a real photograph depicting the a
-image match: True The photo shows a courtroom proceeding in an Indian court (indicated by the national emblem and layout), which matches t
-image match: False The image is a generic stock photo showing a stack of blank paper documents and a pen on an office desk, rather than dep
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Library book procurement scam: two more '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0343","first":"RN-666"}
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Sanitation worker dies after drinking mo'
+ok anthropic/claude-haiku-5-5
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0438","first":"RN-667"}
 posting job started at once
+real photo skipped (photo uploaded 2026-07-03 (older than the news)): https://media.dinamani.com/dinamani/2026-07-03/v7azthhf/Fine
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  The reel_script says the child was "குழந்தை ராஜவேலு இவர்" and the caption says the parents' child is named ராஜவேலு; the article names the child ராஜவேலு (எ) — acceptable — but the reel_script and slides omit the mother's age (24), which is not an error per se; no problem there.
+  The slide line "சிகிச்சைப் பலனின்றி உயிரிழந்தது" repeats the same fact as the first line "10 மாத ஆண் குழந்தை உயிரிழந்தது" and is placed under the 'what happened' heading, adding no new information (not a factual error).
+  The reel_script states the child had a sudden onset of cough and breathing difficulty on Friday night and then says the child was 'அவதிப்பட்டு வந்தது' for 4 months with cough — consistent with the article; no mismatch found.
+  The caption says "உடல்நலக்குறைவால் உயிரிழந்தது" which matches the article's headline; no mismatch found.
+  Slide 'எங்கே சிகிச்சை?' line "தீவிர சிகிச்சையில் இருந்தபோது உயிரிழப்பு" is a minor rewording of the article's 'சிகிச்சைப் பலனின்றி' and does not conflict with it.
+  The reel_script's opening sentence says the child died 'சிகிச்சைப் பலனின்றி' and the caption also says so; the article's death cause is stated as respiratory distress following illness, but the draft attributes death to 'உடல்நலக்குறைவால்' generally, which matches the article's headline.
+claude rewrite 1 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: The reel_script says the child was "குழந்தை ராஜவேலு இவர்" and the caption says the parents' child is named ராஜவேலு; the article names the child ராஜவேலு (எ) — acceptable — but the reel_script and slides omit the mother's age (24), which is not an error per se; no problem there.
+  fact-check: The slide line "சிகிச்சைப் பலனின்றி உயிரிழந்தது" repeats the same fact as the first line "10 மாத ஆண் குழந்தை உயிரிழந்தது" and is placed under the 'what happened' heading, adding no new information (not a factual error).
+  fact-check: The reel_script states the child had a sudden onset of cough and breathing difficulty on Friday night and then says the child was 'அவதிப்பட்டு வந்தது' for 4 months with cough — consistent with the article; no mismatch found.
+  fact-check: The caption says "உடல்நலக்குறைவால் உயிரிழந்தது" which matches the article's headline; no mismatch found.
+  fact-check: Slide 'எங்கே சிகிச்சை?' line "தீவிர சிகிச்சையில் இருந்தபோது உயிரிழப்பு" is a minor rewording of the article's 'சிகிச்சைப் பலனின்றி' and does not conflict with it.
+  fact-check: The reel_script's opening sentence says the child died 'சிகிச்சைப் பலனின்றி' and the caption also says so; the article's death cause is stated as respiratory distress following illness, but the draft attributes death to 'உடல்நலக்குறைவால்' generally, which matches the article's headline.
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+image match: False The image is AI-generated, featuring garbled text on background signs, non-standard license plate formats (not Indian re
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 2 problems
+  The draft's reel_script and slides_spec say the child was taken to the government medical college hospital in Coimbatore for intensive treatment, but the article says 'தீவிர சிகிச்சைக்காக' that is accurate; however the reel_script says the child was 'அனுமதிக்கப்பட்டது' at the private hospital without the article's 'உடனடியாக' sequence being mismatched—no issue there.
+  The caption's English line 'Vadavalli 10-month-old boy dies after breathing difficulty' is an English summary not stated in the article; the article attributes the death to 'சிகிச்சைப் பலனின்றி' and the police cause (breathing difficulty) is reported only as police's account, so the caption presents the cause as established fact rather than police's account.
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  fact-check: The draft's reel_script and slides_spec say the child was taken to the government medical college hospital in Coimbatore for intensive treatment, but the article says 'தீவிர சிகிச்சைக்காக' that is accurate; however the reel_script says the child was 'அனுமதிக்கப்பட்டது' at the private hospital without the article's 'உடனடியாக' sequence being mismatched—no issue there.
+  fact-check: The caption's English line 'Vadavalli 10-month-old boy dies after breathing difficulty' is an English summary not stated in the article; the article attributes the death to 'சிகிச்சைப் பலனின்றி' and the police cause (breathing difficulty) is reported only as police's account, so the caption presents the cause as established fact rather than police's account.
+ok anthropic/claude-haiku-5-5
+image match: False The image depicts police officers on motorcycles participating in a rally or patrol, rather than traffic violators being
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+images made: 1 for '1,782 people booked in one day in Coimba'
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The article says the boy is named ராஜவேலு (ராஜவேலு (எ) 10 மாத ஆண் குழந்தை), but the draft's reel_script names the father as ராஜ்குமார் and the mother as ராஜேஸ்வரி and presents 'ராஜவேலு' only as the child's name; this is consistent, so no issue there — however, the reel_script says the child was admitted to the private hospital 'உடனடியாக' and then transferred, which matches the article, so no issue there either.
+  The reel_script states the child 'உயிரிழந்தது' and the caption says 'குழந்தை உயிரிழந்தது' correctly, but the reel_script omits the key fact that the child was taken to the government medical college hospital because of the need for intensive care, a detail present in the article (தீவிர சிகிச்சைக்காக) — it is included, so no omission.
+  The slides_spec line 'குழந்தையின் தந்தை ராஜ்குமார், தாய் ராஜேஸ்வரி' is consistent with the article; no problem.
+  The slides_spec line 'வடவள்ளி சுல்தானியபுரத்தில் 10 மாத ஆண் குழந்தை உயிரிழந்தது' is consistent with the article; no problem.
+  The caption sentence 'போலீசார் கூறியதாக: ... மூச்சுத் திணறலால் உயிரிழந்தது' accurately reflects the article; no problem.
+claude rewrite 3 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The article says the boy is named ராஜவேலு (ராஜவேலு (எ) 10 மாத ஆண் குழந்தை), but the draft's reel_script names the father as ராஜ்குமார் and the mother as ராஜேஸ்வரி and presents 'ராஜவேலு' only as the child's name; this is consistent, so no issue there — however, the reel_script says the child was admitted to the private hospital 'உடனடியாக' and then transferred, which matches the article, so no issue there either.
+  fact-check: The reel_script states the child 'உயிரிழந்தது' and the caption says 'குழந்தை உயிரிழந்தது' correctly, but the reel_script omits the key fact that the child was taken to the government medical college hospital because of the need for intensive care, a detail present in the article (தீவிர சிகிச்சைக்காக) — it is included, so no omission.
+  fact-check: The slides_spec line 'குழந்தையின் தந்தை ராஜ்குமார், தாய் ராஜேஸ்வரி' is consistent with the article; no problem.
+  fact-check: The slides_spec line 'வடவள்ளி சுல்தானியபுரத்தில் 10 மாத ஆண் குழந்தை உயிரிழந்தது' is consistent with the article; no problem.
+  fact-check: The caption sentence 'போலீசார் கூறியதாக: ... மூச்சுத் திணறலால் உயிரிழந்தது' accurately reflects the article; no problem.
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0438","first":"RN-668"}
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check out of free quota
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for '10-month-old boy dies in Vadavalli despi'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-0439","first":"RN-669"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 pick round: only the picked links are written (research_free/pick.py)
-manual link added: https://www.dinakaran.com/news/librarybooks-purchase-irregularities-publishing-houses-contact/amp
-candidate filter: collected=1
-to write: 1 Coimbatore district candidates (max 1 stories)
-round: top 1 of 1 candidates
-candidates waiting: 1 Coimbatore; time left 79 min
-try (N) manual=True: https://www.dinakaran.com/news/librarybooks-purchase-irregul
-auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 4})
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/23/கொசு-மருந்து-குடித்த-தூய்மைப்-பணியாளா்-உயிரிழப்பு
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/23/உடல்நலக்குறைவால்-ஆண்-குழந்தை-உயிரிழப்பு
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/23/போக்குவரத்து-விதிமீறல்களில்-ஈடுபட்டதாக-ஒரே-நாளில்-1782-போ்-மீது-வழக்கு-ரூ349-லட்சம்-அபராதம்-விதிப்பு
+candidate filter: collected=3
+to write: 3 Coimbatore district candidates (max 3 stories)
+round: top 3 of 3 candidates
+candidates waiting: 3 Coimbatore; time left 79 min
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi
+auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 2})
 posting job started at once
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 75 min
-filed: 1 Coimbatore district stories (target 1), reels only
+auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 4})
+auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 6})
+candidate loop ended: left 0, tried={'N': 3}, done={'N': 3}, time left 77 min
+filed: 3 Coimbatore district stories (target 3), reels only
 queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":1,"updated":0} 
-stories: 1
+All News sheet: {"ok":true,"added":3,"updated":0} 
+stories: 3
