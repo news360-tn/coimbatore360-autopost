@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-22 | `1932b3e` | Facebook: one post every 60 minutes, at most 15 a day per page, most important news first; after the 15 the rest goes to the owner's e-mail at once (share from Instagram) |
-| 2026-11-22 | `12b5d7b` | stories shared / Instagram pause |
-| 2026-11-22 | `a0cfcd7` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-22 | `a3c3068` | facebook RN-608 |
-| 2026-11-22 | `d4c8ea0` | posted RN-608 |
-| 2026-11-22 | `5dffd02` | stories shared / Instagram pause |
-| 2026-11-22 | `886ccb7` | facebook RN-606 |
-| 2026-11-22 | `b522352` | posted RN-606 |
-| 2026-11-22 | `b87d67a` | pick: picked news saved |
-| 2026-11-22 | `1469023` | pick: picked news saved |
-| 2026-11-22 | `922a168` | pick: list sent |
-| 2026-11-22 | `99013c0` | stories shared / Instagram pause |
-| 2026-11-22 | `4e6f723` | Daily plan: 30 of today's published news + yesterday's pending news + urgent news after the 30; news older than yesterday never posted |
-| 2026-11-22 | `9b294a1` | stories shared / Instagram pause |
-| 2026-11-22 | `619434c` | stories shared / Instagram pause |
-| 2026-11-22 | `91a841e` | stories shared / Instagram pause |
-| 2026-11-22 | `fefb740` | stories shared / Instagram pause |
-| 2026-11-22 | `0dba2ea` | stories shared / Instagram pause |
-| 2026-11-22 | `670c7eb` | stories shared / Instagram pause |
-| 2026-11-22 | `8bc49bc` | stories shared / Instagram pause |
-| 2026-11-22 | `925a368` | stories shared / Instagram pause |
-| 2026-11-22 | `16354fa` | stories shared / Instagram pause |
-| 2026-11-22 | `5c776a6` | stories shared / Instagram pause |
-| 2026-11-22 | `37cb3d6` | stories shared / Instagram pause |
-| 2026-11-22 | `a37ba7e` | stories shared / Instagram pause |
-| 2026-11-22 | `0658c3c` | stories shared / Instagram pause |
-| 2026-11-22 | `02743cf` | stories shared / Instagram pause |
-| 2026-11-22 | `bfdc82c` | stories shared / Instagram pause |
-| 2026-11-22 | `d0ccc6f` | stories shared / Instagram pause |
-| 2026-11-22 | `3d6e648` | stories shared / Instagram pause |
+| 2026-11-23 | `8150515` | District filter: towns of other Tamil Nadu districts (Tiruchendur, Thoothukudi, Kovilpatti ...) are not our news |
+| 2026-11-23 | `9127d93` | stories shared / Instagram pause |
+| 2026-11-23 | `876ff26` | stories shared / Instagram pause |
+| 2026-11-23 | `f368103` | stories shared / Instagram pause |
+| 2026-11-23 | `2ffc5af` | stories shared / Instagram pause |
+| 2026-11-23 | `65bd87e` | stories shared / Instagram pause |
+| 2026-11-23 | `62e5581` | stories shared / Instagram pause |
+| 2026-11-23 | `1e37b2b` | stories shared / Instagram pause |
+| 2026-11-23 | `59e4984` | stories shared / Instagram pause |
+| 2026-11-23 | `8722d67` | stories shared / Instagram pause |
+| 2026-11-23 | `31b988e` | stories shared / Instagram pause |
+| 2026-11-23 | `8edc01a` | stories shared / Instagram pause |
+| 2026-11-23 | `dc5e2a0` | stories shared / Instagram pause |
+| 2026-11-23 | `f46326c` | stories shared / Instagram pause |
+| 2026-11-23 | `8e1ac05` | stories shared / Instagram pause |
+| 2026-11-23 | `5f1ce1c` | stories shared / Instagram pause |
+| 2026-11-23 | `df04c23` | stories shared / Instagram pause |
+| 2026-11-23 | `5729162` | stories shared / Instagram pause |
+| 2026-11-23 | `c93e9c3` | goldrate posted |
+| 2026-11-23 | `24d1ed7` | stories shared / Instagram pause |
+| 2026-11-23 | `4dc4d79` | stories shared / Instagram pause |
+| 2026-11-23 | `fada7bf` | stories shared / Instagram pause |
+| 2026-11-23 | `666506d` | stories shared / Instagram pause |
+| 2026-11-23 | `ac300d7` | stories shared / Instagram pause |
+| 2026-11-23 | `1d4f79b` | stories shared / Instagram pause |
+| 2026-11-23 | `a1cf157` | stories shared / Instagram pause |
+| 2026-11-23 | `20e523d` | pick: written and posted |
+| 2026-11-23 | `dcb112f` | facebook RN-619 |
+| 2026-11-23 | `f5fc1c8` | posted RN-619 |
+| 2026-11-23 | `aae28d1` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
