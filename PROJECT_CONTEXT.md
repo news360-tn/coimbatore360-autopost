@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-24 | `007165e` | Collection: a news listed late (Dinamalar dates it at print time) is offered once if it is from the last 24 h - it was always 'published before this window' and never posted |
-| 2026-11-24 | `b2ebc2b` | stories shared / Instagram pause |
-| 2026-11-24 | `505e3b1` | stories shared / Instagram pause |
-| 2026-11-24 | `8459ae9` | stories shared / Instagram pause |
-| 2026-11-24 | `8928d27` | Facebook posts every news like Instagram: daily news limit 15 -> 30 (Meta's own API reel limit per page in 24 h) |
-| 2026-11-24 | `cf4da80` | stories shared / Instagram pause |
-| 2026-11-24 | `f3d27ae` | stories shared / Instagram pause |
-| 2026-11-24 | `b61514f` | stories shared / Instagram pause |
-| 2026-11-24 | `9aeb818` | stories shared / Instagram pause |
-| 2026-11-24 | `e376af0` | stories shared / Instagram pause |
-| 2026-11-24 | `1ab7001` | stories shared / Instagram pause |
-| 2026-11-24 | `a0f407a` | stories shared / Instagram pause |
-| 2026-11-24 | `4ffa66c` | stories shared / Instagram pause |
-| 2026-11-24 | `03bd825` | stories shared / Instagram pause |
-| 2026-11-24 | `239ca99` | stories shared / Instagram pause |
-| 2026-11-24 | `744abbd` | stories shared / Instagram pause |
-| 2026-11-24 | `540e05b` | stories shared / Instagram pause |
-| 2026-11-24 | `61b86d7` | stories shared / Instagram pause |
-| 2026-11-24 | `3552ad8` | stories shared / Instagram pause |
-| 2026-11-24 | `2d446b0` | stories shared / Instagram pause |
-| 2026-11-24 | `8a198b1` | stories shared / Instagram pause |
-| 2026-11-24 | `cc4b710` | stories shared / Instagram pause |
-| 2026-11-24 | `0a2abe5` | stories shared / Instagram pause |
-| 2026-11-24 | `f8398cf` | stories shared / Instagram pause |
-| 2026-11-24 | `17a19d1` | stories shared / Instagram pause |
-| 2026-11-24 | `9f25be5` | stories shared / Instagram pause |
-| 2026-11-24 | `161fd0b` | stories shared / Instagram pause |
-| 2026-11-24 | `21674b3` | stories shared / Instagram pause |
-| 2026-11-24 | `6ea2501` | stories shared / Instagram pause |
-| 2026-11-24 | `77221a0` | stories shared / Instagram pause |
+| 2026-11-24 | `3a7826a` | A self-immolation / suicide ATTEMPT where nobody died (a protest) is news and posts automatically - a death still needs the owner's tick; Samayam Tamil is a trusted outlet |
+| 2026-11-24 | `1d3e462` | stories shared / Instagram pause |
+| 2026-11-24 | `faa536b` | stories shared / Instagram pause |
+| 2026-11-24 | `6067609` | Coimbatore: 9 news e-mailed under the old Facebook limit go back to the Facebook queue (owner: none shared) |
+| 2026-11-24 | `6cff386` | stories shared / Instagram pause |
+| 2026-11-24 | `10a0226` | pick: written and posted |
+| 2026-11-24 | `8bf2f1d` | pick: picked news saved |
+| 2026-11-24 | `900ed9b` | pick: picked news saved |
+| 2026-11-24 | `5ff69fd` | pick: list sent |
+| 2026-11-24 | `363df34` | stories shared / Instagram pause |
+| 2026-11-24 | `06ee4b6` | stories shared / Instagram pause |
+| 2026-11-24 | `45e7031` | stories shared / Instagram pause |
+| 2026-11-24 | `c7b9a65` | stories shared / Instagram pause |
+| 2026-11-24 | `b3b5015` | powercut: notices written |
+| 2026-11-24 | `49a5117` | stories shared / Instagram pause |
+| 2026-11-24 | `67816f8` | stories shared / Instagram pause |
+| 2026-11-24 | `a2154e7` | facebook RN-678 |
+| 2026-11-24 | `5536f80` | posted RN-678 |
+| 2026-11-24 | `31825a3` | stories shared / Instagram pause |
+| 2026-11-24 | `b0c8aea` | facebook RN-675 |
+| 2026-11-24 | `001cbba` | posted RN-675 |
+| 2026-11-24 | `0f24e1b` | facebook RN-676 |
+| 2026-11-24 | `54a4c20` | posted RN-676 |
+| 2026-11-24 | `8996e6d` | powercut: notices written |
+| 2026-11-24 | `48f37d2` | stories shared / Instagram pause |
+| 2026-11-24 | `816caf8` | stories shared / Instagram pause |
+| 2026-11-24 | `1ad4630` | stories shared / Instagram pause |
+| 2026-11-24 | `4a3700c` | stories shared / Instagram pause |
+| 2026-11-24 | `f5f2353` | stories shared / Instagram pause |
+| 2026-11-24 | `241f029` | comments: normal comments recorded (not e-mailed) |
 <!-- recent-changes:end -->
