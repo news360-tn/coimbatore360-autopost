@@ -81,6 +81,10 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-24 | `007165e` | Collection: a news listed late (Dinamalar dates it at print time) is offered once if it is from the last 24 h - it was always 'published before this window' and never posted |
+| 2026-11-24 | `b2ebc2b` | stories shared / Instagram pause |
+| 2026-11-24 | `505e3b1` | stories shared / Instagram pause |
+| 2026-11-24 | `8459ae9` | stories shared / Instagram pause |
 | 2026-11-24 | `8928d27` | Facebook posts every news like Instagram: daily news limit 15 -> 30 (Meta's own API reel limit per page in 24 h) |
 | 2026-11-24 | `cf4da80` | stories shared / Instagram pause |
 | 2026-11-24 | `f3d27ae` | stories shared / Instagram pause |
@@ -107,8 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-24 | `21674b3` | stories shared / Instagram pause |
 | 2026-11-24 | `6ea2501` | stories shared / Instagram pause |
 | 2026-11-24 | `77221a0` | stories shared / Instagram pause |
-| 2026-11-24 | `36ceaec` | stories shared / Instagram pause |
-| 2026-11-24 | `4d8d45f` | stories shared / Instagram pause |
-| 2026-11-24 | `0822ec8` | stories shared / Instagram pause |
-| 2026-11-24 | `7d1d7e3` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
