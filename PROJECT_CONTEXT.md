@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-24 | `43e91c0` | Google News links: when Google refuses the decoder (429), the same headline on Bing (same newspaper) gives the article link - news is no longer dropped |
-| 2026-11-24 | `869b5e4` | stories shared / Instagram pause |
-| 2026-11-24 | `71f20c0` | pick: picked news saved |
-| 2026-11-24 | `ac07578` | stories shared / Instagram pause |
-| 2026-11-24 | `eec04b5` | A death-toll update (மேலும் ஒருவர் உயிரிழப்பு / எண்ணிக்கை உயர்வு) is new news, not a duplicate of the first report |
-| 2026-11-24 | `82eedc6` | pick: picked news saved |
-| 2026-11-24 | `7379cf1` | pick: list sent |
-| 2026-11-24 | `2666789` | stories shared / Instagram pause |
-| 2026-11-24 | `6ce781c` | stories shared / Instagram pause |
-| 2026-11-24 | `9677cde` | stories shared / Instagram pause |
-| 2026-11-24 | `19c666e` | stories shared / Instagram pause |
-| 2026-11-24 | `b520d2e` | stories shared / Instagram pause |
-| 2026-11-24 | `da6a5e5` | Auto-fix: busy AI writers do not use up a news's tries; each page runs at its own minutes; try counts reset |
-| 2026-11-24 | `c7d8b0f` | stories shared / Instagram pause |
-| 2026-11-24 | `b0823c2` | Fixes: Facebook 24-hour-limit news wait or are e-mailed (never silently skipped); slow sheet reads get more time; YouTube stops for the whole day after its quota; YouTube tests use today's date |
-| 2026-11-24 | `2d49578` | autofix: corrected held news |
-| 2026-11-24 | `0ba3cb1` | stories shared / Instagram pause |
-| 2026-11-24 | `275fbb5` | stories shared / Instagram pause |
-| 2026-11-24 | `9df44d3` | stories shared / Instagram pause |
-| 2026-11-24 | `9d04a03` | stories shared / Instagram pause |
-| 2026-11-24 | `8ee8aae` | stories shared / Instagram pause |
-| 2026-11-24 | `0dc7ba9` | facebook RN-671 |
-| 2026-11-24 | `8d0cfdc` | posted RN-671 |
-| 2026-11-24 | `ee074c9` | stories shared / Instagram pause |
-| 2026-11-24 | `be6b748` | stories shared / Instagram pause |
-| 2026-11-24 | `1b6b2e5` | facebook RN-667 |
-| 2026-11-24 | `7ab7782` | posted RN-667 |
-| 2026-11-24 | `2cc5818` | stories shared / Instagram pause |
-| 2026-11-24 | `73db16c` | stories shared / Instagram pause |
-| 2026-11-24 | `2798dc3` | facebook RN-661 |
+| 2026-11-24 | `8928d27` | Facebook posts every news like Instagram: daily news limit 15 -> 30 (Meta's own API reel limit per page in 24 h) |
+| 2026-11-24 | `cf4da80` | stories shared / Instagram pause |
+| 2026-11-24 | `f3d27ae` | stories shared / Instagram pause |
+| 2026-11-24 | `b61514f` | stories shared / Instagram pause |
+| 2026-11-24 | `9aeb818` | stories shared / Instagram pause |
+| 2026-11-24 | `e376af0` | stories shared / Instagram pause |
+| 2026-11-24 | `1ab7001` | stories shared / Instagram pause |
+| 2026-11-24 | `a0f407a` | stories shared / Instagram pause |
+| 2026-11-24 | `4ffa66c` | stories shared / Instagram pause |
+| 2026-11-24 | `03bd825` | stories shared / Instagram pause |
+| 2026-11-24 | `239ca99` | stories shared / Instagram pause |
+| 2026-11-24 | `744abbd` | stories shared / Instagram pause |
+| 2026-11-24 | `540e05b` | stories shared / Instagram pause |
+| 2026-11-24 | `61b86d7` | stories shared / Instagram pause |
+| 2026-11-24 | `3552ad8` | stories shared / Instagram pause |
+| 2026-11-24 | `2d446b0` | stories shared / Instagram pause |
+| 2026-11-24 | `8a198b1` | stories shared / Instagram pause |
+| 2026-11-24 | `cc4b710` | stories shared / Instagram pause |
+| 2026-11-24 | `0a2abe5` | stories shared / Instagram pause |
+| 2026-11-24 | `f8398cf` | stories shared / Instagram pause |
+| 2026-11-24 | `17a19d1` | stories shared / Instagram pause |
+| 2026-11-24 | `9f25be5` | stories shared / Instagram pause |
+| 2026-11-24 | `161fd0b` | stories shared / Instagram pause |
+| 2026-11-24 | `21674b3` | stories shared / Instagram pause |
+| 2026-11-24 | `6ea2501` | stories shared / Instagram pause |
+| 2026-11-24 | `77221a0` | stories shared / Instagram pause |
+| 2026-11-24 | `36ceaec` | stories shared / Instagram pause |
+| 2026-11-24 | `4d8d45f` | stories shared / Instagram pause |
+| 2026-11-24 | `0822ec8` | stories shared / Instagram pause |
+| 2026-11-24 | `7d1d7e3` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
