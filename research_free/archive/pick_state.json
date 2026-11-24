@@ -270,7 +270,8 @@
    "score": 6.0,
    "power_cut": false,
    "listed_at": "2026-11-24T18:15:36.181615+05:30",
-   "picked_at": "2026-11-24T18:17:22.222095+05:30"
+   "picked_at": "2026-11-24T18:17:22.222095+05:30",
+   "refused": "not written: the day's maximum of 30 news was reached"
   },
   "C3986c68": {
    "id": "C3986c68",
@@ -283,7 +284,8 @@
    "score": 4.68,
    "power_cut": false,
    "listed_at": "2026-11-24T18:15:36.181615+05:30",
-   "picked_at": "2026-11-24T18:17:22.222098+05:30"
+   "picked_at": "2026-11-24T18:17:22.222098+05:30",
+   "refused": "not written: the day's maximum of 30 news was reached"
   }
  },
  "rounds": {
@@ -1131,7 +1133,11 @@
    "written": [
     "C3986c68",
     "C6b0566f"
-   ]
+   ],
+   "refused": {
+    "C3986c68": "not written: the day's maximum of 30 news was reached",
+    "C6b0566f": "not written: the day's maximum of 30 news was reached"
+   }
   }
  },
  "retry": {}
