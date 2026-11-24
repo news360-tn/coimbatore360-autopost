@@ -1617,7 +1617,7 @@ class ResearchedOutletsOnly(unittest.TestCase):
         self.assertEqual(len(allnews.SITES), 13)
         for keep in ("https://covaimail.com/x/", "https://arasiyaltoday.com/x/", "https://www.dinamani.com/all-editions/edition-coimbatore/x"):
             self.assertTrue(allnews.tamil_outlet({"via": "bing", "url": keep}), keep)
-        for drop in ("https://tamil.oneindia.com/news/coimbatore/x", "https://www.vikatan.com/x", "https://tamil.abplive.com/x"):
+        for drop in ("https://tamil.oneindia.com/news/coimbatore/x", "https://tamil.abplive.com/x"):      # owner 24 Nov: Vikatan Coimbatore page is a source now
             self.assertFalse(allnews.tamil_outlet({"via": "bing", "url": drop}), drop)
 
 
