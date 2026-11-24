@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-24 | `84417aa` | Auto-fix held news (rewrite from the article, check again, post); Cloudinary fallbacks: pictures kept in the repo, reels direct then repo link; rasipalan and gold the same |
-| 2026-11-24 | `b58423a` | stories shared / Instagram pause |
-| 2026-11-24 | `b6026ec` | stories shared / Instagram pause |
-| 2026-11-24 | `61c97bb` | pick: written and posted |
-| 2026-11-24 | `648acc6` | pick: picked news saved |
-| 2026-11-24 | `661c98e` | facebook RN-657 |
-| 2026-11-24 | `2bacb69` | posted RN-657 |
-| 2026-11-24 | `4aa77c3` | pick: picked news saved |
-| 2026-11-24 | `f75358c` | pick: list sent |
-| 2026-11-24 | `0b375f6` | stories shared / Instagram pause |
-| 2026-11-24 | `ef9e412` | stories shared / Instagram pause |
-| 2026-11-24 | `cacdd02` | facebook RN-655 |
-| 2026-11-24 | `5f1d07c` | posted RN-655 |
-| 2026-11-24 | `d1e4aa4` | pick: written and posted |
-| 2026-11-24 | `d31004b` | stories shared / Instagram pause |
-| 2026-11-24 | `3c30309` | stories shared / Instagram pause |
-| 2026-11-24 | `087cfc1` | goldrate posted |
-| 2026-11-24 | `5c74398` | stories shared / Instagram pause |
-| 2026-11-24 | `24b51c0` | facebook RN-651 |
-| 2026-11-24 | `56a042b` | posted RN-651 |
-| 2026-11-24 | `7837088` | stories shared / Instagram pause |
-| 2026-11-24 | `84a862f` | stories shared / Instagram pause |
-| 2026-11-24 | `60b2a74` | facebook RN-652 |
-| 2026-11-24 | `236d31e` | posted RN-652 |
-| 2026-11-24 | `c80413c` | stories shared / Instagram pause |
-| 2026-11-24 | `a21bdfa` | stories shared / Instagram pause |
-| 2026-11-24 | `666ec46` | facebook RN-647 |
-| 2026-11-24 | `842fdc3` | posted RN-647 |
-| 2026-11-24 | `6f4ffe8` | stories shared / Instagram pause |
-| 2026-11-24 | `f80301c` | stories shared / Instagram pause |
+| 2026-11-24 | `b0823c2` | Fixes: Facebook 24-hour-limit news wait or are e-mailed (never silently skipped); slow sheet reads get more time; YouTube stops for the whole day after its quota; YouTube tests use today's date |
+| 2026-11-24 | `2d49578` | autofix: corrected held news |
+| 2026-11-24 | `0ba3cb1` | stories shared / Instagram pause |
+| 2026-11-24 | `275fbb5` | stories shared / Instagram pause |
+| 2026-11-24 | `9df44d3` | stories shared / Instagram pause |
+| 2026-11-24 | `9d04a03` | stories shared / Instagram pause |
+| 2026-11-24 | `8ee8aae` | stories shared / Instagram pause |
+| 2026-11-24 | `0dc7ba9` | facebook RN-671 |
+| 2026-11-24 | `8d0cfdc` | posted RN-671 |
+| 2026-11-24 | `ee074c9` | stories shared / Instagram pause |
+| 2026-11-24 | `be6b748` | stories shared / Instagram pause |
+| 2026-11-24 | `1b6b2e5` | facebook RN-667 |
+| 2026-11-24 | `7ab7782` | posted RN-667 |
+| 2026-11-24 | `2cc5818` | stories shared / Instagram pause |
+| 2026-11-24 | `73db16c` | stories shared / Instagram pause |
+| 2026-11-24 | `2798dc3` | facebook RN-661 |
+| 2026-11-24 | `e8f49d3` | posted RN-661 |
+| 2026-11-24 | `1a37ddd` | stories shared / Instagram pause |
+| 2026-11-24 | `e879403` | stories shared / Instagram pause |
+| 2026-11-24 | `fc2f80e` | facebook RN-662 |
+| 2026-11-24 | `603451b` | posted RN-662 |
+| 2026-11-24 | `eb044a3` | stories shared / Instagram pause |
+| 2026-11-24 | `0f9f74c` | stories shared / Instagram pause |
+| 2026-11-24 | `e9d91b2` | facebook RN-658 |
+| 2026-11-24 | `1e77079` | posted RN-658 |
+| 2026-11-24 | `6614877` | manual post e-mail RN-671 |
+| 2026-11-24 | `0168699` | stories shared / Instagram pause |
+| 2026-11-24 | `76912de` | stories shared / Instagram pause |
+| 2026-11-24 | `8e40f0d` | facebook RN-659 |
+| 2026-11-24 | `c347625` | posted RN-659 |
 <!-- recent-changes:end -->
