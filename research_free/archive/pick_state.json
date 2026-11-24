@@ -379,7 +379,8 @@
    "score": 9.0,
    "power_cut": false,
    "late_listed": true,
-   "listed_at": "2026-11-25T05:06:27.947783+05:30"
+   "listed_at": "2026-11-25T05:06:27.947783+05:30",
+   "picked_at": "2026-11-25T05:07:24.774145+05:30"
   },
   "C3c80c21": {
    "id": "C3c80c21",
@@ -392,7 +393,8 @@
    "score": 4.7,
    "power_cut": false,
    "late_listed": true,
-   "listed_at": "2026-11-25T05:06:27.947783+05:30"
+   "listed_at": "2026-11-25T05:06:27.947783+05:30",
+   "picked_at": "2026-11-25T05:07:24.774149+05:30"
   },
   "Cae01b78": {
    "id": "Cae01b78",
@@ -405,7 +407,8 @@
    "score": 4.0,
    "power_cut": false,
    "late_listed": true,
-   "listed_at": "2026-11-25T05:06:27.947783+05:30"
+   "listed_at": "2026-11-25T05:06:27.947783+05:30",
+   "picked_at": "2026-11-25T05:07:24.774147+05:30"
   }
  },
  "rounds": {
@@ -1382,8 +1385,20 @@
    ],
    "sent": false,
    "deadline": "2026-11-25T06:06:27.947783+05:30",
-   "decided": null,
-   "written": []
+   "decided": {
+    "how": "automatic: top 7 of 3 by insights",
+    "ids": [
+     "C44d31f0",
+     "Cae01b78",
+     "C3c80c21"
+    ],
+    "at": "2026-11-25T05:07:24.774135+05:30"
+   },
+   "written": [
+    "C3c80c21",
+    "C44d31f0",
+    "Cae01b78"
+   ]
   }
  },
  "retry": {}
