@@ -1,88 +1,140 @@
-writing [N]: பறவைக் காய்ச்சல் எதிரொலி: கோவையில் 12 சோதனைச்சாவடிகளில் 24 ம
+writing [N]: கோவை குடிநீர் பிரச்னைக்கு ரூ.18 கோடியில் தீர்வு.. இனி தண்ணீர
+writing [N]: Coimbatore Day: அன்று வாழத் தகுதியற்ற இடம்... இன்று `தென்னிந
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3.6-flash (43s)
-attempt 1 gemini/gemini-3.6-flash: 1 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-ok gemini/gemini-3.5-flash (35s)
-attempt 2 gemini/gemini-3.5-flash: 1 problems
-  reel_script has 93 words; need 94-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
 ok gemini/gemini-3-flash-preview (11s)
-attempt 3 gemini/gemini-3-flash-preview: 1 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 49 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் '); 53 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் '); 650 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் '); 50 ('பாதுகாப்பு காரணங்களுக்காக அணையின் நீர்மட்டம் 44 முதல் 44.50 '); 08 ('அதைத் தொடர்ந்து தமிழ்நாடு குடிநீர் வடிகால் வாரியம், கேரள நீர'); 01 ('அதைத் தொடர்ந்து தமிழ்நாடு குடிநீர் வடிகால் வாரியம், கேரள நீர')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3-flash-preview (16s)
+attempt 2 gemini/gemini-3-flash-preview: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 08 ('அதைத் தொடர்ந்து தமிழ்நாடு குடிநீர் வடிகால் வாரியம், கேரள நீர'); 01 ('அதைத் தொடர்ந்து தமிழ்நாடு குடிநீர் வடிகால் வாரியம், கேரள நீர'); 05 ('கடந்த 15.05.2026 அன்று நடைபெற்ற 30-வது கூட்டுக் கட்டுப்பாட்ட'); 30 ('கடந்த 15.05.2026 அன்று நடைபெற்ற 30-வது கூட்டுக் கட்டுப்பாட்ட')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+switching away from gemini/gemini-3.6-flash for 10 min
 fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+ok gemini/gemini-3-flash-preview (12s)
+attempt 3 gemini/gemini-3-flash-preview: 4 problems
+  hl1 is 44 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption needs 5 hashtags (Instagram max), has 6
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 49 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் '); 53 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் '); 50 ('பாதுகாப்பு காரணங்களுக்காக அணையின் நீர்மட்டம் 44 முதல் 44.50 '); 125 ('இந்த புனரமைப்புப் பணிகள் நிறைவடையும் பட்சத்தில், அணையில் கூட'); 49 ('இந்த புனரமைப்புப் பணிகள் நிறைவடையும் பட்சத்தில், அணையில் கூட'); 50 ('இந்த புனரமைப்புப் பணிகள் நிறைவடையும் பட்சத்தில், அணையில் கூட')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
-  hl1 is 41 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
-  reel_script has 78 words; need 94-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): பேரூர் ('ஆங்கிலேயர்கள் ஆட்சிக்கு முன்பு வரை பேரூர் நாட்டின் ஒரு பகுதி'); ஆர்.எஸ்.புரம் ('பின்னர் நகரம் விரிவாக்கம் செய்யப்பட்டு, ஆர்.எஸ்.புரம், ராம்ந'); 1862 ('பின்னர் 1862ல் சென்னையின் கிழக்குக் கடற்கரையையும், மங்களூரின'); 1882 ('பின்னர் 1862ல் சென்னையின் கிழக்குக் கடற்கரையையும், மங்களூரின'); போத்தனூர் ('பின்னர் 1862ல் சென்னையின் கிழக்குக் கடற்கரையையும், மங்களூரின')
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'சிறுவாணி அணை' and the news itself, e.g. 'சிறுவாணி அணை-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 53 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் ')
 ok anthropic/claude-haiku-5-5
 claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  hl1 is 48 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
-  reel_script has 88 words; need 94-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script has 99 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 200 ('200 ஆண்டுகளுக்கு முன்பு வரை எவ்வித முக்கியத்துவமும் இல்லாத க')
 ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 08 ('அதைத் தொடர்ந்து தமிழ்நாடு குடிநீர் வடிகால் வாரியம், கேரள நீர'); 01 ('அதைத் தொடர்ந்து தமிழ்நாடு குடிநீர் வடிகால் வாரியம், கேரள நீர'); 05 ('கடந்த 15.05.2026 அன்று நடைபெற்ற 30-வது கூட்டுக் கட்டுப்பாட்ட')
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  reel_script has 80 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+  numbers not found in the article: 222
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/openai/gpt-oss-120b (5s)
-factcheck by groq/openai/gpt-oss-120b: 1 problems
-  The reel_script’s list of the 12 test checkpoints omits the checkpoint 'வாளையாறு' that is mentioned in the article
+ok groq/qwen/qwen3.8-27b (4s)
+proofread rejected (2 problems)
+  hl1 (the first headline on screen) must name the place 'கோயம்புத்தூர்', e.g. 'கோயம்புத்தூர்: ...' or 'கோயம்புத்தூர்-இல் ...' - viewers share news of their own area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): பேரூர் ('ஆங்கிலேயர்கள் ஆட்சிக்கு முன்பு வரை பேரூர் நாட்டின் ஒரு பகுதி'); ஆர்.எஸ்.புரம் ('பின்னர் நகரம் விரிவாக்கம் செய்யப்பட்டு, ஆர்.எஸ்.புரம், ராம்ந'); 1862 ('பின்னர் 1862ல் சென்னையின் கிழக்குக் கடற்கரையையும், மங்களூரின'); 1882 ('பின்னர் 1862ல் சென்னையின் கிழக்குக் கடற்கரையையும், மங்களூரின'); போத்தனூர் ('பின்னர் 1862ல் சென்னையின் கிழக்குக் கடற்கரையையும், மங்களூரின')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  fact-check: The reel_script’s list of the 12 test checkpoints omits the checkpoint 'வாளையாறு' that is mentioned in the article
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 53 ('இரு மாநிலங்களுக்கு இடையேயான ஒப்பந்தத்தின்படி, கோவை மக்களின் ')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
+ok groq/qwen/qwen3.8-27b (4s)
+proofread rejected (3 problems)
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+switching away from groq/qwen/qwen3.8-27b for 10 min
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1071. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok groq/qwen/qwen3.8-27b (1s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+ok anthropic/claude-haiku-5-5
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:ge
 real photo: vision check out of free quota
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Bird flu alert: 24-hour monitoring at 12'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-1011","first":"RN-672"}
+images made: 2 for 'Coimbatore Day, 24 November: from an unf'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-1153","first":"RN-673"}
 posting job started at once
+real photo: vision check resting (free quota busy)
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 503 Server Error: Service Unavailable for url: https://generativelanguage.googleapis.com/v1beta/models
+images made: 2 for 'Tamil Nadu sanctions Rs.18 crore to repa'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261124-1154","first":"RN-674"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 pick round: only the picked links are written (research_free/pick.py)
-manual link added: https://www.hindutamil.in/news/tamilnadu/bird-flu-alert-24-hour-surveillance-intensified-at-12-checkposts-in-coimbatore
-candidate filter: collected=1
-to write: 1 Coimbatore district candidates (max 1 stories)
-round: top 1 of 1 candidates
-candidates waiting: 1 Coimbatore; time left 79 min
-try (N) manual=True: https://www.hindutamil.in/news/tamilnadu/bird-flu-alert-24-h
+manual link added: https://tamil.abplive.com/news/coimbatore/rs-18-crore-solution-for-coimbatores-drinking-water-issue-tn-govt-order-to-solve-wastage-of-water-from-siruvani-280418
+manual link added: https://www.vikatan.com/government-and-politics/interesting-facts-about-coimbatore-as-it-celebrates-its-222nd-birthday-today
+candidate filter: collected=2
+to write: 2 Coimbatore district candidates (max 2 stories)
+round: top 2 of 2 candidates
+candidates waiting: 2 Coimbatore; time left 79 min
+try (N) manual=True: https://www.vikatan.com/government-and-politics/interesting-
+try (N) manual=True: https://tamil.abplive.com/news/coimbatore/rs-18-crore-soluti
 auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
 posting job started at once
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 77 min
-filed: 1 Coimbatore district stories (target 1), reels only
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 2}, time left 76 min
+filed: 2 Coimbatore district stories (target 2), reels only
 queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":1,"updated":0} 
-stories: 1
+All News sheet: {"ok":true,"added":2,"updated":0} 
+stories: 2
