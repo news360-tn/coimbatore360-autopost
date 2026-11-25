@@ -81,6 +81,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `12a4e01` | R2 free-tier safety: at most 300 MB and 400 files per page per day, 100 MB per file; usage read from the bucket before each upload; over a limit R2 is skipped until tomorrow |
+| 2026-11-25 | `24c0577` | stories shared / Instagram pause |
+| 2026-11-25 | `69ec840` | stories shared / Instagram pause |
+| 2026-11-25 | `548f9c0` | powercut: notices written |
+| 2026-11-25 | `11cdf85` | stories shared / Instagram pause |
 | 2026-11-25 | `22e3cc0` | Watchdog: ignore the shared rasipalan text files (rasis_*.json) - they stopped the watchdog on every run |
 | 2026-11-25 | `654e01e` | facebook RN-692 |
 | 2026-11-25 | `5faac64` | posted RN-692 |
@@ -106,9 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `474173d` | pick: written and posted |
 | 2026-11-25 | `b888b0f` | pick: picked news saved |
 | 2026-11-25 | `ede6958` | pick: list sent |
-| 2026-11-25 | `38503f1` | stories shared / Instagram pause |
-| 2026-11-25 | `5ce85ef` | R2 check: manual workflow that uploads a test file and reads it back |
-| 2026-11-25 | `81badbc` | stories shared / Instagram pause |
-| 2026-11-25 | `705c637` | stories shared / Instagram pause |
-| 2026-11-25 | `d369eb5` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
