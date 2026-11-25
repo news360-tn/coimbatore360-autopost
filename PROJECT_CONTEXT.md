@@ -81,6 +81,18 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `71d07a7` | R2: accept the Account ID pasted as a link or with spaces; clear message when it is another value |
+| 2026-11-25 | `3ccb5b5` | stories shared / Instagram pause |
+| 2026-11-25 | `dd5d0c8` | stories shared / Instagram pause |
+| 2026-11-25 | `43d83e3` | stories shared / Instagram pause |
+| 2026-11-25 | `20be7c2` | stories shared / Instagram pause |
+| 2026-11-25 | `b7274b6` | stories shared / Instagram pause |
+| 2026-11-25 | `196a1e9` | stories shared / Instagram pause |
+| 2026-11-25 | `ec4fc31` | stories shared / Instagram pause |
+| 2026-11-25 | `474173d` | pick: written and posted |
+| 2026-11-25 | `b888b0f` | pick: picked news saved |
+| 2026-11-25 | `ede6958` | pick: list sent |
+| 2026-11-25 | `38503f1` | stories shared / Instagram pause |
 | 2026-11-25 | `5ce85ef` | R2 check: manual workflow that uploads a test file and reads it back |
 | 2026-11-25 | `81badbc` | stories shared / Instagram pause |
 | 2026-11-25 | `705c637` | stories shared / Instagram pause |
@@ -99,16 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `f1746a6` | stories shared / Instagram pause |
 | 2026-11-25 | `9b97e33` | stories shared / Instagram pause |
 | 2026-11-25 | `e9fdeb0` | stories shared / Instagram pause |
-| 2026-11-25 | `cbb0fe8` | pick: written and posted |
-| 2026-11-25 | `b9449f3` | pick: picked news saved |
-| 2026-11-25 | `1b2ecac` | pick: list sent |
-| 2026-11-25 | `a49fd5f` | stories shared / Instagram pause |
-| 2026-11-25 | `e0fcecb` | stories shared / Instagram pause |
-| 2026-11-25 | `a1aaa38` | stories shared / Instagram pause |
-| 2026-11-25 | `688167e` | stories shared / Instagram pause |
-| 2026-11-25 | `8b978f3` | stories shared / Instagram pause |
-| 2026-11-25 | `895efd8` | stories shared / Instagram pause |
-| 2026-11-25 | `4fa8a0f` | goldrate posted |
-| 2026-11-25 | `1746030` | stories shared / Instagram pause |
-| 2026-11-25 | `4b22ff8` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
