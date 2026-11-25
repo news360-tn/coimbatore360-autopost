@@ -81,6 +81,15 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `5a36a40` | Per-post e-mail for every post, at most 60 a day for all 7 pages together (one Gmail account); later posts are in the daily summary |
+| 2026-11-25 | `b8b5f09` | stories shared / Instagram pause |
+| 2026-11-25 | `e1025d4` | stories shared / Instagram pause |
+| 2026-11-25 | `a8c953a` | autofix: corrected held news |
+| 2026-11-25 | `c6c83d9` | stories shared / Instagram pause |
+| 2026-11-25 | `df1db56` | stories shared / Instagram pause |
+| 2026-11-25 | `de4ba51` | stories shared / Instagram pause |
+| 2026-11-25 | `d36e201` | stories shared / Instagram pause |
+| 2026-11-25 | `a212fb2` | stories shared / Instagram pause |
 | 2026-11-25 | `7ea555e` | R2: one folder per page (the repository name) in every job, so the 24-hour clean-up finds every file |
 | 2026-11-25 | `e9793f0` | Clean-up keeps 24 hours only: Cloudflare R2 (this page's folder), Cloudinary and the media/ fallback folder |
 | 2026-11-25 | `fd46719` | stories shared / Instagram pause |
@@ -102,13 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `a6a545c` | stories shared / Instagram pause |
 | 2026-11-25 | `dff04f0` | rasipalan posted |
 | 2026-11-25 | `4cdd749` | stories shared / Instagram pause |
-| 2026-11-25 | `703f2ab` | stories shared / Instagram pause |
-| 2026-11-25 | `71d07a7` | R2: accept the Account ID pasted as a link or with spaces; clear message when it is another value |
-| 2026-11-25 | `3ccb5b5` | stories shared / Instagram pause |
-| 2026-11-25 | `dd5d0c8` | stories shared / Instagram pause |
-| 2026-11-25 | `43d83e3` | stories shared / Instagram pause |
-| 2026-11-25 | `20be7c2` | stories shared / Instagram pause |
-| 2026-11-25 | `b7274b6` | stories shared / Instagram pause |
-| 2026-11-25 | `196a1e9` | stories shared / Instagram pause |
-| 2026-11-25 | `ec4fc31` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
