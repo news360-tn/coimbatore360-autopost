@@ -1,17 +1,17 @@
-07:04:52 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
-07:04:52 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-07:04:55 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-07:05:04 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-07:05:07 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-07:05:17 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
-07:05:21 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
-07:05:41 location re-check failed (stays held): RN-483 429 Client Error: Too Many Requests for url: https://covaimail.com/power-shutdow
-07:05:46 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-07:05:49 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-07:05:50 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-07:05:54 3 held news to fix: ['RN-669', 'RN-672', 'RN-677']
+11:09:32 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
+11:09:33 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+11:09:35 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+11:09:45 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+11:09:48 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+11:09:57 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
+11:10:02 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
+11:10:05 hold lifted: RN-483 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+11:10:12 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+11:10:15 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+11:10:17 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+11:10:20 3 held news to fix: ['RN-669', 'RN-672', 'RN-677']
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -22,11 +22,14 @@ fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
-07:06:55 RN-669 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
+11:10:21 RN-669 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
