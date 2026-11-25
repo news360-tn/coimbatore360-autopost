@@ -81,6 +81,10 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `fa33f9e` | One e-mail per news with its Instagram, Facebook and YouTube links (sent when all three are done or after 45 minutes; max 60 a day for all pages); YouTube follows Instagram: 5-minute gap, 05:00-24:00 IST, up to 30 a day |
+| 2026-11-25 | `f840314` | stories shared / Instagram pause |
+| 2026-11-25 | `af936f1` | facebook RN-672 |
+| 2026-11-25 | `d07b426` | posted RN-672 |
 | 2026-11-25 | `5a36a40` | Per-post e-mail for every post, at most 60 a day for all 7 pages together (one Gmail account); later posts are in the daily summary |
 | 2026-11-25 | `b8b5f09` | stories shared / Instagram pause |
 | 2026-11-25 | `e1025d4` | stories shared / Instagram pause |
@@ -107,8 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `4e6c726` | stories shared / Instagram pause |
 | 2026-11-25 | `997bd3d` | comments: normal comments recorded (not e-mailed) |
 | 2026-11-25 | `5daa00b` | stories shared / Instagram pause |
-| 2026-11-25 | `04084b9` | stories shared / Instagram pause |
-| 2026-11-25 | `a6a545c` | stories shared / Instagram pause |
-| 2026-11-25 | `dff04f0` | rasipalan posted |
-| 2026-11-25 | `4cdd749` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
