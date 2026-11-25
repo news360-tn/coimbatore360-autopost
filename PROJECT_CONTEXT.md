@@ -81,6 +81,7 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `aae8dc4` | Platform text: Facebook news caption short (headline + 3 lines + source) with the Tamil district tag; YouTube title ~70 chars with an English search word, 3 hashtags first, Subscribe line, Tamil language |
 | 2026-11-25 | `7ca0287` | YouTube: the Instagram source comment (source + link) at the top of each Short's description |
 | 2026-11-25 | `9926c29` | stories shared / Instagram pause |
 | 2026-11-25 | `9fd5c75` | goldrate posted |
@@ -110,5 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `7ea555e` | R2: one folder per page (the repository name) in every job, so the 24-hour clean-up finds every file |
 | 2026-11-25 | `e9793f0` | Clean-up keeps 24 hours only: Cloudflare R2 (this page's folder), Cloudinary and the media/ fallback folder |
 | 2026-11-25 | `fd46719` | stories shared / Instagram pause |
-| 2026-11-25 | `12a4e01` | R2 free-tier safety: at most 300 MB and 400 files per page per day, 100 MB per file; usage read from the bucket before each upload; over a limit R2 is skipped until tomorrow |
 <!-- recent-changes:end -->
