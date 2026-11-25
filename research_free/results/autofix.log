@@ -1,21 +1,17 @@
-23:04:20 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
-23:04:20 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-23:04:24 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-23:04:33 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-23:04:35 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-23:04:45 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
-23:04:50 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
-23:05:13 location re-check failed (stays held): RN-483 429 Client Error: Too Many Requests for url: https://covaimail.com/power-shutdow
-23:05:20 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-23:05:22 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-23:05:24 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-23:05:27 4 held news to fix: ['RN-645', 'RN-669', 'RN-672', 'RN-677']
+07:04:52 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
+07:04:52 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+07:04:55 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+07:05:04 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+07:05:07 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+07:05:17 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
+07:05:21 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
+07:05:41 location re-check failed (stays held): RN-483 429 Client Error: Too Many Requests for url: https://covaimail.com/power-shutdow
+07:05:46 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+07:05:49 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+07:05:50 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+07:05:54 3 held news to fix: ['RN-669', 'RN-672', 'RN-677']
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -28,24 +24,9 @@ fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
 dead for this round: gemini/gemini-3.5-flash
 fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
 poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
-ok groq/qwen/qwen3.8-27b (3s)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-ok groq/openai/gpt-oss-120b (2s)
-factcheck by groq/openai/gpt-oss-120b: 1 problems
-  Reel script omits the article’s key purpose of encouraging students to become successful entrepreneurs (வெற்றிகரமான தொழில் முனைவோர்களாக்க ஊக்குவிக்கும்)
-attempt 1 groq/qwen/qwen3.8-27b: 1 problems
-  fact-check: Reel script omits the article’s key purpose of encouraging students to become successful entrepreneurs (வெற்றிகரமான தொழில் முனைவோர்களாக்க ஊக்குவிக்கும்)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-switching away from groq/openai/gpt-oss-120b for 10 min
+dead for this round: groq/openai/gpt-oss-120b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
+dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
-23:08:31 RN-645 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
+07:06:55 RN-669 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
