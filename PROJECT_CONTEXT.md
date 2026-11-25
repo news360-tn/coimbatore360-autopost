@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-24 | `193fdc4` | Facebook post text without the outside article link (less reach); the link stays in the first comment, the paper name and date stay |
-| 2026-11-24 | `4c7f3df` | stories shared / Instagram pause |
-| 2026-11-24 | `c1525b4` | stories shared / Instagram pause |
-| 2026-11-24 | `9d1b072` | stories shared / Instagram pause |
-| 2026-11-24 | `f97984f` | stories shared / Instagram pause |
-| 2026-11-24 | `e76fbfc` | stories shared / Instagram pause |
-| 2026-11-24 | `00da361` | stories shared / Instagram pause |
-| 2026-11-24 | `0a94c87` | stories shared / Instagram pause |
-| 2026-11-24 | `877916d` | stories shared / Instagram pause |
-| 2026-11-24 | `1b7a4a9` | pick: written and posted |
-| 2026-11-24 | `781b1c9` | pick: picked news saved |
-| 2026-11-24 | `f82f73c` | pick: picked news saved |
-| 2026-11-24 | `8769a0e` | pick: list sent |
-| 2026-11-24 | `cb6c734` | stories shared / Instagram pause |
-| 2026-11-24 | `137e933` | stories shared / Instagram pause |
-| 2026-11-24 | `f3d97dc` | stories shared / Instagram pause |
-| 2026-11-24 | `7808eff` | stories shared / Instagram pause |
-| 2026-11-24 | `a1e158a` | stories shared / Instagram pause |
-| 2026-11-24 | `eef7215` | stories shared / Instagram pause |
-| 2026-11-24 | `232f8e7` | stories shared / Instagram pause |
-| 2026-11-24 | `003c296` | stories shared / Instagram pause |
-| 2026-11-24 | `16cac27` | stories shared / Instagram pause |
-| 2026-11-24 | `c574c20` | stories shared / Instagram pause |
-| 2026-11-24 | `a6575bc` | stories shared / Instagram pause |
-| 2026-11-24 | `3a4120e` | autofix: corrected held news |
-| 2026-11-24 | `0548406` | stories shared / Instagram pause |
-| 2026-11-24 | `18e6624` | stories shared / Instagram pause |
-| 2026-11-24 | `c0103ef` | stories shared / Instagram pause |
-| 2026-11-24 | `bd6283b` | stories shared / Instagram pause |
-| 2026-11-24 | `a50e16b` | stories shared / Instagram pause |
+| 2026-11-25 | `6496f81` | Rasipalan: each page keeps the day's 12 rasi texts; when every AI writer is busy, a page uses the text another 360 page wrote that day |
+| 2026-11-25 | `80b01b5` | stories shared / Instagram pause |
+| 2026-11-25 | `d55353c` | stories shared / Instagram pause |
+| 2026-11-25 | `e8cbf22` | autofix: corrected held news |
+| 2026-11-25 | `aedacbc` | stories shared / Instagram pause |
+| 2026-11-25 | `f1746a6` | stories shared / Instagram pause |
+| 2026-11-25 | `9b97e33` | stories shared / Instagram pause |
+| 2026-11-25 | `e9fdeb0` | stories shared / Instagram pause |
+| 2026-11-25 | `cbb0fe8` | pick: written and posted |
+| 2026-11-25 | `b9449f3` | pick: picked news saved |
+| 2026-11-25 | `1b2ecac` | pick: list sent |
+| 2026-11-25 | `a49fd5f` | stories shared / Instagram pause |
+| 2026-11-25 | `e0fcecb` | stories shared / Instagram pause |
+| 2026-11-25 | `a1aaa38` | stories shared / Instagram pause |
+| 2026-11-25 | `688167e` | stories shared / Instagram pause |
+| 2026-11-25 | `8b978f3` | stories shared / Instagram pause |
+| 2026-11-25 | `895efd8` | stories shared / Instagram pause |
+| 2026-11-25 | `4fa8a0f` | goldrate posted |
+| 2026-11-25 | `1746030` | stories shared / Instagram pause |
+| 2026-11-25 | `4b22ff8` | stories shared / Instagram pause |
+| 2026-11-25 | `5a0ec8a` | stories shared / Instagram pause |
+| 2026-11-25 | `4280ff9` | stories shared / Instagram pause |
+| 2026-11-25 | `1d04ad8` | stories shared / Instagram pause |
+| 2026-11-25 | `cd54b57` | stories shared / Instagram pause |
+| 2026-11-25 | `bf68c19` | stories shared / Instagram pause |
+| 2026-11-25 | `da4ecf2` | stories shared / Instagram pause |
+| 2026-11-25 | `4a14529` | stories shared / Instagram pause |
+| 2026-11-25 | `b0385b1` | stories shared / Instagram pause |
+| 2026-11-25 | `011933b` | pick: written and posted |
+| 2026-11-25 | `bf1d887` | pick: picked news saved |
 <!-- recent-changes:end -->
