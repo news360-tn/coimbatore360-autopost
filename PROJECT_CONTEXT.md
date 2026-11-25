@@ -81,6 +81,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `f1365af` | After a posting error wait 10 minutes before the next try (Instagram, Facebook, YouTube); YouTube and Facebook 20 a day; rasipalan and gold rate on YouTube too, first, outside the 20 |
+| 2026-11-25 | `72cfe20` | pick: picked news saved |
+| 2026-11-25 | `795a303` | pick: picked news saved |
+| 2026-11-25 | `6840759` | pick: list sent |
+| 2026-11-25 | `6498281` | stories shared / Instagram pause |
 | 2026-11-25 | `e1d1ba0` | Posting order: power cut / shutdown first, then High, then the topic this page's insights rank best, then oldest first |
 | 2026-11-25 | `1654341` | facebook RN-669 |
 | 2026-11-25 | `400bca9` | posted RN-669 |
@@ -106,9 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `24c0577` | stories shared / Instagram pause |
 | 2026-11-25 | `69ec840` | stories shared / Instagram pause |
 | 2026-11-25 | `548f9c0` | powercut: notices written |
-| 2026-11-25 | `11cdf85` | stories shared / Instagram pause |
-| 2026-11-25 | `22e3cc0` | Watchdog: ignore the shared rasipalan text files (rasis_*.json) - they stopped the watchdog on every run |
-| 2026-11-25 | `654e01e` | facebook RN-692 |
-| 2026-11-25 | `5faac64` | posted RN-692 |
-| 2026-11-25 | `048f0af` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
