@@ -81,6 +81,20 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-25 | `22e3cc0` | Watchdog: ignore the shared rasipalan text files (rasis_*.json) - they stopped the watchdog on every run |
+| 2026-11-25 | `654e01e` | facebook RN-692 |
+| 2026-11-25 | `5faac64` | posted RN-692 |
+| 2026-11-25 | `048f0af` | stories shared / Instagram pause |
+| 2026-11-25 | `5af538a` | powercut: notices written |
+| 2026-11-25 | `d4ae9d6` | stories shared / Instagram pause |
+| 2026-11-25 | `4e6c726` | stories shared / Instagram pause |
+| 2026-11-25 | `997bd3d` | comments: normal comments recorded (not e-mailed) |
+| 2026-11-25 | `5daa00b` | stories shared / Instagram pause |
+| 2026-11-25 | `04084b9` | stories shared / Instagram pause |
+| 2026-11-25 | `a6a545c` | stories shared / Instagram pause |
+| 2026-11-25 | `dff04f0` | rasipalan posted |
+| 2026-11-25 | `4cdd749` | stories shared / Instagram pause |
+| 2026-11-25 | `703f2ab` | stories shared / Instagram pause |
 | 2026-11-25 | `71d07a7` | R2: accept the Account ID pasted as a link or with spaces; clear message when it is another value |
 | 2026-11-25 | `3ccb5b5` | stories shared / Instagram pause |
 | 2026-11-25 | `dd5d0c8` | stories shared / Instagram pause |
@@ -97,18 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-25 | `81badbc` | stories shared / Instagram pause |
 | 2026-11-25 | `705c637` | stories shared / Instagram pause |
 | 2026-11-25 | `d369eb5` | stories shared / Instagram pause |
-| 2026-11-25 | `5dfaba5` | Cloudflare R2 (one shared bucket news360-media) replaces Cloudinary: R2 first, then Cloudinary, then the repo; nothing changes until the R2 secrets are saved; manual-post test uses today's date |
-| 2026-11-25 | `fc81fe3` | stories shared / Instagram pause |
-| 2026-11-25 | `12e6845` | stories shared / Instagram pause |
-| 2026-11-25 | `e4423a6` | stories shared / Instagram pause |
-| 2026-11-25 | `0aa3e0a` | stories shared / Instagram pause |
-| 2026-11-25 | `49ee442` | stories shared / Instagram pause |
-| 2026-11-25 | `6496f81` | Rasipalan: each page keeps the day's 12 rasi texts; when every AI writer is busy, a page uses the text another 360 page wrote that day |
-| 2026-11-25 | `80b01b5` | stories shared / Instagram pause |
-| 2026-11-25 | `d55353c` | stories shared / Instagram pause |
-| 2026-11-25 | `e8cbf22` | autofix: corrected held news |
-| 2026-11-25 | `aedacbc` | stories shared / Instagram pause |
-| 2026-11-25 | `f1746a6` | stories shared / Instagram pause |
-| 2026-11-25 | `9b97e33` | stories shared / Instagram pause |
-| 2026-11-25 | `e9fdeb0` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
