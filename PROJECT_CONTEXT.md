@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-26 | `e1b8b4b` | Website gets each story's kind of news (safe note like the source comment) |
-| 2026-11-26 | `1b77ad8` | stories shared / Instagram pause |
-| 2026-11-26 | `791a992` | powercut: notices written |
-| 2026-11-26 | `5db0dd1` | stories shared / Instagram pause |
-| 2026-11-26 | `213a057` | stories shared / Instagram pause |
-| 2026-11-26 | `d853569` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-26 | `5ec7fc7` | stories shared / Instagram pause |
-| 2026-11-26 | `6da5d95` | stories shared / Instagram pause |
-| 2026-11-26 | `5f44cfe` | autofix: corrected held news |
-| 2026-11-26 | `b637583` | stories shared / Instagram pause |
-| 2026-11-26 | `82d050f` | stories shared / Instagram pause |
-| 2026-11-26 | `fdf0c81` | stories shared / Instagram pause |
-| 2026-11-26 | `fa31636` | stories shared / Instagram pause |
-| 2026-11-26 | `dfaf1b7` | stories shared / Instagram pause |
-| 2026-11-26 | `2fb16c9` | stories shared / Instagram pause |
-| 2026-11-26 | `94513fd` | stories shared / Instagram pause |
-| 2026-11-26 | `386c812` | stories shared / Instagram pause |
-| 2026-11-26 | `a32e3ca` | stories shared / Instagram pause |
-| 2026-11-26 | `4c1c8f3` | pick: written and posted |
-| 2026-11-26 | `6c8981c` | pick: picked news saved |
-| 2026-11-26 | `8f00fee` | pick: picked news saved |
-| 2026-11-26 | `067e169` | pick: list sent |
-| 2026-11-26 | `6ca1f66` | stories shared / Instagram pause |
-| 2026-11-26 | `3b05f2f` | stories shared / Instagram pause |
-| 2026-11-26 | `4fe748d` | stories shared / Instagram pause |
-| 2026-11-26 | `c51be47` | stories shared / Instagram pause |
-| 2026-11-26 | `d37a6f9` | stories shared / Instagram pause |
-| 2026-11-26 | `6ad1a55` | Clean-up: with Cloudflare R2 set up, Cloudinary credit/login problems are yellow warnings (backup only) and no longer turn the run red |
-| 2026-11-26 | `71273bd` | stories shared / Instagram pause |
-| 2026-11-26 | `7f66fb0` | stories shared / Instagram pause |
+| 2026-11-26 | `283b7d1` | pick: picked news saved |
+| 2026-11-26 | `ae77fd6` | pick: picked news saved |
+| 2026-11-26 | `a6b1835` | pick: list sent |
+| 2026-11-26 | `cff8f5b` | stories shared / Instagram pause |
+| 2026-11-26 | `b2a96fd` | stories shared / Instagram pause |
+| 2026-11-26 | `6ac108c` | pick: written and posted |
+| 2026-11-26 | `a3df868` | facebook RN-704 |
+| 2026-11-26 | `38204ab` | posted RN-704 |
+| 2026-11-26 | `f689b1a` | stories shared / Instagram pause |
+| 2026-11-26 | `f598675` | stories shared / Instagram pause |
+| 2026-11-26 | `0aed3ba` | facebook RN-705 |
+| 2026-11-26 | `ee8411b` | posted RN-705 |
+| 2026-11-26 | `3639601` | stories shared / Instagram pause |
+| 2026-11-26 | `f3abee7` | manual post e-mail RN-705 |
+| 2026-11-26 | `6207aba` | manual post e-mail RN-704 |
+| 2026-11-26 | `0512187` | stories shared / Instagram pause |
+| 2026-11-26 | `ddb869a` | stories shared / Instagram pause |
+| 2026-11-26 | `2b5a125` | pick: picked news saved |
+| 2026-11-26 | `1269ea7` | pick: picked news saved |
+| 2026-11-26 | `b972d54` | pick: list sent |
+| 2026-11-26 | `edf77e8` | stories shared / Instagram pause |
+| 2026-11-26 | `e2b86f4` | stories shared / Instagram pause |
+| 2026-11-26 | `9d23a87` | stories shared / Instagram pause |
+| 2026-11-26 | `647534b` | stories shared / Instagram pause |
+| 2026-11-26 | `fbd53da` | stories shared / Instagram pause |
+| 2026-11-26 | `f4c6b09` | goldrate posted |
+| 2026-11-26 | `b5ef9a9` | stories shared / Instagram pause |
+| 2026-11-26 | `395e3e6` | stories shared / Instagram pause |
+| 2026-11-26 | `16af610` | stories shared / Instagram pause |
+| 2026-11-26 | `7e026fc` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
