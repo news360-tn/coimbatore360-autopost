@@ -8,6 +8,8 @@ permissions:
 env:
   BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
   BRIDGE_KEY: ${{ secrets.BRIDGE_KEY }}
+  FB_PAGE_ID_COIMBATORE: ${{ secrets.FB_PAGE_ID_COIMBATORE }}
+  FB_TOKEN_COIMBATORE: ${{ secrets.FB_TOKEN_COIMBATORE }}
 jobs:
   insights:
     runs-on: ubuntu-24.04
