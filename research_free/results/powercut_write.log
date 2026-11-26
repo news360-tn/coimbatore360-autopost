@@ -6504,3 +6504,186 @@ filed: 0 Coimbatore district stories (target 4), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":3,"updated":1} 
 stories: 0
+writing [N]: கோவை மாவட்டத்தில் நாளை (27-11-2026) மின்தடை: பல்வேறு பகுதிகள
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+writing [N]: கோவையில் நாளை (நவ.27) மின்தடை ஏற்படும் இடங்கள் - The Covai M
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3-flash-preview (34s)
+attempt 1 gemini/gemini-3-flash-preview: 3 problems
+  caption needs 5 hashtags (Instagram max), has 6
+  not grounded: location 'மாநகரம்' is not in the article
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 2 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+ok gemini/gemini-3-flash-preview (36s)
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (27-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+dead for this round: groq/qwen/qwen3.8-27b
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+ok groq/qwen/qwen3.8-27b (8s)
+attempt 2 groq/qwen/qwen3.8-27b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  hl1 (the first headline on screen) must name the place 'ரேஸ் கோர்ஸ்', e.g. 'ரேஸ் கோர்ஸ்: ...' or 'ரேஸ் கோர்ஸ்-இல் ...' - viewers share news of their own area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (27-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 26 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 2 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (27-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('கோவை மாவட்டத்தில் நாளை (27-11-2026) மின்தடை: பல்வேறு பகுதிகள')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+real photo skipped (photo uploaded 2026-07-02 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2026/07/02/1c136077d4aed641f179187
+real photo skipped (photo uploaded 2026-11-19 (older than the news)): https://cdn.abplive.com/onecms/images/uploaded-images/2026/11/19/1784c0ca0d5e42caba5b21178
+real photo skipped (photo uploaded 2025-05-04 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2025/05/04/baa3c4bb9c7d9c63868779a
+real photo skipped (photo uploaded 2024-06-01 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2024/06/01/30bb4f4955010c9438f31b5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'ரேஸ் கோர்ஸ்' and the news itself, e.g. 'ரேஸ் கோர்ஸ்-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 26 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி')
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+image match check unavailable: gemini-3.5-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout
+images made: 2 for 'Power cut tomorrow (27 Nov 2026) in part'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1834","first":"RN-707"}
+posting job started at once
+writing [N]: நாளைய மின்தடை: ரேஸ்கோா்ஸ்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free models unavailable: no free model answered: None
+writing [N]: நாளைய மின்தடை: அரசூா்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 0 problems
+claude rewrite 1 anthropic/claude-haiku-5-5: 0 problems
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  slides_spec 'என்ன செய்ய?' slide adds advice not in the article: 'மொபைல் சார்ஜ், குடிநீரை முன்பே பார்த்துக்கொள்ளுங்கள்' (charge phones and get drinking water in advance) is an invented detail
+  slides_spec 'என்ன செய்ய?' slide adds advice not in the article: 'மின்தடை நேரத்தில் மின் சாதனங்களை அணைத்து வையுங்கள்' (switch off electrical appliances during the outage) is an invented detail
+  reel_script adds the advice 'மின்சாதனங்களை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (prepare electrical appliances in advance), which is not stated in the article
+  caption adds the advice 'மின்சாதனங்கள், மொபைல் சார்ஜ், குடிநீரை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (mobile charge and drinking water), which is not in the article
+  reel_script says the outage lasts '5 மணி நேரம்', a duration that is derived rather than stated, and the article gives only the time window
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: slides_spec 'என்ன செய்ய?' slide adds advice not in the article: 'மொபைல் சார்ஜ், குடிநீரை முன்பே பார்த்துக்கொள்ளுங்கள்' (charge phones and get drinking water in advance) is an invented detail
+  fact-check: slides_spec 'என்ன செய்ய?' slide adds advice not in the article: 'மின்தடை நேரத்தில் மின் சாதனங்களை அணைத்து வையுங்கள்' (switch off electrical appliances during the outage) is an invented detail
+  fact-check: reel_script adds the advice 'மின்சாதனங்களை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (prepare electrical appliances in advance), which is not stated in the article
+  fact-check: caption adds the advice 'மின்சாதனங்கள், மொபைல் சார்ஜ், குடிநீரை முன்கூட்டியே தயார் செய்துகொள்ளுங்கள்' (mobile charge and drinking water), which is not in the article
+  fact-check: reel_script says the outage lasts '5 மணி நேரம்', a duration that is derived rather than stated, and the article gives only the time window
+ok anthropic/claude-haiku-5-5
+real photo skipped (photo uploaded 2026-01-31 (older than the news)): https://media.dinamani.com/dinamani/2026-01-31/t14nmocl/%E0%AE%AE%E0%AE%BF%E0%AE%A9%E0%AF%
+real photo skipped (photo uploaded 2026-01-31 (older than the news)): https://media.dinamani.com/dinamani/2026-01-31/t14nmocl/மின்தடை?w=1200&h=675&auto=format%2
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  The reel_script says 'நாளை' (tomorrow) for the power cut; the article gives the date as Friday, November 27, which is consistent with tomorrow only if the posting date matches, so this is not stated in the article and is a relative-date claim not supported by the article text.
+  The reel_script states the cut affects 'கோவை' generally in its opening line ('கோவையில் நாளை ... மின்தடை'), while the article limits it to the listed Ratescourse-area localities; the scope is overstated.
+  The reel_script omits 'அங்கண்ணன் வீதி' from the list of affected areas, which appears in the article.
+  The reel_script says the cut affects 'தாமஸ் பார்க், காமராஜர் சாலை, பந்தய சாலை... ஆகிய பகுதிகளில் மின்தடை இருக்கும்' while the slides and caption treat the same list; the tamil_headline says 'ரேஸ்கோர்ஸ் பகுதியில', which the article labels as the title area ('ரேஸ்கோா்ஸ்') rather than a verified affected zone, making the headline's scope claim unsupported.
+claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: The reel_script says 'நாளை' (tomorrow) for the power cut; the article gives the date as Friday, November 27, which is consistent with tomorrow only if the posting date matches, so this is not stated in the article and is a relative-date claim not supported by the article text.
+  fact-check: The reel_script states the cut affects 'கோவை' generally in its opening line ('கோவையில் நாளை ... மின்தடை'), while the article limits it to the listed Ratescourse-area localities; the scope is overstated.
+  fact-check: The reel_script omits 'அங்கண்ணன் வீதி' from the list of affected areas, which appears in the article.
+  fact-check: The reel_script says the cut affects 'தாமஸ் பார்க், காமராஜர் சாலை, பந்தய சாலை... ஆகிய பகுதிகளில் மின்தடை இருக்கும்' while the slides and caption treat the same list; the tamil_headline says 'ரேஸ்கோர்ஸ் பகுதியில', which the article labels as the title area ('ரேஸ்கோா்ஸ்') rather than a verified affected zone, making the headline's scope claim unsupported.
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Power cut tomorrow in Arasur area: 10 AM'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1834","first":"RN-708"}
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+earlier stories still waiting for images: []
+instagram check: 50 recent posts read from the page
+pick round: only the picked links are written (research_free/pick.py)
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/25/power-outage-tomorrow-race-course
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/25/%E0%AE%A8%E0%AE%BE%E0%AE%B3%E0%AF%88%E0%AE%AF-%E0%AE%AE%E0%AE%BF%E0%AE%A9%E0%AF%8D%E0%AE%A4%E0%AE%9F%E0%AF%88-%E0%AE%85%E0%AE%B0%E0%AE%9A%E0%AF%82%E0%AE%BE%E0%AF%8D-3
+manual link added: https://covaimail.com/power-shutdown-scheduled-to-take-place-in-coimbatore-on-27-november-2026
+manual link added: https://tamil.abplive.com/news/coimbatore/coimbatore-power-cut-27-11-2026-know-timings-areas-affected-by-power-shutdown-280606#district-section
+candidate filter: collected=4
+to write: 4 Coimbatore district candidates (max 4 stories)
+round: top 4 of 4 candidates
+candidates waiting: 4 Coimbatore; time left 39 min
+try (N) manual=True: https://tamil.abplive.com/news/coimbatore/coimbatore-power-c
+try (N) manual=True: https://covaimail.com/power-shutdown-scheduled-to-take-place
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
+posting job started at once
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi
+NOT filed (N) கோவையில் நாளை (நவ.27) மின்தடை ஏற்படும் இடங்கள் - T: duplicate after write
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})
+NOT filed (N) நாளைய மின்தடை: ரேஸ்கோா்ஸ்: duplicate after write
+candidate loop ended: left 0, tried={'N': 4}, done={'N': 2}, time left 37 min
+filed: 2 Coimbatore district stories (target 4), reels only
+queue: 0 news waiting to be written
+All News sheet: <!DOCTYPE html><html><head><script nonce="HL3HUuYUGL0XKll-OGN-Dw">window['ppConfig'] = {productName: 
+stories: 2
