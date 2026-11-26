@@ -1,6 +1,6 @@
-writing [N]: அகல்விளக்கு பதிப்பக உரிமையாளரை 3 நாள் போலீஸ் காவலில் விசாரிக
+writing [N]: உள் விளையாட்டு அரங்கத்துக்கு கட்டணம் நிர்ணயம்
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
   "error": {
     "code": 429,
@@ -18,21 +18,6 @@ fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
 dead for this round: gemini/gemini-3-flash-preview
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-writing [N]: திறன் மேம்பாட்டு பயிற்சியில் விவசாயிகளுக்கு விழிப்புணர்வு
-writing [N]: கல்லூரி செமஸ்டர் தேர்வுகளில் காப்பி அடிக்க ஏஐ உதவி: ஒரே இடத்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok groq/qwen/qwen3.8-27b (3s)
-attempt 1 groq/qwen/qwen3.8-27b: 1 problems
-  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'சென்னை சிறப்பு நீதிமன்றம்' and the news itself, e.g. 'சென்னை சிறப்பு நீதிமன்றம்-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
@@ -41,137 +26,61 @@ gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemin
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 92 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
-  reel_script has 97 words; need 99-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  hl1 (the first headline on screen) must name the place 'சென்னை சிறப்பு நீதிமன்றம்', e.g. 'சென்னை சிறப்பு நீதிமன்றம்: ...' or 'சென்னை சிறப்பு நீதிமன்றம்-இல் ...' - viewers share news of their own area
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 5 problems
-  reel_script says the training was given 'அருகே' Pollachi and states the training was 'நடைபெற்றது' near Pollachi — the article says the event took place in Samathur and Koolanaickenpatti areas, which the draft also mentions, so no conflict there; however, the reel_script's first sentence 'மண் வளம் குறித்த பயிற்சி' narrows the event to soil fertility while the article's main subject spans soil conservation, organic farming (vermicompost-like Jeevamirtham and neem solution) and maize crop training; this is a framing mix but not a factual error
-  reel_script's sentence 'மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்' is the fixed closing sentence and is exempt
-  tamil_headline and slides_spec describe the event as 'விவசாயிகளுக்கு மண் வள விழிப்புணர்வு பயிற்சி' / 'மண் வளம், இயற்கை வேளாண்மை', consistent with the article
-  the slides_spec 'hl1' and 'cat' fields mention 'பொள்ளாச்சி' and 'சமத்தூர்' consistently with the article
-  no arrests, numbers, amounts or dates are claimed in the body beyond the exempt posting-date line in the caption
-claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
-  fact-check: reel_script says the training was given 'அருகே' Pollachi and states the training was 'நடைபெற்றது' near Pollachi — the article says the event took place in Samathur and Koolanaickenpatti areas, which the draft also mentions, so no conflict there; however, the reel_script's first sentence 'மண் வளம் குறித்த பயிற்சி' narrows the event to soil fertility while the article's main subject spans soil conservation, organic farming (vermicompost-like Jeevamirtham and neem solution) and maize crop training; this is a framing mix but not a factual error
-  fact-check: reel_script's sentence 'மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்' is the fixed closing sentence and is exempt
-  fact-check: tamil_headline and slides_spec describe the event as 'விவசாயிகளுக்கு மண் வள விழிப்புணர்வு பயிற்சி' / 'மண் வளம், இயற்கை வேளாண்மை', consistent with the article
-  fact-check: the slides_spec 'hl1' and 'cat' fields mention 'பொள்ளாச்சி' and 'சமத்தூர்' consistently with the article
-  fact-check: no arrests, numbers, amounts or dates are claimed in the body beyond the exempt posting-date line in the caption
+factcheck by anthropic/claude-haiku-5-5: 8 problems
+  reel_script says the badminton hall was built at Rs 1.5 crore, but the article says this figure is the badminton hall's estimate (correct) — however reel_script omits that the cost figure is an estimate; minor, not counted
+  reel_script says the venues are 'மாநகராட்சி விளையாட்டு திடலில் அமைக்கப்பட்டுள்ளன' for all four sports — consistent with article, no problem
+  slides_spec 'இலவசம் உண்டா?' slide says 'அவர்களுக்கு இலவச பயிற்சி கிடைக்கும்' and 'கட்டணம் குறைப்பு கோரிக்கையை அதிகாரிகள் பரிசீலிக்கின்றனர்' — article says officials will be informed and action taken, roughly consistent, but the slide's 'அரசு, மாநகராட்சி பள்ளி மாணவர்கள் அரசு பயிற்றுனர்களை அணுகலாம்' drops the article's point that the free training is for those approaching government trainers, which is kept; acceptable
+  reel_script omits the key fact from the article that fees were fixed for 18% GST-inclusive monthly, half-yearly and annual categories for boys/adults across all four sports, and that outsiders pay the stated fee, the sports-specific fees for kabaddi/wushu and volleyball are missing
+  reel_script says 'பூப்பந்தாட்டம் அரங்கம் 1.5 கோடி ரூபாய் மதிப்பீட்டில்' omits that the other three halls were also built with stated costs; not an error but incomplete
+  reel_script and caption state the public monthly badminton fee is Rs 1000 and student fee Rs 750 as the fee 'plus GST' in slides_spec, but reel_script states '750 ரூபாய்' and '1000 ரூபாய்' and then says 'இவற்றுடன் 18 சதவீத ஜி எஸ் டி சேர்த்து வசூலிக்கப்படும்' — consistent with article, no problem
+  slides_spec loc field 'கோவை நகரம்' and caption/slides 'கோவை நேரு ஸ்டேடியம் அருகே' — the headline uses 'அருகே' while the article says 'எதிரே'; minor wording, not a factual change
+  reel_script omits that the GST-inclusive figures in the article are given separately; no factual problem but the reel_script does not mention the சதவீத GST breakdown for half-yearly and annual fees
+claude rewrite 1 anthropic/claude-haiku-5-5: 8 problems
+  fact-check: reel_script says the badminton hall was built at Rs 1.5 crore, but the article says this figure is the badminton hall's estimate (correct) — however reel_script omits that the cost figure is an estimate; minor, not counted
+  fact-check: reel_script says the venues are 'மாநகராட்சி விளையாட்டு திடலில் அமைக்கப்பட்டுள்ளன' for all four sports — consistent with article, no problem
+  fact-check: slides_spec 'இலவசம் உண்டா?' slide says 'அவர்களுக்கு இலவச பயிற்சி கிடைக்கும்' and 'கட்டணம் குறைப்பு கோரிக்கையை அதிகாரிகள் பரிசீலிக்கின்றனர்' — article says officials will be informed and action taken, roughly consistent, but the slide's 'அரசு, மாநகராட்சி பள்ளி மாணவர்கள் அரசு பயிற்றுனர்களை அணுகலாம்' drops the article's point that the free training is for those approaching government trainers, which is kept; acceptable
+  fact-check: reel_script omits the key fact from the article that fees were fixed for 18% GST-inclusive monthly, half-yearly and annual categories for boys/adults across all four sports, and that outsiders pay the stated fee, the sports-specific fees for kabaddi/wushu and volleyball are missing
+  fact-check: reel_script says 'பூப்பந்தாட்டம் அரங்கம் 1.5 கோடி ரூபாய் மதிப்பீட்டில்' omits that the other three halls were also built with stated costs; not an error but incomplete
+  fact-check: reel_script and caption state the public monthly badminton fee is Rs 1000 and student fee Rs 750 as the fee 'plus GST' in slides_spec, but reel_script states '750 ரூபாய்' and '1000 ரூபாய்' and then says 'இவற்றுடன் 18 சதவீத ஜி எஸ் டி சேர்த்து வசூலிக்கப்படும்' — consistent with article, no problem
+  fact-check: slides_spec loc field 'கோவை நகரம்' and caption/slides 'கோவை நேரு ஸ்டேடியம் அருகே' — the headline uses 'அருகே' while the article says 'எதிரே'; minor wording, not a factual change
+  fact-check: reel_script omits that the GST-inclusive figures in the article are given separately; no factual problem but the reel_script does not mention the சதவீத GST breakdown for half-yearly and annual fees
 ok anthropic/claude-haiku-5-5
 claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
-  hl1 is 50 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
-  reel_script has 64 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  hl1 is 43 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
-  reel_script must tell how the story ENDED, as the article's last lines say ('அகல்விளக்கு பதிப்பக உரிமையாளரை 3 நாள் போலீஸ் காவலில் விசாரிக்க மனு: சிறப்பு நீதிமன்றத்தில் நாளை உத்தரவு - Dinakaran - Dinakaran') - say what finally happened (complaint, action promised, released, arrested, case filed, how long it lasted); never write that details are unknown
   sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-free fact-check unavailable, using Claude: no free model answered: None
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 3 problems
-  The draft's reel_script says the training was held 'in the presence of' nothing extra, but it omits a key fact of the article? (see below)
-  The caption's '📰 முழு விவரம்' bullet 'பொள்ளாச்சி அருகே சமத்தூர், கூளநாயக்கன்பட்டி பகுதிகளில் வாணவராயர் வேளாண் கல்லூரி மாணவியர் சார்பில் திறன் மேம்பாட்டு பயிற்சி நடைபெற்றது' is accurate, but the caption's 'ℹ️ மக்கள் கவனத்திற்கு' line ('இயற்கை வேளாண்மை, மண் பரிசோதனை பற்றி அறிய விவசாயிகள் பயன்படுத்தலாம்') is an invented advisory not stated in the article
-  The reel_script says the soil testing was shown 'நேரில் காட்டப்பட்டது' and the slide says 'மண் பரிசோதனை முறையை நேரில் காட்டினர' which is consistent, but the reel_script sentence 'இயற்கை வேளாண்மையின் முக்கியத்துவம் குறித்தும் பேசப்பட்டது' is fine; the reel_script's 'மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்' closing is excluded from review
-claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  fact-check: The draft's reel_script says the training was held 'in the presence of' nothing extra, but it omits a key fact of the article? (see below)
-  fact-check: The caption's '📰 முழு விவரம்' bullet 'பொள்ளாச்சி அருகே சமத்தூர், கூளநாயக்கன்பட்டி பகுதிகளில் வாணவராயர் வேளாண் கல்லூரி மாணவியர் சார்பில் திறன் மேம்பாட்டு பயிற்சி நடைபெற்றது' is accurate, but the caption's 'ℹ️ மக்கள் கவனத்திற்கு' line ('இயற்கை வேளாண்மை, மண் பரிசோதனை பற்றி அறிய விவசாயிகள் பயன்படுத்தலாம்') is an invented advisory not stated in the article
-  fact-check: The reel_script says the soil testing was shown 'நேரில் காட்டப்பட்டது' and the slide says 'மண் பரிசோதனை முறையை நேரில் காட்டினர' which is consistent, but the reel_script sentence 'இயற்கை வேளாண்மையின் முக்கியத்துவம் குறித்தும் பேசப்பட்டது' is fine; the reel_script's 'மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்' closing is excluded from review
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  reel_script has 83 words; need 100-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+  numbers not found in the article: 350, 50, 500, 530, 540, 720
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
+  numbers not found in the article: 350, 500, 530, 540, 720, 770
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 1 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில'); 5 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில'); 95 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில'); 96 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில')
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-free fact-check unavailable, using Claude: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:ge
 real photo: vision check out of free quota
-imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
-imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
-ok anthropic/claude-haiku-5-5
-ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  The article says the event was a 'திறன் மேம்பாட்டு பயிற்சி மற்றும் விழிப்புணர்வு நிகழ்ச்சி' (skill development training and awareness programme); the headline and reel_script frame it only as 'மண் வள விழிப்புணர்வு பயிற்சி' (soil health awareness training), narrowing the scope.
-  The reel_script says the 'விளைநிலம் காப்போம்' event was held in Samathur and Koolanayakkanpatti, but the article states the event took place in those areas as the 'திறன் மேம்பாட்டு பயிற்சி மற்றும் விழிப்புணர்வு நிகழ்ச்சி' of the college students; the 'Koolanayakkanpatti' and 'Samathur' are correct, but the reel_script's line 'மக்காச்சோள பயிர் சாகுபடி முறைகள்' is correctly sourced, so no issue there; however the slides_spec 'loc' field names 'சமத்தூர், பொள்ளாச்சி' which omits Koolanayakkanpatti (minor, not a factual error).
-  The slide line 'மக்காச்சோள பயிர் சாகுபடி, பூச்சி கட்டுப்பாடு பற்றி தகவல்' merges the maize cultivation topic with the Neem/Jeevamirtham section under 'இயற்கை வேளாண்மை', mixing two different topics in one slide group.
-  The article says the soil testing was done via a 'நடமாடும் மண் பரிசோதனை' (mobile soil testing) and the draft says it was 'நேரில் காட்டப்பட்டது' (shown in person), which is a reasonable reading of 'செயல்விளக்கம்', so this is not an error; the article does not mention any specific number of participants or results, and none are claimed.
-claude rewrite 3 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: The article says the event was a 'திறன் மேம்பாட்டு பயிற்சி மற்றும் விழிப்புணர்வு நிகழ்ச்சி' (skill development training and awareness programme); the headline and reel_script frame it only as 'மண் வள விழிப்புணர்வு பயிற்சி' (soil health awareness training), narrowing the scope.
-  fact-check: The reel_script says the 'விளைநிலம் காப்போம்' event was held in Samathur and Koolanayakkanpatti, but the article states the event took place in those areas as the 'திறன் மேம்பாட்டு பயிற்சி மற்றும் விழிப்புணர்வு நிகழ்ச்சி' of the college students; the 'Koolanayakkanpatti' and 'Samathur' are correct, but the reel_script's line 'மக்காச்சோள பயிர் சாகுபடி முறைகள்' is correctly sourced, so no issue there; however the slides_spec 'loc' field names 'சமத்தூர், பொள்ளாச்சி' which omits Koolanayakkanpatti (minor, not a factual error).
-  fact-check: The slide line 'மக்காச்சோள பயிர் சாகுபடி, பூச்சி கட்டுப்பாடு பற்றி தகவல்' merges the maize cultivation topic with the Neem/Jeevamirtham section under 'இயற்கை வேளாண்மை', mixing two different topics in one slide group.
-  fact-check: The article says the soil testing was done via a 'நடமாடும் மண் பரிசோதனை' (mobile soil testing) and the draft says it was 'நேரில் காட்டப்பட்டது' (shown in person), which is a reasonable reading of 'செயல்விளக்கம்', so this is not an error; the article does not mention any specific number of participants or results, and none are claimed.
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-proofread skipped: no free model answered: None
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok anthropic/claude-haiku-5-5
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 44 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-imagegen: black-forest-labs/flux.1-schnell no image (CONTENT_FILTERED): {'artifacts': [{'base64': '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAU
-imagegen: black-forest-labs/flux.1-schnell no image (CONTENT_FILTERED): {'artifacts': [{'base64': '/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAU
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 44 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-images made: 2 for '70 students caught cheating with AI and '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261127-0432","first":"RN-736"}
+images made: 2 for 'Coimbatore indoor sports halls fees fixe'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261127-0505","first":"RN-739"}
 posting job started at once
-real photo: vision check resting (free quota busy)
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 44 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 44 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-images made: 2 for 'Court to decide on 3-day police custody '
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261127-0433","first":"RN-737"}
-real photo: vision check resting (free quota busy)
-imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 44 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 44 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-images made: 2 for 'Pollachi farmers get skill training on s'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261127-0436","first":"RN-738"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 pick round: only the picked links are written (research_free/pick.py)
-manual link added: https://www.dinakaran.com/news/earthen_lamp_owner_police_petition
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/awareness-to-farmers-on-skill-development-training/4386997
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/news/4387271
-candidate filter: collected=3
-to write: 3 Coimbatore district candidates (max 3 stories)
-round: top 3 of 3 candidates
-candidates waiting: 3 Coimbatore; time left 79 min
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/fixation-of-fee-for-indoor-stadium/4386988
+candidate filter: collected=1
+to write: 1 Coimbatore district candidates (max 1 stories)
+round: top 1 of 1 candidates
+candidates waiting: 1 Coimbatore; time left 79 min
 try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
-try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
-try (N) manual=True: https://www.dinakaran.com/news/earthen_lamp_owner_police_pet
-auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 1, 'fal-ai/flux/schnell': 1})
+auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
 posting job started at once
-auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 3, 'fal-ai/flux/schnell': 1})
-auto images: 1 of 1 stories ({'black-forest-labs/flux.1-schnell': 3, 'fal-ai/flux/schnell': 3})
-candidate loop ended: left 0, tried={'N': 3}, done={'N': 3}, time left 73 min
-filed: 3 Coimbatore district stories (target 3), reels only
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 78 min
+filed: 1 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":3,"updated":0} 
-stories: 3
+All News sheet: {"ok":true,"added":1,"updated":0} 
+stories: 1
