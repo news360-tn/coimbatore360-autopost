@@ -1,245 +1,542 @@
+writing [N]: கோவையில் நாளை (நவ.27) மின்தடை ஏற்படும் இடங்கள் - The Covai M
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
+fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, plea
+dead for this round: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+dead for this round: groq/qwen/qwen3.8-27b
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
+writing [N]: கஞ்சா விற்பனை: 3 இளைஞா்கள் கைது
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 26 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 2 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி')
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): வடவள்ளி ('இதில் அவா்கள் வைத்திருந்த பையில் 1 கிலோ 300 கிராம் கஞ்சா இரு')
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 6 problems
+  reel_script says the power cut is for 'இரண்டு துணை மின் நிலையங்களில்' which matches, but the reel_script mentions 'நாளை நவம்பர் 27ஆம் தேதி' — article gives (நவ.27) and (27.11.26), so date is consistent; however the reel_script omits 'ராமநாதபுரம் 80 அடி சாலை' and other listed areas is fine as a subset
+  reel_script lists 'பச்சாபாளையம்' and 'வடுகபாளையம்' but the article's Arasur list is correct; no mismatch found there
+  slides_spec line 'அரசூர், பொத்தியாம்பாளையம், குரும்பபாளையம்' etc. is consistent with article
+  reel_script omits the important detail that the Race Course outage affects areas like ஸ்ரீபதி நகா், சுசீலா நகா், ருக்மணி நகா், பாரதி நகா், பாப்பம்மாள் லே-அவுட், பார்க் டவுன், கருணாநிதி நகா், அங்கண்ணன் வீதி, and the Arasur outage area list is only partly covered (சமத்துவபுரம், அன்புநகர், செல்லப்பம்பாளையம், சங்கோதிபாளையம் missing)
+  reel_script says 'மின்சாரம் தேவைப்படும் பணிகளை முன்கூட்டியே திட்டமிட்டுக்கொள்ளுங்கள்' — advice not in article but caption contains the same advice; this is an invented recommendation not from the article
+  reel_script states the work is 'மாதந்தோறும் ஒருமுறை நடைபெறும் வழக்கமான பணிகள்' which matches the article's monthly maintenance, acceptable
+claude rewrite 2 anthropic/claude-haiku-5-5: 6 problems
+  fact-check: reel_script says the power cut is for 'இரண்டு துணை மின் நிலையங்களில்' which matches, but the reel_script mentions 'நாளை நவம்பர் 27ஆம் தேதி' — article gives (நவ.27) and (27.11.26), so date is consistent; however the reel_script omits 'ராமநாதபுரம் 80 அடி சாலை' and other listed areas is fine as a subset
+  fact-check: reel_script lists 'பச்சாபாளையம்' and 'வடுகபாளையம்' but the article's Arasur list is correct; no mismatch found there
+  fact-check: slides_spec line 'அரசூர், பொத்தியாம்பாளையம், குரும்பபாளையம்' etc. is consistent with article
+  fact-check: reel_script omits the important detail that the Race Course outage affects areas like ஸ்ரீபதி நகா், சுசீலா நகா், ருக்மணி நகா், பாரதி நகா், பாப்பம்மாள் லே-அவுட், பார்க் டவுன், கருணாநிதி நகா், அங்கண்ணன் வீதி, and the Arasur outage area list is only partly covered (சமத்துவபுரம், அன்புநகர், செல்லப்பம்பாளையம், சங்கோதிபாளையம் missing)
+  fact-check: reel_script says 'மின்சாரம் தேவைப்படும் பணிகளை முன்கூட்டியே திட்டமிட்டுக்கொள்ளுங்கள்' — advice not in article but caption contains the same advice; this is an invented recommendation not from the article
+  fact-check: reel_script states the work is 'மாதந்தோறும் ஒருமுறை நடைபெறும் வழக்கமான பணிகள்' which matches the article's monthly maintenance, acceptable
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 4 problems
+  The reel_script and slides_spec say the 3 youths were arrested in Bothanur (போத்தனூர்) area, while the article places the arrest at Vellalore bus stand (வெள்ளலூர் பேருந்து நிலையம்) area; Bothanur is only the police station jurisdiction, so the location is mixed up.
+  The reel_script says the 3 youths were arrested 'in the Bothanur area' ('போத்தனூர் பகுதியில் கஞ்சா விற்ற 3 இளைஞர்கள்'), but the article says they were caught at Vellalore; the sale location is not stated in the article as Bothanur.
+  The reel_script states 'போலீசார் ரோந்துப் பணியில் இருந்தனர்' with 'வெள்ளலூரில' but the reel_script's first sentence and the slides' 'loc' field tag the arrest location inconsistently (Vellalore, Bothanur); the headline's 'போத்தனூரில் கஞ்சா விற்ற' also attributes the sale to Bothanur without the article saying so explicitly.
+  The reel_script omits the arrest of the three people as an action of the police in the first sentence only partially: it says 'போலீசாரால் கைது செய்யப்பட்டனர்' but the slides' 'hl1' says 'போத்தனூரில் கஞ்சா விற்ற 3 பேர் கைது' which mixes the location of sale with the police station name.
+claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
+  fact-check: The reel_script and slides_spec say the 3 youths were arrested in Bothanur (போத்தனூர்) area, while the article places the arrest at Vellalore bus stand (வெள்ளலூர் பேருந்து நிலையம்) area; Bothanur is only the police station jurisdiction, so the location is mixed up.
+  fact-check: The reel_script says the 3 youths were arrested 'in the Bothanur area' ('போத்தனூர் பகுதியில் கஞ்சா விற்ற 3 இளைஞர்கள்'), but the article says they were caught at Vellalore; the sale location is not stated in the article as Bothanur.
+  fact-check: The reel_script states 'போலீசார் ரோந்துப் பணியில் இருந்தனர்' with 'வெள்ளலூரில' but the reel_script's first sentence and the slides' 'loc' field tag the arrest location inconsistently (Vellalore, Bothanur); the headline's 'போத்தனூரில் கஞ்சா விற்ற' also attributes the sale to Bothanur without the article saying so explicitly.
+  fact-check: The reel_script omits the arrest of the three people as an action of the police in the first sentence only partially: it says 'போலீசாரால் கைது செய்யப்பட்டனர்' but the slides' 'hl1' says 'போத்தனூரில் கஞ்சா விற்ற 3 பேர் கைது' which mixes the location of sale with the police station name.
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
+  slide 3 line 1 longer than 60 characters
+  slide 3 line 3 longer than 60 characters
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): வடவள்ளி ('இதில் அவா்கள் வைத்திருந்த பையில் 1 கிலோ 300 கிராம் கஞ்சா இரு')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி'); 26 ('அந்த வகையில் நாளை (27.11.26) கோவையில் 2 துணை மின் நிலையங்களி')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+real photo skipped (photo uploaded 2026-11-14 (older than the news)): https://media.dinamani.com/dinamani/2026-11-14/3zpfxwhp/%E0%AE%95%E0%AF%88%E0%AE%A4%E0%AF%
+real photo skipped (photo uploaded 2026-11-14 (older than the news)): https://media.dinamani.com/dinamani/2026-11-14/3zpfxwhp/கைது.jfif?w=1200&h=675&auto=format
+imagegen: cloudflare black-forest-labs/flux-1-schnell 429: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like 
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Three youths arrested for selling ganja '
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1847","first":"RN-709"}
+posting job started at once
+real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
+real photo: vision check out of free quota
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match: True The image shows Tamil Nadu Electricity Board (TNEB) power infrastructure and electrical equipment, which matches a news 
+images made: 2 for 'Coimbatore: power cut tomorrow (27 Nov) '
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1847","first":"RN-710"}
+writing [N]: வேகத்தடை இல்லாததால் விபத்து ஏற்படும் அபாயம்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free models unavailable: no free model answered: None
+writing [N]: மும்பை பயங்கரவாதத் தாக்குதல் நினைவு தினம்; கோவை ரயில் நிலையத
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The article says the speed breaker is needed at the 'நெ.10.முத்தூர் இணைப்பு ரோடு' area, and the draft's caption/reel mention the link road near Singaiyanpudur — consistent. However, the reel_script says 'வாகனங்கள் அடிக்கடி விபத்தில் சிக்குகின்றன' and the caption says '2 விபத்துகள்' occurred 'கடந்த ஒரு வாரத்தில்' — accurate, but the reel_script omits that the speed breaker demand is specifically aimed at the Muthur link road junction's blind curve, and the phrase 'வளைவான பகுதியில் வாகனங்கள் அதிகம் செல்கின்றன' on slide 1 claims heavy traffic, which the article does not state.
+  slides_spec 'எங்கே?' slide claims 'வாகனங்கள் அதிகம் செல்கின்றன' at the curve, which is an invented detail: the article says many vehicles travel daily on the Kinathukadavu–Sokkanur road, not specifically at the curve.
+  slides_spec 'கோரிக்கை' slide says 'மக்கள் அதிகாரிகளிடம் வலியுறுத்துகின்றனர்', but the article says the demand is from 'மக்கள்' in the first paragraph and from 'வாகன ஓட்டுநர்கள' in the quote; addressing officials is not stated in the article.
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: The article says the speed breaker is needed at the 'நெ.10.முத்தூர் இணைப்பு ரோடு' area, and the draft's caption/reel mention the link road near Singaiyanpudur — consistent. However, the reel_script says 'வாகனங்கள் அடிக்கடி விபத்தில் சிக்குகின்றன' and the caption says '2 விபத்துகள்' occurred 'கடந்த ஒரு வாரத்தில்' — accurate, but the reel_script omits that the speed breaker demand is specifically aimed at the Muthur link road junction's blind curve, and the phrase 'வளைவான பகுதியில் வாகனங்கள் அதிகம் செல்கின்றன' on slide 1 claims heavy traffic, which the article does not state.
+  fact-check: slides_spec 'எங்கே?' slide claims 'வாகனங்கள் அதிகம் செல்கின்றன' at the curve, which is an invented detail: the article says many vehicles travel daily on the Kinathukadavu–Sokkanur road, not specifically at the curve.
+  fact-check: slides_spec 'கோரிக்கை' slide says 'மக்கள் அதிகாரிகளிடம் வலியுறுத்துகின்றனர்', but the article says the demand is from 'மக்கள்' in the first paragraph and from 'வாகன ஓட்டுநர்கள' in the quote; addressing officials is not stated in the article.
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The caption's 'Coimbatore railway station security checks | Coimbatore news' line is an English tag not present in the article; it is part of the caption body, not the footer, so it is an extra unsupported addition.
+  The caption says 'இன்று (நவ. 26)' (today, Nov 26) while the article says the anniversary is observed today, which is consistent, but the caption's 'அதன்படி' sentence links the national security measures directly to the Coimbatore checks, which the article only implies as 'ஒரு பகுதியாக' (as part of) — acceptable, so this is not a clear error and is noted only for completeness.
+  The reel_script's last sentence adds 'சந்தேகத்திற்கிடமான நபர்கள் நடமாடுகிறார்களா என்பதைக் கண்காணிக்க' which is accurate, but the reel_script omits the attack's named sites (Taj Hotel, Chhatrapati Shivaji Terminus) and the perpetrator group (Lashkar-e-Taiba), which are important facts of the article's account of who did what.
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: The caption's 'Coimbatore railway station security checks | Coimbatore news' line is an English tag not present in the article; it is part of the caption body, not the footer, so it is an extra unsupported addition.
+  fact-check: The caption says 'இன்று (நவ. 26)' (today, Nov 26) while the article says the anniversary is observed today, which is consistent, but the caption's 'அதன்படி' sentence links the national security measures directly to the Coimbatore checks, which the article only implies as 'ஒரு பகுதியாக' (as part of) — acceptable, so this is not a clear error and is noted only for completeness.
+  fact-check: The reel_script's last sentence adds 'சந்தேகத்திற்கிடமான நபர்கள் நடமாடுகிறார்களா என்பதைக் கண்காணிக்க' which is accurate, but the reel_script omits the attack's named sites (Taj Hotel, Chhatrapati Shivaji Terminus) and the perpetrator group (Lashkar-e-Taiba), which are important facts of the article's account of who did what.
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 8 problems
+  The reel_script says the speed breaker should be set up at the 'சந்திப்பு' (junction); the article only says the connecting road area (இணைப்பு ரோடு பகுதி), so 'junction' is a minor rewording but acceptable.
+  The reel_script and slides_spec say the road is where drivers 'கூறுகின்றனர்' that the link road is not visible; this matches the article, but the reel_script omits that the speed breaker demand was made by vehicle drivers (it says மக்கள் in one sentence and ஓட்டுநர்கள் in another, which is inconsistent with the article's 'வாகன ஓட்டுநர்கள்' and 'மக்கள்' mixing) - not a factual error.
+  The caption states 'அதிவேகமாகச் செல்வதாகவும்' (drivers say vehicles travel at high speed because the link road is not visible), which is in the article.
+  The reel_script states 'இணைப்பு சாலை சரியாகத் தெரிவதில்லை என வாகன ஓட்டுநர்கள் கூறுகின்றனர்', consistent with the article.
+  The reel_script sentence 'வேகத்தை கட்டுப்படுத்த வேண்டும் என்பதற்காக வேகத்தடை அமைக்க வேண்டும்' is grammatically awkward but has a clear meaning.
+  The reel_script's 'ஒரு வாரத்தில் 2 விபத்துகள்' is in the article.
+  The caption's 'கடந்த ஒரு வாரத்தில் இங்கு 2 விபத்துகள் நடந்துள்ளன' is consistent with the article.
+  The article's reason for the accidents includes that vehicles pass at high speed without noticing the road; the reel_script omits the 'அதிவேகமாக' cause, which is an important cause fact missing from the reel.
+claude rewrite 2 anthropic/claude-haiku-5-5: 8 problems
+  fact-check: The reel_script says the speed breaker should be set up at the 'சந்திப்பு' (junction); the article only says the connecting road area (இணைப்பு ரோடு பகுதி), so 'junction' is a minor rewording but acceptable.
+  fact-check: The reel_script and slides_spec say the road is where drivers 'கூறுகின்றனர்' that the link road is not visible; this matches the article, but the reel_script omits that the speed breaker demand was made by vehicle drivers (it says மக்கள் in one sentence and ஓட்டுநர்கள் in another, which is inconsistent with the article's 'வாகன ஓட்டுநர்கள்' and 'மக்கள்' mixing) - not a factual error.
+  fact-check: The caption states 'அதிவேகமாகச் செல்வதாகவும்' (drivers say vehicles travel at high speed because the link road is not visible), which is in the article.
+  fact-check: The reel_script states 'இணைப்பு சாலை சரியாகத் தெரிவதில்லை என வாகன ஓட்டுநர்கள் கூறுகின்றனர்', consistent with the article.
+  fact-check: The reel_script sentence 'வேகத்தை கட்டுப்படுத்த வேண்டும் என்பதற்காக வேகத்தடை அமைக்க வேண்டும்' is grammatically awkward but has a clear meaning.
+  fact-check: The reel_script's 'ஒரு வாரத்தில் 2 விபத்துகள்' is in the article.
+  fact-check: The caption's 'கடந்த ஒரு வாரத்தில் இங்கு 2 விபத்துகள் நடந்துள்ளன' is consistent with the article.
+  fact-check: The article's reason for the accidents includes that vehicles pass at high speed without noticing the road; the reel_script omits the 'அதிவேகமாக' cause, which is an important cause fact missing from the reel.
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+writing [N]: Gpay-வில் லஞ்சப் பணம்... நில அளவையர், இடைத்தரகர் மீது பாய்ந்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free models unavailable: no free model answered: None
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 166 ('பாகிஸ்தானைத் தளமாகக் கொண்ட லஷ்கர்-ஏ-தொய்பா பயங்கரவாதிகளால் ம')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
+  reel_script talks about the article instead of the news (தகவல் இல்லை) - if the article has no real news, return an empty reel_script
+  caption talks about the article instead of the news (தகவல் இல்லை) - if the article has no real news, return an empty reel_script
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): பொள்ளாச்சி ('பொள்ளாச்சியைச் சேர்ந்த அருண்குமார் என்பவர் பால் வியாபாரம் செ')
+  known issue meta_article: script talks about the article instead of the news ('தகவல் இல்லை') - rewrite so it does not happen again
+ok anthropic/claude-haiku-5-5
+real photo: vision check resting (free quota busy)
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Speed breaker demanded at Sokkanur road '
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 7 problems
+  reel_script talks about the article instead of the news (தகவல் இல்லை) - if the article has no real news, return an empty reel_script
+  caption talks about the article instead of the news (தகவல் இல்லை) - if the article has no real news, return an empty reel_script
+  reel_script has English words (GPay) - the voice cannot read them; write them in Tamil letters
+  reel_script must have no English letters (write English words and abbreviations in Tamil script)
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 25 ('கோவை அருகே நிலத்தை அளவீடு செய்து தனிப் பட்டா பெறுவதற்காக ரூ.'); 20 ('நில அளவையர் முதலில் ரூ.20 ஆயிரம் கேட்ட நிலையில், புகார் அளிக'); 5 ('நில அளவையர் முதலில் ரூ.20 ஆயிரம் கேட்ட நிலையில், புகார் அளிக'); 25 ('நில அளவையர் முதலில் ரூ.20 ஆயிரம் கேட்ட நிலையில், புகார் அளிக'); 20 ('நிலத்தை அளவீடு செய்வதுடன், தனிப் பட்டா வழங்குவதற்காக வட்டாட்'); 20 ('இதையடுத்து அவர் கேட்டிருந்த ரூ.20 ஆயிரத்தை மேலும் ரூ.5 ஆயிரம')
+  known issue meta_article: script talks about the article instead of the news ('தகவல் இல்லை') - rewrite so it does not happen again
+  known issue english_in_voice: voice script has English words the voice skips (GPay) - rewrite so it does not happen again
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1848","first":"RN-711"}
+real photo: vision check resting (free quota busy)
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 2 for 'Mumbai terror attack 18th anniversary: i'
+ok anthropic/claude-haiku-5-5
+claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
+  reel_script talks about the article instead of the news (தகவல் இல்லை) - if the article has no real news, return an empty reel_script
+  known issue meta_article: script talks about the article instead of the news ('தகவல் இல்லை') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1849","first":"RN-712"}
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok anthropic/claude-haiku-5-5
+real photo: vision check resting (free quota busy)
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+images made: 1 for 'Coimbatore land surveyor and middleman b'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261126-1849","first":"RN-713"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 source dinamalar list: 15 items
 source google 'கோவை': 100 items
-source bing 'கோவை': 12 items
-source google 'கோயம்புத்தூர்': 43 items
+source bing 'கோவை': 11 items
+source google 'கோயம்புத்தூர்': 53 items
 source bing 'கோயம்புத்தூர்': 12 items
-source google 'பொள்ளாச்சி': 7 items
+source google 'பொள்ளாச்சி': 17 items
 source bing 'பொள்ளாச்சி': 12 items
-source google 'மேட்டுப்பாளையம்': 9 items
+source google 'மேட்டுப்பாளையம்': 15 items
 source bing 'மேட்டுப்பாளையம்': 12 items
-source google 'சூலூர்': 0 items
-source bing 'சூலூர்': 12 items
-source google 'அன்னூர்': 6 items
+source google 'சூலூர்': 2 items
+source bing 'சூலூர்': 11 items
+source google 'அன்னூர்': 8 items
 source bing 'அன்னூர்': 12 items
-source google 'கிணத்துக்கடவு': 0 items
+source google 'கிணத்துக்கடவு': 8 items
 source bing 'கிணத்துக்கடவு': 12 items
-source google 'மதுக்கரை': 0 items
+source google 'மதுக்கரை': 6 items
 source bing 'மதுக்கரை': 12 items
-source google 'பேரூர்': 2 items
+source google 'பேரூர்': 6 items
 source bing 'பேரூர்': 12 items
-source google 'தொண்டாமுத்தூர்': 0 items
+source google 'தொண்டாமுத்தூர்': 1 items
 source bing 'தொண்டாமுத்தூர்': 11 items
-source google 'ஆனைமலை': 1 items
+source google 'ஆனைமலை': 3 items
 source bing 'ஆனைமலை': 12 items
-source google 'வால்பாறை': 3 items
+source google 'வால்பாறை': 7 items
 source bing 'வால்பாறை': 12 items
-source google 'காரமடை': 2 items
-source bing 'காரமடை': 11 items
-source google 'கருமத்தம்பட்டி': 0 items
-source bing 'கருமத்தம்பட்டி': 3 items
+source google 'காரமடை': 7 items
+source bing 'காரமடை': 12 items
+source google 'கருமத்தம்பட்டி': 3 items
+source bing 'கருமத்தம்பட்டி': 6 items
 source google 'கோவை மாவட்டம்': 45 items
 source bing 'கோவை மாவட்டம்': 12 items
-source google 'கோயம்புத்தூர் மாவட்டம்': 25 items
+source google 'கோயம்புத்தூர் மாவட்டம்': 49 items
 source bing 'கோயம்புத்தூர் மாவட்டம்': 12 items
-source google 'கோவை மின்தடை': 12 items
+source google 'கோவை மின்தடை': 8 items
 source bing 'கோவை மின்தடை': 12 items
 source google 'பொள்ளாச்சி மின்தடை': 0 items
-source bing 'பொள்ளாச்சி மின்தடை': 3 items
-source google 'மேட்டுப்பாளையம் மின்தடை': 2 items
+source bing 'பொள்ளாச்சி மின்தடை': 2 items
+source google 'மேட்டுப்பாளையம் மின்தடை': 4 items
 source bing 'மேட்டுப்பாளையம் மின்தடை': 12 items
 source google 'சூலூர் மின்தடை': 0 items
-source bing 'சூலூர் மின்தடை': 2 items
-source google 'கோயம்புத்தூர் மின்தடை': 6 items
+source bing 'சூலூர் மின்தடை': 5 items
+source google 'கோயம்புத்தூர் மின்தடை': 16 items
 source bing 'கோயம்புத்தூர் மின்தடை': 12 items
-source google 'கோவை ஆட்சியர் அறிவிப்பு': 1 items
-source bing 'கோவை ஆட்சியர் அறிவிப்பு': 12 items
+source google 'கோவை ஆட்சியர் அறிவிப்பு': 2 items
+source bing 'கோவை ஆட்சியர் அறிவிப்பு': 11 items
 source google 'கோவை மாவட்ட நிர்வாகம்': 4 items
 source bing 'கோவை மாவட்ட நிர்வாகம்': 12 items
-source google 'கோவை வேலைவாய்ப்பு முகாம்': 0 items
+source google 'கோவை வேலைவாய்ப்பு முகாம்': 4 items
 source bing 'கோவை வேலைவாய்ப்பு முகாம்': 2 items
-source google 'கோவை ஆட்சேர்ப்பு': 13 items
-source bing 'கோவை ஆட்சேர்ப்பு': 1 items
-source google 'கோவை சிறப்பு முகாம்': 2 items
-source bing 'கோவை சிறப்பு முகாம்': 12 items
-source google 'கோவை குறைதீர் கூட்டம்': 1 items
+source google 'கோவை ஆட்சேர்ப்பு': 17 items
+source bing 'கோவை ஆட்சேர்ப்பு': 4 items
+source google 'கோவை சிறப்பு முகாம்': 10 items
+source bing 'கோவை சிறப்பு முகாம்': 6 items
+source google 'கோவை குறைதீர் கூட்டம்': 0 items
 source bing 'கோவை குறைதீர் கூட்டம்': 2 items
-source google 'Coimbatore power shutdown': 6 items
+source google 'Coimbatore power shutdown': 10 items
 source bing 'Coimbatore power shutdown': 9 items
-source google 'Coimbatore collector': 3 items
+source google 'Coimbatore collector': 9 items
 source bing 'Coimbatore collector': 12 items
-source google 'சிங்காநல்லூர்': 1 items
-source bing 'சிங்காநல்லூர்': 12 items
-source google 'பீளமேடு': 7 items
+source google 'சிங்காநல்லூர்': 0 items
+source bing 'சிங்காநல்லூர்': 11 items
+source google 'பீளமேடு': 2 items
 source bing 'பீளமேடு': 12 items
 source google 'சரவணம்பட்டி': 0 items
 source bing 'சரவணம்பட்டி': 12 items
-source google 'உக்கடம்': 2 items
-source bing 'உக்கடம்': 12 items
-source google 'காந்திபுரம்': 2 items
+source google 'உக்கடம்': 0 items
+source bing 'உக்கடம்': 8 items
+source google 'காந்திபுரம்': 6 items
 source bing 'காந்திபுரம்': 12 items
-source google 'துடியலூர்': 2 items
-source bing 'துடியலூர்': 7 items
-source google 'பெரியநாயக்கன்பாளையம்': 0 items
-source bing 'பெரியநாயக்கன்பாளையம்': 10 items
+source google 'துடியலூர்': 1 items
+source bing 'துடியலூர்': 3 items
+source google 'பெரியநாயக்கன்பாளையம்': 2 items
+source bing 'பெரியநாயக்கன்பாளையம்': 11 items
 source google 'சிறுமுகை': 0 items
 source bing 'சிறுமுகை': 4 items
-source google 'போத்தனூர்': 3 items
+source google 'போத்தனூர்': 0 items
 source bing 'போத்தனூர்': 12 items
-source google 'வடவள்ளி': 0 items
-source bing 'வடவள்ளி': 8 items
-source google 'குனியமுத்தூர்': 0 items
-source bing 'குனியமுத்தூர்': 12 items
-source google 'நெகமம்': 0 items
-source bing 'நெகமம்': 8 items
+source google 'வடவள்ளி': 3 items
+source bing 'வடவள்ளி': 12 items
+source google 'குனியமுத்தூர்': 1 items
+source bing 'குனியமுத்தூர்': 11 items
+source google 'நெகமம்': 1 items
+source bing 'நெகமம்': 10 items
 source google 'சோமனூர்': 0 items
 source bing 'சோமனூர்': 3 items
-source google 'மருதமலை': 0 items
+source google 'மருதமலை': 3 items
 source bing 'மருதமலை': 12 items
-source google 'Coimbatore': 91 items
+source google 'Coimbatore': 76 items
 source bing 'Coimbatore': 12 items
-source google 'Kovai': 95 items
+source google 'Kovai': 78 items
 source bing 'Kovai': 12 items
-source google 'Pollachi': 6 items
-source bing 'Pollachi': 11 items
-source google 'Mettupalayam': 8 items
+source google 'Pollachi': 16 items
+source bing 'Pollachi': 12 items
+source google 'Mettupalayam': 14 items
 source bing 'Mettupalayam': 12 items
-source google 'Valparai': 0 items
+source google 'Valparai': 5 items
 source bing 'Valparai': 12 items
-source google 'Sulur': 11 items
+source google 'Sulur': 18 items
 source bing 'Sulur': 12 items
 source google 'Singanallur': 0 items
 source bing 'Singanallur': 12 items
-source google 'அன்னூர் மின்தடை': 0 items
-source bing 'அன்னூர் மின்தடை': 0 items
+source google 'அன்னூர் மின்தடை': 1 items
+source bing 'அன்னூர் மின்தடை': 5 items
 source google 'கிணத்துக்கடவு மின்தடை': 0 items
 source bing 'கிணத்துக்கடவு மின்தடை': 1 items
 source google 'மதுக்கரை மின்தடை': 0 items
 source bing 'மதுக்கரை மின்தடை': 1 items
 source google 'வால்பாறை மின்தடை': 0 items
-source bing 'வால்பாறை மின்தடை': 3 items
+source bing 'வால்பாறை மின்தடை': 8 items
 source google 'காரமடை மின்தடை': 0 items
-source bing 'காரமடை மின்தடை': 0 items
+source bing 'காரமடை மின்தடை': 5 items
 source google 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source bing 'தொண்டாமுத்தூர் மின்தடை': 0 items
 source google 'பேரூர் மின்தடை': 0 items
-source bing 'பேரூர் மின்தடை': 0 items
+source bing 'பேரூர் மின்தடை': 3 items
 source google 'ஆனைமலை மின்தடை': 0 items
-source bing 'ஆனைமலை மின்தடை': 0 items
+source bing 'ஆனைமலை மின்தடை': 1 items
 source google 'கருமத்தம்பட்டி மின்தடை': 0 items
 source bing 'கருமத்தம்பட்டி மின்தடை': 0 items
 source google 'பெரியநாயக்கன்பாளையம் மின்தடை': 0 items
-source bing 'பெரியநாயக்கன்பாளையம் மின்தடை': 0 items
-source google 'கோவை மின்தடை நாளை': 7 items
-source bing 'கோவை மின்தடை நாளை': 11 items
-source google 'கோவை மின்தடை பகுதிகள்': 10 items
+source bing 'பெரியநாயக்கன்பாளையம் மின்தடை': 3 items
+source google 'கோவை மின்தடை நாளை': 6 items
+source bing 'கோவை மின்தடை நாளை': 12 items
+source google 'கோவை மின்தடை பகுதிகள்': 7 items
 source bing 'கோவை மின்தடை பகுதிகள்': 12 items
-source google 'Coimbatore power cut tomorrow': 4 items
-source bing 'Coimbatore power cut tomorrow': 10 items
+source google 'Coimbatore power cut tomorrow': 9 items
+source bing 'Coimbatore power cut tomorrow': 12 items
 source google 'Pollachi power cut': 0 items
-source bing 'Pollachi power cut': 0 items
-source google 'Mettupalayam power cut': 3 items
-source bing 'Mettupalayam power cut': 0 items
+source bing 'Pollachi power cut': 2 items
+source google 'Mettupalayam power cut': 5 items
+source bing 'Mettupalayam power cut': 1 items
 source google தினமலர் 'கோவை': 100 items
 source bing தினமலர் 'கோவை': 12 items
 source google தினமலர் 'கோயம்புத்தூர்': 100 items
 source bing தினமலர் 'கோயம்புத்தூர்': 12 items
-source google தினமலர் 'பொள்ளாச்சி': 12 items
+source google தினமலர் 'பொள்ளாச்சி': 68 items
 source bing தினமலர் 'பொள்ளாச்சி': 12 items
-source google தினமணி 'கோவை': 100 items
+source google தினமணி 'கோவை': 75 items
 source bing தினமணி 'கோவை': 12 items
-source google தினமணி 'கோயம்புத்தூர்': 79 items
+source google தினமணி 'கோயம்புத்தூர்': 77 items
 source bing தினமணி 'கோயம்புத்தூர்': 12 items
-source google தினமணி 'பொள்ளாச்சி': 5 items
-source bing தினமணி 'பொள்ளாச்சி': 9 items
-source google கோவை மெயில் 'கோவை': 20 items
+source google தினமணி 'பொள்ளாச்சி': 3 items
+source bing தினமணி 'பொள்ளாச்சி': 12 items
+source google கோவை மெயில் 'கோவை': 23 items
 source bing கோவை மெயில் 'கோவை': 12 items
-source google கோவை மெயில் 'கோயம்புத்தூர்': 20 items
+source google கோவை மெயில் 'கோயம்புத்தூர்': 23 items
 source bing கோவை மெயில் 'கோயம்புத்தூர்': 0 items
-source google கோவை மெயில் 'பொள்ளாச்சி': 8 items
+source google கோவை மெயில் 'பொள்ளாச்சி': 1 items
 source bing கோவை மெயில் 'பொள்ளாச்சி': 0 items
 source google அரசியல் டுடே 'கோவை': 52 items
 source bing அரசியல் டுடே 'கோவை': 0 items
-source google அரசியல் டுடே 'கோயம்புத்தூர்': 53 items
+source google அரசியல் டுடே 'கோயம்புத்தூர்': 52 items
 source bing அரசியல் டுடே 'கோயம்புத்தூர்': 0 items
 source google அரசியல் டுடே 'பொள்ளாச்சி': 0 items
 source bing அரசியல் டுடே 'பொள்ளாச்சி': 0 items
 source google தினகரன் 'கோவை': 100 items
 source bing தினகரன் 'கோவை': 12 items
 source google தினகரன் 'கோயம்புத்தூர்': 100 items
-source bing தினகரன் 'கோயம்புத்தூர்': 12 items
-source google தினகரன் 'பொள்ளாச்சி': 1 items
-source bing தினகரன் 'பொள்ளாச்சி': 0 items
-source google தினத்தந்தி 'கோவை': 47 items
+source bing தினகரன் 'கோயம்புத்தூர்': 10 items
+source google தினகரன் 'பொள்ளாச்சி': 2 items
+source bing தினகரன் 'பொள்ளாச்சி': 3 items
+source google தினத்தந்தி 'கோவை': 23 items
 source bing தினத்தந்தி 'கோவை': 12 items
-source google தினத்தந்தி 'கோயம்புத்தூர்': 23 items
+source google தினத்தந்தி 'கோயம்புத்தூர்': 9 items
 source bing தினத்தந்தி 'கோயம்புத்தூர்': 12 items
-source google தினத்தந்தி 'பொள்ளாச்சி': 6 items
+source google தினத்தந்தி 'பொள்ளாச்சி': 1 items
 source bing தினத்தந்தி 'பொள்ளாச்சி': 3 items
-source google மாலைமலர் 'கோவை': 23 items
+source google மாலைமலர் 'கோவை': 10 items
 source bing மாலைமலர் 'கோவை': 12 items
-source google மாலைமலர் 'கோயம்புத்தூர்': 14 items
-source bing மாலைமலர் 'கோயம்புத்தூர்': 12 items
-source google மாலைமலர் 'பொள்ளாச்சி': 2 items
-source bing மாலைமலர் 'பொள்ளாச்சி': 5 items
-source google தந்தி டிவி 'கோவை': 54 items
+source google மாலைமலர் 'கோயம்புத்தூர்': 5 items
+source bing மாலைமலர் 'கோயம்புத்தூர்': 9 items
+source google மாலைமலர் 'பொள்ளாச்சி': 0 items
+source bing மாலைமலர் 'பொள்ளாச்சி': 3 items
+source google தந்தி டிவி 'கோவை': 7 items
 source bing தந்தி டிவி 'கோவை': 12 items
-source google தந்தி டிவி 'கோயம்புத்தூர்': 30 items
-source bing தந்தி டிவி 'கோயம்புத்தூர்': 0 items
-source google தந்தி டிவி 'பொள்ளாச்சி': 1 items
-source bing தந்தி டிவி 'பொள்ளாச்சி': 0 items
-source google இந்து தமிழ் 'கோவை': 32 items
+source google தந்தி டிவி 'கோயம்புத்தூர்': 6 items
+source bing தந்தி டிவி 'கோயம்புத்தூர்': 1 items
+source google தந்தி டிவி 'பொள்ளாச்சி': 0 items
+source bing தந்தி டிவி 'பொள்ளாச்சி': 1 items
+source google இந்து தமிழ் 'கோவை': 13 items
 source bing இந்து தமிழ் 'கோவை': 12 items
-source google இந்து தமிழ் 'கோயம்புத்தூர்': 4 items
-source bing இந்து தமிழ் 'கோயம்புத்தூர்': 2 items
-source google இந்து தமிழ் 'பொள்ளாச்சி': 1 items
+source google இந்து தமிழ் 'கோயம்புத்தூர்': 5 items
+source bing இந்து தமிழ் 'கோயம்புத்தூர்': 4 items
+source google இந்து தமிழ் 'பொள்ளாச்சி': 0 items
 source bing இந்து தமிழ் 'பொள்ளாச்சி': 2 items
-source google பாலிமர் 'கோவை': 3 items
-source bing பாலிமர் 'கோவை': 1 items
-source google பாலிமர் 'கோயம்புத்தூர்': 3 items
-source bing பாலிமர் 'கோயம்புத்தூர்': 4 items
-source google பாலிமர் 'பொள்ளாச்சி': 0 items
+source google பாலிமர் 'கோவை': 4 items
+source bing பாலிமர் 'கோவை': 4 items
+source google பாலிமர் 'கோயம்புத்தூர்': 2 items
+source bing பாலிமர் 'கோயம்புத்தூர்': 2 items
+source google பாலிமர் 'பொள்ளாச்சி': 1 items
 source bing பாலிமர் 'பொள்ளாச்சி': 0 items
-source google மாலை முரசு 'கோவை': 7 items
-source bing மாலை முரசு 'கோவை': 3 items
-source google மாலை முரசு 'கோயம்புத்தூர்': 3 items
-source bing மாலை முரசு 'கோயம்புத்தூர்': 1 items
+source google மாலை முரசு 'கோவை': 6 items
+source bing மாலை முரசு 'கோவை': 6 items
+source google மாலை முரசு 'கோயம்புத்தூர்': 4 items
+source bing மாலை முரசு 'கோயம்புத்தூர்': 0 items
 source google மாலை முரசு 'பொள்ளாச்சி': 1 items
-source bing மாலை முரசு 'பொள்ளாச்சி': 0 items
+source bing மாலை முரசு 'பொள்ளாச்சி': 2 items
 source google நியூஸ்18 தமிழ் 'கோவை': 100 items
 source bing நியூஸ்18 தமிழ் 'கோவை': 12 items
 source google நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 100 items
 source bing நியூஸ்18 தமிழ் 'கோயம்புத்தூர்': 12 items
 source google நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 2 items
-source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 4 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
+source bing நியூஸ்18 தமிழ் 'பொள்ளாச்சி': 6 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 13 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோவை': 12 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 5 items
-source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 11 items
-source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 1 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 8 items
+source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'கோயம்புத்தூர்': 12 items
+source google இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
 source bing இந்தியன் எக்ஸ்பிரஸ் தமிழ் 'பொள்ளாச்சி': 0 items
 source தினமணி கோவை: 5 items
 source தினகரன் கோவை: 10 items
-source பாலிமர் கோவை: 2 items
+source பாலிமர் கோவை: 4 items
 source இந்து தமிழ் கோவை: 9 items
-Tamil outlets only: kept 2139 of 2600 items
-all sources: 2139 items -> 1022 different news
-candidate filter: not written=429, not Coimbatore district news (state-wide=241, checked earlier=100, checked earlier=84, old=64, already filed=51, not written=16, checked earlier=9, checked earlier=9, checked earlier=7, collected=6, checked earlier=3, not written=2, not written=1
-to write: 6 Coimbatore district candidates (max 3 stories)
-round: top 3 of 6 candidates
-candidates waiting: 6 Coimbatore; time left 51 min
-try (N) manual=False: கூரையை உடைத்து திருடியவர் கைது
-try (N) manual=False: மோசடி வழக்கில் தனியாா் அறக்கட்டளை நிா்வாகி கைது
-try (N) manual=False: மழை நீர் தேக்கத்தால் ஸ்தம்பித்த போக்குவரத்து . இடம்: கோவை, ப
-skip (N) no Coimbatore place in article: மோசடி வழக்கில் தனியாா் அறக்கட்டளை நிா்வாகி கைது
-try (N) manual=False: கருவலூா் அருகே குடிசை வீட்டில் தீ விபத்து
-skip (N) too old (2026-10-19 07:50:42): கோவை குண்டுவெடிப்பு குற்றவாளி 5 பேருக்கு பரோல்: அத
-try (N) manual=False: ஊதியூா் அருகே மின்சாரம் பாய்ந்து விவசாயி உயிரிழப்பு
-skip (N) too old (2026-10-28T16:36:30+05:30): கூரையை உடைத்து திருடியவர் கைது
-try (N) manual=False: ரிமாண்ட் செய்ய வந்தபோது கோவை சிறையில் போலீஸாரைத் தள்ளிவிட்ட
-skip (N) similar to a filed story: ரிமாண்ட் செய்ய வந்தபோது கோவை சிறையில் போலீஸாரைத் 
-skip (N) no Coimbatore place in article: ஊதியூா் அருகே மின்சாரம் பாய்ந்து விவசாயி உயிரிழப்ப
-skip (N) no Coimbatore place in article: கருவலூா் அருகே குடிசை வீட்டில் தீ விபத்து
-candidate loop ended: left 0, tried={'N': 6}, done={'N': 0}, time left 50 min
-filed: 0 Coimbatore district stories (target 3), reels only
-queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":2,"updated":58}
-All News sheet: {"ok":true,"added":1,"updated":59}
-All News sheet: {"ok":true,"added":13,"updated":47}
-All News sheet: {"ok":true,"added":16,"updated":44}
-All News sheet: {"ok":true,"added":11,"updated":49}
-All News sheet: {"ok":true,"added":5,"updated":55}
-All News sheet: {"ok":true,"added":3,"updated":57}
-All News sheet: {"ok":true,"added":1,"updated":27} 
-stories: 0
+source விகடன் கோவை: 13 items
+Tamil outlets only: kept 2147 of 2647 items
+all sources: 2147 items -> 943 different news
+candidate filter: not written=546, not Coimbatore district news (state-wide=252, old=53, collected=38, already filed=34, not written=20
+to write: 38 Coimbatore district candidates (max 3 stories)
+round: top 3 of 38 candidates + 6 power cut(s)
+candidates waiting: 38 Coimbatore; time left 52 min
+try (N) manual=False: கோவையில் நாளை (நவ.26) இந்த இடங்களில் மின் தடை
+try (N) manual=False: நாளைய மின்தடை: அரசூா்
+try (N) manual=False: தமிழ்நாட்டின் பல்வேறு இடங்களில் நாளை(26.11.2026) மின்தடை அறி
+skip (N) could not open: தமிழ்நாட்டின் பல்வேறு இடங்களில் நாளை(26.11.2026) ம [https://tamil.news18.com/photogallery/tamil-nadu/power-outag] 403 Client Error: Forbidden for url: https://tamil.news18.com/photogallery/tamil
+try (N) manual=False: நீலாம்பூர் பகுதியில் மின்தடை
+skip (N) too old (2026-11-19T04:29:02+05:30): நாளைய மின்தடை (19ம் தேதி)
+try (N) manual=False: நாளை மறுதினம் (நவ.26) மின்தடை(காலை 10:00
+skip (N) no Coimbatore place in article: நாளை மறுதினம் (நவ.26) மின்தடை(காலை 10:00 – மதியம் 
+try (N) manual=False: எல்.வலையபட்டியில் நாளை மின்தடை
+skip (N) too old (2026-10-03T17:22:27+05:30): நீலாம்பூர் பகுதியில் மின்தடை
+try (N) manual=False: கஞ்சா விற்பனை: 3 இளைஞா்கள் கைது
+skip (N) no Coimbatore place in article: எல்.வலையபட்டியில் நாளை மின்தடை
+try (N) manual=False: தாயை கத்தியால் குத்திக் கொலை செய்த மகன், மருமகள் கைது
+skip (N) similar to a filed story: தாயை கத்தியால் குத்திக் கொலை செய்த மகன், மருமகள் க
+try (N) manual=False: இது திட்டமிட்ட கொலையா... தற்கொலையா?
+skip (N) too old (2026-11-25T18:36:58+05:30): இது திட்டமிட்ட கொலையா... தற்கொலையா?
+try (N) manual=False: கல்குவாரி பணத்தைக் கேட்டதால் கொலை மிரட்டல்..,
+skip (N) only a headline, 0 words of text: One moment, please... [https://arasiyaltoday.com/death-threat-issued-after-demandin]
+try (N) manual=False: நகராட்சி நிர்வாக துறையில் டெண்டர் முறைகேடு வழக்கு; கே.என்.நே
+skip (N) no Coimbatore place in article: நகராட்சி நிர்வாக துறையில் டெண்டர் முறைகேடு வழக்கு;
+try (N) manual=False: அமலாக்கத்துறை வழக்குகளில் சொத்துகளை பறிமுதல் செய்ய கட்டுப்பா
+skip (N) no Coimbatore place in article: அமலாக்கத்துறை வழக்குகளில் சொத்துகளை பறிமுதல் செய்ய
+try (N) manual=False: கோவை காந்திபுரம் 100அடி ரோட்டிலுள்ள யு - டர்ன் பகுதியில் தாற
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 2})
+posting job started at once
+try (N) manual=False: டூவீலர் விபத்தில் தொழிலாளி பலி
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 4})
+skip (N) too old (2026-11-25 16:39:24): 2035ல் உலகின் மிகப்பெரிய மதமாக இஸ்லாம் உருவெடுக்கு
+try (N) manual=False: பெண் ஆட்சியருக்கு ஆபாச குறுஞ்செய்தி அனுப்பிய விவகாரம்: தவெக 
+try (N) manual=False: அரசுப் போக்குவரத்துக் கழக பணிமனையில் தகராறு: இருவா் கைது
+skip (N) no Coimbatore place in article: டூவீலர் விபத்தில் தொழிலாளி பலி
+try (N) manual=False: அரசு பொறியியல் கல்லூரி விடுதியில் 6 மடிக்கணினிகள் திருட்டு .
+skip (N) too old (2026-11-19T21:16:07.790Z): அரசு பொறியியல் கல்லூரி விடுதியில் 6 மடிக்கணினிகள் 
+try (N) manual=False: ஆன்லைன் மூலம் வெவ்வேறு நபா்களிடம் ரூ.4.59 லட்சம் மோசடி
+skip (N) too old (2026-11-19T21:07:19.637Z): அரசுப் போக்குவரத்துக் கழக பணிமனையில் தகராறு: இருவா
+try (N) manual=False: 3.6 கிலோ கஞ்சா கடத்தல்: 2 போ் கைது
+skip (N) too old (2026-11-19T21:13:42.491Z): ஆன்லைன் மூலம் வெவ்வேறு நபா்களிடம் ரூ.4.59 லட்சம் ம
+try (N) manual=False: இரும்பு கம்பி திருடியவர் கைது
+skip (N) too old (2026-11-10T20:13:47.350Z): 3.6 கிலோ கஞ்சா கடத்தல்: 2 போ் கைது
+try (N) manual=False: மனைவி வெட்டிக் கொலை: கத்தியுடன் கணவா் காவல் நிலையத்தில் சரண்
+skip (N) too old (2026-11-15T19:06:20+05:30): இரும்பு கம்பி திருடியவர் கைது
+try (N) manual=False: கோவை சிறுமி கூட்டு பாலியல் வன்கொடுமை: திடுக் பின்னணி | kovai
+skip (N) no Coimbatore place in article: பெண் ஆட்சியருக்கு ஆபாச குறுஞ்செய்தி அனுப்பிய விவகா
+try (N) manual=False: பள்ளி மாணவி பாலியல் வன்கொடுமை: பனியன் நிறுவனத் தொழிலாளி கைது
+skip (N) no Coimbatore place in article: மனைவி வெட்டிக் கொலை: கத்தியுடன் கணவா் காவல் நிலையத
+try (N) manual=False: தண்டவாளத்தில் கல் வைத்தவா் கைது
+skip (N) too old (2026-11-12T19:39:15.885Z): தண்டவாளத்தில் கல் வைத்தவா் கைது
+try (N) manual=False: கோவையில் பரவலாக மழை: வீடுகளுக்குள் தண்ணீா் புகுந்தது
+skip (N) too old (2025-02-18 14:09:00): கோவை சிறுமி கூட்டு பாலியல் வன்கொடுமை: திடுக் பின
+try (N) manual=False: வேகத்தடை இல்லாததால் விபத்து ஏற்படும் அபாயம்
+skip (N) too old (2026-11-05T23:20:00.000Z): கோவையில் பரவலாக மழை: வீடுகளுக்குள் தண்ணீா் புகுந்த
+try (N) manual=False: தனியாா் பேருந்து சக்கரத்தில் சிக்கி சிறுவன் உயிரிழப்பு
+skip (N) too old (2026-11-16T23:29:25.602Z): தனியாா் பேருந்து சக்கரத்தில் சிக்கி சிறுவன் உயிரிழ
+try (N) manual=False: விபத்தில் உயிரிழந்த தலைமை ஆசிரியை குடும்பத்துக்கு ரூ.1.23 கோ
+skip (N) too old (2026-11-19T21:17:42.023Z): விபத்தில் உயிரிழந்த தலைமை ஆசிரியை குடும்பத்துக்கு 
+try (N) manual=False: இரு வெவ்வேறு விபத்தில் சோகம்; குஜராத்தில் 7 பேர், ராஜஸ்தானில
+skip (N) no Coimbatore place in article: பள்ளி மாணவி பாலியல் வன்கொடுமை: பனியன் நிறுவனத் தொழ
+try (N) manual=False: திருப்புவனம் அருகே அரசுப் பேருந்து - ஆட்டோ மோதி ஓட்டுநர் உயி
+skip (N) no Coimbatore place in article: திருப்புவனம் அருகே அரசுப் பேருந்து - ஆட்டோ மோதி ஓட
+try (N) manual=False: குன்னூர் - மேட்டுப்பாளையம் சாலையை அவசரமாகத் திறந்தால் மண் சர
+skip (N) too old (2026-11-22T08:36:00+05:30): இரு வெவ்வேறு விபத்தில் சோகம்; குஜராத்தில் 7 பேர், 
+try (N) manual=False: மும்பை பயங்கரவாதத் தாக்குதல் நினைவு தினம்; கோவை ரயில் நிலையத
+skip (N) could not open: குன்னூர் - மேட்டுப்பாளையம் சாலையை அவசரமாகத் திறந்த [https://news.google.com/rss/articles/CBMinAFBVV95cUxOalZUcjd] 429 Client Error: Too Many Requests for url: https://covaimail.com/risk-of-lands
+try (N) manual=False: Gpay-வில் லஞ்சப் பணம்... நில அளவையர், இடைத்தரகர் மீது பாய்ந்
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 6})
+try (N) manual=False: விவசாயியிடம் லஞ்சம் கேட்ட மின்சார வாரிய ஊழியர்களின் வீடியோ ச
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 8})
+try (N) manual=False: கோவை பெண்களை அலறவிடும் உள்ளாடை திருடன்... ஷாக் வீடியோ Coimba
+skip (N) only a headline, 0 words of text: One moment, please... [https://arasiyaltoday.com/a-video-of-electricity-board-emplo]
+try (N) manual=False: கஞ்சா கடத்தல்: கைதான இருவருக்கு குண்டா் தடுப்புச் சட்டத்தில்
+skip (N) no Coimbatore place in article: கஞ்சா கடத்தல்: கைதான இருவருக்கு குண்டா் தடுப்புச் 
+try (N) manual=False: பாா் ஊழியரை தாக்கிய இருவா் மீது வழக்கு
+skip (N) only a headline, 3 words of text: கோவை பெண்களை அலறவிடும் உள்ளாடை திருடன்... ஷாக் வீ [https://www.dinamalar.com/videos/district-news-videos/coimba]
+try (N) manual=False: தீக்குளிக்க முயன்ற இந்து முன்னணி நிா்வாகி மீது வழக்குப் பதிவ
+skip (N) no Coimbatore place in article: பாா் ஊழியரை தாக்கிய இருவா் மீது வழக்கு
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 9})
+skip (N) no Coimbatore place in article: தீக்குளிக்க முயன்ற இந்து முன்னணி நிா்வாகி மீது வழக
+candidate loop ended: left 0, tried={'N': 38}, done={'N': 5}, time left 44 min
+filed: 5 Coimbatore district stories (target 3), reels only
+queue: 1 news waiting to be written
+All News sheet: {"ok":true,"added":50,"updated":10}
+All News sheet: {"ok":true,"added":54,"updated":6}
+All News sheet: {"ok":true,"added":56,"updated":4}
+All News sheet: {"ok":true,"added":59,"updated":1}
+All News sheet: {"ok":true,"added":59,"updated":1}
+All News sheet: {"ok":true,"added":54,"updated":6}
+All News sheet: {"ok":true,"added":60,"updated":0}
+All News sheet: {"ok":true,"added":58,"updated":2}
+All News sheet: {"ok":true,"added":58,"updated":2}
+All News sheet: {"ok":true,"added":28,"updated":8} 
+stories: 5
