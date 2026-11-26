@@ -1,49 +1,43 @@
-13:36:11 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
-13:36:12 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-13:36:14 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-13:36:19 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-13:36:21 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-13:36:26 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
-13:36:30 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
-13:36:50 location re-check failed (stays held): RN-483 429 Client Error: Too Many Requests for url: https://covaimail.com/power-shutdow
-13:36:54 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-13:36:55 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-13:36:57 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-13:37:02 2 held news to fix: ['RN-695', 'RN-697']
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.6-flash for 10 min
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing high d
-switching away from gemini/gemini-3.5-flash for 10 min
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 503: {
-  "error": {
-    "code": 503,
-    "message": "This model is currently experiencing 
-ok gemini/gemini-3-flash-preview (36s)
-attempt 1 gemini/gemini-3-flash-preview: 1 problems
-  caption needs 5 hashtags (Instagram max), has 6
+18:38:05 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
+18:38:06 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+18:38:08 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+18:38:19 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+18:38:22 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+18:38:31 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
+18:38:37 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
+18:38:39 hold lifted: RN-483 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+18:38:44 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+18:38:46 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+18:38:47 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+18:38:53 2 held news to fix: ['RN-695', 'RN-697']
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
+fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.5-flash
 fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
 poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (7s)
+attempt 1 groq/openai/gpt-oss-120b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 dead for this round: groq/qwen/qwen3.8-27b
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
-13:39:53 RN-695 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
+18:40:20 RN-695 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
