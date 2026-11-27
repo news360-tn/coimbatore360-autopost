@@ -81,6 +81,18 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-27 | `40683a4` | Power cuts are never missed: held notices are rewritten at once |
+| 2026-11-27 | `e4f03ad` | manual post e-mail RN-718 |
+| 2026-11-27 | `278dc58` | pick: picked news saved |
+| 2026-11-27 | `025b0c3` | pick: picked news saved |
+| 2026-11-27 | `46694d3` | pick: list sent |
+| 2026-11-27 | `420fa62` | stories shared / Instagram pause |
+| 2026-11-27 | `09b4cc0` | stories shared / Instagram pause |
+| 2026-11-27 | `49fe5af` | pick: written and posted |
+| 2026-11-27 | `db1d3e1` | facebook RN-746 |
+| 2026-11-27 | `a2a7249` | posted RN-746 |
+| 2026-11-27 | `73158c6` | facebook RN-745 |
+| 2026-11-27 | `50808b9` | posted RN-745 |
 | 2026-11-27 | `bb4a30e` | Blocked Google News links: also look for the same headline at another trusted outlet |
 | 2026-11-27 | `3ff1a20` | stories shared / Instagram pause |
 | 2026-11-27 | `97563ae` | News supply (from Trichy, 27 Nov): writer failures retried, 24 h search window, taluk towns searched |
@@ -99,16 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-27 | `ba09a7d` | stories shared / Instagram pause |
 | 2026-11-27 | `d4d8511` | stories shared / Instagram pause |
 | 2026-11-27 | `e10e184` | stories shared / Instagram pause |
-| 2026-11-27 | `3387e48` | goldrate posted |
-| 2026-11-27 | `de1aa36` | stories shared / Instagram pause |
-| 2026-11-27 | `52d1543` | stories shared / Instagram pause |
-| 2026-11-27 | `c173f45` | stories shared / Instagram pause |
-| 2026-11-27 | `916363a` | stories shared / Instagram pause |
-| 2026-11-27 | `71939bb` | manual post e-mail RN-744 |
-| 2026-11-27 | `383ecd7` | stories shared / Instagram pause |
-| 2026-11-27 | `d58ec1b` | stories shared / Instagram pause |
-| 2026-11-27 | `886fbb3` | stories shared / Instagram pause |
-| 2026-11-27 | `51ede15` | stories shared / Instagram pause |
-| 2026-11-27 | `fbfbf71` | stories shared / Instagram pause |
-| 2026-11-27 | `4d0f36d` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
