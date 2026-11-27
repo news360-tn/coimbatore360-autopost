@@ -3,18 +3,24 @@
   "earlier stories still waiting for images: []",
   "instagram check: 50 recent posts read from the page",
   "pick round: only the picked links are written (research_free/pick.py)",
-  "manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/27/உக்கடம்-அருகே-கஞ்சா-பறிமுதல்-இளைஞா்-கைது",
-  "candidate filter: collected=1",
-  "to write: 1 Coimbatore district candidates (max 1 stories)",
-  "round: top 1 of 1 candidates",
-  "candidates waiting: 1 Coimbatore; time left 79 min",
+  "manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/27/sexual-harassment-of-schoolgirls-teacher-arrested",
+  "manual link added: https://www.dinamalar.com/news/puducherry/5-people-who-made-the-rug-arrested/4387852",
+  "manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/young-man-in-possession-of-150-grams-of-cannabis-seized-arrested/4387797",
+  "candidate filter: collected=3",
+  "to write: 3 Coimbatore district candidates (max 3 stories)",
+  "round: top 3 of 3 candidates",
+  "candidates waiting: 3 Coimbatore; time left 79 min",
+  "try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim",
+  "try (N) manual=True: https://www.dinamalar.com/news/puducherry/5-people-who-made-",
   "try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi",
-  "auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 2})",
+  "auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})",
   "posting job started at once",
-  "candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 72 min",
-  "filed: 1 Coimbatore district stories (target 1), reels only",
+  "NOT filed (N) ரகளை செய்த 5 பேர் கைது: not Coimbatore district news (the story's first lines name another place and no Coimbatore place)",
+  "auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})",
+  "candidate loop ended: left 0, tried={'N': 3}, done={'N': 2}, time left 77 min",
+  "filed: 2 Coimbatore district stories (target 3), reels only",
   "queue: 0 news waiting to be written",
-  "All News sheet: {\"ok\":true,\"added\":1,\"updated\":0}"
+  "All News sheet: {\"ok\":true,\"added\":1,\"updated\":2}"
  ],
  "llm": [
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
@@ -23,101 +29,195 @@
   "dead for this round: gemini/gemini-3.6-flash",
   "fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
   "dead for this round: gemini/gemini-3.5-flash",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
   "fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, plea",
   "dead for this round: gemini/gemini-3-flash-preview",
+  "fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, plea",
+  "dead for this round: gemini/gemini-3-flash-preview",
+  "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
   "ok groq/openai/gpt-oss-120b (7s)",
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
   "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
-  "dead for this round: groq/openai/gpt-oss-120b",
+  "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
+  "switching away from groq/openai/gpt-oss-120b for 10 min",
   "ok groq/qwen/qwen3.8-27b (4s)",
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
-  "ok anthropic/claude-haiku-5-5",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 400: {\"error\":{\"message\":\"Failed to generate JSON. Please adjust your prompt. See 'failed_generati",
-  "ok anthropic/claude-haiku-5-5",
-  "ok anthropic/claude-haiku-5-5",
-  "ok anthropic/claude-haiku-5-5",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
+  "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
+  "switching away from groq/openai/gpt-oss-120b for 10 min",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
   "ok groq/qwen/qwen3.8-27b (0s)",
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "ok groq/qwen/qwen3.8-27b (3s)",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
-  "ok anthropic/claude-haiku-5-5",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
   "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
   "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
   "ok anthropic/claude-haiku-5-5",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
+  "switching away from groq/qwen/qwen3.8-27b for 10 min",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "ok anthropic/claude-haiku-5-5",
+  "fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)",
+  "poor answer - skipped for 30 min: gemini/gemini-3-flash-preview",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
-  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
   "ok anthropic/claude-haiku-5-5",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash"
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5"
  ],
  "stories": [
   {
-   "tamil_headline": "உக்கடத்தில் கஞ்சா விற்ற இளைஞர் கைது",
-   "english_headline": "Youth arrested near Ukkadam for selling ganja; 1 kg 350 g seized",
+   "tamil_headline": "நெகமத்தில் 150 கிராம் கஞ்சா பறிமுதல்: வாலிபர் கைது",
+   "english_headline": "150 g ganja seized, youth arrested in Negamam",
    "category": "Crime & Safety",
-   "location": "Ukkadam, Coimbatore city, Coimbatore district",
+   "location": "Kaaniyalampalayam, Negamam, Pollachi taluk, Coimbatore district",
    "importance": "Medium",
    "scope": "local",
    "post_to": "Coimbatore 360",
    "slides_spec": {
     "v": 3,
     "cat": "கஞ்சா கைது",
-    "loc": "உக்கடம், கோவை",
-    "hl1": "உக்கடத்தில் கஞ்சா விற்ற இளைஞர் கைது",
-    "hl2": "1 கிலோ 350 கிராம் பறிமுதல்",
+    "loc": "நெகமம், பொள்ளாச்சி",
+    "hl1": "நெகமத்தில் கஞ்சா விற்பனைக்கு கைது",
+    "hl2": "150 கிராம் கஞ்சா பறிமுதல்",
     "slides": [
      {
       "title": "என்ன நடந்தது?",
       "lines": [
-       "உக்கடம் ராமர் கோயில் அருகே கஞ்சா விற்பனை",
-       "கடை வீதி போலீசார் கண்காணிப்பில் ஈடுபட்டனர்",
-       "சந்தேகத்துக்குரிய இளைஞர் பிடிபட்டார்"
+       "காணியாலம்பாளையத்தில் கஞ்சா வைத்திருந்த வாலிபர் கைது",
+       "விற்பனைக்காக கஞ்சா வைத்திருந்ததாக போலீசார் நடவடிக்கை",
+       "கைது செய்யப்பட்டவர் கண்ணன், <b>30</b> வயது"
       ]
      },
      {
-      "title": "யார் கைது?",
+      "title": "எவ்வளவு கஞ்சா?",
       "lines": [
-       "துடியலூர் என்ஜிஜிஓ காலனி, கணபதி நகரைச் சேர்ந்த ரமேஷ்குமார்",
-       "வயது <b>32</b>",
-       "உதவி ஆய்வாளர் முத்துக்குமார் தலைமையில் சோதனை"
+       "<b>150 கிராம்</b> எடையுள்ள கஞ்சா பறிமுதல்",
+       "<b>10</b> சிறிய கஞ்சா பாக்கெட்டுகள்",
+       "தகவலின் அடிப்படையில் போலீசார் விசாரணை"
       ]
      },
      {
-      "title": "பறிமுதல்",
+      "title": "அடுத்து என்ன?",
       "lines": [
-       "விற்பனைக்கு வைத்திருந்த <b>1 கிலோ 350 கிராம்</b> கஞ்சா",
-       "ரமேஷ்குமார் கைது செய்யப்பட்டு சிறையில் அடைக்கப்பட்டார்"
+       "விசாரணையில் கஞ்சா விற்பனை உறுதியானது",
+       "போலீசார் வழக்குப்பதிவு செய்தனர்",
+       "கண்ணன் கைது செய்யப்பட்டார்"
       ]
      }
     ],
     "carousel": false
    },
-   "reel_script": "கோவை உக்கடத்தில் கஞ்சா விற்ற இளைஞர் கைது செய்யப்பட்டார். உக்கடம் ராமர் கோயில் அருகே சட்டவிரோதமாக கஞ்சா விற்பனை நடப்பதாக கடை வீதி போலீசாருக்குத் தகவல் கிடைத்தது. உதவி ஆய்வாளர் முத்துக்குமார் தலைமையிலான போலீசார் அப்பகுதியில் கண்காணிப்பில் ஈடுபட்டனர். அப்போது சந்தேகத்துக்கிடமாக நின்றிருந்த துடியலூர் என்ஜிஜிஓ காலனி, கணபதி நகரைச் சேர்ந்த ரமேஷ்குமார், 32 வயது, பிடிபட்டார். அவரிடம் விற்பனைக்காக வைத்திருந்த 1 கிலோ 350 கிராம் கஞ்சா இருந்தது. போலீசார் கஞ்சாவைப் பறிமுதல் செய்து ரமேஷ்குமாரைக் கைது செய்து சிறையில் அடைத்தனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
-   "caption": "🔪 உக்கடத்தில் கஞ்சா விற்ற இளைஞர் கைது: 1 கிலோ 350 கிராம் பறிமுதல்\n\n📰 முழு விவரம்:\nஉக்கடம் ராமர் கோயில் அருகே சட்டவிரோதமாக கஞ்சா விற்பனை நடப்பதாக கடை வீதி போலீசாருக்குத் தகவல் கிடைத்தது. உதவி ஆய்வாளர் முத்துக்குமார் தலைமையிலான போலீசார் கண்காணிப்பில் ஈடுபட்டனர். சந்தேகத்துக்கிடமாக நின்றிருந்த துடியலூர் என்ஜிஜிஓ காலனி, கணபதி நகரைச் சேர்ந்த ரமேஷ்குமார் (32 வயது) பிடிபட்டார். அவரிடம் விற்பனைக்காக வைக்கப்பட்டிருந்த 1 கிலோ 350 கிராம் கஞ்சா இருந்தது. போலீசார் கஞ்சாவைப் பறிமுதல் செய்து ரமேஷ்குமாரைக் கைது செய்து சிறையில் அடைத்தனர்.\n📍 இடம்: உக்கடம் ராமர் கோயில் அருகே, கோவை\n👮 நடவடிக்கை: கஞ்சா பறிமுதல், ரமேஷ்குமார் கைது, சிறையில் அடைப்பு\n\nUkkadam ganja seizure, youth arrested | Coimbatore news\n📍 உக்கடம், கோவை மாவட்டம் | 27 நவம்பர் 2026\n\nநண்பர்களுடன் Share செய்யுங்கள்.\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #Ukkadam #CoimbatoreNews #கோவை",
-   "prompts": "A Tamil Nadu police sub-inspector and his team in khaki uniforms stand on a busy Ukkadam street near a temple gopuram, with a young man in a shirt and trousers held by an arm from behind, his hands restrained. The street is lined with small shops, shutters half open, and town buses and two-wheelers passing along the road. Nearby, a constable holds a plastic bag containing packets of seized ganja, the greenish dry leaves visible. Daylight, late morning, dusty warm light. Seen from behind and far away, the faces of the people are not visible. The camera is at eye level, 35 mm lens, wide enough to show the street, the temple tower and the police vehicle parked at the kerb. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nClose-up of a police table or a khaki-clad hand placing seized ganja on a wooden surface in a police station room near Ukkadam, the dry greenish leaves spread out in small plastic packets and a loose heap of ganja beside a weighing scale. Behind, a blurred police constable in khaki stands at a distance, and a barred window lets in daylight. The objects are the clear focus, with a shallow depth of field. Daylight from the window, neutral and calm. Camera slightly high, 50 mm lens, showing the seized contraband in sharp detail against the plain room. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
-   "source": "https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/27/உக்கடம்-அருகே-கஞ்சா-பறிமுதல்-இளைஞா்-கைது",
-   "published": "2026-11-27T19:32:34.727Z",
+   "reel_script": "நெகமம் அருகே காணியாலம்பாளையத்தில் விற்பனைக்காக கஞ்சா வைத்திருந்த வாலிபரை போலீசார் கைது செய்துள்ளனர். நெகமம் அருகே காணியாலம்பாளையத்தைச் சேர்ந்த 30 வயது கண்ணன் அதே பகுதியில் உள்ள தனியார் கம்பெனியில் வேலை செய்கிறார். இவர் கஞ்சா விற்பனையில் ஈடுபடுவதாக போலீசாருக்கு தகவல் கிடைத்தது. இதையடுத்து போலீசார் கண்ணனிடம் விசாரணை செய்தனர். விசாரணையில் கஞ்சா விற்பனை செய்வது உறுதியானது. அவரிடம் இருந்து 150 கிராம் எடையுள்ள 10 சிறிய கஞ்சா பாக்கெட்டுகள் பறிமுதல் செய்யப்பட்டன. இதையடுத்து போலீசார் வழக்குப்பதிவு செய்து கண்ணனை கைது செய்தனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
+   "caption": "🚫 நெகமத்தில் 150 கிராம் கஞ்சா பறிமுதல்: வாலிபர் கைது\n\n📰 முழு விவரம்:\nநெகமம் அருகே காணியாலம்பாளையத்தில் விற்பனைக்காக கஞ்சா வைத்திருந்ததாக 30 வயது கண்ணன் போலீசாரால் கைது செய்யப்பட்டார். அவர் அதே பகுதியில் உள்ள தனியார் கம்பெனியில் வேலை செய்கிறார். கஞ்சா விற்பனையில் ஈடுபடுவதாக போலீசாருக்கு தகவல் கிடைத்ததைத் தொடர்ந்து விசாரணை நடத்தப்பட்டது. விசாரணையில் கஞ்சா விற்பனை உறுதியானது. அவரிடம் இருந்து 150 கிராம் எடையுள்ள, 10 சிறிய கஞ்சா பாக்கெட்டுகள் பறிமுதல் செய்யப்பட்டன. போலீசார் வழக்குப்பதிவு செய்து கண்ணனை கைது செய்தனர்.\n📍 இடம்: காணியாலம்பாளையம், நெகமம் அருகே\n👮 நடவடிக்கை: போலீசார் வழக்குப்பதிவு செய்து கைது\n\nNegamam ganja seizure 150 g youth arrested | Coimbatore news\n📍 நெகமம், பொள்ளாச்சி, கோவை மாவட்டம் | 27 நவம்பர் 2026\n\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #Pollachi #கஞ்சா #CoimbatoreNews",
+   "prompts": "Tamil Nadu police in khaki uniform examine ten small packets of seized ganja laid out on a wooden table in a rural police station room in Negamam, Pollachi taluk. The packets are small, sealed and dark green, arranged in a neat row, and no labels or text are visible. Behind the table, two policemen in khaki stand at a distance, seen from behind and slightly blurred, one holding a notebook. The room has plain whitewashed walls, a tube light, a metal almirah and a ceiling fan, giving the look of a small village police station. Light is soft daylight from a barred window. Time and weather unknown, so daylight is assumed. Camera: eye level, 35 mm, slightly wide enough to show the table, the officers and the room. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nA wide shot of a quiet village street in Kaaniyalampalayam near Negamam, Pollachi taluk, where police have come to make an arrest. A white Tamil Nadu police jeep is parked on the mud road beside a row of low tiled-roof houses and a coconut tree. Two policemen in khaki walk toward a small house, seen from behind and far away. Near the doorway, a young man in a plain shirt and trousers stands with his back to the camera, his face not visible. Dry dusty road, a few bicycles leaning against a wall and a stray dog add to the rural feel. Background shows open fields and a faint line of distant hills. Daylight, mid-morning. Camera: eye level, 35 mm, wide enough to show the street, jeep and house. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
+   "source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/young-man-in-possession-of-150-grams-of-cannabis-seized-arrested/4387797",
+   "published": "2026-11-27T19:22:54+05:30",
+   "verification": "DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: not grounded: location 'பொள்ளாச்சி' is not in the article",
+   "note": "free-model draft anthropic/claude-haiku-5-5, 13 attempt(s), 1 validator problem(s)",
+   "post_time": "right after your reply, same day",
+   "_area": "N",
+   "_score": 999,
+   "images": [
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/fd2619d1e4e0d626.jpg",
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/2e50f8ea9c48db2f.jpg"
+   ]
+  },
+  {
+   "tamil_headline": "கோவையில் மாணவிகளுக்கு பாலியல் தொல்லை: ஆசிரியர் கைது",
+   "english_headline": "Coimbatore teacher arrested for sexually harassing government school girls under POCSO Act",
+   "category": "Crime & Safety",
+   "location": "Coimbatore city, Coimbatore district",
+   "importance": "High",
+   "scope": "local",
+   "post_to": "Coimbatore 360",
+   "slides_spec": {
+    "v": 3,
+    "cat": "குற்றம் & பாதுகாப்பு",
+    "loc": "கோவை",
+    "hl1": "கோவையில் மாணவிகளுக்கு ஆசிரியர் கைது",
+    "hl2": "போக்ஸோ சட்டத்தில் கைது",
+    "slides": [
+     {
+      "title": "என்ன நடந்தது?",
+      "lines": [
+       "அரசுப் பள்ளி கணித ஆசிரியர் கைது",
+       "மாணவிகளுக்கு பாலியல் தொல்லை கொடுத்ததாக புகார்",
+       "போக்ஸோ சட்டத்தின் கீழ் போலீசார் கைது செய்தனர்"
+      ]
+     },
+     {
+      "title": "புகார் எப்படி?",
+      "lines": [
+       "கைது செய்யப்பட்டவர் செந்தில்குமார் (45 வயது)",
+       "பாதிக்கப்பட்ட இரு மாணவிகள் பெற்றோரிடம் தெரிவித்தனர்",
+       "பெற்றோர் கோவை மேற்கு மகளிர் காவல் நிலையத்தில் புகார்"
+      ]
+     },
+     {
+      "title": "விசாரணை",
+      "lines": [
+       "மகளிர் காவல் நிலையப் போலீசார் வழக்குப் பதிவு செய்தனர்",
+       "பள்ளிக்குச் சென்று தீவிர விசாரணை நடத்தினர்",
+       "விசாரணையில் தொல்லை உறுதி செய்யப்பட்டது"
+      ]
+     },
+     {
+      "title": "நடவடிக்கை",
+      "lines": [
+       "ஆசிரியர் செந்தில்குமார் நீதிமன்றத்தில் ஆஜர்படுத்தப்பட்டார்",
+       "நீதிமன்ற உத்தரவுப்படி சிறையில் அடைக்கப்பட்டார்"
+      ]
+     }
+    ],
+    "carousel": false
+   },
+   "reel_script": "கோவையில் மாணவிகளுக்கு பாலியல் தொல்லை கொடுத்த ஆசிரியர் கைது செய்யப்பட்டார். கோவையைச் சேர்ந்த செந்தில்குமார் (45 வயது) அரசுப் பள்ளியில் கணித ஆசிரியராகப் பணியாற்றி வந்தார். பள்ளியில் பயிலும் மாணவிகளுக்கு அவர் பாலியல் ரீதியாக தொல்லை கொடுத்ததாகக் கூறப்படுகிறது. மன உளைச்சலுக்கு ஆளான பாதிக்கப்பட்ட மாணவிகளில் இருவர் தங்களுக்கு நேர்ந்த கொடுமை குறித்து பெற்றோரிடம் தெரிவித்தனர். பெற்றோர் கோவை மேற்கு அனைத்து மகளிர் காவல் நிலையத்தில் புகார் அளித்தனர். புகாரின்பேரில் வழக்குப் பதிவு செய்த மகளிர் காவல் நிலைய போலீசார், சம்பந்தப்பட்ட பள்ளிக்குச் சென்று தீவிர விசாரணை மேற்கொண்டனர். விசாரணையில் ஆசிரியர் செந்தில்குமார் மாணவிகளுக்கு பாலியல் தொல்லை கொடுத்தது உறுதி செய்யப்பட்டது. இதையடுத்து போக்ஸோ சட்டத்தின் கீழ் அவரை வெள்ளிக்கிழமை கைது செய்த போலீசார், நீதிமன்றத்தில் ஆஜர்படுத்தி சிறையில் அடைத்தனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
+   "caption": "🚨 கோவையில் அரசுப் பள்ளி மாணவிகளுக்கு பாலியல் தொல்லை: ஆசிரியர் கைது\n\n📰 முழு விவரம்:\nகோவையைச் சேர்ந்த செந்தில்குமார் (45 வயது) அந்தப் பகுதியில் உள்ள அரசுப் பள்ளியில் கணித ஆசிரியராகப் பணியாற்றி வந்தார். பள்ளியில் பயிலும் மாணவிகளுக்கு அவர் பாலியல் ரீதியாக தொல்லை கொடுத்ததாகக் கூறப்படுகிறது.\nஇருமாணவிகள் தங்களுக்கு நேர்ந்த கொடுமை குறித்து பெற்றோரிடம் தெரிவித்தனர். பெற்றோர் கோவை மேற்கு அனைத்து மகளிர் காவல் நிலையத்தில் புகார் அளித்தனர்.\nவிசாரணையில் தொல்லை உறுதி செய்யப்பட்டதையடுத்து, வெள்ளிக்கிழமை போக்ஸோ சட்டத்தின் கீழ் ஆசிரியர் கைது செய்யப்பட்டார். நீதிமன்றத்தில் ஆஜர்படுத்தப்பட்டு சிறையில் அடைக்கப்பட்டார்.\n\n📍 இடம்: கோவை\n🗓️ நாள்: 27 நவம்பர் 2026\n👮 நடவடிக்கை: போக்ஸோ சட்டத்தின் கீழ் கைது, சிறையில் அடைப்பு\n\nCoimbatore government school teacher arrested under POCSO Act | Coimbatore news\n📍 கோவை, கோவை மாவட்டம் | 28 நவம்பர் 2026\n\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #CoimbatoreNews #கோவை",
+   "prompts": "A cluster of Tamil Nadu government school girls in white and blue uniforms walks away from the camera across a school courtyard in Coimbatore city, their backs to the lens, with two women police officers in khaki standing nearby at the entrance of a single-storey government school building with a tiled roof and a whitewashed compound wall. Behind them a row of classroom doorways with wooden doors and a few plastic chairs in a corridor, the midday light flat and soft under a pale sky. Some parents in cotton saris and a man in a shirt stand at a distance near the gate, seen from behind. No readable signboards, faces or text; the mood is quiet and serious. Shot at eye level with a 35 mm lens, wide enough to show the school building, courtyard and gate. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nClose-up of a wooden school desk inside a government school classroom in Coimbatore city, with a school notebook, a geometry box and a wooden ruler laid out on top, and a plain green chalkboard with faint chalk marks behind it. A khaki sleeve of a female police officer enters at the edge of the frame, placing a blue plastic file on the desk, with a shallow depth of field blurring the empty benches and a window with grey daylight. The scene suggests the investigation of a school, with no faces, no text and no readable labels. Shot slightly high at about 35 mm with a shallow focus on the desk and file. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
+   "source": "https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/27/sexual-harassment-of-schoolgirls-teacher-arrested",
+   "published": "2026-11-27T19:41:22.078Z",
    "verification": "DRAFT (anthropic/claude-haiku-5-5) - fact-check: no problems found",
    "note": "free-model draft anthropic/claude-haiku-5-5, 13 attempt(s), 0 validator problem(s)",
    "post_time": "right after your reply, same day",
    "_area": "N",
    "_score": 999,
    "images": [
-    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/aaeccf92f5a84446.jpg",
-    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/e6174eabf3945319.jpg"
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/0b066c047f38bccf.jpg",
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/3c512bf0e0756054.jpg"
    ]
   }
  ]
