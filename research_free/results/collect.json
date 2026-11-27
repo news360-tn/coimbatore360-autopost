@@ -3,22 +3,109 @@
   "earlier stories still waiting for images: []",
   "instagram check: 50 recent posts read from the page",
   "pick round: only the picked links are written (research_free/pick.py)",
-  "manual link added: https://www.dinamalar.com/news/puducherry/5-people-who-made-the-rug-arrested/4387852",
-  "manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/farmers-union-asks-for-subsidy-scheme/4387989",
-  "manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/ssr-job-consultation-meeting/4387937",
-  "manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/farmers-association-meeting/4387929",
-  "manual link added: https://www.hindutamil.in/news/tamilnadu/thirumavalavan-demand-dmk-should-make-same-move-again-to-defeat-constituency-delimitation-bill",
-  "candidate filter: collected=5",
-  "to write: 5 Coimbatore district candidates (max 5 stories)",
-  "round: top 5 of 5 candidates",
-  "daily cap: 32 stories already written today (cap 30) - only main / important news is written now",
-  "archive round: priority scan only (urgent local news, if any)",
-  "candidates waiting: 0 Coimbatore; time left 79 min",
-  "candidate loop ended: left 0, tried={'N': 0}, done={'N': 0}, time left 79 min",
-  "filed: 0 Coimbatore district stories (target 5), reels only",
+  "manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/youth-arrested-for-selling-narcotic-pills/4387903",
+  "candidate filter: collected=1",
+  "to write: 1 Coimbatore district candidates (max 1 stories)",
+  "round: top 1 of 1 candidates",
+  "candidates waiting: 1 Coimbatore; time left 79 min",
+  "try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim",
+  "auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})",
+  "posting job started at once",
+  "candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 78 min",
+  "filed: 1 Coimbatore district stories (target 1), reels only",
   "queue: 0 news waiting to be written",
-  "All News sheet: {\"ok\":true,\"added\":5,\"updated\":0}"
+  "All News sheet: {\"ok\":true,\"added\":1,\"updated\":0}"
  ],
- "llm": [],
- "stories": []
+ "llm": [
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
+  "dead for this round: gemini/gemini-3.6-flash",
+  "fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
+  "dead for this round: gemini/gemini-3.5-flash",
+  "fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, plea",
+  "dead for this round: gemini/gemini-3-flash-preview",
+  "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
+  "dead for this round: groq/openai/gpt-oss-120b",
+  "ok groq/qwen/qwen3.8-27b (3s)",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "ok groq/qwen/qwen3.8-27b (0s)",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
+  "switching away from groq/qwen/qwen3.8-27b for 10 min",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash"
+ ],
+ "stories": [
+  {
+   "tamil_headline": "தொண்டாமுத்தூரில் போதை மாத்திரை விற்ற வாலிபர் கைது",
+   "english_headline": "Youth arrested for selling narcotic pills in Tondaimuthur",
+   "category": "Crime & Safety",
+   "location": "Tondaimuthur, Coimbatore district",
+   "importance": "Medium",
+   "scope": "local",
+   "post_to": "Coimbatore 360",
+   "slides_spec": {
+    "v": 3,
+    "cat": "போதைப் பொருள் கைது",
+    "loc": "தொண்டாமுத்தூர்",
+    "hl1": "தொண்டாமுத்தூரில் போதை விற்பனையாளர் கைது",
+    "hl2": "58 டபென்டடால் மாத்திரைகள்",
+    "slides": [
+     {
+      "title": "சம்பவம்",
+      "lines": [
+       "தொண்டாமுத்தூர் போலீசார் ரோந்து பணியில் ஈடுபட்டனர்",
+       "வேடபட்டி - பேரூர் ரோட்டில் சந்தேகத்திற்குரிய வாலிபரை"
+      ]
+     },
+     {
+      "title": "விசாரணை",
+      "lines": [
+       "பேரூர் சக்திவேல், 26 வயது வாலிபர்",
+       "பாக்கெட்டில் 58 டபென்டடால் மாத்திரைகள் இருந்தன"
+      ]
+     },
+     {
+      "title": "நடவடிக்கை",
+      "lines": [
+       "போலீசார் வழக்கு பதிவு செய்தனர்",
+       "சக்திவேலை கைது செய்தனர்"
+      ]
+     }
+    ],
+    "carousel": false
+   },
+   "reel_script": "தொண்டாமுத்தூரில் 58 போதை மாத்திரைகளுடன் ஒரு வாலிபரை போலீசார் கைது செய்தனர். நவம்பர் 27ஆம் தேதி தொண்டாமுத்தூர் போலீஸ் ஸ்டேஷன் எல்லைக்குட்பட்ட பகுதிகளில் ரோந்து பணியில் ஈடுபட்டனர். வேடபட்டி - பேரூர் ரோட்டில் சந்தேகத்திற்குரிய வகையில் நின்றிருந்த ஒரு வாலிபரை போலீசார் பிடித்தனர். நடத்திய விசாரணையில் அவர் பேரூர் சக்திவேல், 26 வயது என தெரியவந்தது. அவர் போதை மாத்திரை விற்பனையாளர் எனவும் போலீசார் கண்டறிந்தனர். அவரது பாக்கெட்டில் 58 டபென்டடால் மாத்திரைகள் இருந்தன. போலீசார் இந்த சம்பவம் குறித்து வழக்கு பதிவு செய்தனர். தொடர்ந்து சக்திவேலை கைது செய்தனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
+   "caption": "🚔 தொண்டாமுத்தூரில் 58 டபென்டடால் மாத்திரைகளுடன் வாலிபர் கைது\n\n📰 முழு விவரம்:\nநவம்பர் 27ஆம் தேதி தொண்டாமுத்தூர் போலீஸ் ஸ்டேஷன் எல்லைக்குட்பட்ட பகுதிகளில் போலீசார் ரோந்து பணியில் ஈடுபட்டனர். வேடபட்டி - பேரூர் ரோட்டில் சந்தேகத்திற்குரிய வகையில் நின்றிருந்த ஒரு வாலிபரை போலீசார் பிடித்தனர். நடத்திய விசாரணையில் அவர் பேரூர் சக்திவேல், 26 வயது என தெரியவந்தது. அவர் போதை மாத்திரை விற்பனையாளர் எனவும் கண்டறியப்பட்டது. அவரது பாக்கெட்டில் 58 டபென்டடால் மாத்திரைகள் இருந்தன. போலீசார் இந்த சம்பவம் குறித்து வழக்கு பதிவு செய்தனர். தொடர்ந்து சக்திவேலை கைது செய்தனர்.\n\n📍 இடம்: வேடபட்டி - பேரூர் ரோடு, தொண்டாமுத்தூர்\n🗓️ நாள்: நவம்பர் 27\n👮 நடவடிக்கை: 58 மாத்திரைகள் பறிமுதல், வழக்கு பதிவு, கைது\n\nதேவைப்படுவோருக்கு Share செய்யுங்கள்\n\nTondaimuthur drug bust | Coimbatore news\n📍 Tondaimuthur, Coimbatore | Nov 27, 2026\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #Tondaimuthur #CoimbatoreNews #கோவை",
+   "prompts": "A Tamil Nadu police constable in khaki stands beside a young man at the edge of a village road in Tondaimuthur, Coimbatore, as the youth is questioned during a patrol. The road is a narrow tar road lined with dry scrub, a few small shops and tiled-roof houses, with the Western Ghats faintly visible in the background. The young man, seen from behind and slightly blurred, wears a plain shirt and trousers and has his hands near his pockets, while the policeman in khaki holds a small notebook. A parked police jeep sits a little way off on the roadside. It is daylight under a clear sky, and the scene is photographed at eye level with a 35 mm lens, wide enough to show the road, the patrol vehicle and the people together. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nClose-up detail of a small clear plastic packet holding about 58 loose white and pale-coloured tablets, laid out on a plain police table or a folded khaki cloth, with a policeman's khaki sleeve and hand visible at the frame edge. The tablets are scattered neatly and the background is out of focus, showing a faint road and roadside greenery of a village in Tondaimuthur, Coimbatore. Daylight falls softly from one side, the pills in sharp focus. No text, labels or logos are visible. The shot is taken from slightly above at a 35 mm equivalent close distance to highlight the seized pills as the key object of the story. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
+   "source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/youth-arrested-for-selling-narcotic-pills/4387903",
+   "published": "2026-11-27T20:39:03+05:30",
+   "verification": "DRAFT (groq/qwen/qwen3.8-27b) - fact-check: no problems found",
+   "note": "free-model draft groq/qwen/qwen3.8-27b, 1 attempt(s), 0 validator problem(s)",
+   "post_time": "right after your reply, same day",
+   "_area": "N",
+   "_score": 999,
+   "images": [
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/87bdaaed764e1abd.jpg",
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/ca1aba6e017ba3ba.jpg"
+   ]
+  }
+ ]
 }
