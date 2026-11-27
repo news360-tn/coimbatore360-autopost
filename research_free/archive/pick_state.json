@@ -174,7 +174,8 @@
    "category": "பொது",
    "score": 10.0,
    "power_cut": false,
-   "listed_at": "2026-11-27T08:32:19.302819+05:30"
+   "listed_at": "2026-11-27T08:32:19.302819+05:30",
+   "picked_at": "2026-11-27T08:33:40.677024+05:30"
   },
   "Cc3cddc2": {
    "id": "Cc3cddc2",
@@ -186,7 +187,8 @@
    "category": "குற்றம்",
    "score": 3.0,
    "power_cut": false,
-   "listed_at": "2026-11-27T08:32:19.302819+05:30"
+   "listed_at": "2026-11-27T08:32:19.302819+05:30",
+   "picked_at": "2026-11-27T08:33:40.677032+05:30"
   }
  },
  "rounds": {
@@ -854,8 +856,18 @@
    ],
    "sent": false,
    "deadline": "2026-11-27T09:32:19.302819+05:30",
-   "decided": null,
-   "written": []
+   "decided": {
+    "how": "automatic: top 6 of 2 by insights",
+    "ids": [
+     "C18f72d6",
+     "Cc3cddc2"
+    ],
+    "at": "2026-11-27T08:33:40.677016+05:30"
+   },
+   "written": [
+    "C18f72d6",
+    "Cc3cddc2"
+   ]
   }
  },
  "retry": {}
