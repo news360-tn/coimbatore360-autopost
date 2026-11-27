@@ -81,6 +81,8 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-27 | `e704916` | Page names as the owner writes them: Tiruppur 360 |
+| 2026-11-27 | `a4f66c7` | stories shared / Instagram pause |
 | 2026-11-27 | `38900f2` | Instagram handles: the real usernames of every page |
 | 2026-11-27 | `bb097c5` | stories shared / Instagram pause |
 | 2026-11-27 | `ed2faa0` | Rasipuram 360 username is rasipuram360.official |
@@ -109,6 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-27 | `a2a7249` | posted RN-746 |
 | 2026-11-27 | `73158c6` | facebook RN-745 |
 | 2026-11-27 | `50808b9` | posted RN-745 |
-| 2026-11-27 | `bb4a30e` | Blocked Google News links: also look for the same headline at another trusted outlet |
-| 2026-11-27 | `3ff1a20` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
