@@ -28,5 +28,23 @@
   "url": "https://www.vikatan.com/topics/coimbatore",
   "link_regex": "href=\"(https://www\\.vikatan\\.com/(?!live/|topics/)[a-z-]+/[^\"#?]{20,})\"",
   "limit": 30
+ },
+ {
+  "name": "தினத்தந்தி கோவை",
+  "url": "https://www.dailythanthi.com/news/tamilnadu",
+  "link_regex": "href=\"((?:https://www\\.dailythanthi\\.com)?/news/tamilnadu/(?:[a-z0-9]+-)*(?:coimbatore|covai|kovai|pollachi|mettupalayam|valparai|sulur|annur|karamadai|kinathukadavu|anaimalai|madukkarai|thondamuthur)(?:-[a-z0-9]+)*)\"",
+  "limit": 15
+ },
+ {
+  "name": "மாலைமலர் கோவை",
+  "url": "https://www.maalaimalar.com/news/district",
+  "link_regex": "href=\"((?:https://www\\.maalaimalar\\.com)?/news/(?:district|tamilnadu)/(?:[a-z0-9]+-)*(?:coimbatore|covai|kovai|pollachi|mettupalayam|valparai|sulur|annur|karamadai|kinathukadavu|anaimalai|madukkarai|thondamuthur)(?:-[a-z0-9]+)*)\"",
+  "limit": 15
+ },
+ {
+  "name": "மாலைமலர் கோவை (TN)",
+  "url": "https://www.maalaimalar.com/news/tamilnadu",
+  "link_regex": "href=\"((?:https://www\\.maalaimalar\\.com)?/news/tamilnadu/(?:[a-z0-9]+-)*(?:coimbatore|covai|kovai|pollachi|mettupalayam|valparai|sulur|annur|karamadai|kinathukadavu|anaimalai|madukkarai|thondamuthur)(?:-[a-z0-9]+)*)\"",
+  "limit": 15
  }
 ]
