@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-27 | `abb99e6` | Power cuts: never post a cut that is over; post cancellations and reschedules |
-| 2026-11-27 | `3c0cdca` | stories shared / Instagram pause |
-| 2026-11-27 | `9f8cfa7` | stories shared / Instagram pause |
-| 2026-11-27 | `d056608` | stories shared / Instagram pause |
-| 2026-11-27 | `c9277b9` | stories shared / Instagram pause |
-| 2026-11-27 | `daac76b` | stories shared / Instagram pause |
-| 2026-11-27 | `e704916` | Page names as the owner writes them: Tiruppur 360 |
-| 2026-11-27 | `a4f66c7` | stories shared / Instagram pause |
-| 2026-11-27 | `38900f2` | Instagram handles: the real usernames of every page |
-| 2026-11-27 | `bb097c5` | stories shared / Instagram pause |
-| 2026-11-27 | `ed2faa0` | Rasipuram 360 username is rasipuram360.official |
-| 2026-11-27 | `681c709` | stories shared / Instagram pause |
-| 2026-11-27 | `ee45816` | stories shared / Instagram pause |
-| 2026-11-27 | `99015f4` | stories shared / Instagram pause |
-| 2026-11-27 | `0f76d21` | stories shared / Instagram pause |
-| 2026-11-27 | `d73559e` | stories shared / Instagram pause |
-| 2026-11-27 | `efbe89a` | stories shared / Instagram pause |
-| 2026-11-27 | `60cdd73` | Rasipalan theme: Coimbatore page named in full (கோயம்புத்தூர்) gets its colour too |
-| 2026-11-27 | `c82a9a4` | facebook RN-751 |
-| 2026-11-27 | `051140a` | posted RN-751 |
-| 2026-11-27 | `c459c5b` | Gold rate and rasipalan reels: each page its own colour theme |
-| 2026-11-27 | `c2f675e` | stories shared / Instagram pause |
-| 2026-11-27 | `d33b15d` | manual post e-mail RN-728 |
-| 2026-11-27 | `6629510` | manual post e-mail RN-732 |
-| 2026-11-27 | `40683a4` | Power cuts are never missed: held notices are rewritten at once |
-| 2026-11-27 | `e4f03ad` | manual post e-mail RN-718 |
-| 2026-11-27 | `278dc58` | pick: picked news saved |
-| 2026-11-27 | `025b0c3` | pick: picked news saved |
-| 2026-11-27 | `46694d3` | pick: list sent |
-| 2026-11-27 | `420fa62` | stories shared / Instagram pause |
+| 2026-11-27 | `15a0636` | No manual work: stop the manual-post and Facebook-share e-mails (config.json owner_emails false); only automatic posting |
+| 2026-11-27 | `0324c94` | stories shared / Instagram pause |
+| 2026-11-27 | `b1db71c` | stories shared / Instagram pause |
+| 2026-11-27 | `83ec4c0` | facebook RN-758 |
+| 2026-11-27 | `f0c5470` | posted RN-758 |
+| 2026-11-27 | `3e690fe` | stories shared / Instagram pause |
+| 2026-11-27 | `117b85e` | stories shared / Instagram pause |
+| 2026-11-27 | `0c16593` | facebook RN-763 |
+| 2026-11-27 | `8ed22be` | posted RN-763 |
+| 2026-11-27 | `de200cd` | stories shared / Instagram pause |
+| 2026-11-27 | `c94c096` | stories shared / Instagram pause |
+| 2026-11-27 | `f5b3007` | facebook RN-761 |
+| 2026-11-27 | `18132e0` | posted RN-761 |
+| 2026-11-27 | `c5358e4` | stories shared / Instagram pause |
+| 2026-11-27 | `bf2e092` | stories shared / Instagram pause |
+| 2026-11-27 | `27d5c75` | facebook RN-754 |
+| 2026-11-27 | `56f9160` | posted RN-754 |
+| 2026-11-27 | `6bd8fc6` | stories shared / Instagram pause |
+| 2026-11-27 | `f383056` | stories shared / Instagram pause |
+| 2026-11-27 | `76321c8` | facebook RN-756 |
+| 2026-11-27 | `5c02b20` | posted RN-756 |
+| 2026-11-27 | `d794535` | stories shared / Instagram pause |
+| 2026-11-27 | `2166405` | pick: picked news saved |
+| 2026-11-27 | `97b3ddf` | facebook RN-752 |
+| 2026-11-27 | `a5538e8` | posted RN-752 |
+| 2026-11-27 | `f43264c` | stories shared / Instagram pause |
+| 2026-11-27 | `0412544` | pick: picked news saved |
+| 2026-11-27 | `b82055a` | pick: list sent |
+| 2026-11-27 | `6df72e7` | stories shared / Instagram pause |
+| 2026-11-27 | `4dfaa98` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
