@@ -3,109 +3,186 @@
   "earlier stories still waiting for images: []",
   "instagram check: 50 recent posts read from the page",
   "pick round: only the picked links are written (research_free/pick.py)",
-  "manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/fixation-of-fee-for-indoor-stadium/4386988",
-  "candidate filter: collected=1",
-  "to write: 1 Coimbatore district candidates (max 1 stories)",
-  "round: top 1 of 1 candidates",
-  "candidates waiting: 1 Coimbatore; time left 79 min",
-  "try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim",
+  "manual link added: https://www.dailythanthi.com/news/tamilnadu/coimbatore-leopard-trying-to-hunt-cat",
+  "manual link added: https://www.hindutamil.in/news/tamilnadu/annur-police-register-case-against-l-murugan",
+  "candidate filter: collected=2",
+  "to write: 2 Coimbatore district candidates (max 2 stories)",
+  "round: top 2 of 2 candidates",
+  "candidates waiting: 2 Coimbatore; time left 79 min",
+  "try (N) manual=True: https://www.hindutamil.in/news/tamilnadu/annur-police-regist",
+  "try (N) manual=True: https://www.dailythanthi.com/news/tamilnadu/coimbatore-leopa",
   "auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})",
   "posting job started at once",
-  "candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 78 min",
-  "filed: 1 Coimbatore district stories (target 1), reels only",
+  "auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})",
+  "candidate loop ended: left 0, tried={'N': 2}, done={'N': 2}, time left 78 min",
+  "filed: 2 Coimbatore district stories (target 2), reels only",
   "queue: 0 news waiting to be written",
-  "All News sheet: {\"ok\":true,\"added\":1,\"updated\":0}"
+  "All News sheet: {\"ok\":true,\"added\":2,\"updated\":0}"
  ],
  "llm": [
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
+  "dead for this round: gemini/gemini-3.6-flash",
   "fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
   "dead for this round: gemini/gemini-3.6-flash",
   "fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
   "dead for this round: gemini/gemini-3.5-flash",
+  "fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please che",
+  "dead for this round: gemini/gemini-3.5-flash",
   "fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, plea",
   "dead for this round: gemini/gemini-3-flash-preview",
+  "fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, plea",
+  "dead for this round: gemini/gemini-3-flash-preview",
+  "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_gener",
+  "ok groq/openai/gpt-oss-120b (7s)",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
   "fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `o",
   "dead for this round: groq/openai/gpt-oss-120b",
   "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
-  "dead for this round: groq/qwen/qwen3.8-27b",
+  "ok groq/qwen/qwen3.8-27b (3s)",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5",
+  "ok anthropic/claude-haiku-5-5",
+  "fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m",
+  "switching away from groq/qwen/qwen3.8-27b for 10 min",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
   "ok anthropic/claude-haiku-5-5",
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
-  "ok anthropic/claude-haiku-5-5",
-  "ok anthropic/claude-haiku-5-5",
-  "ok anthropic/claude-haiku-5-5",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
-  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
   "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
   "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
   "ok anthropic/claude-haiku-5-5",
-  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash"
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "ok anthropic/claude-haiku-5-5",
+  "ok anthropic/claude-haiku-5-5",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b",
+  "gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash",
+  "groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b",
+  "ok anthropic/claude-haiku-5-5"
  ],
  "stories": [
   {
-   "tamil_headline": "கோவை உள் விளையாட்டு அரங்கங்களுக்கு கட்டணம் நிர்ணயம்",
-   "english_headline": "Coimbatore indoor sports halls fees fixed: students and public to pay monthly, half-yearly and yearly rates",
-   "category": "Government & Services",
-   "location": "Coimbatore city, Nehru Stadium opposite Corporation sports ground, Coimbatore district",
+   "tamil_headline": "வால்பாறையில் பூனையை வேட்டையாட முயன்ற சிறுத்தை",
+   "english_headline": "Leopard tries to hunt a cat on a wall at Murugali estate, Valparai; locals panic",
+   "category": "Crime & Safety",
+   "location": "Murugali estate, Valparai, Coimbatore district",
    "importance": "Medium",
    "scope": "local",
    "post_to": "Coimbatore 360",
    "slides_spec": {
     "v": 3,
-    "cat": "விளையாட்டு அரங்கம்",
-    "loc": "கோவை நேரு ஸ்டேடியம்",
-    "hl1": "கோவையில் உள் விளையாட்டு அரங்கக் கட்டணம்",
-    "hl2": "மாதம், அரையாண்டு, ஆண்டு",
+    "cat": "வனவிலங்கு",
+    "loc": "வால்பாறை",
+    "hl1": "வால்பாறையில் பூனையை வேட்டையாடிய சிறுத்தை",
+    "hl2": "இளைஞர்கள் பீதி",
     "slides": [
      {
-      "title": "எங்கே?",
+      "title": "என்ன நடந்தது?",
       "lines": [
-       "கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடல்",
-       "பூப்பந்து, கபடி, வாலிபால், வூசூ அரங்கங்கள்",
-       "மாநகராட்சி நிதி, ஸ்பான்சர் மூலம் அமைக்கப்பட்டவை"
+       "வால்பாறை முருகாளி எஸ்டேட் பகுதியில் சிறுத்தை வந்தது",
+       "சுவர் மீது அமர்ந்திருந்த பூனையை சிறுத்தை துரத்தியது",
+       "பூனை கீழே குதித்து <b>தப்பியது</b>"
       ]
      },
      {
-      "title": "பயிற்சிக் கட்டணம்",
+      "title": "எப்போது?",
       "lines": [
-       "மாதம், அரையாண்டு, முழு ஆண்டு என மூன்று பிரிவுகள்",
-       "18 சதவீத ஜி.எஸ்.டி. உடன் கட்டணம்",
-       "பள்ளி, கல்லூரி மாணவர்களுக்குக் குறைந்த கட்டணம்"
+       "நேற்று முன்தினம் இரவு <b>10.30 மணிக்கு</b>",
+       "அப்பகுதியில் இருந்த இளைஞர்கள் சிறுத்தையை கண்டு பீதியடைந்தனர்",
+       "பகுதி மக்களிடையே பீதி நிலவுகிறது"
       ]
      },
      {
-      "title": "மாணவர் கட்டணம்",
+      "title": "புகைப்படங்கள்",
       "lines": [
-       "பூப்பந்து: மாதம் <b>ரூ.750</b> + ஜி.எஸ்.டி. ரூ.135",
-       "வாலிபால்: மாதம் <b>ரூ.472</b> (ஜி.எஸ்.டி. சேர்த்து)",
-       "கபடி, வூசூ: மாதம் <b>ரூ.354</b> (ஜி.எஸ்.டி. சேர்த்து)"
-      ]
-     },
-     {
-      "title": "நேரம், இலவசம்?",
-      "lines": [
-       "காலை 6–9 மணி, மாலை 4–7 மணி வரை செயல்படும்",
-       "அரசு, மாநகராட்சிப் பள்ளி மாணவர்கள் இலவசப் பயிற்சி பெறலாம்",
-       "கட்டணக் குறைப்பு கோரிக்கை உயர் அதிகாரிகளுக்கு அனுப்பப்படும்"
+       "இதுதொடர்பான புகைப்படங்கள் சமூக வலைத்தளங்களில் பரவுகின்றன",
+       "சிறுத்தையைக் கண்டால் தனியாகச் செல்ல வேண்டாம்",
+       "இரவில் எச்சரிக்கையாக இருங்கள்"
       ]
      }
     ],
     "carousel": false
    },
-   "reel_script": "கோவையில் உள் விளையாட்டு அரங்கங்களுக்குக் கட்டணம் நிர்ணயிக்கப்பட்டுள்ளது. கோவை நேரு ஸ்டேடியம் எதிரே உள்ள மாநகராட்சி விளையாட்டு திடலில் பூப்பந்து, கபடி, வாலிபால், வூசூ அரங்கங்கள் அமைக்கப்பட்டுள்ளன. இவற்றை மாநகராட்சி பொது நிதி மற்றும் ஸ்பான்சர் மூலம் ஏற்படுத்தினர். பணிகள் முடிந்ததும் தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையம் இவற்றை ஒப்படைக்கப்பட்டது. அங்கு செப்டம்பர், அக்டோபர் மாதங்களில் முதல்வர் கோப்பை போட்டிகள் நடத்தப்பட்டன. தற்போது மாதம், அரையாண்டு, முழு ஆண்டு என மூன்று பிரிவுகளில் பயிற்சிக் கட்டணம் 18 சதவீத ஜி எஸ் டி உடன் நிர்ணயிக்கப்பட்டுள்ளது. பள்ளி, கல்லூரி மாணவர்களுக்குப் பூப்பந்து பயிற்சிக் கட்டணம் மாதம் ரூ.750 மற்றும் ஜி எஸ் டி ரூ135. வாலிபால் மாதம் ரூ.472, கபடி மற்றும் வூசூ மாதம் ரூ.354 ஆகும். அரசு, மாநகராட்சிப் பள்ளி மாணவர்கள் அரசு பயிற்றுனர்களை அணுகி இலவசப் பயிற்சி பெறலாம். அரங்கங்கள் காலை 6 முதல் 9 மணி வரையும், மாலை 4 முதல் 7 மணி வரையும் செயல்படும். கட்டணக் குறைப்பு கோரிக்கைகள் உயர் அதிகாரிகளுக்கு அனுப்பப்படும் என மாவட்ட விளையாட்டு அலுவலர் புவனேஸ்வரி தெரிவித்தார். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
-   "caption": "🏸 கோவையில் உள் விளையாட்டு அரங்கங்களுக்குக் கட்டணம் நிர்ணயம்\n\n📰 முழு விவரம்:\nகோவை நேரு ஸ்டேடியம் எதிரே உள்ள மாநகராட்சி விளையாட்டு திடலில் பூப்பந்து, கபடி, வாலிபால், வூசூ உள் விளையாட்டு அரங்கங்கள் அமைக்கப்பட்டுள்ளன. மாநகராட்சி பொது நிதி மற்றும் ஸ்பான்சர் மூலம் இவை ஏற்படுத்தப்பட்டன. பணிகள் முடிந்ததும் தமிழ்நாடு விளையாட்டு மேம்பாட்டு ஆணையத்திடம் ஒப்படைக்கப்பட்டன. செப்.–அக். மாதங்களில் முதல்வர் கோப்பை போட்டிகள் நடத்தப்பட்டன.\nதற்போது மாதம், அரையாண்டு, முழு ஆண்டு என மூன்று பிரிவுகளில் 18 சதவீத ஜி.எஸ்.டி. உடன் பயிற்சிக் கட்டணம் நிர்ணயிக்கப்பட்டுள்ளது.\n🏸 பூப்பந்து (மாணவர்கள்): மாதம் ரூ.750 + ஜி.எஸ்.டி. ரூ.135; அரையாண்டு ரூ.3,500 + ரூ.630; முழு ஆண்டு ரூ.7,500 + ரூ.1,350\n🏸 பூப்பந்து (பொது மக்கள்): மாதம் ரூ.1,000 + ரூ.180; அரையாண்டு ரூ.4,500 + ரூ.810; முழு ஆண்டு ரூ.8,500 + ரூ.1,530\n🏐 வாலிபால் (மாணவர்கள்): மாதம் ரூ.472; அரையாண்டு ரூ.2,360; முழு ஆண்டு ரூ.4,720 (ஜி.எஸ்.டி. சேர்த்து)\n🏐 வாலிபால் (பொது மக்கள்): மாதம் ரூ.944; அரையாண்டு ரூ.3,540; முழு ஆண்டு ரூ.5,900 (ஜி.எஸ்.டி. சேர்த்து)\n🤼 கபடி, வூசூ (மாணவர்கள்): மாதம் ரூ.354; அரையாண்டு ரூ.1,770; முழு ஆண்டு ரூ.3,540 (ஜி.எஸ்.டி. சேர்த்து)\n🤼 கபடி, வூசூ (பொது மக்கள்): மாதம் ரூ.944; அரையாண்டு ரூ.3,540; முழு ஆண்டு ரூ.5,900 (ஜி.எஸ்.டி. சேர்த்து)\n🕘 நேரம்: காலை 6–9 மணி, மாலை 4–7 மணி\n🎓 அரசு, மாநகராட்சிப் பள்ளி மாணவர்கள் அரசு பயிற்றுனர்களை அணுகி இலவசப் பயிற்சி பெறலாம்.\n📞 தொடர்புக்கு: மாவட்ட விளையாட்டு அலுவலர் புவனேஸ்வரி\n\nCoimbatore indoor sports hall fees fixed | Coimbatore news\n📍 கோவை நேரு ஸ்டேடியம் அருகே, கோவை மாவட்டம் | 26 நவம்பர் 2026\n\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #Coimbatore #CoimbatoreNews #கோவை",
-   "prompts": "A group of school and college students in sports kit practise badminton inside a newly built indoor sports hall opposite Nehru Stadium in Coimbatore city, one player's back to the camera as he lifts a racket to strike a shuttlecock across a net. The hall has a bright polished wooden floor, white court lines, high ceilings and large windows, with a volleyball net and a kabaddi mat visible at the far end. Behind them, near the entrance, a coach in a track suit stands beside a plain notice board with a printed fee list. The wider Corporation sports ground can be glimpsed through the open doorway, with a few trees and the Western Ghats faintly in the far background. Bright daylight from the windows lights the court evenly, and the mood is calm and orderly. Shot at eye level, 35 mm, wide enough to show the full hall and the people from behind or far away. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nA close-up of a printed fee notice board mounted on a plain wall at the entrance of an indoor sports hall in Coimbatore city, with the rates section shown as a clean rectangular panel. Beside it a pair of badminton rackets and a tube of shuttlecocks rest on a wooden bench, and the edge of a blue volleyball net sits at the bottom of the frame. Soft daylight from the doorway falls across the wooden floor and the bench, and a blurred figure of a student in sports shoes stands far to the side, seen from behind. The background shows the bright sports hall interior fading softly. Shot at eye level, 35 mm, with shallow depth of field so the board and rackets stay sharp while the people remain soft and unidentifiable. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
-   "source": "https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/fixation-of-fee-for-indoor-stadium/4386988",
-   "published": "2026-11-26T19:17:09+05:30",
-   "verification": "DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: numbers not found in the article: 350, 500, 530, 540, 720, 770; caption misses facts of the article (put every one in 📰 முழு விவரம்): 1 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில'); 5 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில'); 95 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில'); 96 ('கோவை: கோவை நேரு ஸ்டேடியம் எதிரே மாநகராட்சி விளையாட்டு திடலில')",
-   "note": "free-model draft anthropic/claude-haiku-5-5, 13 attempt(s), 2 validator problem(s)",
+   "reel_script": "வால்பாறை முருகாளி எஸ்டேட் பகுதியில் சிறுத்தை ஒன்று பூனையை வேட்டையாட முயன்றது. நேற்று முன்தினம் இரவு 10.30 மணிக்கு சுவர் மீது அமர்ந்திருந்த பூனையை சிறுத்தை துரத்தியது. சுவர் மீது நடந்து சென்று வேட்டையாட முயன்றபோது பூனை கீழே குதித்து தப்பியது. அப்போது அங்கிருந்த இளைஞர்கள் சிறுத்தையைக் கண்டு பீதியடைந்தனர். இதுதொடர்பான புகைப்படங்கள் சமூக வலைத்தளங்களில் பரவி வருகின்றன. இரவில் எச்சரிக்கையாக இருக்குமாறு பொதுமக்கள் கேட்டுக்கொள்ளப்படுகின்றனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
+   "caption": "🐆 வால்பாறையில் பூனையை வேட்டையாட முயன்ற சிறுத்தை: இளைஞர்கள் பீதி\n\n📰 முழு விவரம்:\nகோவை மாவட்டம் வால்பாறை முருகாளி எஸ்டேட் பகுதியில் நேற்று முன்தினம் இரவு 10.30 மணிக்கு ஒரு சிறுத்தை, சுவர் மீது அமர்ந்திருந்த பூனையை வேட்டையாட முயன்றது. சிறுத்தை சுவர் மீது நடந்து சென்று பூனையை நெருங்கியபோது, பூனை கீழே குதித்து தப்பியது. அப்போது அப்பகுதியில் இருந்த இளைஞர்கள் சிறுத்தையைக் கண்டு பீதியடைந்தனர். இச்சம்பவம் அப்பகுதியில் பீதியை ஏற்படுத்தியுள்ளது.\n📸 இதுதொடர்பான புகைப்படங்கள் சமூக வலைத்தளங்களில் பரவி வருகின்றன.\n\nLeopard tries to hunt cat in Valparai estate | Coimbatore news\n📍 முருகாளி எஸ்டேட், வால்பாறை, கோவை மாவட்டம் | 26 நவம்பர் 2026\n\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #Valparai #CoimbatoreNews #கோவை",
+   "prompts": "A leopard creeps along the top of a low stone compound wall at night, stalking a cat that has jumped down onto the far side. Behind the wall stretch the dark tea bushes of a Valparai estate, with shadowy shade trees and the faint outline of the Western Ghats forest rising in the background. A few young men stand well back in the dark, seen from behind and slightly blurred, frozen in alarm. Only the faint light of a single distant bulb or the moon lights the scene, giving a cold night glow. The wall is weathered and mossy, with a narrow cement drain at its base. The camera is at eye level, 35 mm, wide enough to show the wall, the estate edge and the forest behind, with the leopard as the sharp focal point. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nA close-up of the top of the old stone compound wall at night, where the leopard's paw prints and a few scattered tea leaves mark the spot the cat had been sitting. The leopard's spotted tail and rosette-patterned flank are just visible at the edge of the frame, blurred by motion, as it moves along the wall. Below, the mossy stone and a cement drain catch faint torch-light from a phone held by a young man in the distance, seen from behind. Dark tea bush leaves and a few thin shrubs fill the background. Night, dim light, no people's faces. The camera is slightly high, 35 mm, close enough to show the wall texture and the leopard's movement. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
+   "source": "https://www.dailythanthi.com/news/tamilnadu/coimbatore-leopard-trying-to-hunt-cat",
+   "published": "2026-11-27T02:21:32Z",
+   "verification": "DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: reel_script has 54 words; need 60-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)",
+   "note": "free-model draft anthropic/claude-haiku-5-5, 11 attempt(s), 1 validator problem(s)",
    "post_time": "right after your reply, same day",
    "_area": "N",
    "_score": 999,
    "images": [
-    "https://res.cloudinary.com/hqz85usm/image/upload/v1795736093/coimbatore360/ijybrbfyb5ywxvf7pqyj.jpg",
-    "https://res.cloudinary.com/hqz85usm/image/upload/v1795736095/coimbatore360/upgw3ty6eugbziaz7wpi.jpg"
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/7f1d7b7b9ea8a1db.jpg",
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/af7c4c7b5684eecb.jpg"
+   ]
+  },
+  {
+   "tamil_headline": "அன்னூரில் எல்.முருகன் மீது போலீஸ் வழக்குப் பதிவு",
+   "english_headline": "Police register case against L. Murugan at Annur for gathering without permission",
+   "category": "Crime & Safety",
+   "location": "Annur, Coimbatore district",
+   "importance": "Medium",
+   "scope": "local",
+   "post_to": "Coimbatore 360",
+   "slides_spec": {
+    "v": 3,
+    "cat": "போலீஸ் வழக்கு",
+    "loc": "அன்னூர், கோவை மாவட்டம்",
+    "hl1": "அன்னூரில் எல்.முருகன் மீது வழக்கு",
+    "hl2": "அனுமதியின்றி கூடியதாக வழக்கு",
+    "slides": [
+     {
+      "title": "என்ன நடந்தது?",
+      "lines": [
+       "முன்னாள் மத்திய இணை அமைச்சர் எல்.முருகன் <b>24ஆம் தேதி</b>",
+       "அன்னூர் போலீஸார் அவரைத் தடுத்து நிறுத்தினர்",
+       "தடையை மீறி அன்னூரில் இருந்து செல்ல முயன்றார்"
+      ]
+     },
+     {
+      "title": "வாக்குவாதம்",
+      "lines": [
+       "அங்கு திரண்ட ஆதரவாளர்களுக்கும் போலீஸாருக்கும் வாக்குவாதம்",
+       "திருப்பரங்குன்றம் தீபம் ஏற்றும் நிகழ்வில்",
+       "இதையடுத்து நிலைமை பதற்றமானது"
+      ]
+     },
+     {
+      "title": "வழக்குப் பதிவு",
+      "lines": [
+       "எல்.முருகன் மற்றும் சில ஆதரவாளர்கள் மீது வழக்கு",
+       "அனுமதியின்றி கூடியதாக அன்னூர் போலீஸார் வழக்குப் பதிவு",
+       "விசாரணை தொடர்கிறது"
+      ]
+     }
+    ],
+    "carousel": false
+   },
+   "reel_script": "அன்னூரில் முன்னாள் மத்திய இணை அமைச்சர் எல் முருகன் மீது போலீஸார் வழக்குப் பதிவு செய்துள்ளனர். அக்டோபர் 24ஆம் தேதி நவம்பர் 24ஆம் தேதி, திருப்பரங்குன்றம் தீபம் ஏற்றும் நிகழ்வில் பங்கேற்பதாகக் கூறி அவர் மதுரைக்குச் செல்ல முயன்றார். கோவை மாவட்டம் அன்னூர் போலீஸார் அவரைத் தடுத்து நிறுத்தினர். தடையை மீறி அன்னூரில் இருந்து செல்ல முயன்றார். அங்கு திரண்ட ஆதரவாளர்களுக்கும் போலீஸாருக்கும் இடையே வாக்குவாதம் எழுந்தது. இதையடுத்து எல் முருகன் மற்றும் அவரது ஆதரவாளர்கள் சிலர் மீது அனுமதியின்றி கூடியதாக அன்னூர் போலீஸார் வழக்குப் பதிவு செய்துள்ளனர். மேலும் செய்திகளுக்கு கோயம்புத்தூர் த்ரீ சிக்ஸ்டி பக்கத்தை பின்தொடருங்கள்.",
+   "caption": "⚖️ அன்னூரில் எல்.முருகன் மீது போலீஸ் வழக்குப் பதிவு\n\n📰 முழு விவரம்:\nதிருப்பரங்குன்றம் தீபம் ஏற்றும் நிகழ்வில் பங்கேற்பதாகக் கூறி முன்னாள் மத்திய இணை அமைச்சர் எல்.முருகன் 24ஆம் தேதி மதுரைக்குச் செல்ல முயன்றார். அன்னூர் போலீஸார் அவரைத் தடுத்து நிறுத்தினர். தடையை மீறி அன்னூரில் இருந்து செல்ல முயன்றதால், அங்கு திரண்ட ஆதரவாளர்களுக்கும் போலீஸாருக்கும் இடையே வாக்குவாதம் எழுந்தது. இதையடுத்து எல்.முருகன் மற்றும் அவரது ஆதரவாளர்கள் சிலர் மீது அனுமதியின்றி கூடியதாக அன்னூர் போலீஸார் வழக்குப் பதிவு செய்துள்ளனர்.\n📍 இடம்: அன்னூர், கோவை மாவட்டம்\n🗓️ நாள்: 24ஆம் தேதி நிகழ்வு\n👮 நடவடிக்கை: அனுமதியின்றி கூடியதாக வழக்குப் பதிவு\n\nL Murugan case registered at Annur police station | Coimbatore news\n📍 அன்னூர், கோவை மாவட்டம் | 27 நவம்பர் 2026\n\nஉள்ளூர் செய்திகளுக்கு Follow செய்யுங்கள் 🙏\n\n#Coimbatore360 #Coimbatore #Annur #CoimbatoreNews #கோவை",
+   "prompts": "A group of police in khaki uniform stand in a line on a roadside in Annur town, blocking a gathering of men in shirts and veshti who stand together in an open-air stretch of road. Seen from a distance and slightly from behind, the crowd holds no visible flags or readable placards. Along the roadside are two-wheelers parked at the edge and a private bus waiting near a junction. Shop fronts with closed shutters line the street, and a few local onlookers stand at a distance on the pavement. The scene shows a tense standoff: the police hold their ground with arms folded or hands at their sides while the supporters press forward slightly. It is daytime under flat, hazy daylight. Shot at eye level with a 35 mm lens, wide enough to show the road, the police line, and the crowd together. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).\n---\nA close-up of a police jeep parked beside a roadside in Annur, its khaki-painted body and door visible with a police officer's cap resting on the dashboard. Behind it, a blurred crowd of men in shirts and veshti stands at a distance, seen from behind and out of focus. A pair of two-wheelers and the edge of a plain concrete pavement fill the lower frame. The jeep is parked where the standoff took place, with no readable text or number plate visible. It is daylight with soft shadows on the road. Shot at slightly high eye level with a 35 mm lens to show the jeep in the foreground and the gathering behind it. Photorealistic press photograph from Coimbatore city, Tamil Nadu, India. One single continuous frame (no collage, no panels), tall vertical 9:16 composition, the main subject in the centre, full-frame camera, sharp focus across the frame, natural light, true-to-life colours, documentary photojournalism. No text, no letters, no numbers, no signboards, no logos, no watermarks, no brand names, no company logos, no product labels, no recognisable faces. Keep the lower third visually simple (road, wall, ground, sky).",
+   "source": "https://www.hindutamil.in/news/tamilnadu/annur-police-register-case-against-l-murugan",
+   "published": "2026-11-27T01:17:24Z",
+   "verification": "DRAFT (anthropic/claude-haiku-5-5) - NOT CLEAN, held from posting - problems: sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences",
+   "note": "free-model draft anthropic/claude-haiku-5-5, 11 attempt(s), 1 validator problem(s)",
+   "post_time": "right after your reply, same day",
+   "_area": "N",
+   "_score": 999,
+   "images": [
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/c809dcf713e8a24f.jpg",
+    "https://pub-ec316fa6a94f404c993596355ad19128.r2.dev/coimbatore360/20261127/e96b79f279dbb619.jpg"
    ]
   }
  ]
