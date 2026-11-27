@@ -81,6 +81,13 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-27 | `ed2faa0` | Rasipuram 360 username is rasipuram360.official |
+| 2026-11-27 | `681c709` | stories shared / Instagram pause |
+| 2026-11-27 | `ee45816` | stories shared / Instagram pause |
+| 2026-11-27 | `99015f4` | stories shared / Instagram pause |
+| 2026-11-27 | `0f76d21` | stories shared / Instagram pause |
+| 2026-11-27 | `d73559e` | stories shared / Instagram pause |
+| 2026-11-27 | `efbe89a` | stories shared / Instagram pause |
 | 2026-11-27 | `60cdd73` | Rasipalan theme: Coimbatore page named in full (கோயம்புத்தூர்) gets its colour too |
 | 2026-11-27 | `c82a9a4` | facebook RN-751 |
 | 2026-11-27 | `051140a` | posted RN-751 |
@@ -104,11 +111,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-27 | `3ff1a20` | stories shared / Instagram pause |
 | 2026-11-27 | `97563ae` | News supply (from Trichy, 27 Nov): writer failures retried, 24 h search window, taluk towns searched |
 | 2026-11-27 | `fef780b` | pick: picked news saved |
-| 2026-11-27 | `4faea23` | stories shared / Instagram pause |
-| 2026-11-27 | `0cbdb45` | stories shared / Instagram pause |
-| 2026-11-27 | `2498171` | pick: picked news saved |
-| 2026-11-27 | `989e5b5` | pick: list sent |
-| 2026-11-27 | `4ba5f19` | stories shared / Instagram pause |
-| 2026-11-27 | `c1d597c` | stories shared / Instagram pause |
-| 2026-11-27 | `fc9af6b` | Sources: the missing district list of this page (Dinakaran / Oneindia) |
 <!-- recent-changes:end -->
