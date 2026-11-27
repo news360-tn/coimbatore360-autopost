@@ -1,4 +1,4 @@
-writing [N]: போதை மாத்திரை விற்ற வாலிபர் கைது
+writing [N]: உக்கடம் அருகே கஞ்சா பறிமுதல்: இளைஞா் கைது
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
@@ -16,77 +16,96 @@ fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
+ok groq/openai/gpt-oss-120b (7s)
+attempt 1 groq/openai/gpt-oss-120b: 3 problems
+  missing key: reel_script
+  missing key: caption
+  missing key: scenes
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
 dead for this round: groq/openai/gpt-oss-120b
-ok groq/qwen/qwen3.8-27b (3s)
-attempt 1 groq/qwen/qwen3.8-27b: 1 problems
-  hl1 is 48 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+ok groq/qwen/qwen3.8-27b (4s)
+attempt 2 groq/qwen/qwen3.8-27b: 1 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
 free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 400: {"error":{"message":"Failed to generate JSON. Please adjust your prompt. See 'failed_generati
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 400: {"error":{"message":"Failed to generate JSON. Ple
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  slides_spec.hl2 states '58 மாத்திரைகள் பறிமுதல்' (tablets seized), but the article only says 58 tablets were found in his pocket; 'seized' is not stated explicitly, though this is a minor wording point.
-  reel_script says the arrested person was 'போதை மாத்திரை விற்ற 26 வயது வாலிபர்' and that he was found 'சந்தேகத்திற்குரிய வகையில்' - article supports both, but the reel_script says 'நவம்பர் 27ஆம் தேதி தொண்டாமுத்தூர் போலீசார் ரோந்து பணியில்' which is accurate; no clear error here.
-  caption and reel_script state the date as 'நவம்பர் 27ஆம் தேதி' and the caption footer has 'நவம்பர் 27, 2026' - the year 2026 is not stated in the article (the article only gives 'நவ.,27'), so the year is an invented detail.
-  slides_spec.slides[2] 'போதைப் பொருள் விற்பனை பற்றி தகவல் இருந்தால்' is a call-to-action not present in the article - an added claim/invented detail.
-claude rewrite 1 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: slides_spec.hl2 states '58 மாத்திரைகள் பறிமுதல்' (tablets seized), but the article only says 58 tablets were found in his pocket; 'seized' is not stated explicitly, though this is a minor wording point.
-  fact-check: reel_script says the arrested person was 'போதை மாத்திரை விற்ற 26 வயது வாலிபர்' and that he was found 'சந்தேகத்திற்குரிய வகையில்' - article supports both, but the reel_script says 'நவம்பர் 27ஆம் தேதி தொண்டாமுத்தூர் போலீசார் ரோந்து பணியில்' which is accurate; no clear error here.
-  fact-check: caption and reel_script state the date as 'நவம்பர் 27ஆம் தேதி' and the caption footer has 'நவம்பர் 27, 2026' - the year 2026 is not stated in the article (the article only gives 'நவ.,27'), so the year is an invented detail.
-  fact-check: slides_spec.slides[2] 'போதைப் பொருள் விற்பனை பற்றி தகவல் இருந்தால்' is a call-to-action not present in the article - an added claim/invented detail.
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  reel_script says 'கடை வீதி போலீசாருக்கு' (Kadai Veethi police) correctly, but slides_spec.hl1 and loc are fine; however the reel_script and caption omit the arrest of ரமேஷ்குமார as 'youth' vs age 32 — the article's 'இளைஞர்' is consistent, so no issue there; the real problem: the reel_script says 'சிறையில் அடைத்தனர்' which matches the article, but the caption says 'கஞ்சா கண்டெடுக்கப்பட்டது' which is a wording not in the article and is an added detail of how it was found
+  slides_spec 'யார்? எவ்வளவு?' and 'அடுத்து என்ன?' slides add 'போதைப் பொருள் தகவல்களை போலீசுக்குத் தெரிவியுங்கள்' (a call to report drug information), an invented detail not in the article
+  slides_spec 'அடுத்து என்ன?' slide line 'உதவி ஆய்வாளர் முத்துக்குமார் தலைமையில் நடவடிக்கை' mixes the inspector's role into the 'what next' section, and the 'what next' slide states facts already covered rather than an actual next step, making the sentence meaning unclear
+claude rewrite 1 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: reel_script says 'கடை வீதி போலீசாருக்கு' (Kadai Veethi police) correctly, but slides_spec.hl1 and loc are fine; however the reel_script and caption omit the arrest of ரமேஷ்குமார as 'youth' vs age 32 — the article's 'இளைஞர்' is consistent, so no issue there; the real problem: the reel_script says 'சிறையில் அடைத்தனர்' which matches the article, but the caption says 'கஞ்சா கண்டெடுக்கப்பட்டது' which is a wording not in the article and is an added detail of how it was found
+  fact-check: slides_spec 'யார்? எவ்வளவு?' and 'அடுத்து என்ன?' slides add 'போதைப் பொருள் தகவல்களை போலீசுக்குத் தெரிவியுங்கள்' (a call to report drug information), an invented detail not in the article
+  fact-check: slides_spec 'அடுத்து என்ன?' slide line 'உதவி ஆய்வாளர் முத்துக்குமார் தலைமையில் நடவடிக்கை' mixes the inspector's role into the 'what next' section, and the 'what next' slide states facts already covered rather than an actual next step, making the sentence meaning unclear
 ok anthropic/claude-haiku-5-5
 claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
-  slides must have 3 or 4 items
-  hl1 is 49 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 35
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 ok groq/qwen/qwen3.8-27b (0s)
-factcheck by groq/qwen/qwen3.8-27b: 2 problems
-  Caption contains an incorrect year '2026' which is not in the article (article only mentions Nov 27).
-  Caption contains an incorrect location 'Coimbatore' in the English footer, whereas the article specifies Thondamuthur (which is in Tiruppur district, not Coimbatore).
-claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  fact-check: Caption contains an incorrect year '2026' which is not in the article (article only mentions Nov 27).
-  fact-check: Caption contains an incorrect location 'Coimbatore' in the English footer, whereas the article specifies Thondamuthur (which is in Tiruppur district, not Coimbatore).
-hl1 shortened at a natural break: 'தொண்டாமுத்தூரில் போதை மாத்திரை விற்பனையாளர் கைது' -> 'தொண்டாமுத்தூரில் போதை விற்பனையாளர் கைது'
+factcheck by groq/qwen/qwen3.8-27b: 0 problems
+claude rewrite 3 anthropic/claude-haiku-5-5: 0 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok groq/qwen/qwen3.8-27b (3s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The reel_script says the youth was arrested for 'selling ganja' (கஞ்சா விற்பனை செய்த), which matches the article headline, but the reel_script and caption describe the arrest as 'இதனால்' (therefore) caused by the seizure; this is a minor causal link not stated in the article
+  The reel_script states the Ukkadam location is in the 'கடை வீதி' police jurisdiction and that the youth was caught 'சந்தேகத்துக்கிடமாக நின்றிருந்த' — acceptable; however the caption's 'சட்டவிரோதமாக' and the reel_script's sentence 'உக்கடம் ராமர் கோயில் அருகே' are consistent with the article
+  The slides_spec line 'ரமேஷ்குமார் கைது செய்யப்பட்டு சிறையில் அடைக்கப்பட்டார்' is fine, but the slides_spec 'hl1' and 'cat' values are not an issue; no clear factual error remains beyond the causal connector
+proofread rejected (3 problems)
+  fact-check: The reel_script says the youth was arrested for 'selling ganja' (கஞ்சா விற்பனை செய்த), which matches the article headline, but the reel_script and caption describe the arrest as 'இதனால்' (therefore) caused by the seizure; this is a minor causal link not stated in the article
+  fact-check: The reel_script states the Ukkadam location is in the 'கடை வீதி' police jurisdiction and that the youth was caught 'சந்தேகத்துக்கிடமாக நின்றிருந்த' — acceptable; however the caption's 'சட்டவிரோதமாக' and the reel_script's sentence 'உக்கடம் ராமர் கோயில் அருகே' are consistent with the article
+  fact-check: The slides_spec line 'ரமேஷ்குமார் கைது செய்யப்பட்டு சிறையில் அடைக்கப்பட்டார்' is fine, but the slides_spec 'hl1' and 'cat' values are not an issue; no clear factual error remains beyond the causal connector
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested 1481. The request's expected output tokens exceed the enforced limit; reduce max_tokens (or the request's expected output) and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
 ok anthropic/claude-haiku-5-5
+real photo skipped (photo uploaded 2026-10-01 (older than the news)): https://media.dinamani.com/dinamani/2026-10-01/od55j49x/%E0%AE%95%E0%AF%88%E0%AE%A4%E0%AF%
+real photo skipped (photo uploaded 2026-10-01 (older than the news)): https://media.dinamani.com/dinamani/2026-10-01/od55j49x/கைது?w=1200&h=675&auto=format%2Cco
+imagegen: cloudflare black-forest-labs/flux-1-schnell 400: {"errors":[{"message":"AiError: AiError: Input prompt contains NSFW content. (b762ea9a-f30f-4c43-8809-e09c98e3aeda)","code":8007}],"success":false,"result":{},"messages":[
+imagegen: pollinations 402: {"success":false,"error":{"message":"Insufficient balance. This request costs about $0.0020, but your available balance is $0.0000. Top up at https://enter.pollinations.ai/top-up?ref=agent_low_balance
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
+imagegen: HTTPSConnectionPool(host='ai.api.nvidia.com', port=443): Read timed out. (read timeout=150) 504 timeout
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
-real photo: vision check out of free quota
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
 image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-images made: 2 for 'Youth arrested for selling narcotic pill'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-0033","first":"RN-764"}
+images made: 2 for 'Youth arrested near Ukkadam for selling '
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-0237","first":"RN-765"}
 posting job started at once
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 pick round: only the picked links are written (research_free/pick.py)
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/youth-arrested-for-selling-narcotic-pills/4387903
+manual link added: https://www.dinamani.com/all-editions/edition-coimbatore/coimbatore/2026/Nov/27/உக்கடம்-அருகே-கஞ்சா-பறிமுதல்-இளைஞா்-கைது
 candidate filter: collected=1
 to write: 1 Coimbatore district candidates (max 1 stories)
 round: top 1 of 1 candidates
 candidates waiting: 1 Coimbatore; time left 79 min
-try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
+try (N) manual=True: https://www.dinamani.com/all-editions/edition-coimbatore/coi
+auto images: 1 of 1 stories ({'fal-ai/flux/schnell': 2})
 posting job started at once
-candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 78 min
+candidate loop ended: left 0, tried={'N': 1}, done={'N': 1}, time left 72 min
 filed: 1 Coimbatore district stories (target 1), reels only
 queue: 0 news waiting to be written
 All News sheet: {"ok":true,"added":1,"updated":0} 
