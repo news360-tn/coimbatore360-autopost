@@ -81,34 +81,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-26 | `5c2171f` | Keywords after hashtags on Instagram/Facebook/YouTube; Facebook follower count in insights |
-| 2026-11-26 | `db2ee61` | facebook RN-713 |
-| 2026-11-26 | `39a0df2` | posted RN-713 |
-| 2026-11-26 | `41d3c7a` | facebook RN-710 |
-| 2026-11-26 | `c973949` | posted RN-710 |
-| 2026-11-26 | `a796272` | stories shared / Instagram pause |
-| 2026-11-26 | `1399799` | facebook RN-707 |
-| 2026-11-26 | `9792108` | posted RN-707 |
-| 2026-11-26 | `dab7241` | facebook RN-708 |
-| 2026-11-26 | `7c35cb1` | posted RN-708 |
-| 2026-11-26 | `d324c9e` | autofix: corrected held news |
-| 2026-11-26 | `10e986b` | stories shared / Instagram pause |
-| 2026-11-26 | `a0e0e12` | powercut: notices written |
-| 2026-11-26 | `6f1babe` | stories shared / Instagram pause |
-| 2026-11-26 | `7e08c8f` | stories shared / Instagram pause |
-| 2026-11-26 | `cb0ac5c` | stories shared / Instagram pause |
-| 2026-11-26 | `cddf2ae` | stories shared / Instagram pause |
-| 2026-11-26 | `c68a60b` | stories shared / Instagram pause |
-| 2026-11-26 | `7faaaa0` | stories shared / Instagram pause |
-| 2026-11-26 | `be6b77d` | pick: written and posted |
-| 2026-11-26 | `5e94926` | facebook RN-706 |
-| 2026-11-26 | `8560b2d` | posted RN-706 |
-| 2026-11-26 | `8fe9430` | stories shared / Instagram pause |
-| 2026-11-26 | `283b7d1` | pick: picked news saved |
-| 2026-11-26 | `ae77fd6` | pick: picked news saved |
-| 2026-11-26 | `a6b1835` | pick: list sent |
-| 2026-11-26 | `cff8f5b` | stories shared / Instagram pause |
-| 2026-11-26 | `b2a96fd` | stories shared / Instagram pause |
-| 2026-11-26 | `6ac108c` | pick: written and posted |
-| 2026-11-26 | `a3df868` | facebook RN-704 |
+| 2026-11-27 | `97563ae` | News supply (from Trichy, 27 Nov): writer failures retried, 24 h search window, taluk towns searched |
+| 2026-11-27 | `fef780b` | pick: picked news saved |
+| 2026-11-27 | `4faea23` | stories shared / Instagram pause |
+| 2026-11-27 | `0cbdb45` | stories shared / Instagram pause |
+| 2026-11-27 | `2498171` | pick: picked news saved |
+| 2026-11-27 | `989e5b5` | pick: list sent |
+| 2026-11-27 | `4ba5f19` | stories shared / Instagram pause |
+| 2026-11-27 | `c1d597c` | stories shared / Instagram pause |
+| 2026-11-27 | `fc9af6b` | Sources: the missing district list of this page (Dinakaran / Oneindia) |
+| 2026-11-27 | `fea2795` | Sources: Dailythanthi and Maalaimalar Tamil Nadu / district lists (this district's links only) |
+| 2026-11-27 | `8d26295` | stories shared / Instagram pause |
+| 2026-11-27 | `3febf7b` | stories shared / Instagram pause |
+| 2026-11-27 | `f148e7c` | stories shared / Instagram pause |
+| 2026-11-27 | `ba09a7d` | stories shared / Instagram pause |
+| 2026-11-27 | `d4d8511` | stories shared / Instagram pause |
+| 2026-11-27 | `e10e184` | stories shared / Instagram pause |
+| 2026-11-27 | `3387e48` | goldrate posted |
+| 2026-11-27 | `de1aa36` | stories shared / Instagram pause |
+| 2026-11-27 | `52d1543` | stories shared / Instagram pause |
+| 2026-11-27 | `c173f45` | stories shared / Instagram pause |
+| 2026-11-27 | `916363a` | stories shared / Instagram pause |
+| 2026-11-27 | `71939bb` | manual post e-mail RN-744 |
+| 2026-11-27 | `383ecd7` | stories shared / Instagram pause |
+| 2026-11-27 | `d58ec1b` | stories shared / Instagram pause |
+| 2026-11-27 | `886fbb3` | stories shared / Instagram pause |
+| 2026-11-27 | `51ede15` | stories shared / Instagram pause |
+| 2026-11-27 | `fbfbf71` | stories shared / Instagram pause |
+| 2026-11-27 | `4d0f36d` | stories shared / Instagram pause |
+| 2026-11-27 | `8e3cbc6` | stories shared / Instagram pause |
+| 2026-11-27 | `aabff71` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
