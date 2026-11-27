@@ -1,34 +1,140 @@
-10:49:41 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
-10:49:41 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-10:49:45 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-10:49:57 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-10:50:07 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-10:50:32 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
-10:50:49 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
-10:50:52 hold lifted: RN-483 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
-10:50:58 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-10:51:00 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-10:51:03 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
-10:51:12 5 held news to fix: ['RN-718', 'RN-728', 'RN-732', 'RN-735', 'RN-738']
+13:45:26 hold lifted: RN-168 - not grounded: location 'நகர்' is not in the article - the location IS in the article (checked again)
+13:45:27 hold lifted: RN-192 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+13:45:29 hold lifted: RN-223 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+13:45:38 hold lifted: RN-319 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+13:45:41 hold lifted: RN-322 - not grounded: location 'நகரம்' is not in the article - the location IS in the article (checked again)
+13:45:51 hold lifted: RN-421 - not grounded: location 'பகுதி' is not in the article - the location IS in the article (checked again)
+13:45:57 hold lifted: RN-475 - not grounded: location 'நிலையம்' is not in the article - the location IS in the article (checked again)
+13:46:18 location re-check failed (stays held): RN-483 429 Client Error: Too Many Requests for url: https://covaimail.com/power-shutdow
+13:46:24 hold lifted: RN-538 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+13:46:26 hold lifted: RN-552 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+13:46:28 hold lifted: RN-597 - not grounded: location 'ரோடு' is not in the article - the location IS in the article (checked again)
+13:46:36 5 held news to fix: ['RN-718', 'RN-728', 'RN-732', 'RN-735', 'RN-738']
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, plea
-dead for this round: gemini/gemini-3-flash-preview
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to generate JSON. Please adjust your prompt. See 'failed_gener
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-dead for this round: groq/qwen/qwen3.8-27b
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` 
-10:51:21 RN-718 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate lim
+ok gemini/gemini-3.6-flash (17s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (3s)
+factcheck by gemini/gemini-3.6-flash: 0 problems
+attempt 1 gemini/gemini-3.6-flash: 0 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (10s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (4s)
+factcheck by gemini/gemini-3.6-flash: 0 problems
+proofread by gemini/gemini-3.6-flash: 0 problems
+13:47:14 RN-718 FIXED - posts with the corrected text: கோவையில் வரதட்சணை எதிர்ப்பு பேரணி: 150க்கும் மேற்பட்டோர் விழிப்புணர்வு பேரணியில்
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (21s)
+attempt 1 gemini/gemini-3.6-flash: 2 problems
+  sentence 1 (one-line story) has 15 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 10, 15
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (26s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (3s)
+factcheck by gemini/gemini-3.6-flash: 0 problems
+attempt 2 gemini/gemini-3.6-flash: 0 problems
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (13s)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (5s)
+factcheck by gemini/gemini-3.6-flash: 0 problems
+proofread by gemini/gemini-3.6-flash: 0 problems
+13:48:27 RN-728 FIXED - posts with the corrected text: கோவை, சிவகாசியில் 4 தலைமுறை பாரம்பரியத்தில் காலண்டர், டைரி தயாரிப்பு
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (22s)
+attempt 1 gemini/gemini-3.6-flash: 6 problems
+  slide 4 line 1 is cut off mid-phrase ('ஆபிஸ் ரோடு, டாடாபாத்') - write a complete short phrase
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script has numbers without their meaning (27); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+  numbers not found in the article: 44047, 77282, 78717, 94437, 98422
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 43 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 5, ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 612 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட')
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ாரா ஆபிஸ் ரோடு, டாடாபாத்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (23s)
+attempt 2 gemini/gemini-3.6-flash: 1 problems
+  reel_script has numbers without their meaning (4, 5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (20s)
+attempt 3 gemini/gemini-3.6-flash: 3 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 6, 75
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 43 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 612 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (29s)
+attempt 4 gemini/gemini-3.6-flash: 3 problems
+  slide 4 line 1 is cut off mid-phrase ('ஆபிஸ் ரோடு, டாடாபாத்') - write a complete short phrase
+  reel_script has numbers without their meaning (4, 5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ாரா ஆபிஸ் ரோடு, டாடாபாத்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (18s)
+attempt 5 gemini/gemini-3.6-flash: 6 problems
+  slide 4 line 1 is cut off mid-phrase ('ஆபிஸ் ரோடு, டாடாபாத்') - write a complete short phrase
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script has numbers without their meaning (27); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+  numbers not found in the article: 44047, 6, 75, 77282, 78717, 94437
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 43 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 612 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 9842244047, ('– சப்தகிரி போர்வெல்ஸ், 27, பைகாரா ஆபிஸ் ரோடு, டாடாபாத்.– 984'); 9443744047, ('– சப்தகிரி போர்வெல்ஸ், 27, பைகாரா ஆபிஸ் ரோடு, டாடாபாத்.– 984'); 7871777282 ('– சப்தகிரி போர்வெல்ஸ், 27, பைகாரா ஆபிஸ் ரோடு, டாடாபாத்.– 984')
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ாரா ஆபிஸ் ரோடு, டாடாபாத்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (26s)
+attempt 6 gemini/gemini-3.6-flash: 1 problems
+  reel_script has numbers without their meaning (4, 5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (25s)
+attempt 7 gemini/gemini-3.6-flash: 3 problems
+  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  numbers not found in the article: 6
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 612 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (26s)
+attempt 8 gemini/gemini-3.6-flash: 3 problems
+  slide 4 line 1 is cut off mid-phrase ('ஆபிஸ் ரோடு, டாடாபாத்') - write a complete short phrase
+  reel_script has numbers without their meaning (4, 5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+  known issue card_cut_mid_phrase: card cut off mid-phrase ('ாரா ஆபிஸ் ரோடு, டாடாபாத்') - rewrite so it does not happen again
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (19s)
+attempt 9 gemini/gemini-3.6-flash: 2 problems
+  sentence 1 (one-line story) has 14 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption misses facts of the article (put every one in 📰 முழு விவரம்): 43 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 5, ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட'); 612 ('வண்டி போகாத இடங்கள், வீடுகளுக்கு தேவையான 43×4, 5, 612 பெட் ட')
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+ok gemini/gemini-3.6-flash (31s)
+attempt 10 gemini/gemini-3.6-flash: 1 problems
+  reel_script has numbers without their meaning (4, 5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok gemini/gemini-3.6-flash (20s)
+proofread rejected (2 problems)
+  sentence 1 (one-line story) has 16 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  reel_script has numbers without their meaning (5); write what each number is: '15 வயது', '30 பாட்டில்கள்', 'அக்டோபர் 26ஆம் தேதி'
+13:52:54 RN-732 FIXED - posts with the corrected text: டாடாபாத் சப்தகிரி போர்வெல்ஸ்: 25 ஆண்டுகள் அனுபவத்துடன் ஆழ்குழாய் கிணறு மற்றும் ம
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+fail gemini/gemini-3.6-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.6-flash
+fail gemini/gemini-3.5-flash: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3.5-flash
+fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
+poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
+fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
+free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
+13:56:03 RN-735 NOT fixed - the free AI writers are busy; tried again in a later run (this try is not counted): all free models failed: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request 
