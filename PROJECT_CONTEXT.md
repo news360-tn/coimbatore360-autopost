@@ -82,34 +82,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-27 | `d698f61` | Tests: Facebook retry plan is 10 min x5 then 1 h once (7 tries) |
-| 2026-11-27 | `97387ee` | facebook RN-755 |
-| 2026-11-27 | `2450545` | posted RN-755 |
-| 2026-11-27 | `c2ac00d` | Posting rules 27 Nov: 30 news a day per platform by views, 06:00-22:00 (urgent any time), retry 10 min x5 then 1 h, block wait as stated else 2 h, collect every 2 h |
-| 2026-11-27 | `caf652f` | stories shared / Instagram pause |
-| 2026-11-27 | `5b9704c` | stories shared / Instagram pause |
-| 2026-11-27 | `30e7907` | facebook RN-753 |
-| 2026-11-27 | `d354a72` | posted RN-753 |
-| 2026-11-27 | `3a7a78d` | stories shared / Instagram pause |
-| 2026-11-27 | `45bd0d8` | stories shared / Instagram pause |
-| 2026-11-27 | `e606309` | facebook RN-757 |
-| 2026-11-27 | `10a79e7` | posted RN-757 |
-| 2026-11-27 | `224b9d7` | stories shared / Instagram pause |
-| 2026-11-27 | `fc78f4b` | facebook RN-762 |
-| 2026-11-27 | `0f27362` | posted RN-762 |
-| 2026-11-27 | `15a0636` | No manual work: stop the manual-post and Facebook-share e-mails (config.json owner_emails false); only automatic posting |
-| 2026-11-27 | `0324c94` | stories shared / Instagram pause |
-| 2026-11-27 | `b1db71c` | stories shared / Instagram pause |
-| 2026-11-27 | `83ec4c0` | facebook RN-758 |
-| 2026-11-27 | `f0c5470` | posted RN-758 |
-| 2026-11-27 | `3e690fe` | stories shared / Instagram pause |
-| 2026-11-27 | `117b85e` | stories shared / Instagram pause |
-| 2026-11-27 | `0c16593` | facebook RN-763 |
-| 2026-11-27 | `8ed22be` | posted RN-763 |
-| 2026-11-27 | `de200cd` | stories shared / Instagram pause |
-| 2026-11-27 | `c94c096` | stories shared / Instagram pause |
-| 2026-11-27 | `f5b3007` | facebook RN-761 |
-| 2026-11-27 | `18132e0` | posted RN-761 |
-| 2026-11-27 | `c5358e4` | stories shared / Instagram pause |
-| 2026-11-27 | `bf2e092` | stories shared / Instagram pause |
+| 2026-11-28 | `0a71fba` | Writer hook (first 3 s): place first + strong event word + one hard detail; நாளை/இன்று first; schemes open with the amount / last date; caption first line 7-12 words (data: 2,686 reels) |
+| 2026-11-28 | `439d0f5` | stories shared / Instagram pause |
+| 2026-11-28 | `2e560e6` | stories shared / Instagram pause |
+| 2026-11-28 | `a8d6f2c` | facebook RN-774 |
+| 2026-11-28 | `9353b83` | posted RN-774 |
+| 2026-11-28 | `d2ec784` | stories shared / Instagram pause |
+| 2026-11-28 | `0531208` | pick: picked news saved |
+| 2026-11-28 | `33941f8` | stories shared / Instagram pause |
+| 2026-11-28 | `b04854d` | pick: picked news saved |
+| 2026-11-28 | `3201d01` | pick: list sent |
+| 2026-11-28 | `f6e5e02` | stories shared / Instagram pause |
+| 2026-11-28 | `18055b3` | stories shared / Instagram pause |
+| 2026-11-28 | `5bece58` | stories shared / Instagram pause |
+| 2026-11-28 | `b56bcba` | stories shared / Instagram pause |
+| 2026-11-28 | `4400829` | stories shared / Instagram pause |
+| 2026-11-28 | `93f58eb` | stories shared / Instagram pause |
+| 2026-11-28 | `3075c80` | stories shared / Instagram pause |
+| 2026-11-28 | `29562be` | stories shared / Instagram pause |
+| 2026-11-28 | `47e5f7a` | pick: written and posted |
+| 2026-11-28 | `873f1b0` | facebook RN-770 |
+| 2026-11-28 | `2c7bdb1` | posted RN-770 |
+| 2026-11-28 | `c9d3bfd` | stories shared / Instagram pause |
+| 2026-11-28 | `07b4a18` | stories shared / Instagram pause |
+| 2026-11-28 | `40f4d27` | facebook RN-771 |
+| 2026-11-28 | `789d012` | posted RN-771 |
+| 2026-11-28 | `14b2fb0` | stories shared / Instagram pause |
+| 2026-11-28 | `1f04b62` | stories shared / Instagram pause |
+| 2026-11-28 | `d3501d8` | pick: picked news saved |
+| 2026-11-28 | `69552da` | facebook RN-759 |
+| 2026-11-28 | `57d01d2` | posted RN-759 |
 <!-- recent-changes:end -->
