@@ -45,7 +45,7 @@ TOP_PER_DAY = int(os.environ.get("FB_TOP_PER_DAY", "25") or 25)      # owner 21 
 TOP_ONLY = os.environ.get("FB_TOP_ONLY", "0") == "1"      # owner 20 Nov: every news goes (1 = only the top news, as from 11 Nov)
 GAP_MIN = int(os.environ.get("FB_GAP_MIN", "30") or 30)      # owner 21 Nov: 30 min (a news that comes sooner WAITS, it is not dropped)      # owner 20 Nov: 18 a day fit in the day with 45 min between posts
 MIN_WEIGHT = float(os.environ.get("FB_MIN_WEIGHT", "0.4") or 0.4)
-PAUSE_HOURS = 2      # owner 27 Nov: a Facebook block with no stated time waits 2 hours (was 24)
+PAUSE_HOURS = 24      # owner 28 Nov: a Facebook block with no stated time waits 24 hours again - with 2 hours (27 Nov) five pages tried every 2 hours, were refused each time (368) and stayed blocked
 # owner 20 Nov (more Facebook views): the article link goes in the FIRST COMMENT, not the post text (Facebook shows posts with an outside
 # link to fewer people); if the comment is refused (no pages_manage_engagement yet) the link goes into the text as before.
 # Hashtags stay at FB_TAGS = 3 (town + topic + page): Facebook allows ~30, but 1-3 relevant tags reach the most people.
@@ -119,7 +119,7 @@ def paused(page):
 
 
 def _pause(page, why):
-    import blockwait      # owner 27 Nov: wait the time Facebook states for the block, else 2 hours (was always 24 h)
+    import blockwait      # owner 27 Nov: wait the time Facebook states for the block; owner 28 Nov: else 24 hours (PAUSE_HOURS)
     hours = blockwait.wait_hours(why, PAUSE_HOURS)
     STATE.mkdir(parents=True, exist_ok=True)
     until = (_now() + dt.timedelta(hours=hours)).isoformat(timespec="seconds")

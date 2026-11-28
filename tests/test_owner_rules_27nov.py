@@ -122,7 +122,7 @@ class TemporaryBlock(unittest.TestCase):
         with mock.patch.object(facebook, "STATE", tmp):
             facebook._pause("pg", "(#368) temporarily blocked")
             until = datetime.fromisoformat(json.loads(facebook._pause_file("pg").read_text())["until"])
-            self.assertAlmostEqual((until - facebook._now()).total_seconds() / 3600, 2.0, delta=0.02)
+            self.assertAlmostEqual((until - facebook._now()).total_seconds() / 3600, 24.0, delta=0.02)      # owner 28 Nov: no stated time -> 24 hours (was 2)
 
 
 class CollectEveryTwoHours(unittest.TestCase):
