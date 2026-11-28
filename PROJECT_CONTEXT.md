@@ -83,6 +83,12 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-28 | `756b08e` | reel: the NEWS360-TN news reader in a round window on every news reel (owner 28 Nov) - the owner's own 9 drawings, the mouth chosen from the reel's voice (closed in every pause, open while the news is read); the place card sits beside it. Top 5 reel: headline clear of the buttons, the time chip above the caption area, the 5-4-3-2-1 row down the left side - one video for Instagram, Facebook and YouTube Shorts |
+| 2026-11-28 | `2075195` | pick: picked news saved |
+| 2026-11-28 | `1828df5` | pick: list sent |
+| 2026-11-28 | `b9e8694` | stories shared / Instagram pause |
+| 2026-11-28 | `44eebcb` | stories shared / Instagram pause |
+| 2026-11-28 | `f3f5262` | stories shared / Instagram pause |
 | 2026-11-28 | `2f1442f` | yt_hashtags: a page's tag lists are also found by the channel name (Tiruppur 360: page tirupur, tag #Tiruppur360) - no change for this page |
 | 2026-11-28 | `d7fd543` | powercut: notices written |
 | 2026-11-28 | `835743e` | stories shared / Instagram pause |
@@ -107,10 +113,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-28 | `d1891b6` | posted RN-781 |
 | 2026-11-28 | `6ddfcee` | stories shared / Instagram pause |
 | 2026-11-28 | `f72b26e` | stories shared / Instagram pause |
-| 2026-11-28 | `652970c` | facebook RN-779 |
-| 2026-11-28 | `45fc5b9` | posted RN-779 |
-| 2026-11-28 | `e75ca1b` | pick: picked news saved |
-| 2026-11-28 | `4e05684` | stories shared / Instagram pause |
-| 2026-11-28 | `692a4f6` | pick: picked news saved |
-| 2026-11-28 | `f483be2` | pick: list sent |
 <!-- recent-changes:end -->
