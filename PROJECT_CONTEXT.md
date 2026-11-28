@@ -83,6 +83,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-28 | `94efd5f` | Hashtag fixes (owner 28 Nov): a source link's #part is no longer a hidden YouTube tag (district-section); a Facebook hashtag is never repeated and the top 5 reel gets topic + district + page tag |
+| 2026-11-28 | `42bf1e7` | stories shared / Instagram pause |
+| 2026-11-28 | `2770a8f` | stories shared / Instagram pause |
+| 2026-11-28 | `1f4ea56` | powercut: notices written |
+| 2026-11-28 | `006ba5d` | stories shared / Instagram pause |
 | 2026-11-28 | `1b43b4e` | reel: design A + improvements on every page (owner 28 Nov, the sample the owner chose) - with 2+ pictures they take turns every second cut, a BREAKING tag only on serious news, a place card with the district map and the town pin after the headline; no clock-hand line across the picture (soft dissolve). One layer over the finished page (reel/live360.py), inside the area that is free on Instagram, Facebook and YouTube Shorts; it never fails the reel. District map built for this page (OpenStreetMap) |
 | 2026-11-28 | `108f122` | comments: normal comments recorded (not e-mailed) |
 | 2026-11-28 | `69741a9` | stories shared / Instagram pause |
@@ -108,9 +113,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-28 | `df1fcd3` | stories shared / Instagram pause |
 | 2026-11-28 | `ad21236` | stories shared / Instagram pause |
 | 2026-11-28 | `298d6af` | stories shared / Instagram pause |
-| 2026-11-28 | `1c92030` | stories shared / Instagram pause |
-| 2026-11-28 | `f23094e` | stories shared / Instagram pause |
-| 2026-11-28 | `59b1a17` | Top 5: headline at most 3 lines (never over the 5-4-3-2-1 row), the row a little lower, 'nettru' for yesterday's news |
-| 2026-11-28 | `fb7bfdc` | stories shared / Instagram pause |
-| 2026-11-28 | `96fb0db` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
