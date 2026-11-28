@@ -1,5 +1,5 @@
-writing [N]: தடாகம் அருகே நள்ளிரவில் புகுந்த ஒற்றை யானை; வாழை, தென்னை மரங
-writing [N]: நீலகிரி, கோவை, தேனி, தென்காசியில் மிதமான மழைக்கு வாய்ப்பு
+writing [N]: பாக்கு, தென்னை மரங்கள் சேதம்
+writing [N]: ஆன்லைனில் இருவரிடம் 6 லட்சம் ரூபாய் மோசடி
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
@@ -9,237 +9,137 @@ fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.6-flash
-fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.6-flash
 fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, please che
 dead for this round: gemini/gemini-3.5-flash
-fail gemini/gemini-3.5-flash: gemini gemini-3.5-flash 429: {
-  "error": {
-    "code": 429,
-    "message": "You exceeded your current quota, please che
-dead for this round: gemini/gemini-3.5-flash
-writing [N]: மழை நாளில் குறைகிறது பூ
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 ok gemini/gemini-3-flash-preview (10s)
+attempt 1 gemini/gemini-3-flash-preview: 2 problems
+  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
+  caption needs 5 hashtags (Instagram max), has 6
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok gemini/gemini-3-flash-preview (12s)
-attempt 1 gemini/gemini-3-flash-preview: 3 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 100 ('ஒரு எக்டருக்கு பாசலோன் 1500மி.லி., அல்லது குளோரிபைபாஸ் 1250 '); 125 ('ஒரு எக்டருக்கு பாசலோன் 1500மி.லி., அல்லது குளோரிபைபாஸ் 1250 '); 470 ('ஒரு எக்டருக்கு பாசலோன் 1500மி.லி., அல்லது குளோரிபைபாஸ் 1250 ')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail gemini/gemini-3-flash-preview: gemini gemini-3-flash-preview 429: {
   "error": {
     "code": 429,
     "message": "You exceeded your current quota, plea
 dead for this round: gemini/gemini-3-flash-preview
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 503: {
+  "error": {
+    "code": 503,
+    "message": "This model is currently experiencing high d
 fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 400: {"error":{"message":"Failed to validate JSON. Please adjust your prompt. See 'failed_gener
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'கோவை' and the news itself, e.g. 'கோவை-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 1 problems
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-ok gemini/gemini-3-flash-preview (42s)
-factcheck by gemini/gemini-3-flash-preview: 0 problems
-attempt 1 gemini/gemini-3-flash-preview: 0 problems
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-ok groq/openai/gpt-oss-120b (4s)
-proofread rejected (4 problems)
-  reel_script has 85 words; need 88-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
-  reel_script must tell how the story ENDED, as the article's last lines say ('தடாகம் அருகே நள்ளிரவில் புகுந்த ஒற்றை யானை; வாழை, தென்னை மரங்கள் சேதம் - வெளியான சிசிடிவி காட்சிகள்') - say what finally happened (complaint, action promised, released, arrested, case filed, how long it lasted); never write that details are unknown
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption must contain the exact follow line
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-ok groq/openai/gpt-oss-120b (6s)
-proofread rejected (3 problems)
-  missing key: reel_script
-  missing key: caption
-  missing key: scenes
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-fail gemini/gemini-3-flash-preview: HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)
-poor answer - skipped for 30 min: gemini/gemini-3-flash-preview
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok groq/qwen/qwen3.8-27b (1s)
-real photo: no picture on the source page -> AI pictures
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 4 ('சென்னை: தமிழகத்தில் நாளை நீலகிரி, தேனி உள்ளிட்ட 4 மாவட்டங்கள'); 30 ('இதர தமிழகம், புதுச்சேரி, காரைக்கால் பகுதிகளில் பொதுவாக வறண்ட'); 19 ('இதர தமிழகத்தில் வறண்ட வானிலை நிலவக்கூடும்.சென்னை மற்றும் புற'); 8 ('நகரின் ஒருசில பகுதிகளில் இடி, மின்னலுடன் கூடிய லேசான அல்லது '); 30 ('நகரின் ஒருசில பகுதிகளில் இடி, மின்னலுடன் கூடிய லேசான அல்லது '); 5 ('நகரின் ஒருசில பகுதிகளில் இடி, மின்னலுடன் கூடிய லேசான அல்லது ')
-images made: 2 for 'Flowering drops on cloudy, humid days in'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-1836","first":"RN-789"}
-posting job started at once
-writing [N]: coimbatore power cut: கோவையில் நவம்பர் 30 ஆம் தேதி எங்கெல்லா
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
-dead for this round: groq/openai/gpt-oss-120b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 413: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok groq/qwen/qwen3.8-27b (1s)
-real photo: vision check unavailable: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:ge
-real photo: vision check out of free quota
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-images made: 2 for 'Lone wild elephant damages banana and co'
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('coimbatore power shutdown (30-11-2026): கோவை மாவட்டத்தில் பல')
-ok groq/qwen/qwen3.8-27b (1s)
-factcheck by groq/qwen/qwen3.8-27b: 3 problems
-  The reel_script claims that Mattuppalayam (Kovai district) recorded 6 cm of rain in the last 24 hours, but the article states that the 6 cm rainfall in Mattuppalayam was recorded in the 24-hour period ending at 8:30 AM *today* (implied by the context of the forecast for 'tomorrow' and the specific timestamp 'இன்று காலை 8.30 மணியுடன்'), whereas the script presents it as a general recent fact without the specific time context, and more importantly, the script omits the other locations (Azagarai Estate, Kozhiporvilai, Parur) that also recorded 5 cm, while the slides_spec includes Azagarai Estate but the script does not, creating an inconsistency in the reported data set between the script and the article's full list of 5cm locations.
-  The slides_spec slide 3 lists 'Kunnur 7 cm, Mattuppalayam 6 cm' as the maximums, but the article explicitly states Adamanagaram (Thiruvannamalai) recorded the maximum of 8 cm. While slide 3 does mention Adamanagaram 8 cm in the third line, the first line 'அதிகபட்சம்: குன்னூர் 7 செமீ...' is factually incorrect because 7 cm is not the maximum; 8 cm is. The phrasing implies Kunnur is the max.
-  The reel_script states 'கடந்த 24 மணி நேரத்தில்' (In the last 24 hours) regarding the rainfall data, but the article specifies this data is for the 24-hour period ending at 8:30 AM *today* (இன்று காலை 8.30 மணியுடன்). The script's phrasing is vague and potentially misleading if interpreted as the last 24 hours up to the current moment of the video, though this is a minor temporal precision issue. However, a more significant issue is that the script omits the locations Kozhiporvilai and Parur which recorded 5 cm, whereas the caption includes them. The script is incomplete regarding the 5 cm rainfall locations compared to the article.
-claude rewrite 2 anthropic/claude-haiku-5-5: 3 problems
-  fact-check: The reel_script claims that Mattuppalayam (Kovai district) recorded 6 cm of rain in the last 24 hours, but the article states that the 6 cm rainfall in Mattuppalayam was recorded in the 24-hour period ending at 8:30 AM *today* (implied by the context of the forecast for 'tomorrow' and the specific timestamp 'இன்று காலை 8.30 மணியுடன்'), whereas the script presents it as a general recent fact without the specific time context, and more importantly, the script omits the other locations (Azagarai Estate, Kozhiporvilai, Parur) that also recorded 5 cm, while the slides_spec includes Azagarai Estate but the script does not, creating an inconsistency in the reported data set between the script and the article's full list of 5cm locations.
-  fact-check: The slides_spec slide 3 lists 'Kunnur 7 cm, Mattuppalayam 6 cm' as the maximums, but the article explicitly states Adamanagaram (Thiruvannamalai) recorded the maximum of 8 cm. While slide 3 does mention Adamanagaram 8 cm in the third line, the first line 'அதிகபட்சம்: குன்னூர் 7 செமீ...' is factually incorrect because 7 cm is not the maximum; 8 cm is. The phrasing implies Kunnur is the max.
-  fact-check: The reel_script states 'கடந்த 24 மணி நேரத்தில்' (In the last 24 hours) regarding the rainfall data, but the article specifies this data is for the 24-hour period ending at 8:30 AM *today* (இன்று காலை 8.30 மணியுடன்). The script's phrasing is vague and potentially misleading if interpreted as the last 24 hours up to the current moment of the video, though this is a minor temporal precision issue. However, a more significant issue is that the script omits the locations Kozhiporvilai and Parur which recorded 5 cm, whereas the caption includes them. The script is incomplete regarding the 5 cm rainfall locations compared to the article.
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-1836","first":"RN-790"}
-writing [N]: நாளை மறுதினம்(நவ.30) மின்தடை: கோயம்புத்தூர்
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok anthropic/claude-haiku-5-5
-claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('coimbatore power shutdown (30-11-2026): கோவை மாவட்டத்தில் பல')
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
-  sentence 1 (one-line story) has 12 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  slides_spec.loc 'கோவை மாவட்டம்' is only the district: write the town / village / area the article names (people share news of their own area)
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 4 ('சென்னை: தமிழகத்தில் நாளை நீலகிரி, தேனி உள்ளிட்ட 4 மாவட்டங்கள'); 19 ('இதர தமிழகத்தில் வறண்ட வானிலை நிலவக்கூடும்.சென்னை மற்றும் புற')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 ok groq/qwen/qwen3.8-27b (3s)
-proofread by groq/qwen/qwen3.8-27b: 2 problems
+attempt 2 groq/qwen/qwen3.8-27b: 2 problems
+  hl1 is 42 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  reel_script has 52 words; need 60-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
 fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free models unavailable: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` i
-ok anthropic/claude-haiku-5-5
-claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
-  sentence 1 (one-line story) has 13 words; make it 6-9 words (about 2-3 seconds), the details follow in the next sentences
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): 11 ('coimbatore power shutdown (30-11-2026): கோவை மாவட்டத்தில் பல')
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-ok anthropic/claude-haiku-5-5
-claude rewrite 1 anthropic/claude-haiku-5-5: 1 problems
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): கோயம்புத்தூர் ('நாளை மறுதினம்(நவ.30) மின்தடை: கோயம்புத்தூர்')
-ok groq/qwen/qwen3.8-27b (1s)
-real photo: vision check resting (free quota busy)
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
+dead for this round: groq/qwen/qwen3.8-27b
+fail groq/openai/gpt-oss-120b: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-120b` in organization `o
+dead for this round: groq/openai/gpt-oss-120b
+free models unavailable: no free model answered: groq openai/gpt-oss-120b 429: {"error":{"message":"Rate limit reached for model `openai/gpt-oss-
+fail gemini/gemini-3.6-flash: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please che
+dead for this round: gemini/gemini-3.6-flash
+free models unavailable: no free model answered: gemini gemini-3.6-flash 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your c
 ok anthropic/claude-haiku-5-5
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m
-switching away from groq/qwen/qwen3.8-27b for 10 min
-proofread skipped: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m5enxj94ehaa58b82eyehvhp` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 915, Requested 395. Please try again in 18.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
-
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-images made: 2 for 'Moderate rain likely tomorrow in Nilgiri'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-1837","first":"RN-791"}
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+free fact-check unavailable, using Claude: no free model answered: None
 ok anthropic/claude-haiku-5-5
-gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+factcheck by anthropic/claude-haiku-5-5: 5 problems
+  The reel_script and slides say farmers suffered a big loss (பெரும் இழப்பு), but the article does not mention any loss to farmers.
+  The reel_script and slides advise residents and farmers to be careful and avoid going to the groves at night, which is advice not stated in the article.
+  The slides_spec 'விவசாயிகளுக்கு' slide and its lines (e.g. 'பாக்கு, தென்னை விவசாயிகள் பெரும் இழப்பை சந்தித்துள்ளனர') add farmer-loss and safety advice not in the article.
+  The caption's 'மக்கள் கவனத்திற்கு' safety advice (keep careful; avoid night trips to groves) is not supported by the article.
+  The caption's 'பாதிப்பு: பாக்கு மரங்கள், தென்னை மரங்கள்' line is consistent with the article, but the 'மக்கள் கவனத்திற்கு' section introduces content not present in the article.
+claude rewrite 1 anthropic/claude-haiku-5-5: 5 problems
+  fact-check: The reel_script and slides say farmers suffered a big loss (பெரும் இழப்பு), but the article does not mention any loss to farmers.
+  fact-check: The reel_script and slides advise residents and farmers to be careful and avoid going to the groves at night, which is advice not stated in the article.
+  fact-check: The slides_spec 'விவசாயிகளுக்கு' slide and its lines (e.g. 'பாக்கு, தென்னை விவசாயிகள் பெரும் இழப்பை சந்தித்துள்ளனர') add farmer-loss and safety advice not in the article.
+  fact-check: The caption's 'மக்கள் கவனத்திற்கு' safety advice (keep careful; avoid night trips to groves) is not supported by the article.
+  fact-check: The caption's 'பாதிப்பு: பாக்கு மரங்கள், தென்னை மரங்கள்' line is consistent with the article, but the 'மக்கள் கவனத்திற்கு' section introduces content not present in the article.
 ok anthropic/claude-haiku-5-5
-real photo skipped (photo uploaded 2025-11-05 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2025/11/05/57e7644fbd886fd750d957b
-real photo skipped (photo uploaded 2026-11-19 (older than the news)): https://cdn.abplive.com/onecms/images/uploaded-images/2026/11/19/1784c0ca0d5e42caba5b21178
-real photo skipped (photo uploaded 2025-05-04 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2025/05/04/baa3c4bb9c7d9c63868779a
-real photo skipped (photo uploaded 2024-06-01 (older than the news)): https://feeds.abplive.com/onecms/images/uploaded-images/2024/06/01/30bb4f4955010c9438f31b5
-fail groq/qwen/qwen3.8-27b: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m5
-free fact-check unavailable, using Claude: no free model answered: groq qwen/qwen3.8-27b 429: {"error":{"message":"Request too large for model 
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
+claude rewrite 2 anthropic/claude-haiku-5-5: 2 problems
+  hl1 is 44 characters (max 40) - write a SHORTER COMPLETE phrase with fewer words that still ends with its key word (what happened: e.g. 'X அருகே வீட்டில் கொள்ளை'); never stop a phrase in the middle
+  reel_script has 42 words; need 60-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
 ok anthropic/claude-haiku-5-5
-factcheck by anthropic/claude-haiku-5-5: 4 problems
-  The article gives no reason for the power cut; the reel_script states it is for maintenance work (பராமரிப்புப் பணிகளுக்காக), which is an invented cause.
-  The article does not say the outage is 'in the Madukkarai substation area' as a general area; the reel_script and caption extend the scope beyond the listed localities, which is an unsupported claim, and the phrase 'மின்விநியோகம் இருக்காது' (no supply) is not stated in the article.
-  The reel_script advises residents to prepare in advance, and the caption adds 'மின் தடைக்கு முன் தேவையானவற்றை தயார் செய்யுங்கள்'; this advice is not in the article.
-  The caption's English line 'Madukkarai power cut on 30 Nov 10 AM-3 PM | Coimbatore news' is a claim not in the article's Tamil text, though it restates the same facts.
-claude rewrite 2 anthropic/claude-haiku-5-5: 4 problems
-  fact-check: The article gives no reason for the power cut; the reel_script states it is for maintenance work (பராமரிப்புப் பணிகளுக்காக), which is an invented cause.
-  fact-check: The article does not say the outage is 'in the Madukkarai substation area' as a general area; the reel_script and caption extend the scope beyond the listed localities, which is an unsupported claim, and the phrase 'மின்விநியோகம் இருக்காது' (no supply) is not stated in the article.
-  fact-check: The reel_script advises residents to prepare in advance, and the caption adds 'மின் தடைக்கு முன் தேவையானவற்றை தயார் செய்யுங்கள்'; this advice is not in the article.
-  fact-check: The caption's English line 'Madukkarai power cut on 30 Nov 10 AM-3 PM | Coimbatore news' is a claim not in the article's Tamil text, though it restates the same facts.
-image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
-Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
-images made: 2 for 'Power cut on Monday 30 Nov in Madukkarai'
-bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-1837","first":"RN-792"}
+claude rewrite 1 anthropic/claude-haiku-5-5: 2 problems
+  slide 1 line 1 longer than 60 characters
+  hl1 (the first headline on screen) must name the place 'பொன்னாண்டம்பாளையம்', e.g. 'பொன்னாண்டம்பாளையம்: ...' or 'பொன்னாண்டம்பாளையம்-இல் ...' - viewers share news of their own area
 ok anthropic/claude-haiku-5-5
 claude rewrite 3 anthropic/claude-haiku-5-5: 2 problems
   slides must have 3 or 4 items
-  caption misses facts of the article (put every one in 📰 முழு விவரம்): கோயம்புத்தூர் ('நாளை மறுதினம்(நவ.30) மின்தடை: கோயம்புத்தூர்')
+  reel_script has 44 words; need 60-160 (the key facts once each, in at most 90 seconds; every other detail goes in the caption's 📰 முழு விவரம் block)
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+proofread skipped: no free model answered: None
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+ok anthropic/claude-haiku-5-5
+ok anthropic/claude-haiku-5-5
+claude rewrite 2 anthropic/claude-haiku-5-5: 1 problems
+  reel_script sentence 1 (heard in the first 3 seconds) must name the place 'பொன்னாண்டம்பாளையம்' and the news itself, e.g. 'பொன்னாண்டம்பாளையம்-இல் ... 3 பேர் கைது.' - viewers decide in 3 seconds whether the news is about their area
+real photo: no picture on the source page -> AI pictures
+ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
+free fact-check unavailable, using Claude: no free model answered: None
+ok anthropic/claude-haiku-5-5
+factcheck by anthropic/claude-haiku-5-5: 3 problems
+  The reel_script and slides_spec say the first victim, Sasikumar, lives in Ponnandampalayam ("பொன்னாண்டம்பாளையத்தைச் சேர்ந்த சசிகுமார்") and the headline frames the whole story as a Ponnandampalayam fraud, but the article says Sasikumar is from Ponnandampalayam only as the first complainant and the location of the scam is not stated; the loc field and hl1 headline attribute the fraud to Ponnandampalayam, which is not supported by the article.
+  The reel_script states the second victim Gowtham was 'Periyanaickenpalayam' resident and the loc field is Ponnandampalayam, creating an inconsistent location framing not present in the article.
+  The reel_script and caption say Sasikumar sent money 'பல கட்டங்களாக' (in stages) but the caption also says Sasikumar received a job-offer 'வேலைக்குப் பணம் அனுப்புமாறு' via Viber app; the article says the number was from an advertisement and the person asked to contact via Viber, which is consistent, but the caption omits that the second victim's bank account was given by fraudsters, which is minor.
+claude rewrite 3 anthropic/claude-haiku-5-5: 3 problems
+  fact-check: The reel_script and slides_spec say the first victim, Sasikumar, lives in Ponnandampalayam ("பொன்னாண்டம்பாளையத்தைச் சேர்ந்த சசிகுமார்") and the headline frames the whole story as a Ponnandampalayam fraud, but the article says Sasikumar is from Ponnandampalayam only as the first complainant and the location of the scam is not stated; the loc field and hl1 headline attribute the fraud to Ponnandampalayam, which is not supported by the article.
+  fact-check: The reel_script states the second victim Gowtham was 'Periyanaickenpalayam' resident and the loc field is Ponnandampalayam, creating an inconsistent location framing not present in the article.
+  fact-check: The reel_script and caption say Sasikumar sent money 'பல கட்டங்களாக' (in stages) but the caption also says Sasikumar received a job-offer 'வேலைக்குப் பணம் அனுப்புமாறு' via Viber app; the article says the number was from an advertisement and the person asked to contact via Viber, which is consistent, but the caption omits that the second victim's bank account was given by fraudsters, which is minor.
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
 groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 proofread skipped: no free model answered: None
 gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
-groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, openai/gpt-oss-20b, allam-2-7b
+groq models: openai/gpt-oss-120b, qwen/qwen3.8-27b, allam-2-7b, openai/gpt-oss-20b
 ok anthropic/claude-haiku-5-5
+gemini models: gemini-3.6-flash, gemini-3.5-flash, gemini-3-flash-preview, gemini-2.5-flash, gemini-omni-1.2-flash, gemini-omni-1.1-flash
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
+images made: 2 for 'Wild elephants damage areca and coconut '
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-2031","first":"RN-793"}
+posting job started at once
+real photo: no picture on the source page -> AI pictures
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
+image match check unavailable: gemini-3.5-flash: 429 Client Error: Too Many Requests for url: https://generativelanguage.googleapis.com/v1beta/models/g
+Cloudflare R2 refused (R2 daily safety limit reached for coimbatore360 (299 MB, 46 files today) - R2 is skipped until tomorrow (free tier protected)) - trying Cloudinary
+images made: 2 for 'Two people lose Rs 6 lakh in online frau'
+bridge: 200 {"ok":true,"added":1,"auto_queued":1,"emailed":0,"reoffered":0,"batch":"B20261128-2032","first":"RN-794"}
 earlier stories still waiting for images: []
 instagram check: 50 recent posts read from the page
 pick round: only the picked links are written (research_free/pick.py)
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/tomorrow-barrier-coimbatore/4388426
-manual link added: https://tamil.abplive.com/news/coimbatore/coimbatore-power-cut-30-11-2026-know-timings-areas-affected-by-power-shutdown-280742
-manual link added: https://www.hindutamil.in/news/tamilnadu/moderate-rain-likely-in-4-districts-including-nilgiris-and-theni
-manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/flowering-decreases-on-a-rainy-day/4388380
-manual link added: https://tamil.indianexpress.com/viral/coimbatore-wild-elephant-pannimadai-elephant-cctv-12848888
-candidate filter: collected=5
-to write: 5 Coimbatore district candidates (max 5 stories)
-round: top 5 of 5 candidates
-candidates waiting: 5 Coimbatore; time left 79 min
-try (N) manual=True: https://tamil.indianexpress.com/viral/coimbatore-wild-elepha
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/rs-6-lakh-fraud-with-two-people-online/4388677
+manual link added: https://www.dinamalar.com/news/tamil-nadu-district-news-coimbatore/coconut-and-coconut-trees-damaged/4388466
+candidate filter: collected=2
+to write: 2 Coimbatore district candidates (max 2 stories)
+round: top 2 of 2 candidates
+daily maximum 30: 29 written today - this round writes at most 1
+candidates waiting: 2 Coimbatore; time left 79 min
 try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
-try (N) manual=True: https://www.hindutamil.in/news/tamilnadu/moderate-rain-likel
+try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
 auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 2})
 posting job started at once
-try (N) manual=True: https://tamil.abplive.com/news/coimbatore/coimbatore-power-c
 auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 4})
-try (N) manual=True: https://www.dinamalar.com/news/tamil-nadu-district-news-coim
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 6})
-auto images: 1 of 1 stories ({'black-forest-labs/flux-1-schnell': 8})
-NOT filed (N) நாளை மறுதினம்(நவ.30) மின்தடை: கோயம்புத்தூர்: duplicate after write
-candidate loop ended: left 0, tried={'N': 5}, done={'N': 4}, time left 77 min
-filed: 4 Coimbatore district stories (target 5), reels only
+candidate loop ended: left 0, tried={'N': 2}, done={'N': 2}, time left 77 min
+filed: 2 Coimbatore district stories (target 2), reels only
 queue: 0 news waiting to be written
-All News sheet: {"ok":true,"added":5,"updated":0} 
-stories: 4
+All News sheet: {"ok":true,"added":2,"updated":0} 
+stories: 2
