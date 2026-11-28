@@ -83,34 +83,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
-| 2026-11-28 | `f5793f8` | reel: one line in the job log for every reel - what the design additions and the news reader did ("news reader added: ...", "reel additions: ...", or why not), so a posting run shows it was really drawn |
-| 2026-11-28 | `f8374ec` | stories shared / Instagram pause |
-| 2026-11-28 | `756b08e` | reel: the NEWS360-TN news reader in a round window on every news reel (owner 28 Nov) - the owner's own 9 drawings, the mouth chosen from the reel's voice (closed in every pause, open while the news is read); the place card sits beside it. Top 5 reel: headline clear of the buttons, the time chip above the caption area, the 5-4-3-2-1 row down the left side - one video for Instagram, Facebook and YouTube Shorts |
-| 2026-11-28 | `2075195` | pick: picked news saved |
-| 2026-11-28 | `1828df5` | pick: list sent |
-| 2026-11-28 | `b9e8694` | stories shared / Instagram pause |
-| 2026-11-28 | `44eebcb` | stories shared / Instagram pause |
-| 2026-11-28 | `f3f5262` | stories shared / Instagram pause |
-| 2026-11-28 | `2f1442f` | yt_hashtags: a page's tag lists are also found by the channel name (Tiruppur 360: page tirupur, tag #Tiruppur360) - no change for this page |
-| 2026-11-28 | `d7fd543` | powercut: notices written |
-| 2026-11-28 | `835743e` | stories shared / Instagram pause |
-| 2026-11-28 | `3d2ebb3` | stories shared / Instagram pause |
-| 2026-11-28 | `94efd5f` | Hashtag fixes (owner 28 Nov): a source link's #part is no longer a hidden YouTube tag (district-section); a Facebook hashtag is never repeated and the top 5 reel gets topic + district + page tag |
-| 2026-11-28 | `42bf1e7` | stories shared / Instagram pause |
-| 2026-11-28 | `2770a8f` | stories shared / Instagram pause |
-| 2026-11-28 | `1f4ea56` | powercut: notices written |
-| 2026-11-28 | `006ba5d` | stories shared / Instagram pause |
-| 2026-11-28 | `1b43b4e` | reel: design A + improvements on every page (owner 28 Nov, the sample the owner chose) - with 2+ pictures they take turns every second cut, a BREAKING tag only on serious news, a place card with the district map and the town pin after the headline; no clock-hand line across the picture (soft dissolve). One layer over the finished page (reel/live360.py), inside the area that is free on Instagram, Facebook and YouTube Shorts; it never fails the reel. District map built for this page (OpenStreetMap) |
-| 2026-11-28 | `108f122` | comments: normal comments recorded (not e-mailed) |
-| 2026-11-28 | `69741a9` | stories shared / Instagram pause |
-| 2026-11-28 | `3e4dde2` | YouTube: 40 hashtags on every Short (owner 28 Nov) - 25 for the video, 5 page, 5 district, 5 area (poster/yt_hashtags.py); title, first line, hidden tags, Instagram and Facebook unchanged |
-| 2026-11-28 | `8047a5a` | stories shared / Instagram pause |
-| 2026-11-28 | `b7bcd49` | pick: written and posted |
-| 2026-11-28 | `e70e32e` | facebook RN-780 |
-| 2026-11-28 | `b8e2887` | posted RN-780 |
-| 2026-11-28 | `4223edb` | autofix: corrected held news |
-| 2026-11-28 | `51ed390` | stories shared / Instagram pause |
-| 2026-11-28 | `50a7cf8` | stories shared / Instagram pause |
-| 2026-11-28 | `de57072` | facebook RN-781 |
-| 2026-11-28 | `d1891b6` | posted RN-781 |
+| 2026-11-28 | `2d2af53` | Facebook: a block with no stated time waits 24 hours again (owner 28 Nov) - with 2 hours five pages retried every 2 hours, were refused each time (368) and stayed blocked |
+| 2026-11-28 | `74ab590` | stories shared / Instagram pause |
+| 2026-11-28 | `955f085` | stories shared / Instagram pause |
+| 2026-11-28 | `c9af96d` | stories shared / Instagram pause |
+| 2026-11-28 | `f144bd9` | stories shared / Instagram pause |
+| 2026-11-28 | `81c1684` | stories shared / Instagram pause |
+| 2026-11-28 | `265df9e` | stories shared / Instagram pause |
+| 2026-11-28 | `97298f0` | stories shared / Instagram pause |
+| 2026-11-28 | `f06116e` | stories shared / Instagram pause |
+| 2026-11-28 | `7a38fc1` | stories shared / Instagram pause |
+| 2026-11-28 | `392266e` | stories shared / Instagram pause |
+| 2026-11-28 | `43c61a7` | stories shared / Instagram pause |
+| 2026-11-28 | `2fe1124` | stories shared / Instagram pause |
+| 2026-11-28 | `d974633` | pick: written and posted |
+| 2026-11-28 | `a40294e` | stories shared / Instagram pause |
+| 2026-11-28 | `f6ca26b` | facebook RN-793 |
+| 2026-11-28 | `b935bd2` | posted RN-793 |
+| 2026-11-28 | `db2bd72` | stories shared / Instagram pause |
+| 2026-11-28 | `f1bc9c7` | stories shared / Instagram pause |
+| 2026-11-28 | `3a8a5a9` | facebook RN-794 |
+| 2026-11-28 | `829cc1d` | posted RN-794 |
+| 2026-11-28 | `fdf7180` | stories shared / Instagram pause |
+| 2026-11-28 | `4e7e567` | pick: picked news saved |
+| 2026-11-28 | `845bbba` | stories shared / Instagram pause |
+| 2026-11-28 | `33adb32` | pick: picked news saved |
+| 2026-11-28 | `79a6d41` | pick: list sent |
+| 2026-11-28 | `36bfcc7` | stories shared / Instagram pause |
+| 2026-11-28 | `88b8365` | stories shared / Instagram pause |
+| 2026-11-28 | `85171c3` | stories shared / Instagram pause |
+| 2026-11-28 | `2133fe9` | stories shared / Instagram pause |
 <!-- recent-changes:end -->
