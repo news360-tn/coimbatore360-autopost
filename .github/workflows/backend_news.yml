@@ -1,0 +1,66 @@
+name: backend-news
+# owner 28 Nov: news added by hand in the News360 Backend (news360-backend.pages.dev, "Add news"). The posting job starts this the
+# moment a request waits for this page (research_free/backend_news.py peek); every 30 minutes it also looks by itself. It writes the
+# story with the usual writer chain and the owner's instructions, takes the owner's picture or makes an AI picture, saves the story
+# in the Sheet and starts the posting job - every usual check still runs. Without DASH_URL / DASH_WRITE_KEY it does nothing.
+on:
+  schedule:
+    - cron: "11,41 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write      # a picture the media store refused is kept in this repository (poster/githost.py)
+  actions: write      # starts the posting job as soon as the story is saved
+concurrency:
+  group: backend-news
+  cancel-in-progress: false
+env:
+  GH_MEDIA_TOKEN: ${{ github.token }}
+jobs:
+  news:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      DASH_URL: ${{ secrets.DASH_URL }}
+      DASH_WRITE_KEY: ${{ secrets.DASH_WRITE_KEY }}
+      BRIDGE_URL: ${{ secrets.BRIDGE_URL }}
+      BRIDGE_KEY: ${{ secrets.BRIDGE_KEY }}
+      CITY_ONLY: "0"
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      SARVAM_API_KEY: ${{ secrets.SARVAM_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+      FAL_KEY: ${{ secrets.FAL_KEY }}
+      TOGETHER_API_KEY: ${{ secrets.TOGETHER_API_KEY }}
+      POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      ANTHROPIC_MODEL: claude-haiku-5-5
+      CLOUDINARY_CLOUD: ${{ secrets.CLOUDINARY_CLOUD }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}      # owner 25 Nov: Cloudflare R2 replaces Cloudinary (poster/r2host.py)
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: news360-media
+      R2_PUBLIC_URL: https://pub-ec316fa6a94f404c993596355ad19128.r2.dev
+      CLOUDINARY_PRESET: ${{ secrets.CLOUDINARY_PRESET }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_REPO: ${{ github.repository }}
+      AUTO_IMAGES: "1"      # a picture that could not be made now is made by the posting job
+      BUDGET_MIN: "30"
+    steps:
+      - uses: actions/checkout@v4
+        with: {ref: main}
+      - name: Anything waiting for this page?
+        id: q
+        run: echo "n=$(python3 research_free/backend_news.py waiting | tail -1)" >> "$GITHUB_OUTPUT"
+      - uses: actions/setup-python@v5
+        if: steps.q.outputs.n != '0' && steps.q.outputs.n != ''
+        with: {python-version: "3.11"}
+      - name: Install
+        if: steps.q.outputs.n != '0' && steps.q.outputs.n != ''
+        run: |
+          pip install -q requests googlenewsdecoder==0.2.2 pillow
+          pip install -q opencv-contrib-python-headless==4.10.0.84 pillow-avif-plugin==1.4.6 || echo 'photo tools not installed'
+      - name: Write the news added in the backend, save it in the Sheet, start posting
+        if: steps.q.outputs.n != '0' && steps.q.outputs.n != ''
+        run: python -u research_free/backend_news.py run

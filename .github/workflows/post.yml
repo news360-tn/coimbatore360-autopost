@@ -74,6 +74,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: {ref: main}
+      - name: News added in the backend? (owner 28 Nov - starts backend_news.yml and reports posted / held; never stops this run)
+        continue-on-error: true
+        timeout-minutes: 2
+        env:
+          DASH_URL: ${{ secrets.DASH_URL }}
+          DASH_WRITE_KEY: ${{ secrets.DASH_WRITE_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python3 research_free/backend_news.py peek || true
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"

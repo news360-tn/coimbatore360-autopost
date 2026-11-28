@@ -19,6 +19,8 @@ def _body(cap):
 
 
 def check(row):
+    if "backend owner text" in str(row.get("notes") or "").lower():      # owner 28 Nov: the owner typed this news in the backend - his own words are not checked against a linked article
+        return []
     url = (row.get("source") or "").strip()
     if not url.startswith("http") or not os.environ.get("ANTHROPIC_API_KEY") and not os.environ.get("NVIDIA_API_KEY") and not os.environ.get("GEMINI_API_KEY") and not os.environ.get("GROQ_API_KEY") and not os.environ.get("SARVAM_API_KEY"):
         return []

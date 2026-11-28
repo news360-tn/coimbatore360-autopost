@@ -249,14 +249,24 @@ def collab_page(row, page):
     return ""
 
 
+def backend_format(row):
+    """owner 28 Nov: the format the owner chose for a news added in the News360 Backend - "post" (ONE poster: the cover slide) or
+    "carousel" (2 or more slides in one post); '' = the normal reel. research_free/backend_news.py writes it in the row's notes.
+    A picture post goes to Instagram and Facebook; it has no reel, so nothing goes to YouTube."""
+    m = re.search(r"backend format (post|carousel)", str((row or {}).get("notes") or "").lower())
+    return m.group(1) if m else ""
+
+
 def page_done(row, page):
     car_ok = bool(row.get(page + "_link")) or not spec_has_carousel(row)
-    reel_ok = LABEL[page] in (row.get("reel_link") or "")
+    reel_ok = LABEL[page] in (row.get("reel_link") or "") or bool(backend_format(row))      # owner 28 Nov: a picture post of the backend has no reel
     return car_ok and reel_ok
 
 
 def spec_has_carousel(row):
     """stories written in the reel-first plan carry "carousel": false in slides_spec when only a reel is wanted (older stories: both)"""
+    if backend_format(row):      # owner 28 Nov: the owner chose a poster / carousel for this news in the backend
+        return True
     return False      # Coimbatore 360: reels only, never a carousel (config.json "carousel": false)
 
 
@@ -1426,7 +1436,18 @@ def create_with_collab(uid, token, params, collab):
     raise RuntimeError("could not create the media container")
 
 
+def publish_photo(token, url, caption, collab):
+    """owner 28 Nov: ONE picture as a normal Instagram post (the backend's "Post" format: one poster)"""
+    uid, _ = ig_account(token)
+    cid, collab_ok, why = create_with_collab(uid, token, dict(image_url=url, caption=caption), collab)
+    wait_ready(cid, token, 5)
+    mid = ig("POST", f"{uid}/media_publish", token, creation_id=cid)["id"]
+    return mid, ig("GET", mid, token, fields="permalink").get("permalink", ""), collab_ok, why
+
+
 def publish_carousel(token, urls, caption, collab, alt=""):
+    if len(urls) == 1:      # owner 28 Nov: one picture is a normal post (Instagram's carousel needs 2-10)
+        return publish_photo(token, urls[0], caption, collab)
     uid, _ = ig_account(token)
 
     def kid(u, i):
@@ -2307,6 +2328,8 @@ def minutes_since_last_post(page):
 def ig_duplicate(row, page):
     """the story id/time of a recent Instagram post of this page that is the same news, else ''"""
     import freshness
+    if freshness.owner_follow_up(row):      # owner 28 Nov: a follow-up the owner added in the backend
+        return ""
     ta, en = (row.get("headline_ta") or "").strip(), (row.get("headline_en") or "").strip().lower()
     for ts, cap in ig_recent(page):
         head = cap.strip().split("\n")[0]
@@ -2643,6 +2666,16 @@ def run_story_page(row, page):
         log("prebuilt carousel + reel found - publishing without rebuilding")
     images = [] if cached else fetch_images(row, work)
     need_carousel, need_reel = False, LABEL[PAGE] not in (row.get("reel_link") or "")      # Coimbatore 360: reel only, no carousel
+    picture_post = backend_format(row)      # owner 28 Nov: "post" (one poster) or "carousel" (2+ slides) chosen in the backend - no reel
+    if picture_post:
+        need_carousel, need_reel = not row.get(PAGE + "_link"), False
+        if not cached and len(images) == 1:      # the slide maker wants a second picture for the detail slides: the same one
+            try:
+                dup = images[0].with_name("img2.jpg")
+                dup.write_bytes(images[0].read_bytes())
+                images.append(dup)
+            except Exception as e:
+                log("second picture for the slides not made:", str(e)[:100])
     jpgs = mp4 = None
     reel_cover = None
     voice_file = None
@@ -2667,6 +2700,8 @@ def run_story_page(row, page):
                 checks.append("Tamil text and fonts OK")
             if need_carousel:
                 jpgs = render_carousel(row, spec, work)
+                if picture_post == "post":
+                    jpgs = jpgs[:1]      # ONE poster: the cover slide (picture + headline); the full news is in the caption
                 checks.append(f"{len(jpgs)} slides rendered, no clipped text")
             if need_reel:
                 try:
@@ -2776,6 +2811,8 @@ def run_story_page(row, page):
                                        "quiet": posted_quiet()})
                 first_comment(token, mid, sid, row)      # owner 19 Nov: the source comment, after the post is recorded (as for reels)
                 done.append(("carousel", link))
+                if picture_post:      # owner 28 Nov: counted and reported like every posted news
+                    record_posted(sid, row, link, "post" if len(urls) == 1 else "carousel", mid, caption)
                 try:
                     if media.get("story"):
                         publish_story(token, media["story"], "image", row)

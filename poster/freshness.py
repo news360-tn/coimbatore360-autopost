@@ -302,10 +302,18 @@ def toll_update(new):
     return bool(TOLL_UPDATE.search((new.get("headline_ta") or "") + " " + (new.get("headline_en") or "") + " " + (new.get("title") or "")))
 
 
+def owner_follow_up(row):
+    """owner 28 Nov: a news the owner added in the News360 Backend as a FOLLOW-UP of an earlier post (research_free/backend_news.py
+    writes 'backend follow-up' in the Sheet row's notes) is never held as a duplicate of the news it continues"""
+    return "backend follow-up" in str((row or {}).get("notes") or "").lower()
+
+
 def follow_up(old, new, days=2):
     """28 Oct (RN-159 '3 arrested for stealing laptops' was blocked as a duplicate of RN-42 'laptops stolen', 6 days earlier):
     a later report that brings a new development (arrest, verdict, rescue, seizure ...) about a story filed more than `days`
     days before is new news, not a duplicate"""
+    if owner_follow_up(new):
+        return True
     if toll_update(new) and not toll_update(old):      # owner 24 Nov: a death-toll update is always new news
         return True
     o, n = pub_date(old.get("researched")), pub_date(new.get("researched"))
