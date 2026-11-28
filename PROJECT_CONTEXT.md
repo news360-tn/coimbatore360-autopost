@@ -83,34 +83,34 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-28 | `3e4dde2` | YouTube: 40 hashtags on every Short (owner 28 Nov) - 25 for the video, 5 page, 5 district, 5 area (poster/yt_hashtags.py); title, first line, hidden tags, Instagram and Facebook unchanged |
+| 2026-11-28 | `8047a5a` | stories shared / Instagram pause |
+| 2026-11-28 | `b7bcd49` | pick: written and posted |
+| 2026-11-28 | `e70e32e` | facebook RN-780 |
+| 2026-11-28 | `b8e2887` | posted RN-780 |
+| 2026-11-28 | `4223edb` | autofix: corrected held news |
+| 2026-11-28 | `51ed390` | stories shared / Instagram pause |
+| 2026-11-28 | `50a7cf8` | stories shared / Instagram pause |
+| 2026-11-28 | `de57072` | facebook RN-781 |
+| 2026-11-28 | `d1891b6` | posted RN-781 |
+| 2026-11-28 | `6ddfcee` | stories shared / Instagram pause |
+| 2026-11-28 | `f72b26e` | stories shared / Instagram pause |
+| 2026-11-28 | `652970c` | facebook RN-779 |
+| 2026-11-28 | `45fc5b9` | posted RN-779 |
+| 2026-11-28 | `e75ca1b` | pick: picked news saved |
+| 2026-11-28 | `4e05684` | stories shared / Instagram pause |
+| 2026-11-28 | `692a4f6` | pick: picked news saved |
+| 2026-11-28 | `f483be2` | pick: list sent |
+| 2026-11-28 | `09ae7d7` | stories shared / Instagram pause |
+| 2026-11-28 | `df1fcd3` | stories shared / Instagram pause |
+| 2026-11-28 | `ad21236` | stories shared / Instagram pause |
+| 2026-11-28 | `298d6af` | stories shared / Instagram pause |
+| 2026-11-28 | `1c92030` | stories shared / Instagram pause |
+| 2026-11-28 | `f23094e` | stories shared / Instagram pause |
 | 2026-11-28 | `59b1a17` | Top 5: headline at most 3 lines (never over the 5-4-3-2-1 row), the row a little lower, 'nettru' for yesterday's news |
 | 2026-11-28 | `fb7bfdc` | stories shared / Instagram pause |
 | 2026-11-28 | `96fb0db` | stories shared / Instagram pause |
 | 2026-11-28 | `c80b0e6` | stories shared / Instagram pause |
 | 2026-11-28 | `f1eac60` | stories shared / Instagram pause |
 | 2026-11-28 | `7bf74d8` | pick: written and posted |
-| 2026-11-28 | `7e0fe5f` | facebook RN-776 |
-| 2026-11-28 | `b3fcdbf` | posted RN-776 |
-| 2026-11-28 | `cfd849b` | Rasipalan and top 5: the page's real Instagram username as the fallback (never a made-up Tamil name on the follow card) |
-| 2026-11-28 | `02d8327` | stories shared / Instagram pause |
-| 2026-11-28 | `8ccee76` | stories shared / Instagram pause |
-| 2026-11-28 | `d285dd9` | facebook RN-777 |
-| 2026-11-28 | `139cd6e` | posted RN-777 |
-| 2026-11-28 | `10dd352` | New reels: parrot rasipalan (kili josiyam) with panchangam, rasi times and first comment; evening top 5 |
-| 2026-11-28 | `e5fe618` | stories shared / Instagram pause |
-| 2026-11-28 | `d0bbd83` | stories shared / Instagram pause |
-| 2026-11-28 | `8324b65` | facebook RN-778 |
-| 2026-11-28 | `753fb06` | posted RN-778 |
-| 2026-11-28 | `ad1f436` | stories shared / Instagram pause |
-| 2026-11-28 | `7d61b80` | pick: picked news saved |
-| 2026-11-28 | `c25ce78` | pick: picked news saved |
-| 2026-11-28 | `a273f12` | pick: list sent |
-| 2026-11-28 | `2e2bf89` | stories shared / Instagram pause |
-| 2026-11-28 | `2633ae7` | autofix: corrected held news |
-| 2026-11-28 | `8a4418e` | stories shared / Instagram pause |
-| 2026-11-28 | `acf63aa` | stories shared / Instagram pause |
-| 2026-11-28 | `bd22f1c` | stories shared / Instagram pause |
-| 2026-11-28 | `4b7b1d7` | stories shared / Instagram pause |
-| 2026-11-28 | `e6f9e24` | stories shared / Instagram pause |
-| 2026-11-28 | `4652b62` | goldrate posted |
 <!-- recent-changes:end -->
