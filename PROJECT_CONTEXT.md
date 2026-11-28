@@ -82,6 +82,11 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 <!-- recent-changes:start (updated automatically by .github/workflows/context.yml - do not edit by hand) -->
 | Date | Commit | Change |
 |---|---|---|
+| 2026-11-28 | `cfd849b` | Rasipalan and top 5: the page's real Instagram username as the fallback (never a made-up Tamil name on the follow card) |
+| 2026-11-28 | `02d8327` | stories shared / Instagram pause |
+| 2026-11-28 | `8ccee76` | stories shared / Instagram pause |
+| 2026-11-28 | `d285dd9` | facebook RN-777 |
+| 2026-11-28 | `139cd6e` | posted RN-777 |
 | 2026-11-28 | `10dd352` | New reels: parrot rasipalan (kili josiyam) with panchangam, rasi times and first comment; evening top 5 |
 | 2026-11-28 | `e5fe618` | stories shared / Instagram pause |
 | 2026-11-28 | `d0bbd83` | stories shared / Instagram pause |
@@ -107,9 +112,4 @@ python3 tools/repost.py RN-158               # (Actions: repost) post a reel aga
 | 2026-11-28 | `847e4f1` | pick: written and posted |
 | 2026-11-28 | `0962c8e` | facebook RN-775 |
 | 2026-11-28 | `46a6f65` | posted RN-775 |
-| 2026-11-28 | `0a71fba` | Writer hook (first 3 s): place first + strong event word + one hard detail; நாளை/இன்று first; schemes open with the amount / last date; caption first line 7-12 words (data: 2,686 reels) |
-| 2026-11-28 | `439d0f5` | stories shared / Instagram pause |
-| 2026-11-28 | `2e560e6` | stories shared / Instagram pause |
-| 2026-11-28 | `a8d6f2c` | facebook RN-774 |
-| 2026-11-28 | `9353b83` | posted RN-774 |
 <!-- recent-changes:end -->
